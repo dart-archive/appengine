@@ -58,6 +58,13 @@ const ImageObjectDetectionModelMetadata$json = {
   ],
 };
 
+const ImageClassificationModelDeploymentMetadata$json = {
+  '1': 'ImageClassificationModelDeploymentMetadata',
+  '2': [
+    {'1': 'node_count', '3': 1, '4': 1, '5': 3, '10': 'nodeCount'},
+  ],
+};
+
 const ImageObjectDetectionModelDeploymentMetadata$json = {
   '1': 'ImageObjectDetectionModelDeploymentMetadata',
   '2': [

@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -18,11 +17,10 @@ import '../enums/frequency_cap_event_type.pbenum.dart' as $3;
 
 class FrequencyCapEntry extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('FrequencyCapEntry',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
-    ..a<FrequencyCapKey>(1, 'key', $pb.PbFieldType.OM,
-        FrequencyCapKey.getDefault, FrequencyCapKey.create)
-    ..a<$0.Int32Value>(2, 'cap', $pb.PbFieldType.OM, $0.Int32Value.getDefault,
-        $0.Int32Value.create)
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
+    ..aOM<FrequencyCapKey>(1, 'key', subBuilder: FrequencyCapKey.create)
+    ..aOM<$0.Int32Value>(2, 'cap', subBuilder: $0.Int32Value.create)
     ..hasRequiredFields = false;
 
   FrequencyCapEntry._() : super();
@@ -42,53 +40,62 @@ class FrequencyCapEntry extends $pb.GeneratedMessage {
   FrequencyCapEntry createEmptyInstance() => create();
   static $pb.PbList<FrequencyCapEntry> createRepeated() =>
       $pb.PbList<FrequencyCapEntry>();
-  static FrequencyCapEntry getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static FrequencyCapEntry getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<FrequencyCapEntry>(create);
   static FrequencyCapEntry _defaultInstance;
 
+  @$pb.TagNumber(1)
   FrequencyCapKey get key => $_getN(0);
+  @$pb.TagNumber(1)
   set key(FrequencyCapKey v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasKey() => $_has(0);
+  @$pb.TagNumber(1)
   void clearKey() => clearField(1);
+  @$pb.TagNumber(1)
+  FrequencyCapKey ensureKey() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $0.Int32Value get cap => $_getN(1);
+  @$pb.TagNumber(2)
   set cap($0.Int32Value v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasCap() => $_has(1);
+  @$pb.TagNumber(2)
   void clearCap() => clearField(2);
+  @$pb.TagNumber(2)
+  $0.Int32Value ensureCap() => $_ensure(1);
 }
 
 class FrequencyCapKey extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('FrequencyCapKey',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
     ..e<$1.FrequencyCapLevelEnum_FrequencyCapLevel>(
-        1,
-        'level',
-        $pb.PbFieldType.OE,
-        $1.FrequencyCapLevelEnum_FrequencyCapLevel.UNSPECIFIED,
-        $1.FrequencyCapLevelEnum_FrequencyCapLevel.valueOf,
-        $1.FrequencyCapLevelEnum_FrequencyCapLevel.values)
+        1, 'level', $pb.PbFieldType.OE,
+        defaultOrMaker: $1.FrequencyCapLevelEnum_FrequencyCapLevel.UNSPECIFIED,
+        valueOf: $1.FrequencyCapLevelEnum_FrequencyCapLevel.valueOf,
+        enumValues: $1.FrequencyCapLevelEnum_FrequencyCapLevel.values)
     ..e<$2.FrequencyCapTimeUnitEnum_FrequencyCapTimeUnit>(
-        2,
-        'timeUnit',
-        $pb.PbFieldType.OE,
-        $2.FrequencyCapTimeUnitEnum_FrequencyCapTimeUnit.UNSPECIFIED,
-        $2.FrequencyCapTimeUnitEnum_FrequencyCapTimeUnit.valueOf,
-        $2.FrequencyCapTimeUnitEnum_FrequencyCapTimeUnit.values)
+        2, 'timeUnit', $pb.PbFieldType.OE,
+        defaultOrMaker:
+            $2.FrequencyCapTimeUnitEnum_FrequencyCapTimeUnit.UNSPECIFIED,
+        valueOf: $2.FrequencyCapTimeUnitEnum_FrequencyCapTimeUnit.valueOf,
+        enumValues: $2.FrequencyCapTimeUnitEnum_FrequencyCapTimeUnit.values)
     ..e<$3.FrequencyCapEventTypeEnum_FrequencyCapEventType>(
-        3,
-        'eventType',
-        $pb.PbFieldType.OE,
-        $3.FrequencyCapEventTypeEnum_FrequencyCapEventType.UNSPECIFIED,
-        $3.FrequencyCapEventTypeEnum_FrequencyCapEventType.valueOf,
-        $3.FrequencyCapEventTypeEnum_FrequencyCapEventType.values)
-    ..a<$0.Int32Value>(4, 'timeLength', $pb.PbFieldType.OM,
-        $0.Int32Value.getDefault, $0.Int32Value.create)
+        3, 'eventType', $pb.PbFieldType.OE,
+        defaultOrMaker:
+            $3.FrequencyCapEventTypeEnum_FrequencyCapEventType.UNSPECIFIED,
+        valueOf: $3.FrequencyCapEventTypeEnum_FrequencyCapEventType.valueOf,
+        enumValues: $3.FrequencyCapEventTypeEnum_FrequencyCapEventType.values)
+    ..aOM<$0.Int32Value>(4, 'timeLength', subBuilder: $0.Int32Value.create)
     ..hasRequiredFields = false;
 
   FrequencyCapKey._() : super();
@@ -108,39 +115,58 @@ class FrequencyCapKey extends $pb.GeneratedMessage {
   FrequencyCapKey createEmptyInstance() => create();
   static $pb.PbList<FrequencyCapKey> createRepeated() =>
       $pb.PbList<FrequencyCapKey>();
-  static FrequencyCapKey getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static FrequencyCapKey getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<FrequencyCapKey>(create);
   static FrequencyCapKey _defaultInstance;
 
+  @$pb.TagNumber(1)
   $1.FrequencyCapLevelEnum_FrequencyCapLevel get level => $_getN(0);
+  @$pb.TagNumber(1)
   set level($1.FrequencyCapLevelEnum_FrequencyCapLevel v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasLevel() => $_has(0);
+  @$pb.TagNumber(1)
   void clearLevel() => clearField(1);
 
+  @$pb.TagNumber(2)
   $2.FrequencyCapTimeUnitEnum_FrequencyCapTimeUnit get timeUnit => $_getN(1);
+  @$pb.TagNumber(2)
   set timeUnit($2.FrequencyCapTimeUnitEnum_FrequencyCapTimeUnit v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasTimeUnit() => $_has(1);
+  @$pb.TagNumber(2)
   void clearTimeUnit() => clearField(2);
 
+  @$pb.TagNumber(3)
   $3.FrequencyCapEventTypeEnum_FrequencyCapEventType get eventType => $_getN(2);
+  @$pb.TagNumber(3)
   set eventType($3.FrequencyCapEventTypeEnum_FrequencyCapEventType v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasEventType() => $_has(2);
+  @$pb.TagNumber(3)
   void clearEventType() => clearField(3);
 
+  @$pb.TagNumber(4)
   $0.Int32Value get timeLength => $_getN(3);
+  @$pb.TagNumber(4)
   set timeLength($0.Int32Value v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasTimeLength() => $_has(3);
+  @$pb.TagNumber(4)
   void clearTimeLength() => clearField(4);
+  @$pb.TagNumber(4)
+  $0.Int32Value ensureTimeLength() => $_ensure(3);
 }

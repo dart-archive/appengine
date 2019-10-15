@@ -5,15 +5,15 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class VideoClassificationDatasetMetadata extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'VideoClassificationDatasetMetadata',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   VideoClassificationDatasetMetadata._() : super();
@@ -37,15 +37,18 @@ class VideoClassificationDatasetMetadata extends $pb.GeneratedMessage {
   VideoClassificationDatasetMetadata createEmptyInstance() => create();
   static $pb.PbList<VideoClassificationDatasetMetadata> createRepeated() =>
       $pb.PbList<VideoClassificationDatasetMetadata>();
-  static VideoClassificationDatasetMetadata getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static VideoClassificationDatasetMetadata getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<VideoClassificationDatasetMetadata>(
+          create);
   static VideoClassificationDatasetMetadata _defaultInstance;
 }
 
 class VideoObjectTrackingDatasetMetadata extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'VideoObjectTrackingDatasetMetadata',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   VideoObjectTrackingDatasetMetadata._() : super();
@@ -69,15 +72,18 @@ class VideoObjectTrackingDatasetMetadata extends $pb.GeneratedMessage {
   VideoObjectTrackingDatasetMetadata createEmptyInstance() => create();
   static $pb.PbList<VideoObjectTrackingDatasetMetadata> createRepeated() =>
       $pb.PbList<VideoObjectTrackingDatasetMetadata>();
-  static VideoObjectTrackingDatasetMetadata getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static VideoObjectTrackingDatasetMetadata getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<VideoObjectTrackingDatasetMetadata>(
+          create);
   static VideoObjectTrackingDatasetMetadata _defaultInstance;
 }
 
 class VideoClassificationModelMetadata extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'VideoClassificationModelMetadata',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   VideoClassificationModelMetadata._() : super();
@@ -101,15 +107,18 @@ class VideoClassificationModelMetadata extends $pb.GeneratedMessage {
   VideoClassificationModelMetadata createEmptyInstance() => create();
   static $pb.PbList<VideoClassificationModelMetadata> createRepeated() =>
       $pb.PbList<VideoClassificationModelMetadata>();
-  static VideoClassificationModelMetadata getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static VideoClassificationModelMetadata getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<VideoClassificationModelMetadata>(
+          create);
   static VideoClassificationModelMetadata _defaultInstance;
 }
 
 class VideoObjectTrackingModelMetadata extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'VideoObjectTrackingModelMetadata',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   VideoObjectTrackingModelMetadata._() : super();
@@ -133,7 +142,9 @@ class VideoObjectTrackingModelMetadata extends $pb.GeneratedMessage {
   VideoObjectTrackingModelMetadata createEmptyInstance() => create();
   static $pb.PbList<VideoObjectTrackingModelMetadata> createRepeated() =>
       $pb.PbList<VideoObjectTrackingModelMetadata>();
-  static VideoObjectTrackingModelMetadata getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static VideoObjectTrackingModelMetadata getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<VideoObjectTrackingModelMetadata>(
+          create);
   static VideoObjectTrackingModelMetadata _defaultInstance;
 }

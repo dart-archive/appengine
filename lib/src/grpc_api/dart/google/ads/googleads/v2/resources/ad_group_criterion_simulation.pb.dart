@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -26,39 +25,31 @@ class AdGroupCriterionSimulation extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'AdGroupCriterionSimulation',
-      package: const $pb.PackageName('google.ads.googleads.v2.resources'))
+      package: const $pb.PackageName('google.ads.googleads.v2.resources'),
+      createEmptyInstance: create)
     ..oo(0, [8])
     ..aOS(1, 'resourceName')
-    ..a<$0.Int64Value>(2, 'adGroupId', $pb.PbFieldType.OM,
-        $0.Int64Value.getDefault, $0.Int64Value.create)
-    ..a<$0.Int64Value>(3, 'criterionId', $pb.PbFieldType.OM,
-        $0.Int64Value.getDefault, $0.Int64Value.create)
-    ..e<$2.SimulationTypeEnum_SimulationType>(
-        4,
-        'type',
-        $pb.PbFieldType.OE,
-        $2.SimulationTypeEnum_SimulationType.UNSPECIFIED,
-        $2.SimulationTypeEnum_SimulationType.valueOf,
-        $2.SimulationTypeEnum_SimulationType.values)
+    ..aOM<$0.Int64Value>(2, 'adGroupId', subBuilder: $0.Int64Value.create)
+    ..aOM<$0.Int64Value>(3, 'criterionId', subBuilder: $0.Int64Value.create)
+    ..e<$2.SimulationTypeEnum_SimulationType>(4, 'type', $pb.PbFieldType.OE,
+        defaultOrMaker: $2.SimulationTypeEnum_SimulationType.UNSPECIFIED,
+        valueOf: $2.SimulationTypeEnum_SimulationType.valueOf,
+        enumValues: $2.SimulationTypeEnum_SimulationType.values)
     ..e<$3.SimulationModificationMethodEnum_SimulationModificationMethod>(
-        5,
-        'modificationMethod',
-        $pb.PbFieldType.OE,
-        $3.SimulationModificationMethodEnum_SimulationModificationMethod
+        5, 'modificationMethod', $pb.PbFieldType.OE,
+        defaultOrMaker: $3
+            .SimulationModificationMethodEnum_SimulationModificationMethod
             .UNSPECIFIED,
-        $3.SimulationModificationMethodEnum_SimulationModificationMethod
+        valueOf: $3
+            .SimulationModificationMethodEnum_SimulationModificationMethod
             .valueOf,
-        $3.SimulationModificationMethodEnum_SimulationModificationMethod.values)
-    ..a<$0.StringValue>(6, 'startDate', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
-    ..a<$0.StringValue>(7, 'endDate', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
-    ..a<$1.CpcBidSimulationPointList>(
-        8,
-        'cpcBidPointList',
-        $pb.PbFieldType.OM,
-        $1.CpcBidSimulationPointList.getDefault,
-        $1.CpcBidSimulationPointList.create)
+        enumValues: $3
+            .SimulationModificationMethodEnum_SimulationModificationMethod
+            .values)
+    ..aOM<$0.StringValue>(6, 'startDate', subBuilder: $0.StringValue.create)
+    ..aOM<$0.StringValue>(7, 'endDate', subBuilder: $0.StringValue.create)
+    ..aOM<$1.CpcBidSimulationPointList>(8, 'cpcBidPointList',
+        subBuilder: $1.CpcBidSimulationPointList.create)
     ..hasRequiredFields = false;
 
   AdGroupCriterionSimulation._() : super();
@@ -81,77 +72,120 @@ class AdGroupCriterionSimulation extends $pb.GeneratedMessage {
   AdGroupCriterionSimulation createEmptyInstance() => create();
   static $pb.PbList<AdGroupCriterionSimulation> createRepeated() =>
       $pb.PbList<AdGroupCriterionSimulation>();
-  static AdGroupCriterionSimulation getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static AdGroupCriterionSimulation getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AdGroupCriterionSimulation>(create);
   static AdGroupCriterionSimulation _defaultInstance;
 
   AdGroupCriterionSimulation_PointList whichPointList() =>
       _AdGroupCriterionSimulation_PointListByTag[$_whichOneof(0)];
   void clearPointList() => clearField($_whichOneof(0));
 
-  $core.String get resourceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get resourceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set resourceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResourceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResourceName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $0.Int64Value get adGroupId => $_getN(1);
+  @$pb.TagNumber(2)
   set adGroupId($0.Int64Value v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasAdGroupId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearAdGroupId() => clearField(2);
+  @$pb.TagNumber(2)
+  $0.Int64Value ensureAdGroupId() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $0.Int64Value get criterionId => $_getN(2);
+  @$pb.TagNumber(3)
   set criterionId($0.Int64Value v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasCriterionId() => $_has(2);
+  @$pb.TagNumber(3)
   void clearCriterionId() => clearField(3);
+  @$pb.TagNumber(3)
+  $0.Int64Value ensureCriterionId() => $_ensure(2);
 
+  @$pb.TagNumber(4)
   $2.SimulationTypeEnum_SimulationType get type => $_getN(3);
+  @$pb.TagNumber(4)
   set type($2.SimulationTypeEnum_SimulationType v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasType() => $_has(3);
+  @$pb.TagNumber(4)
   void clearType() => clearField(4);
 
+  @$pb.TagNumber(5)
   $3.SimulationModificationMethodEnum_SimulationModificationMethod
       get modificationMethod => $_getN(4);
+  @$pb.TagNumber(5)
   set modificationMethod(
       $3.SimulationModificationMethodEnum_SimulationModificationMethod v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasModificationMethod() => $_has(4);
+  @$pb.TagNumber(5)
   void clearModificationMethod() => clearField(5);
 
+  @$pb.TagNumber(6)
   $0.StringValue get startDate => $_getN(5);
+  @$pb.TagNumber(6)
   set startDate($0.StringValue v) {
     setField(6, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasStartDate() => $_has(5);
+  @$pb.TagNumber(6)
   void clearStartDate() => clearField(6);
+  @$pb.TagNumber(6)
+  $0.StringValue ensureStartDate() => $_ensure(5);
 
+  @$pb.TagNumber(7)
   $0.StringValue get endDate => $_getN(6);
+  @$pb.TagNumber(7)
   set endDate($0.StringValue v) {
     setField(7, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasEndDate() => $_has(6);
+  @$pb.TagNumber(7)
   void clearEndDate() => clearField(7);
+  @$pb.TagNumber(7)
+  $0.StringValue ensureEndDate() => $_ensure(6);
 
+  @$pb.TagNumber(8)
   $1.CpcBidSimulationPointList get cpcBidPointList => $_getN(7);
+  @$pb.TagNumber(8)
   set cpcBidPointList($1.CpcBidSimulationPointList v) {
     setField(8, v);
   }
 
+  @$pb.TagNumber(8)
   $core.bool hasCpcBidPointList() => $_has(7);
+  @$pb.TagNumber(8)
   void clearCpcBidPointList() => clearField(8);
+  @$pb.TagNumber(8)
+  $1.CpcBidSimulationPointList ensureCpcBidPointList() => $_ensure(7);
 }

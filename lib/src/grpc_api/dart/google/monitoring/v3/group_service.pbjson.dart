@@ -98,6 +98,7 @@ const DeleteGroupRequest$json = {
   '1': 'DeleteGroupRequest',
   '2': [
     {'1': 'name', '3': 3, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'recursive', '3': 4, '4': 1, '5': 8, '10': 'recursive'},
   ],
 };
 

@@ -9,10 +9,17 @@ const Job$json = {
   '1': 'Job',
   '2': [
     {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    {'1': 'company', '3': 2, '4': 1, '5': 9, '10': 'company'},
-    {'1': 'requisition_id', '3': 3, '4': 1, '5': 9, '10': 'requisitionId'},
-    {'1': 'title', '3': 4, '4': 1, '5': 9, '10': 'title'},
-    {'1': 'description', '3': 5, '4': 1, '5': 9, '10': 'description'},
+    {'1': 'company', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'company'},
+    {
+      '1': 'requisition_id',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'requisitionId'
+    },
+    {'1': 'title', '3': 4, '4': 1, '5': 9, '8': {}, '10': 'title'},
+    {'1': 'description', '3': 5, '4': 1, '5': 9, '8': {}, '10': 'description'},
     {'1': 'addresses', '3': 6, '4': 3, '5': 9, '10': 'addresses'},
     {
       '1': 'application_info',
@@ -96,7 +103,8 @@ const Job$json = {
       '4': 1,
       '5': 14,
       '6': '.google.cloud.talent.v4beta1.Visibility',
-      '10': 'visibility'
+      '8': {'3': true},
+      '10': 'visibility',
     },
     {
       '1': 'job_start_time',
@@ -136,6 +144,7 @@ const Job$json = {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
+      '8': {},
       '10': 'postingCreateTime'
     },
     {
@@ -144,6 +153,7 @@ const Job$json = {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
+      '8': {},
       '10': 'postingUpdateTime'
     },
     {
@@ -151,6 +161,7 @@ const Job$json = {
       '3': 28,
       '4': 1,
       '5': 9,
+      '8': {},
       '10': 'companyDisplayName'
     },
     {
@@ -159,6 +170,7 @@ const Job$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.talent.v4beta1.Job.DerivedInfo',
+      '8': {},
       '10': 'derivedInfo'
     },
     {

@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -19,7 +18,8 @@ export 'spanner_instance_admin.pbenum.dart';
 
 class InstanceConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('InstanceConfig',
-      package: const $pb.PackageName('google.spanner.admin.instance.v1'))
+      package: const $pb.PackageName('google.spanner.admin.instance.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..aOS(2, 'displayName')
     ..hasRequiredFields = false;
@@ -41,50 +41,53 @@ class InstanceConfig extends $pb.GeneratedMessage {
   InstanceConfig createEmptyInstance() => create();
   static $pb.PbList<InstanceConfig> createRepeated() =>
       $pb.PbList<InstanceConfig>();
-  static InstanceConfig getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static InstanceConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<InstanceConfig>(create);
   static InstanceConfig _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.String get displayName => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get displayName => $_getSZ(1);
+  @$pb.TagNumber(2)
   set displayName($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasDisplayName() => $_has(1);
+  @$pb.TagNumber(2)
   void clearDisplayName() => clearField(2);
 }
 
 class Instance extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Instance',
-      package: const $pb.PackageName('google.spanner.admin.instance.v1'))
+      package: const $pb.PackageName('google.spanner.admin.instance.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..aOS(2, 'config')
     ..aOS(3, 'displayName')
     ..a<$core.int>(5, 'nodeCount', $pb.PbFieldType.O3)
-    ..e<Instance_State>(
-        6,
-        'state',
-        $pb.PbFieldType.OE,
-        Instance_State.STATE_UNSPECIFIED,
-        Instance_State.valueOf,
-        Instance_State.values)
-    ..m<$core.String, $core.String>(
-        7,
-        'labels',
-        'Instance.LabelsEntry',
-        $pb.PbFieldType.OS,
-        $pb.PbFieldType.OS,
-        null,
-        null,
-        null,
-        const $pb.PackageName('google.spanner.admin.instance.v1'))
+    ..e<Instance_State>(6, 'state', $pb.PbFieldType.OE,
+        defaultOrMaker: Instance_State.STATE_UNSPECIFIED,
+        valueOf: Instance_State.valueOf,
+        enumValues: Instance_State.values)
+    ..m<$core.String, $core.String>(7, 'labels',
+        entryClassName: 'Instance.LabelsEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
+        packageName: const $pb.PackageName('google.spanner.admin.instance.v1'))
     ..hasRequiredFields = false;
 
   Instance._() : super();
@@ -103,56 +106,80 @@ class Instance extends $pb.GeneratedMessage {
   static Instance create() => Instance._();
   Instance createEmptyInstance() => create();
   static $pb.PbList<Instance> createRepeated() => $pb.PbList<Instance>();
-  static Instance getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Instance getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Instance>(create);
   static Instance _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.String get config => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get config => $_getSZ(1);
+  @$pb.TagNumber(2)
   set config($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasConfig() => $_has(1);
+  @$pb.TagNumber(2)
   void clearConfig() => clearField(2);
 
-  $core.String get displayName => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get displayName => $_getSZ(2);
+  @$pb.TagNumber(3)
   set displayName($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasDisplayName() => $_has(2);
+  @$pb.TagNumber(3)
   void clearDisplayName() => clearField(3);
 
-  $core.int get nodeCount => $_get(3, 0);
+  @$pb.TagNumber(5)
+  $core.int get nodeCount => $_getIZ(3);
+  @$pb.TagNumber(5)
   set nodeCount($core.int v) {
     $_setSignedInt32(3, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasNodeCount() => $_has(3);
+  @$pb.TagNumber(5)
   void clearNodeCount() => clearField(5);
 
+  @$pb.TagNumber(6)
   Instance_State get state => $_getN(4);
+  @$pb.TagNumber(6)
   set state(Instance_State v) {
     setField(6, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasState() => $_has(4);
+  @$pb.TagNumber(6)
   void clearState() => clearField(6);
 
+  @$pb.TagNumber(7)
   $core.Map<$core.String, $core.String> get labels => $_getMap(5);
 }
 
 class ListInstanceConfigsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListInstanceConfigsRequest',
-      package: const $pb.PackageName('google.spanner.admin.instance.v1'))
+      package: const $pb.PackageName('google.spanner.admin.instance.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(3, 'pageToken')
@@ -178,41 +205,55 @@ class ListInstanceConfigsRequest extends $pb.GeneratedMessage {
   ListInstanceConfigsRequest createEmptyInstance() => create();
   static $pb.PbList<ListInstanceConfigsRequest> createRepeated() =>
       $pb.PbList<ListInstanceConfigsRequest>();
-  static ListInstanceConfigsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListInstanceConfigsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListInstanceConfigsRequest>(create);
   static ListInstanceConfigsRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.int get pageSize => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get pageSize => $_getIZ(1);
+  @$pb.TagNumber(2)
   set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
-  $core.String get pageToken => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get pageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
   set pageToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
 }
 
 class ListInstanceConfigsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListInstanceConfigsResponse',
-      package: const $pb.PackageName('google.spanner.admin.instance.v1'))
-    ..pc<InstanceConfig>(
-        1, 'instanceConfigs', $pb.PbFieldType.PM, InstanceConfig.create)
+      package: const $pb.PackageName('google.spanner.admin.instance.v1'),
+      createEmptyInstance: create)
+    ..pc<InstanceConfig>(1, 'instanceConfigs', $pb.PbFieldType.PM,
+        subBuilder: InstanceConfig.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -237,24 +278,31 @@ class ListInstanceConfigsResponse extends $pb.GeneratedMessage {
   ListInstanceConfigsResponse createEmptyInstance() => create();
   static $pb.PbList<ListInstanceConfigsResponse> createRepeated() =>
       $pb.PbList<ListInstanceConfigsResponse>();
-  static ListInstanceConfigsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListInstanceConfigsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListInstanceConfigsResponse>(create);
   static ListInstanceConfigsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<InstanceConfig> get instanceConfigs => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class GetInstanceConfigRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetInstanceConfigRequest',
-      package: const $pb.PackageName('google.spanner.admin.instance.v1'))
+      package: const $pb.PackageName('google.spanner.admin.instance.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -277,22 +325,28 @@ class GetInstanceConfigRequest extends $pb.GeneratedMessage {
   GetInstanceConfigRequest createEmptyInstance() => create();
   static $pb.PbList<GetInstanceConfigRequest> createRepeated() =>
       $pb.PbList<GetInstanceConfigRequest>();
-  static GetInstanceConfigRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetInstanceConfigRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetInstanceConfigRequest>(create);
   static GetInstanceConfigRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class GetInstanceRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetInstanceRequest',
-      package: const $pb.PackageName('google.spanner.admin.instance.v1'))
+      package: const $pb.PackageName('google.spanner.admin.instance.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -313,26 +367,31 @@ class GetInstanceRequest extends $pb.GeneratedMessage {
   GetInstanceRequest createEmptyInstance() => create();
   static $pb.PbList<GetInstanceRequest> createRepeated() =>
       $pb.PbList<GetInstanceRequest>();
-  static GetInstanceRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetInstanceRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetInstanceRequest>(create);
   static GetInstanceRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class CreateInstanceRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateInstanceRequest',
-      package: const $pb.PackageName('google.spanner.admin.instance.v1'))
+      package: const $pb.PackageName('google.spanner.admin.instance.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..aOS(2, 'instanceId')
-    ..a<Instance>(
-        3, 'instance', $pb.PbFieldType.OM, Instance.getDefault, Instance.create)
+    ..aOM<Instance>(3, 'instance', subBuilder: Instance.create)
     ..hasRequiredFields = false;
 
   CreateInstanceRequest._() : super();
@@ -354,38 +413,54 @@ class CreateInstanceRequest extends $pb.GeneratedMessage {
   CreateInstanceRequest createEmptyInstance() => create();
   static $pb.PbList<CreateInstanceRequest> createRepeated() =>
       $pb.PbList<CreateInstanceRequest>();
-  static CreateInstanceRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateInstanceRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateInstanceRequest>(create);
   static CreateInstanceRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.String get instanceId => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get instanceId => $_getSZ(1);
+  @$pb.TagNumber(2)
   set instanceId($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasInstanceId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearInstanceId() => clearField(2);
 
+  @$pb.TagNumber(3)
   Instance get instance => $_getN(2);
+  @$pb.TagNumber(3)
   set instance(Instance v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasInstance() => $_has(2);
+  @$pb.TagNumber(3)
   void clearInstance() => clearField(3);
+  @$pb.TagNumber(3)
+  Instance ensureInstance() => $_ensure(2);
 }
 
 class ListInstancesRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListInstancesRequest',
-      package: const $pb.PackageName('google.spanner.admin.instance.v1'))
+      package: const $pb.PackageName('google.spanner.admin.instance.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(3, 'pageToken')
@@ -410,47 +485,66 @@ class ListInstancesRequest extends $pb.GeneratedMessage {
   ListInstancesRequest createEmptyInstance() => create();
   static $pb.PbList<ListInstancesRequest> createRepeated() =>
       $pb.PbList<ListInstancesRequest>();
-  static ListInstancesRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListInstancesRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListInstancesRequest>(create);
   static ListInstancesRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.int get pageSize => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get pageSize => $_getIZ(1);
+  @$pb.TagNumber(2)
   set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
-  $core.String get pageToken => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get pageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
   set pageToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
 
-  $core.String get filter => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get filter => $_getSZ(3);
+  @$pb.TagNumber(4)
   set filter($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasFilter() => $_has(3);
+  @$pb.TagNumber(4)
   void clearFilter() => clearField(4);
 }
 
 class ListInstancesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListInstancesResponse',
-      package: const $pb.PackageName('google.spanner.admin.instance.v1'))
-    ..pc<Instance>(1, 'instances', $pb.PbFieldType.PM, Instance.create)
+      package: const $pb.PackageName('google.spanner.admin.instance.v1'),
+      createEmptyInstance: create)
+    ..pc<Instance>(1, 'instances', $pb.PbFieldType.PM,
+        subBuilder: Instance.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -473,28 +567,33 @@ class ListInstancesResponse extends $pb.GeneratedMessage {
   ListInstancesResponse createEmptyInstance() => create();
   static $pb.PbList<ListInstancesResponse> createRepeated() =>
       $pb.PbList<ListInstancesResponse>();
-  static ListInstancesResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListInstancesResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListInstancesResponse>(create);
   static ListInstancesResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<Instance> get instances => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class UpdateInstanceRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateInstanceRequest',
-      package: const $pb.PackageName('google.spanner.admin.instance.v1'))
-    ..a<Instance>(
-        1, 'instance', $pb.PbFieldType.OM, Instance.getDefault, Instance.create)
-    ..a<$5.FieldMask>(2, 'fieldMask', $pb.PbFieldType.OM,
-        $5.FieldMask.getDefault, $5.FieldMask.create)
+      package: const $pb.PackageName('google.spanner.admin.instance.v1'),
+      createEmptyInstance: create)
+    ..aOM<Instance>(1, 'instance', subBuilder: Instance.create)
+    ..aOM<$5.FieldMask>(2, 'fieldMask', subBuilder: $5.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateInstanceRequest._() : super();
@@ -516,30 +615,44 @@ class UpdateInstanceRequest extends $pb.GeneratedMessage {
   UpdateInstanceRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateInstanceRequest> createRepeated() =>
       $pb.PbList<UpdateInstanceRequest>();
-  static UpdateInstanceRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateInstanceRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateInstanceRequest>(create);
   static UpdateInstanceRequest _defaultInstance;
 
+  @$pb.TagNumber(1)
   Instance get instance => $_getN(0);
+  @$pb.TagNumber(1)
   set instance(Instance v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasInstance() => $_has(0);
+  @$pb.TagNumber(1)
   void clearInstance() => clearField(1);
+  @$pb.TagNumber(1)
+  Instance ensureInstance() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $5.FieldMask get fieldMask => $_getN(1);
+  @$pb.TagNumber(2)
   set fieldMask($5.FieldMask v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasFieldMask() => $_has(1);
+  @$pb.TagNumber(2)
   void clearFieldMask() => clearField(2);
+  @$pb.TagNumber(2)
+  $5.FieldMask ensureFieldMask() => $_ensure(1);
 }
 
 class DeleteInstanceRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteInstanceRequest',
-      package: const $pb.PackageName('google.spanner.admin.instance.v1'))
+      package: const $pb.PackageName('google.spanner.admin.instance.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -562,30 +675,32 @@ class DeleteInstanceRequest extends $pb.GeneratedMessage {
   DeleteInstanceRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteInstanceRequest> createRepeated() =>
       $pb.PbList<DeleteInstanceRequest>();
-  static DeleteInstanceRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteInstanceRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteInstanceRequest>(create);
   static DeleteInstanceRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class CreateInstanceMetadata extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateInstanceMetadata',
-      package: const $pb.PackageName('google.spanner.admin.instance.v1'))
-    ..a<Instance>(
-        1, 'instance', $pb.PbFieldType.OM, Instance.getDefault, Instance.create)
-    ..a<$6.Timestamp>(2, 'startTime', $pb.PbFieldType.OM,
-        $6.Timestamp.getDefault, $6.Timestamp.create)
-    ..a<$6.Timestamp>(3, 'cancelTime', $pb.PbFieldType.OM,
-        $6.Timestamp.getDefault, $6.Timestamp.create)
-    ..a<$6.Timestamp>(4, 'endTime', $pb.PbFieldType.OM, $6.Timestamp.getDefault,
-        $6.Timestamp.create)
+      package: const $pb.PackageName('google.spanner.admin.instance.v1'),
+      createEmptyInstance: create)
+    ..aOM<Instance>(1, 'instance', subBuilder: Instance.create)
+    ..aOM<$6.Timestamp>(2, 'startTime', subBuilder: $6.Timestamp.create)
+    ..aOM<$6.Timestamp>(3, 'cancelTime', subBuilder: $6.Timestamp.create)
+    ..aOM<$6.Timestamp>(4, 'endTime', subBuilder: $6.Timestamp.create)
     ..hasRequiredFields = false;
 
   CreateInstanceMetadata._() : super();
@@ -607,54 +722,76 @@ class CreateInstanceMetadata extends $pb.GeneratedMessage {
   CreateInstanceMetadata createEmptyInstance() => create();
   static $pb.PbList<CreateInstanceMetadata> createRepeated() =>
       $pb.PbList<CreateInstanceMetadata>();
-  static CreateInstanceMetadata getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateInstanceMetadata getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateInstanceMetadata>(create);
   static CreateInstanceMetadata _defaultInstance;
 
+  @$pb.TagNumber(1)
   Instance get instance => $_getN(0);
+  @$pb.TagNumber(1)
   set instance(Instance v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasInstance() => $_has(0);
+  @$pb.TagNumber(1)
   void clearInstance() => clearField(1);
+  @$pb.TagNumber(1)
+  Instance ensureInstance() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $6.Timestamp get startTime => $_getN(1);
+  @$pb.TagNumber(2)
   set startTime($6.Timestamp v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasStartTime() => $_has(1);
+  @$pb.TagNumber(2)
   void clearStartTime() => clearField(2);
+  @$pb.TagNumber(2)
+  $6.Timestamp ensureStartTime() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $6.Timestamp get cancelTime => $_getN(2);
+  @$pb.TagNumber(3)
   set cancelTime($6.Timestamp v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasCancelTime() => $_has(2);
+  @$pb.TagNumber(3)
   void clearCancelTime() => clearField(3);
+  @$pb.TagNumber(3)
+  $6.Timestamp ensureCancelTime() => $_ensure(2);
 
+  @$pb.TagNumber(4)
   $6.Timestamp get endTime => $_getN(3);
+  @$pb.TagNumber(4)
   set endTime($6.Timestamp v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasEndTime() => $_has(3);
+  @$pb.TagNumber(4)
   void clearEndTime() => clearField(4);
+  @$pb.TagNumber(4)
+  $6.Timestamp ensureEndTime() => $_ensure(3);
 }
 
 class UpdateInstanceMetadata extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateInstanceMetadata',
-      package: const $pb.PackageName('google.spanner.admin.instance.v1'))
-    ..a<Instance>(
-        1, 'instance', $pb.PbFieldType.OM, Instance.getDefault, Instance.create)
-    ..a<$6.Timestamp>(2, 'startTime', $pb.PbFieldType.OM,
-        $6.Timestamp.getDefault, $6.Timestamp.create)
-    ..a<$6.Timestamp>(3, 'cancelTime', $pb.PbFieldType.OM,
-        $6.Timestamp.getDefault, $6.Timestamp.create)
-    ..a<$6.Timestamp>(4, 'endTime', $pb.PbFieldType.OM, $6.Timestamp.getDefault,
-        $6.Timestamp.create)
+      package: const $pb.PackageName('google.spanner.admin.instance.v1'),
+      createEmptyInstance: create)
+    ..aOM<Instance>(1, 'instance', subBuilder: Instance.create)
+    ..aOM<$6.Timestamp>(2, 'startTime', subBuilder: $6.Timestamp.create)
+    ..aOM<$6.Timestamp>(3, 'cancelTime', subBuilder: $6.Timestamp.create)
+    ..aOM<$6.Timestamp>(4, 'endTime', subBuilder: $6.Timestamp.create)
     ..hasRequiredFields = false;
 
   UpdateInstanceMetadata._() : super();
@@ -676,39 +813,64 @@ class UpdateInstanceMetadata extends $pb.GeneratedMessage {
   UpdateInstanceMetadata createEmptyInstance() => create();
   static $pb.PbList<UpdateInstanceMetadata> createRepeated() =>
       $pb.PbList<UpdateInstanceMetadata>();
-  static UpdateInstanceMetadata getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateInstanceMetadata getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateInstanceMetadata>(create);
   static UpdateInstanceMetadata _defaultInstance;
 
+  @$pb.TagNumber(1)
   Instance get instance => $_getN(0);
+  @$pb.TagNumber(1)
   set instance(Instance v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasInstance() => $_has(0);
+  @$pb.TagNumber(1)
   void clearInstance() => clearField(1);
+  @$pb.TagNumber(1)
+  Instance ensureInstance() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $6.Timestamp get startTime => $_getN(1);
+  @$pb.TagNumber(2)
   set startTime($6.Timestamp v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasStartTime() => $_has(1);
+  @$pb.TagNumber(2)
   void clearStartTime() => clearField(2);
+  @$pb.TagNumber(2)
+  $6.Timestamp ensureStartTime() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $6.Timestamp get cancelTime => $_getN(2);
+  @$pb.TagNumber(3)
   set cancelTime($6.Timestamp v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasCancelTime() => $_has(2);
+  @$pb.TagNumber(3)
   void clearCancelTime() => clearField(3);
+  @$pb.TagNumber(3)
+  $6.Timestamp ensureCancelTime() => $_ensure(2);
 
+  @$pb.TagNumber(4)
   $6.Timestamp get endTime => $_getN(3);
+  @$pb.TagNumber(4)
   set endTime($6.Timestamp v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasEndTime() => $_has(3);
+  @$pb.TagNumber(4)
   void clearEndTime() => clearField(4);
+  @$pb.TagNumber(4)
+  $6.Timestamp ensureEndTime() => $_ensure(3);
 }

@@ -6,7 +6,7 @@
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
-import 'dart:core' as $core show int, dynamic, String, List, Map;
+import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class ScanConfigError_Code extends $pb.ProtobufEnum {
@@ -55,6 +55,8 @@ class ScanConfigError_Code extends $pb.ProtobufEnum {
       ScanConfigError_Code._(20, 'FINDING_TYPE_UNSPECIFIED');
   static const ScanConfigError_Code FORBIDDEN_TO_SCAN_COMPUTE =
       ScanConfigError_Code._(21, 'FORBIDDEN_TO_SCAN_COMPUTE');
+  static const ScanConfigError_Code FORBIDDEN_UPDATE_TO_MANAGED_SCAN =
+      ScanConfigError_Code._(43, 'FORBIDDEN_UPDATE_TO_MANAGED_SCAN');
   static const ScanConfigError_Code MALFORMED_FILTER =
       ScanConfigError_Code._(22, 'MALFORMED_FILTER');
   static const ScanConfigError_Code MALFORMED_RESOURCE_NAME =
@@ -120,6 +122,7 @@ class ScanConfigError_Code extends $pb.ProtobufEnum {
     FAILED_TO_AUTHENTICATE_TO_TARGET,
     FINDING_TYPE_UNSPECIFIED,
     FORBIDDEN_TO_SCAN_COMPUTE,
+    FORBIDDEN_UPDATE_TO_MANAGED_SCAN,
     MALFORMED_FILTER,
     MALFORMED_RESOURCE_NAME,
     PROJECT_INACTIVE,

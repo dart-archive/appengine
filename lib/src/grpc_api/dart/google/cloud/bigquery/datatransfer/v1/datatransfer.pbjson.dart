@@ -84,7 +84,7 @@ const DataSourceParameter_Type$json = {
 const DataSource$json = {
   '1': 'DataSource',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
     {'1': 'data_source_id', '3': 2, '4': 1, '5': 9, '10': 'dataSourceId'},
     {'1': 'display_name', '3': 3, '4': 1, '5': 9, '10': 'displayName'},
     {'1': 'description', '3': 4, '4': 1, '5': 9, '10': 'description'},
@@ -172,6 +172,7 @@ const DataSource$json = {
     },
   ],
   '4': [DataSource_AuthorizationType$json, DataSource_DataRefreshType$json],
+  '7': {},
 };
 
 const DataSource_AuthorizationType$json = {
@@ -195,14 +196,14 @@ const DataSource_DataRefreshType$json = {
 const GetDataSourceRequest$json = {
   '1': 'GetDataSourceRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
   ],
 };
 
 const ListDataSourcesRequest$json = {
   '1': 'ListDataSourcesRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
     {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
     {'1': 'page_size', '3': 4, '4': 1, '5': 5, '10': 'pageSize'},
   ],
@@ -219,20 +220,28 @@ const ListDataSourcesResponse$json = {
       '6': '.google.cloud.bigquery.datatransfer.v1.DataSource',
       '10': 'dataSources'
     },
-    {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
+    {
+      '1': 'next_page_token',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'nextPageToken'
+    },
   ],
 };
 
 const CreateTransferConfigRequest$json = {
   '1': 'CreateTransferConfigRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
     {
       '1': 'transfer_config',
       '3': 2,
       '4': 1,
       '5': 11,
       '6': '.google.cloud.bigquery.datatransfer.v1.TransferConfig',
+      '8': {},
       '10': 'transferConfig'
     },
     {
@@ -255,6 +264,7 @@ const UpdateTransferConfigRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.bigquery.datatransfer.v1.TransferConfig',
+      '8': {},
       '10': 'transferConfig'
     },
     {
@@ -270,6 +280,7 @@ const UpdateTransferConfigRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.FieldMask',
+      '8': {},
       '10': 'updateMask'
     },
     {'1': 'version_info', '3': 5, '4': 1, '5': 9, '10': 'versionInfo'},
@@ -279,35 +290,35 @@ const UpdateTransferConfigRequest$json = {
 const GetTransferConfigRequest$json = {
   '1': 'GetTransferConfigRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
   ],
 };
 
 const DeleteTransferConfigRequest$json = {
   '1': 'DeleteTransferConfigRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
   ],
 };
 
 const GetTransferRunRequest$json = {
   '1': 'GetTransferRunRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
   ],
 };
 
 const DeleteTransferRunRequest$json = {
   '1': 'DeleteTransferRunRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
   ],
 };
 
 const ListTransferConfigsRequest$json = {
   '1': 'ListTransferConfigsRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
     {'1': 'data_source_ids', '3': 2, '4': 3, '5': 9, '10': 'dataSourceIds'},
     {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
     {'1': 'page_size', '3': 4, '4': 1, '5': 5, '10': 'pageSize'},
@@ -323,16 +334,24 @@ const ListTransferConfigsResponse$json = {
       '4': 3,
       '5': 11,
       '6': '.google.cloud.bigquery.datatransfer.v1.TransferConfig',
+      '8': {},
       '10': 'transferConfigs'
     },
-    {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
+    {
+      '1': 'next_page_token',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'nextPageToken'
+    },
   ],
 };
 
 const ListTransferRunsRequest$json = {
   '1': 'ListTransferRunsRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
     {
       '1': 'states',
       '3': 2,
@@ -373,16 +392,24 @@ const ListTransferRunsResponse$json = {
       '4': 3,
       '5': 11,
       '6': '.google.cloud.bigquery.datatransfer.v1.TransferRun',
+      '8': {},
       '10': 'transferRuns'
     },
-    {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
+    {
+      '1': 'next_page_token',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'nextPageToken'
+    },
   ],
 };
 
 const ListTransferLogsRequest$json = {
   '1': 'ListTransferLogsRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
     {'1': 'page_token', '3': 4, '4': 1, '5': 9, '10': 'pageToken'},
     {'1': 'page_size', '3': 5, '4': 1, '5': 5, '10': 'pageSize'},
     {
@@ -406,16 +433,24 @@ const ListTransferLogsResponse$json = {
       '4': 3,
       '5': 11,
       '6': '.google.cloud.bigquery.datatransfer.v1.TransferMessage',
+      '8': {},
       '10': 'transferMessages'
     },
-    {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
+    {
+      '1': 'next_page_token',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'nextPageToken'
+    },
   ],
 };
 
 const CheckValidCredsRequest$json = {
   '1': 'CheckValidCredsRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
   ],
 };
 
@@ -429,13 +464,14 @@ const CheckValidCredsResponse$json = {
 const ScheduleTransferRunsRequest$json = {
   '1': 'ScheduleTransferRunsRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
     {
       '1': 'start_time',
       '3': 2,
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
+      '8': {},
       '10': 'startTime'
     },
     {
@@ -444,6 +480,7 @@ const ScheduleTransferRunsRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
+      '8': {},
       '10': 'endTime'
     },
   ],
@@ -466,7 +503,7 @@ const ScheduleTransferRunsResponse$json = {
 const StartManualTransferRunsRequest$json = {
   '1': 'StartManualTransferRunsRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
     {
       '1': 'requested_time_range',
       '3': 3,

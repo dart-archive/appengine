@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -19,17 +18,17 @@ export 'session_entity_type.pbenum.dart';
 
 class SessionEntityType extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('SessionEntityType',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..e<SessionEntityType_EntityOverrideMode>(
-        2,
-        'entityOverrideMode',
-        $pb.PbFieldType.OE,
-        SessionEntityType_EntityOverrideMode.ENTITY_OVERRIDE_MODE_UNSPECIFIED,
-        SessionEntityType_EntityOverrideMode.valueOf,
-        SessionEntityType_EntityOverrideMode.values)
-    ..pc<$2.EntityType_Entity>(
-        3, 'entities', $pb.PbFieldType.PM, $2.EntityType_Entity.create)
+        2, 'entityOverrideMode', $pb.PbFieldType.OE,
+        defaultOrMaker: SessionEntityType_EntityOverrideMode
+            .ENTITY_OVERRIDE_MODE_UNSPECIFIED,
+        valueOf: SessionEntityType_EntityOverrideMode.valueOf,
+        enumValues: SessionEntityType_EntityOverrideMode.values)
+    ..pc<$2.EntityType_Entity>(3, 'entities', $pb.PbFieldType.PM,
+        subBuilder: $2.EntityType_Entity.create)
     ..hasRequiredFields = false;
 
   SessionEntityType._() : super();
@@ -49,33 +48,44 @@ class SessionEntityType extends $pb.GeneratedMessage {
   SessionEntityType createEmptyInstance() => create();
   static $pb.PbList<SessionEntityType> createRepeated() =>
       $pb.PbList<SessionEntityType>();
-  static SessionEntityType getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static SessionEntityType getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SessionEntityType>(create);
   static SessionEntityType _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   SessionEntityType_EntityOverrideMode get entityOverrideMode => $_getN(1);
+  @$pb.TagNumber(2)
   set entityOverrideMode(SessionEntityType_EntityOverrideMode v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasEntityOverrideMode() => $_has(1);
+  @$pb.TagNumber(2)
   void clearEntityOverrideMode() => clearField(2);
 
+  @$pb.TagNumber(3)
   $core.List<$2.EntityType_Entity> get entities => $_getList(2);
 }
 
 class ListSessionEntityTypesRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListSessionEntityTypesRequest',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(3, 'pageToken')
@@ -102,41 +112,55 @@ class ListSessionEntityTypesRequest extends $pb.GeneratedMessage {
   ListSessionEntityTypesRequest createEmptyInstance() => create();
   static $pb.PbList<ListSessionEntityTypesRequest> createRepeated() =>
       $pb.PbList<ListSessionEntityTypesRequest>();
-  static ListSessionEntityTypesRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListSessionEntityTypesRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListSessionEntityTypesRequest>(create);
   static ListSessionEntityTypesRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.int get pageSize => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get pageSize => $_getIZ(1);
+  @$pb.TagNumber(2)
   set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
-  $core.String get pageToken => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get pageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
   set pageToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
 }
 
 class ListSessionEntityTypesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListSessionEntityTypesResponse',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
-    ..pc<SessionEntityType>(
-        1, 'sessionEntityTypes', $pb.PbFieldType.PM, SessionEntityType.create)
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
+    ..pc<SessionEntityType>(1, 'sessionEntityTypes', $pb.PbFieldType.PM,
+        subBuilder: SessionEntityType.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -161,25 +185,32 @@ class ListSessionEntityTypesResponse extends $pb.GeneratedMessage {
   ListSessionEntityTypesResponse createEmptyInstance() => create();
   static $pb.PbList<ListSessionEntityTypesResponse> createRepeated() =>
       $pb.PbList<ListSessionEntityTypesResponse>();
-  static ListSessionEntityTypesResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListSessionEntityTypesResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListSessionEntityTypesResponse>(create);
   static ListSessionEntityTypesResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<SessionEntityType> get sessionEntityTypes => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class GetSessionEntityTypeRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'GetSessionEntityTypeRequest',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -204,26 +235,32 @@ class GetSessionEntityTypeRequest extends $pb.GeneratedMessage {
   GetSessionEntityTypeRequest createEmptyInstance() => create();
   static $pb.PbList<GetSessionEntityTypeRequest> createRepeated() =>
       $pb.PbList<GetSessionEntityTypeRequest>();
-  static GetSessionEntityTypeRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetSessionEntityTypeRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetSessionEntityTypeRequest>(create);
   static GetSessionEntityTypeRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class CreateSessionEntityTypeRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'CreateSessionEntityTypeRequest',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
-    ..a<SessionEntityType>(2, 'sessionEntityType', $pb.PbFieldType.OM,
-        SessionEntityType.getDefault, SessionEntityType.create)
+    ..aOM<SessionEntityType>(2, 'sessionEntityType',
+        subBuilder: SessionEntityType.create)
     ..hasRequiredFields = false;
 
   CreateSessionEntityTypeRequest._() : super();
@@ -247,35 +284,46 @@ class CreateSessionEntityTypeRequest extends $pb.GeneratedMessage {
   CreateSessionEntityTypeRequest createEmptyInstance() => create();
   static $pb.PbList<CreateSessionEntityTypeRequest> createRepeated() =>
       $pb.PbList<CreateSessionEntityTypeRequest>();
-  static CreateSessionEntityTypeRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateSessionEntityTypeRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateSessionEntityTypeRequest>(create);
   static CreateSessionEntityTypeRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  @$pb.TagNumber(2)
   SessionEntityType get sessionEntityType => $_getN(1);
+  @$pb.TagNumber(2)
   set sessionEntityType(SessionEntityType v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasSessionEntityType() => $_has(1);
+  @$pb.TagNumber(2)
   void clearSessionEntityType() => clearField(2);
+  @$pb.TagNumber(2)
+  SessionEntityType ensureSessionEntityType() => $_ensure(1);
 }
 
 class UpdateSessionEntityTypeRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'UpdateSessionEntityTypeRequest',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
-    ..a<SessionEntityType>(1, 'sessionEntityType', $pb.PbFieldType.OM,
-        SessionEntityType.getDefault, SessionEntityType.create)
-    ..a<$4.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $4.FieldMask.getDefault, $4.FieldMask.create)
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
+    ..aOM<SessionEntityType>(1, 'sessionEntityType',
+        subBuilder: SessionEntityType.create)
+    ..aOM<$4.FieldMask>(2, 'updateMask', subBuilder: $4.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateSessionEntityTypeRequest._() : super();
@@ -299,31 +347,45 @@ class UpdateSessionEntityTypeRequest extends $pb.GeneratedMessage {
   UpdateSessionEntityTypeRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateSessionEntityTypeRequest> createRepeated() =>
       $pb.PbList<UpdateSessionEntityTypeRequest>();
-  static UpdateSessionEntityTypeRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateSessionEntityTypeRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateSessionEntityTypeRequest>(create);
   static UpdateSessionEntityTypeRequest _defaultInstance;
 
+  @$pb.TagNumber(1)
   SessionEntityType get sessionEntityType => $_getN(0);
+  @$pb.TagNumber(1)
   set sessionEntityType(SessionEntityType v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasSessionEntityType() => $_has(0);
+  @$pb.TagNumber(1)
   void clearSessionEntityType() => clearField(1);
+  @$pb.TagNumber(1)
+  SessionEntityType ensureSessionEntityType() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $4.FieldMask get updateMask => $_getN(1);
+  @$pb.TagNumber(2)
   set updateMask($4.FieldMask v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasUpdateMask() => $_has(1);
+  @$pb.TagNumber(2)
   void clearUpdateMask() => clearField(2);
+  @$pb.TagNumber(2)
+  $4.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
 class DeleteSessionEntityTypeRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'DeleteSessionEntityTypeRequest',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -348,15 +410,20 @@ class DeleteSessionEntityTypeRequest extends $pb.GeneratedMessage {
   DeleteSessionEntityTypeRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteSessionEntityTypeRequest> createRepeated() =>
       $pb.PbList<DeleteSessionEntityTypeRequest>();
-  static DeleteSessionEntityTypeRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteSessionEntityTypeRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteSessionEntityTypeRequest>(create);
   static DeleteSessionEntityTypeRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }

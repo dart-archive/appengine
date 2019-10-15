@@ -292,6 +292,15 @@ const CampaignCriterion$json = {
       '9': 0,
       '10': 'locationGroup'
     },
+    {
+      '1': 'custom_affinity',
+      '3': 36,
+      '4': 1,
+      '5': 11,
+      '6': '.google.ads.googleads.v2.common.CustomAffinityInfo',
+      '9': 0,
+      '10': 'customAffinity'
+    },
   ],
   '8': [
     {'1': 'criterion'},

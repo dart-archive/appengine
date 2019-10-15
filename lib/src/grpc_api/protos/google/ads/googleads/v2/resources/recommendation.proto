@@ -100,9 +100,10 @@ message Recommendation {
     google.protobuf.Int64Value recommended_cpc_bid_micros = 2;
   }
 
-  // The Optimize Ad Rotation recommendation.
-  message OptimizeAdRotationRecommendation {
-
+  // The Sitelink extension recommendation.
+  message SitelinkExtensionRecommendation {
+    // Sitelink extensions recommended to be added.
+    repeated google.ads.googleads.v2.common.SitelinkFeedItem recommended_extensions = 1;
   }
 
   // The move unused budget recommendation.
@@ -163,15 +164,19 @@ message Recommendation {
     google.protobuf.Int64Value recommended_budget_amount_micros = 1;
   }
 
+  // The Optimize Ad Rotation recommendation.
+  message OptimizeAdRotationRecommendation {
+
+  }
+
   // The Enhanced Cost-Per-Click Opt-In recommendation.
   message EnhancedCpcOptInRecommendation {
 
   }
 
-  // The Callout extension recommendation.
-  message CalloutExtensionRecommendation {
-    // Callout extensions recommended to be added.
-    repeated google.ads.googleads.v2.common.CalloutFeedItem recommended_extensions = 1;
+  // The Search Partners Opt-In recommendation.
+  message SearchPartnersOptInRecommendation {
+
   }
 
   // The keyword match type recommendation.
@@ -183,11 +188,6 @@ message Recommendation {
     google.ads.googleads.v2.enums.KeywordMatchTypeEnum.KeywordMatchType recommended_match_type = 2;
   }
 
-  // The Search Partners Opt-In recommendation.
-  message SearchPartnersOptInRecommendation {
-
-  }
-
   // The Maximize Clicks opt-in recommendation.
   message MaximizeClicksOptInRecommendation {
     // The recommended new budget amount.
@@ -195,10 +195,10 @@ message Recommendation {
     google.protobuf.Int64Value recommended_budget_amount_micros = 1;
   }
 
-  // The Sitelink extension recommendation.
-  message SitelinkExtensionRecommendation {
-    // Sitelink extensions recommended to be added.
-    repeated google.ads.googleads.v2.common.SitelinkFeedItem recommended_extensions = 1;
+  // The Callout extension recommendation.
+  message CalloutExtensionRecommendation {
+    // Callout extensions recommended to be added.
+    repeated google.ads.googleads.v2.common.CalloutFeedItem recommended_extensions = 1;
   }
 
   // The Call extension recommendation.

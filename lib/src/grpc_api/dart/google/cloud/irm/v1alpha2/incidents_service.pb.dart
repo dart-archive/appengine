@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -15,9 +14,9 @@ import '../../../protobuf/field_mask.pb.dart' as $3;
 
 class CreateIncidentRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateIncidentRequest',
-      package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
-    ..a<$1.Incident>(1, 'incident', $pb.PbFieldType.OM, $1.Incident.getDefault,
-        $1.Incident.create)
+      package: const $pb.PackageName('google.cloud.irm.v1alpha2'),
+      createEmptyInstance: create)
+    ..aOM<$1.Incident>(1, 'incident', subBuilder: $1.Incident.create)
     ..aOS(2, 'parent')
     ..hasRequiredFields = false;
 
@@ -40,30 +39,42 @@ class CreateIncidentRequest extends $pb.GeneratedMessage {
   CreateIncidentRequest createEmptyInstance() => create();
   static $pb.PbList<CreateIncidentRequest> createRepeated() =>
       $pb.PbList<CreateIncidentRequest>();
-  static CreateIncidentRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateIncidentRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateIncidentRequest>(create);
   static CreateIncidentRequest _defaultInstance;
 
+  @$pb.TagNumber(1)
   $1.Incident get incident => $_getN(0);
+  @$pb.TagNumber(1)
   set incident($1.Incident v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasIncident() => $_has(0);
+  @$pb.TagNumber(1)
   void clearIncident() => clearField(1);
+  @$pb.TagNumber(1)
+  $1.Incident ensureIncident() => $_ensure(0);
 
-  $core.String get parent => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get parent => $_getSZ(1);
+  @$pb.TagNumber(2)
   set parent($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasParent() => $_has(1);
+  @$pb.TagNumber(2)
   void clearParent() => clearField(2);
 }
 
 class GetIncidentRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetIncidentRequest',
-      package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
+      package: const $pb.PackageName('google.cloud.irm.v1alpha2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -84,26 +95,30 @@ class GetIncidentRequest extends $pb.GeneratedMessage {
   GetIncidentRequest createEmptyInstance() => create();
   static $pb.PbList<GetIncidentRequest> createRepeated() =>
       $pb.PbList<GetIncidentRequest>();
-  static GetIncidentRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetIncidentRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetIncidentRequest>(create);
   static GetIncidentRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class UpdateIncidentRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateIncidentRequest',
-      package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
-    ..a<$1.Incident>(1, 'incident', $pb.PbFieldType.OM, $1.Incident.getDefault,
-        $1.Incident.create)
-    ..a<$3.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $3.FieldMask.getDefault, $3.FieldMask.create)
+      package: const $pb.PackageName('google.cloud.irm.v1alpha2'),
+      createEmptyInstance: create)
+    ..aOM<$1.Incident>(1, 'incident', subBuilder: $1.Incident.create)
+    ..aOM<$3.FieldMask>(2, 'updateMask', subBuilder: $3.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateIncidentRequest._() : super();
@@ -125,31 +140,45 @@ class UpdateIncidentRequest extends $pb.GeneratedMessage {
   UpdateIncidentRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateIncidentRequest> createRepeated() =>
       $pb.PbList<UpdateIncidentRequest>();
-  static UpdateIncidentRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateIncidentRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateIncidentRequest>(create);
   static UpdateIncidentRequest _defaultInstance;
 
+  @$pb.TagNumber(1)
   $1.Incident get incident => $_getN(0);
+  @$pb.TagNumber(1)
   set incident($1.Incident v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasIncident() => $_has(0);
+  @$pb.TagNumber(1)
   void clearIncident() => clearField(1);
+  @$pb.TagNumber(1)
+  $1.Incident ensureIncident() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $3.FieldMask get updateMask => $_getN(1);
+  @$pb.TagNumber(2)
   set updateMask($3.FieldMask v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasUpdateMask() => $_has(1);
+  @$pb.TagNumber(2)
   void clearUpdateMask() => clearField(2);
+  @$pb.TagNumber(2)
+  $3.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
 class SearchSimilarIncidentsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'SearchSimilarIncidentsRequest',
-      package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
+      package: const $pb.PackageName('google.cloud.irm.v1alpha2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(3, 'pageToken')
@@ -176,41 +205,54 @@ class SearchSimilarIncidentsRequest extends $pb.GeneratedMessage {
   SearchSimilarIncidentsRequest createEmptyInstance() => create();
   static $pb.PbList<SearchSimilarIncidentsRequest> createRepeated() =>
       $pb.PbList<SearchSimilarIncidentsRequest>();
-  static SearchSimilarIncidentsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static SearchSimilarIncidentsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SearchSimilarIncidentsRequest>(create);
   static SearchSimilarIncidentsRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.int get pageSize => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get pageSize => $_getIZ(1);
+  @$pb.TagNumber(2)
   set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
-  $core.String get pageToken => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get pageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
   set pageToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
 }
 
 class SearchSimilarIncidentsResponse_Result extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'SearchSimilarIncidentsResponse.Result',
-      package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
-    ..a<$1.Incident>(1, 'incident', $pb.PbFieldType.OM, $1.Incident.getDefault,
-        $1.Incident.create)
+      package: const $pb.PackageName('google.cloud.irm.v1alpha2'),
+      createEmptyInstance: create)
+    ..aOM<$1.Incident>(1, 'incident', subBuilder: $1.Incident.create)
     ..hasRequiredFields = false;
 
   SearchSimilarIncidentsResponse_Result._() : super();
@@ -235,25 +277,35 @@ class SearchSimilarIncidentsResponse_Result extends $pb.GeneratedMessage {
   SearchSimilarIncidentsResponse_Result createEmptyInstance() => create();
   static $pb.PbList<SearchSimilarIncidentsResponse_Result> createRepeated() =>
       $pb.PbList<SearchSimilarIncidentsResponse_Result>();
+  @$core.pragma('dart2js:noInline')
   static SearchSimilarIncidentsResponse_Result getDefault() =>
-      _defaultInstance ??= create()..freeze();
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          SearchSimilarIncidentsResponse_Result>(create);
   static SearchSimilarIncidentsResponse_Result _defaultInstance;
 
+  @$pb.TagNumber(1)
   $1.Incident get incident => $_getN(0);
+  @$pb.TagNumber(1)
   set incident($1.Incident v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasIncident() => $_has(0);
+  @$pb.TagNumber(1)
   void clearIncident() => clearField(1);
+  @$pb.TagNumber(1)
+  $1.Incident ensureIncident() => $_ensure(0);
 }
 
 class SearchSimilarIncidentsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'SearchSimilarIncidentsResponse',
-      package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
-    ..pc<SearchSimilarIncidentsResponse_Result>(1, 'results',
-        $pb.PbFieldType.PM, SearchSimilarIncidentsResponse_Result.create)
+      package: const $pb.PackageName('google.cloud.irm.v1alpha2'),
+      createEmptyInstance: create)
+    ..pc<SearchSimilarIncidentsResponse_Result>(
+        1, 'results', $pb.PbFieldType.PM,
+        subBuilder: SearchSimilarIncidentsResponse_Result.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -278,27 +330,33 @@ class SearchSimilarIncidentsResponse extends $pb.GeneratedMessage {
   SearchSimilarIncidentsResponse createEmptyInstance() => create();
   static $pb.PbList<SearchSimilarIncidentsResponse> createRepeated() =>
       $pb.PbList<SearchSimilarIncidentsResponse>();
-  static SearchSimilarIncidentsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static SearchSimilarIncidentsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SearchSimilarIncidentsResponse>(create);
   static SearchSimilarIncidentsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<SearchSimilarIncidentsResponse_Result> get results => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class CreateAnnotationRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateAnnotationRequest',
-      package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
+      package: const $pb.PackageName('google.cloud.irm.v1alpha2'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
-    ..a<$1.Annotation>(2, 'annotation', $pb.PbFieldType.OM,
-        $1.Annotation.getDefault, $1.Annotation.create)
+    ..aOM<$1.Annotation>(2, 'annotation', subBuilder: $1.Annotation.create)
     ..hasRequiredFields = false;
 
   CreateAnnotationRequest._() : super();
@@ -320,30 +378,42 @@ class CreateAnnotationRequest extends $pb.GeneratedMessage {
   CreateAnnotationRequest createEmptyInstance() => create();
   static $pb.PbList<CreateAnnotationRequest> createRepeated() =>
       $pb.PbList<CreateAnnotationRequest>();
-  static CreateAnnotationRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateAnnotationRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateAnnotationRequest>(create);
   static CreateAnnotationRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  @$pb.TagNumber(2)
   $1.Annotation get annotation => $_getN(1);
+  @$pb.TagNumber(2)
   set annotation($1.Annotation v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasAnnotation() => $_has(1);
+  @$pb.TagNumber(2)
   void clearAnnotation() => clearField(2);
+  @$pb.TagNumber(2)
+  $1.Annotation ensureAnnotation() => $_ensure(1);
 }
 
 class ListAnnotationsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListAnnotationsRequest',
-      package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
+      package: const $pb.PackageName('google.cloud.irm.v1alpha2'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(3, 'pageToken')
@@ -368,40 +438,54 @@ class ListAnnotationsRequest extends $pb.GeneratedMessage {
   ListAnnotationsRequest createEmptyInstance() => create();
   static $pb.PbList<ListAnnotationsRequest> createRepeated() =>
       $pb.PbList<ListAnnotationsRequest>();
-  static ListAnnotationsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListAnnotationsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListAnnotationsRequest>(create);
   static ListAnnotationsRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.int get pageSize => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get pageSize => $_getIZ(1);
+  @$pb.TagNumber(2)
   set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
-  $core.String get pageToken => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get pageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
   set pageToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
 }
 
 class ListAnnotationsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListAnnotationsResponse',
-      package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
-    ..pc<$1.Annotation>(
-        1, 'annotations', $pb.PbFieldType.PM, $1.Annotation.create)
+      package: const $pb.PackageName('google.cloud.irm.v1alpha2'),
+      createEmptyInstance: create)
+    ..pc<$1.Annotation>(1, 'annotations', $pb.PbFieldType.PM,
+        subBuilder: $1.Annotation.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -424,26 +508,33 @@ class ListAnnotationsResponse extends $pb.GeneratedMessage {
   ListAnnotationsResponse createEmptyInstance() => create();
   static $pb.PbList<ListAnnotationsResponse> createRepeated() =>
       $pb.PbList<ListAnnotationsResponse>();
-  static ListAnnotationsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListAnnotationsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListAnnotationsResponse>(create);
   static ListAnnotationsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$1.Annotation> get annotations => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class CreateTagRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateTagRequest',
-      package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
+      package: const $pb.PackageName('google.cloud.irm.v1alpha2'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
-    ..a<$1.Tag>(2, 'tag', $pb.PbFieldType.OM, $1.Tag.getDefault, $1.Tag.create)
+    ..aOM<$1.Tag>(2, 'tag', subBuilder: $1.Tag.create)
     ..hasRequiredFields = false;
 
   CreateTagRequest._() : super();
@@ -463,30 +554,42 @@ class CreateTagRequest extends $pb.GeneratedMessage {
   CreateTagRequest createEmptyInstance() => create();
   static $pb.PbList<CreateTagRequest> createRepeated() =>
       $pb.PbList<CreateTagRequest>();
-  static CreateTagRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateTagRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateTagRequest>(create);
   static CreateTagRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  @$pb.TagNumber(2)
   $1.Tag get tag => $_getN(1);
+  @$pb.TagNumber(2)
   set tag($1.Tag v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasTag() => $_has(1);
+  @$pb.TagNumber(2)
   void clearTag() => clearField(2);
+  @$pb.TagNumber(2)
+  $1.Tag ensureTag() => $_ensure(1);
 }
 
 class DeleteTagRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteTagRequest',
-      package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
+      package: const $pb.PackageName('google.cloud.irm.v1alpha2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -507,22 +610,28 @@ class DeleteTagRequest extends $pb.GeneratedMessage {
   DeleteTagRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteTagRequest> createRepeated() =>
       $pb.PbList<DeleteTagRequest>();
-  static DeleteTagRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteTagRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteTagRequest>(create);
   static DeleteTagRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class ListTagsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListTagsRequest',
-      package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
+      package: const $pb.PackageName('google.cloud.irm.v1alpha2'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(3, 'pageToken')
@@ -545,39 +654,53 @@ class ListTagsRequest extends $pb.GeneratedMessage {
   ListTagsRequest createEmptyInstance() => create();
   static $pb.PbList<ListTagsRequest> createRepeated() =>
       $pb.PbList<ListTagsRequest>();
-  static ListTagsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListTagsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListTagsRequest>(create);
   static ListTagsRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.int get pageSize => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get pageSize => $_getIZ(1);
+  @$pb.TagNumber(2)
   set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
-  $core.String get pageToken => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get pageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
   set pageToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
 }
 
 class ListTagsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListTagsResponse',
-      package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
-    ..pc<$1.Tag>(1, 'tags', $pb.PbFieldType.PM, $1.Tag.create)
+      package: const $pb.PackageName('google.cloud.irm.v1alpha2'),
+      createEmptyInstance: create)
+    ..pc<$1.Tag>(1, 'tags', $pb.PbFieldType.PM, subBuilder: $1.Tag.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -598,27 +721,33 @@ class ListTagsResponse extends $pb.GeneratedMessage {
   ListTagsResponse createEmptyInstance() => create();
   static $pb.PbList<ListTagsResponse> createRepeated() =>
       $pb.PbList<ListTagsResponse>();
-  static ListTagsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListTagsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListTagsResponse>(create);
   static ListTagsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$1.Tag> get tags => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class CreateSignalRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateSignalRequest',
-      package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
+      package: const $pb.PackageName('google.cloud.irm.v1alpha2'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
-    ..a<$1.Signal>(
-        2, 'signal', $pb.PbFieldType.OM, $1.Signal.getDefault, $1.Signal.create)
+    ..aOM<$1.Signal>(2, 'signal', subBuilder: $1.Signal.create)
     ..hasRequiredFields = false;
 
   CreateSignalRequest._() : super();
@@ -638,30 +767,42 @@ class CreateSignalRequest extends $pb.GeneratedMessage {
   CreateSignalRequest createEmptyInstance() => create();
   static $pb.PbList<CreateSignalRequest> createRepeated() =>
       $pb.PbList<CreateSignalRequest>();
-  static CreateSignalRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateSignalRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateSignalRequest>(create);
   static CreateSignalRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  @$pb.TagNumber(2)
   $1.Signal get signal => $_getN(1);
+  @$pb.TagNumber(2)
   set signal($1.Signal v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasSignal() => $_has(1);
+  @$pb.TagNumber(2)
   void clearSignal() => clearField(2);
+  @$pb.TagNumber(2)
+  $1.Signal ensureSignal() => $_ensure(1);
 }
 
 class SearchSignalsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('SearchSignalsRequest',
-      package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
+      package: const $pb.PackageName('google.cloud.irm.v1alpha2'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..aOS(2, 'query')
     ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
@@ -686,47 +827,66 @@ class SearchSignalsRequest extends $pb.GeneratedMessage {
   SearchSignalsRequest createEmptyInstance() => create();
   static $pb.PbList<SearchSignalsRequest> createRepeated() =>
       $pb.PbList<SearchSignalsRequest>();
-  static SearchSignalsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static SearchSignalsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SearchSignalsRequest>(create);
   static SearchSignalsRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.String get query => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get query => $_getSZ(1);
+  @$pb.TagNumber(2)
   set query($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasQuery() => $_has(1);
+  @$pb.TagNumber(2)
   void clearQuery() => clearField(2);
 
-  $core.int get pageSize => $_get(2, 0);
+  @$pb.TagNumber(3)
+  $core.int get pageSize => $_getIZ(2);
+  @$pb.TagNumber(3)
   set pageSize($core.int v) {
     $_setSignedInt32(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageSize() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageSize() => clearField(3);
 
-  $core.String get pageToken => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get pageToken => $_getSZ(3);
+  @$pb.TagNumber(4)
   set pageToken($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasPageToken() => $_has(3);
+  @$pb.TagNumber(4)
   void clearPageToken() => clearField(4);
 }
 
 class SearchSignalsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('SearchSignalsResponse',
-      package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
-    ..pc<$1.Signal>(1, 'signals', $pb.PbFieldType.PM, $1.Signal.create)
+      package: const $pb.PackageName('google.cloud.irm.v1alpha2'),
+      createEmptyInstance: create)
+    ..pc<$1.Signal>(1, 'signals', $pb.PbFieldType.PM,
+        subBuilder: $1.Signal.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -749,24 +909,31 @@ class SearchSignalsResponse extends $pb.GeneratedMessage {
   SearchSignalsResponse createEmptyInstance() => create();
   static $pb.PbList<SearchSignalsResponse> createRepeated() =>
       $pb.PbList<SearchSignalsResponse>();
-  static SearchSignalsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static SearchSignalsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SearchSignalsResponse>(create);
   static SearchSignalsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$1.Signal> get signals => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class GetSignalRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetSignalRequest',
-      package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
+      package: const $pb.PackageName('google.cloud.irm.v1alpha2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -787,16 +954,21 @@ class GetSignalRequest extends $pb.GeneratedMessage {
   GetSignalRequest createEmptyInstance() => create();
   static $pb.PbList<GetSignalRequest> createRepeated() =>
       $pb.PbList<GetSignalRequest>();
-  static GetSignalRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetSignalRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetSignalRequest>(create);
   static GetSignalRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
@@ -814,7 +986,8 @@ class LookupSignalRequest extends $pb.GeneratedMessage {
     0: LookupSignalRequest_AlternateId.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('LookupSignalRequest',
-      package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
+      package: const $pb.PackageName('google.cloud.irm.v1alpha2'),
+      createEmptyInstance: create)
     ..oo(0, [2, 3])
     ..aOS(2, 'csccFinding')
     ..aOS(3, 'stackdriverNotificationId')
@@ -837,38 +1010,46 @@ class LookupSignalRequest extends $pb.GeneratedMessage {
   LookupSignalRequest createEmptyInstance() => create();
   static $pb.PbList<LookupSignalRequest> createRepeated() =>
       $pb.PbList<LookupSignalRequest>();
-  static LookupSignalRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static LookupSignalRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<LookupSignalRequest>(create);
   static LookupSignalRequest _defaultInstance;
 
   LookupSignalRequest_AlternateId whichAlternateId() =>
       _LookupSignalRequest_AlternateIdByTag[$_whichOneof(0)];
   void clearAlternateId() => clearField($_whichOneof(0));
 
-  $core.String get csccFinding => $_getS(0, '');
+  @$pb.TagNumber(2)
+  $core.String get csccFinding => $_getSZ(0);
+  @$pb.TagNumber(2)
   set csccFinding($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasCsccFinding() => $_has(0);
+  @$pb.TagNumber(2)
   void clearCsccFinding() => clearField(2);
 
-  $core.String get stackdriverNotificationId => $_getS(1, '');
+  @$pb.TagNumber(3)
+  $core.String get stackdriverNotificationId => $_getSZ(1);
+  @$pb.TagNumber(3)
   set stackdriverNotificationId($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasStackdriverNotificationId() => $_has(1);
+  @$pb.TagNumber(3)
   void clearStackdriverNotificationId() => clearField(3);
 }
 
 class UpdateSignalRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateSignalRequest',
-      package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
-    ..a<$1.Signal>(
-        1, 'signal', $pb.PbFieldType.OM, $1.Signal.getDefault, $1.Signal.create)
-    ..a<$3.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $3.FieldMask.getDefault, $3.FieldMask.create)
+      package: const $pb.PackageName('google.cloud.irm.v1alpha2'),
+      createEmptyInstance: create)
+    ..aOM<$1.Signal>(1, 'signal', subBuilder: $1.Signal.create)
+    ..aOM<$3.FieldMask>(2, 'updateMask', subBuilder: $3.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateSignalRequest._() : super();
@@ -888,30 +1069,44 @@ class UpdateSignalRequest extends $pb.GeneratedMessage {
   UpdateSignalRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateSignalRequest> createRepeated() =>
       $pb.PbList<UpdateSignalRequest>();
-  static UpdateSignalRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateSignalRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateSignalRequest>(create);
   static UpdateSignalRequest _defaultInstance;
 
+  @$pb.TagNumber(1)
   $1.Signal get signal => $_getN(0);
+  @$pb.TagNumber(1)
   set signal($1.Signal v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasSignal() => $_has(0);
+  @$pb.TagNumber(1)
   void clearSignal() => clearField(1);
+  @$pb.TagNumber(1)
+  $1.Signal ensureSignal() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $3.FieldMask get updateMask => $_getN(1);
+  @$pb.TagNumber(2)
   set updateMask($3.FieldMask v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasUpdateMask() => $_has(1);
+  @$pb.TagNumber(2)
   void clearUpdateMask() => clearField(2);
+  @$pb.TagNumber(2)
+  $3.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
 class SearchIncidentsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('SearchIncidentsRequest',
-      package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
+      package: const $pb.PackageName('google.cloud.irm.v1alpha2'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..aOS(2, 'query')
     ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
@@ -938,55 +1133,78 @@ class SearchIncidentsRequest extends $pb.GeneratedMessage {
   SearchIncidentsRequest createEmptyInstance() => create();
   static $pb.PbList<SearchIncidentsRequest> createRepeated() =>
       $pb.PbList<SearchIncidentsRequest>();
-  static SearchIncidentsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static SearchIncidentsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SearchIncidentsRequest>(create);
   static SearchIncidentsRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.String get query => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get query => $_getSZ(1);
+  @$pb.TagNumber(2)
   set query($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasQuery() => $_has(1);
+  @$pb.TagNumber(2)
   void clearQuery() => clearField(2);
 
-  $core.int get pageSize => $_get(2, 0);
+  @$pb.TagNumber(3)
+  $core.int get pageSize => $_getIZ(2);
+  @$pb.TagNumber(3)
   set pageSize($core.int v) {
     $_setSignedInt32(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageSize() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageSize() => clearField(3);
 
-  $core.String get pageToken => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get pageToken => $_getSZ(3);
+  @$pb.TagNumber(4)
   set pageToken($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasPageToken() => $_has(3);
+  @$pb.TagNumber(4)
   void clearPageToken() => clearField(4);
 
-  $core.String get timeZone => $_getS(4, '');
+  @$pb.TagNumber(5)
+  $core.String get timeZone => $_getSZ(4);
+  @$pb.TagNumber(5)
   set timeZone($core.String v) {
     $_setString(4, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasTimeZone() => $_has(4);
+  @$pb.TagNumber(5)
   void clearTimeZone() => clearField(5);
 }
 
 class SearchIncidentsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('SearchIncidentsResponse',
-      package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
-    ..pc<$1.Incident>(1, 'incidents', $pb.PbFieldType.PM, $1.Incident.create)
+      package: const $pb.PackageName('google.cloud.irm.v1alpha2'),
+      createEmptyInstance: create)
+    ..pc<$1.Incident>(1, 'incidents', $pb.PbFieldType.PM,
+        subBuilder: $1.Incident.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -1009,34 +1227,40 @@ class SearchIncidentsResponse extends $pb.GeneratedMessage {
   SearchIncidentsResponse createEmptyInstance() => create();
   static $pb.PbList<SearchIncidentsResponse> createRepeated() =>
       $pb.PbList<SearchIncidentsResponse>();
-  static SearchIncidentsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static SearchIncidentsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SearchIncidentsResponse>(create);
   static SearchIncidentsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$1.Incident> get incidents => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class EscalateIncidentRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('EscalateIncidentRequest',
-      package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
-    ..a<$1.Incident>(1, 'incident', $pb.PbFieldType.OM, $1.Incident.getDefault,
-        $1.Incident.create)
-    ..a<$3.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $3.FieldMask.getDefault, $3.FieldMask.create)
-    ..pc<$1.Subscription>(
-        3, 'subscriptions', $pb.PbFieldType.PM, $1.Subscription.create)
-    ..pc<$1.Tag>(4, 'tags', $pb.PbFieldType.PM, $1.Tag.create)
-    ..pc<$1.IncidentRoleAssignment>(
-        5, 'roles', $pb.PbFieldType.PM, $1.IncidentRoleAssignment.create)
-    ..pc<$1.Artifact>(6, 'artifacts', $pb.PbFieldType.PM, $1.Artifact.create)
+      package: const $pb.PackageName('google.cloud.irm.v1alpha2'),
+      createEmptyInstance: create)
+    ..aOM<$1.Incident>(1, 'incident', subBuilder: $1.Incident.create)
+    ..aOM<$3.FieldMask>(2, 'updateMask', subBuilder: $3.FieldMask.create)
+    ..pc<$1.Subscription>(3, 'subscriptions', $pb.PbFieldType.PM,
+        subBuilder: $1.Subscription.create)
+    ..pc<$1.Tag>(4, 'tags', $pb.PbFieldType.PM, subBuilder: $1.Tag.create)
+    ..pc<$1.IncidentRoleAssignment>(5, 'roles', $pb.PbFieldType.PM,
+        subBuilder: $1.IncidentRoleAssignment.create)
+    ..pc<$1.Artifact>(6, 'artifacts', $pb.PbFieldType.PM,
+        subBuilder: $1.Artifact.create)
     ..hasRequiredFields = false;
 
   EscalateIncidentRequest._() : super();
@@ -1058,46 +1282,64 @@ class EscalateIncidentRequest extends $pb.GeneratedMessage {
   EscalateIncidentRequest createEmptyInstance() => create();
   static $pb.PbList<EscalateIncidentRequest> createRepeated() =>
       $pb.PbList<EscalateIncidentRequest>();
-  static EscalateIncidentRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static EscalateIncidentRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<EscalateIncidentRequest>(create);
   static EscalateIncidentRequest _defaultInstance;
 
+  @$pb.TagNumber(1)
   $1.Incident get incident => $_getN(0);
+  @$pb.TagNumber(1)
   set incident($1.Incident v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasIncident() => $_has(0);
+  @$pb.TagNumber(1)
   void clearIncident() => clearField(1);
+  @$pb.TagNumber(1)
+  $1.Incident ensureIncident() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $3.FieldMask get updateMask => $_getN(1);
+  @$pb.TagNumber(2)
   set updateMask($3.FieldMask v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasUpdateMask() => $_has(1);
+  @$pb.TagNumber(2)
   void clearUpdateMask() => clearField(2);
+  @$pb.TagNumber(2)
+  $3.FieldMask ensureUpdateMask() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $core.List<$1.Subscription> get subscriptions => $_getList(2);
 
+  @$pb.TagNumber(4)
   $core.List<$1.Tag> get tags => $_getList(3);
 
+  @$pb.TagNumber(5)
   $core.List<$1.IncidentRoleAssignment> get roles => $_getList(4);
 
+  @$pb.TagNumber(6)
   $core.List<$1.Artifact> get artifacts => $_getList(5);
 }
 
 class EscalateIncidentResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('EscalateIncidentResponse',
-      package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
-    ..a<$1.Incident>(1, 'incident', $pb.PbFieldType.OM, $1.Incident.getDefault,
-        $1.Incident.create)
-    ..pc<$1.Subscription>(
-        2, 'subscriptions', $pb.PbFieldType.PM, $1.Subscription.create)
-    ..pc<$1.Tag>(3, 'tags', $pb.PbFieldType.PM, $1.Tag.create)
-    ..pc<$1.IncidentRole>(
-        4, 'roles', $pb.PbFieldType.PM, $1.IncidentRole.create)
-    ..pc<$1.Artifact>(5, 'artifacts', $pb.PbFieldType.PM, $1.Artifact.create)
+      package: const $pb.PackageName('google.cloud.irm.v1alpha2'),
+      createEmptyInstance: create)
+    ..aOM<$1.Incident>(1, 'incident', subBuilder: $1.Incident.create)
+    ..pc<$1.Subscription>(2, 'subscriptions', $pb.PbFieldType.PM,
+        subBuilder: $1.Subscription.create)
+    ..pc<$1.Tag>(3, 'tags', $pb.PbFieldType.PM, subBuilder: $1.Tag.create)
+    ..pc<$1.IncidentRole>(4, 'roles', $pb.PbFieldType.PM,
+        subBuilder: $1.IncidentRole.create)
+    ..pc<$1.Artifact>(5, 'artifacts', $pb.PbFieldType.PM,
+        subBuilder: $1.Artifact.create)
     ..hasRequiredFields = false;
 
   EscalateIncidentResponse._() : super();
@@ -1119,33 +1361,44 @@ class EscalateIncidentResponse extends $pb.GeneratedMessage {
   EscalateIncidentResponse createEmptyInstance() => create();
   static $pb.PbList<EscalateIncidentResponse> createRepeated() =>
       $pb.PbList<EscalateIncidentResponse>();
-  static EscalateIncidentResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static EscalateIncidentResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<EscalateIncidentResponse>(create);
   static EscalateIncidentResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $1.Incident get incident => $_getN(0);
+  @$pb.TagNumber(1)
   set incident($1.Incident v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasIncident() => $_has(0);
+  @$pb.TagNumber(1)
   void clearIncident() => clearField(1);
+  @$pb.TagNumber(1)
+  $1.Incident ensureIncident() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $core.List<$1.Subscription> get subscriptions => $_getList(1);
 
+  @$pb.TagNumber(3)
   $core.List<$1.Tag> get tags => $_getList(2);
 
+  @$pb.TagNumber(4)
   $core.List<$1.IncidentRole> get roles => $_getList(3);
 
+  @$pb.TagNumber(5)
   $core.List<$1.Artifact> get artifacts => $_getList(4);
 }
 
 class CreateArtifactRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateArtifactRequest',
-      package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
+      package: const $pb.PackageName('google.cloud.irm.v1alpha2'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
-    ..a<$1.Artifact>(2, 'artifact', $pb.PbFieldType.OM, $1.Artifact.getDefault,
-        $1.Artifact.create)
+    ..aOM<$1.Artifact>(2, 'artifact', subBuilder: $1.Artifact.create)
     ..hasRequiredFields = false;
 
   CreateArtifactRequest._() : super();
@@ -1167,30 +1420,42 @@ class CreateArtifactRequest extends $pb.GeneratedMessage {
   CreateArtifactRequest createEmptyInstance() => create();
   static $pb.PbList<CreateArtifactRequest> createRepeated() =>
       $pb.PbList<CreateArtifactRequest>();
-  static CreateArtifactRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateArtifactRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateArtifactRequest>(create);
   static CreateArtifactRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  @$pb.TagNumber(2)
   $1.Artifact get artifact => $_getN(1);
+  @$pb.TagNumber(2)
   set artifact($1.Artifact v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasArtifact() => $_has(1);
+  @$pb.TagNumber(2)
   void clearArtifact() => clearField(2);
+  @$pb.TagNumber(2)
+  $1.Artifact ensureArtifact() => $_ensure(1);
 }
 
 class ListArtifactsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListArtifactsRequest',
-      package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
+      package: const $pb.PackageName('google.cloud.irm.v1alpha2'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(3, 'pageToken')
@@ -1214,39 +1479,54 @@ class ListArtifactsRequest extends $pb.GeneratedMessage {
   ListArtifactsRequest createEmptyInstance() => create();
   static $pb.PbList<ListArtifactsRequest> createRepeated() =>
       $pb.PbList<ListArtifactsRequest>();
-  static ListArtifactsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListArtifactsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListArtifactsRequest>(create);
   static ListArtifactsRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.int get pageSize => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get pageSize => $_getIZ(1);
+  @$pb.TagNumber(2)
   set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
-  $core.String get pageToken => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get pageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
   set pageToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
 }
 
 class ListArtifactsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListArtifactsResponse',
-      package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
-    ..pc<$1.Artifact>(1, 'artifacts', $pb.PbFieldType.PM, $1.Artifact.create)
+      package: const $pb.PackageName('google.cloud.irm.v1alpha2'),
+      createEmptyInstance: create)
+    ..pc<$1.Artifact>(1, 'artifacts', $pb.PbFieldType.PM,
+        subBuilder: $1.Artifact.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -1269,28 +1549,33 @@ class ListArtifactsResponse extends $pb.GeneratedMessage {
   ListArtifactsResponse createEmptyInstance() => create();
   static $pb.PbList<ListArtifactsResponse> createRepeated() =>
       $pb.PbList<ListArtifactsResponse>();
-  static ListArtifactsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListArtifactsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListArtifactsResponse>(create);
   static ListArtifactsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$1.Artifact> get artifacts => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class UpdateArtifactRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateArtifactRequest',
-      package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
-    ..a<$1.Artifact>(1, 'artifact', $pb.PbFieldType.OM, $1.Artifact.getDefault,
-        $1.Artifact.create)
-    ..a<$3.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $3.FieldMask.getDefault, $3.FieldMask.create)
+      package: const $pb.PackageName('google.cloud.irm.v1alpha2'),
+      createEmptyInstance: create)
+    ..aOM<$1.Artifact>(1, 'artifact', subBuilder: $1.Artifact.create)
+    ..aOM<$3.FieldMask>(2, 'updateMask', subBuilder: $3.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateArtifactRequest._() : super();
@@ -1312,30 +1597,44 @@ class UpdateArtifactRequest extends $pb.GeneratedMessage {
   UpdateArtifactRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateArtifactRequest> createRepeated() =>
       $pb.PbList<UpdateArtifactRequest>();
-  static UpdateArtifactRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateArtifactRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateArtifactRequest>(create);
   static UpdateArtifactRequest _defaultInstance;
 
+  @$pb.TagNumber(1)
   $1.Artifact get artifact => $_getN(0);
+  @$pb.TagNumber(1)
   set artifact($1.Artifact v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasArtifact() => $_has(0);
+  @$pb.TagNumber(1)
   void clearArtifact() => clearField(1);
+  @$pb.TagNumber(1)
+  $1.Artifact ensureArtifact() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $3.FieldMask get updateMask => $_getN(1);
+  @$pb.TagNumber(2)
   set updateMask($3.FieldMask v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasUpdateMask() => $_has(1);
+  @$pb.TagNumber(2)
   void clearUpdateMask() => clearField(2);
+  @$pb.TagNumber(2)
+  $3.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
 class DeleteArtifactRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteArtifactRequest',
-      package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
+      package: const $pb.PackageName('google.cloud.irm.v1alpha2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -1358,23 +1657,29 @@ class DeleteArtifactRequest extends $pb.GeneratedMessage {
   DeleteArtifactRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteArtifactRequest> createRepeated() =>
       $pb.PbList<DeleteArtifactRequest>();
-  static DeleteArtifactRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteArtifactRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteArtifactRequest>(create);
   static DeleteArtifactRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class SendShiftHandoffRequest_Incident extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'SendShiftHandoffRequest.Incident',
-      package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
+      package: const $pb.PackageName('google.cloud.irm.v1alpha2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -1399,22 +1704,29 @@ class SendShiftHandoffRequest_Incident extends $pb.GeneratedMessage {
   SendShiftHandoffRequest_Incident createEmptyInstance() => create();
   static $pb.PbList<SendShiftHandoffRequest_Incident> createRepeated() =>
       $pb.PbList<SendShiftHandoffRequest_Incident>();
-  static SendShiftHandoffRequest_Incident getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static SendShiftHandoffRequest_Incident getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SendShiftHandoffRequest_Incident>(
+          create);
   static SendShiftHandoffRequest_Incident _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class SendShiftHandoffRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('SendShiftHandoffRequest',
-      package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
+      package: const $pb.PackageName('google.cloud.irm.v1alpha2'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..pPS(2, 'recipients')
     ..pPS(3, 'cc')
@@ -1422,7 +1734,7 @@ class SendShiftHandoffRequest extends $pb.GeneratedMessage {
     ..aOS(5, 'notesContentType')
     ..aOS(6, 'notesContent')
     ..pc<SendShiftHandoffRequest_Incident>(7, 'incidents', $pb.PbFieldType.PM,
-        SendShiftHandoffRequest_Incident.create)
+        subBuilder: SendShiftHandoffRequest_Incident.create)
     ..aOB(8, 'previewOnly')
     ..hasRequiredFields = false;
 
@@ -1445,60 +1757,85 @@ class SendShiftHandoffRequest extends $pb.GeneratedMessage {
   SendShiftHandoffRequest createEmptyInstance() => create();
   static $pb.PbList<SendShiftHandoffRequest> createRepeated() =>
       $pb.PbList<SendShiftHandoffRequest>();
-  static SendShiftHandoffRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static SendShiftHandoffRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SendShiftHandoffRequest>(create);
   static SendShiftHandoffRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<$core.String> get recipients => $_getList(1);
 
+  @$pb.TagNumber(3)
   $core.List<$core.String> get cc => $_getList(2);
 
-  $core.String get subject => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get subject => $_getSZ(3);
+  @$pb.TagNumber(4)
   set subject($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasSubject() => $_has(3);
+  @$pb.TagNumber(4)
   void clearSubject() => clearField(4);
 
-  $core.String get notesContentType => $_getS(4, '');
+  @$pb.TagNumber(5)
+  $core.String get notesContentType => $_getSZ(4);
+  @$pb.TagNumber(5)
   set notesContentType($core.String v) {
     $_setString(4, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasNotesContentType() => $_has(4);
+  @$pb.TagNumber(5)
   void clearNotesContentType() => clearField(5);
 
-  $core.String get notesContent => $_getS(5, '');
+  @$pb.TagNumber(6)
+  $core.String get notesContent => $_getSZ(5);
+  @$pb.TagNumber(6)
   set notesContent($core.String v) {
     $_setString(5, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasNotesContent() => $_has(5);
+  @$pb.TagNumber(6)
   void clearNotesContent() => clearField(6);
 
+  @$pb.TagNumber(7)
   $core.List<SendShiftHandoffRequest_Incident> get incidents => $_getList(6);
 
-  $core.bool get previewOnly => $_get(7, false);
+  @$pb.TagNumber(8)
+  $core.bool get previewOnly => $_getBF(7);
+  @$pb.TagNumber(8)
   set previewOnly($core.bool v) {
     $_setBool(7, v);
   }
 
+  @$pb.TagNumber(8)
   $core.bool hasPreviewOnly() => $_has(7);
+  @$pb.TagNumber(8)
   void clearPreviewOnly() => clearField(8);
 }
 
 class SendShiftHandoffResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('SendShiftHandoffResponse',
-      package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
+      package: const $pb.PackageName('google.cloud.irm.v1alpha2'),
+      createEmptyInstance: create)
     ..aOS(1, 'contentType')
     ..aOS(2, 'content')
     ..hasRequiredFields = false;
@@ -1522,33 +1859,43 @@ class SendShiftHandoffResponse extends $pb.GeneratedMessage {
   SendShiftHandoffResponse createEmptyInstance() => create();
   static $pb.PbList<SendShiftHandoffResponse> createRepeated() =>
       $pb.PbList<SendShiftHandoffResponse>();
-  static SendShiftHandoffResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static SendShiftHandoffResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SendShiftHandoffResponse>(create);
   static SendShiftHandoffResponse _defaultInstance;
 
-  $core.String get contentType => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get contentType => $_getSZ(0);
+  @$pb.TagNumber(1)
   set contentType($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasContentType() => $_has(0);
+  @$pb.TagNumber(1)
   void clearContentType() => clearField(1);
 
-  $core.String get content => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get content => $_getSZ(1);
+  @$pb.TagNumber(2)
   set content($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasContent() => $_has(1);
+  @$pb.TagNumber(2)
   void clearContent() => clearField(2);
 }
 
 class CreateSubscriptionRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateSubscriptionRequest',
-      package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
+      package: const $pb.PackageName('google.cloud.irm.v1alpha2'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
-    ..a<$1.Subscription>(2, 'subscription', $pb.PbFieldType.OM,
-        $1.Subscription.getDefault, $1.Subscription.create)
+    ..aOM<$1.Subscription>(2, 'subscription',
+        subBuilder: $1.Subscription.create)
     ..hasRequiredFields = false;
 
   CreateSubscriptionRequest._() : super();
@@ -1571,34 +1918,45 @@ class CreateSubscriptionRequest extends $pb.GeneratedMessage {
   CreateSubscriptionRequest createEmptyInstance() => create();
   static $pb.PbList<CreateSubscriptionRequest> createRepeated() =>
       $pb.PbList<CreateSubscriptionRequest>();
-  static CreateSubscriptionRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateSubscriptionRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateSubscriptionRequest>(create);
   static CreateSubscriptionRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  @$pb.TagNumber(2)
   $1.Subscription get subscription => $_getN(1);
+  @$pb.TagNumber(2)
   set subscription($1.Subscription v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasSubscription() => $_has(1);
+  @$pb.TagNumber(2)
   void clearSubscription() => clearField(2);
+  @$pb.TagNumber(2)
+  $1.Subscription ensureSubscription() => $_ensure(1);
 }
 
 class UpdateSubscriptionRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateSubscriptionRequest',
-      package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
-    ..a<$1.Subscription>(1, 'subscription', $pb.PbFieldType.OM,
-        $1.Subscription.getDefault, $1.Subscription.create)
-    ..a<$3.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $3.FieldMask.getDefault, $3.FieldMask.create)
+      package: const $pb.PackageName('google.cloud.irm.v1alpha2'),
+      createEmptyInstance: create)
+    ..aOM<$1.Subscription>(1, 'subscription',
+        subBuilder: $1.Subscription.create)
+    ..aOM<$3.FieldMask>(2, 'updateMask', subBuilder: $3.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateSubscriptionRequest._() : super();
@@ -1621,30 +1979,44 @@ class UpdateSubscriptionRequest extends $pb.GeneratedMessage {
   UpdateSubscriptionRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateSubscriptionRequest> createRepeated() =>
       $pb.PbList<UpdateSubscriptionRequest>();
-  static UpdateSubscriptionRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateSubscriptionRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateSubscriptionRequest>(create);
   static UpdateSubscriptionRequest _defaultInstance;
 
+  @$pb.TagNumber(1)
   $1.Subscription get subscription => $_getN(0);
+  @$pb.TagNumber(1)
   set subscription($1.Subscription v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasSubscription() => $_has(0);
+  @$pb.TagNumber(1)
   void clearSubscription() => clearField(1);
+  @$pb.TagNumber(1)
+  $1.Subscription ensureSubscription() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $3.FieldMask get updateMask => $_getN(1);
+  @$pb.TagNumber(2)
   set updateMask($3.FieldMask v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasUpdateMask() => $_has(1);
+  @$pb.TagNumber(2)
   void clearUpdateMask() => clearField(2);
+  @$pb.TagNumber(2)
+  $3.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
 class ListSubscriptionsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListSubscriptionsRequest',
-      package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
+      package: const $pb.PackageName('google.cloud.irm.v1alpha2'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(3, 'pageToken')
@@ -1669,40 +2041,54 @@ class ListSubscriptionsRequest extends $pb.GeneratedMessage {
   ListSubscriptionsRequest createEmptyInstance() => create();
   static $pb.PbList<ListSubscriptionsRequest> createRepeated() =>
       $pb.PbList<ListSubscriptionsRequest>();
-  static ListSubscriptionsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListSubscriptionsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListSubscriptionsRequest>(create);
   static ListSubscriptionsRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.int get pageSize => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get pageSize => $_getIZ(1);
+  @$pb.TagNumber(2)
   set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
-  $core.String get pageToken => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get pageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
   set pageToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
 }
 
 class ListSubscriptionsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListSubscriptionsResponse',
-      package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
-    ..pc<$1.Subscription>(
-        1, 'subscriptions', $pb.PbFieldType.PM, $1.Subscription.create)
+      package: const $pb.PackageName('google.cloud.irm.v1alpha2'),
+      createEmptyInstance: create)
+    ..pc<$1.Subscription>(1, 'subscriptions', $pb.PbFieldType.PM,
+        subBuilder: $1.Subscription.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -1726,24 +2112,31 @@ class ListSubscriptionsResponse extends $pb.GeneratedMessage {
   ListSubscriptionsResponse createEmptyInstance() => create();
   static $pb.PbList<ListSubscriptionsResponse> createRepeated() =>
       $pb.PbList<ListSubscriptionsResponse>();
-  static ListSubscriptionsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListSubscriptionsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListSubscriptionsResponse>(create);
   static ListSubscriptionsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$1.Subscription> get subscriptions => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class DeleteSubscriptionRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteSubscriptionRequest',
-      package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
+      package: const $pb.PackageName('google.cloud.irm.v1alpha2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -1767,30 +2160,32 @@ class DeleteSubscriptionRequest extends $pb.GeneratedMessage {
   DeleteSubscriptionRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteSubscriptionRequest> createRepeated() =>
       $pb.PbList<DeleteSubscriptionRequest>();
-  static DeleteSubscriptionRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteSubscriptionRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteSubscriptionRequest>(create);
   static DeleteSubscriptionRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class CreateIncidentRoleAssignmentRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'CreateIncidentRoleAssignmentRequest',
-      package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
+      package: const $pb.PackageName('google.cloud.irm.v1alpha2'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
-    ..a<$1.IncidentRoleAssignment>(
-        2,
-        'incidentRoleAssignment',
-        $pb.PbFieldType.OM,
-        $1.IncidentRoleAssignment.getDefault,
-        $1.IncidentRoleAssignment.create)
+    ..aOM<$1.IncidentRoleAssignment>(2, 'incidentRoleAssignment',
+        subBuilder: $1.IncidentRoleAssignment.create)
     ..hasRequiredFields = false;
 
   CreateIncidentRoleAssignmentRequest._() : super();
@@ -1815,31 +2210,44 @@ class CreateIncidentRoleAssignmentRequest extends $pb.GeneratedMessage {
   CreateIncidentRoleAssignmentRequest createEmptyInstance() => create();
   static $pb.PbList<CreateIncidentRoleAssignmentRequest> createRepeated() =>
       $pb.PbList<CreateIncidentRoleAssignmentRequest>();
+  @$core.pragma('dart2js:noInline')
   static CreateIncidentRoleAssignmentRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          CreateIncidentRoleAssignmentRequest>(create);
   static CreateIncidentRoleAssignmentRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  @$pb.TagNumber(2)
   $1.IncidentRoleAssignment get incidentRoleAssignment => $_getN(1);
+  @$pb.TagNumber(2)
   set incidentRoleAssignment($1.IncidentRoleAssignment v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasIncidentRoleAssignment() => $_has(1);
+  @$pb.TagNumber(2)
   void clearIncidentRoleAssignment() => clearField(2);
+  @$pb.TagNumber(2)
+  $1.IncidentRoleAssignment ensureIncidentRoleAssignment() => $_ensure(1);
 }
 
 class DeleteIncidentRoleAssignmentRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'DeleteIncidentRoleAssignmentRequest',
-      package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
+      package: const $pb.PackageName('google.cloud.irm.v1alpha2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -1865,23 +2273,30 @@ class DeleteIncidentRoleAssignmentRequest extends $pb.GeneratedMessage {
   DeleteIncidentRoleAssignmentRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteIncidentRoleAssignmentRequest> createRepeated() =>
       $pb.PbList<DeleteIncidentRoleAssignmentRequest>();
+  @$core.pragma('dart2js:noInline')
   static DeleteIncidentRoleAssignmentRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          DeleteIncidentRoleAssignmentRequest>(create);
   static DeleteIncidentRoleAssignmentRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class ListIncidentRoleAssignmentsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListIncidentRoleAssignmentsRequest',
-      package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
+      package: const $pb.PackageName('google.cloud.irm.v1alpha2'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(3, 'pageToken')
@@ -1908,41 +2323,57 @@ class ListIncidentRoleAssignmentsRequest extends $pb.GeneratedMessage {
   ListIncidentRoleAssignmentsRequest createEmptyInstance() => create();
   static $pb.PbList<ListIncidentRoleAssignmentsRequest> createRepeated() =>
       $pb.PbList<ListIncidentRoleAssignmentsRequest>();
-  static ListIncidentRoleAssignmentsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListIncidentRoleAssignmentsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListIncidentRoleAssignmentsRequest>(
+          create);
   static ListIncidentRoleAssignmentsRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.int get pageSize => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get pageSize => $_getIZ(1);
+  @$pb.TagNumber(2)
   set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
-  $core.String get pageToken => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get pageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
   set pageToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
 }
 
 class ListIncidentRoleAssignmentsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListIncidentRoleAssignmentsResponse',
-      package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
-    ..pc<$1.IncidentRoleAssignment>(1, 'incidentRoleAssignments',
-        $pb.PbFieldType.PM, $1.IncidentRoleAssignment.create)
+      package: const $pb.PackageName('google.cloud.irm.v1alpha2'),
+      createEmptyInstance: create)
+    ..pc<$1.IncidentRoleAssignment>(
+        1, 'incidentRoleAssignments', $pb.PbFieldType.PM,
+        subBuilder: $1.IncidentRoleAssignment.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -1968,29 +2399,36 @@ class ListIncidentRoleAssignmentsResponse extends $pb.GeneratedMessage {
   ListIncidentRoleAssignmentsResponse createEmptyInstance() => create();
   static $pb.PbList<ListIncidentRoleAssignmentsResponse> createRepeated() =>
       $pb.PbList<ListIncidentRoleAssignmentsResponse>();
+  @$core.pragma('dart2js:noInline')
   static ListIncidentRoleAssignmentsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          ListIncidentRoleAssignmentsResponse>(create);
   static ListIncidentRoleAssignmentsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$1.IncidentRoleAssignment> get incidentRoleAssignments =>
       $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class RequestIncidentRoleHandoverRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'RequestIncidentRoleHandoverRequest',
-      package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
+      package: const $pb.PackageName('google.cloud.irm.v1alpha2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
-    ..a<$1.User>(2, 'newAssignee', $pb.PbFieldType.OM, $1.User.getDefault,
-        $1.User.create)
+    ..aOM<$1.User>(2, 'newAssignee', subBuilder: $1.User.create)
     ..hasRequiredFields = false;
 
   RequestIncidentRoleHandoverRequest._() : super();
@@ -2014,34 +2452,46 @@ class RequestIncidentRoleHandoverRequest extends $pb.GeneratedMessage {
   RequestIncidentRoleHandoverRequest createEmptyInstance() => create();
   static $pb.PbList<RequestIncidentRoleHandoverRequest> createRepeated() =>
       $pb.PbList<RequestIncidentRoleHandoverRequest>();
-  static RequestIncidentRoleHandoverRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static RequestIncidentRoleHandoverRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RequestIncidentRoleHandoverRequest>(
+          create);
   static RequestIncidentRoleHandoverRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $1.User get newAssignee => $_getN(1);
+  @$pb.TagNumber(2)
   set newAssignee($1.User v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNewAssignee() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNewAssignee() => clearField(2);
+  @$pb.TagNumber(2)
+  $1.User ensureNewAssignee() => $_ensure(1);
 }
 
 class ConfirmIncidentRoleHandoverRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ConfirmIncidentRoleHandoverRequest',
-      package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
+      package: const $pb.PackageName('google.cloud.irm.v1alpha2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
-    ..a<$1.User>(2, 'newAssignee', $pb.PbFieldType.OM, $1.User.getDefault,
-        $1.User.create)
+    ..aOM<$1.User>(2, 'newAssignee', subBuilder: $1.User.create)
     ..hasRequiredFields = false;
 
   ConfirmIncidentRoleHandoverRequest._() : super();
@@ -2065,34 +2515,46 @@ class ConfirmIncidentRoleHandoverRequest extends $pb.GeneratedMessage {
   ConfirmIncidentRoleHandoverRequest createEmptyInstance() => create();
   static $pb.PbList<ConfirmIncidentRoleHandoverRequest> createRepeated() =>
       $pb.PbList<ConfirmIncidentRoleHandoverRequest>();
-  static ConfirmIncidentRoleHandoverRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ConfirmIncidentRoleHandoverRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ConfirmIncidentRoleHandoverRequest>(
+          create);
   static ConfirmIncidentRoleHandoverRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $1.User get newAssignee => $_getN(1);
+  @$pb.TagNumber(2)
   set newAssignee($1.User v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNewAssignee() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNewAssignee() => clearField(2);
+  @$pb.TagNumber(2)
+  $1.User ensureNewAssignee() => $_ensure(1);
 }
 
 class ForceIncidentRoleHandoverRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ForceIncidentRoleHandoverRequest',
-      package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
+      package: const $pb.PackageName('google.cloud.irm.v1alpha2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
-    ..a<$1.User>(2, 'newAssignee', $pb.PbFieldType.OM, $1.User.getDefault,
-        $1.User.create)
+    ..aOM<$1.User>(2, 'newAssignee', subBuilder: $1.User.create)
     ..hasRequiredFields = false;
 
   ForceIncidentRoleHandoverRequest._() : super();
@@ -2116,34 +2578,46 @@ class ForceIncidentRoleHandoverRequest extends $pb.GeneratedMessage {
   ForceIncidentRoleHandoverRequest createEmptyInstance() => create();
   static $pb.PbList<ForceIncidentRoleHandoverRequest> createRepeated() =>
       $pb.PbList<ForceIncidentRoleHandoverRequest>();
-  static ForceIncidentRoleHandoverRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ForceIncidentRoleHandoverRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ForceIncidentRoleHandoverRequest>(
+          create);
   static ForceIncidentRoleHandoverRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $1.User get newAssignee => $_getN(1);
+  @$pb.TagNumber(2)
   set newAssignee($1.User v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNewAssignee() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNewAssignee() => clearField(2);
+  @$pb.TagNumber(2)
+  $1.User ensureNewAssignee() => $_ensure(1);
 }
 
 class CancelIncidentRoleHandoverRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'CancelIncidentRoleHandoverRequest',
-      package: const $pb.PackageName('google.cloud.irm.v1alpha2'))
+      package: const $pb.PackageName('google.cloud.irm.v1alpha2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
-    ..a<$1.User>(2, 'newAssignee', $pb.PbFieldType.OM, $1.User.getDefault,
-        $1.User.create)
+    ..aOM<$1.User>(2, 'newAssignee', subBuilder: $1.User.create)
     ..hasRequiredFields = false;
 
   CancelIncidentRoleHandoverRequest._() : super();
@@ -2167,23 +2641,35 @@ class CancelIncidentRoleHandoverRequest extends $pb.GeneratedMessage {
   CancelIncidentRoleHandoverRequest createEmptyInstance() => create();
   static $pb.PbList<CancelIncidentRoleHandoverRequest> createRepeated() =>
       $pb.PbList<CancelIncidentRoleHandoverRequest>();
-  static CancelIncidentRoleHandoverRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CancelIncidentRoleHandoverRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CancelIncidentRoleHandoverRequest>(
+          create);
   static CancelIncidentRoleHandoverRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $1.User get newAssignee => $_getN(1);
+  @$pb.TagNumber(2)
   set newAssignee($1.User v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNewAssignee() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNewAssignee() => clearField(2);
+  @$pb.TagNumber(2)
+  $1.User ensureNewAssignee() => $_ensure(1);
 }

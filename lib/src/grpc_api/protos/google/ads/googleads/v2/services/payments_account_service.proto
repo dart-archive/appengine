@@ -30,14 +30,14 @@ option objc_class_prefix = "GAA";
 option php_namespace = "Google\\Ads\\GoogleAds\\V2\\Services";
 option ruby_package = "Google::Ads::GoogleAds::V2::Services";
 
-// Proto file describing the Payments account service.
+// Proto file describing the payments account service.
 
-// Service to provide Payments accounts that can be used to set up consolidated
+// Service to provide payments accounts that can be used to set up consolidated
 // billing.
 service PaymentsAccountService {
   option (google.api.default_host) = "googleads.googleapis.com";
 
-  // Returns all Payments accounts associated with all managers
+  // Returns all payments accounts associated with all managers
   // between the login customer ID and specified serving customer in the
   // hierarchy, inclusive.
   rpc ListPaymentsAccounts(ListPaymentsAccountsRequest) returns (ListPaymentsAccountsResponse) {
@@ -47,7 +47,7 @@ service PaymentsAccountService {
   }
 }
 
-// Request message for fetching all accessible Payments accounts.
+// Request message for fetching all accessible payments accounts.
 message ListPaymentsAccountsRequest {
   // The ID of the customer to apply the PaymentsAccount list operation to.
   string customer_id = 1;
@@ -55,6 +55,6 @@ message ListPaymentsAccountsRequest {
 
 // Response message for [PaymentsAccountService.ListPaymentsAccounts][google.ads.googleads.v2.services.PaymentsAccountService.ListPaymentsAccounts].
 message ListPaymentsAccountsResponse {
-  // The list of accessible Payments accounts.
+  // The list of accessible payments accounts.
   repeated google.ads.googleads.v2.resources.PaymentsAccount payments_accounts = 1;
 }

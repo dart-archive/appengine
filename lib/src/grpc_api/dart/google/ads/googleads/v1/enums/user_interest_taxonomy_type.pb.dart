@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -15,7 +14,8 @@ export 'user_interest_taxonomy_type.pbenum.dart';
 class UserInterestTaxonomyTypeEnum extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'UserInterestTaxonomyTypeEnum',
-      package: const $pb.PackageName('google.ads.googleads.v1.enums'))
+      package: const $pb.PackageName('google.ads.googleads.v1.enums'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   UserInterestTaxonomyTypeEnum._() : super();
@@ -39,7 +39,8 @@ class UserInterestTaxonomyTypeEnum extends $pb.GeneratedMessage {
   UserInterestTaxonomyTypeEnum createEmptyInstance() => create();
   static $pb.PbList<UserInterestTaxonomyTypeEnum> createRepeated() =>
       $pb.PbList<UserInterestTaxonomyTypeEnum>();
-  static UserInterestTaxonomyTypeEnum getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UserInterestTaxonomyTypeEnum getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UserInterestTaxonomyTypeEnum>(create);
   static UserInterestTaxonomyTypeEnum _defaultInstance;
 }

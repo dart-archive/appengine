@@ -5,15 +5,15 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
-import 'package:fixnum/fixnum.dart';
+import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class Position extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Position',
-      package: const $pb.PackageName('google.genomics.v1'))
+      package: const $pb.PackageName('google.genomics.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'referenceName')
     ..aInt64(2, 'position')
     ..aOB(3, 'reverseStrand')
@@ -35,30 +35,44 @@ class Position extends $pb.GeneratedMessage {
   static Position create() => Position._();
   Position createEmptyInstance() => create();
   static $pb.PbList<Position> createRepeated() => $pb.PbList<Position>();
-  static Position getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Position getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Position>(create);
   static Position _defaultInstance;
 
-  $core.String get referenceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get referenceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set referenceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasReferenceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearReferenceName() => clearField(1);
 
-  Int64 get position => $_getI64(1);
-  set position(Int64 v) {
+  @$pb.TagNumber(2)
+  $fixnum.Int64 get position => $_getI64(1);
+  @$pb.TagNumber(2)
+  set position($fixnum.Int64 v) {
     $_setInt64(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPosition() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPosition() => clearField(2);
 
-  $core.bool get reverseStrand => $_get(2, false);
+  @$pb.TagNumber(3)
+  $core.bool get reverseStrand => $_getBF(2);
+  @$pb.TagNumber(3)
   set reverseStrand($core.bool v) {
     $_setBool(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasReverseStrand() => $_has(2);
+  @$pb.TagNumber(3)
   void clearReverseStrand() => clearField(3);
 }

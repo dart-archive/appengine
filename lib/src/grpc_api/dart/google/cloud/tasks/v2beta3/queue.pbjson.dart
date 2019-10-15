@@ -60,6 +60,7 @@ const Queue$json = {
     },
   ],
   '4': [Queue_State$json],
+  '7': {},
   '8': [
     {'1': 'queue_type'},
   ],

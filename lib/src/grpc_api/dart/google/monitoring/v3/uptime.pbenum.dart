@@ -6,7 +6,7 @@
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
-import 'dart:core' as $core show int, dynamic, String, List, Map;
+import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class UptimeCheckRegion extends $pb.ProtobufEnum {
@@ -52,4 +52,68 @@ class GroupResourceType extends $pb.ProtobufEnum {
   static GroupResourceType valueOf($core.int value) => _byValue[value];
 
   const GroupResourceType._($core.int v, $core.String n) : super(v, n);
+}
+
+class InternalChecker_State extends $pb.ProtobufEnum {
+  static const InternalChecker_State UNSPECIFIED =
+      InternalChecker_State._(0, 'UNSPECIFIED');
+  static const InternalChecker_State CREATING =
+      InternalChecker_State._(1, 'CREATING');
+  static const InternalChecker_State RUNNING =
+      InternalChecker_State._(2, 'RUNNING');
+
+  static const $core.List<InternalChecker_State> values =
+      <InternalChecker_State>[
+    UNSPECIFIED,
+    CREATING,
+    RUNNING,
+  ];
+
+  static final $core.Map<$core.int, InternalChecker_State> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static InternalChecker_State valueOf($core.int value) => _byValue[value];
+
+  const InternalChecker_State._($core.int v, $core.String n) : super(v, n);
+}
+
+class UptimeCheckConfig_ContentMatcher_ContentMatcherOption
+    extends $pb.ProtobufEnum {
+  static const UptimeCheckConfig_ContentMatcher_ContentMatcherOption
+      CONTENT_MATCHER_OPTION_UNSPECIFIED =
+      UptimeCheckConfig_ContentMatcher_ContentMatcherOption._(
+          0, 'CONTENT_MATCHER_OPTION_UNSPECIFIED');
+  static const UptimeCheckConfig_ContentMatcher_ContentMatcherOption
+      CONTAINS_STRING = UptimeCheckConfig_ContentMatcher_ContentMatcherOption._(
+          1, 'CONTAINS_STRING');
+  static const UptimeCheckConfig_ContentMatcher_ContentMatcherOption
+      NOT_CONTAINS_STRING =
+      UptimeCheckConfig_ContentMatcher_ContentMatcherOption._(
+          2, 'NOT_CONTAINS_STRING');
+  static const UptimeCheckConfig_ContentMatcher_ContentMatcherOption
+      MATCHES_REGEX = UptimeCheckConfig_ContentMatcher_ContentMatcherOption._(
+          3, 'MATCHES_REGEX');
+  static const UptimeCheckConfig_ContentMatcher_ContentMatcherOption
+      NOT_MATCHES_REGEX =
+      UptimeCheckConfig_ContentMatcher_ContentMatcherOption._(
+          4, 'NOT_MATCHES_REGEX');
+
+  static const $core.List<UptimeCheckConfig_ContentMatcher_ContentMatcherOption>
+      values = <UptimeCheckConfig_ContentMatcher_ContentMatcherOption>[
+    CONTENT_MATCHER_OPTION_UNSPECIFIED,
+    CONTAINS_STRING,
+    NOT_CONTAINS_STRING,
+    MATCHES_REGEX,
+    NOT_MATCHES_REGEX,
+  ];
+
+  static final $core
+          .Map<$core.int, UptimeCheckConfig_ContentMatcher_ContentMatcherOption>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static UptimeCheckConfig_ContentMatcher_ContentMatcherOption valueOf(
+          $core.int value) =>
+      _byValue[value];
+
+  const UptimeCheckConfig_ContentMatcher_ContentMatcherOption._(
+      $core.int v, $core.String n)
+      : super(v, n);
 }

@@ -136,6 +136,11 @@ const Entity_Type$json = {
     {'1': 'WORK_OF_ART', '2': 5},
     {'1': 'CONSUMER_GOOD', '2': 6},
     {'1': 'OTHER', '2': 7},
+    {'1': 'PHONE_NUMBER', '2': 9},
+    {'1': 'ADDRESS', '2': 10},
+    {'1': 'DATE', '2': 11},
+    {'1': 'NUMBER', '2': 12},
+    {'1': 'PRICE', '2': 13},
   ],
 };
 
@@ -618,6 +623,7 @@ const AnalyzeSentimentRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.language.v1beta2.Document',
+      '8': {},
       '10': 'document'
     },
     {
@@ -663,6 +669,7 @@ const AnalyzeEntitySentimentRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.language.v1beta2.Document',
+      '8': {},
       '10': 'document'
     },
     {
@@ -700,6 +707,7 @@ const AnalyzeEntitiesRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.language.v1beta2.Document',
+      '8': {},
       '10': 'document'
     },
     {
@@ -737,6 +745,7 @@ const AnalyzeSyntaxRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.language.v1beta2.Document',
+      '8': {},
       '10': 'document'
     },
     {
@@ -782,6 +791,7 @@ const ClassifyTextRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.language.v1beta2.Document',
+      '8': {},
       '10': 'document'
     },
   ],
@@ -810,6 +820,7 @@ const AnnotateTextRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.language.v1beta2.Document',
+      '8': {},
       '10': 'document'
     },
     {
@@ -818,6 +829,7 @@ const AnnotateTextRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.language.v1beta2.AnnotateTextRequest.Features',
+      '8': {},
       '10': 'features'
     },
     {

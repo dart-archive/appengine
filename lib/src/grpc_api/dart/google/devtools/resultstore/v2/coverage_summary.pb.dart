@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -14,7 +13,8 @@ import 'common.pbenum.dart' as $0;
 
 class LineCoverageSummary extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('LineCoverageSummary',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
     ..a<$core.int>(1, 'instrumentedLineCount', $pb.PbFieldType.O3)
     ..a<$core.int>(2, 'executedLineCount', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
@@ -36,30 +36,40 @@ class LineCoverageSummary extends $pb.GeneratedMessage {
   LineCoverageSummary createEmptyInstance() => create();
   static $pb.PbList<LineCoverageSummary> createRepeated() =>
       $pb.PbList<LineCoverageSummary>();
-  static LineCoverageSummary getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static LineCoverageSummary getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<LineCoverageSummary>(create);
   static LineCoverageSummary _defaultInstance;
 
-  $core.int get instrumentedLineCount => $_get(0, 0);
+  @$pb.TagNumber(1)
+  $core.int get instrumentedLineCount => $_getIZ(0);
+  @$pb.TagNumber(1)
   set instrumentedLineCount($core.int v) {
     $_setSignedInt32(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasInstrumentedLineCount() => $_has(0);
+  @$pb.TagNumber(1)
   void clearInstrumentedLineCount() => clearField(1);
 
-  $core.int get executedLineCount => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get executedLineCount => $_getIZ(1);
+  @$pb.TagNumber(2)
   set executedLineCount($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasExecutedLineCount() => $_has(1);
+  @$pb.TagNumber(2)
   void clearExecutedLineCount() => clearField(2);
 }
 
 class BranchCoverageSummary extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('BranchCoverageSummary',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
     ..a<$core.int>(1, 'totalBranchCount', $pb.PbFieldType.O3)
     ..a<$core.int>(2, 'executedBranchCount', $pb.PbFieldType.O3)
     ..a<$core.int>(3, 'takenBranchCount', $pb.PbFieldType.O3)
@@ -84,49 +94,60 @@ class BranchCoverageSummary extends $pb.GeneratedMessage {
   BranchCoverageSummary createEmptyInstance() => create();
   static $pb.PbList<BranchCoverageSummary> createRepeated() =>
       $pb.PbList<BranchCoverageSummary>();
-  static BranchCoverageSummary getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static BranchCoverageSummary getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BranchCoverageSummary>(create);
   static BranchCoverageSummary _defaultInstance;
 
-  $core.int get totalBranchCount => $_get(0, 0);
+  @$pb.TagNumber(1)
+  $core.int get totalBranchCount => $_getIZ(0);
+  @$pb.TagNumber(1)
   set totalBranchCount($core.int v) {
     $_setSignedInt32(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasTotalBranchCount() => $_has(0);
+  @$pb.TagNumber(1)
   void clearTotalBranchCount() => clearField(1);
 
-  $core.int get executedBranchCount => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get executedBranchCount => $_getIZ(1);
+  @$pb.TagNumber(2)
   set executedBranchCount($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasExecutedBranchCount() => $_has(1);
+  @$pb.TagNumber(2)
   void clearExecutedBranchCount() => clearField(2);
 
-  $core.int get takenBranchCount => $_get(2, 0);
+  @$pb.TagNumber(3)
+  $core.int get takenBranchCount => $_getIZ(2);
+  @$pb.TagNumber(3)
   set takenBranchCount($core.int v) {
     $_setSignedInt32(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasTakenBranchCount() => $_has(2);
+  @$pb.TagNumber(3)
   void clearTakenBranchCount() => clearField(3);
 }
 
 class LanguageCoverageSummary extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('LanguageCoverageSummary',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
-    ..e<$0.Language>(
-        1,
-        'language',
-        $pb.PbFieldType.OE,
-        $0.Language.LANGUAGE_UNSPECIFIED,
-        $0.Language.valueOf,
-        $0.Language.values)
-    ..a<LineCoverageSummary>(2, 'lineSummary', $pb.PbFieldType.OM,
-        LineCoverageSummary.getDefault, LineCoverageSummary.create)
-    ..a<BranchCoverageSummary>(3, 'branchSummary', $pb.PbFieldType.OM,
-        BranchCoverageSummary.getDefault, BranchCoverageSummary.create)
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
+    ..e<$0.Language>(1, 'language', $pb.PbFieldType.OE,
+        defaultOrMaker: $0.Language.LANGUAGE_UNSPECIFIED,
+        valueOf: $0.Language.valueOf,
+        enumValues: $0.Language.values)
+    ..aOM<LineCoverageSummary>(2, 'lineSummary',
+        subBuilder: LineCoverageSummary.create)
+    ..aOM<BranchCoverageSummary>(3, 'branchSummary',
+        subBuilder: BranchCoverageSummary.create)
     ..hasRequiredFields = false;
 
   LanguageCoverageSummary._() : super();
@@ -148,31 +169,48 @@ class LanguageCoverageSummary extends $pb.GeneratedMessage {
   LanguageCoverageSummary createEmptyInstance() => create();
   static $pb.PbList<LanguageCoverageSummary> createRepeated() =>
       $pb.PbList<LanguageCoverageSummary>();
-  static LanguageCoverageSummary getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static LanguageCoverageSummary getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<LanguageCoverageSummary>(create);
   static LanguageCoverageSummary _defaultInstance;
 
+  @$pb.TagNumber(1)
   $0.Language get language => $_getN(0);
+  @$pb.TagNumber(1)
   set language($0.Language v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasLanguage() => $_has(0);
+  @$pb.TagNumber(1)
   void clearLanguage() => clearField(1);
 
+  @$pb.TagNumber(2)
   LineCoverageSummary get lineSummary => $_getN(1);
+  @$pb.TagNumber(2)
   set lineSummary(LineCoverageSummary v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasLineSummary() => $_has(1);
+  @$pb.TagNumber(2)
   void clearLineSummary() => clearField(2);
+  @$pb.TagNumber(2)
+  LineCoverageSummary ensureLineSummary() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   BranchCoverageSummary get branchSummary => $_getN(2);
+  @$pb.TagNumber(3)
   set branchSummary(BranchCoverageSummary v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasBranchSummary() => $_has(2);
+  @$pb.TagNumber(3)
   void clearBranchSummary() => clearField(3);
+  @$pb.TagNumber(3)
+  BranchCoverageSummary ensureBranchSummary() => $_ensure(2);
 }

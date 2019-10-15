@@ -6,7 +6,7 @@
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
-import 'dart:core' as $core show int, dynamic, String, List, Map;
+import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class ExtensionTypeEnum_ExtensionType extends $pb.ProtobufEnum {
@@ -36,6 +36,8 @@ class ExtensionTypeEnum_ExtensionType extends $pb.ProtobufEnum {
       ExtensionTypeEnum_ExtensionType._(12, 'LOCATION');
   static const ExtensionTypeEnum_ExtensionType AFFILIATE_LOCATION =
       ExtensionTypeEnum_ExtensionType._(13, 'AFFILIATE_LOCATION');
+  static const ExtensionTypeEnum_ExtensionType HOTEL_CALLOUT =
+      ExtensionTypeEnum_ExtensionType._(15, 'HOTEL_CALLOUT');
 
   static const $core.List<ExtensionTypeEnum_ExtensionType> values =
       <ExtensionTypeEnum_ExtensionType>[
@@ -52,6 +54,7 @@ class ExtensionTypeEnum_ExtensionType extends $pb.ProtobufEnum {
     STRUCTURED_SNIPPET,
     LOCATION,
     AFFILIATE_LOCATION,
+    HOTEL_CALLOUT,
   ];
 
   static final $core.Map<$core.int, ExtensionTypeEnum_ExtensionType> _byValue =

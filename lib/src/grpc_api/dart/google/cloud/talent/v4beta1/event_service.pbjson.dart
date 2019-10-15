@@ -8,13 +8,14 @@
 const CreateClientEventRequest$json = {
   '1': 'CreateClientEventRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
     {
       '1': 'client_event',
       '3': 2,
       '4': 1,
       '5': 11,
       '6': '.google.cloud.talent.v4beta1.ClientEvent',
+      '8': {},
       '10': 'clientEvent'
     },
   ],

@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -16,7 +15,8 @@ import '../../../../protobuf/field_mask.pb.dart' as $2;
 class GetExtensionFeedItemRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'GetExtensionFeedItemRequest',
-      package: const $pb.PackageName('google.ads.googleads.v1.services'))
+      package: const $pb.PackageName('google.ads.googleads.v1.services'),
+      createEmptyInstance: create)
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
@@ -41,26 +41,32 @@ class GetExtensionFeedItemRequest extends $pb.GeneratedMessage {
   GetExtensionFeedItemRequest createEmptyInstance() => create();
   static $pb.PbList<GetExtensionFeedItemRequest> createRepeated() =>
       $pb.PbList<GetExtensionFeedItemRequest>();
-  static GetExtensionFeedItemRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetExtensionFeedItemRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetExtensionFeedItemRequest>(create);
   static GetExtensionFeedItemRequest _defaultInstance;
 
-  $core.String get resourceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get resourceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set resourceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResourceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResourceName() => clearField(1);
 }
 
 class MutateExtensionFeedItemsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'MutateExtensionFeedItemsRequest',
-      package: const $pb.PackageName('google.ads.googleads.v1.services'))
+      package: const $pb.PackageName('google.ads.googleads.v1.services'),
+      createEmptyInstance: create)
     ..aOS(1, 'customerId')
-    ..pc<ExtensionFeedItemOperation>(
-        2, 'operations', $pb.PbFieldType.PM, ExtensionFeedItemOperation.create)
+    ..pc<ExtensionFeedItemOperation>(2, 'operations', $pb.PbFieldType.PM,
+        subBuilder: ExtensionFeedItemOperation.create)
     ..aOB(4, 'validateOnly')
     ..hasRequiredFields = false;
 
@@ -85,26 +91,37 @@ class MutateExtensionFeedItemsRequest extends $pb.GeneratedMessage {
   MutateExtensionFeedItemsRequest createEmptyInstance() => create();
   static $pb.PbList<MutateExtensionFeedItemsRequest> createRepeated() =>
       $pb.PbList<MutateExtensionFeedItemsRequest>();
-  static MutateExtensionFeedItemsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MutateExtensionFeedItemsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MutateExtensionFeedItemsRequest>(
+          create);
   static MutateExtensionFeedItemsRequest _defaultInstance;
 
-  $core.String get customerId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get customerId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set customerId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCustomerId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCustomerId() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<ExtensionFeedItemOperation> get operations => $_getList(1);
 
-  $core.bool get validateOnly => $_get(2, false);
+  @$pb.TagNumber(4)
+  $core.bool get validateOnly => $_getBF(2);
+  @$pb.TagNumber(4)
   set validateOnly($core.bool v) {
     $_setBool(2, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasValidateOnly() => $_has(2);
+  @$pb.TagNumber(4)
   void clearValidateOnly() => clearField(4);
 }
 
@@ -120,15 +137,15 @@ class ExtensionFeedItemOperation extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ExtensionFeedItemOperation',
-      package: const $pb.PackageName('google.ads.googleads.v1.services'))
+      package: const $pb.PackageName('google.ads.googleads.v1.services'),
+      createEmptyInstance: create)
     ..oo(0, [1, 2, 3])
-    ..a<$1.ExtensionFeedItem>(1, 'create_1', $pb.PbFieldType.OM,
-        $1.ExtensionFeedItem.getDefault, $1.ExtensionFeedItem.create)
-    ..a<$1.ExtensionFeedItem>(2, 'update', $pb.PbFieldType.OM,
-        $1.ExtensionFeedItem.getDefault, $1.ExtensionFeedItem.create)
+    ..aOM<$1.ExtensionFeedItem>(1, 'create',
+        subBuilder: $1.ExtensionFeedItem.create)
+    ..aOM<$1.ExtensionFeedItem>(2, 'update',
+        subBuilder: $1.ExtensionFeedItem.create)
     ..aOS(3, 'remove')
-    ..a<$2.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
-        $2.FieldMask.getDefault, $2.FieldMask.create)
+    ..aOM<$2.FieldMask>(4, 'updateMask', subBuilder: $2.FieldMask.create)
     ..hasRequiredFields = false;
 
   ExtensionFeedItemOperation._() : super();
@@ -151,53 +168,77 @@ class ExtensionFeedItemOperation extends $pb.GeneratedMessage {
   ExtensionFeedItemOperation createEmptyInstance() => create();
   static $pb.PbList<ExtensionFeedItemOperation> createRepeated() =>
       $pb.PbList<ExtensionFeedItemOperation>();
-  static ExtensionFeedItemOperation getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ExtensionFeedItemOperation getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ExtensionFeedItemOperation>(create);
   static ExtensionFeedItemOperation _defaultInstance;
 
   ExtensionFeedItemOperation_Operation whichOperation() =>
       _ExtensionFeedItemOperation_OperationByTag[$_whichOneof(0)];
   void clearOperation() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   $1.ExtensionFeedItem get create_1 => $_getN(0);
+  @$pb.TagNumber(1)
   set create_1($1.ExtensionFeedItem v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCreate_1() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCreate_1() => clearField(1);
+  @$pb.TagNumber(1)
+  $1.ExtensionFeedItem ensureCreate_1() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $1.ExtensionFeedItem get update => $_getN(1);
+  @$pb.TagNumber(2)
   set update($1.ExtensionFeedItem v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasUpdate() => $_has(1);
+  @$pb.TagNumber(2)
   void clearUpdate() => clearField(2);
+  @$pb.TagNumber(2)
+  $1.ExtensionFeedItem ensureUpdate() => $_ensure(1);
 
-  $core.String get remove => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get remove => $_getSZ(2);
+  @$pb.TagNumber(3)
   set remove($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasRemove() => $_has(2);
+  @$pb.TagNumber(3)
   void clearRemove() => clearField(3);
 
+  @$pb.TagNumber(4)
   $2.FieldMask get updateMask => $_getN(3);
+  @$pb.TagNumber(4)
   set updateMask($2.FieldMask v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasUpdateMask() => $_has(3);
+  @$pb.TagNumber(4)
   void clearUpdateMask() => clearField(4);
+  @$pb.TagNumber(4)
+  $2.FieldMask ensureUpdateMask() => $_ensure(3);
 }
 
 class MutateExtensionFeedItemsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'MutateExtensionFeedItemsResponse',
-      package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..pc<MutateExtensionFeedItemResult>(
-        2, 'results', $pb.PbFieldType.PM, MutateExtensionFeedItemResult.create)
+      package: const $pb.PackageName('google.ads.googleads.v1.services'),
+      createEmptyInstance: create)
+    ..pc<MutateExtensionFeedItemResult>(2, 'results', $pb.PbFieldType.PM,
+        subBuilder: MutateExtensionFeedItemResult.create)
     ..hasRequiredFields = false;
 
   MutateExtensionFeedItemsResponse._() : super();
@@ -221,17 +262,21 @@ class MutateExtensionFeedItemsResponse extends $pb.GeneratedMessage {
   MutateExtensionFeedItemsResponse createEmptyInstance() => create();
   static $pb.PbList<MutateExtensionFeedItemsResponse> createRepeated() =>
       $pb.PbList<MutateExtensionFeedItemsResponse>();
-  static MutateExtensionFeedItemsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MutateExtensionFeedItemsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MutateExtensionFeedItemsResponse>(
+          create);
   static MutateExtensionFeedItemsResponse _defaultInstance;
 
+  @$pb.TagNumber(2)
   $core.List<MutateExtensionFeedItemResult> get results => $_getList(0);
 }
 
 class MutateExtensionFeedItemResult extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'MutateExtensionFeedItemResult',
-      package: const $pb.PackageName('google.ads.googleads.v1.services'))
+      package: const $pb.PackageName('google.ads.googleads.v1.services'),
+      createEmptyInstance: create)
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
@@ -256,15 +301,20 @@ class MutateExtensionFeedItemResult extends $pb.GeneratedMessage {
   MutateExtensionFeedItemResult createEmptyInstance() => create();
   static $pb.PbList<MutateExtensionFeedItemResult> createRepeated() =>
       $pb.PbList<MutateExtensionFeedItemResult>();
-  static MutateExtensionFeedItemResult getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MutateExtensionFeedItemResult getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MutateExtensionFeedItemResult>(create);
   static MutateExtensionFeedItemResult _defaultInstance;
 
-  $core.String get resourceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get resourceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set resourceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResourceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResourceName() => clearField(1);
 }

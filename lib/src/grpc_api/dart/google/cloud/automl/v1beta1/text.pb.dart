@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -15,14 +14,12 @@ import 'classification.pbenum.dart' as $0;
 class TextClassificationDatasetMetadata extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'TextClassificationDatasetMetadata',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
-    ..e<$0.ClassificationType>(
-        1,
-        'classificationType',
-        $pb.PbFieldType.OE,
-        $0.ClassificationType.CLASSIFICATION_TYPE_UNSPECIFIED,
-        $0.ClassificationType.valueOf,
-        $0.ClassificationType.values)
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
+    ..e<$0.ClassificationType>(1, 'classificationType', $pb.PbFieldType.OE,
+        defaultOrMaker: $0.ClassificationType.CLASSIFICATION_TYPE_UNSPECIFIED,
+        valueOf: $0.ClassificationType.valueOf,
+        enumValues: $0.ClassificationType.values)
     ..hasRequiredFields = false;
 
   TextClassificationDatasetMetadata._() : super();
@@ -46,23 +43,30 @@ class TextClassificationDatasetMetadata extends $pb.GeneratedMessage {
   TextClassificationDatasetMetadata createEmptyInstance() => create();
   static $pb.PbList<TextClassificationDatasetMetadata> createRepeated() =>
       $pb.PbList<TextClassificationDatasetMetadata>();
-  static TextClassificationDatasetMetadata getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TextClassificationDatasetMetadata getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TextClassificationDatasetMetadata>(
+          create);
   static TextClassificationDatasetMetadata _defaultInstance;
 
+  @$pb.TagNumber(1)
   $0.ClassificationType get classificationType => $_getN(0);
+  @$pb.TagNumber(1)
   set classificationType($0.ClassificationType v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasClassificationType() => $_has(0);
+  @$pb.TagNumber(1)
   void clearClassificationType() => clearField(1);
 }
 
 class TextClassificationModelMetadata extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'TextClassificationModelMetadata',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   TextClassificationModelMetadata._() : super();
@@ -86,15 +90,18 @@ class TextClassificationModelMetadata extends $pb.GeneratedMessage {
   TextClassificationModelMetadata createEmptyInstance() => create();
   static $pb.PbList<TextClassificationModelMetadata> createRepeated() =>
       $pb.PbList<TextClassificationModelMetadata>();
-  static TextClassificationModelMetadata getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TextClassificationModelMetadata getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TextClassificationModelMetadata>(
+          create);
   static TextClassificationModelMetadata _defaultInstance;
 }
 
 class TextExtractionDatasetMetadata extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'TextExtractionDatasetMetadata',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   TextExtractionDatasetMetadata._() : super();
@@ -118,15 +125,17 @@ class TextExtractionDatasetMetadata extends $pb.GeneratedMessage {
   TextExtractionDatasetMetadata createEmptyInstance() => create();
   static $pb.PbList<TextExtractionDatasetMetadata> createRepeated() =>
       $pb.PbList<TextExtractionDatasetMetadata>();
-  static TextExtractionDatasetMetadata getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TextExtractionDatasetMetadata getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TextExtractionDatasetMetadata>(create);
   static TextExtractionDatasetMetadata _defaultInstance;
 }
 
 class TextExtractionModelMetadata extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'TextExtractionModelMetadata',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   TextExtractionModelMetadata._() : super();
@@ -150,15 +159,17 @@ class TextExtractionModelMetadata extends $pb.GeneratedMessage {
   TextExtractionModelMetadata createEmptyInstance() => create();
   static $pb.PbList<TextExtractionModelMetadata> createRepeated() =>
       $pb.PbList<TextExtractionModelMetadata>();
-  static TextExtractionModelMetadata getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TextExtractionModelMetadata getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TextExtractionModelMetadata>(create);
   static TextExtractionModelMetadata _defaultInstance;
 }
 
 class TextSentimentDatasetMetadata extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'TextSentimentDatasetMetadata',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
     ..a<$core.int>(1, 'sentimentMax', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
@@ -183,23 +194,29 @@ class TextSentimentDatasetMetadata extends $pb.GeneratedMessage {
   TextSentimentDatasetMetadata createEmptyInstance() => create();
   static $pb.PbList<TextSentimentDatasetMetadata> createRepeated() =>
       $pb.PbList<TextSentimentDatasetMetadata>();
-  static TextSentimentDatasetMetadata getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TextSentimentDatasetMetadata getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TextSentimentDatasetMetadata>(create);
   static TextSentimentDatasetMetadata _defaultInstance;
 
-  $core.int get sentimentMax => $_get(0, 0);
+  @$pb.TagNumber(1)
+  $core.int get sentimentMax => $_getIZ(0);
+  @$pb.TagNumber(1)
   set sentimentMax($core.int v) {
     $_setSignedInt32(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasSentimentMax() => $_has(0);
+  @$pb.TagNumber(1)
   void clearSentimentMax() => clearField(1);
 }
 
 class TextSentimentModelMetadata extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'TextSentimentModelMetadata',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   TextSentimentModelMetadata._() : super();
@@ -222,7 +239,8 @@ class TextSentimentModelMetadata extends $pb.GeneratedMessage {
   TextSentimentModelMetadata createEmptyInstance() => create();
   static $pb.PbList<TextSentimentModelMetadata> createRepeated() =>
       $pb.PbList<TextSentimentModelMetadata>();
-  static TextSentimentModelMetadata getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TextSentimentModelMetadata getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TextSentimentModelMetadata>(create);
   static TextSentimentModelMetadata _defaultInstance;
 }

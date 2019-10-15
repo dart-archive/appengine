@@ -44,6 +44,9 @@ message ExtensionFeedItem {
   // `customers/{customer_id}/extensionFeedItems/{feed_item_id}`
   string resource_name = 1;
 
+  // The ID of this feed item. Read-only.
+  google.protobuf.Int64Value id = 24;
+
   // The extension type of the extension feed item.
   // This field is read-only.
   google.ads.googleads.v2.enums.ExtensionTypeEnum.ExtensionType extension_type = 13;
@@ -112,6 +115,9 @@ message ExtensionFeedItem {
     // based on a chain ID.
     // This field is read-only.
     google.ads.googleads.v2.common.AffiliateLocationFeedItem affiliate_location_feed_item = 15;
+
+    // Hotel Callout extension.
+    google.ads.googleads.v2.common.HotelCalloutFeedItem hotel_callout_feed_item = 23;
   }
 
   // Targeting at either the campaign or ad group level. Feed items that target

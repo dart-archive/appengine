@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -15,11 +14,12 @@ import '../../../protobuf/timestamp.pb.dart' as $0;
 class ErrorGroup extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ErrorGroup',
       package:
-          const $pb.PackageName('google.devtools.clouderrorreporting.v1beta1'))
+          const $pb.PackageName('google.devtools.clouderrorreporting.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..aOS(2, 'groupId')
-    ..pc<TrackingIssue>(
-        3, 'trackingIssues', $pb.PbFieldType.PM, TrackingIssue.create)
+    ..pc<TrackingIssue>(3, 'trackingIssues', $pb.PbFieldType.PM,
+        subBuilder: TrackingIssue.create)
     ..hasRequiredFields = false;
 
   ErrorGroup._() : super();
@@ -38,32 +38,44 @@ class ErrorGroup extends $pb.GeneratedMessage {
   static ErrorGroup create() => ErrorGroup._();
   ErrorGroup createEmptyInstance() => create();
   static $pb.PbList<ErrorGroup> createRepeated() => $pb.PbList<ErrorGroup>();
-  static ErrorGroup getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ErrorGroup getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ErrorGroup>(create);
   static ErrorGroup _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.String get groupId => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get groupId => $_getSZ(1);
+  @$pb.TagNumber(2)
   set groupId($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasGroupId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearGroupId() => clearField(2);
 
+  @$pb.TagNumber(3)
   $core.List<TrackingIssue> get trackingIssues => $_getList(2);
 }
 
 class TrackingIssue extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TrackingIssue',
       package:
-          const $pb.PackageName('google.devtools.clouderrorreporting.v1beta1'))
+          const $pb.PackageName('google.devtools.clouderrorreporting.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'url')
     ..hasRequiredFields = false;
 
@@ -84,29 +96,34 @@ class TrackingIssue extends $pb.GeneratedMessage {
   TrackingIssue createEmptyInstance() => create();
   static $pb.PbList<TrackingIssue> createRepeated() =>
       $pb.PbList<TrackingIssue>();
-  static TrackingIssue getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TrackingIssue getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TrackingIssue>(create);
   static TrackingIssue _defaultInstance;
 
-  $core.String get url => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get url => $_getSZ(0);
+  @$pb.TagNumber(1)
   set url($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasUrl() => $_has(0);
+  @$pb.TagNumber(1)
   void clearUrl() => clearField(1);
 }
 
 class ErrorEvent extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ErrorEvent',
       package:
-          const $pb.PackageName('google.devtools.clouderrorreporting.v1beta1'))
-    ..a<$0.Timestamp>(1, 'eventTime', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
-    ..a<ServiceContext>(2, 'serviceContext', $pb.PbFieldType.OM,
-        ServiceContext.getDefault, ServiceContext.create)
+          const $pb.PackageName('google.devtools.clouderrorreporting.v1beta1'),
+      createEmptyInstance: create)
+    ..aOM<$0.Timestamp>(1, 'eventTime', subBuilder: $0.Timestamp.create)
+    ..aOM<ServiceContext>(2, 'serviceContext',
+        subBuilder: ServiceContext.create)
     ..aOS(3, 'message')
-    ..a<ErrorContext>(5, 'context', $pb.PbFieldType.OM, ErrorContext.getDefault,
-        ErrorContext.create)
+    ..aOM<ErrorContext>(5, 'context', subBuilder: ErrorContext.create)
     ..hasRequiredFields = false;
 
   ErrorEvent._() : super();
@@ -125,46 +142,71 @@ class ErrorEvent extends $pb.GeneratedMessage {
   static ErrorEvent create() => ErrorEvent._();
   ErrorEvent createEmptyInstance() => create();
   static $pb.PbList<ErrorEvent> createRepeated() => $pb.PbList<ErrorEvent>();
-  static ErrorEvent getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ErrorEvent getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ErrorEvent>(create);
   static ErrorEvent _defaultInstance;
 
+  @$pb.TagNumber(1)
   $0.Timestamp get eventTime => $_getN(0);
+  @$pb.TagNumber(1)
   set eventTime($0.Timestamp v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasEventTime() => $_has(0);
+  @$pb.TagNumber(1)
   void clearEventTime() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.Timestamp ensureEventTime() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   ServiceContext get serviceContext => $_getN(1);
+  @$pb.TagNumber(2)
   set serviceContext(ServiceContext v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasServiceContext() => $_has(1);
+  @$pb.TagNumber(2)
   void clearServiceContext() => clearField(2);
+  @$pb.TagNumber(2)
+  ServiceContext ensureServiceContext() => $_ensure(1);
 
-  $core.String get message => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get message => $_getSZ(2);
+  @$pb.TagNumber(3)
   set message($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasMessage() => $_has(2);
+  @$pb.TagNumber(3)
   void clearMessage() => clearField(3);
 
+  @$pb.TagNumber(5)
   ErrorContext get context => $_getN(3);
+  @$pb.TagNumber(5)
   set context(ErrorContext v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasContext() => $_has(3);
+  @$pb.TagNumber(5)
   void clearContext() => clearField(5);
+  @$pb.TagNumber(5)
+  ErrorContext ensureContext() => $_ensure(3);
 }
 
 class ServiceContext extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ServiceContext',
       package:
-          const $pb.PackageName('google.devtools.clouderrorreporting.v1beta1'))
+          const $pb.PackageName('google.devtools.clouderrorreporting.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(2, 'service')
     ..aOS(3, 'version')
     ..aOS(4, 'resourceType')
@@ -187,43 +229,58 @@ class ServiceContext extends $pb.GeneratedMessage {
   ServiceContext createEmptyInstance() => create();
   static $pb.PbList<ServiceContext> createRepeated() =>
       $pb.PbList<ServiceContext>();
-  static ServiceContext getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ServiceContext getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ServiceContext>(create);
   static ServiceContext _defaultInstance;
 
-  $core.String get service => $_getS(0, '');
+  @$pb.TagNumber(2)
+  $core.String get service => $_getSZ(0);
+  @$pb.TagNumber(2)
   set service($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasService() => $_has(0);
+  @$pb.TagNumber(2)
   void clearService() => clearField(2);
 
-  $core.String get version => $_getS(1, '');
+  @$pb.TagNumber(3)
+  $core.String get version => $_getSZ(1);
+  @$pb.TagNumber(3)
   set version($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasVersion() => $_has(1);
+  @$pb.TagNumber(3)
   void clearVersion() => clearField(3);
 
-  $core.String get resourceType => $_getS(2, '');
+  @$pb.TagNumber(4)
+  $core.String get resourceType => $_getSZ(2);
+  @$pb.TagNumber(4)
   set resourceType($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasResourceType() => $_has(2);
+  @$pb.TagNumber(4)
   void clearResourceType() => clearField(4);
 }
 
 class ErrorContext extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ErrorContext',
       package:
-          const $pb.PackageName('google.devtools.clouderrorreporting.v1beta1'))
-    ..a<HttpRequestContext>(1, 'httpRequest', $pb.PbFieldType.OM,
-        HttpRequestContext.getDefault, HttpRequestContext.create)
+          const $pb.PackageName('google.devtools.clouderrorreporting.v1beta1'),
+      createEmptyInstance: create)
+    ..aOM<HttpRequestContext>(1, 'httpRequest',
+        subBuilder: HttpRequestContext.create)
     ..aOS(2, 'user')
-    ..a<SourceLocation>(3, 'reportLocation', $pb.PbFieldType.OM,
-        SourceLocation.getDefault, SourceLocation.create)
+    ..aOM<SourceLocation>(3, 'reportLocation',
+        subBuilder: SourceLocation.create)
     ..hasRequiredFields = false;
 
   ErrorContext._() : super();
@@ -243,38 +300,57 @@ class ErrorContext extends $pb.GeneratedMessage {
   ErrorContext createEmptyInstance() => create();
   static $pb.PbList<ErrorContext> createRepeated() =>
       $pb.PbList<ErrorContext>();
-  static ErrorContext getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ErrorContext getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ErrorContext>(create);
   static ErrorContext _defaultInstance;
 
+  @$pb.TagNumber(1)
   HttpRequestContext get httpRequest => $_getN(0);
+  @$pb.TagNumber(1)
   set httpRequest(HttpRequestContext v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasHttpRequest() => $_has(0);
+  @$pb.TagNumber(1)
   void clearHttpRequest() => clearField(1);
+  @$pb.TagNumber(1)
+  HttpRequestContext ensureHttpRequest() => $_ensure(0);
 
-  $core.String get user => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get user => $_getSZ(1);
+  @$pb.TagNumber(2)
   set user($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasUser() => $_has(1);
+  @$pb.TagNumber(2)
   void clearUser() => clearField(2);
 
+  @$pb.TagNumber(3)
   SourceLocation get reportLocation => $_getN(2);
+  @$pb.TagNumber(3)
   set reportLocation(SourceLocation v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasReportLocation() => $_has(2);
+  @$pb.TagNumber(3)
   void clearReportLocation() => clearField(3);
+  @$pb.TagNumber(3)
+  SourceLocation ensureReportLocation() => $_ensure(2);
 }
 
 class HttpRequestContext extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('HttpRequestContext',
       package:
-          const $pb.PackageName('google.devtools.clouderrorreporting.v1beta1'))
+          const $pb.PackageName('google.devtools.clouderrorreporting.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'method')
     ..aOS(2, 'url')
     ..aOS(3, 'userAgent')
@@ -300,63 +376,89 @@ class HttpRequestContext extends $pb.GeneratedMessage {
   HttpRequestContext createEmptyInstance() => create();
   static $pb.PbList<HttpRequestContext> createRepeated() =>
       $pb.PbList<HttpRequestContext>();
-  static HttpRequestContext getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static HttpRequestContext getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<HttpRequestContext>(create);
   static HttpRequestContext _defaultInstance;
 
-  $core.String get method => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get method => $_getSZ(0);
+  @$pb.TagNumber(1)
   set method($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasMethod() => $_has(0);
+  @$pb.TagNumber(1)
   void clearMethod() => clearField(1);
 
-  $core.String get url => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get url => $_getSZ(1);
+  @$pb.TagNumber(2)
   set url($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasUrl() => $_has(1);
+  @$pb.TagNumber(2)
   void clearUrl() => clearField(2);
 
-  $core.String get userAgent => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get userAgent => $_getSZ(2);
+  @$pb.TagNumber(3)
   set userAgent($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasUserAgent() => $_has(2);
+  @$pb.TagNumber(3)
   void clearUserAgent() => clearField(3);
 
-  $core.String get referrer => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get referrer => $_getSZ(3);
+  @$pb.TagNumber(4)
   set referrer($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasReferrer() => $_has(3);
+  @$pb.TagNumber(4)
   void clearReferrer() => clearField(4);
 
-  $core.int get responseStatusCode => $_get(4, 0);
+  @$pb.TagNumber(5)
+  $core.int get responseStatusCode => $_getIZ(4);
+  @$pb.TagNumber(5)
   set responseStatusCode($core.int v) {
     $_setSignedInt32(4, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasResponseStatusCode() => $_has(4);
+  @$pb.TagNumber(5)
   void clearResponseStatusCode() => clearField(5);
 
-  $core.String get remoteIp => $_getS(5, '');
+  @$pb.TagNumber(6)
+  $core.String get remoteIp => $_getSZ(5);
+  @$pb.TagNumber(6)
   set remoteIp($core.String v) {
     $_setString(5, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasRemoteIp() => $_has(5);
+  @$pb.TagNumber(6)
   void clearRemoteIp() => clearField(6);
 }
 
 class SourceLocation extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('SourceLocation',
       package:
-          const $pb.PackageName('google.devtools.clouderrorreporting.v1beta1'))
+          const $pb.PackageName('google.devtools.clouderrorreporting.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'filePath')
     ..a<$core.int>(2, 'lineNumber', $pb.PbFieldType.O3)
     ..aOS(4, 'functionName')
@@ -379,30 +481,44 @@ class SourceLocation extends $pb.GeneratedMessage {
   SourceLocation createEmptyInstance() => create();
   static $pb.PbList<SourceLocation> createRepeated() =>
       $pb.PbList<SourceLocation>();
-  static SourceLocation getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static SourceLocation getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SourceLocation>(create);
   static SourceLocation _defaultInstance;
 
-  $core.String get filePath => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get filePath => $_getSZ(0);
+  @$pb.TagNumber(1)
   set filePath($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasFilePath() => $_has(0);
+  @$pb.TagNumber(1)
   void clearFilePath() => clearField(1);
 
-  $core.int get lineNumber => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get lineNumber => $_getIZ(1);
+  @$pb.TagNumber(2)
   set lineNumber($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasLineNumber() => $_has(1);
+  @$pb.TagNumber(2)
   void clearLineNumber() => clearField(2);
 
-  $core.String get functionName => $_getS(2, '');
+  @$pb.TagNumber(4)
+  $core.String get functionName => $_getSZ(2);
+  @$pb.TagNumber(4)
   set functionName($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasFunctionName() => $_has(2);
+  @$pb.TagNumber(4)
   void clearFunctionName() => clearField(4);
 }

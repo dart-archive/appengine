@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -15,7 +14,8 @@ export 'target_impression_share_location.pbenum.dart';
 class TargetImpressionShareLocationEnum extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'TargetImpressionShareLocationEnum',
-      package: const $pb.PackageName('google.ads.googleads.v2.enums'))
+      package: const $pb.PackageName('google.ads.googleads.v2.enums'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   TargetImpressionShareLocationEnum._() : super();
@@ -39,7 +39,9 @@ class TargetImpressionShareLocationEnum extends $pb.GeneratedMessage {
   TargetImpressionShareLocationEnum createEmptyInstance() => create();
   static $pb.PbList<TargetImpressionShareLocationEnum> createRepeated() =>
       $pb.PbList<TargetImpressionShareLocationEnum>();
-  static TargetImpressionShareLocationEnum getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TargetImpressionShareLocationEnum getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TargetImpressionShareLocationEnum>(
+          create);
   static TargetImpressionShareLocationEnum _defaultInstance;
 }

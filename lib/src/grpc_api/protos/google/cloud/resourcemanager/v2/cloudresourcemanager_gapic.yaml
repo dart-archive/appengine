@@ -24,7 +24,6 @@ collection_oneofs:
   - folder
 # A list of API interface configurations.
 interfaces:
-  # The fully qualified name of the API interface.
 - name: google.cloud.resourcemanager.v2.Folders
   # A list of resource collection configurations.
   # Consists of a name_pattern and an entity_name.

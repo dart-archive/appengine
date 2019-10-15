@@ -11,6 +11,7 @@ const EntryType$json = {
     {'1': 'ENTRY_TYPE_UNSPECIFIED', '2': 0},
     {'1': 'TABLE', '2': 2},
     {'1': 'DATA_STREAM', '2': 3},
+    {'1': 'FILESET', '2': 4},
   ],
 };
 
@@ -23,9 +24,10 @@ const SearchCatalogRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.datacatalog.v1beta1.SearchCatalogRequest.Scope',
+      '8': {},
       '10': 'scope'
     },
-    {'1': 'query', '3': 1, '4': 1, '5': 9, '10': 'query'},
+    {'1': 'query', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'query'},
     {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
     {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
     {'1': 'order_by', '3': 5, '4': 1, '5': 9, '10': 'orderBy'},
@@ -69,6 +71,68 @@ const SearchCatalogResponse$json = {
   ],
 };
 
+const CreateEntryGroupRequest$json = {
+  '1': 'CreateEntryGroupRequest',
+  '2': [
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
+    {
+      '1': 'entry_group_id',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'entryGroupId'
+    },
+    {
+      '1': 'entry_group',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.datacatalog.v1beta1.EntryGroup',
+      '10': 'entryGroup'
+    },
+  ],
+};
+
+const GetEntryGroupRequest$json = {
+  '1': 'GetEntryGroupRequest',
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
+    {
+      '1': 'read_mask',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.FieldMask',
+      '10': 'readMask'
+    },
+  ],
+};
+
+const DeleteEntryGroupRequest$json = {
+  '1': 'DeleteEntryGroupRequest',
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
+  ],
+};
+
+const CreateEntryRequest$json = {
+  '1': 'CreateEntryRequest',
+  '2': [
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
+    {'1': 'entry_id', '3': 3, '4': 1, '5': 9, '8': {}, '10': 'entryId'},
+    {
+      '1': 'entry',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.datacatalog.v1beta1.Entry',
+      '8': {},
+      '10': 'entry'
+    },
+  ],
+};
+
 const UpdateEntryRequest$json = {
   '1': 'UpdateEntryRequest',
   '2': [
@@ -78,6 +142,7 @@ const UpdateEntryRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.datacatalog.v1beta1.Entry',
+      '8': {},
       '10': 'entry'
     },
     {
@@ -91,10 +156,17 @@ const UpdateEntryRequest$json = {
   ],
 };
 
+const DeleteEntryRequest$json = {
+  '1': 'DeleteEntryRequest',
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
+  ],
+};
+
 const GetEntryRequest$json = {
   '1': 'GetEntryRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
   ],
 };
 
@@ -119,7 +191,7 @@ const LookupEntryRequest$json = {
 const Entry$json = {
   '1': 'Entry',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
     {'1': 'linked_resource', '3': 9, '4': 1, '5': 9, '10': 'linkedResource'},
     {
       '1': 'type',
@@ -127,7 +199,17 @@ const Entry$json = {
       '4': 1,
       '5': 14,
       '6': '.google.cloud.datacatalog.v1beta1.EntryType',
+      '9': 0,
       '10': 'type'
+    },
+    {
+      '1': 'gcs_fileset_spec',
+      '3': 6,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.datacatalog.v1beta1.GcsFilesetSpec',
+      '9': 1,
+      '10': 'gcsFilesetSpec'
     },
     {
       '1': 'bigquery_table_spec',
@@ -135,7 +217,7 @@ const Entry$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.datacatalog.v1beta1.BigQueryTableSpec',
-      '9': 0,
+      '9': 1,
       '10': 'bigqueryTableSpec'
     },
     {
@@ -144,7 +226,7 @@ const Entry$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.datacatalog.v1beta1.BigQueryDateShardedSpec',
-      '9': 0,
+      '9': 1,
       '10': 'bigqueryDateShardedSpec'
     },
     {'1': 'display_name', '3': 3, '4': 1, '5': 9, '10': 'displayName'},
@@ -166,22 +248,51 @@ const Entry$json = {
       '10': 'sourceSystemTimestamps'
     },
   ],
+  '7': {},
   '8': [
+    {'1': 'entry_type'},
     {'1': 'type_spec'},
   ],
+};
+
+const EntryGroup$json = {
+  '1': 'EntryGroup',
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'display_name', '3': 2, '4': 1, '5': 9, '10': 'displayName'},
+    {'1': 'description', '3': 3, '4': 1, '5': 9, '10': 'description'},
+    {
+      '1': 'data_catalog_timestamps',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.datacatalog.v1beta1.SystemTimestamps',
+      '8': {},
+      '10': 'dataCatalogTimestamps'
+    },
+  ],
+  '7': {},
 };
 
 const CreateTagTemplateRequest$json = {
   '1': 'CreateTagTemplateRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    {'1': 'tag_template_id', '3': 3, '4': 1, '5': 9, '10': 'tagTemplateId'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
+    {
+      '1': 'tag_template_id',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'tagTemplateId'
+    },
     {
       '1': 'tag_template',
       '3': 2,
       '4': 1,
       '5': 11,
       '6': '.google.cloud.datacatalog.v1beta1.TagTemplate',
+      '8': {},
       '10': 'tagTemplate'
     },
   ],
@@ -190,7 +301,7 @@ const CreateTagTemplateRequest$json = {
 const GetTagTemplateRequest$json = {
   '1': 'GetTagTemplateRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
   ],
 };
 
@@ -203,6 +314,7 @@ const UpdateTagTemplateRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.datacatalog.v1beta1.TagTemplate',
+      '8': {},
       '10': 'tagTemplate'
     },
     {
@@ -219,21 +331,22 @@ const UpdateTagTemplateRequest$json = {
 const DeleteTagTemplateRequest$json = {
   '1': 'DeleteTagTemplateRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    {'1': 'force', '3': 2, '4': 1, '5': 8, '10': 'force'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
+    {'1': 'force', '3': 2, '4': 1, '5': 8, '8': {}, '10': 'force'},
   ],
 };
 
 const CreateTagRequest$json = {
   '1': 'CreateTagRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
     {
       '1': 'tag',
       '3': 2,
       '4': 1,
       '5': 11,
       '6': '.google.cloud.datacatalog.v1beta1.Tag',
+      '8': {},
       '10': 'tag'
     },
   ],
@@ -248,6 +361,7 @@ const UpdateTagRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.datacatalog.v1beta1.Tag',
+      '8': {},
       '10': 'tag'
     },
     {
@@ -264,19 +378,20 @@ const UpdateTagRequest$json = {
 const DeleteTagRequest$json = {
   '1': 'DeleteTagRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
   ],
 };
 
 const CreateTagTemplateFieldRequest$json = {
   '1': 'CreateTagTemplateFieldRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
     {
       '1': 'tag_template_field_id',
       '3': 2,
       '4': 1,
       '5': 9,
+      '8': {},
       '10': 'tagTemplateFieldId'
     },
     {
@@ -285,6 +400,7 @@ const CreateTagTemplateFieldRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.datacatalog.v1beta1.TagTemplateField',
+      '8': {},
       '10': 'tagTemplateField'
     },
   ],
@@ -293,13 +409,14 @@ const CreateTagTemplateFieldRequest$json = {
 const UpdateTagTemplateFieldRequest$json = {
   '1': 'UpdateTagTemplateFieldRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
     {
       '1': 'tag_template_field',
       '3': 2,
       '4': 1,
       '5': 11,
       '6': '.google.cloud.datacatalog.v1beta1.TagTemplateField',
+      '8': {},
       '10': 'tagTemplateField'
     },
     {
@@ -316,12 +433,13 @@ const UpdateTagTemplateFieldRequest$json = {
 const RenameTagTemplateFieldRequest$json = {
   '1': 'RenameTagTemplateFieldRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
     {
       '1': 'new_tag_template_field_id',
       '3': 2,
       '4': 1,
       '5': 9,
+      '8': {},
       '10': 'newTagTemplateFieldId'
     },
   ],
@@ -330,15 +448,15 @@ const RenameTagTemplateFieldRequest$json = {
 const DeleteTagTemplateFieldRequest$json = {
   '1': 'DeleteTagTemplateFieldRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    {'1': 'force', '3': 2, '4': 1, '5': 8, '10': 'force'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
+    {'1': 'force', '3': 2, '4': 1, '5': 8, '8': {}, '10': 'force'},
   ],
 };
 
 const ListTagsRequest$json = {
   '1': 'ListTagsRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
     {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
     {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
   ],

@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -14,7 +13,8 @@ export 'adx_error.pbenum.dart';
 
 class AdxErrorEnum extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AdxErrorEnum',
-      package: const $pb.PackageName('google.ads.googleads.v2.errors'))
+      package: const $pb.PackageName('google.ads.googleads.v2.errors'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   AdxErrorEnum._() : super();
@@ -34,6 +34,8 @@ class AdxErrorEnum extends $pb.GeneratedMessage {
   AdxErrorEnum createEmptyInstance() => create();
   static $pb.PbList<AdxErrorEnum> createRepeated() =>
       $pb.PbList<AdxErrorEnum>();
-  static AdxErrorEnum getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static AdxErrorEnum getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AdxErrorEnum>(create);
   static AdxErrorEnum _defaultInstance;
 }

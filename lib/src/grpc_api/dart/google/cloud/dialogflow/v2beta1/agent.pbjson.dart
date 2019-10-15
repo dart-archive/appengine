@@ -61,6 +61,7 @@ const Agent$json = {
     },
   ],
   '4': [Agent_MatchMode$json, Agent_ApiVersion$json, Agent_Tier$json],
+  '7': {},
 };
 
 const Agent_MatchMode$json = {
@@ -220,5 +221,13 @@ const RestoreAgentRequest$json = {
   ],
   '8': [
     {'1': 'agent'},
+  ],
+};
+
+const GetValidationResultRequest$json = {
+  '1': 'GetValidationResultRequest',
+  '2': [
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'language_code', '3': 3, '4': 1, '5': 9, '10': 'languageCode'},
   ],
 };

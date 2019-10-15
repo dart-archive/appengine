@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -21,12 +20,13 @@ class AuditData extends $pb.GeneratedMessage {
     0: AuditData_Method.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AuditData',
-      package: const $pb.PackageName('google.appengine.v1'))
+      package: const $pb.PackageName('google.appengine.v1'),
+      createEmptyInstance: create)
     ..oo(0, [1, 2])
-    ..a<UpdateServiceMethod>(1, 'updateService', $pb.PbFieldType.OM,
-        UpdateServiceMethod.getDefault, UpdateServiceMethod.create)
-    ..a<CreateVersionMethod>(2, 'createVersion', $pb.PbFieldType.OM,
-        CreateVersionMethod.getDefault, CreateVersionMethod.create)
+    ..aOM<UpdateServiceMethod>(1, 'updateService',
+        subBuilder: UpdateServiceMethod.create)
+    ..aOM<CreateVersionMethod>(2, 'createVersion',
+        subBuilder: CreateVersionMethod.create)
     ..hasRequiredFields = false;
 
   AuditData._() : super();
@@ -45,34 +45,49 @@ class AuditData extends $pb.GeneratedMessage {
   static AuditData create() => AuditData._();
   AuditData createEmptyInstance() => create();
   static $pb.PbList<AuditData> createRepeated() => $pb.PbList<AuditData>();
-  static AuditData getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static AuditData getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<AuditData>(create);
   static AuditData _defaultInstance;
 
   AuditData_Method whichMethod() => _AuditData_MethodByTag[$_whichOneof(0)];
   void clearMethod() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   UpdateServiceMethod get updateService => $_getN(0);
+  @$pb.TagNumber(1)
   set updateService(UpdateServiceMethod v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasUpdateService() => $_has(0);
+  @$pb.TagNumber(1)
   void clearUpdateService() => clearField(1);
+  @$pb.TagNumber(1)
+  UpdateServiceMethod ensureUpdateService() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   CreateVersionMethod get createVersion => $_getN(1);
+  @$pb.TagNumber(2)
   set createVersion(CreateVersionMethod v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasCreateVersion() => $_has(1);
+  @$pb.TagNumber(2)
   void clearCreateVersion() => clearField(2);
+  @$pb.TagNumber(2)
+  CreateVersionMethod ensureCreateVersion() => $_ensure(1);
 }
 
 class UpdateServiceMethod extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateServiceMethod',
-      package: const $pb.PackageName('google.appengine.v1'))
-    ..a<$4.UpdateServiceRequest>(1, 'request', $pb.PbFieldType.OM,
-        $4.UpdateServiceRequest.getDefault, $4.UpdateServiceRequest.create)
+      package: const $pb.PackageName('google.appengine.v1'),
+      createEmptyInstance: create)
+    ..aOM<$4.UpdateServiceRequest>(1, 'request',
+        subBuilder: $4.UpdateServiceRequest.create)
     ..hasRequiredFields = false;
 
   UpdateServiceMethod._() : super();
@@ -92,24 +107,32 @@ class UpdateServiceMethod extends $pb.GeneratedMessage {
   UpdateServiceMethod createEmptyInstance() => create();
   static $pb.PbList<UpdateServiceMethod> createRepeated() =>
       $pb.PbList<UpdateServiceMethod>();
-  static UpdateServiceMethod getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateServiceMethod getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateServiceMethod>(create);
   static UpdateServiceMethod _defaultInstance;
 
+  @$pb.TagNumber(1)
   $4.UpdateServiceRequest get request => $_getN(0);
+  @$pb.TagNumber(1)
   set request($4.UpdateServiceRequest v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasRequest() => $_has(0);
+  @$pb.TagNumber(1)
   void clearRequest() => clearField(1);
+  @$pb.TagNumber(1)
+  $4.UpdateServiceRequest ensureRequest() => $_ensure(0);
 }
 
 class CreateVersionMethod extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateVersionMethod',
-      package: const $pb.PackageName('google.appengine.v1'))
-    ..a<$4.CreateVersionRequest>(1, 'request', $pb.PbFieldType.OM,
-        $4.CreateVersionRequest.getDefault, $4.CreateVersionRequest.create)
+      package: const $pb.PackageName('google.appengine.v1'),
+      createEmptyInstance: create)
+    ..aOM<$4.CreateVersionRequest>(1, 'request',
+        subBuilder: $4.CreateVersionRequest.create)
     ..hasRequiredFields = false;
 
   CreateVersionMethod._() : super();
@@ -129,15 +152,22 @@ class CreateVersionMethod extends $pb.GeneratedMessage {
   CreateVersionMethod createEmptyInstance() => create();
   static $pb.PbList<CreateVersionMethod> createRepeated() =>
       $pb.PbList<CreateVersionMethod>();
-  static CreateVersionMethod getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateVersionMethod getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateVersionMethod>(create);
   static CreateVersionMethod _defaultInstance;
 
+  @$pb.TagNumber(1)
   $4.CreateVersionRequest get request => $_getN(0);
+  @$pb.TagNumber(1)
   set request($4.CreateVersionRequest v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasRequest() => $_has(0);
+  @$pb.TagNumber(1)
   void clearRequest() => clearField(1);
+  @$pb.TagNumber(1)
+  $4.CreateVersionRequest ensureRequest() => $_ensure(0);
 }

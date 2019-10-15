@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -14,7 +13,8 @@ export 'change_status_operation.pbenum.dart';
 
 class ChangeStatusOperationEnum extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChangeStatusOperationEnum',
-      package: const $pb.PackageName('google.ads.googleads.v2.enums'))
+      package: const $pb.PackageName('google.ads.googleads.v2.enums'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   ChangeStatusOperationEnum._() : super();
@@ -37,7 +37,8 @@ class ChangeStatusOperationEnum extends $pb.GeneratedMessage {
   ChangeStatusOperationEnum createEmptyInstance() => create();
   static $pb.PbList<ChangeStatusOperationEnum> createRepeated() =>
       $pb.PbList<ChangeStatusOperationEnum>();
-  static ChangeStatusOperationEnum getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ChangeStatusOperationEnum getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ChangeStatusOperationEnum>(create);
   static ChangeStatusOperationEnum _defaultInstance;
 }

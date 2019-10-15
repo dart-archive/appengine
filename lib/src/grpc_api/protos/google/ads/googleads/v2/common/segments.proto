@@ -28,6 +28,7 @@ import "google/ads/googleads/v2/enums/day_of_week.proto";
 import "google/ads/googleads/v2/enums/device.proto";
 import "google/ads/googleads/v2/enums/external_conversion_source.proto";
 import "google/ads/googleads/v2/enums/hotel_date_selection_type.proto";
+import "google/ads/googleads/v2/enums/hotel_price_bucket.proto";
 import "google/ads/googleads/v2/enums/hotel_rate_type.proto";
 import "google/ads/googleads/v2/enums/month_of_year.proto";
 import "google/ads/googleads/v2/enums/placeholder_type.proto";
@@ -168,6 +169,9 @@ message Segments {
 
   // Hotel rate type.
   google.ads.googleads.v2.enums.HotelRateTypeEnum.HotelRateType hotel_rate_type = 74;
+
+  // Hotel price bucket.
+  google.ads.googleads.v2.enums.HotelPriceBucketEnum.HotelPriceBucket hotel_price_bucket = 78;
 
   // Hotel state.
   google.protobuf.StringValue hotel_state = 15;

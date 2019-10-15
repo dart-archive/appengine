@@ -6,7 +6,7 @@
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
-import 'dart:core' as $core show int, dynamic, String, List, Map;
+import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class IntentView extends $pb.ProtobufEnum {
@@ -228,6 +228,138 @@ class Intent_Message_RbmCardContent_RbmMedia_Height extends $pb.ProtobufEnum {
       _byValue[value];
 
   const Intent_Message_RbmCardContent_RbmMedia_Height._(
+      $core.int v, $core.String n)
+      : super(v, n);
+}
+
+class Intent_Message_MediaContent_ResponseMediaType extends $pb.ProtobufEnum {
+  static const Intent_Message_MediaContent_ResponseMediaType
+      RESPONSE_MEDIA_TYPE_UNSPECIFIED =
+      Intent_Message_MediaContent_ResponseMediaType._(
+          0, 'RESPONSE_MEDIA_TYPE_UNSPECIFIED');
+  static const Intent_Message_MediaContent_ResponseMediaType AUDIO =
+      Intent_Message_MediaContent_ResponseMediaType._(1, 'AUDIO');
+
+  static const $core.List<Intent_Message_MediaContent_ResponseMediaType>
+      values = <Intent_Message_MediaContent_ResponseMediaType>[
+    RESPONSE_MEDIA_TYPE_UNSPECIFIED,
+    AUDIO,
+  ];
+
+  static final $core
+          .Map<$core.int, Intent_Message_MediaContent_ResponseMediaType>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static Intent_Message_MediaContent_ResponseMediaType valueOf(
+          $core.int value) =>
+      _byValue[value];
+
+  const Intent_Message_MediaContent_ResponseMediaType._(
+      $core.int v, $core.String n)
+      : super(v, n);
+}
+
+class Intent_Message_BrowseCarouselCard_ImageDisplayOptions
+    extends $pb.ProtobufEnum {
+  static const Intent_Message_BrowseCarouselCard_ImageDisplayOptions
+      IMAGE_DISPLAY_OPTIONS_UNSPECIFIED =
+      Intent_Message_BrowseCarouselCard_ImageDisplayOptions._(
+          0, 'IMAGE_DISPLAY_OPTIONS_UNSPECIFIED');
+  static const Intent_Message_BrowseCarouselCard_ImageDisplayOptions GRAY =
+      Intent_Message_BrowseCarouselCard_ImageDisplayOptions._(1, 'GRAY');
+  static const Intent_Message_BrowseCarouselCard_ImageDisplayOptions WHITE =
+      Intent_Message_BrowseCarouselCard_ImageDisplayOptions._(2, 'WHITE');
+  static const Intent_Message_BrowseCarouselCard_ImageDisplayOptions CROPPED =
+      Intent_Message_BrowseCarouselCard_ImageDisplayOptions._(3, 'CROPPED');
+  static const Intent_Message_BrowseCarouselCard_ImageDisplayOptions
+      BLURRED_BACKGROUND =
+      Intent_Message_BrowseCarouselCard_ImageDisplayOptions._(
+          4, 'BLURRED_BACKGROUND');
+
+  static const $core.List<Intent_Message_BrowseCarouselCard_ImageDisplayOptions>
+      values = <Intent_Message_BrowseCarouselCard_ImageDisplayOptions>[
+    IMAGE_DISPLAY_OPTIONS_UNSPECIFIED,
+    GRAY,
+    WHITE,
+    CROPPED,
+    BLURRED_BACKGROUND,
+  ];
+
+  static final $core
+          .Map<$core.int, Intent_Message_BrowseCarouselCard_ImageDisplayOptions>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static Intent_Message_BrowseCarouselCard_ImageDisplayOptions valueOf(
+          $core.int value) =>
+      _byValue[value];
+
+  const Intent_Message_BrowseCarouselCard_ImageDisplayOptions._(
+      $core.int v, $core.String n)
+      : super(v, n);
+}
+
+class Intent_Message_BrowseCarouselCard_BrowseCarouselCardItem_OpenUrlAction_UrlTypeHint
+    extends $pb.ProtobufEnum {
+  static const Intent_Message_BrowseCarouselCard_BrowseCarouselCardItem_OpenUrlAction_UrlTypeHint
+      URL_TYPE_HINT_UNSPECIFIED =
+      Intent_Message_BrowseCarouselCard_BrowseCarouselCardItem_OpenUrlAction_UrlTypeHint
+          ._(0, 'URL_TYPE_HINT_UNSPECIFIED');
+  static const Intent_Message_BrowseCarouselCard_BrowseCarouselCardItem_OpenUrlAction_UrlTypeHint
+      AMP_ACTION =
+      Intent_Message_BrowseCarouselCard_BrowseCarouselCardItem_OpenUrlAction_UrlTypeHint
+          ._(1, 'AMP_ACTION');
+  static const Intent_Message_BrowseCarouselCard_BrowseCarouselCardItem_OpenUrlAction_UrlTypeHint
+      AMP_CONTENT =
+      Intent_Message_BrowseCarouselCard_BrowseCarouselCardItem_OpenUrlAction_UrlTypeHint
+          ._(2, 'AMP_CONTENT');
+
+  static const $core.List<
+          Intent_Message_BrowseCarouselCard_BrowseCarouselCardItem_OpenUrlAction_UrlTypeHint>
+      values =
+      <Intent_Message_BrowseCarouselCard_BrowseCarouselCardItem_OpenUrlAction_UrlTypeHint>[
+    URL_TYPE_HINT_UNSPECIFIED,
+    AMP_ACTION,
+    AMP_CONTENT,
+  ];
+
+  static final $core.Map<$core.int,
+          Intent_Message_BrowseCarouselCard_BrowseCarouselCardItem_OpenUrlAction_UrlTypeHint>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static Intent_Message_BrowseCarouselCard_BrowseCarouselCardItem_OpenUrlAction_UrlTypeHint
+      valueOf($core.int value) => _byValue[value];
+
+  const Intent_Message_BrowseCarouselCard_BrowseCarouselCardItem_OpenUrlAction_UrlTypeHint._(
+      $core.int v, $core.String n)
+      : super(v, n);
+}
+
+class Intent_Message_ColumnProperties_HorizontalAlignment
+    extends $pb.ProtobufEnum {
+  static const Intent_Message_ColumnProperties_HorizontalAlignment
+      HORIZONTAL_ALIGNMENT_UNSPECIFIED =
+      Intent_Message_ColumnProperties_HorizontalAlignment._(
+          0, 'HORIZONTAL_ALIGNMENT_UNSPECIFIED');
+  static const Intent_Message_ColumnProperties_HorizontalAlignment LEADING =
+      Intent_Message_ColumnProperties_HorizontalAlignment._(1, 'LEADING');
+  static const Intent_Message_ColumnProperties_HorizontalAlignment CENTER =
+      Intent_Message_ColumnProperties_HorizontalAlignment._(2, 'CENTER');
+  static const Intent_Message_ColumnProperties_HorizontalAlignment TRAILING =
+      Intent_Message_ColumnProperties_HorizontalAlignment._(3, 'TRAILING');
+
+  static const $core.List<Intent_Message_ColumnProperties_HorizontalAlignment>
+      values = <Intent_Message_ColumnProperties_HorizontalAlignment>[
+    HORIZONTAL_ALIGNMENT_UNSPECIFIED,
+    LEADING,
+    CENTER,
+    TRAILING,
+  ];
+
+  static final $core
+          .Map<$core.int, Intent_Message_ColumnProperties_HorizontalAlignment>
+      _byValue = $pb.ProtobufEnum.initByValue(values);
+  static Intent_Message_ColumnProperties_HorizontalAlignment valueOf(
+          $core.int value) =>
+      _byValue[value];
+
+  const Intent_Message_ColumnProperties_HorizontalAlignment._(
       $core.int v, $core.String n)
       : super(v, n);
 }

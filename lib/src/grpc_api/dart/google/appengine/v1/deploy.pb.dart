@@ -5,28 +5,22 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class Deployment extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Deployment',
-      package: const $pb.PackageName('google.appengine.v1'))
-    ..m<$core.String, FileInfo>(
-        1,
-        'files',
-        'Deployment.FilesEntry',
-        $pb.PbFieldType.OS,
-        $pb.PbFieldType.OM,
-        FileInfo.create,
-        null,
-        null,
-        const $pb.PackageName('google.appengine.v1'))
-    ..a<ContainerInfo>(2, 'container', $pb.PbFieldType.OM,
-        ContainerInfo.getDefault, ContainerInfo.create)
-    ..a<ZipInfo>(
-        3, 'zip', $pb.PbFieldType.OM, ZipInfo.getDefault, ZipInfo.create)
+      package: const $pb.PackageName('google.appengine.v1'),
+      createEmptyInstance: create)
+    ..m<$core.String, FileInfo>(1, 'files',
+        entryClassName: 'Deployment.FilesEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OM,
+        valueCreator: FileInfo.create,
+        packageName: const $pb.PackageName('google.appengine.v1'))
+    ..aOM<ContainerInfo>(2, 'container', subBuilder: ContainerInfo.create)
+    ..aOM<ZipInfo>(3, 'zip', subBuilder: ZipInfo.create)
     ..hasRequiredFields = false;
 
   Deployment._() : super();
@@ -45,31 +39,47 @@ class Deployment extends $pb.GeneratedMessage {
   static Deployment create() => Deployment._();
   Deployment createEmptyInstance() => create();
   static $pb.PbList<Deployment> createRepeated() => $pb.PbList<Deployment>();
-  static Deployment getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Deployment getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Deployment>(create);
   static Deployment _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.Map<$core.String, FileInfo> get files => $_getMap(0);
 
+  @$pb.TagNumber(2)
   ContainerInfo get container => $_getN(1);
+  @$pb.TagNumber(2)
   set container(ContainerInfo v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasContainer() => $_has(1);
+  @$pb.TagNumber(2)
   void clearContainer() => clearField(2);
+  @$pb.TagNumber(2)
+  ContainerInfo ensureContainer() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   ZipInfo get zip => $_getN(2);
+  @$pb.TagNumber(3)
   set zip(ZipInfo v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasZip() => $_has(2);
+  @$pb.TagNumber(3)
   void clearZip() => clearField(3);
+  @$pb.TagNumber(3)
+  ZipInfo ensureZip() => $_ensure(2);
 }
 
 class FileInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('FileInfo',
-      package: const $pb.PackageName('google.appengine.v1'))
+      package: const $pb.PackageName('google.appengine.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'sourceUrl')
     ..aOS(2, 'sha1Sum')
     ..aOS(3, 'mimeType')
@@ -91,37 +101,52 @@ class FileInfo extends $pb.GeneratedMessage {
   static FileInfo create() => FileInfo._();
   FileInfo createEmptyInstance() => create();
   static $pb.PbList<FileInfo> createRepeated() => $pb.PbList<FileInfo>();
-  static FileInfo getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static FileInfo getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<FileInfo>(create);
   static FileInfo _defaultInstance;
 
-  $core.String get sourceUrl => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get sourceUrl => $_getSZ(0);
+  @$pb.TagNumber(1)
   set sourceUrl($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasSourceUrl() => $_has(0);
+  @$pb.TagNumber(1)
   void clearSourceUrl() => clearField(1);
 
-  $core.String get sha1Sum => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get sha1Sum => $_getSZ(1);
+  @$pb.TagNumber(2)
   set sha1Sum($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasSha1Sum() => $_has(1);
+  @$pb.TagNumber(2)
   void clearSha1Sum() => clearField(2);
 
-  $core.String get mimeType => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get mimeType => $_getSZ(2);
+  @$pb.TagNumber(3)
   set mimeType($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasMimeType() => $_has(2);
+  @$pb.TagNumber(3)
   void clearMimeType() => clearField(3);
 }
 
 class ContainerInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ContainerInfo',
-      package: const $pb.PackageName('google.appengine.v1'))
+      package: const $pb.PackageName('google.appengine.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'image')
     ..hasRequiredFields = false;
 
@@ -142,21 +167,28 @@ class ContainerInfo extends $pb.GeneratedMessage {
   ContainerInfo createEmptyInstance() => create();
   static $pb.PbList<ContainerInfo> createRepeated() =>
       $pb.PbList<ContainerInfo>();
-  static ContainerInfo getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ContainerInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ContainerInfo>(create);
   static ContainerInfo _defaultInstance;
 
-  $core.String get image => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get image => $_getSZ(0);
+  @$pb.TagNumber(1)
   set image($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasImage() => $_has(0);
+  @$pb.TagNumber(1)
   void clearImage() => clearField(1);
 }
 
 class ZipInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ZipInfo',
-      package: const $pb.PackageName('google.appengine.v1'))
+      package: const $pb.PackageName('google.appengine.v1'),
+      createEmptyInstance: create)
     ..aOS(3, 'sourceUrl')
     ..a<$core.int>(4, 'filesCount', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
@@ -177,22 +209,32 @@ class ZipInfo extends $pb.GeneratedMessage {
   static ZipInfo create() => ZipInfo._();
   ZipInfo createEmptyInstance() => create();
   static $pb.PbList<ZipInfo> createRepeated() => $pb.PbList<ZipInfo>();
-  static ZipInfo getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ZipInfo getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ZipInfo>(create);
   static ZipInfo _defaultInstance;
 
-  $core.String get sourceUrl => $_getS(0, '');
+  @$pb.TagNumber(3)
+  $core.String get sourceUrl => $_getSZ(0);
+  @$pb.TagNumber(3)
   set sourceUrl($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasSourceUrl() => $_has(0);
+  @$pb.TagNumber(3)
   void clearSourceUrl() => clearField(3);
 
-  $core.int get filesCount => $_get(1, 0);
+  @$pb.TagNumber(4)
+  $core.int get filesCount => $_getIZ(1);
+  @$pb.TagNumber(4)
   set filesCount($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasFilesCount() => $_has(1);
+  @$pb.TagNumber(4)
   void clearFilesCount() => clearField(4);
 }

@@ -5,12 +5,12 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../../../protobuf/field_mask.pb.dart' as $3;
+import 'gcs.pb.dart' as $4;
 
 import 'document.pbenum.dart';
 
@@ -26,13 +26,15 @@ class Document extends $pb.GeneratedMessage {
     0: Document_Source.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Document',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'))
+      package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'),
+      createEmptyInstance: create)
     ..oo(0, [5, 6, 9])
     ..aOS(1, 'name')
     ..aOS(2, 'displayName')
     ..aOS(3, 'mimeType')
-    ..pc<Document_KnowledgeType>(4, 'knowledgeTypes', $pb.PbFieldType.PE, null,
-        Document_KnowledgeType.valueOf, Document_KnowledgeType.values)
+    ..pc<Document_KnowledgeType>(4, 'knowledgeTypes', $pb.PbFieldType.PE,
+        valueOf: Document_KnowledgeType.valueOf,
+        enumValues: Document_KnowledgeType.values)
     ..aOS(5, 'contentUri')
     ..aOS(6, 'content')
     ..a<$core.List<$core.int>>(9, 'rawContent', $pb.PbFieldType.OY)
@@ -54,70 +56,98 @@ class Document extends $pb.GeneratedMessage {
   static Document create() => Document._();
   Document createEmptyInstance() => create();
   static $pb.PbList<Document> createRepeated() => $pb.PbList<Document>();
-  static Document getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Document getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Document>(create);
   static Document _defaultInstance;
 
   Document_Source whichSource() => _Document_SourceByTag[$_whichOneof(0)];
   void clearSource() => clearField($_whichOneof(0));
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.String get displayName => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get displayName => $_getSZ(1);
+  @$pb.TagNumber(2)
   set displayName($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasDisplayName() => $_has(1);
+  @$pb.TagNumber(2)
   void clearDisplayName() => clearField(2);
 
-  $core.String get mimeType => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get mimeType => $_getSZ(2);
+  @$pb.TagNumber(3)
   set mimeType($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasMimeType() => $_has(2);
+  @$pb.TagNumber(3)
   void clearMimeType() => clearField(3);
 
+  @$pb.TagNumber(4)
   $core.List<Document_KnowledgeType> get knowledgeTypes => $_getList(3);
 
-  $core.String get contentUri => $_getS(4, '');
+  @$pb.TagNumber(5)
+  $core.String get contentUri => $_getSZ(4);
+  @$pb.TagNumber(5)
   set contentUri($core.String v) {
     $_setString(4, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasContentUri() => $_has(4);
+  @$pb.TagNumber(5)
   void clearContentUri() => clearField(5);
 
   @$core.Deprecated('This field is deprecated.')
-  $core.String get content => $_getS(5, '');
+  @$pb.TagNumber(6)
+  $core.String get content => $_getSZ(5);
   @$core.Deprecated('This field is deprecated.')
+  @$pb.TagNumber(6)
   set content($core.String v) {
     $_setString(5, v);
   }
 
   @$core.Deprecated('This field is deprecated.')
+  @$pb.TagNumber(6)
   $core.bool hasContent() => $_has(5);
   @$core.Deprecated('This field is deprecated.')
+  @$pb.TagNumber(6)
   void clearContent() => clearField(6);
 
+  @$pb.TagNumber(9)
   $core.List<$core.int> get rawContent => $_getN(6);
+  @$pb.TagNumber(9)
   set rawContent($core.List<$core.int> v) {
     $_setBytes(6, v);
   }
 
+  @$pb.TagNumber(9)
   $core.bool hasRawContent() => $_has(6);
+  @$pb.TagNumber(9)
   void clearRawContent() => clearField(9);
 }
 
 class ListDocumentsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListDocumentsRequest',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'))
+      package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(3, 'pageToken')
@@ -141,39 +171,54 @@ class ListDocumentsRequest extends $pb.GeneratedMessage {
   ListDocumentsRequest createEmptyInstance() => create();
   static $pb.PbList<ListDocumentsRequest> createRepeated() =>
       $pb.PbList<ListDocumentsRequest>();
-  static ListDocumentsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListDocumentsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListDocumentsRequest>(create);
   static ListDocumentsRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.int get pageSize => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get pageSize => $_getIZ(1);
+  @$pb.TagNumber(2)
   set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
-  $core.String get pageToken => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get pageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
   set pageToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
 }
 
 class ListDocumentsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListDocumentsResponse',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'))
-    ..pc<Document>(1, 'documents', $pb.PbFieldType.PM, Document.create)
+      package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'),
+      createEmptyInstance: create)
+    ..pc<Document>(1, 'documents', $pb.PbFieldType.PM,
+        subBuilder: Document.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -196,24 +241,31 @@ class ListDocumentsResponse extends $pb.GeneratedMessage {
   ListDocumentsResponse createEmptyInstance() => create();
   static $pb.PbList<ListDocumentsResponse> createRepeated() =>
       $pb.PbList<ListDocumentsResponse>();
-  static ListDocumentsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListDocumentsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListDocumentsResponse>(create);
   static ListDocumentsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<Document> get documents => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class GetDocumentRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetDocumentRequest',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'))
+      package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -234,25 +286,30 @@ class GetDocumentRequest extends $pb.GeneratedMessage {
   GetDocumentRequest createEmptyInstance() => create();
   static $pb.PbList<GetDocumentRequest> createRepeated() =>
       $pb.PbList<GetDocumentRequest>();
-  static GetDocumentRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetDocumentRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetDocumentRequest>(create);
   static GetDocumentRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class CreateDocumentRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateDocumentRequest',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'))
+      package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
-    ..a<Document>(
-        2, 'document', $pb.PbFieldType.OM, Document.getDefault, Document.create)
+    ..aOM<Document>(2, 'document', subBuilder: Document.create)
     ..hasRequiredFields = false;
 
   CreateDocumentRequest._() : super();
@@ -274,30 +331,42 @@ class CreateDocumentRequest extends $pb.GeneratedMessage {
   CreateDocumentRequest createEmptyInstance() => create();
   static $pb.PbList<CreateDocumentRequest> createRepeated() =>
       $pb.PbList<CreateDocumentRequest>();
-  static CreateDocumentRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateDocumentRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateDocumentRequest>(create);
   static CreateDocumentRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  @$pb.TagNumber(2)
   Document get document => $_getN(1);
+  @$pb.TagNumber(2)
   set document(Document v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasDocument() => $_has(1);
+  @$pb.TagNumber(2)
   void clearDocument() => clearField(2);
+  @$pb.TagNumber(2)
+  Document ensureDocument() => $_ensure(1);
 }
 
 class DeleteDocumentRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteDocumentRequest',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'))
+      package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -320,26 +389,30 @@ class DeleteDocumentRequest extends $pb.GeneratedMessage {
   DeleteDocumentRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteDocumentRequest> createRepeated() =>
       $pb.PbList<DeleteDocumentRequest>();
-  static DeleteDocumentRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteDocumentRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteDocumentRequest>(create);
   static DeleteDocumentRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class UpdateDocumentRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateDocumentRequest',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'))
-    ..a<Document>(
-        1, 'document', $pb.PbFieldType.OM, Document.getDefault, Document.create)
-    ..a<$3.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $3.FieldMask.getDefault, $3.FieldMask.create)
+      package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'),
+      createEmptyInstance: create)
+    ..aOM<Document>(1, 'document', subBuilder: Document.create)
+    ..aOM<$3.FieldMask>(2, 'updateMask', subBuilder: $3.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateDocumentRequest._() : super();
@@ -361,38 +434,49 @@ class UpdateDocumentRequest extends $pb.GeneratedMessage {
   UpdateDocumentRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateDocumentRequest> createRepeated() =>
       $pb.PbList<UpdateDocumentRequest>();
-  static UpdateDocumentRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateDocumentRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateDocumentRequest>(create);
   static UpdateDocumentRequest _defaultInstance;
 
+  @$pb.TagNumber(1)
   Document get document => $_getN(0);
+  @$pb.TagNumber(1)
   set document(Document v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasDocument() => $_has(0);
+  @$pb.TagNumber(1)
   void clearDocument() => clearField(1);
+  @$pb.TagNumber(1)
+  Document ensureDocument() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $3.FieldMask get updateMask => $_getN(1);
+  @$pb.TagNumber(2)
   set updateMask($3.FieldMask v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasUpdateMask() => $_has(1);
+  @$pb.TagNumber(2)
   void clearUpdateMask() => clearField(2);
+  @$pb.TagNumber(2)
+  $3.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
 class KnowledgeOperationMetadata extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'KnowledgeOperationMetadata',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'))
-    ..e<KnowledgeOperationMetadata_State>(
-        1,
-        'state',
-        $pb.PbFieldType.OE,
-        KnowledgeOperationMetadata_State.STATE_UNSPECIFIED,
-        KnowledgeOperationMetadata_State.valueOf,
-        KnowledgeOperationMetadata_State.values)
+      package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'),
+      createEmptyInstance: create)
+    ..e<KnowledgeOperationMetadata_State>(1, 'state', $pb.PbFieldType.OE,
+        defaultOrMaker: KnowledgeOperationMetadata_State.STATE_UNSPECIFIED,
+        valueOf: KnowledgeOperationMetadata_State.valueOf,
+        enumValues: KnowledgeOperationMetadata_State.values)
     ..hasRequiredFields = false;
 
   KnowledgeOperationMetadata._() : super();
@@ -415,23 +499,38 @@ class KnowledgeOperationMetadata extends $pb.GeneratedMessage {
   KnowledgeOperationMetadata createEmptyInstance() => create();
   static $pb.PbList<KnowledgeOperationMetadata> createRepeated() =>
       $pb.PbList<KnowledgeOperationMetadata>();
-  static KnowledgeOperationMetadata getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static KnowledgeOperationMetadata getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<KnowledgeOperationMetadata>(create);
   static KnowledgeOperationMetadata _defaultInstance;
 
+  @$pb.TagNumber(1)
   KnowledgeOperationMetadata_State get state => $_getN(0);
+  @$pb.TagNumber(1)
   set state(KnowledgeOperationMetadata_State v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasState() => $_has(0);
+  @$pb.TagNumber(1)
   void clearState() => clearField(1);
 }
 
+enum ReloadDocumentRequest_Source { gcsSource, notSet }
+
 class ReloadDocumentRequest extends $pb.GeneratedMessage {
+  static const $core.Map<$core.int, ReloadDocumentRequest_Source>
+      _ReloadDocumentRequest_SourceByTag = {
+    3: ReloadDocumentRequest_Source.gcsSource,
+    0: ReloadDocumentRequest_Source.notSet
+  };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ReloadDocumentRequest',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'))
+      package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'),
+      createEmptyInstance: create)
+    ..oo(0, [3])
     ..aOS(1, 'name')
+    ..aOM<$4.GcsSource>(3, 'gcsSource', subBuilder: $4.GcsSource.create)
     ..hasRequiredFields = false;
 
   ReloadDocumentRequest._() : super();
@@ -453,15 +552,38 @@ class ReloadDocumentRequest extends $pb.GeneratedMessage {
   ReloadDocumentRequest createEmptyInstance() => create();
   static $pb.PbList<ReloadDocumentRequest> createRepeated() =>
       $pb.PbList<ReloadDocumentRequest>();
-  static ReloadDocumentRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ReloadDocumentRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ReloadDocumentRequest>(create);
   static ReloadDocumentRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  ReloadDocumentRequest_Source whichSource() =>
+      _ReloadDocumentRequest_SourceByTag[$_whichOneof(0)];
+  void clearSource() => clearField($_whichOneof(0));
+
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
+
+  @$pb.TagNumber(3)
+  $4.GcsSource get gcsSource => $_getN(1);
+  @$pb.TagNumber(3)
+  set gcsSource($4.GcsSource v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasGcsSource() => $_has(1);
+  @$pb.TagNumber(3)
+  void clearGcsSource() => clearField(3);
+  @$pb.TagNumber(3)
+  $4.GcsSource ensureGcsSource() => $_ensure(1);
 }

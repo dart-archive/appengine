@@ -8,8 +8,8 @@
 const Folder$json = {
   '1': 'Folder',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    {'1': 'parent', '3': 2, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
+    {'1': 'parent', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'parent'},
     {'1': 'display_name', '3': 3, '4': 1, '5': 9, '10': 'displayName'},
     {
       '1': 'lifecycle_state',
@@ -17,6 +17,7 @@ const Folder$json = {
       '4': 1,
       '5': 14,
       '6': '.google.cloud.resourcemanager.v2.Folder.LifecycleState',
+      '8': {},
       '10': 'lifecycleState'
     },
     {
@@ -25,6 +26,7 @@ const Folder$json = {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
+      '8': {},
       '10': 'createTime'
     },
     {
@@ -33,10 +35,12 @@ const Folder$json = {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
+      '8': {},
       '10': 'updateTime'
     },
   ],
   '4': [Folder_LifecycleState$json],
+  '7': {},
 };
 
 const Folder_LifecycleState$json = {
@@ -51,10 +55,10 @@ const Folder_LifecycleState$json = {
 const ListFoldersRequest$json = {
   '1': 'ListFoldersRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
-    {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
-    {'1': 'show_deleted', '3': 4, '4': 1, '5': 8, '10': 'showDeleted'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
+    {'1': 'page_size', '3': 2, '4': 1, '5': 5, '8': {}, '10': 'pageSize'},
+    {'1': 'page_token', '3': 3, '4': 1, '5': 9, '8': {}, '10': 'pageToken'},
+    {'1': 'show_deleted', '3': 4, '4': 1, '5': 8, '8': {}, '10': 'showDeleted'},
   ],
 };
 
@@ -76,8 +80,8 @@ const ListFoldersResponse$json = {
 const SearchFoldersRequest$json = {
   '1': 'SearchFoldersRequest',
   '2': [
-    {'1': 'page_size', '3': 1, '4': 1, '5': 5, '10': 'pageSize'},
-    {'1': 'page_token', '3': 2, '4': 1, '5': 9, '10': 'pageToken'},
+    {'1': 'page_size', '3': 1, '4': 1, '5': 5, '8': {}, '10': 'pageSize'},
+    {'1': 'page_token', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'pageToken'},
     {'1': 'query', '3': 3, '4': 1, '5': 9, '10': 'query'},
   ],
 };
@@ -100,20 +104,21 @@ const SearchFoldersResponse$json = {
 const GetFolderRequest$json = {
   '1': 'GetFolderRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
   ],
 };
 
 const CreateFolderRequest$json = {
   '1': 'CreateFolderRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
     {
       '1': 'folder',
       '3': 2,
       '4': 1,
       '5': 11,
       '6': '.google.cloud.resourcemanager.v2.Folder',
+      '8': {},
       '10': 'folder'
     },
   ],
@@ -122,12 +127,13 @@ const CreateFolderRequest$json = {
 const MoveFolderRequest$json = {
   '1': 'MoveFolderRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
     {
       '1': 'destination_parent',
       '3': 2,
       '4': 1,
       '5': 9,
+      '8': {},
       '10': 'destinationParent'
     },
   ],
@@ -142,6 +148,7 @@ const UpdateFolderRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.resourcemanager.v2.Folder',
+      '8': {},
       '10': 'folder'
     },
     {
@@ -150,6 +157,7 @@ const UpdateFolderRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.FieldMask',
+      '8': {},
       '10': 'updateMask'
     },
   ],
@@ -158,7 +166,7 @@ const UpdateFolderRequest$json = {
 const DeleteFolderRequest$json = {
   '1': 'DeleteFolderRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
     {'1': 'recursive_delete', '3': 2, '4': 1, '5': 8, '10': 'recursiveDelete'},
   ],
 };
@@ -166,7 +174,7 @@ const DeleteFolderRequest$json = {
 const UndeleteFolderRequest$json = {
   '1': 'UndeleteFolderRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
   ],
 };
 

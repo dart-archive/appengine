@@ -5,15 +5,15 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class Logging_LoggingDestination extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'Logging.LoggingDestination',
-      package: const $pb.PackageName('google.api'))
+      package: const $pb.PackageName('google.api'),
+      createEmptyInstance: create)
     ..pPS(1, 'logs')
     ..aOS(3, 'monitoredResource')
     ..hasRequiredFields = false;
@@ -38,29 +38,37 @@ class Logging_LoggingDestination extends $pb.GeneratedMessage {
   Logging_LoggingDestination createEmptyInstance() => create();
   static $pb.PbList<Logging_LoggingDestination> createRepeated() =>
       $pb.PbList<Logging_LoggingDestination>();
-  static Logging_LoggingDestination getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Logging_LoggingDestination getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Logging_LoggingDestination>(create);
   static Logging_LoggingDestination _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$core.String> get logs => $_getList(0);
 
-  $core.String get monitoredResource => $_getS(1, '');
+  @$pb.TagNumber(3)
+  $core.String get monitoredResource => $_getSZ(1);
+  @$pb.TagNumber(3)
   set monitoredResource($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasMonitoredResource() => $_has(1);
+  @$pb.TagNumber(3)
   void clearMonitoredResource() => clearField(3);
 }
 
 class Logging extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('Logging', package: const $pb.PackageName('google.api'))
-        ..pc<Logging_LoggingDestination>(1, 'producerDestinations',
-            $pb.PbFieldType.PM, Logging_LoggingDestination.create)
-        ..pc<Logging_LoggingDestination>(2, 'consumerDestinations',
-            $pb.PbFieldType.PM, Logging_LoggingDestination.create)
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Logging',
+      package: const $pb.PackageName('google.api'), createEmptyInstance: create)
+    ..pc<Logging_LoggingDestination>(
+        1, 'producerDestinations', $pb.PbFieldType.PM,
+        subBuilder: Logging_LoggingDestination.create)
+    ..pc<Logging_LoggingDestination>(
+        2, 'consumerDestinations', $pb.PbFieldType.PM,
+        subBuilder: Logging_LoggingDestination.create)
+    ..hasRequiredFields = false;
 
   Logging._() : super();
   factory Logging() => create();
@@ -78,12 +86,16 @@ class Logging extends $pb.GeneratedMessage {
   static Logging create() => Logging._();
   Logging createEmptyInstance() => create();
   static $pb.PbList<Logging> createRepeated() => $pb.PbList<Logging>();
-  static Logging getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Logging getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Logging>(create);
   static Logging _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<Logging_LoggingDestination> get producerDestinations =>
       $_getList(0);
 
+  @$pb.TagNumber(2)
   $core.List<Logging_LoggingDestination> get consumerDestinations =>
       $_getList(1);
 }

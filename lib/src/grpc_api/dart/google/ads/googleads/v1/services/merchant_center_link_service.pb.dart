@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -16,7 +15,8 @@ import '../../../../protobuf/field_mask.pb.dart' as $2;
 class ListMerchantCenterLinksRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListMerchantCenterLinksRequest',
-      package: const $pb.PackageName('google.ads.googleads.v1.services'))
+      package: const $pb.PackageName('google.ads.googleads.v1.services'),
+      createEmptyInstance: create)
     ..aOS(1, 'customerId')
     ..hasRequiredFields = false;
 
@@ -41,25 +41,31 @@ class ListMerchantCenterLinksRequest extends $pb.GeneratedMessage {
   ListMerchantCenterLinksRequest createEmptyInstance() => create();
   static $pb.PbList<ListMerchantCenterLinksRequest> createRepeated() =>
       $pb.PbList<ListMerchantCenterLinksRequest>();
-  static ListMerchantCenterLinksRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListMerchantCenterLinksRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListMerchantCenterLinksRequest>(create);
   static ListMerchantCenterLinksRequest _defaultInstance;
 
-  $core.String get customerId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get customerId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set customerId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCustomerId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCustomerId() => clearField(1);
 }
 
 class ListMerchantCenterLinksResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListMerchantCenterLinksResponse',
-      package: const $pb.PackageName('google.ads.googleads.v1.services'))
+      package: const $pb.PackageName('google.ads.googleads.v1.services'),
+      createEmptyInstance: create)
     ..pc<$1.MerchantCenterLink>(1, 'merchantCenterLinks', $pb.PbFieldType.PM,
-        $1.MerchantCenterLink.create)
+        subBuilder: $1.MerchantCenterLink.create)
     ..hasRequiredFields = false;
 
   ListMerchantCenterLinksResponse._() : super();
@@ -83,17 +89,21 @@ class ListMerchantCenterLinksResponse extends $pb.GeneratedMessage {
   ListMerchantCenterLinksResponse createEmptyInstance() => create();
   static $pb.PbList<ListMerchantCenterLinksResponse> createRepeated() =>
       $pb.PbList<ListMerchantCenterLinksResponse>();
-  static ListMerchantCenterLinksResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListMerchantCenterLinksResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListMerchantCenterLinksResponse>(
+          create);
   static ListMerchantCenterLinksResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$1.MerchantCenterLink> get merchantCenterLinks => $_getList(0);
 }
 
 class GetMerchantCenterLinkRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'GetMerchantCenterLinkRequest',
-      package: const $pb.PackageName('google.ads.googleads.v1.services'))
+      package: const $pb.PackageName('google.ads.googleads.v1.services'),
+      createEmptyInstance: create)
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
@@ -118,30 +128,32 @@ class GetMerchantCenterLinkRequest extends $pb.GeneratedMessage {
   GetMerchantCenterLinkRequest createEmptyInstance() => create();
   static $pb.PbList<GetMerchantCenterLinkRequest> createRepeated() =>
       $pb.PbList<GetMerchantCenterLinkRequest>();
-  static GetMerchantCenterLinkRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetMerchantCenterLinkRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetMerchantCenterLinkRequest>(create);
   static GetMerchantCenterLinkRequest _defaultInstance;
 
-  $core.String get resourceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get resourceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set resourceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResourceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResourceName() => clearField(1);
 }
 
 class MutateMerchantCenterLinkRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'MutateMerchantCenterLinkRequest',
-      package: const $pb.PackageName('google.ads.googleads.v1.services'))
+      package: const $pb.PackageName('google.ads.googleads.v1.services'),
+      createEmptyInstance: create)
     ..aOS(1, 'customerId')
-    ..a<MerchantCenterLinkOperation>(
-        2,
-        'operation',
-        $pb.PbFieldType.OM,
-        MerchantCenterLinkOperation.getDefault,
-        MerchantCenterLinkOperation.create)
+    ..aOM<MerchantCenterLinkOperation>(2, 'operation',
+        subBuilder: MerchantCenterLinkOperation.create)
     ..hasRequiredFields = false;
 
   MutateMerchantCenterLinkRequest._() : super();
@@ -165,25 +177,37 @@ class MutateMerchantCenterLinkRequest extends $pb.GeneratedMessage {
   MutateMerchantCenterLinkRequest createEmptyInstance() => create();
   static $pb.PbList<MutateMerchantCenterLinkRequest> createRepeated() =>
       $pb.PbList<MutateMerchantCenterLinkRequest>();
-  static MutateMerchantCenterLinkRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MutateMerchantCenterLinkRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MutateMerchantCenterLinkRequest>(
+          create);
   static MutateMerchantCenterLinkRequest _defaultInstance;
 
-  $core.String get customerId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get customerId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set customerId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCustomerId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCustomerId() => clearField(1);
 
+  @$pb.TagNumber(2)
   MerchantCenterLinkOperation get operation => $_getN(1);
+  @$pb.TagNumber(2)
   set operation(MerchantCenterLinkOperation v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasOperation() => $_has(1);
+  @$pb.TagNumber(2)
   void clearOperation() => clearField(2);
+  @$pb.TagNumber(2)
+  MerchantCenterLinkOperation ensureOperation() => $_ensure(1);
 }
 
 enum MerchantCenterLinkOperation_Operation { update, remove, notSet }
@@ -197,13 +221,13 @@ class MerchantCenterLinkOperation extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'MerchantCenterLinkOperation',
-      package: const $pb.PackageName('google.ads.googleads.v1.services'))
+      package: const $pb.PackageName('google.ads.googleads.v1.services'),
+      createEmptyInstance: create)
     ..oo(0, [1, 2])
-    ..a<$1.MerchantCenterLink>(1, 'update', $pb.PbFieldType.OM,
-        $1.MerchantCenterLink.getDefault, $1.MerchantCenterLink.create)
+    ..aOM<$1.MerchantCenterLink>(1, 'update',
+        subBuilder: $1.MerchantCenterLink.create)
     ..aOS(2, 'remove')
-    ..a<$2.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $2.FieldMask.getDefault, $2.FieldMask.create)
+    ..aOM<$2.FieldMask>(3, 'updateMask', subBuilder: $2.FieldMask.create)
     ..hasRequiredFields = false;
 
   MerchantCenterLinkOperation._() : super();
@@ -227,49 +251,63 @@ class MerchantCenterLinkOperation extends $pb.GeneratedMessage {
   MerchantCenterLinkOperation createEmptyInstance() => create();
   static $pb.PbList<MerchantCenterLinkOperation> createRepeated() =>
       $pb.PbList<MerchantCenterLinkOperation>();
-  static MerchantCenterLinkOperation getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MerchantCenterLinkOperation getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MerchantCenterLinkOperation>(create);
   static MerchantCenterLinkOperation _defaultInstance;
 
   MerchantCenterLinkOperation_Operation whichOperation() =>
       _MerchantCenterLinkOperation_OperationByTag[$_whichOneof(0)];
   void clearOperation() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   $1.MerchantCenterLink get update => $_getN(0);
+  @$pb.TagNumber(1)
   set update($1.MerchantCenterLink v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasUpdate() => $_has(0);
+  @$pb.TagNumber(1)
   void clearUpdate() => clearField(1);
+  @$pb.TagNumber(1)
+  $1.MerchantCenterLink ensureUpdate() => $_ensure(0);
 
-  $core.String get remove => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get remove => $_getSZ(1);
+  @$pb.TagNumber(2)
   set remove($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasRemove() => $_has(1);
+  @$pb.TagNumber(2)
   void clearRemove() => clearField(2);
 
+  @$pb.TagNumber(3)
   $2.FieldMask get updateMask => $_getN(2);
+  @$pb.TagNumber(3)
   set updateMask($2.FieldMask v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasUpdateMask() => $_has(2);
+  @$pb.TagNumber(3)
   void clearUpdateMask() => clearField(3);
+  @$pb.TagNumber(3)
+  $2.FieldMask ensureUpdateMask() => $_ensure(2);
 }
 
 class MutateMerchantCenterLinkResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'MutateMerchantCenterLinkResponse',
-      package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..a<MutateMerchantCenterLinkResult>(
-        2,
-        'result',
-        $pb.PbFieldType.OM,
-        MutateMerchantCenterLinkResult.getDefault,
-        MutateMerchantCenterLinkResult.create)
+      package: const $pb.PackageName('google.ads.googleads.v1.services'),
+      createEmptyInstance: create)
+    ..aOM<MutateMerchantCenterLinkResult>(2, 'result',
+        subBuilder: MutateMerchantCenterLinkResult.create)
     ..hasRequiredFields = false;
 
   MutateMerchantCenterLinkResponse._() : super();
@@ -293,23 +331,32 @@ class MutateMerchantCenterLinkResponse extends $pb.GeneratedMessage {
   MutateMerchantCenterLinkResponse createEmptyInstance() => create();
   static $pb.PbList<MutateMerchantCenterLinkResponse> createRepeated() =>
       $pb.PbList<MutateMerchantCenterLinkResponse>();
-  static MutateMerchantCenterLinkResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MutateMerchantCenterLinkResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MutateMerchantCenterLinkResponse>(
+          create);
   static MutateMerchantCenterLinkResponse _defaultInstance;
 
+  @$pb.TagNumber(2)
   MutateMerchantCenterLinkResult get result => $_getN(0);
+  @$pb.TagNumber(2)
   set result(MutateMerchantCenterLinkResult v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasResult() => $_has(0);
+  @$pb.TagNumber(2)
   void clearResult() => clearField(2);
+  @$pb.TagNumber(2)
+  MutateMerchantCenterLinkResult ensureResult() => $_ensure(0);
 }
 
 class MutateMerchantCenterLinkResult extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'MutateMerchantCenterLinkResult',
-      package: const $pb.PackageName('google.ads.googleads.v1.services'))
+      package: const $pb.PackageName('google.ads.googleads.v1.services'),
+      createEmptyInstance: create)
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
@@ -334,15 +381,20 @@ class MutateMerchantCenterLinkResult extends $pb.GeneratedMessage {
   MutateMerchantCenterLinkResult createEmptyInstance() => create();
   static $pb.PbList<MutateMerchantCenterLinkResult> createRepeated() =>
       $pb.PbList<MutateMerchantCenterLinkResult>();
-  static MutateMerchantCenterLinkResult getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MutateMerchantCenterLinkResult getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MutateMerchantCenterLinkResult>(create);
   static MutateMerchantCenterLinkResult _defaultInstance;
 
-  $core.String get resourceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get resourceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set resourceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResourceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResourceName() => clearField(1);
 }

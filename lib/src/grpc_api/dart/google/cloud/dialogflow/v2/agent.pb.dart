@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -18,7 +17,8 @@ export 'agent.pbenum.dart';
 
 class Agent extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Agent',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..aOS(2, 'displayName')
     ..aOS(3, 'defaultLanguageCode')
@@ -27,23 +27,19 @@ class Agent extends $pb.GeneratedMessage {
     ..aOS(6, 'description')
     ..aOS(7, 'avatarUri')
     ..aOB(8, 'enableLogging')
-    ..e<Agent_MatchMode>(
-        9,
-        'matchMode',
-        $pb.PbFieldType.OE,
-        Agent_MatchMode.MATCH_MODE_UNSPECIFIED,
-        Agent_MatchMode.valueOf,
-        Agent_MatchMode.values)
+    ..e<Agent_MatchMode>(9, 'matchMode', $pb.PbFieldType.OE,
+        defaultOrMaker: Agent_MatchMode.MATCH_MODE_UNSPECIFIED,
+        valueOf: Agent_MatchMode.valueOf,
+        enumValues: Agent_MatchMode.values)
     ..a<$core.double>(10, 'classificationThreshold', $pb.PbFieldType.OF)
-    ..e<Agent_ApiVersion>(
-        14,
-        'apiVersion',
-        $pb.PbFieldType.OE,
-        Agent_ApiVersion.API_VERSION_UNSPECIFIED,
-        Agent_ApiVersion.valueOf,
-        Agent_ApiVersion.values)
-    ..e<Agent_Tier>(15, 'tier', $pb.PbFieldType.OE, Agent_Tier.TIER_UNSPECIFIED,
-        Agent_Tier.valueOf, Agent_Tier.values)
+    ..e<Agent_ApiVersion>(14, 'apiVersion', $pb.PbFieldType.OE,
+        defaultOrMaker: Agent_ApiVersion.API_VERSION_UNSPECIFIED,
+        valueOf: Agent_ApiVersion.valueOf,
+        enumValues: Agent_ApiVersion.values)
+    ..e<Agent_Tier>(15, 'tier', $pb.PbFieldType.OE,
+        defaultOrMaker: Agent_Tier.TIER_UNSPECIFIED,
+        valueOf: Agent_Tier.valueOf,
+        enumValues: Agent_Tier.values)
     ..hasRequiredFields = false;
 
   Agent._() : super();
@@ -62,103 +58,151 @@ class Agent extends $pb.GeneratedMessage {
   static Agent create() => Agent._();
   Agent createEmptyInstance() => create();
   static $pb.PbList<Agent> createRepeated() => $pb.PbList<Agent>();
-  static Agent getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Agent getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Agent>(create);
   static Agent _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.String get displayName => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get displayName => $_getSZ(1);
+  @$pb.TagNumber(2)
   set displayName($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasDisplayName() => $_has(1);
+  @$pb.TagNumber(2)
   void clearDisplayName() => clearField(2);
 
-  $core.String get defaultLanguageCode => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get defaultLanguageCode => $_getSZ(2);
+  @$pb.TagNumber(3)
   set defaultLanguageCode($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasDefaultLanguageCode() => $_has(2);
+  @$pb.TagNumber(3)
   void clearDefaultLanguageCode() => clearField(3);
 
+  @$pb.TagNumber(4)
   $core.List<$core.String> get supportedLanguageCodes => $_getList(3);
 
-  $core.String get timeZone => $_getS(4, '');
+  @$pb.TagNumber(5)
+  $core.String get timeZone => $_getSZ(4);
+  @$pb.TagNumber(5)
   set timeZone($core.String v) {
     $_setString(4, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasTimeZone() => $_has(4);
+  @$pb.TagNumber(5)
   void clearTimeZone() => clearField(5);
 
-  $core.String get description => $_getS(5, '');
+  @$pb.TagNumber(6)
+  $core.String get description => $_getSZ(5);
+  @$pb.TagNumber(6)
   set description($core.String v) {
     $_setString(5, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasDescription() => $_has(5);
+  @$pb.TagNumber(6)
   void clearDescription() => clearField(6);
 
-  $core.String get avatarUri => $_getS(6, '');
+  @$pb.TagNumber(7)
+  $core.String get avatarUri => $_getSZ(6);
+  @$pb.TagNumber(7)
   set avatarUri($core.String v) {
     $_setString(6, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasAvatarUri() => $_has(6);
+  @$pb.TagNumber(7)
   void clearAvatarUri() => clearField(7);
 
-  $core.bool get enableLogging => $_get(7, false);
+  @$pb.TagNumber(8)
+  $core.bool get enableLogging => $_getBF(7);
+  @$pb.TagNumber(8)
   set enableLogging($core.bool v) {
     $_setBool(7, v);
   }
 
+  @$pb.TagNumber(8)
   $core.bool hasEnableLogging() => $_has(7);
+  @$pb.TagNumber(8)
   void clearEnableLogging() => clearField(8);
 
+  @$pb.TagNumber(9)
   Agent_MatchMode get matchMode => $_getN(8);
+  @$pb.TagNumber(9)
   set matchMode(Agent_MatchMode v) {
     setField(9, v);
   }
 
+  @$pb.TagNumber(9)
   $core.bool hasMatchMode() => $_has(8);
+  @$pb.TagNumber(9)
   void clearMatchMode() => clearField(9);
 
+  @$pb.TagNumber(10)
   $core.double get classificationThreshold => $_getN(9);
+  @$pb.TagNumber(10)
   set classificationThreshold($core.double v) {
     $_setFloat(9, v);
   }
 
+  @$pb.TagNumber(10)
   $core.bool hasClassificationThreshold() => $_has(9);
+  @$pb.TagNumber(10)
   void clearClassificationThreshold() => clearField(10);
 
+  @$pb.TagNumber(14)
   Agent_ApiVersion get apiVersion => $_getN(10);
+  @$pb.TagNumber(14)
   set apiVersion(Agent_ApiVersion v) {
     setField(14, v);
   }
 
+  @$pb.TagNumber(14)
   $core.bool hasApiVersion() => $_has(10);
+  @$pb.TagNumber(14)
   void clearApiVersion() => clearField(14);
 
+  @$pb.TagNumber(15)
   Agent_Tier get tier => $_getN(11);
+  @$pb.TagNumber(15)
   set tier(Agent_Tier v) {
     setField(15, v);
   }
 
+  @$pb.TagNumber(15)
   $core.bool hasTier() => $_has(11);
+  @$pb.TagNumber(15)
   void clearTier() => clearField(15);
 }
 
 class GetAgentRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetAgentRequest',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..hasRequiredFields = false;
 
@@ -179,25 +223,30 @@ class GetAgentRequest extends $pb.GeneratedMessage {
   GetAgentRequest createEmptyInstance() => create();
   static $pb.PbList<GetAgentRequest> createRepeated() =>
       $pb.PbList<GetAgentRequest>();
-  static GetAgentRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetAgentRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetAgentRequest>(create);
   static GetAgentRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 }
 
 class SetAgentRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('SetAgentRequest',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
-    ..a<Agent>(1, 'agent', $pb.PbFieldType.OM, Agent.getDefault, Agent.create)
-    ..a<$3.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $3.FieldMask.getDefault, $3.FieldMask.create)
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
+    ..aOM<Agent>(1, 'agent', subBuilder: Agent.create)
+    ..aOM<$3.FieldMask>(2, 'updateMask', subBuilder: $3.FieldMask.create)
     ..hasRequiredFields = false;
 
   SetAgentRequest._() : super();
@@ -217,30 +266,44 @@ class SetAgentRequest extends $pb.GeneratedMessage {
   SetAgentRequest createEmptyInstance() => create();
   static $pb.PbList<SetAgentRequest> createRepeated() =>
       $pb.PbList<SetAgentRequest>();
-  static SetAgentRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static SetAgentRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SetAgentRequest>(create);
   static SetAgentRequest _defaultInstance;
 
+  @$pb.TagNumber(1)
   Agent get agent => $_getN(0);
+  @$pb.TagNumber(1)
   set agent(Agent v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasAgent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearAgent() => clearField(1);
+  @$pb.TagNumber(1)
+  Agent ensureAgent() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $3.FieldMask get updateMask => $_getN(1);
+  @$pb.TagNumber(2)
   set updateMask($3.FieldMask v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasUpdateMask() => $_has(1);
+  @$pb.TagNumber(2)
   void clearUpdateMask() => clearField(2);
+  @$pb.TagNumber(2)
+  $3.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
 class DeleteAgentRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteAgentRequest',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..hasRequiredFields = false;
 
@@ -261,22 +324,28 @@ class DeleteAgentRequest extends $pb.GeneratedMessage {
   DeleteAgentRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteAgentRequest> createRepeated() =>
       $pb.PbList<DeleteAgentRequest>();
-  static DeleteAgentRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteAgentRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteAgentRequest>(create);
   static DeleteAgentRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 }
 
 class SearchAgentsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('SearchAgentsRequest',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(3, 'pageToken')
@@ -299,39 +368,53 @@ class SearchAgentsRequest extends $pb.GeneratedMessage {
   SearchAgentsRequest createEmptyInstance() => create();
   static $pb.PbList<SearchAgentsRequest> createRepeated() =>
       $pb.PbList<SearchAgentsRequest>();
-  static SearchAgentsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static SearchAgentsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SearchAgentsRequest>(create);
   static SearchAgentsRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.int get pageSize => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get pageSize => $_getIZ(1);
+  @$pb.TagNumber(2)
   set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
-  $core.String get pageToken => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get pageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
   set pageToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
 }
 
 class SearchAgentsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('SearchAgentsResponse',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
-    ..pc<Agent>(1, 'agents', $pb.PbFieldType.PM, Agent.create)
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
+    ..pc<Agent>(1, 'agents', $pb.PbFieldType.PM, subBuilder: Agent.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -353,24 +436,31 @@ class SearchAgentsResponse extends $pb.GeneratedMessage {
   SearchAgentsResponse createEmptyInstance() => create();
   static $pb.PbList<SearchAgentsResponse> createRepeated() =>
       $pb.PbList<SearchAgentsResponse>();
-  static SearchAgentsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static SearchAgentsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SearchAgentsResponse>(create);
   static SearchAgentsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<Agent> get agents => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class TrainAgentRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TrainAgentRequest',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..hasRequiredFields = false;
 
@@ -391,22 +481,28 @@ class TrainAgentRequest extends $pb.GeneratedMessage {
   TrainAgentRequest createEmptyInstance() => create();
   static $pb.PbList<TrainAgentRequest> createRepeated() =>
       $pb.PbList<TrainAgentRequest>();
-  static TrainAgentRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TrainAgentRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TrainAgentRequest>(create);
   static TrainAgentRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 }
 
 class ExportAgentRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ExportAgentRequest',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..aOS(2, 'agentUri')
     ..hasRequiredFields = false;
@@ -428,24 +524,33 @@ class ExportAgentRequest extends $pb.GeneratedMessage {
   ExportAgentRequest createEmptyInstance() => create();
   static $pb.PbList<ExportAgentRequest> createRepeated() =>
       $pb.PbList<ExportAgentRequest>();
-  static ExportAgentRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ExportAgentRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ExportAgentRequest>(create);
   static ExportAgentRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.String get agentUri => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get agentUri => $_getSZ(1);
+  @$pb.TagNumber(2)
   set agentUri($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasAgentUri() => $_has(1);
+  @$pb.TagNumber(2)
   void clearAgentUri() => clearField(2);
 }
 
@@ -459,7 +564,8 @@ class ExportAgentResponse extends $pb.GeneratedMessage {
     0: ExportAgentResponse_Agent.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ExportAgentResponse',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
     ..oo(0, [1, 2])
     ..aOS(1, 'agentUri')
     ..a<$core.List<$core.int>>(2, 'agentContent', $pb.PbFieldType.OY)
@@ -482,28 +588,37 @@ class ExportAgentResponse extends $pb.GeneratedMessage {
   ExportAgentResponse createEmptyInstance() => create();
   static $pb.PbList<ExportAgentResponse> createRepeated() =>
       $pb.PbList<ExportAgentResponse>();
-  static ExportAgentResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ExportAgentResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ExportAgentResponse>(create);
   static ExportAgentResponse _defaultInstance;
 
   ExportAgentResponse_Agent whichAgent() =>
       _ExportAgentResponse_AgentByTag[$_whichOneof(0)];
   void clearAgent() => clearField($_whichOneof(0));
 
-  $core.String get agentUri => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get agentUri => $_getSZ(0);
+  @$pb.TagNumber(1)
   set agentUri($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasAgentUri() => $_has(0);
+  @$pb.TagNumber(1)
   void clearAgentUri() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<$core.int> get agentContent => $_getN(1);
+  @$pb.TagNumber(2)
   set agentContent($core.List<$core.int> v) {
     $_setBytes(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasAgentContent() => $_has(1);
+  @$pb.TagNumber(2)
   void clearAgentContent() => clearField(2);
 }
 
@@ -517,7 +632,8 @@ class ImportAgentRequest extends $pb.GeneratedMessage {
     0: ImportAgentRequest_Agent.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ImportAgentRequest',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
     ..oo(0, [2, 3])
     ..aOS(1, 'parent')
     ..aOS(2, 'agentUri')
@@ -541,36 +657,49 @@ class ImportAgentRequest extends $pb.GeneratedMessage {
   ImportAgentRequest createEmptyInstance() => create();
   static $pb.PbList<ImportAgentRequest> createRepeated() =>
       $pb.PbList<ImportAgentRequest>();
-  static ImportAgentRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ImportAgentRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ImportAgentRequest>(create);
   static ImportAgentRequest _defaultInstance;
 
   ImportAgentRequest_Agent whichAgent() =>
       _ImportAgentRequest_AgentByTag[$_whichOneof(0)];
   void clearAgent() => clearField($_whichOneof(0));
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.String get agentUri => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get agentUri => $_getSZ(1);
+  @$pb.TagNumber(2)
   set agentUri($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasAgentUri() => $_has(1);
+  @$pb.TagNumber(2)
   void clearAgentUri() => clearField(2);
 
+  @$pb.TagNumber(3)
   $core.List<$core.int> get agentContent => $_getN(2);
+  @$pb.TagNumber(3)
   set agentContent($core.List<$core.int> v) {
     $_setBytes(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasAgentContent() => $_has(2);
+  @$pb.TagNumber(3)
   void clearAgentContent() => clearField(3);
 }
 
@@ -584,7 +713,8 @@ class RestoreAgentRequest extends $pb.GeneratedMessage {
     0: RestoreAgentRequest_Agent.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('RestoreAgentRequest',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
     ..oo(0, [2, 3])
     ..aOS(1, 'parent')
     ..aOS(2, 'agentUri')
@@ -608,35 +738,48 @@ class RestoreAgentRequest extends $pb.GeneratedMessage {
   RestoreAgentRequest createEmptyInstance() => create();
   static $pb.PbList<RestoreAgentRequest> createRepeated() =>
       $pb.PbList<RestoreAgentRequest>();
-  static RestoreAgentRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static RestoreAgentRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RestoreAgentRequest>(create);
   static RestoreAgentRequest _defaultInstance;
 
   RestoreAgentRequest_Agent whichAgent() =>
       _RestoreAgentRequest_AgentByTag[$_whichOneof(0)];
   void clearAgent() => clearField($_whichOneof(0));
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.String get agentUri => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get agentUri => $_getSZ(1);
+  @$pb.TagNumber(2)
   set agentUri($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasAgentUri() => $_has(1);
+  @$pb.TagNumber(2)
   void clearAgentUri() => clearField(2);
 
+  @$pb.TagNumber(3)
   $core.List<$core.int> get agentContent => $_getN(2);
+  @$pb.TagNumber(3)
   set agentContent($core.List<$core.int> v) {
     $_setBytes(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasAgentContent() => $_has(2);
+  @$pb.TagNumber(3)
   void clearAgentContent() => clearField(3);
 }

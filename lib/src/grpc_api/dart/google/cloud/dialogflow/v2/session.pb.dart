@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -24,14 +23,13 @@ export 'session.pbenum.dart';
 
 class DetectIntentRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DetectIntentRequest',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'session')
-    ..a<QueryParameters>(2, 'queryParams', $pb.PbFieldType.OM,
-        QueryParameters.getDefault, QueryParameters.create)
-    ..a<QueryInput>(3, 'queryInput', $pb.PbFieldType.OM, QueryInput.getDefault,
-        QueryInput.create)
-    ..a<$7.OutputAudioConfig>(4, 'outputAudioConfig', $pb.PbFieldType.OM,
-        $7.OutputAudioConfig.getDefault, $7.OutputAudioConfig.create)
+    ..aOM<QueryParameters>(2, 'queryParams', subBuilder: QueryParameters.create)
+    ..aOM<QueryInput>(3, 'queryInput', subBuilder: QueryInput.create)
+    ..aOM<$7.OutputAudioConfig>(4, 'outputAudioConfig',
+        subBuilder: $7.OutputAudioConfig.create)
     ..a<$core.List<$core.int>>(5, 'inputAudio', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
@@ -52,62 +50,88 @@ class DetectIntentRequest extends $pb.GeneratedMessage {
   DetectIntentRequest createEmptyInstance() => create();
   static $pb.PbList<DetectIntentRequest> createRepeated() =>
       $pb.PbList<DetectIntentRequest>();
-  static DetectIntentRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DetectIntentRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DetectIntentRequest>(create);
   static DetectIntentRequest _defaultInstance;
 
-  $core.String get session => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get session => $_getSZ(0);
+  @$pb.TagNumber(1)
   set session($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasSession() => $_has(0);
+  @$pb.TagNumber(1)
   void clearSession() => clearField(1);
 
+  @$pb.TagNumber(2)
   QueryParameters get queryParams => $_getN(1);
+  @$pb.TagNumber(2)
   set queryParams(QueryParameters v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasQueryParams() => $_has(1);
+  @$pb.TagNumber(2)
   void clearQueryParams() => clearField(2);
+  @$pb.TagNumber(2)
+  QueryParameters ensureQueryParams() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   QueryInput get queryInput => $_getN(2);
+  @$pb.TagNumber(3)
   set queryInput(QueryInput v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasQueryInput() => $_has(2);
+  @$pb.TagNumber(3)
   void clearQueryInput() => clearField(3);
+  @$pb.TagNumber(3)
+  QueryInput ensureQueryInput() => $_ensure(2);
 
+  @$pb.TagNumber(4)
   $7.OutputAudioConfig get outputAudioConfig => $_getN(3);
+  @$pb.TagNumber(4)
   set outputAudioConfig($7.OutputAudioConfig v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasOutputAudioConfig() => $_has(3);
+  @$pb.TagNumber(4)
   void clearOutputAudioConfig() => clearField(4);
+  @$pb.TagNumber(4)
+  $7.OutputAudioConfig ensureOutputAudioConfig() => $_ensure(3);
 
+  @$pb.TagNumber(5)
   $core.List<$core.int> get inputAudio => $_getN(4);
+  @$pb.TagNumber(5)
   set inputAudio($core.List<$core.int> v) {
     $_setBytes(4, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasInputAudio() => $_has(4);
+  @$pb.TagNumber(5)
   void clearInputAudio() => clearField(5);
 }
 
 class DetectIntentResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DetectIntentResponse',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'responseId')
-    ..a<QueryResult>(2, 'queryResult', $pb.PbFieldType.OM,
-        QueryResult.getDefault, QueryResult.create)
-    ..a<$8.Status>(3, 'webhookStatus', $pb.PbFieldType.OM, $8.Status.getDefault,
-        $8.Status.create)
+    ..aOM<QueryResult>(2, 'queryResult', subBuilder: QueryResult.create)
+    ..aOM<$8.Status>(3, 'webhookStatus', subBuilder: $8.Status.create)
     ..a<$core.List<$core.int>>(4, 'outputAudio', $pb.PbFieldType.OY)
-    ..a<$7.OutputAudioConfig>(6, 'outputAudioConfig', $pb.PbFieldType.OM,
-        $7.OutputAudioConfig.getDefault, $7.OutputAudioConfig.create)
+    ..aOM<$7.OutputAudioConfig>(6, 'outputAudioConfig',
+        subBuilder: $7.OutputAudioConfig.create)
     ..hasRequiredFields = false;
 
   DetectIntentResponse._() : super();
@@ -128,69 +152,92 @@ class DetectIntentResponse extends $pb.GeneratedMessage {
   DetectIntentResponse createEmptyInstance() => create();
   static $pb.PbList<DetectIntentResponse> createRepeated() =>
       $pb.PbList<DetectIntentResponse>();
-  static DetectIntentResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DetectIntentResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DetectIntentResponse>(create);
   static DetectIntentResponse _defaultInstance;
 
-  $core.String get responseId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get responseId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set responseId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResponseId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResponseId() => clearField(1);
 
+  @$pb.TagNumber(2)
   QueryResult get queryResult => $_getN(1);
+  @$pb.TagNumber(2)
   set queryResult(QueryResult v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasQueryResult() => $_has(1);
+  @$pb.TagNumber(2)
   void clearQueryResult() => clearField(2);
+  @$pb.TagNumber(2)
+  QueryResult ensureQueryResult() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $8.Status get webhookStatus => $_getN(2);
+  @$pb.TagNumber(3)
   set webhookStatus($8.Status v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasWebhookStatus() => $_has(2);
+  @$pb.TagNumber(3)
   void clearWebhookStatus() => clearField(3);
+  @$pb.TagNumber(3)
+  $8.Status ensureWebhookStatus() => $_ensure(2);
 
+  @$pb.TagNumber(4)
   $core.List<$core.int> get outputAudio => $_getN(3);
+  @$pb.TagNumber(4)
   set outputAudio($core.List<$core.int> v) {
     $_setBytes(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasOutputAudio() => $_has(3);
+  @$pb.TagNumber(4)
   void clearOutputAudio() => clearField(4);
 
+  @$pb.TagNumber(6)
   $7.OutputAudioConfig get outputAudioConfig => $_getN(4);
+  @$pb.TagNumber(6)
   set outputAudioConfig($7.OutputAudioConfig v) {
     setField(6, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasOutputAudioConfig() => $_has(4);
+  @$pb.TagNumber(6)
   void clearOutputAudioConfig() => clearField(6);
+  @$pb.TagNumber(6)
+  $7.OutputAudioConfig ensureOutputAudioConfig() => $_ensure(4);
 }
 
 class QueryParameters extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('QueryParameters',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'timeZone')
-    ..a<$9.LatLng>(2, 'geoLocation', $pb.PbFieldType.OM, $9.LatLng.getDefault,
-        $9.LatLng.create)
-    ..pc<$0.Context>(3, 'contexts', $pb.PbFieldType.PM, $0.Context.create)
+    ..aOM<$9.LatLng>(2, 'geoLocation', subBuilder: $9.LatLng.create)
+    ..pc<$0.Context>(3, 'contexts', $pb.PbFieldType.PM,
+        subBuilder: $0.Context.create)
     ..aOB(4, 'resetContexts')
     ..pc<$5.SessionEntityType>(5, 'sessionEntityTypes', $pb.PbFieldType.PM,
-        $5.SessionEntityType.create)
-    ..a<$10.Struct>(6, 'payload', $pb.PbFieldType.OM, $10.Struct.getDefault,
-        $10.Struct.create)
-    ..a<SentimentAnalysisRequestConfig>(
-        10,
-        'sentimentAnalysisRequestConfig',
-        $pb.PbFieldType.OM,
-        SentimentAnalysisRequestConfig.getDefault,
-        SentimentAnalysisRequestConfig.create)
+        subBuilder: $5.SessionEntityType.create)
+    ..aOM<$10.Struct>(6, 'payload', subBuilder: $10.Struct.create)
+    ..aOM<SentimentAnalysisRequestConfig>(10, 'sentimentAnalysisRequestConfig',
+        subBuilder: SentimentAnalysisRequestConfig.create)
     ..hasRequiredFields = false;
 
   QueryParameters._() : super();
@@ -210,54 +257,84 @@ class QueryParameters extends $pb.GeneratedMessage {
   QueryParameters createEmptyInstance() => create();
   static $pb.PbList<QueryParameters> createRepeated() =>
       $pb.PbList<QueryParameters>();
-  static QueryParameters getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static QueryParameters getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<QueryParameters>(create);
   static QueryParameters _defaultInstance;
 
-  $core.String get timeZone => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get timeZone => $_getSZ(0);
+  @$pb.TagNumber(1)
   set timeZone($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasTimeZone() => $_has(0);
+  @$pb.TagNumber(1)
   void clearTimeZone() => clearField(1);
 
+  @$pb.TagNumber(2)
   $9.LatLng get geoLocation => $_getN(1);
+  @$pb.TagNumber(2)
   set geoLocation($9.LatLng v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasGeoLocation() => $_has(1);
+  @$pb.TagNumber(2)
   void clearGeoLocation() => clearField(2);
+  @$pb.TagNumber(2)
+  $9.LatLng ensureGeoLocation() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $core.List<$0.Context> get contexts => $_getList(2);
 
-  $core.bool get resetContexts => $_get(3, false);
+  @$pb.TagNumber(4)
+  $core.bool get resetContexts => $_getBF(3);
+  @$pb.TagNumber(4)
   set resetContexts($core.bool v) {
     $_setBool(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasResetContexts() => $_has(3);
+  @$pb.TagNumber(4)
   void clearResetContexts() => clearField(4);
 
+  @$pb.TagNumber(5)
   $core.List<$5.SessionEntityType> get sessionEntityTypes => $_getList(4);
 
+  @$pb.TagNumber(6)
   $10.Struct get payload => $_getN(5);
+  @$pb.TagNumber(6)
   set payload($10.Struct v) {
     setField(6, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasPayload() => $_has(5);
+  @$pb.TagNumber(6)
   void clearPayload() => clearField(6);
+  @$pb.TagNumber(6)
+  $10.Struct ensurePayload() => $_ensure(5);
 
+  @$pb.TagNumber(10)
   SentimentAnalysisRequestConfig get sentimentAnalysisRequestConfig =>
       $_getN(6);
+  @$pb.TagNumber(10)
   set sentimentAnalysisRequestConfig(SentimentAnalysisRequestConfig v) {
     setField(10, v);
   }
 
+  @$pb.TagNumber(10)
   $core.bool hasSentimentAnalysisRequestConfig() => $_has(6);
+  @$pb.TagNumber(10)
   void clearSentimentAnalysisRequestConfig() => clearField(10);
+  @$pb.TagNumber(10)
+  SentimentAnalysisRequestConfig ensureSentimentAnalysisRequestConfig() =>
+      $_ensure(6);
 }
 
 enum QueryInput_Input { audioConfig, text, event, notSet }
@@ -270,14 +347,13 @@ class QueryInput extends $pb.GeneratedMessage {
     0: QueryInput_Input.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('QueryInput',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
     ..oo(0, [1, 2, 3])
-    ..a<$7.InputAudioConfig>(1, 'audioConfig', $pb.PbFieldType.OM,
-        $7.InputAudioConfig.getDefault, $7.InputAudioConfig.create)
-    ..a<TextInput>(
-        2, 'text', $pb.PbFieldType.OM, TextInput.getDefault, TextInput.create)
-    ..a<EventInput>(3, 'event', $pb.PbFieldType.OM, EventInput.getDefault,
-        EventInput.create)
+    ..aOM<$7.InputAudioConfig>(1, 'audioConfig',
+        subBuilder: $7.InputAudioConfig.create)
+    ..aOM<TextInput>(2, 'text', subBuilder: TextInput.create)
+    ..aOM<EventInput>(3, 'event', subBuilder: EventInput.create)
     ..hasRequiredFields = false;
 
   QueryInput._() : super();
@@ -296,66 +372,79 @@ class QueryInput extends $pb.GeneratedMessage {
   static QueryInput create() => QueryInput._();
   QueryInput createEmptyInstance() => create();
   static $pb.PbList<QueryInput> createRepeated() => $pb.PbList<QueryInput>();
-  static QueryInput getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static QueryInput getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<QueryInput>(create);
   static QueryInput _defaultInstance;
 
   QueryInput_Input whichInput() => _QueryInput_InputByTag[$_whichOneof(0)];
   void clearInput() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   $7.InputAudioConfig get audioConfig => $_getN(0);
+  @$pb.TagNumber(1)
   set audioConfig($7.InputAudioConfig v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasAudioConfig() => $_has(0);
+  @$pb.TagNumber(1)
   void clearAudioConfig() => clearField(1);
+  @$pb.TagNumber(1)
+  $7.InputAudioConfig ensureAudioConfig() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   TextInput get text => $_getN(1);
+  @$pb.TagNumber(2)
   set text(TextInput v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasText() => $_has(1);
+  @$pb.TagNumber(2)
   void clearText() => clearField(2);
+  @$pb.TagNumber(2)
+  TextInput ensureText() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   EventInput get event => $_getN(2);
+  @$pb.TagNumber(3)
   set event(EventInput v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasEvent() => $_has(2);
+  @$pb.TagNumber(3)
   void clearEvent() => clearField(3);
+  @$pb.TagNumber(3)
+  EventInput ensureEvent() => $_ensure(2);
 }
 
 class QueryResult extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('QueryResult',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'queryText')
     ..a<$core.double>(2, 'speechRecognitionConfidence', $pb.PbFieldType.OF)
     ..aOS(3, 'action')
-    ..a<$10.Struct>(4, 'parameters', $pb.PbFieldType.OM, $10.Struct.getDefault,
-        $10.Struct.create)
+    ..aOM<$10.Struct>(4, 'parameters', subBuilder: $10.Struct.create)
     ..aOB(5, 'allRequiredParamsPresent')
     ..aOS(6, 'fulfillmentText')
-    ..pc<$3.Intent_Message>(
-        7, 'fulfillmentMessages', $pb.PbFieldType.PM, $3.Intent_Message.create)
+    ..pc<$3.Intent_Message>(7, 'fulfillmentMessages', $pb.PbFieldType.PM,
+        subBuilder: $3.Intent_Message.create)
     ..aOS(8, 'webhookSource')
-    ..a<$10.Struct>(9, 'webhookPayload', $pb.PbFieldType.OM,
-        $10.Struct.getDefault, $10.Struct.create)
-    ..pc<$0.Context>(
-        10, 'outputContexts', $pb.PbFieldType.PM, $0.Context.create)
-    ..a<$3.Intent>(11, 'intent', $pb.PbFieldType.OM, $3.Intent.getDefault,
-        $3.Intent.create)
+    ..aOM<$10.Struct>(9, 'webhookPayload', subBuilder: $10.Struct.create)
+    ..pc<$0.Context>(10, 'outputContexts', $pb.PbFieldType.PM,
+        subBuilder: $0.Context.create)
+    ..aOM<$3.Intent>(11, 'intent', subBuilder: $3.Intent.create)
     ..a<$core.double>(12, 'intentDetectionConfidence', $pb.PbFieldType.OF)
-    ..a<$10.Struct>(14, 'diagnosticInfo', $pb.PbFieldType.OM,
-        $10.Struct.getDefault, $10.Struct.create)
+    ..aOM<$10.Struct>(14, 'diagnosticInfo', subBuilder: $10.Struct.create)
     ..aOS(15, 'languageCode')
-    ..a<SentimentAnalysisResult>(
-        17,
-        'sentimentAnalysisResult',
-        $pb.PbFieldType.OM,
-        SentimentAnalysisResult.getDefault,
-        SentimentAnalysisResult.create)
+    ..aOM<SentimentAnalysisResult>(17, 'sentimentAnalysisResult',
+        subBuilder: SentimentAnalysisResult.create)
     ..hasRequiredFields = false;
 
   QueryResult._() : super();
@@ -374,130 +463,195 @@ class QueryResult extends $pb.GeneratedMessage {
   static QueryResult create() => QueryResult._();
   QueryResult createEmptyInstance() => create();
   static $pb.PbList<QueryResult> createRepeated() => $pb.PbList<QueryResult>();
-  static QueryResult getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static QueryResult getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<QueryResult>(create);
   static QueryResult _defaultInstance;
 
-  $core.String get queryText => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get queryText => $_getSZ(0);
+  @$pb.TagNumber(1)
   set queryText($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasQueryText() => $_has(0);
+  @$pb.TagNumber(1)
   void clearQueryText() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.double get speechRecognitionConfidence => $_getN(1);
+  @$pb.TagNumber(2)
   set speechRecognitionConfidence($core.double v) {
     $_setFloat(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasSpeechRecognitionConfidence() => $_has(1);
+  @$pb.TagNumber(2)
   void clearSpeechRecognitionConfidence() => clearField(2);
 
-  $core.String get action => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get action => $_getSZ(2);
+  @$pb.TagNumber(3)
   set action($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasAction() => $_has(2);
+  @$pb.TagNumber(3)
   void clearAction() => clearField(3);
 
+  @$pb.TagNumber(4)
   $10.Struct get parameters => $_getN(3);
+  @$pb.TagNumber(4)
   set parameters($10.Struct v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasParameters() => $_has(3);
+  @$pb.TagNumber(4)
   void clearParameters() => clearField(4);
+  @$pb.TagNumber(4)
+  $10.Struct ensureParameters() => $_ensure(3);
 
-  $core.bool get allRequiredParamsPresent => $_get(4, false);
+  @$pb.TagNumber(5)
+  $core.bool get allRequiredParamsPresent => $_getBF(4);
+  @$pb.TagNumber(5)
   set allRequiredParamsPresent($core.bool v) {
     $_setBool(4, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasAllRequiredParamsPresent() => $_has(4);
+  @$pb.TagNumber(5)
   void clearAllRequiredParamsPresent() => clearField(5);
 
-  $core.String get fulfillmentText => $_getS(5, '');
+  @$pb.TagNumber(6)
+  $core.String get fulfillmentText => $_getSZ(5);
+  @$pb.TagNumber(6)
   set fulfillmentText($core.String v) {
     $_setString(5, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasFulfillmentText() => $_has(5);
+  @$pb.TagNumber(6)
   void clearFulfillmentText() => clearField(6);
 
+  @$pb.TagNumber(7)
   $core.List<$3.Intent_Message> get fulfillmentMessages => $_getList(6);
 
-  $core.String get webhookSource => $_getS(7, '');
+  @$pb.TagNumber(8)
+  $core.String get webhookSource => $_getSZ(7);
+  @$pb.TagNumber(8)
   set webhookSource($core.String v) {
     $_setString(7, v);
   }
 
+  @$pb.TagNumber(8)
   $core.bool hasWebhookSource() => $_has(7);
+  @$pb.TagNumber(8)
   void clearWebhookSource() => clearField(8);
 
+  @$pb.TagNumber(9)
   $10.Struct get webhookPayload => $_getN(8);
+  @$pb.TagNumber(9)
   set webhookPayload($10.Struct v) {
     setField(9, v);
   }
 
+  @$pb.TagNumber(9)
   $core.bool hasWebhookPayload() => $_has(8);
+  @$pb.TagNumber(9)
   void clearWebhookPayload() => clearField(9);
+  @$pb.TagNumber(9)
+  $10.Struct ensureWebhookPayload() => $_ensure(8);
 
+  @$pb.TagNumber(10)
   $core.List<$0.Context> get outputContexts => $_getList(9);
 
+  @$pb.TagNumber(11)
   $3.Intent get intent => $_getN(10);
+  @$pb.TagNumber(11)
   set intent($3.Intent v) {
     setField(11, v);
   }
 
+  @$pb.TagNumber(11)
   $core.bool hasIntent() => $_has(10);
+  @$pb.TagNumber(11)
   void clearIntent() => clearField(11);
+  @$pb.TagNumber(11)
+  $3.Intent ensureIntent() => $_ensure(10);
 
+  @$pb.TagNumber(12)
   $core.double get intentDetectionConfidence => $_getN(11);
+  @$pb.TagNumber(12)
   set intentDetectionConfidence($core.double v) {
     $_setFloat(11, v);
   }
 
+  @$pb.TagNumber(12)
   $core.bool hasIntentDetectionConfidence() => $_has(11);
+  @$pb.TagNumber(12)
   void clearIntentDetectionConfidence() => clearField(12);
 
+  @$pb.TagNumber(14)
   $10.Struct get diagnosticInfo => $_getN(12);
+  @$pb.TagNumber(14)
   set diagnosticInfo($10.Struct v) {
     setField(14, v);
   }
 
+  @$pb.TagNumber(14)
   $core.bool hasDiagnosticInfo() => $_has(12);
+  @$pb.TagNumber(14)
   void clearDiagnosticInfo() => clearField(14);
+  @$pb.TagNumber(14)
+  $10.Struct ensureDiagnosticInfo() => $_ensure(12);
 
-  $core.String get languageCode => $_getS(13, '');
+  @$pb.TagNumber(15)
+  $core.String get languageCode => $_getSZ(13);
+  @$pb.TagNumber(15)
   set languageCode($core.String v) {
     $_setString(13, v);
   }
 
+  @$pb.TagNumber(15)
   $core.bool hasLanguageCode() => $_has(13);
+  @$pb.TagNumber(15)
   void clearLanguageCode() => clearField(15);
 
+  @$pb.TagNumber(17)
   SentimentAnalysisResult get sentimentAnalysisResult => $_getN(14);
+  @$pb.TagNumber(17)
   set sentimentAnalysisResult(SentimentAnalysisResult v) {
     setField(17, v);
   }
 
+  @$pb.TagNumber(17)
   $core.bool hasSentimentAnalysisResult() => $_has(14);
+  @$pb.TagNumber(17)
   void clearSentimentAnalysisResult() => clearField(17);
+  @$pb.TagNumber(17)
+  SentimentAnalysisResult ensureSentimentAnalysisResult() => $_ensure(14);
 }
 
 class StreamingDetectIntentRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'StreamingDetectIntentRequest',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'session')
-    ..a<QueryParameters>(2, 'queryParams', $pb.PbFieldType.OM,
-        QueryParameters.getDefault, QueryParameters.create)
-    ..a<QueryInput>(3, 'queryInput', $pb.PbFieldType.OM, QueryInput.getDefault,
-        QueryInput.create)
+    ..aOM<QueryParameters>(2, 'queryParams', subBuilder: QueryParameters.create)
+    ..aOM<QueryInput>(3, 'queryInput', subBuilder: QueryInput.create)
     ..aOB(4, 'singleUtterance')
-    ..a<$7.OutputAudioConfig>(5, 'outputAudioConfig', $pb.PbFieldType.OM,
-        $7.OutputAudioConfig.getDefault, $7.OutputAudioConfig.create)
+    ..aOM<$7.OutputAudioConfig>(5, 'outputAudioConfig',
+        subBuilder: $7.OutputAudioConfig.create)
     ..a<$core.List<$core.int>>(6, 'inputAudio', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
@@ -522,81 +676,107 @@ class StreamingDetectIntentRequest extends $pb.GeneratedMessage {
   StreamingDetectIntentRequest createEmptyInstance() => create();
   static $pb.PbList<StreamingDetectIntentRequest> createRepeated() =>
       $pb.PbList<StreamingDetectIntentRequest>();
-  static StreamingDetectIntentRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static StreamingDetectIntentRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<StreamingDetectIntentRequest>(create);
   static StreamingDetectIntentRequest _defaultInstance;
 
-  $core.String get session => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get session => $_getSZ(0);
+  @$pb.TagNumber(1)
   set session($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasSession() => $_has(0);
+  @$pb.TagNumber(1)
   void clearSession() => clearField(1);
 
+  @$pb.TagNumber(2)
   QueryParameters get queryParams => $_getN(1);
+  @$pb.TagNumber(2)
   set queryParams(QueryParameters v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasQueryParams() => $_has(1);
+  @$pb.TagNumber(2)
   void clearQueryParams() => clearField(2);
+  @$pb.TagNumber(2)
+  QueryParameters ensureQueryParams() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   QueryInput get queryInput => $_getN(2);
+  @$pb.TagNumber(3)
   set queryInput(QueryInput v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasQueryInput() => $_has(2);
+  @$pb.TagNumber(3)
   void clearQueryInput() => clearField(3);
+  @$pb.TagNumber(3)
+  QueryInput ensureQueryInput() => $_ensure(2);
 
   @$core.Deprecated('This field is deprecated.')
-  $core.bool get singleUtterance => $_get(3, false);
+  @$pb.TagNumber(4)
+  $core.bool get singleUtterance => $_getBF(3);
   @$core.Deprecated('This field is deprecated.')
+  @$pb.TagNumber(4)
   set singleUtterance($core.bool v) {
     $_setBool(3, v);
   }
 
   @$core.Deprecated('This field is deprecated.')
+  @$pb.TagNumber(4)
   $core.bool hasSingleUtterance() => $_has(3);
   @$core.Deprecated('This field is deprecated.')
+  @$pb.TagNumber(4)
   void clearSingleUtterance() => clearField(4);
 
+  @$pb.TagNumber(5)
   $7.OutputAudioConfig get outputAudioConfig => $_getN(4);
+  @$pb.TagNumber(5)
   set outputAudioConfig($7.OutputAudioConfig v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasOutputAudioConfig() => $_has(4);
+  @$pb.TagNumber(5)
   void clearOutputAudioConfig() => clearField(5);
+  @$pb.TagNumber(5)
+  $7.OutputAudioConfig ensureOutputAudioConfig() => $_ensure(4);
 
+  @$pb.TagNumber(6)
   $core.List<$core.int> get inputAudio => $_getN(5);
+  @$pb.TagNumber(6)
   set inputAudio($core.List<$core.int> v) {
     $_setBytes(5, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasInputAudio() => $_has(5);
+  @$pb.TagNumber(6)
   void clearInputAudio() => clearField(6);
 }
 
 class StreamingDetectIntentResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'StreamingDetectIntentResponse',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'responseId')
-    ..a<StreamingRecognitionResult>(
-        2,
-        'recognitionResult',
-        $pb.PbFieldType.OM,
-        StreamingRecognitionResult.getDefault,
-        StreamingRecognitionResult.create)
-    ..a<QueryResult>(3, 'queryResult', $pb.PbFieldType.OM,
-        QueryResult.getDefault, QueryResult.create)
-    ..a<$8.Status>(4, 'webhookStatus', $pb.PbFieldType.OM, $8.Status.getDefault,
-        $8.Status.create)
+    ..aOM<StreamingRecognitionResult>(2, 'recognitionResult',
+        subBuilder: StreamingRecognitionResult.create)
+    ..aOM<QueryResult>(3, 'queryResult', subBuilder: QueryResult.create)
+    ..aOM<$8.Status>(4, 'webhookStatus', subBuilder: $8.Status.create)
     ..a<$core.List<$core.int>>(5, 'outputAudio', $pb.PbFieldType.OY)
-    ..a<$7.OutputAudioConfig>(6, 'outputAudioConfig', $pb.PbFieldType.OM,
-        $7.OutputAudioConfig.getDefault, $7.OutputAudioConfig.create)
+    ..aOM<$7.OutputAudioConfig>(6, 'outputAudioConfig',
+        subBuilder: $7.OutputAudioConfig.create)
     ..hasRequiredFields = false;
 
   StreamingDetectIntentResponse._() : super();
@@ -620,70 +800,103 @@ class StreamingDetectIntentResponse extends $pb.GeneratedMessage {
   StreamingDetectIntentResponse createEmptyInstance() => create();
   static $pb.PbList<StreamingDetectIntentResponse> createRepeated() =>
       $pb.PbList<StreamingDetectIntentResponse>();
-  static StreamingDetectIntentResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static StreamingDetectIntentResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<StreamingDetectIntentResponse>(create);
   static StreamingDetectIntentResponse _defaultInstance;
 
-  $core.String get responseId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get responseId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set responseId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResponseId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResponseId() => clearField(1);
 
+  @$pb.TagNumber(2)
   StreamingRecognitionResult get recognitionResult => $_getN(1);
+  @$pb.TagNumber(2)
   set recognitionResult(StreamingRecognitionResult v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasRecognitionResult() => $_has(1);
+  @$pb.TagNumber(2)
   void clearRecognitionResult() => clearField(2);
+  @$pb.TagNumber(2)
+  StreamingRecognitionResult ensureRecognitionResult() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   QueryResult get queryResult => $_getN(2);
+  @$pb.TagNumber(3)
   set queryResult(QueryResult v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasQueryResult() => $_has(2);
+  @$pb.TagNumber(3)
   void clearQueryResult() => clearField(3);
+  @$pb.TagNumber(3)
+  QueryResult ensureQueryResult() => $_ensure(2);
 
+  @$pb.TagNumber(4)
   $8.Status get webhookStatus => $_getN(3);
+  @$pb.TagNumber(4)
   set webhookStatus($8.Status v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasWebhookStatus() => $_has(3);
+  @$pb.TagNumber(4)
   void clearWebhookStatus() => clearField(4);
+  @$pb.TagNumber(4)
+  $8.Status ensureWebhookStatus() => $_ensure(3);
 
+  @$pb.TagNumber(5)
   $core.List<$core.int> get outputAudio => $_getN(4);
+  @$pb.TagNumber(5)
   set outputAudio($core.List<$core.int> v) {
     $_setBytes(4, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasOutputAudio() => $_has(4);
+  @$pb.TagNumber(5)
   void clearOutputAudio() => clearField(5);
 
+  @$pb.TagNumber(6)
   $7.OutputAudioConfig get outputAudioConfig => $_getN(5);
+  @$pb.TagNumber(6)
   set outputAudioConfig($7.OutputAudioConfig v) {
     setField(6, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasOutputAudioConfig() => $_has(5);
+  @$pb.TagNumber(6)
   void clearOutputAudioConfig() => clearField(6);
+  @$pb.TagNumber(6)
+  $7.OutputAudioConfig ensureOutputAudioConfig() => $_ensure(5);
 }
 
 class StreamingRecognitionResult extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'StreamingRecognitionResult',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
     ..e<StreamingRecognitionResult_MessageType>(
-        1,
-        'messageType',
-        $pb.PbFieldType.OE,
-        StreamingRecognitionResult_MessageType.MESSAGE_TYPE_UNSPECIFIED,
-        StreamingRecognitionResult_MessageType.valueOf,
-        StreamingRecognitionResult_MessageType.values)
+        1, 'messageType', $pb.PbFieldType.OE,
+        defaultOrMaker:
+            StreamingRecognitionResult_MessageType.MESSAGE_TYPE_UNSPECIFIED,
+        valueOf: StreamingRecognitionResult_MessageType.valueOf,
+        enumValues: StreamingRecognitionResult_MessageType.values)
     ..aOS(2, 'transcript')
     ..aOB(3, 'isFinal')
     ..a<$core.double>(4, 'confidence', $pb.PbFieldType.OF)
@@ -709,46 +922,64 @@ class StreamingRecognitionResult extends $pb.GeneratedMessage {
   StreamingRecognitionResult createEmptyInstance() => create();
   static $pb.PbList<StreamingRecognitionResult> createRepeated() =>
       $pb.PbList<StreamingRecognitionResult>();
-  static StreamingRecognitionResult getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static StreamingRecognitionResult getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<StreamingRecognitionResult>(create);
   static StreamingRecognitionResult _defaultInstance;
 
+  @$pb.TagNumber(1)
   StreamingRecognitionResult_MessageType get messageType => $_getN(0);
+  @$pb.TagNumber(1)
   set messageType(StreamingRecognitionResult_MessageType v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasMessageType() => $_has(0);
+  @$pb.TagNumber(1)
   void clearMessageType() => clearField(1);
 
-  $core.String get transcript => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get transcript => $_getSZ(1);
+  @$pb.TagNumber(2)
   set transcript($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasTranscript() => $_has(1);
+  @$pb.TagNumber(2)
   void clearTranscript() => clearField(2);
 
-  $core.bool get isFinal => $_get(2, false);
+  @$pb.TagNumber(3)
+  $core.bool get isFinal => $_getBF(2);
+  @$pb.TagNumber(3)
   set isFinal($core.bool v) {
     $_setBool(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasIsFinal() => $_has(2);
+  @$pb.TagNumber(3)
   void clearIsFinal() => clearField(3);
 
+  @$pb.TagNumber(4)
   $core.double get confidence => $_getN(3);
+  @$pb.TagNumber(4)
   set confidence($core.double v) {
     $_setFloat(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasConfidence() => $_has(3);
+  @$pb.TagNumber(4)
   void clearConfidence() => clearField(4);
 }
 
 class TextInput extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TextInput',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'text')
     ..aOS(2, 'languageCode')
     ..hasRequiredFields = false;
@@ -769,32 +1000,42 @@ class TextInput extends $pb.GeneratedMessage {
   static TextInput create() => TextInput._();
   TextInput createEmptyInstance() => create();
   static $pb.PbList<TextInput> createRepeated() => $pb.PbList<TextInput>();
-  static TextInput getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TextInput getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TextInput>(create);
   static TextInput _defaultInstance;
 
-  $core.String get text => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get text => $_getSZ(0);
+  @$pb.TagNumber(1)
   set text($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasText() => $_has(0);
+  @$pb.TagNumber(1)
   void clearText() => clearField(1);
 
-  $core.String get languageCode => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get languageCode => $_getSZ(1);
+  @$pb.TagNumber(2)
   set languageCode($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasLanguageCode() => $_has(1);
+  @$pb.TagNumber(2)
   void clearLanguageCode() => clearField(2);
 }
 
 class EventInput extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('EventInput',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
-    ..a<$10.Struct>(2, 'parameters', $pb.PbFieldType.OM, $10.Struct.getDefault,
-        $10.Struct.create)
+    ..aOM<$10.Struct>(2, 'parameters', subBuilder: $10.Struct.create)
     ..aOS(3, 'languageCode')
     ..hasRequiredFields = false;
 
@@ -814,38 +1055,55 @@ class EventInput extends $pb.GeneratedMessage {
   static EventInput create() => EventInput._();
   EventInput createEmptyInstance() => create();
   static $pb.PbList<EventInput> createRepeated() => $pb.PbList<EventInput>();
-  static EventInput getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static EventInput getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<EventInput>(create);
   static EventInput _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $10.Struct get parameters => $_getN(1);
+  @$pb.TagNumber(2)
   set parameters($10.Struct v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasParameters() => $_has(1);
+  @$pb.TagNumber(2)
   void clearParameters() => clearField(2);
+  @$pb.TagNumber(2)
+  $10.Struct ensureParameters() => $_ensure(1);
 
-  $core.String get languageCode => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get languageCode => $_getSZ(2);
+  @$pb.TagNumber(3)
   set languageCode($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasLanguageCode() => $_has(2);
+  @$pb.TagNumber(3)
   void clearLanguageCode() => clearField(3);
 }
 
 class SentimentAnalysisRequestConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'SentimentAnalysisRequestConfig',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
     ..aOB(1, 'analyzeQueryTextSentiment')
     ..hasRequiredFields = false;
 
@@ -870,24 +1128,29 @@ class SentimentAnalysisRequestConfig extends $pb.GeneratedMessage {
   SentimentAnalysisRequestConfig createEmptyInstance() => create();
   static $pb.PbList<SentimentAnalysisRequestConfig> createRepeated() =>
       $pb.PbList<SentimentAnalysisRequestConfig>();
-  static SentimentAnalysisRequestConfig getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static SentimentAnalysisRequestConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SentimentAnalysisRequestConfig>(create);
   static SentimentAnalysisRequestConfig _defaultInstance;
 
-  $core.bool get analyzeQueryTextSentiment => $_get(0, false);
+  @$pb.TagNumber(1)
+  $core.bool get analyzeQueryTextSentiment => $_getBF(0);
+  @$pb.TagNumber(1)
   set analyzeQueryTextSentiment($core.bool v) {
     $_setBool(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasAnalyzeQueryTextSentiment() => $_has(0);
+  @$pb.TagNumber(1)
   void clearAnalyzeQueryTextSentiment() => clearField(1);
 }
 
 class SentimentAnalysisResult extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('SentimentAnalysisResult',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
-    ..a<Sentiment>(1, 'queryTextSentiment', $pb.PbFieldType.OM,
-        Sentiment.getDefault, Sentiment.create)
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
+    ..aOM<Sentiment>(1, 'queryTextSentiment', subBuilder: Sentiment.create)
     ..hasRequiredFields = false;
 
   SentimentAnalysisResult._() : super();
@@ -909,22 +1172,30 @@ class SentimentAnalysisResult extends $pb.GeneratedMessage {
   SentimentAnalysisResult createEmptyInstance() => create();
   static $pb.PbList<SentimentAnalysisResult> createRepeated() =>
       $pb.PbList<SentimentAnalysisResult>();
-  static SentimentAnalysisResult getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static SentimentAnalysisResult getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SentimentAnalysisResult>(create);
   static SentimentAnalysisResult _defaultInstance;
 
+  @$pb.TagNumber(1)
   Sentiment get queryTextSentiment => $_getN(0);
+  @$pb.TagNumber(1)
   set queryTextSentiment(Sentiment v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasQueryTextSentiment() => $_has(0);
+  @$pb.TagNumber(1)
   void clearQueryTextSentiment() => clearField(1);
+  @$pb.TagNumber(1)
+  Sentiment ensureQueryTextSentiment() => $_ensure(0);
 }
 
 class Sentiment extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Sentiment',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
     ..a<$core.double>(1, 'score', $pb.PbFieldType.OF)
     ..a<$core.double>(2, 'magnitude', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
@@ -945,22 +1216,32 @@ class Sentiment extends $pb.GeneratedMessage {
   static Sentiment create() => Sentiment._();
   Sentiment createEmptyInstance() => create();
   static $pb.PbList<Sentiment> createRepeated() => $pb.PbList<Sentiment>();
-  static Sentiment getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Sentiment getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Sentiment>(create);
   static Sentiment _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.double get score => $_getN(0);
+  @$pb.TagNumber(1)
   set score($core.double v) {
     $_setFloat(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasScore() => $_has(0);
+  @$pb.TagNumber(1)
   void clearScore() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.double get magnitude => $_getN(1);
+  @$pb.TagNumber(2)
   set magnitude($core.double v) {
     $_setFloat(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasMagnitude() => $_has(1);
+  @$pb.TagNumber(2)
   void clearMagnitude() => clearField(2);
 }

@@ -5,15 +5,15 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
-import 'package:fixnum/fixnum.dart';
+import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class GetFileRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetFileRequest',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'uri')
     ..aInt64(2, 'readOffset')
     ..aInt64(3, 'readLimit')
@@ -37,45 +37,64 @@ class GetFileRequest extends $pb.GeneratedMessage {
   GetFileRequest createEmptyInstance() => create();
   static $pb.PbList<GetFileRequest> createRepeated() =>
       $pb.PbList<GetFileRequest>();
-  static GetFileRequest getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetFileRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetFileRequest>(create);
   static GetFileRequest _defaultInstance;
 
-  $core.String get uri => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get uri => $_getSZ(0);
+  @$pb.TagNumber(1)
   set uri($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasUri() => $_has(0);
+  @$pb.TagNumber(1)
   void clearUri() => clearField(1);
 
-  Int64 get readOffset => $_getI64(1);
-  set readOffset(Int64 v) {
+  @$pb.TagNumber(2)
+  $fixnum.Int64 get readOffset => $_getI64(1);
+  @$pb.TagNumber(2)
+  set readOffset($fixnum.Int64 v) {
     $_setInt64(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasReadOffset() => $_has(1);
+  @$pb.TagNumber(2)
   void clearReadOffset() => clearField(2);
 
-  Int64 get readLimit => $_getI64(2);
-  set readLimit(Int64 v) {
+  @$pb.TagNumber(3)
+  $fixnum.Int64 get readLimit => $_getI64(2);
+  @$pb.TagNumber(3)
+  set readLimit($fixnum.Int64 v) {
     $_setInt64(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasReadLimit() => $_has(2);
+  @$pb.TagNumber(3)
   void clearReadLimit() => clearField(3);
 
-  $core.String get archiveEntry => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get archiveEntry => $_getSZ(3);
+  @$pb.TagNumber(4)
   set archiveEntry($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasArchiveEntry() => $_has(3);
+  @$pb.TagNumber(4)
   void clearArchiveEntry() => clearField(4);
 }
 
 class GetFileResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetFileResponse',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
     ..a<$core.List<$core.int>>(1, 'data', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
@@ -96,22 +115,28 @@ class GetFileResponse extends $pb.GeneratedMessage {
   GetFileResponse createEmptyInstance() => create();
   static $pb.PbList<GetFileResponse> createRepeated() =>
       $pb.PbList<GetFileResponse>();
-  static GetFileResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetFileResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetFileResponse>(create);
   static GetFileResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$core.int> get data => $_getN(0);
+  @$pb.TagNumber(1)
   set data($core.List<$core.int> v) {
     $_setBytes(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasData() => $_has(0);
+  @$pb.TagNumber(1)
   void clearData() => clearField(1);
 }
 
 class GetFileTailRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetFileTailRequest',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'uri')
     ..aInt64(2, 'readOffset')
     ..aInt64(3, 'readLimit')
@@ -135,46 +160,64 @@ class GetFileTailRequest extends $pb.GeneratedMessage {
   GetFileTailRequest createEmptyInstance() => create();
   static $pb.PbList<GetFileTailRequest> createRepeated() =>
       $pb.PbList<GetFileTailRequest>();
-  static GetFileTailRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetFileTailRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetFileTailRequest>(create);
   static GetFileTailRequest _defaultInstance;
 
-  $core.String get uri => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get uri => $_getSZ(0);
+  @$pb.TagNumber(1)
   set uri($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasUri() => $_has(0);
+  @$pb.TagNumber(1)
   void clearUri() => clearField(1);
 
-  Int64 get readOffset => $_getI64(1);
-  set readOffset(Int64 v) {
+  @$pb.TagNumber(2)
+  $fixnum.Int64 get readOffset => $_getI64(1);
+  @$pb.TagNumber(2)
+  set readOffset($fixnum.Int64 v) {
     $_setInt64(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasReadOffset() => $_has(1);
+  @$pb.TagNumber(2)
   void clearReadOffset() => clearField(2);
 
-  Int64 get readLimit => $_getI64(2);
-  set readLimit(Int64 v) {
+  @$pb.TagNumber(3)
+  $fixnum.Int64 get readLimit => $_getI64(2);
+  @$pb.TagNumber(3)
+  set readLimit($fixnum.Int64 v) {
     $_setInt64(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasReadLimit() => $_has(2);
+  @$pb.TagNumber(3)
   void clearReadLimit() => clearField(3);
 
-  $core.String get archiveEntry => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get archiveEntry => $_getSZ(3);
+  @$pb.TagNumber(4)
   set archiveEntry($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasArchiveEntry() => $_has(3);
+  @$pb.TagNumber(4)
   void clearArchiveEntry() => clearField(4);
 }
 
 class GetFileTailResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetFileTailResponse',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
     ..a<$core.List<$core.int>>(1, 'data', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
@@ -195,15 +238,20 @@ class GetFileTailResponse extends $pb.GeneratedMessage {
   GetFileTailResponse createEmptyInstance() => create();
   static $pb.PbList<GetFileTailResponse> createRepeated() =>
       $pb.PbList<GetFileTailResponse>();
-  static GetFileTailResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetFileTailResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetFileTailResponse>(create);
   static GetFileTailResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$core.int> get data => $_getN(0);
+  @$pb.TagNumber(1)
   set data($core.List<$core.int> v) {
     $_setBytes(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasData() => $_has(0);
+  @$pb.TagNumber(1)
   void clearData() => clearField(1);
 }

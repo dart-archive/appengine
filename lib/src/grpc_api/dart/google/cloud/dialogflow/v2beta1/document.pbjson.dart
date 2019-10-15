@@ -150,5 +150,17 @@ const ReloadDocumentRequest$json = {
   '1': 'ReloadDocumentRequest',
   '2': [
     {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {
+      '1': 'gcs_source',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.dialogflow.v2beta1.GcsSource',
+      '9': 0,
+      '10': 'gcsSource'
+    },
+  ],
+  '8': [
+    {'1': 'source'},
   ],
 };

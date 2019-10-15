@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -14,7 +13,8 @@ export 'ad_group_ad_rotation_mode.pbenum.dart';
 
 class AdGroupAdRotationModeEnum extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AdGroupAdRotationModeEnum',
-      package: const $pb.PackageName('google.ads.googleads.v2.enums'))
+      package: const $pb.PackageName('google.ads.googleads.v2.enums'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   AdGroupAdRotationModeEnum._() : super();
@@ -37,7 +37,8 @@ class AdGroupAdRotationModeEnum extends $pb.GeneratedMessage {
   AdGroupAdRotationModeEnum createEmptyInstance() => create();
   static $pb.PbList<AdGroupAdRotationModeEnum> createRepeated() =>
       $pb.PbList<AdGroupAdRotationModeEnum>();
-  static AdGroupAdRotationModeEnum getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static AdGroupAdRotationModeEnum getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AdGroupAdRotationModeEnum>(create);
   static AdGroupAdRotationModeEnum _defaultInstance;
 }

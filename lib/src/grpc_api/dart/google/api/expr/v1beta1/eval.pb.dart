@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -15,8 +14,9 @@ import '../../../rpc/status.pb.dart' as $1;
 
 class EvalState_Result extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('EvalState.Result',
-      package: const $pb.PackageName('google.api.expr.v1beta1'))
-    ..a<IdRef>(1, 'expr', $pb.PbFieldType.OM, IdRef.getDefault, IdRef.create)
+      package: const $pb.PackageName('google.api.expr.v1beta1'),
+      createEmptyInstance: create)
+    ..aOM<IdRef>(1, 'expr', subBuilder: IdRef.create)
     ..a<$core.int>(2, 'value', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
@@ -37,33 +37,46 @@ class EvalState_Result extends $pb.GeneratedMessage {
   EvalState_Result createEmptyInstance() => create();
   static $pb.PbList<EvalState_Result> createRepeated() =>
       $pb.PbList<EvalState_Result>();
-  static EvalState_Result getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static EvalState_Result getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<EvalState_Result>(create);
   static EvalState_Result _defaultInstance;
 
+  @$pb.TagNumber(1)
   IdRef get expr => $_getN(0);
+  @$pb.TagNumber(1)
   set expr(IdRef v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasExpr() => $_has(0);
+  @$pb.TagNumber(1)
   void clearExpr() => clearField(1);
+  @$pb.TagNumber(1)
+  IdRef ensureExpr() => $_ensure(0);
 
-  $core.int get value => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get value => $_getIZ(1);
+  @$pb.TagNumber(2)
   set value($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasValue() => $_has(1);
+  @$pb.TagNumber(2)
   void clearValue() => clearField(2);
 }
 
 class EvalState extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('EvalState',
-      package: const $pb.PackageName('google.api.expr.v1beta1'))
-    ..pc<ExprValue>(1, 'values', $pb.PbFieldType.PM, ExprValue.create)
-    ..pc<EvalState_Result>(
-        3, 'results', $pb.PbFieldType.PM, EvalState_Result.create)
+      package: const $pb.PackageName('google.api.expr.v1beta1'),
+      createEmptyInstance: create)
+    ..pc<ExprValue>(1, 'values', $pb.PbFieldType.PM,
+        subBuilder: ExprValue.create)
+    ..pc<EvalState_Result>(3, 'results', $pb.PbFieldType.PM,
+        subBuilder: EvalState_Result.create)
     ..hasRequiredFields = false;
 
   EvalState._() : super();
@@ -82,11 +95,15 @@ class EvalState extends $pb.GeneratedMessage {
   static EvalState create() => EvalState._();
   EvalState createEmptyInstance() => create();
   static $pb.PbList<EvalState> createRepeated() => $pb.PbList<EvalState>();
-  static EvalState getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static EvalState getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<EvalState>(create);
   static EvalState _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<ExprValue> get values => $_getList(0);
 
+  @$pb.TagNumber(3)
   $core.List<EvalState_Result> get results => $_getList(1);
 }
 
@@ -100,14 +117,12 @@ class ExprValue extends $pb.GeneratedMessage {
     0: ExprValue_Kind.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ExprValue',
-      package: const $pb.PackageName('google.api.expr.v1beta1'))
+      package: const $pb.PackageName('google.api.expr.v1beta1'),
+      createEmptyInstance: create)
     ..oo(0, [1, 2, 3])
-    ..a<$0.Value>(
-        1, 'value', $pb.PbFieldType.OM, $0.Value.getDefault, $0.Value.create)
-    ..a<ErrorSet>(
-        2, 'error', $pb.PbFieldType.OM, ErrorSet.getDefault, ErrorSet.create)
-    ..a<UnknownSet>(3, 'unknown', $pb.PbFieldType.OM, UnknownSet.getDefault,
-        UnknownSet.create)
+    ..aOM<$0.Value>(1, 'value', subBuilder: $0.Value.create)
+    ..aOM<ErrorSet>(2, 'error', subBuilder: ErrorSet.create)
+    ..aOM<UnknownSet>(3, 'unknown', subBuilder: UnknownSet.create)
     ..hasRequiredFields = false;
 
   ExprValue._() : super();
@@ -126,41 +141,63 @@ class ExprValue extends $pb.GeneratedMessage {
   static ExprValue create() => ExprValue._();
   ExprValue createEmptyInstance() => create();
   static $pb.PbList<ExprValue> createRepeated() => $pb.PbList<ExprValue>();
-  static ExprValue getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ExprValue getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ExprValue>(create);
   static ExprValue _defaultInstance;
 
   ExprValue_Kind whichKind() => _ExprValue_KindByTag[$_whichOneof(0)];
   void clearKind() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   $0.Value get value => $_getN(0);
+  @$pb.TagNumber(1)
   set value($0.Value v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasValue() => $_has(0);
+  @$pb.TagNumber(1)
   void clearValue() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.Value ensureValue() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   ErrorSet get error => $_getN(1);
+  @$pb.TagNumber(2)
   set error(ErrorSet v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasError() => $_has(1);
+  @$pb.TagNumber(2)
   void clearError() => clearField(2);
+  @$pb.TagNumber(2)
+  ErrorSet ensureError() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   UnknownSet get unknown => $_getN(2);
+  @$pb.TagNumber(3)
   set unknown(UnknownSet v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasUnknown() => $_has(2);
+  @$pb.TagNumber(3)
   void clearUnknown() => clearField(3);
+  @$pb.TagNumber(3)
+  UnknownSet ensureUnknown() => $_ensure(2);
 }
 
 class ErrorSet extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ErrorSet',
-      package: const $pb.PackageName('google.api.expr.v1beta1'))
-    ..pc<$1.Status>(1, 'errors', $pb.PbFieldType.PM, $1.Status.create)
+      package: const $pb.PackageName('google.api.expr.v1beta1'),
+      createEmptyInstance: create)
+    ..pc<$1.Status>(1, 'errors', $pb.PbFieldType.PM,
+        subBuilder: $1.Status.create)
     ..hasRequiredFields = false;
 
   ErrorSet._() : super();
@@ -179,16 +216,20 @@ class ErrorSet extends $pb.GeneratedMessage {
   static ErrorSet create() => ErrorSet._();
   ErrorSet createEmptyInstance() => create();
   static $pb.PbList<ErrorSet> createRepeated() => $pb.PbList<ErrorSet>();
-  static ErrorSet getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ErrorSet getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ErrorSet>(create);
   static ErrorSet _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$1.Status> get errors => $_getList(0);
 }
 
 class UnknownSet extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UnknownSet',
-      package: const $pb.PackageName('google.api.expr.v1beta1'))
-    ..pc<IdRef>(1, 'exprs', $pb.PbFieldType.PM, IdRef.create)
+      package: const $pb.PackageName('google.api.expr.v1beta1'),
+      createEmptyInstance: create)
+    ..pc<IdRef>(1, 'exprs', $pb.PbFieldType.PM, subBuilder: IdRef.create)
     ..hasRequiredFields = false;
 
   UnknownSet._() : super();
@@ -207,15 +248,19 @@ class UnknownSet extends $pb.GeneratedMessage {
   static UnknownSet create() => UnknownSet._();
   UnknownSet createEmptyInstance() => create();
   static $pb.PbList<UnknownSet> createRepeated() => $pb.PbList<UnknownSet>();
-  static UnknownSet getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UnknownSet getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UnknownSet>(create);
   static UnknownSet _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<IdRef> get exprs => $_getList(0);
 }
 
 class IdRef extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('IdRef',
-      package: const $pb.PackageName('google.api.expr.v1beta1'))
+      package: const $pb.PackageName('google.api.expr.v1beta1'),
+      createEmptyInstance: create)
     ..a<$core.int>(1, 'id', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
@@ -235,14 +280,20 @@ class IdRef extends $pb.GeneratedMessage {
   static IdRef create() => IdRef._();
   IdRef createEmptyInstance() => create();
   static $pb.PbList<IdRef> createRepeated() => $pb.PbList<IdRef>();
-  static IdRef getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static IdRef getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<IdRef>(create);
   static IdRef _defaultInstance;
 
-  $core.int get id => $_get(0, 0);
+  @$pb.TagNumber(1)
+  $core.int get id => $_getIZ(0);
+  @$pb.TagNumber(1)
   set id($core.int v) {
     $_setSignedInt32(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearId() => clearField(1);
 }

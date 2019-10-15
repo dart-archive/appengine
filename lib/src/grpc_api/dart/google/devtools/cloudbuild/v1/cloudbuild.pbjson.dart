@@ -8,22 +8,23 @@
 const RetryBuildRequest$json = {
   '1': 'RetryBuildRequest',
   '2': [
-    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
-    {'1': 'id', '3': 2, '4': 1, '5': 9, '10': 'id'},
+    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'projectId'},
+    {'1': 'id', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'id'},
   ],
 };
 
 const RunBuildTriggerRequest$json = {
   '1': 'RunBuildTriggerRequest',
   '2': [
-    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
-    {'1': 'trigger_id', '3': 2, '4': 1, '5': 9, '10': 'triggerId'},
+    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'projectId'},
+    {'1': 'trigger_id', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'triggerId'},
     {
       '1': 'source',
       '3': 3,
       '4': 1,
       '5': 11,
       '6': '.google.devtools.cloudbuild.v1.RepoSource',
+      '8': {},
       '10': 'source'
     },
   ],
@@ -184,6 +185,14 @@ const Results$json = {
       '4': 3,
       '5': 12,
       '10': 'buildStepOutputs'
+    },
+    {
+      '1': 'artifact_timing',
+      '3': 7,
+      '4': 1,
+      '5': 11,
+      '6': '.google.devtools.cloudbuild.v1.TimeSpan',
+      '10': 'artifactTiming'
     },
   ],
 };
@@ -552,13 +561,14 @@ const Secret_SecretEnvEntry$json = {
 const CreateBuildRequest$json = {
   '1': 'CreateBuildRequest',
   '2': [
-    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
+    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'projectId'},
     {
       '1': 'build',
       '3': 2,
       '4': 1,
       '5': 11,
       '6': '.google.devtools.cloudbuild.v1.Build',
+      '8': {},
       '10': 'build'
     },
   ],
@@ -567,15 +577,15 @@ const CreateBuildRequest$json = {
 const GetBuildRequest$json = {
   '1': 'GetBuildRequest',
   '2': [
-    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
-    {'1': 'id', '3': 2, '4': 1, '5': 9, '10': 'id'},
+    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'projectId'},
+    {'1': 'id', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'id'},
   ],
 };
 
 const ListBuildsRequest$json = {
   '1': 'ListBuildsRequest',
   '2': [
-    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
+    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'projectId'},
     {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
     {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
     {'1': 'filter', '3': 8, '4': 1, '5': 9, '10': 'filter'},
@@ -600,8 +610,8 @@ const ListBuildsResponse$json = {
 const CancelBuildRequest$json = {
   '1': 'CancelBuildRequest',
   '2': [
-    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
-    {'1': 'id', '3': 2, '4': 1, '5': 9, '10': 'id'},
+    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'projectId'},
+    {'1': 'id', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'id'},
   ],
 };
 
@@ -610,6 +620,8 @@ const BuildTrigger$json = {
   '2': [
     {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
     {'1': 'description', '3': 10, '4': 1, '5': 9, '10': 'description'},
+    {'1': 'name', '3': 21, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'tags', '3': 19, '4': 3, '5': 9, '10': 'tags'},
     {
       '1': 'trigger_template',
       '3': 7,
@@ -617,6 +629,14 @@ const BuildTrigger$json = {
       '5': 11,
       '6': '.google.devtools.cloudbuild.v1.RepoSource',
       '10': 'triggerTemplate'
+    },
+    {
+      '1': 'github',
+      '3': 13,
+      '4': 1,
+      '5': 11,
+      '6': '.google.devtools.cloudbuild.v1.GitHubEventsConfig',
+      '10': 'github'
     },
     {
       '1': 'build',
@@ -663,16 +683,85 @@ const BuildTrigger_SubstitutionsEntry$json = {
   '7': {'7': true},
 };
 
+const GitHubEventsConfig$json = {
+  '1': 'GitHubEventsConfig',
+  '2': [
+    {'1': 'installation_id', '3': 1, '4': 1, '5': 3, '10': 'installationId'},
+    {'1': 'owner', '3': 6, '4': 1, '5': 9, '10': 'owner'},
+    {'1': 'name', '3': 7, '4': 1, '5': 9, '10': 'name'},
+    {
+      '1': 'pull_request',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.devtools.cloudbuild.v1.PullRequestFilter',
+      '9': 0,
+      '10': 'pullRequest'
+    },
+    {
+      '1': 'push',
+      '3': 5,
+      '4': 1,
+      '5': 11,
+      '6': '.google.devtools.cloudbuild.v1.PushFilter',
+      '9': 0,
+      '10': 'push'
+    },
+  ],
+  '8': [
+    {'1': 'event'},
+  ],
+};
+
+const PullRequestFilter$json = {
+  '1': 'PullRequestFilter',
+  '2': [
+    {'1': 'branch', '3': 2, '4': 1, '5': 9, '9': 0, '10': 'branch'},
+    {
+      '1': 'comment_control',
+      '3': 5,
+      '4': 1,
+      '5': 14,
+      '6': '.google.devtools.cloudbuild.v1.PullRequestFilter.CommentControl',
+      '10': 'commentControl'
+    },
+  ],
+  '4': [PullRequestFilter_CommentControl$json],
+  '8': [
+    {'1': 'git_ref'},
+  ],
+};
+
+const PullRequestFilter_CommentControl$json = {
+  '1': 'CommentControl',
+  '2': [
+    {'1': 'COMMENTS_DISABLED', '2': 0},
+    {'1': 'COMMENTS_ENABLED', '2': 1},
+  ],
+};
+
+const PushFilter$json = {
+  '1': 'PushFilter',
+  '2': [
+    {'1': 'branch', '3': 2, '4': 1, '5': 9, '9': 0, '10': 'branch'},
+    {'1': 'tag', '3': 3, '4': 1, '5': 9, '9': 0, '10': 'tag'},
+  ],
+  '8': [
+    {'1': 'git_ref'},
+  ],
+};
+
 const CreateBuildTriggerRequest$json = {
   '1': 'CreateBuildTriggerRequest',
   '2': [
-    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
+    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'projectId'},
     {
       '1': 'trigger',
       '3': 2,
       '4': 1,
       '5': 11,
       '6': '.google.devtools.cloudbuild.v1.BuildTrigger',
+      '8': {},
       '10': 'trigger'
     },
   ],
@@ -681,15 +770,17 @@ const CreateBuildTriggerRequest$json = {
 const GetBuildTriggerRequest$json = {
   '1': 'GetBuildTriggerRequest',
   '2': [
-    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
-    {'1': 'trigger_id', '3': 2, '4': 1, '5': 9, '10': 'triggerId'},
+    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'projectId'},
+    {'1': 'trigger_id', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'triggerId'},
   ],
 };
 
 const ListBuildTriggersRequest$json = {
   '1': 'ListBuildTriggersRequest',
   '2': [
-    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
+    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'projectId'},
+    {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
+    {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
   ],
 };
 
@@ -704,28 +795,30 @@ const ListBuildTriggersResponse$json = {
       '6': '.google.devtools.cloudbuild.v1.BuildTrigger',
       '10': 'triggers'
     },
+    {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
   ],
 };
 
 const DeleteBuildTriggerRequest$json = {
   '1': 'DeleteBuildTriggerRequest',
   '2': [
-    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
-    {'1': 'trigger_id', '3': 2, '4': 1, '5': 9, '10': 'triggerId'},
+    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'projectId'},
+    {'1': 'trigger_id', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'triggerId'},
   ],
 };
 
 const UpdateBuildTriggerRequest$json = {
   '1': 'UpdateBuildTriggerRequest',
   '2': [
-    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
-    {'1': 'trigger_id', '3': 2, '4': 1, '5': 9, '10': 'triggerId'},
+    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'projectId'},
+    {'1': 'trigger_id', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'triggerId'},
     {
       '1': 'trigger',
       '3': 3,
       '4': 1,
       '5': 11,
       '6': '.google.devtools.cloudbuild.v1.BuildTrigger',
+      '8': {},
       '10': 'trigger'
     },
   ],
@@ -844,5 +937,183 @@ const BuildOptions_LoggingMode$json = {
     {'1': 'LOGGING_UNSPECIFIED', '2': 0},
     {'1': 'LEGACY', '2': 1},
     {'1': 'GCS_ONLY', '2': 2},
+  ],
+};
+
+const WorkerPool$json = {
+  '1': 'WorkerPool',
+  '2': [
+    {'1': 'name', '3': 14, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'project_id', '3': 2, '4': 1, '5': 9, '10': 'projectId'},
+    {
+      '1': 'service_account_email',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '10': 'serviceAccountEmail'
+    },
+    {'1': 'worker_count', '3': 4, '4': 1, '5': 3, '10': 'workerCount'},
+    {
+      '1': 'worker_config',
+      '3': 16,
+      '4': 1,
+      '5': 11,
+      '6': '.google.devtools.cloudbuild.v1.WorkerConfig',
+      '10': 'workerConfig'
+    },
+    {
+      '1': 'regions',
+      '3': 9,
+      '4': 3,
+      '5': 14,
+      '6': '.google.devtools.cloudbuild.v1.WorkerPool.Region',
+      '10': 'regions'
+    },
+    {
+      '1': 'create_time',
+      '3': 11,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'createTime'
+    },
+    {
+      '1': 'update_time',
+      '3': 17,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'updateTime'
+    },
+    {
+      '1': 'delete_time',
+      '3': 12,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'deleteTime'
+    },
+    {
+      '1': 'status',
+      '3': 13,
+      '4': 1,
+      '5': 14,
+      '6': '.google.devtools.cloudbuild.v1.WorkerPool.Status',
+      '10': 'status'
+    },
+  ],
+  '4': [WorkerPool_Region$json, WorkerPool_Status$json],
+};
+
+const WorkerPool_Region$json = {
+  '1': 'Region',
+  '2': [
+    {'1': 'REGION_UNSPECIFIED', '2': 0},
+    {'1': 'US_CENTRAL1', '2': 1},
+    {'1': 'US_WEST1', '2': 2},
+    {'1': 'US_EAST1', '2': 3},
+    {'1': 'US_EAST4', '2': 4},
+  ],
+};
+
+const WorkerPool_Status$json = {
+  '1': 'Status',
+  '2': [
+    {'1': 'STATUS_UNSPECIFIED', '2': 0},
+    {'1': 'CREATING', '2': 1},
+    {'1': 'RUNNING', '2': 2},
+    {'1': 'DELETING', '2': 3},
+    {'1': 'DELETED', '2': 4},
+  ],
+};
+
+const WorkerConfig$json = {
+  '1': 'WorkerConfig',
+  '2': [
+    {'1': 'machine_type', '3': 1, '4': 1, '5': 9, '10': 'machineType'},
+    {'1': 'disk_size_gb', '3': 2, '4': 1, '5': 3, '10': 'diskSizeGb'},
+    {
+      '1': 'network',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.devtools.cloudbuild.v1.Network',
+      '10': 'network'
+    },
+    {'1': 'tag', '3': 4, '4': 1, '5': 9, '10': 'tag'},
+  ],
+};
+
+const Network$json = {
+  '1': 'Network',
+  '2': [
+    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
+    {'1': 'network', '3': 2, '4': 1, '5': 9, '10': 'network'},
+    {'1': 'subnetwork', '3': 3, '4': 1, '5': 9, '10': 'subnetwork'},
+  ],
+};
+
+const CreateWorkerPoolRequest$json = {
+  '1': 'CreateWorkerPoolRequest',
+  '2': [
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {
+      '1': 'worker_pool',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.devtools.cloudbuild.v1.WorkerPool',
+      '10': 'workerPool'
+    },
+  ],
+};
+
+const GetWorkerPoolRequest$json = {
+  '1': 'GetWorkerPoolRequest',
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  ],
+};
+
+const DeleteWorkerPoolRequest$json = {
+  '1': 'DeleteWorkerPoolRequest',
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+  ],
+};
+
+const UpdateWorkerPoolRequest$json = {
+  '1': 'UpdateWorkerPoolRequest',
+  '2': [
+    {'1': 'name', '3': 2, '4': 1, '5': 9, '10': 'name'},
+    {
+      '1': 'worker_pool',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.devtools.cloudbuild.v1.WorkerPool',
+      '10': 'workerPool'
+    },
+  ],
+};
+
+const ListWorkerPoolsRequest$json = {
+  '1': 'ListWorkerPoolsRequest',
+  '2': [
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+  ],
+};
+
+const ListWorkerPoolsResponse$json = {
+  '1': 'ListWorkerPoolsResponse',
+  '2': [
+    {
+      '1': 'worker_pools',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.devtools.cloudbuild.v1.WorkerPool',
+      '10': 'workerPools'
+    },
   ],
 };

@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -39,16 +38,14 @@ import '../enums/location_group_radius_units.pbenum.dart' as $24;
 
 class KeywordInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('KeywordInfo',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
-    ..a<$0.StringValue>(1, 'text', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
+    ..aOM<$0.StringValue>(1, 'text', subBuilder: $0.StringValue.create)
     ..e<$1.KeywordMatchTypeEnum_KeywordMatchType>(
-        2,
-        'matchType',
-        $pb.PbFieldType.OE,
-        $1.KeywordMatchTypeEnum_KeywordMatchType.UNSPECIFIED,
-        $1.KeywordMatchTypeEnum_KeywordMatchType.valueOf,
-        $1.KeywordMatchTypeEnum_KeywordMatchType.values)
+        2, 'matchType', $pb.PbFieldType.OE,
+        defaultOrMaker: $1.KeywordMatchTypeEnum_KeywordMatchType.UNSPECIFIED,
+        valueOf: $1.KeywordMatchTypeEnum_KeywordMatchType.valueOf,
+        enumValues: $1.KeywordMatchTypeEnum_KeywordMatchType.values)
     ..hasRequiredFields = false;
 
   KeywordInfo._() : super();
@@ -67,31 +64,43 @@ class KeywordInfo extends $pb.GeneratedMessage {
   static KeywordInfo create() => KeywordInfo._();
   KeywordInfo createEmptyInstance() => create();
   static $pb.PbList<KeywordInfo> createRepeated() => $pb.PbList<KeywordInfo>();
-  static KeywordInfo getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static KeywordInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<KeywordInfo>(create);
   static KeywordInfo _defaultInstance;
 
+  @$pb.TagNumber(1)
   $0.StringValue get text => $_getN(0);
+  @$pb.TagNumber(1)
   set text($0.StringValue v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasText() => $_has(0);
+  @$pb.TagNumber(1)
   void clearText() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.StringValue ensureText() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $1.KeywordMatchTypeEnum_KeywordMatchType get matchType => $_getN(1);
+  @$pb.TagNumber(2)
   set matchType($1.KeywordMatchTypeEnum_KeywordMatchType v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasMatchType() => $_has(1);
+  @$pb.TagNumber(2)
   void clearMatchType() => clearField(2);
 }
 
 class PlacementInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('PlacementInfo',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
-    ..a<$0.StringValue>(1, 'url', $pb.PbFieldType.OM, $0.StringValue.getDefault,
-        $0.StringValue.create)
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
+    ..aOM<$0.StringValue>(1, 'url', subBuilder: $0.StringValue.create)
     ..hasRequiredFields = false;
 
   PlacementInfo._() : super();
@@ -111,23 +120,32 @@ class PlacementInfo extends $pb.GeneratedMessage {
   PlacementInfo createEmptyInstance() => create();
   static $pb.PbList<PlacementInfo> createRepeated() =>
       $pb.PbList<PlacementInfo>();
-  static PlacementInfo getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static PlacementInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PlacementInfo>(create);
   static PlacementInfo _defaultInstance;
 
+  @$pb.TagNumber(1)
   $0.StringValue get url => $_getN(0);
+  @$pb.TagNumber(1)
   set url($0.StringValue v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasUrl() => $_has(0);
+  @$pb.TagNumber(1)
   void clearUrl() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.StringValue ensureUrl() => $_ensure(0);
 }
 
 class MobileAppCategoryInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('MobileAppCategoryInfo',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
-    ..a<$0.StringValue>(1, 'mobileAppCategoryConstant', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
+    ..aOM<$0.StringValue>(1, 'mobileAppCategoryConstant',
+        subBuilder: $0.StringValue.create)
     ..hasRequiredFields = false;
 
   MobileAppCategoryInfo._() : super();
@@ -149,26 +167,32 @@ class MobileAppCategoryInfo extends $pb.GeneratedMessage {
   MobileAppCategoryInfo createEmptyInstance() => create();
   static $pb.PbList<MobileAppCategoryInfo> createRepeated() =>
       $pb.PbList<MobileAppCategoryInfo>();
-  static MobileAppCategoryInfo getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MobileAppCategoryInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MobileAppCategoryInfo>(create);
   static MobileAppCategoryInfo _defaultInstance;
 
+  @$pb.TagNumber(1)
   $0.StringValue get mobileAppCategoryConstant => $_getN(0);
+  @$pb.TagNumber(1)
   set mobileAppCategoryConstant($0.StringValue v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasMobileAppCategoryConstant() => $_has(0);
+  @$pb.TagNumber(1)
   void clearMobileAppCategoryConstant() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.StringValue ensureMobileAppCategoryConstant() => $_ensure(0);
 }
 
 class MobileApplicationInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('MobileApplicationInfo',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
-    ..a<$0.StringValue>(2, 'appId', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
-    ..a<$0.StringValue>(3, 'name', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
+    ..aOM<$0.StringValue>(2, 'appId', subBuilder: $0.StringValue.create)
+    ..aOM<$0.StringValue>(3, 'name', subBuilder: $0.StringValue.create)
     ..hasRequiredFields = false;
 
   MobileApplicationInfo._() : super();
@@ -190,32 +214,46 @@ class MobileApplicationInfo extends $pb.GeneratedMessage {
   MobileApplicationInfo createEmptyInstance() => create();
   static $pb.PbList<MobileApplicationInfo> createRepeated() =>
       $pb.PbList<MobileApplicationInfo>();
-  static MobileApplicationInfo getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MobileApplicationInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MobileApplicationInfo>(create);
   static MobileApplicationInfo _defaultInstance;
 
+  @$pb.TagNumber(2)
   $0.StringValue get appId => $_getN(0);
+  @$pb.TagNumber(2)
   set appId($0.StringValue v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasAppId() => $_has(0);
+  @$pb.TagNumber(2)
   void clearAppId() => clearField(2);
+  @$pb.TagNumber(2)
+  $0.StringValue ensureAppId() => $_ensure(0);
 
+  @$pb.TagNumber(3)
   $0.StringValue get name => $_getN(1);
+  @$pb.TagNumber(3)
   set name($0.StringValue v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasName() => $_has(1);
+  @$pb.TagNumber(3)
   void clearName() => clearField(3);
+  @$pb.TagNumber(3)
+  $0.StringValue ensureName() => $_ensure(1);
 }
 
 class LocationInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('LocationInfo',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
-    ..a<$0.StringValue>(1, 'geoTargetConstant', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
+    ..aOM<$0.StringValue>(1, 'geoTargetConstant',
+        subBuilder: $0.StringValue.create)
     ..hasRequiredFields = false;
 
   LocationInfo._() : super();
@@ -235,28 +273,34 @@ class LocationInfo extends $pb.GeneratedMessage {
   LocationInfo createEmptyInstance() => create();
   static $pb.PbList<LocationInfo> createRepeated() =>
       $pb.PbList<LocationInfo>();
-  static LocationInfo getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static LocationInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<LocationInfo>(create);
   static LocationInfo _defaultInstance;
 
+  @$pb.TagNumber(1)
   $0.StringValue get geoTargetConstant => $_getN(0);
+  @$pb.TagNumber(1)
   set geoTargetConstant($0.StringValue v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasGeoTargetConstant() => $_has(0);
+  @$pb.TagNumber(1)
   void clearGeoTargetConstant() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.StringValue ensureGeoTargetConstant() => $_ensure(0);
 }
 
 class DeviceInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeviceInfo',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
-    ..e<$2.DeviceEnum_Device>(
-        1,
-        'type',
-        $pb.PbFieldType.OE,
-        $2.DeviceEnum_Device.UNSPECIFIED,
-        $2.DeviceEnum_Device.valueOf,
-        $2.DeviceEnum_Device.values)
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
+    ..e<$2.DeviceEnum_Device>(1, 'type', $pb.PbFieldType.OE,
+        defaultOrMaker: $2.DeviceEnum_Device.UNSPECIFIED,
+        valueOf: $2.DeviceEnum_Device.valueOf,
+        enumValues: $2.DeviceEnum_Device.values)
     ..hasRequiredFields = false;
 
   DeviceInfo._() : super();
@@ -275,28 +319,34 @@ class DeviceInfo extends $pb.GeneratedMessage {
   static DeviceInfo create() => DeviceInfo._();
   DeviceInfo createEmptyInstance() => create();
   static $pb.PbList<DeviceInfo> createRepeated() => $pb.PbList<DeviceInfo>();
-  static DeviceInfo getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeviceInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeviceInfo>(create);
   static DeviceInfo _defaultInstance;
 
+  @$pb.TagNumber(1)
   $2.DeviceEnum_Device get type => $_getN(0);
+  @$pb.TagNumber(1)
   set type($2.DeviceEnum_Device v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasType() => $_has(0);
+  @$pb.TagNumber(1)
   void clearType() => clearField(1);
 }
 
 class PreferredContentInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('PreferredContentInfo',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
     ..e<$3.PreferredContentTypeEnum_PreferredContentType>(
-        2,
-        'type',
-        $pb.PbFieldType.OE,
-        $3.PreferredContentTypeEnum_PreferredContentType.UNSPECIFIED,
-        $3.PreferredContentTypeEnum_PreferredContentType.valueOf,
-        $3.PreferredContentTypeEnum_PreferredContentType.values)
+        2, 'type', $pb.PbFieldType.OE,
+        defaultOrMaker:
+            $3.PreferredContentTypeEnum_PreferredContentType.UNSPECIFIED,
+        valueOf: $3.PreferredContentTypeEnum_PreferredContentType.valueOf,
+        enumValues: $3.PreferredContentTypeEnum_PreferredContentType.values)
     ..hasRequiredFields = false;
 
   PreferredContentInfo._() : super();
@@ -317,33 +367,36 @@ class PreferredContentInfo extends $pb.GeneratedMessage {
   PreferredContentInfo createEmptyInstance() => create();
   static $pb.PbList<PreferredContentInfo> createRepeated() =>
       $pb.PbList<PreferredContentInfo>();
-  static PreferredContentInfo getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static PreferredContentInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PreferredContentInfo>(create);
   static PreferredContentInfo _defaultInstance;
 
+  @$pb.TagNumber(2)
   $3.PreferredContentTypeEnum_PreferredContentType get type => $_getN(0);
+  @$pb.TagNumber(2)
   set type($3.PreferredContentTypeEnum_PreferredContentType v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasType() => $_has(0);
+  @$pb.TagNumber(2)
   void clearType() => clearField(2);
 }
 
 class ListingGroupInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListingGroupInfo',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
-    ..e<$4.ListingGroupTypeEnum_ListingGroupType>(
-        1,
-        'type',
-        $pb.PbFieldType.OE,
-        $4.ListingGroupTypeEnum_ListingGroupType.UNSPECIFIED,
-        $4.ListingGroupTypeEnum_ListingGroupType.valueOf,
-        $4.ListingGroupTypeEnum_ListingGroupType.values)
-    ..a<ListingDimensionInfo>(2, 'caseValue', $pb.PbFieldType.OM,
-        ListingDimensionInfo.getDefault, ListingDimensionInfo.create)
-    ..a<$0.StringValue>(3, 'parentAdGroupCriterion', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
+    ..e<$4.ListingGroupTypeEnum_ListingGroupType>(1, 'type', $pb.PbFieldType.OE,
+        defaultOrMaker: $4.ListingGroupTypeEnum_ListingGroupType.UNSPECIFIED,
+        valueOf: $4.ListingGroupTypeEnum_ListingGroupType.valueOf,
+        enumValues: $4.ListingGroupTypeEnum_ListingGroupType.values)
+    ..aOM<ListingDimensionInfo>(2, 'caseValue',
+        subBuilder: ListingDimensionInfo.create)
+    ..aOM<$0.StringValue>(3, 'parentAdGroupCriterion',
+        subBuilder: $0.StringValue.create)
     ..hasRequiredFields = false;
 
   ListingGroupInfo._() : super();
@@ -363,40 +416,58 @@ class ListingGroupInfo extends $pb.GeneratedMessage {
   ListingGroupInfo createEmptyInstance() => create();
   static $pb.PbList<ListingGroupInfo> createRepeated() =>
       $pb.PbList<ListingGroupInfo>();
-  static ListingGroupInfo getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListingGroupInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListingGroupInfo>(create);
   static ListingGroupInfo _defaultInstance;
 
+  @$pb.TagNumber(1)
   $4.ListingGroupTypeEnum_ListingGroupType get type => $_getN(0);
+  @$pb.TagNumber(1)
   set type($4.ListingGroupTypeEnum_ListingGroupType v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasType() => $_has(0);
+  @$pb.TagNumber(1)
   void clearType() => clearField(1);
 
+  @$pb.TagNumber(2)
   ListingDimensionInfo get caseValue => $_getN(1);
+  @$pb.TagNumber(2)
   set caseValue(ListingDimensionInfo v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasCaseValue() => $_has(1);
+  @$pb.TagNumber(2)
   void clearCaseValue() => clearField(2);
+  @$pb.TagNumber(2)
+  ListingDimensionInfo ensureCaseValue() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $0.StringValue get parentAdGroupCriterion => $_getN(2);
+  @$pb.TagNumber(3)
   set parentAdGroupCriterion($0.StringValue v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasParentAdGroupCriterion() => $_has(2);
+  @$pb.TagNumber(3)
   void clearParentAdGroupCriterion() => clearField(3);
+  @$pb.TagNumber(3)
+  $0.StringValue ensureParentAdGroupCriterion() => $_ensure(2);
 }
 
 class ListingScopeInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListingScopeInfo',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
-    ..pc<ListingDimensionInfo>(
-        2, 'dimensions', $pb.PbFieldType.PM, ListingDimensionInfo.create)
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
+    ..pc<ListingDimensionInfo>(2, 'dimensions', $pb.PbFieldType.PM,
+        subBuilder: ListingDimensionInfo.create)
     ..hasRequiredFields = false;
 
   ListingScopeInfo._() : super();
@@ -416,10 +487,12 @@ class ListingScopeInfo extends $pb.GeneratedMessage {
   ListingScopeInfo createEmptyInstance() => create();
   static $pb.PbList<ListingScopeInfo> createRepeated() =>
       $pb.PbList<ListingScopeInfo>();
-  static ListingScopeInfo getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListingScopeInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListingScopeInfo>(create);
   static ListingScopeInfo _defaultInstance;
 
+  @$pb.TagNumber(2)
   $core.List<ListingDimensionInfo> get dimensions => $_getList(0);
 }
 
@@ -461,52 +534,33 @@ class ListingDimensionInfo extends $pb.GeneratedMessage {
     0: ListingDimensionInfo_Dimension.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListingDimensionInfo',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
     ..oo(0, [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14])
-    ..a<ListingBrandInfo>(1, 'listingBrand', $pb.PbFieldType.OM,
-        ListingBrandInfo.getDefault, ListingBrandInfo.create)
-    ..a<HotelIdInfo>(2, 'hotelId', $pb.PbFieldType.OM, HotelIdInfo.getDefault,
-        HotelIdInfo.create)
-    ..a<HotelClassInfo>(3, 'hotelClass', $pb.PbFieldType.OM,
-        HotelClassInfo.getDefault, HotelClassInfo.create)
-    ..a<HotelCountryRegionInfo>(4, 'hotelCountryRegion', $pb.PbFieldType.OM,
-        HotelCountryRegionInfo.getDefault, HotelCountryRegionInfo.create)
-    ..a<HotelStateInfo>(5, 'hotelState', $pb.PbFieldType.OM,
-        HotelStateInfo.getDefault, HotelStateInfo.create)
-    ..a<HotelCityInfo>(6, 'hotelCity', $pb.PbFieldType.OM,
-        HotelCityInfo.getDefault, HotelCityInfo.create)
-    ..a<ListingCustomAttributeInfo>(
-        7,
-        'listingCustomAttribute',
-        $pb.PbFieldType.OM,
-        ListingCustomAttributeInfo.getDefault,
-        ListingCustomAttributeInfo.create)
-    ..a<ProductChannelInfo>(8, 'productChannel', $pb.PbFieldType.OM,
-        ProductChannelInfo.getDefault, ProductChannelInfo.create)
-    ..a<ProductChannelExclusivityInfo>(
-        9,
-        'productChannelExclusivity',
-        $pb.PbFieldType.OM,
-        ProductChannelExclusivityInfo.getDefault,
-        ProductChannelExclusivityInfo.create)
-    ..a<ProductConditionInfo>(10, 'productCondition', $pb.PbFieldType.OM,
-        ProductConditionInfo.getDefault, ProductConditionInfo.create)
-    ..a<ProductItemIdInfo>(11, 'productItemId', $pb.PbFieldType.OM,
-        ProductItemIdInfo.getDefault, ProductItemIdInfo.create)
-    ..a<ProductTypeInfo>(12, 'productType', $pb.PbFieldType.OM,
-        ProductTypeInfo.getDefault, ProductTypeInfo.create)
-    ..a<ProductBiddingCategoryInfo>(
-        13,
-        'productBiddingCategory',
-        $pb.PbFieldType.OM,
-        ProductBiddingCategoryInfo.getDefault,
-        ProductBiddingCategoryInfo.create)
-    ..a<UnknownListingDimensionInfo>(
-        14,
-        'unknownListingDimension',
-        $pb.PbFieldType.OM,
-        UnknownListingDimensionInfo.getDefault,
-        UnknownListingDimensionInfo.create)
+    ..aOM<ListingBrandInfo>(1, 'listingBrand',
+        subBuilder: ListingBrandInfo.create)
+    ..aOM<HotelIdInfo>(2, 'hotelId', subBuilder: HotelIdInfo.create)
+    ..aOM<HotelClassInfo>(3, 'hotelClass', subBuilder: HotelClassInfo.create)
+    ..aOM<HotelCountryRegionInfo>(4, 'hotelCountryRegion',
+        subBuilder: HotelCountryRegionInfo.create)
+    ..aOM<HotelStateInfo>(5, 'hotelState', subBuilder: HotelStateInfo.create)
+    ..aOM<HotelCityInfo>(6, 'hotelCity', subBuilder: HotelCityInfo.create)
+    ..aOM<ListingCustomAttributeInfo>(7, 'listingCustomAttribute',
+        subBuilder: ListingCustomAttributeInfo.create)
+    ..aOM<ProductChannelInfo>(8, 'productChannel',
+        subBuilder: ProductChannelInfo.create)
+    ..aOM<ProductChannelExclusivityInfo>(9, 'productChannelExclusivity',
+        subBuilder: ProductChannelExclusivityInfo.create)
+    ..aOM<ProductConditionInfo>(10, 'productCondition',
+        subBuilder: ProductConditionInfo.create)
+    ..aOM<ProductItemIdInfo>(11, 'productItemId',
+        subBuilder: ProductItemIdInfo.create)
+    ..aOM<ProductTypeInfo>(12, 'productType',
+        subBuilder: ProductTypeInfo.create)
+    ..aOM<ProductBiddingCategoryInfo>(13, 'productBiddingCategory',
+        subBuilder: ProductBiddingCategoryInfo.create)
+    ..aOM<UnknownListingDimensionInfo>(14, 'unknownListingDimension',
+        subBuilder: UnknownListingDimensionInfo.create)
     ..hasRequiredFields = false;
 
   ListingDimensionInfo._() : super();
@@ -527,132 +581,218 @@ class ListingDimensionInfo extends $pb.GeneratedMessage {
   ListingDimensionInfo createEmptyInstance() => create();
   static $pb.PbList<ListingDimensionInfo> createRepeated() =>
       $pb.PbList<ListingDimensionInfo>();
-  static ListingDimensionInfo getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListingDimensionInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListingDimensionInfo>(create);
   static ListingDimensionInfo _defaultInstance;
 
   ListingDimensionInfo_Dimension whichDimension() =>
       _ListingDimensionInfo_DimensionByTag[$_whichOneof(0)];
   void clearDimension() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   ListingBrandInfo get listingBrand => $_getN(0);
+  @$pb.TagNumber(1)
   set listingBrand(ListingBrandInfo v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasListingBrand() => $_has(0);
+  @$pb.TagNumber(1)
   void clearListingBrand() => clearField(1);
+  @$pb.TagNumber(1)
+  ListingBrandInfo ensureListingBrand() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   HotelIdInfo get hotelId => $_getN(1);
+  @$pb.TagNumber(2)
   set hotelId(HotelIdInfo v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasHotelId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearHotelId() => clearField(2);
+  @$pb.TagNumber(2)
+  HotelIdInfo ensureHotelId() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   HotelClassInfo get hotelClass => $_getN(2);
+  @$pb.TagNumber(3)
   set hotelClass(HotelClassInfo v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasHotelClass() => $_has(2);
+  @$pb.TagNumber(3)
   void clearHotelClass() => clearField(3);
+  @$pb.TagNumber(3)
+  HotelClassInfo ensureHotelClass() => $_ensure(2);
 
+  @$pb.TagNumber(4)
   HotelCountryRegionInfo get hotelCountryRegion => $_getN(3);
+  @$pb.TagNumber(4)
   set hotelCountryRegion(HotelCountryRegionInfo v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasHotelCountryRegion() => $_has(3);
+  @$pb.TagNumber(4)
   void clearHotelCountryRegion() => clearField(4);
+  @$pb.TagNumber(4)
+  HotelCountryRegionInfo ensureHotelCountryRegion() => $_ensure(3);
 
+  @$pb.TagNumber(5)
   HotelStateInfo get hotelState => $_getN(4);
+  @$pb.TagNumber(5)
   set hotelState(HotelStateInfo v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasHotelState() => $_has(4);
+  @$pb.TagNumber(5)
   void clearHotelState() => clearField(5);
+  @$pb.TagNumber(5)
+  HotelStateInfo ensureHotelState() => $_ensure(4);
 
+  @$pb.TagNumber(6)
   HotelCityInfo get hotelCity => $_getN(5);
+  @$pb.TagNumber(6)
   set hotelCity(HotelCityInfo v) {
     setField(6, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasHotelCity() => $_has(5);
+  @$pb.TagNumber(6)
   void clearHotelCity() => clearField(6);
+  @$pb.TagNumber(6)
+  HotelCityInfo ensureHotelCity() => $_ensure(5);
 
+  @$pb.TagNumber(7)
   ListingCustomAttributeInfo get listingCustomAttribute => $_getN(6);
+  @$pb.TagNumber(7)
   set listingCustomAttribute(ListingCustomAttributeInfo v) {
     setField(7, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasListingCustomAttribute() => $_has(6);
+  @$pb.TagNumber(7)
   void clearListingCustomAttribute() => clearField(7);
+  @$pb.TagNumber(7)
+  ListingCustomAttributeInfo ensureListingCustomAttribute() => $_ensure(6);
 
+  @$pb.TagNumber(8)
   ProductChannelInfo get productChannel => $_getN(7);
+  @$pb.TagNumber(8)
   set productChannel(ProductChannelInfo v) {
     setField(8, v);
   }
 
+  @$pb.TagNumber(8)
   $core.bool hasProductChannel() => $_has(7);
+  @$pb.TagNumber(8)
   void clearProductChannel() => clearField(8);
+  @$pb.TagNumber(8)
+  ProductChannelInfo ensureProductChannel() => $_ensure(7);
 
+  @$pb.TagNumber(9)
   ProductChannelExclusivityInfo get productChannelExclusivity => $_getN(8);
+  @$pb.TagNumber(9)
   set productChannelExclusivity(ProductChannelExclusivityInfo v) {
     setField(9, v);
   }
 
+  @$pb.TagNumber(9)
   $core.bool hasProductChannelExclusivity() => $_has(8);
+  @$pb.TagNumber(9)
   void clearProductChannelExclusivity() => clearField(9);
+  @$pb.TagNumber(9)
+  ProductChannelExclusivityInfo ensureProductChannelExclusivity() =>
+      $_ensure(8);
 
+  @$pb.TagNumber(10)
   ProductConditionInfo get productCondition => $_getN(9);
+  @$pb.TagNumber(10)
   set productCondition(ProductConditionInfo v) {
     setField(10, v);
   }
 
+  @$pb.TagNumber(10)
   $core.bool hasProductCondition() => $_has(9);
+  @$pb.TagNumber(10)
   void clearProductCondition() => clearField(10);
+  @$pb.TagNumber(10)
+  ProductConditionInfo ensureProductCondition() => $_ensure(9);
 
+  @$pb.TagNumber(11)
   ProductItemIdInfo get productItemId => $_getN(10);
+  @$pb.TagNumber(11)
   set productItemId(ProductItemIdInfo v) {
     setField(11, v);
   }
 
+  @$pb.TagNumber(11)
   $core.bool hasProductItemId() => $_has(10);
+  @$pb.TagNumber(11)
   void clearProductItemId() => clearField(11);
+  @$pb.TagNumber(11)
+  ProductItemIdInfo ensureProductItemId() => $_ensure(10);
 
+  @$pb.TagNumber(12)
   ProductTypeInfo get productType => $_getN(11);
+  @$pb.TagNumber(12)
   set productType(ProductTypeInfo v) {
     setField(12, v);
   }
 
+  @$pb.TagNumber(12)
   $core.bool hasProductType() => $_has(11);
+  @$pb.TagNumber(12)
   void clearProductType() => clearField(12);
+  @$pb.TagNumber(12)
+  ProductTypeInfo ensureProductType() => $_ensure(11);
 
+  @$pb.TagNumber(13)
   ProductBiddingCategoryInfo get productBiddingCategory => $_getN(12);
+  @$pb.TagNumber(13)
   set productBiddingCategory(ProductBiddingCategoryInfo v) {
     setField(13, v);
   }
 
+  @$pb.TagNumber(13)
   $core.bool hasProductBiddingCategory() => $_has(12);
+  @$pb.TagNumber(13)
   void clearProductBiddingCategory() => clearField(13);
+  @$pb.TagNumber(13)
+  ProductBiddingCategoryInfo ensureProductBiddingCategory() => $_ensure(12);
 
+  @$pb.TagNumber(14)
   UnknownListingDimensionInfo get unknownListingDimension => $_getN(13);
+  @$pb.TagNumber(14)
   set unknownListingDimension(UnknownListingDimensionInfo v) {
     setField(14, v);
   }
 
+  @$pb.TagNumber(14)
   $core.bool hasUnknownListingDimension() => $_has(13);
+  @$pb.TagNumber(14)
   void clearUnknownListingDimension() => clearField(14);
+  @$pb.TagNumber(14)
+  UnknownListingDimensionInfo ensureUnknownListingDimension() => $_ensure(13);
 }
 
 class ListingBrandInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListingBrandInfo',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
-    ..a<$0.StringValue>(1, 'value', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
+    ..aOM<$0.StringValue>(1, 'value', subBuilder: $0.StringValue.create)
     ..hasRequiredFields = false;
 
   ListingBrandInfo._() : super();
@@ -672,24 +812,31 @@ class ListingBrandInfo extends $pb.GeneratedMessage {
   ListingBrandInfo createEmptyInstance() => create();
   static $pb.PbList<ListingBrandInfo> createRepeated() =>
       $pb.PbList<ListingBrandInfo>();
-  static ListingBrandInfo getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListingBrandInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListingBrandInfo>(create);
   static ListingBrandInfo _defaultInstance;
 
+  @$pb.TagNumber(1)
   $0.StringValue get value => $_getN(0);
+  @$pb.TagNumber(1)
   set value($0.StringValue v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasValue() => $_has(0);
+  @$pb.TagNumber(1)
   void clearValue() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.StringValue ensureValue() => $_ensure(0);
 }
 
 class HotelIdInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('HotelIdInfo',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
-    ..a<$0.StringValue>(1, 'value', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
+    ..aOM<$0.StringValue>(1, 'value', subBuilder: $0.StringValue.create)
     ..hasRequiredFields = false;
 
   HotelIdInfo._() : super();
@@ -708,23 +855,31 @@ class HotelIdInfo extends $pb.GeneratedMessage {
   static HotelIdInfo create() => HotelIdInfo._();
   HotelIdInfo createEmptyInstance() => create();
   static $pb.PbList<HotelIdInfo> createRepeated() => $pb.PbList<HotelIdInfo>();
-  static HotelIdInfo getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static HotelIdInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<HotelIdInfo>(create);
   static HotelIdInfo _defaultInstance;
 
+  @$pb.TagNumber(1)
   $0.StringValue get value => $_getN(0);
+  @$pb.TagNumber(1)
   set value($0.StringValue v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasValue() => $_has(0);
+  @$pb.TagNumber(1)
   void clearValue() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.StringValue ensureValue() => $_ensure(0);
 }
 
 class HotelClassInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('HotelClassInfo',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
-    ..a<$0.Int64Value>(1, 'value', $pb.PbFieldType.OM, $0.Int64Value.getDefault,
-        $0.Int64Value.create)
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
+    ..aOM<$0.Int64Value>(1, 'value', subBuilder: $0.Int64Value.create)
     ..hasRequiredFields = false;
 
   HotelClassInfo._() : super();
@@ -744,23 +899,32 @@ class HotelClassInfo extends $pb.GeneratedMessage {
   HotelClassInfo createEmptyInstance() => create();
   static $pb.PbList<HotelClassInfo> createRepeated() =>
       $pb.PbList<HotelClassInfo>();
-  static HotelClassInfo getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static HotelClassInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<HotelClassInfo>(create);
   static HotelClassInfo _defaultInstance;
 
+  @$pb.TagNumber(1)
   $0.Int64Value get value => $_getN(0);
+  @$pb.TagNumber(1)
   set value($0.Int64Value v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasValue() => $_has(0);
+  @$pb.TagNumber(1)
   void clearValue() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.Int64Value ensureValue() => $_ensure(0);
 }
 
 class HotelCountryRegionInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('HotelCountryRegionInfo',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
-    ..a<$0.StringValue>(1, 'countryRegionCriterion', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
+    ..aOM<$0.StringValue>(1, 'countryRegionCriterion',
+        subBuilder: $0.StringValue.create)
     ..hasRequiredFields = false;
 
   HotelCountryRegionInfo._() : super();
@@ -782,24 +946,32 @@ class HotelCountryRegionInfo extends $pb.GeneratedMessage {
   HotelCountryRegionInfo createEmptyInstance() => create();
   static $pb.PbList<HotelCountryRegionInfo> createRepeated() =>
       $pb.PbList<HotelCountryRegionInfo>();
-  static HotelCountryRegionInfo getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static HotelCountryRegionInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<HotelCountryRegionInfo>(create);
   static HotelCountryRegionInfo _defaultInstance;
 
+  @$pb.TagNumber(1)
   $0.StringValue get countryRegionCriterion => $_getN(0);
+  @$pb.TagNumber(1)
   set countryRegionCriterion($0.StringValue v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCountryRegionCriterion() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCountryRegionCriterion() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.StringValue ensureCountryRegionCriterion() => $_ensure(0);
 }
 
 class HotelStateInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('HotelStateInfo',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
-    ..a<$0.StringValue>(1, 'stateCriterion', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
+    ..aOM<$0.StringValue>(1, 'stateCriterion',
+        subBuilder: $0.StringValue.create)
     ..hasRequiredFields = false;
 
   HotelStateInfo._() : super();
@@ -819,23 +991,31 @@ class HotelStateInfo extends $pb.GeneratedMessage {
   HotelStateInfo createEmptyInstance() => create();
   static $pb.PbList<HotelStateInfo> createRepeated() =>
       $pb.PbList<HotelStateInfo>();
-  static HotelStateInfo getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static HotelStateInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<HotelStateInfo>(create);
   static HotelStateInfo _defaultInstance;
 
+  @$pb.TagNumber(1)
   $0.StringValue get stateCriterion => $_getN(0);
+  @$pb.TagNumber(1)
   set stateCriterion($0.StringValue v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasStateCriterion() => $_has(0);
+  @$pb.TagNumber(1)
   void clearStateCriterion() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.StringValue ensureStateCriterion() => $_ensure(0);
 }
 
 class HotelCityInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('HotelCityInfo',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
-    ..a<$0.StringValue>(1, 'cityCriterion', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
+    ..aOM<$0.StringValue>(1, 'cityCriterion', subBuilder: $0.StringValue.create)
     ..hasRequiredFields = false;
 
   HotelCityInfo._() : super();
@@ -855,32 +1035,41 @@ class HotelCityInfo extends $pb.GeneratedMessage {
   HotelCityInfo createEmptyInstance() => create();
   static $pb.PbList<HotelCityInfo> createRepeated() =>
       $pb.PbList<HotelCityInfo>();
-  static HotelCityInfo getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static HotelCityInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<HotelCityInfo>(create);
   static HotelCityInfo _defaultInstance;
 
+  @$pb.TagNumber(1)
   $0.StringValue get cityCriterion => $_getN(0);
+  @$pb.TagNumber(1)
   set cityCriterion($0.StringValue v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCityCriterion() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCityCriterion() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.StringValue ensureCityCriterion() => $_ensure(0);
 }
 
 class ListingCustomAttributeInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListingCustomAttributeInfo',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
-    ..a<$0.StringValue>(1, 'value', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
+    ..aOM<$0.StringValue>(1, 'value', subBuilder: $0.StringValue.create)
     ..e<$5.ListingCustomAttributeIndexEnum_ListingCustomAttributeIndex>(
-        2,
-        'index',
-        $pb.PbFieldType.OE,
-        $5.ListingCustomAttributeIndexEnum_ListingCustomAttributeIndex
+        2, 'index', $pb.PbFieldType.OE,
+        defaultOrMaker: $5
+            .ListingCustomAttributeIndexEnum_ListingCustomAttributeIndex
             .UNSPECIFIED,
-        $5.ListingCustomAttributeIndexEnum_ListingCustomAttributeIndex.valueOf,
-        $5.ListingCustomAttributeIndexEnum_ListingCustomAttributeIndex.values)
+        valueOf: $5.ListingCustomAttributeIndexEnum_ListingCustomAttributeIndex
+            .valueOf,
+        enumValues: $5
+            .ListingCustomAttributeIndexEnum_ListingCustomAttributeIndex.values)
     ..hasRequiredFields = false;
 
   ListingCustomAttributeInfo._() : super();
@@ -903,44 +1092,55 @@ class ListingCustomAttributeInfo extends $pb.GeneratedMessage {
   ListingCustomAttributeInfo createEmptyInstance() => create();
   static $pb.PbList<ListingCustomAttributeInfo> createRepeated() =>
       $pb.PbList<ListingCustomAttributeInfo>();
-  static ListingCustomAttributeInfo getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListingCustomAttributeInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListingCustomAttributeInfo>(create);
   static ListingCustomAttributeInfo _defaultInstance;
 
+  @$pb.TagNumber(1)
   $0.StringValue get value => $_getN(0);
+  @$pb.TagNumber(1)
   set value($0.StringValue v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasValue() => $_has(0);
+  @$pb.TagNumber(1)
   void clearValue() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.StringValue ensureValue() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $5.ListingCustomAttributeIndexEnum_ListingCustomAttributeIndex get index =>
       $_getN(1);
+  @$pb.TagNumber(2)
   set index($5.ListingCustomAttributeIndexEnum_ListingCustomAttributeIndex v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasIndex() => $_has(1);
+  @$pb.TagNumber(2)
   void clearIndex() => clearField(2);
 }
 
 class ProductBiddingCategoryInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ProductBiddingCategoryInfo',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
-    ..a<$0.Int64Value>(1, 'id', $pb.PbFieldType.OM, $0.Int64Value.getDefault,
-        $0.Int64Value.create)
-    ..a<$0.StringValue>(2, 'countryCode', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
+    ..aOM<$0.Int64Value>(1, 'id', subBuilder: $0.Int64Value.create)
+    ..aOM<$0.StringValue>(2, 'countryCode', subBuilder: $0.StringValue.create)
     ..e<$6.ProductBiddingCategoryLevelEnum_ProductBiddingCategoryLevel>(
-        3,
-        'level',
-        $pb.PbFieldType.OE,
-        $6.ProductBiddingCategoryLevelEnum_ProductBiddingCategoryLevel
+        3, 'level', $pb.PbFieldType.OE,
+        defaultOrMaker: $6
+            .ProductBiddingCategoryLevelEnum_ProductBiddingCategoryLevel
             .UNSPECIFIED,
-        $6.ProductBiddingCategoryLevelEnum_ProductBiddingCategoryLevel.valueOf,
-        $6.ProductBiddingCategoryLevelEnum_ProductBiddingCategoryLevel.values)
+        valueOf: $6.ProductBiddingCategoryLevelEnum_ProductBiddingCategoryLevel
+            .valueOf,
+        enumValues: $6
+            .ProductBiddingCategoryLevelEnum_ProductBiddingCategoryLevel.values)
     ..hasRequiredFields = false;
 
   ProductBiddingCategoryInfo._() : super();
@@ -963,46 +1163,61 @@ class ProductBiddingCategoryInfo extends $pb.GeneratedMessage {
   ProductBiddingCategoryInfo createEmptyInstance() => create();
   static $pb.PbList<ProductBiddingCategoryInfo> createRepeated() =>
       $pb.PbList<ProductBiddingCategoryInfo>();
-  static ProductBiddingCategoryInfo getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ProductBiddingCategoryInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ProductBiddingCategoryInfo>(create);
   static ProductBiddingCategoryInfo _defaultInstance;
 
+  @$pb.TagNumber(1)
   $0.Int64Value get id => $_getN(0);
+  @$pb.TagNumber(1)
   set id($0.Int64Value v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearId() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.Int64Value ensureId() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $0.StringValue get countryCode => $_getN(1);
+  @$pb.TagNumber(2)
   set countryCode($0.StringValue v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasCountryCode() => $_has(1);
+  @$pb.TagNumber(2)
   void clearCountryCode() => clearField(2);
+  @$pb.TagNumber(2)
+  $0.StringValue ensureCountryCode() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $6.ProductBiddingCategoryLevelEnum_ProductBiddingCategoryLevel get level =>
       $_getN(2);
+  @$pb.TagNumber(3)
   set level($6.ProductBiddingCategoryLevelEnum_ProductBiddingCategoryLevel v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasLevel() => $_has(2);
+  @$pb.TagNumber(3)
   void clearLevel() => clearField(3);
 }
 
 class ProductChannelInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ProductChannelInfo',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
-    ..e<$7.ProductChannelEnum_ProductChannel>(
-        1,
-        'channel',
-        $pb.PbFieldType.OE,
-        $7.ProductChannelEnum_ProductChannel.UNSPECIFIED,
-        $7.ProductChannelEnum_ProductChannel.valueOf,
-        $7.ProductChannelEnum_ProductChannel.values)
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
+    ..e<$7.ProductChannelEnum_ProductChannel>(1, 'channel', $pb.PbFieldType.OE,
+        defaultOrMaker: $7.ProductChannelEnum_ProductChannel.UNSPECIFIED,
+        valueOf: $7.ProductChannelEnum_ProductChannel.valueOf,
+        enumValues: $7.ProductChannelEnum_ProductChannel.values)
     ..hasRequiredFields = false;
 
   ProductChannelInfo._() : super();
@@ -1022,30 +1237,38 @@ class ProductChannelInfo extends $pb.GeneratedMessage {
   ProductChannelInfo createEmptyInstance() => create();
   static $pb.PbList<ProductChannelInfo> createRepeated() =>
       $pb.PbList<ProductChannelInfo>();
-  static ProductChannelInfo getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ProductChannelInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ProductChannelInfo>(create);
   static ProductChannelInfo _defaultInstance;
 
+  @$pb.TagNumber(1)
   $7.ProductChannelEnum_ProductChannel get channel => $_getN(0);
+  @$pb.TagNumber(1)
   set channel($7.ProductChannelEnum_ProductChannel v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasChannel() => $_has(0);
+  @$pb.TagNumber(1)
   void clearChannel() => clearField(1);
 }
 
 class ProductChannelExclusivityInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ProductChannelExclusivityInfo',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
     ..e<$8.ProductChannelExclusivityEnum_ProductChannelExclusivity>(
-        1,
-        'channelExclusivity',
-        $pb.PbFieldType.OE,
-        $8.ProductChannelExclusivityEnum_ProductChannelExclusivity.UNSPECIFIED,
-        $8.ProductChannelExclusivityEnum_ProductChannelExclusivity.valueOf,
-        $8.ProductChannelExclusivityEnum_ProductChannelExclusivity.values)
+        1, 'channelExclusivity', $pb.PbFieldType.OE,
+        defaultOrMaker: $8
+            .ProductChannelExclusivityEnum_ProductChannelExclusivity
+            .UNSPECIFIED,
+        valueOf:
+            $8.ProductChannelExclusivityEnum_ProductChannelExclusivity.valueOf,
+        enumValues:
+            $8.ProductChannelExclusivityEnum_ProductChannelExclusivity.values)
     ..hasRequiredFields = false;
 
   ProductChannelExclusivityInfo._() : super();
@@ -1069,31 +1292,35 @@ class ProductChannelExclusivityInfo extends $pb.GeneratedMessage {
   ProductChannelExclusivityInfo createEmptyInstance() => create();
   static $pb.PbList<ProductChannelExclusivityInfo> createRepeated() =>
       $pb.PbList<ProductChannelExclusivityInfo>();
-  static ProductChannelExclusivityInfo getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ProductChannelExclusivityInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ProductChannelExclusivityInfo>(create);
   static ProductChannelExclusivityInfo _defaultInstance;
 
+  @$pb.TagNumber(1)
   $8.ProductChannelExclusivityEnum_ProductChannelExclusivity
       get channelExclusivity => $_getN(0);
+  @$pb.TagNumber(1)
   set channelExclusivity(
       $8.ProductChannelExclusivityEnum_ProductChannelExclusivity v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasChannelExclusivity() => $_has(0);
+  @$pb.TagNumber(1)
   void clearChannelExclusivity() => clearField(1);
 }
 
 class ProductConditionInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ProductConditionInfo',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
     ..e<$9.ProductConditionEnum_ProductCondition>(
-        1,
-        'condition',
-        $pb.PbFieldType.OE,
-        $9.ProductConditionEnum_ProductCondition.UNSPECIFIED,
-        $9.ProductConditionEnum_ProductCondition.valueOf,
-        $9.ProductConditionEnum_ProductCondition.values)
+        1, 'condition', $pb.PbFieldType.OE,
+        defaultOrMaker: $9.ProductConditionEnum_ProductCondition.UNSPECIFIED,
+        valueOf: $9.ProductConditionEnum_ProductCondition.valueOf,
+        enumValues: $9.ProductConditionEnum_ProductCondition.values)
     ..hasRequiredFields = false;
 
   ProductConditionInfo._() : super();
@@ -1114,24 +1341,29 @@ class ProductConditionInfo extends $pb.GeneratedMessage {
   ProductConditionInfo createEmptyInstance() => create();
   static $pb.PbList<ProductConditionInfo> createRepeated() =>
       $pb.PbList<ProductConditionInfo>();
-  static ProductConditionInfo getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ProductConditionInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ProductConditionInfo>(create);
   static ProductConditionInfo _defaultInstance;
 
+  @$pb.TagNumber(1)
   $9.ProductConditionEnum_ProductCondition get condition => $_getN(0);
+  @$pb.TagNumber(1)
   set condition($9.ProductConditionEnum_ProductCondition v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCondition() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCondition() => clearField(1);
 }
 
 class ProductItemIdInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ProductItemIdInfo',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
-    ..a<$0.StringValue>(1, 'value', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
+    ..aOM<$0.StringValue>(1, 'value', subBuilder: $0.StringValue.create)
     ..hasRequiredFields = false;
 
   ProductItemIdInfo._() : super();
@@ -1151,31 +1383,36 @@ class ProductItemIdInfo extends $pb.GeneratedMessage {
   ProductItemIdInfo createEmptyInstance() => create();
   static $pb.PbList<ProductItemIdInfo> createRepeated() =>
       $pb.PbList<ProductItemIdInfo>();
-  static ProductItemIdInfo getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ProductItemIdInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ProductItemIdInfo>(create);
   static ProductItemIdInfo _defaultInstance;
 
+  @$pb.TagNumber(1)
   $0.StringValue get value => $_getN(0);
+  @$pb.TagNumber(1)
   set value($0.StringValue v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasValue() => $_has(0);
+  @$pb.TagNumber(1)
   void clearValue() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.StringValue ensureValue() => $_ensure(0);
 }
 
 class ProductTypeInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ProductTypeInfo',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
-    ..a<$0.StringValue>(1, 'value', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
+    ..aOM<$0.StringValue>(1, 'value', subBuilder: $0.StringValue.create)
     ..e<$10.ProductTypeLevelEnum_ProductTypeLevel>(
-        2,
-        'level',
-        $pb.PbFieldType.OE,
-        $10.ProductTypeLevelEnum_ProductTypeLevel.UNSPECIFIED,
-        $10.ProductTypeLevelEnum_ProductTypeLevel.valueOf,
-        $10.ProductTypeLevelEnum_ProductTypeLevel.values)
+        2, 'level', $pb.PbFieldType.OE,
+        defaultOrMaker: $10.ProductTypeLevelEnum_ProductTypeLevel.UNSPECIFIED,
+        valueOf: $10.ProductTypeLevelEnum_ProductTypeLevel.valueOf,
+        enumValues: $10.ProductTypeLevelEnum_ProductTypeLevel.values)
     ..hasRequiredFields = false;
 
   ProductTypeInfo._() : super();
@@ -1195,31 +1432,43 @@ class ProductTypeInfo extends $pb.GeneratedMessage {
   ProductTypeInfo createEmptyInstance() => create();
   static $pb.PbList<ProductTypeInfo> createRepeated() =>
       $pb.PbList<ProductTypeInfo>();
-  static ProductTypeInfo getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ProductTypeInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ProductTypeInfo>(create);
   static ProductTypeInfo _defaultInstance;
 
+  @$pb.TagNumber(1)
   $0.StringValue get value => $_getN(0);
+  @$pb.TagNumber(1)
   set value($0.StringValue v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasValue() => $_has(0);
+  @$pb.TagNumber(1)
   void clearValue() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.StringValue ensureValue() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $10.ProductTypeLevelEnum_ProductTypeLevel get level => $_getN(1);
+  @$pb.TagNumber(2)
   set level($10.ProductTypeLevelEnum_ProductTypeLevel v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasLevel() => $_has(1);
+  @$pb.TagNumber(2)
   void clearLevel() => clearField(2);
 }
 
 class UnknownListingDimensionInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'UnknownListingDimensionInfo',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   UnknownListingDimensionInfo._() : super();
@@ -1243,22 +1492,24 @@ class UnknownListingDimensionInfo extends $pb.GeneratedMessage {
   UnknownListingDimensionInfo createEmptyInstance() => create();
   static $pb.PbList<UnknownListingDimensionInfo> createRepeated() =>
       $pb.PbList<UnknownListingDimensionInfo>();
-  static UnknownListingDimensionInfo getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UnknownListingDimensionInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UnknownListingDimensionInfo>(create);
   static UnknownListingDimensionInfo _defaultInstance;
 }
 
 class HotelDateSelectionTypeInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'HotelDateSelectionTypeInfo',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
     ..e<$11.HotelDateSelectionTypeEnum_HotelDateSelectionType>(
-        1,
-        'type',
-        $pb.PbFieldType.OE,
-        $11.HotelDateSelectionTypeEnum_HotelDateSelectionType.UNSPECIFIED,
-        $11.HotelDateSelectionTypeEnum_HotelDateSelectionType.valueOf,
-        $11.HotelDateSelectionTypeEnum_HotelDateSelectionType.values)
+        1, 'type', $pb.PbFieldType.OE,
+        defaultOrMaker:
+            $11.HotelDateSelectionTypeEnum_HotelDateSelectionType.UNSPECIFIED,
+        valueOf: $11.HotelDateSelectionTypeEnum_HotelDateSelectionType.valueOf,
+        enumValues:
+            $11.HotelDateSelectionTypeEnum_HotelDateSelectionType.values)
     ..hasRequiredFields = false;
 
   HotelDateSelectionTypeInfo._() : super();
@@ -1281,27 +1532,31 @@ class HotelDateSelectionTypeInfo extends $pb.GeneratedMessage {
   HotelDateSelectionTypeInfo createEmptyInstance() => create();
   static $pb.PbList<HotelDateSelectionTypeInfo> createRepeated() =>
       $pb.PbList<HotelDateSelectionTypeInfo>();
-  static HotelDateSelectionTypeInfo getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static HotelDateSelectionTypeInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<HotelDateSelectionTypeInfo>(create);
   static HotelDateSelectionTypeInfo _defaultInstance;
 
+  @$pb.TagNumber(1)
   $11.HotelDateSelectionTypeEnum_HotelDateSelectionType get type => $_getN(0);
+  @$pb.TagNumber(1)
   set type($11.HotelDateSelectionTypeEnum_HotelDateSelectionType v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasType() => $_has(0);
+  @$pb.TagNumber(1)
   void clearType() => clearField(1);
 }
 
 class HotelAdvanceBookingWindowInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'HotelAdvanceBookingWindowInfo',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
-    ..a<$0.Int64Value>(1, 'minDays', $pb.PbFieldType.OM,
-        $0.Int64Value.getDefault, $0.Int64Value.create)
-    ..a<$0.Int64Value>(2, 'maxDays', $pb.PbFieldType.OM,
-        $0.Int64Value.getDefault, $0.Int64Value.create)
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
+    ..aOM<$0.Int64Value>(1, 'minDays', subBuilder: $0.Int64Value.create)
+    ..aOM<$0.Int64Value>(2, 'maxDays', subBuilder: $0.Int64Value.create)
     ..hasRequiredFields = false;
 
   HotelAdvanceBookingWindowInfo._() : super();
@@ -1325,34 +1580,46 @@ class HotelAdvanceBookingWindowInfo extends $pb.GeneratedMessage {
   HotelAdvanceBookingWindowInfo createEmptyInstance() => create();
   static $pb.PbList<HotelAdvanceBookingWindowInfo> createRepeated() =>
       $pb.PbList<HotelAdvanceBookingWindowInfo>();
-  static HotelAdvanceBookingWindowInfo getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static HotelAdvanceBookingWindowInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<HotelAdvanceBookingWindowInfo>(create);
   static HotelAdvanceBookingWindowInfo _defaultInstance;
 
+  @$pb.TagNumber(1)
   $0.Int64Value get minDays => $_getN(0);
+  @$pb.TagNumber(1)
   set minDays($0.Int64Value v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasMinDays() => $_has(0);
+  @$pb.TagNumber(1)
   void clearMinDays() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.Int64Value ensureMinDays() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $0.Int64Value get maxDays => $_getN(1);
+  @$pb.TagNumber(2)
   set maxDays($0.Int64Value v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasMaxDays() => $_has(1);
+  @$pb.TagNumber(2)
   void clearMaxDays() => clearField(2);
+  @$pb.TagNumber(2)
+  $0.Int64Value ensureMaxDays() => $_ensure(1);
 }
 
 class HotelLengthOfStayInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('HotelLengthOfStayInfo',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
-    ..a<$0.Int64Value>(1, 'minNights', $pb.PbFieldType.OM,
-        $0.Int64Value.getDefault, $0.Int64Value.create)
-    ..a<$0.Int64Value>(2, 'maxNights', $pb.PbFieldType.OM,
-        $0.Int64Value.getDefault, $0.Int64Value.create)
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
+    ..aOM<$0.Int64Value>(1, 'minNights', subBuilder: $0.Int64Value.create)
+    ..aOM<$0.Int64Value>(2, 'maxNights', subBuilder: $0.Int64Value.create)
     ..hasRequiredFields = false;
 
   HotelLengthOfStayInfo._() : super();
@@ -1374,37 +1641,48 @@ class HotelLengthOfStayInfo extends $pb.GeneratedMessage {
   HotelLengthOfStayInfo createEmptyInstance() => create();
   static $pb.PbList<HotelLengthOfStayInfo> createRepeated() =>
       $pb.PbList<HotelLengthOfStayInfo>();
-  static HotelLengthOfStayInfo getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static HotelLengthOfStayInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<HotelLengthOfStayInfo>(create);
   static HotelLengthOfStayInfo _defaultInstance;
 
+  @$pb.TagNumber(1)
   $0.Int64Value get minNights => $_getN(0);
+  @$pb.TagNumber(1)
   set minNights($0.Int64Value v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasMinNights() => $_has(0);
+  @$pb.TagNumber(1)
   void clearMinNights() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.Int64Value ensureMinNights() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $0.Int64Value get maxNights => $_getN(1);
+  @$pb.TagNumber(2)
   set maxNights($0.Int64Value v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasMaxNights() => $_has(1);
+  @$pb.TagNumber(2)
   void clearMaxNights() => clearField(2);
+  @$pb.TagNumber(2)
+  $0.Int64Value ensureMaxNights() => $_ensure(1);
 }
 
 class HotelCheckInDayInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('HotelCheckInDayInfo',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
-    ..e<$12.DayOfWeekEnum_DayOfWeek>(
-        1,
-        'dayOfWeek',
-        $pb.PbFieldType.OE,
-        $12.DayOfWeekEnum_DayOfWeek.UNSPECIFIED,
-        $12.DayOfWeekEnum_DayOfWeek.valueOf,
-        $12.DayOfWeekEnum_DayOfWeek.values)
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
+    ..e<$12.DayOfWeekEnum_DayOfWeek>(1, 'dayOfWeek', $pb.PbFieldType.OE,
+        defaultOrMaker: $12.DayOfWeekEnum_DayOfWeek.UNSPECIFIED,
+        valueOf: $12.DayOfWeekEnum_DayOfWeek.valueOf,
+        enumValues: $12.DayOfWeekEnum_DayOfWeek.values)
     ..hasRequiredFields = false;
 
   HotelCheckInDayInfo._() : super();
@@ -1424,29 +1702,32 @@ class HotelCheckInDayInfo extends $pb.GeneratedMessage {
   HotelCheckInDayInfo createEmptyInstance() => create();
   static $pb.PbList<HotelCheckInDayInfo> createRepeated() =>
       $pb.PbList<HotelCheckInDayInfo>();
-  static HotelCheckInDayInfo getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static HotelCheckInDayInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<HotelCheckInDayInfo>(create);
   static HotelCheckInDayInfo _defaultInstance;
 
+  @$pb.TagNumber(1)
   $12.DayOfWeekEnum_DayOfWeek get dayOfWeek => $_getN(0);
+  @$pb.TagNumber(1)
   set dayOfWeek($12.DayOfWeekEnum_DayOfWeek v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasDayOfWeek() => $_has(0);
+  @$pb.TagNumber(1)
   void clearDayOfWeek() => clearField(1);
 }
 
 class InteractionTypeInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('InteractionTypeInfo',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
-    ..e<$13.InteractionTypeEnum_InteractionType>(
-        1,
-        'type',
-        $pb.PbFieldType.OE,
-        $13.InteractionTypeEnum_InteractionType.UNSPECIFIED,
-        $13.InteractionTypeEnum_InteractionType.valueOf,
-        $13.InteractionTypeEnum_InteractionType.values)
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
+    ..e<$13.InteractionTypeEnum_InteractionType>(1, 'type', $pb.PbFieldType.OE,
+        defaultOrMaker: $13.InteractionTypeEnum_InteractionType.UNSPECIFIED,
+        valueOf: $13.InteractionTypeEnum_InteractionType.valueOf,
+        enumValues: $13.InteractionTypeEnum_InteractionType.values)
     ..hasRequiredFields = false;
 
   InteractionTypeInfo._() : super();
@@ -1466,47 +1747,42 @@ class InteractionTypeInfo extends $pb.GeneratedMessage {
   InteractionTypeInfo createEmptyInstance() => create();
   static $pb.PbList<InteractionTypeInfo> createRepeated() =>
       $pb.PbList<InteractionTypeInfo>();
-  static InteractionTypeInfo getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static InteractionTypeInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<InteractionTypeInfo>(create);
   static InteractionTypeInfo _defaultInstance;
 
+  @$pb.TagNumber(1)
   $13.InteractionTypeEnum_InteractionType get type => $_getN(0);
+  @$pb.TagNumber(1)
   set type($13.InteractionTypeEnum_InteractionType v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasType() => $_has(0);
+  @$pb.TagNumber(1)
   void clearType() => clearField(1);
 }
 
 class AdScheduleInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AdScheduleInfo',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
-    ..e<$14.MinuteOfHourEnum_MinuteOfHour>(
-        1,
-        'startMinute',
-        $pb.PbFieldType.OE,
-        $14.MinuteOfHourEnum_MinuteOfHour.UNSPECIFIED,
-        $14.MinuteOfHourEnum_MinuteOfHour.valueOf,
-        $14.MinuteOfHourEnum_MinuteOfHour.values)
-    ..e<$14.MinuteOfHourEnum_MinuteOfHour>(
-        2,
-        'endMinute',
-        $pb.PbFieldType.OE,
-        $14.MinuteOfHourEnum_MinuteOfHour.UNSPECIFIED,
-        $14.MinuteOfHourEnum_MinuteOfHour.valueOf,
-        $14.MinuteOfHourEnum_MinuteOfHour.values)
-    ..a<$0.Int32Value>(3, 'startHour', $pb.PbFieldType.OM,
-        $0.Int32Value.getDefault, $0.Int32Value.create)
-    ..a<$0.Int32Value>(4, 'endHour', $pb.PbFieldType.OM,
-        $0.Int32Value.getDefault, $0.Int32Value.create)
-    ..e<$12.DayOfWeekEnum_DayOfWeek>(
-        5,
-        'dayOfWeek',
-        $pb.PbFieldType.OE,
-        $12.DayOfWeekEnum_DayOfWeek.UNSPECIFIED,
-        $12.DayOfWeekEnum_DayOfWeek.valueOf,
-        $12.DayOfWeekEnum_DayOfWeek.values)
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
+    ..e<$14.MinuteOfHourEnum_MinuteOfHour>(1, 'startMinute', $pb.PbFieldType.OE,
+        defaultOrMaker: $14.MinuteOfHourEnum_MinuteOfHour.UNSPECIFIED,
+        valueOf: $14.MinuteOfHourEnum_MinuteOfHour.valueOf,
+        enumValues: $14.MinuteOfHourEnum_MinuteOfHour.values)
+    ..e<$14.MinuteOfHourEnum_MinuteOfHour>(2, 'endMinute', $pb.PbFieldType.OE,
+        defaultOrMaker: $14.MinuteOfHourEnum_MinuteOfHour.UNSPECIFIED,
+        valueOf: $14.MinuteOfHourEnum_MinuteOfHour.valueOf,
+        enumValues: $14.MinuteOfHourEnum_MinuteOfHour.values)
+    ..aOM<$0.Int32Value>(3, 'startHour', subBuilder: $0.Int32Value.create)
+    ..aOM<$0.Int32Value>(4, 'endHour', subBuilder: $0.Int32Value.create)
+    ..e<$12.DayOfWeekEnum_DayOfWeek>(5, 'dayOfWeek', $pb.PbFieldType.OE,
+        defaultOrMaker: $12.DayOfWeekEnum_DayOfWeek.UNSPECIFIED,
+        valueOf: $12.DayOfWeekEnum_DayOfWeek.valueOf,
+        enumValues: $12.DayOfWeekEnum_DayOfWeek.values)
     ..hasRequiredFields = false;
 
   AdScheduleInfo._() : super();
@@ -1526,60 +1802,84 @@ class AdScheduleInfo extends $pb.GeneratedMessage {
   AdScheduleInfo createEmptyInstance() => create();
   static $pb.PbList<AdScheduleInfo> createRepeated() =>
       $pb.PbList<AdScheduleInfo>();
-  static AdScheduleInfo getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static AdScheduleInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AdScheduleInfo>(create);
   static AdScheduleInfo _defaultInstance;
 
+  @$pb.TagNumber(1)
   $14.MinuteOfHourEnum_MinuteOfHour get startMinute => $_getN(0);
+  @$pb.TagNumber(1)
   set startMinute($14.MinuteOfHourEnum_MinuteOfHour v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasStartMinute() => $_has(0);
+  @$pb.TagNumber(1)
   void clearStartMinute() => clearField(1);
 
+  @$pb.TagNumber(2)
   $14.MinuteOfHourEnum_MinuteOfHour get endMinute => $_getN(1);
+  @$pb.TagNumber(2)
   set endMinute($14.MinuteOfHourEnum_MinuteOfHour v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasEndMinute() => $_has(1);
+  @$pb.TagNumber(2)
   void clearEndMinute() => clearField(2);
 
+  @$pb.TagNumber(3)
   $0.Int32Value get startHour => $_getN(2);
+  @$pb.TagNumber(3)
   set startHour($0.Int32Value v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasStartHour() => $_has(2);
+  @$pb.TagNumber(3)
   void clearStartHour() => clearField(3);
+  @$pb.TagNumber(3)
+  $0.Int32Value ensureStartHour() => $_ensure(2);
 
+  @$pb.TagNumber(4)
   $0.Int32Value get endHour => $_getN(3);
+  @$pb.TagNumber(4)
   set endHour($0.Int32Value v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasEndHour() => $_has(3);
+  @$pb.TagNumber(4)
   void clearEndHour() => clearField(4);
+  @$pb.TagNumber(4)
+  $0.Int32Value ensureEndHour() => $_ensure(3);
 
+  @$pb.TagNumber(5)
   $12.DayOfWeekEnum_DayOfWeek get dayOfWeek => $_getN(4);
+  @$pb.TagNumber(5)
   set dayOfWeek($12.DayOfWeekEnum_DayOfWeek v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasDayOfWeek() => $_has(4);
+  @$pb.TagNumber(5)
   void clearDayOfWeek() => clearField(5);
 }
 
 class AgeRangeInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AgeRangeInfo',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
-    ..e<$15.AgeRangeTypeEnum_AgeRangeType>(
-        1,
-        'type',
-        $pb.PbFieldType.OE,
-        $15.AgeRangeTypeEnum_AgeRangeType.UNSPECIFIED,
-        $15.AgeRangeTypeEnum_AgeRangeType.valueOf,
-        $15.AgeRangeTypeEnum_AgeRangeType.values)
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
+    ..e<$15.AgeRangeTypeEnum_AgeRangeType>(1, 'type', $pb.PbFieldType.OE,
+        defaultOrMaker: $15.AgeRangeTypeEnum_AgeRangeType.UNSPECIFIED,
+        valueOf: $15.AgeRangeTypeEnum_AgeRangeType.valueOf,
+        enumValues: $15.AgeRangeTypeEnum_AgeRangeType.values)
     ..hasRequiredFields = false;
 
   AgeRangeInfo._() : super();
@@ -1599,28 +1899,32 @@ class AgeRangeInfo extends $pb.GeneratedMessage {
   AgeRangeInfo createEmptyInstance() => create();
   static $pb.PbList<AgeRangeInfo> createRepeated() =>
       $pb.PbList<AgeRangeInfo>();
-  static AgeRangeInfo getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static AgeRangeInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AgeRangeInfo>(create);
   static AgeRangeInfo _defaultInstance;
 
+  @$pb.TagNumber(1)
   $15.AgeRangeTypeEnum_AgeRangeType get type => $_getN(0);
+  @$pb.TagNumber(1)
   set type($15.AgeRangeTypeEnum_AgeRangeType v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasType() => $_has(0);
+  @$pb.TagNumber(1)
   void clearType() => clearField(1);
 }
 
 class GenderInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GenderInfo',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
-    ..e<$16.GenderTypeEnum_GenderType>(
-        1,
-        'type',
-        $pb.PbFieldType.OE,
-        $16.GenderTypeEnum_GenderType.UNSPECIFIED,
-        $16.GenderTypeEnum_GenderType.valueOf,
-        $16.GenderTypeEnum_GenderType.values)
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
+    ..e<$16.GenderTypeEnum_GenderType>(1, 'type', $pb.PbFieldType.OE,
+        defaultOrMaker: $16.GenderTypeEnum_GenderType.UNSPECIFIED,
+        valueOf: $16.GenderTypeEnum_GenderType.valueOf,
+        enumValues: $16.GenderTypeEnum_GenderType.values)
     ..hasRequiredFields = false;
 
   GenderInfo._() : super();
@@ -1639,28 +1943,32 @@ class GenderInfo extends $pb.GeneratedMessage {
   static GenderInfo create() => GenderInfo._();
   GenderInfo createEmptyInstance() => create();
   static $pb.PbList<GenderInfo> createRepeated() => $pb.PbList<GenderInfo>();
-  static GenderInfo getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GenderInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GenderInfo>(create);
   static GenderInfo _defaultInstance;
 
+  @$pb.TagNumber(1)
   $16.GenderTypeEnum_GenderType get type => $_getN(0);
+  @$pb.TagNumber(1)
   set type($16.GenderTypeEnum_GenderType v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasType() => $_has(0);
+  @$pb.TagNumber(1)
   void clearType() => clearField(1);
 }
 
 class IncomeRangeInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('IncomeRangeInfo',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
-    ..e<$17.IncomeRangeTypeEnum_IncomeRangeType>(
-        1,
-        'type',
-        $pb.PbFieldType.OE,
-        $17.IncomeRangeTypeEnum_IncomeRangeType.UNSPECIFIED,
-        $17.IncomeRangeTypeEnum_IncomeRangeType.valueOf,
-        $17.IncomeRangeTypeEnum_IncomeRangeType.values)
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
+    ..e<$17.IncomeRangeTypeEnum_IncomeRangeType>(1, 'type', $pb.PbFieldType.OE,
+        defaultOrMaker: $17.IncomeRangeTypeEnum_IncomeRangeType.UNSPECIFIED,
+        valueOf: $17.IncomeRangeTypeEnum_IncomeRangeType.valueOf,
+        enumValues: $17.IncomeRangeTypeEnum_IncomeRangeType.values)
     ..hasRequiredFields = false;
 
   IncomeRangeInfo._() : super();
@@ -1680,29 +1988,34 @@ class IncomeRangeInfo extends $pb.GeneratedMessage {
   IncomeRangeInfo createEmptyInstance() => create();
   static $pb.PbList<IncomeRangeInfo> createRepeated() =>
       $pb.PbList<IncomeRangeInfo>();
-  static IncomeRangeInfo getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static IncomeRangeInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<IncomeRangeInfo>(create);
   static IncomeRangeInfo _defaultInstance;
 
+  @$pb.TagNumber(1)
   $17.IncomeRangeTypeEnum_IncomeRangeType get type => $_getN(0);
+  @$pb.TagNumber(1)
   set type($17.IncomeRangeTypeEnum_IncomeRangeType v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasType() => $_has(0);
+  @$pb.TagNumber(1)
   void clearType() => clearField(1);
 }
 
 class ParentalStatusInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ParentalStatusInfo',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
     ..e<$18.ParentalStatusTypeEnum_ParentalStatusType>(
-        1,
-        'type',
-        $pb.PbFieldType.OE,
-        $18.ParentalStatusTypeEnum_ParentalStatusType.UNSPECIFIED,
-        $18.ParentalStatusTypeEnum_ParentalStatusType.valueOf,
-        $18.ParentalStatusTypeEnum_ParentalStatusType.values)
+        1, 'type', $pb.PbFieldType.OE,
+        defaultOrMaker:
+            $18.ParentalStatusTypeEnum_ParentalStatusType.UNSPECIFIED,
+        valueOf: $18.ParentalStatusTypeEnum_ParentalStatusType.valueOf,
+        enumValues: $18.ParentalStatusTypeEnum_ParentalStatusType.values)
     ..hasRequiredFields = false;
 
   ParentalStatusInfo._() : super();
@@ -1722,24 +2035,29 @@ class ParentalStatusInfo extends $pb.GeneratedMessage {
   ParentalStatusInfo createEmptyInstance() => create();
   static $pb.PbList<ParentalStatusInfo> createRepeated() =>
       $pb.PbList<ParentalStatusInfo>();
-  static ParentalStatusInfo getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ParentalStatusInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ParentalStatusInfo>(create);
   static ParentalStatusInfo _defaultInstance;
 
+  @$pb.TagNumber(1)
   $18.ParentalStatusTypeEnum_ParentalStatusType get type => $_getN(0);
+  @$pb.TagNumber(1)
   set type($18.ParentalStatusTypeEnum_ParentalStatusType v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasType() => $_has(0);
+  @$pb.TagNumber(1)
   void clearType() => clearField(1);
 }
 
 class YouTubeVideoInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('YouTubeVideoInfo',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
-    ..a<$0.StringValue>(1, 'videoId', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
+    ..aOM<$0.StringValue>(1, 'videoId', subBuilder: $0.StringValue.create)
     ..hasRequiredFields = false;
 
   YouTubeVideoInfo._() : super();
@@ -1759,24 +2077,31 @@ class YouTubeVideoInfo extends $pb.GeneratedMessage {
   YouTubeVideoInfo createEmptyInstance() => create();
   static $pb.PbList<YouTubeVideoInfo> createRepeated() =>
       $pb.PbList<YouTubeVideoInfo>();
-  static YouTubeVideoInfo getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static YouTubeVideoInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<YouTubeVideoInfo>(create);
   static YouTubeVideoInfo _defaultInstance;
 
+  @$pb.TagNumber(1)
   $0.StringValue get videoId => $_getN(0);
+  @$pb.TagNumber(1)
   set videoId($0.StringValue v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasVideoId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearVideoId() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.StringValue ensureVideoId() => $_ensure(0);
 }
 
 class YouTubeChannelInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('YouTubeChannelInfo',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
-    ..a<$0.StringValue>(1, 'channelId', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
+    ..aOM<$0.StringValue>(1, 'channelId', subBuilder: $0.StringValue.create)
     ..hasRequiredFields = false;
 
   YouTubeChannelInfo._() : super();
@@ -1796,24 +2121,31 @@ class YouTubeChannelInfo extends $pb.GeneratedMessage {
   YouTubeChannelInfo createEmptyInstance() => create();
   static $pb.PbList<YouTubeChannelInfo> createRepeated() =>
       $pb.PbList<YouTubeChannelInfo>();
-  static YouTubeChannelInfo getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static YouTubeChannelInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<YouTubeChannelInfo>(create);
   static YouTubeChannelInfo _defaultInstance;
 
+  @$pb.TagNumber(1)
   $0.StringValue get channelId => $_getN(0);
+  @$pb.TagNumber(1)
   set channelId($0.StringValue v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasChannelId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearChannelId() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.StringValue ensureChannelId() => $_ensure(0);
 }
 
 class UserListInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UserListInfo',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
-    ..a<$0.StringValue>(1, 'userList', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
+    ..aOM<$0.StringValue>(1, 'userList', subBuilder: $0.StringValue.create)
     ..hasRequiredFields = false;
 
   UserListInfo._() : super();
@@ -1833,34 +2165,39 @@ class UserListInfo extends $pb.GeneratedMessage {
   UserListInfo createEmptyInstance() => create();
   static $pb.PbList<UserListInfo> createRepeated() =>
       $pb.PbList<UserListInfo>();
-  static UserListInfo getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UserListInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UserListInfo>(create);
   static UserListInfo _defaultInstance;
 
+  @$pb.TagNumber(1)
   $0.StringValue get userList => $_getN(0);
+  @$pb.TagNumber(1)
   set userList($0.StringValue v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasUserList() => $_has(0);
+  @$pb.TagNumber(1)
   void clearUserList() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.StringValue ensureUserList() => $_ensure(0);
 }
 
 class ProximityInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ProximityInfo',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
-    ..a<GeoPointInfo>(1, 'geoPoint', $pb.PbFieldType.OM,
-        GeoPointInfo.getDefault, GeoPointInfo.create)
-    ..a<$0.DoubleValue>(2, 'radius', $pb.PbFieldType.OM,
-        $0.DoubleValue.getDefault, $0.DoubleValue.create)
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
+    ..aOM<GeoPointInfo>(1, 'geoPoint', subBuilder: GeoPointInfo.create)
+    ..aOM<$0.DoubleValue>(2, 'radius', subBuilder: $0.DoubleValue.create)
     ..e<$19.ProximityRadiusUnitsEnum_ProximityRadiusUnits>(
-        3,
-        'radiusUnits',
-        $pb.PbFieldType.OE,
-        $19.ProximityRadiusUnitsEnum_ProximityRadiusUnits.UNSPECIFIED,
-        $19.ProximityRadiusUnitsEnum_ProximityRadiusUnits.valueOf,
-        $19.ProximityRadiusUnitsEnum_ProximityRadiusUnits.values)
-    ..a<AddressInfo>(4, 'address', $pb.PbFieldType.OM, AddressInfo.getDefault,
-        AddressInfo.create)
+        3, 'radiusUnits', $pb.PbFieldType.OE,
+        defaultOrMaker:
+            $19.ProximityRadiusUnitsEnum_ProximityRadiusUnits.UNSPECIFIED,
+        valueOf: $19.ProximityRadiusUnitsEnum_ProximityRadiusUnits.valueOf,
+        enumValues: $19.ProximityRadiusUnitsEnum_ProximityRadiusUnits.values)
+    ..aOM<AddressInfo>(4, 'address', subBuilder: AddressInfo.create)
     ..hasRequiredFields = false;
 
   ProximityInfo._() : super();
@@ -1880,50 +2217,75 @@ class ProximityInfo extends $pb.GeneratedMessage {
   ProximityInfo createEmptyInstance() => create();
   static $pb.PbList<ProximityInfo> createRepeated() =>
       $pb.PbList<ProximityInfo>();
-  static ProximityInfo getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ProximityInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ProximityInfo>(create);
   static ProximityInfo _defaultInstance;
 
+  @$pb.TagNumber(1)
   GeoPointInfo get geoPoint => $_getN(0);
+  @$pb.TagNumber(1)
   set geoPoint(GeoPointInfo v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasGeoPoint() => $_has(0);
+  @$pb.TagNumber(1)
   void clearGeoPoint() => clearField(1);
+  @$pb.TagNumber(1)
+  GeoPointInfo ensureGeoPoint() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $0.DoubleValue get radius => $_getN(1);
+  @$pb.TagNumber(2)
   set radius($0.DoubleValue v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasRadius() => $_has(1);
+  @$pb.TagNumber(2)
   void clearRadius() => clearField(2);
+  @$pb.TagNumber(2)
+  $0.DoubleValue ensureRadius() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $19.ProximityRadiusUnitsEnum_ProximityRadiusUnits get radiusUnits =>
       $_getN(2);
+  @$pb.TagNumber(3)
   set radiusUnits($19.ProximityRadiusUnitsEnum_ProximityRadiusUnits v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasRadiusUnits() => $_has(2);
+  @$pb.TagNumber(3)
   void clearRadiusUnits() => clearField(3);
 
+  @$pb.TagNumber(4)
   AddressInfo get address => $_getN(3);
+  @$pb.TagNumber(4)
   set address(AddressInfo v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasAddress() => $_has(3);
+  @$pb.TagNumber(4)
   void clearAddress() => clearField(4);
+  @$pb.TagNumber(4)
+  AddressInfo ensureAddress() => $_ensure(3);
 }
 
 class GeoPointInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GeoPointInfo',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
-    ..a<$0.Int32Value>(1, 'longitudeInMicroDegrees', $pb.PbFieldType.OM,
-        $0.Int32Value.getDefault, $0.Int32Value.create)
-    ..a<$0.Int32Value>(2, 'latitudeInMicroDegrees', $pb.PbFieldType.OM,
-        $0.Int32Value.getDefault, $0.Int32Value.create)
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
+    ..aOM<$0.Int32Value>(1, 'longitudeInMicroDegrees',
+        subBuilder: $0.Int32Value.create)
+    ..aOM<$0.Int32Value>(2, 'latitudeInMicroDegrees',
+        subBuilder: $0.Int32Value.create)
     ..hasRequiredFields = false;
 
   GeoPointInfo._() : super();
@@ -1943,43 +2305,52 @@ class GeoPointInfo extends $pb.GeneratedMessage {
   GeoPointInfo createEmptyInstance() => create();
   static $pb.PbList<GeoPointInfo> createRepeated() =>
       $pb.PbList<GeoPointInfo>();
-  static GeoPointInfo getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GeoPointInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GeoPointInfo>(create);
   static GeoPointInfo _defaultInstance;
 
+  @$pb.TagNumber(1)
   $0.Int32Value get longitudeInMicroDegrees => $_getN(0);
+  @$pb.TagNumber(1)
   set longitudeInMicroDegrees($0.Int32Value v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasLongitudeInMicroDegrees() => $_has(0);
+  @$pb.TagNumber(1)
   void clearLongitudeInMicroDegrees() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.Int32Value ensureLongitudeInMicroDegrees() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $0.Int32Value get latitudeInMicroDegrees => $_getN(1);
+  @$pb.TagNumber(2)
   set latitudeInMicroDegrees($0.Int32Value v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasLatitudeInMicroDegrees() => $_has(1);
+  @$pb.TagNumber(2)
   void clearLatitudeInMicroDegrees() => clearField(2);
+  @$pb.TagNumber(2)
+  $0.Int32Value ensureLatitudeInMicroDegrees() => $_ensure(1);
 }
 
 class AddressInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AddressInfo',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
-    ..a<$0.StringValue>(1, 'postalCode', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
-    ..a<$0.StringValue>(2, 'provinceCode', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
-    ..a<$0.StringValue>(3, 'countryCode', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
-    ..a<$0.StringValue>(4, 'provinceName', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
-    ..a<$0.StringValue>(5, 'streetAddress', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
-    ..a<$0.StringValue>(6, 'streetAddress2', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
-    ..a<$0.StringValue>(7, 'cityName', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
+    ..aOM<$0.StringValue>(1, 'postalCode', subBuilder: $0.StringValue.create)
+    ..aOM<$0.StringValue>(2, 'provinceCode', subBuilder: $0.StringValue.create)
+    ..aOM<$0.StringValue>(3, 'countryCode', subBuilder: $0.StringValue.create)
+    ..aOM<$0.StringValue>(4, 'provinceName', subBuilder: $0.StringValue.create)
+    ..aOM<$0.StringValue>(5, 'streetAddress', subBuilder: $0.StringValue.create)
+    ..aOM<$0.StringValue>(6, 'streetAddress2',
+        subBuilder: $0.StringValue.create)
+    ..aOM<$0.StringValue>(7, 'cityName', subBuilder: $0.StringValue.create)
     ..hasRequiredFields = false;
 
   AddressInfo._() : super();
@@ -1998,72 +2369,117 @@ class AddressInfo extends $pb.GeneratedMessage {
   static AddressInfo create() => AddressInfo._();
   AddressInfo createEmptyInstance() => create();
   static $pb.PbList<AddressInfo> createRepeated() => $pb.PbList<AddressInfo>();
-  static AddressInfo getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static AddressInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AddressInfo>(create);
   static AddressInfo _defaultInstance;
 
+  @$pb.TagNumber(1)
   $0.StringValue get postalCode => $_getN(0);
+  @$pb.TagNumber(1)
   set postalCode($0.StringValue v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasPostalCode() => $_has(0);
+  @$pb.TagNumber(1)
   void clearPostalCode() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.StringValue ensurePostalCode() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $0.StringValue get provinceCode => $_getN(1);
+  @$pb.TagNumber(2)
   set provinceCode($0.StringValue v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasProvinceCode() => $_has(1);
+  @$pb.TagNumber(2)
   void clearProvinceCode() => clearField(2);
+  @$pb.TagNumber(2)
+  $0.StringValue ensureProvinceCode() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $0.StringValue get countryCode => $_getN(2);
+  @$pb.TagNumber(3)
   set countryCode($0.StringValue v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasCountryCode() => $_has(2);
+  @$pb.TagNumber(3)
   void clearCountryCode() => clearField(3);
+  @$pb.TagNumber(3)
+  $0.StringValue ensureCountryCode() => $_ensure(2);
 
+  @$pb.TagNumber(4)
   $0.StringValue get provinceName => $_getN(3);
+  @$pb.TagNumber(4)
   set provinceName($0.StringValue v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasProvinceName() => $_has(3);
+  @$pb.TagNumber(4)
   void clearProvinceName() => clearField(4);
+  @$pb.TagNumber(4)
+  $0.StringValue ensureProvinceName() => $_ensure(3);
 
+  @$pb.TagNumber(5)
   $0.StringValue get streetAddress => $_getN(4);
+  @$pb.TagNumber(5)
   set streetAddress($0.StringValue v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasStreetAddress() => $_has(4);
+  @$pb.TagNumber(5)
   void clearStreetAddress() => clearField(5);
+  @$pb.TagNumber(5)
+  $0.StringValue ensureStreetAddress() => $_ensure(4);
 
+  @$pb.TagNumber(6)
   $0.StringValue get streetAddress2 => $_getN(5);
+  @$pb.TagNumber(6)
   set streetAddress2($0.StringValue v) {
     setField(6, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasStreetAddress2() => $_has(5);
+  @$pb.TagNumber(6)
   void clearStreetAddress2() => clearField(6);
+  @$pb.TagNumber(6)
+  $0.StringValue ensureStreetAddress2() => $_ensure(5);
 
+  @$pb.TagNumber(7)
   $0.StringValue get cityName => $_getN(6);
+  @$pb.TagNumber(7)
   set cityName($0.StringValue v) {
     setField(7, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasCityName() => $_has(6);
+  @$pb.TagNumber(7)
   void clearCityName() => clearField(7);
+  @$pb.TagNumber(7)
+  $0.StringValue ensureCityName() => $_ensure(6);
 }
 
 class TopicInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TopicInfo',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
-    ..a<$0.StringValue>(1, 'topicConstant', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
-    ..pc<$0.StringValue>(2, 'path', $pb.PbFieldType.PM, $0.StringValue.create)
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
+    ..aOM<$0.StringValue>(1, 'topicConstant', subBuilder: $0.StringValue.create)
+    ..pc<$0.StringValue>(2, 'path', $pb.PbFieldType.PM,
+        subBuilder: $0.StringValue.create)
     ..hasRequiredFields = false;
 
   TopicInfo._() : super();
@@ -2082,25 +2498,35 @@ class TopicInfo extends $pb.GeneratedMessage {
   static TopicInfo create() => TopicInfo._();
   TopicInfo createEmptyInstance() => create();
   static $pb.PbList<TopicInfo> createRepeated() => $pb.PbList<TopicInfo>();
-  static TopicInfo getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TopicInfo getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TopicInfo>(create);
   static TopicInfo _defaultInstance;
 
+  @$pb.TagNumber(1)
   $0.StringValue get topicConstant => $_getN(0);
+  @$pb.TagNumber(1)
   set topicConstant($0.StringValue v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasTopicConstant() => $_has(0);
+  @$pb.TagNumber(1)
   void clearTopicConstant() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.StringValue ensureTopicConstant() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $core.List<$0.StringValue> get path => $_getList(1);
 }
 
 class LanguageInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('LanguageInfo',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
-    ..a<$0.StringValue>(1, 'languageConstant', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
+    ..aOM<$0.StringValue>(1, 'languageConstant',
+        subBuilder: $0.StringValue.create)
     ..hasRequiredFields = false;
 
   LanguageInfo._() : super();
@@ -2120,23 +2546,31 @@ class LanguageInfo extends $pb.GeneratedMessage {
   LanguageInfo createEmptyInstance() => create();
   static $pb.PbList<LanguageInfo> createRepeated() =>
       $pb.PbList<LanguageInfo>();
-  static LanguageInfo getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static LanguageInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<LanguageInfo>(create);
   static LanguageInfo _defaultInstance;
 
+  @$pb.TagNumber(1)
   $0.StringValue get languageConstant => $_getN(0);
+  @$pb.TagNumber(1)
   set languageConstant($0.StringValue v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasLanguageConstant() => $_has(0);
+  @$pb.TagNumber(1)
   void clearLanguageConstant() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.StringValue ensureLanguageConstant() => $_ensure(0);
 }
 
 class IpBlockInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('IpBlockInfo',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
-    ..a<$0.StringValue>(1, 'ipAddress', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
+    ..aOM<$0.StringValue>(1, 'ipAddress', subBuilder: $0.StringValue.create)
     ..hasRequiredFields = false;
 
   IpBlockInfo._() : super();
@@ -2155,28 +2589,35 @@ class IpBlockInfo extends $pb.GeneratedMessage {
   static IpBlockInfo create() => IpBlockInfo._();
   IpBlockInfo createEmptyInstance() => create();
   static $pb.PbList<IpBlockInfo> createRepeated() => $pb.PbList<IpBlockInfo>();
-  static IpBlockInfo getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static IpBlockInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<IpBlockInfo>(create);
   static IpBlockInfo _defaultInstance;
 
+  @$pb.TagNumber(1)
   $0.StringValue get ipAddress => $_getN(0);
+  @$pb.TagNumber(1)
   set ipAddress($0.StringValue v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasIpAddress() => $_has(0);
+  @$pb.TagNumber(1)
   void clearIpAddress() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.StringValue ensureIpAddress() => $_ensure(0);
 }
 
 class ContentLabelInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ContentLabelInfo',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
     ..e<$20.ContentLabelTypeEnum_ContentLabelType>(
-        1,
-        'type',
-        $pb.PbFieldType.OE,
-        $20.ContentLabelTypeEnum_ContentLabelType.UNSPECIFIED,
-        $20.ContentLabelTypeEnum_ContentLabelType.valueOf,
-        $20.ContentLabelTypeEnum_ContentLabelType.values)
+        1, 'type', $pb.PbFieldType.OE,
+        defaultOrMaker: $20.ContentLabelTypeEnum_ContentLabelType.UNSPECIFIED,
+        valueOf: $20.ContentLabelTypeEnum_ContentLabelType.valueOf,
+        enumValues: $20.ContentLabelTypeEnum_ContentLabelType.values)
     ..hasRequiredFields = false;
 
   ContentLabelInfo._() : super();
@@ -2196,24 +2637,30 @@ class ContentLabelInfo extends $pb.GeneratedMessage {
   ContentLabelInfo createEmptyInstance() => create();
   static $pb.PbList<ContentLabelInfo> createRepeated() =>
       $pb.PbList<ContentLabelInfo>();
-  static ContentLabelInfo getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ContentLabelInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ContentLabelInfo>(create);
   static ContentLabelInfo _defaultInstance;
 
+  @$pb.TagNumber(1)
   $20.ContentLabelTypeEnum_ContentLabelType get type => $_getN(0);
+  @$pb.TagNumber(1)
   set type($20.ContentLabelTypeEnum_ContentLabelType v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasType() => $_has(0);
+  @$pb.TagNumber(1)
   void clearType() => clearField(1);
 }
 
 class CarrierInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CarrierInfo',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
-    ..a<$0.StringValue>(1, 'carrierConstant', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
+    ..aOM<$0.StringValue>(1, 'carrierConstant',
+        subBuilder: $0.StringValue.create)
     ..hasRequiredFields = false;
 
   CarrierInfo._() : super();
@@ -2232,23 +2679,32 @@ class CarrierInfo extends $pb.GeneratedMessage {
   static CarrierInfo create() => CarrierInfo._();
   CarrierInfo createEmptyInstance() => create();
   static $pb.PbList<CarrierInfo> createRepeated() => $pb.PbList<CarrierInfo>();
-  static CarrierInfo getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CarrierInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CarrierInfo>(create);
   static CarrierInfo _defaultInstance;
 
+  @$pb.TagNumber(1)
   $0.StringValue get carrierConstant => $_getN(0);
+  @$pb.TagNumber(1)
   set carrierConstant($0.StringValue v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCarrierConstant() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCarrierConstant() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.StringValue ensureCarrierConstant() => $_ensure(0);
 }
 
 class UserInterestInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UserInterestInfo',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
-    ..a<$0.StringValue>(1, 'userInterestCategory', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
+    ..aOM<$0.StringValue>(1, 'userInterestCategory',
+        subBuilder: $0.StringValue.create)
     ..hasRequiredFields = false;
 
   UserInterestInfo._() : super();
@@ -2268,26 +2724,33 @@ class UserInterestInfo extends $pb.GeneratedMessage {
   UserInterestInfo createEmptyInstance() => create();
   static $pb.PbList<UserInterestInfo> createRepeated() =>
       $pb.PbList<UserInterestInfo>();
-  static UserInterestInfo getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UserInterestInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UserInterestInfo>(create);
   static UserInterestInfo _defaultInstance;
 
+  @$pb.TagNumber(1)
   $0.StringValue get userInterestCategory => $_getN(0);
+  @$pb.TagNumber(1)
   set userInterestCategory($0.StringValue v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasUserInterestCategory() => $_has(0);
+  @$pb.TagNumber(1)
   void clearUserInterestCategory() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.StringValue ensureUserInterestCategory() => $_ensure(0);
 }
 
 class WebpageInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('WebpageInfo',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
-    ..a<$0.StringValue>(1, 'criterionName', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
-    ..pc<WebpageConditionInfo>(
-        2, 'conditions', $pb.PbFieldType.PM, WebpageConditionInfo.create)
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
+    ..aOM<$0.StringValue>(1, 'criterionName', subBuilder: $0.StringValue.create)
+    ..pc<WebpageConditionInfo>(2, 'conditions', $pb.PbFieldType.PM,
+        subBuilder: WebpageConditionInfo.create)
     ..hasRequiredFields = false;
 
   WebpageInfo._() : super();
@@ -2306,39 +2769,50 @@ class WebpageInfo extends $pb.GeneratedMessage {
   static WebpageInfo create() => WebpageInfo._();
   WebpageInfo createEmptyInstance() => create();
   static $pb.PbList<WebpageInfo> createRepeated() => $pb.PbList<WebpageInfo>();
-  static WebpageInfo getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static WebpageInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<WebpageInfo>(create);
   static WebpageInfo _defaultInstance;
 
+  @$pb.TagNumber(1)
   $0.StringValue get criterionName => $_getN(0);
+  @$pb.TagNumber(1)
   set criterionName($0.StringValue v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCriterionName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCriterionName() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.StringValue ensureCriterionName() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $core.List<WebpageConditionInfo> get conditions => $_getList(1);
 }
 
 class WebpageConditionInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('WebpageConditionInfo',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
     ..e<$21.WebpageConditionOperandEnum_WebpageConditionOperand>(
-        1,
-        'operand',
-        $pb.PbFieldType.OE,
-        $21.WebpageConditionOperandEnum_WebpageConditionOperand.UNSPECIFIED,
-        $21.WebpageConditionOperandEnum_WebpageConditionOperand.valueOf,
-        $21.WebpageConditionOperandEnum_WebpageConditionOperand.values)
+        1, 'operand', $pb.PbFieldType.OE,
+        defaultOrMaker:
+            $21.WebpageConditionOperandEnum_WebpageConditionOperand.UNSPECIFIED,
+        valueOf:
+            $21.WebpageConditionOperandEnum_WebpageConditionOperand.valueOf,
+        enumValues:
+            $21.WebpageConditionOperandEnum_WebpageConditionOperand.values)
     ..e<$22.WebpageConditionOperatorEnum_WebpageConditionOperator>(
-        2,
-        'operator',
-        $pb.PbFieldType.OE,
-        $22.WebpageConditionOperatorEnum_WebpageConditionOperator.UNSPECIFIED,
-        $22.WebpageConditionOperatorEnum_WebpageConditionOperator.valueOf,
-        $22.WebpageConditionOperatorEnum_WebpageConditionOperator.values)
-    ..a<$0.StringValue>(3, 'argument', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
+        2, 'operator', $pb.PbFieldType.OE,
+        defaultOrMaker: $22
+            .WebpageConditionOperatorEnum_WebpageConditionOperator.UNSPECIFIED,
+        valueOf:
+            $22.WebpageConditionOperatorEnum_WebpageConditionOperator.valueOf,
+        enumValues:
+            $22.WebpageConditionOperatorEnum_WebpageConditionOperator.values)
+    ..aOM<$0.StringValue>(3, 'argument', subBuilder: $0.StringValue.create)
     ..hasRequiredFields = false;
 
   WebpageConditionInfo._() : super();
@@ -2359,43 +2833,59 @@ class WebpageConditionInfo extends $pb.GeneratedMessage {
   WebpageConditionInfo createEmptyInstance() => create();
   static $pb.PbList<WebpageConditionInfo> createRepeated() =>
       $pb.PbList<WebpageConditionInfo>();
-  static WebpageConditionInfo getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static WebpageConditionInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<WebpageConditionInfo>(create);
   static WebpageConditionInfo _defaultInstance;
 
+  @$pb.TagNumber(1)
   $21.WebpageConditionOperandEnum_WebpageConditionOperand get operand =>
       $_getN(0);
+  @$pb.TagNumber(1)
   set operand($21.WebpageConditionOperandEnum_WebpageConditionOperand v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasOperand() => $_has(0);
+  @$pb.TagNumber(1)
   void clearOperand() => clearField(1);
 
+  @$pb.TagNumber(2)
   $22.WebpageConditionOperatorEnum_WebpageConditionOperator get operator =>
       $_getN(1);
+  @$pb.TagNumber(2)
   set operator($22.WebpageConditionOperatorEnum_WebpageConditionOperator v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasOperator() => $_has(1);
+  @$pb.TagNumber(2)
   void clearOperator() => clearField(2);
 
+  @$pb.TagNumber(3)
   $0.StringValue get argument => $_getN(2);
+  @$pb.TagNumber(3)
   set argument($0.StringValue v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasArgument() => $_has(2);
+  @$pb.TagNumber(3)
   void clearArgument() => clearField(3);
+  @$pb.TagNumber(3)
+  $0.StringValue ensureArgument() => $_ensure(2);
 }
 
 class OperatingSystemVersionInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'OperatingSystemVersionInfo',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
-    ..a<$0.StringValue>(1, 'operatingSystemVersionConstant', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
+    ..aOM<$0.StringValue>(1, 'operatingSystemVersionConstant',
+        subBuilder: $0.StringValue.create)
     ..hasRequiredFields = false;
 
   OperatingSystemVersionInfo._() : super();
@@ -2418,29 +2908,36 @@ class OperatingSystemVersionInfo extends $pb.GeneratedMessage {
   OperatingSystemVersionInfo createEmptyInstance() => create();
   static $pb.PbList<OperatingSystemVersionInfo> createRepeated() =>
       $pb.PbList<OperatingSystemVersionInfo>();
-  static OperatingSystemVersionInfo getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static OperatingSystemVersionInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<OperatingSystemVersionInfo>(create);
   static OperatingSystemVersionInfo _defaultInstance;
 
+  @$pb.TagNumber(1)
   $0.StringValue get operatingSystemVersionConstant => $_getN(0);
+  @$pb.TagNumber(1)
   set operatingSystemVersionConstant($0.StringValue v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasOperatingSystemVersionConstant() => $_has(0);
+  @$pb.TagNumber(1)
   void clearOperatingSystemVersionConstant() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.StringValue ensureOperatingSystemVersionConstant() => $_ensure(0);
 }
 
 class AppPaymentModelInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AppPaymentModelInfo',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
     ..e<$23.AppPaymentModelTypeEnum_AppPaymentModelType>(
-        1,
-        'type',
-        $pb.PbFieldType.OE,
-        $23.AppPaymentModelTypeEnum_AppPaymentModelType.UNSPECIFIED,
-        $23.AppPaymentModelTypeEnum_AppPaymentModelType.valueOf,
-        $23.AppPaymentModelTypeEnum_AppPaymentModelType.values)
+        1, 'type', $pb.PbFieldType.OE,
+        defaultOrMaker:
+            $23.AppPaymentModelTypeEnum_AppPaymentModelType.UNSPECIFIED,
+        valueOf: $23.AppPaymentModelTypeEnum_AppPaymentModelType.valueOf,
+        enumValues: $23.AppPaymentModelTypeEnum_AppPaymentModelType.values)
     ..hasRequiredFields = false;
 
   AppPaymentModelInfo._() : super();
@@ -2460,24 +2957,30 @@ class AppPaymentModelInfo extends $pb.GeneratedMessage {
   AppPaymentModelInfo createEmptyInstance() => create();
   static $pb.PbList<AppPaymentModelInfo> createRepeated() =>
       $pb.PbList<AppPaymentModelInfo>();
-  static AppPaymentModelInfo getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static AppPaymentModelInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AppPaymentModelInfo>(create);
   static AppPaymentModelInfo _defaultInstance;
 
+  @$pb.TagNumber(1)
   $23.AppPaymentModelTypeEnum_AppPaymentModelType get type => $_getN(0);
+  @$pb.TagNumber(1)
   set type($23.AppPaymentModelTypeEnum_AppPaymentModelType v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasType() => $_has(0);
+  @$pb.TagNumber(1)
   void clearType() => clearField(1);
 }
 
 class MobileDeviceInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('MobileDeviceInfo',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
-    ..a<$0.StringValue>(1, 'mobileDeviceConstant', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
+    ..aOM<$0.StringValue>(1, 'mobileDeviceConstant',
+        subBuilder: $0.StringValue.create)
     ..hasRequiredFields = false;
 
   MobileDeviceInfo._() : super();
@@ -2497,24 +3000,32 @@ class MobileDeviceInfo extends $pb.GeneratedMessage {
   MobileDeviceInfo createEmptyInstance() => create();
   static $pb.PbList<MobileDeviceInfo> createRepeated() =>
       $pb.PbList<MobileDeviceInfo>();
-  static MobileDeviceInfo getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MobileDeviceInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MobileDeviceInfo>(create);
   static MobileDeviceInfo _defaultInstance;
 
+  @$pb.TagNumber(1)
   $0.StringValue get mobileDeviceConstant => $_getN(0);
+  @$pb.TagNumber(1)
   set mobileDeviceConstant($0.StringValue v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasMobileDeviceConstant() => $_has(0);
+  @$pb.TagNumber(1)
   void clearMobileDeviceConstant() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.StringValue ensureMobileDeviceConstant() => $_ensure(0);
 }
 
 class CustomAffinityInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CustomAffinityInfo',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
-    ..a<$0.StringValue>(1, 'customAffinity', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
+    ..aOM<$0.StringValue>(1, 'customAffinity',
+        subBuilder: $0.StringValue.create)
     ..hasRequiredFields = false;
 
   CustomAffinityInfo._() : super();
@@ -2534,24 +3045,31 @@ class CustomAffinityInfo extends $pb.GeneratedMessage {
   CustomAffinityInfo createEmptyInstance() => create();
   static $pb.PbList<CustomAffinityInfo> createRepeated() =>
       $pb.PbList<CustomAffinityInfo>();
-  static CustomAffinityInfo getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CustomAffinityInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CustomAffinityInfo>(create);
   static CustomAffinityInfo _defaultInstance;
 
+  @$pb.TagNumber(1)
   $0.StringValue get customAffinity => $_getN(0);
+  @$pb.TagNumber(1)
   set customAffinity($0.StringValue v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCustomAffinity() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCustomAffinity() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.StringValue ensureCustomAffinity() => $_ensure(0);
 }
 
 class CustomIntentInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CustomIntentInfo',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
-    ..a<$0.StringValue>(1, 'customIntent', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
+    ..aOM<$0.StringValue>(1, 'customIntent', subBuilder: $0.StringValue.create)
     ..hasRequiredFields = false;
 
   CustomIntentInfo._() : super();
@@ -2571,35 +3089,42 @@ class CustomIntentInfo extends $pb.GeneratedMessage {
   CustomIntentInfo createEmptyInstance() => create();
   static $pb.PbList<CustomIntentInfo> createRepeated() =>
       $pb.PbList<CustomIntentInfo>();
-  static CustomIntentInfo getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CustomIntentInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CustomIntentInfo>(create);
   static CustomIntentInfo _defaultInstance;
 
+  @$pb.TagNumber(1)
   $0.StringValue get customIntent => $_getN(0);
+  @$pb.TagNumber(1)
   set customIntent($0.StringValue v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCustomIntent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCustomIntent() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.StringValue ensureCustomIntent() => $_ensure(0);
 }
 
 class LocationGroupInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('LocationGroupInfo',
-      package: const $pb.PackageName('google.ads.googleads.v2.common'))
-    ..a<$0.StringValue>(1, 'feed', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
-    ..pc<$0.StringValue>(
-        2, 'geoTargetConstants', $pb.PbFieldType.PM, $0.StringValue.create)
-    ..a<$0.Int64Value>(3, 'radius', $pb.PbFieldType.OM,
-        $0.Int64Value.getDefault, $0.Int64Value.create)
+      package: const $pb.PackageName('google.ads.googleads.v2.common'),
+      createEmptyInstance: create)
+    ..aOM<$0.StringValue>(1, 'feed', subBuilder: $0.StringValue.create)
+    ..pc<$0.StringValue>(2, 'geoTargetConstants', $pb.PbFieldType.PM,
+        subBuilder: $0.StringValue.create)
+    ..aOM<$0.Int64Value>(3, 'radius', subBuilder: $0.Int64Value.create)
     ..e<$24.LocationGroupRadiusUnitsEnum_LocationGroupRadiusUnits>(
-        4,
-        'radiusUnits',
-        $pb.PbFieldType.OE,
-        $24.LocationGroupRadiusUnitsEnum_LocationGroupRadiusUnits.UNSPECIFIED,
-        $24.LocationGroupRadiusUnitsEnum_LocationGroupRadiusUnits.valueOf,
-        $24.LocationGroupRadiusUnitsEnum_LocationGroupRadiusUnits.values)
+        4, 'radiusUnits', $pb.PbFieldType.OE,
+        defaultOrMaker: $24
+            .LocationGroupRadiusUnitsEnum_LocationGroupRadiusUnits.UNSPECIFIED,
+        valueOf:
+            $24.LocationGroupRadiusUnitsEnum_LocationGroupRadiusUnits.valueOf,
+        enumValues:
+            $24.LocationGroupRadiusUnitsEnum_LocationGroupRadiusUnits.values)
     ..hasRequiredFields = false;
 
   LocationGroupInfo._() : super();
@@ -2619,34 +3144,52 @@ class LocationGroupInfo extends $pb.GeneratedMessage {
   LocationGroupInfo createEmptyInstance() => create();
   static $pb.PbList<LocationGroupInfo> createRepeated() =>
       $pb.PbList<LocationGroupInfo>();
-  static LocationGroupInfo getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static LocationGroupInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<LocationGroupInfo>(create);
   static LocationGroupInfo _defaultInstance;
 
+  @$pb.TagNumber(1)
   $0.StringValue get feed => $_getN(0);
+  @$pb.TagNumber(1)
   set feed($0.StringValue v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasFeed() => $_has(0);
+  @$pb.TagNumber(1)
   void clearFeed() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.StringValue ensureFeed() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $core.List<$0.StringValue> get geoTargetConstants => $_getList(1);
 
+  @$pb.TagNumber(3)
   $0.Int64Value get radius => $_getN(2);
+  @$pb.TagNumber(3)
   set radius($0.Int64Value v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasRadius() => $_has(2);
+  @$pb.TagNumber(3)
   void clearRadius() => clearField(3);
+  @$pb.TagNumber(3)
+  $0.Int64Value ensureRadius() => $_ensure(2);
 
+  @$pb.TagNumber(4)
   $24.LocationGroupRadiusUnitsEnum_LocationGroupRadiusUnits get radiusUnits =>
       $_getN(3);
+  @$pb.TagNumber(4)
   set radiusUnits($24.LocationGroupRadiusUnitsEnum_LocationGroupRadiusUnits v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasRadiusUnits() => $_has(3);
+  @$pb.TagNumber(4)
   void clearRadiusUnits() => clearField(4);
 }

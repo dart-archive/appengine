@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -20,22 +19,17 @@ class InputConfig extends $pb.GeneratedMessage {
     0: InputConfig_Source.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('InputConfig',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
     ..oo(0, [1, 3])
-    ..a<GcsSource>(1, 'gcsSource', $pb.PbFieldType.OM, GcsSource.getDefault,
-        GcsSource.create)
-    ..m<$core.String, $core.String>(
-        2,
-        'params',
-        'InputConfig.ParamsEntry',
-        $pb.PbFieldType.OS,
-        $pb.PbFieldType.OS,
-        null,
-        null,
-        null,
-        const $pb.PackageName('google.cloud.automl.v1beta1'))
-    ..a<BigQuerySource>(3, 'bigquerySource', $pb.PbFieldType.OM,
-        BigQuerySource.getDefault, BigQuerySource.create)
+    ..aOM<GcsSource>(1, 'gcsSource', subBuilder: GcsSource.create)
+    ..m<$core.String, $core.String>(2, 'params',
+        entryClassName: 'InputConfig.ParamsEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
+        packageName: const $pb.PackageName('google.cloud.automl.v1beta1'))
+    ..aOM<BigQuerySource>(3, 'bigquerySource',
+        subBuilder: BigQuerySource.create)
     ..hasRequiredFields = false;
 
   InputConfig._() : super();
@@ -54,29 +48,44 @@ class InputConfig extends $pb.GeneratedMessage {
   static InputConfig create() => InputConfig._();
   InputConfig createEmptyInstance() => create();
   static $pb.PbList<InputConfig> createRepeated() => $pb.PbList<InputConfig>();
-  static InputConfig getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static InputConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<InputConfig>(create);
   static InputConfig _defaultInstance;
 
   InputConfig_Source whichSource() => _InputConfig_SourceByTag[$_whichOneof(0)];
   void clearSource() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   GcsSource get gcsSource => $_getN(0);
+  @$pb.TagNumber(1)
   set gcsSource(GcsSource v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasGcsSource() => $_has(0);
+  @$pb.TagNumber(1)
   void clearGcsSource() => clearField(1);
+  @$pb.TagNumber(1)
+  GcsSource ensureGcsSource() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $core.Map<$core.String, $core.String> get params => $_getMap(1);
 
+  @$pb.TagNumber(3)
   BigQuerySource get bigquerySource => $_getN(2);
+  @$pb.TagNumber(3)
   set bigquerySource(BigQuerySource v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasBigquerySource() => $_has(2);
+  @$pb.TagNumber(3)
   void clearBigquerySource() => clearField(3);
+  @$pb.TagNumber(3)
+  BigQuerySource ensureBigquerySource() => $_ensure(2);
 }
 
 enum BatchPredictInputConfig_Source { gcsSource, bigquerySource, notSet }
@@ -89,12 +98,12 @@ class BatchPredictInputConfig extends $pb.GeneratedMessage {
     0: BatchPredictInputConfig_Source.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('BatchPredictInputConfig',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
     ..oo(0, [1, 2])
-    ..a<GcsSource>(1, 'gcsSource', $pb.PbFieldType.OM, GcsSource.getDefault,
-        GcsSource.create)
-    ..a<BigQuerySource>(2, 'bigquerySource', $pb.PbFieldType.OM,
-        BigQuerySource.getDefault, BigQuerySource.create)
+    ..aOM<GcsSource>(1, 'gcsSource', subBuilder: GcsSource.create)
+    ..aOM<BigQuerySource>(2, 'bigquerySource',
+        subBuilder: BigQuerySource.create)
     ..hasRequiredFields = false;
 
   BatchPredictInputConfig._() : super();
@@ -116,36 +125,49 @@ class BatchPredictInputConfig extends $pb.GeneratedMessage {
   BatchPredictInputConfig createEmptyInstance() => create();
   static $pb.PbList<BatchPredictInputConfig> createRepeated() =>
       $pb.PbList<BatchPredictInputConfig>();
-  static BatchPredictInputConfig getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static BatchPredictInputConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BatchPredictInputConfig>(create);
   static BatchPredictInputConfig _defaultInstance;
 
   BatchPredictInputConfig_Source whichSource() =>
       _BatchPredictInputConfig_SourceByTag[$_whichOneof(0)];
   void clearSource() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   GcsSource get gcsSource => $_getN(0);
+  @$pb.TagNumber(1)
   set gcsSource(GcsSource v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasGcsSource() => $_has(0);
+  @$pb.TagNumber(1)
   void clearGcsSource() => clearField(1);
+  @$pb.TagNumber(1)
+  GcsSource ensureGcsSource() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   BigQuerySource get bigquerySource => $_getN(1);
+  @$pb.TagNumber(2)
   set bigquerySource(BigQuerySource v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasBigquerySource() => $_has(1);
+  @$pb.TagNumber(2)
   void clearBigquerySource() => clearField(2);
+  @$pb.TagNumber(2)
+  BigQuerySource ensureBigquerySource() => $_ensure(1);
 }
 
 class DocumentInputConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DocumentInputConfig',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
-    ..a<GcsSource>(1, 'gcsSource', $pb.PbFieldType.OM, GcsSource.getDefault,
-        GcsSource.create)
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
+    ..aOM<GcsSource>(1, 'gcsSource', subBuilder: GcsSource.create)
     ..hasRequiredFields = false;
 
   DocumentInputConfig._() : super();
@@ -165,17 +187,24 @@ class DocumentInputConfig extends $pb.GeneratedMessage {
   DocumentInputConfig createEmptyInstance() => create();
   static $pb.PbList<DocumentInputConfig> createRepeated() =>
       $pb.PbList<DocumentInputConfig>();
-  static DocumentInputConfig getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DocumentInputConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DocumentInputConfig>(create);
   static DocumentInputConfig _defaultInstance;
 
+  @$pb.TagNumber(1)
   GcsSource get gcsSource => $_getN(0);
+  @$pb.TagNumber(1)
   set gcsSource(GcsSource v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasGcsSource() => $_has(0);
+  @$pb.TagNumber(1)
   void clearGcsSource() => clearField(1);
+  @$pb.TagNumber(1)
+  GcsSource ensureGcsSource() => $_ensure(0);
 }
 
 enum OutputConfig_Destination { gcsDestination, bigqueryDestination, notSet }
@@ -188,12 +217,13 @@ class OutputConfig extends $pb.GeneratedMessage {
     0: OutputConfig_Destination.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('OutputConfig',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
     ..oo(0, [1, 2])
-    ..a<GcsDestination>(1, 'gcsDestination', $pb.PbFieldType.OM,
-        GcsDestination.getDefault, GcsDestination.create)
-    ..a<BigQueryDestination>(2, 'bigqueryDestination', $pb.PbFieldType.OM,
-        BigQueryDestination.getDefault, BigQueryDestination.create)
+    ..aOM<GcsDestination>(1, 'gcsDestination',
+        subBuilder: GcsDestination.create)
+    ..aOM<BigQueryDestination>(2, 'bigqueryDestination',
+        subBuilder: BigQueryDestination.create)
     ..hasRequiredFields = false;
 
   OutputConfig._() : super();
@@ -213,28 +243,42 @@ class OutputConfig extends $pb.GeneratedMessage {
   OutputConfig createEmptyInstance() => create();
   static $pb.PbList<OutputConfig> createRepeated() =>
       $pb.PbList<OutputConfig>();
-  static OutputConfig getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static OutputConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<OutputConfig>(create);
   static OutputConfig _defaultInstance;
 
   OutputConfig_Destination whichDestination() =>
       _OutputConfig_DestinationByTag[$_whichOneof(0)];
   void clearDestination() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   GcsDestination get gcsDestination => $_getN(0);
+  @$pb.TagNumber(1)
   set gcsDestination(GcsDestination v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasGcsDestination() => $_has(0);
+  @$pb.TagNumber(1)
   void clearGcsDestination() => clearField(1);
+  @$pb.TagNumber(1)
+  GcsDestination ensureGcsDestination() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   BigQueryDestination get bigqueryDestination => $_getN(1);
+  @$pb.TagNumber(2)
   set bigqueryDestination(BigQueryDestination v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasBigqueryDestination() => $_has(1);
+  @$pb.TagNumber(2)
   void clearBigqueryDestination() => clearField(2);
+  @$pb.TagNumber(2)
+  BigQueryDestination ensureBigqueryDestination() => $_ensure(1);
 }
 
 enum BatchPredictOutputConfig_Destination {
@@ -251,12 +295,13 @@ class BatchPredictOutputConfig extends $pb.GeneratedMessage {
     0: BatchPredictOutputConfig_Destination.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('BatchPredictOutputConfig',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
     ..oo(0, [1, 2])
-    ..a<GcsDestination>(1, 'gcsDestination', $pb.PbFieldType.OM,
-        GcsDestination.getDefault, GcsDestination.create)
-    ..a<BigQueryDestination>(2, 'bigqueryDestination', $pb.PbFieldType.OM,
-        BigQueryDestination.getDefault, BigQueryDestination.create)
+    ..aOM<GcsDestination>(1, 'gcsDestination',
+        subBuilder: GcsDestination.create)
+    ..aOM<BigQueryDestination>(2, 'bigqueryDestination',
+        subBuilder: BigQueryDestination.create)
     ..hasRequiredFields = false;
 
   BatchPredictOutputConfig._() : super();
@@ -278,29 +323,42 @@ class BatchPredictOutputConfig extends $pb.GeneratedMessage {
   BatchPredictOutputConfig createEmptyInstance() => create();
   static $pb.PbList<BatchPredictOutputConfig> createRepeated() =>
       $pb.PbList<BatchPredictOutputConfig>();
-  static BatchPredictOutputConfig getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static BatchPredictOutputConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BatchPredictOutputConfig>(create);
   static BatchPredictOutputConfig _defaultInstance;
 
   BatchPredictOutputConfig_Destination whichDestination() =>
       _BatchPredictOutputConfig_DestinationByTag[$_whichOneof(0)];
   void clearDestination() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   GcsDestination get gcsDestination => $_getN(0);
+  @$pb.TagNumber(1)
   set gcsDestination(GcsDestination v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasGcsDestination() => $_has(0);
+  @$pb.TagNumber(1)
   void clearGcsDestination() => clearField(1);
+  @$pb.TagNumber(1)
+  GcsDestination ensureGcsDestination() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   BigQueryDestination get bigqueryDestination => $_getN(1);
+  @$pb.TagNumber(2)
   set bigqueryDestination(BigQueryDestination v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasBigqueryDestination() => $_has(1);
+  @$pb.TagNumber(2)
   void clearBigqueryDestination() => clearField(2);
+  @$pb.TagNumber(2)
+  BigQueryDestination ensureBigqueryDestination() => $_ensure(1);
 }
 
 enum ModelExportOutputConfig_Destination {
@@ -317,22 +375,18 @@ class ModelExportOutputConfig extends $pb.GeneratedMessage {
     0: ModelExportOutputConfig_Destination.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ModelExportOutputConfig',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
     ..oo(0, [1, 3])
-    ..a<GcsDestination>(1, 'gcsDestination', $pb.PbFieldType.OM,
-        GcsDestination.getDefault, GcsDestination.create)
-    ..m<$core.String, $core.String>(
-        2,
-        'params',
-        'ModelExportOutputConfig.ParamsEntry',
-        $pb.PbFieldType.OS,
-        $pb.PbFieldType.OS,
-        null,
-        null,
-        null,
-        const $pb.PackageName('google.cloud.automl.v1beta1'))
-    ..a<GcrDestination>(3, 'gcrDestination', $pb.PbFieldType.OM,
-        GcrDestination.getDefault, GcrDestination.create)
+    ..aOM<GcsDestination>(1, 'gcsDestination',
+        subBuilder: GcsDestination.create)
+    ..m<$core.String, $core.String>(2, 'params',
+        entryClassName: 'ModelExportOutputConfig.ParamsEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
+        packageName: const $pb.PackageName('google.cloud.automl.v1beta1'))
+    ..aOM<GcrDestination>(3, 'gcrDestination',
+        subBuilder: GcrDestination.create)
     ..aOS(4, 'modelFormat')
     ..hasRequiredFields = false;
 
@@ -355,38 +409,56 @@ class ModelExportOutputConfig extends $pb.GeneratedMessage {
   ModelExportOutputConfig createEmptyInstance() => create();
   static $pb.PbList<ModelExportOutputConfig> createRepeated() =>
       $pb.PbList<ModelExportOutputConfig>();
-  static ModelExportOutputConfig getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ModelExportOutputConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ModelExportOutputConfig>(create);
   static ModelExportOutputConfig _defaultInstance;
 
   ModelExportOutputConfig_Destination whichDestination() =>
       _ModelExportOutputConfig_DestinationByTag[$_whichOneof(0)];
   void clearDestination() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   GcsDestination get gcsDestination => $_getN(0);
+  @$pb.TagNumber(1)
   set gcsDestination(GcsDestination v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasGcsDestination() => $_has(0);
+  @$pb.TagNumber(1)
   void clearGcsDestination() => clearField(1);
+  @$pb.TagNumber(1)
+  GcsDestination ensureGcsDestination() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $core.Map<$core.String, $core.String> get params => $_getMap(1);
 
+  @$pb.TagNumber(3)
   GcrDestination get gcrDestination => $_getN(2);
+  @$pb.TagNumber(3)
   set gcrDestination(GcrDestination v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasGcrDestination() => $_has(2);
+  @$pb.TagNumber(3)
   void clearGcrDestination() => clearField(3);
+  @$pb.TagNumber(3)
+  GcrDestination ensureGcrDestination() => $_ensure(2);
 
-  $core.String get modelFormat => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get modelFormat => $_getSZ(3);
+  @$pb.TagNumber(4)
   set modelFormat($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasModelFormat() => $_has(3);
+  @$pb.TagNumber(4)
   void clearModelFormat() => clearField(4);
 }
 
@@ -404,10 +476,11 @@ class ExportEvaluatedExamplesOutputConfig extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ExportEvaluatedExamplesOutputConfig',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
     ..oo(0, [2])
-    ..a<BigQueryDestination>(2, 'bigqueryDestination', $pb.PbFieldType.OM,
-        BigQueryDestination.getDefault, BigQueryDestination.create)
+    ..aOM<BigQueryDestination>(2, 'bigqueryDestination',
+        subBuilder: BigQueryDestination.create)
     ..hasRequiredFields = false;
 
   ExportEvaluatedExamplesOutputConfig._() : super();
@@ -432,26 +505,35 @@ class ExportEvaluatedExamplesOutputConfig extends $pb.GeneratedMessage {
   ExportEvaluatedExamplesOutputConfig createEmptyInstance() => create();
   static $pb.PbList<ExportEvaluatedExamplesOutputConfig> createRepeated() =>
       $pb.PbList<ExportEvaluatedExamplesOutputConfig>();
+  @$core.pragma('dart2js:noInline')
   static ExportEvaluatedExamplesOutputConfig getDefault() =>
-      _defaultInstance ??= create()..freeze();
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          ExportEvaluatedExamplesOutputConfig>(create);
   static ExportEvaluatedExamplesOutputConfig _defaultInstance;
 
   ExportEvaluatedExamplesOutputConfig_Destination whichDestination() =>
       _ExportEvaluatedExamplesOutputConfig_DestinationByTag[$_whichOneof(0)];
   void clearDestination() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(2)
   BigQueryDestination get bigqueryDestination => $_getN(0);
+  @$pb.TagNumber(2)
   set bigqueryDestination(BigQueryDestination v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasBigqueryDestination() => $_has(0);
+  @$pb.TagNumber(2)
   void clearBigqueryDestination() => clearField(2);
+  @$pb.TagNumber(2)
+  BigQueryDestination ensureBigqueryDestination() => $_ensure(0);
 }
 
 class GcsSource extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GcsSource',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
     ..pPS(1, 'inputUris')
     ..hasRequiredFields = false;
 
@@ -471,15 +553,19 @@ class GcsSource extends $pb.GeneratedMessage {
   static GcsSource create() => GcsSource._();
   GcsSource createEmptyInstance() => create();
   static $pb.PbList<GcsSource> createRepeated() => $pb.PbList<GcsSource>();
-  static GcsSource getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GcsSource getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GcsSource>(create);
   static GcsSource _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$core.String> get inputUris => $_getList(0);
 }
 
 class BigQuerySource extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('BigQuerySource',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'inputUri')
     ..hasRequiredFields = false;
 
@@ -500,21 +586,28 @@ class BigQuerySource extends $pb.GeneratedMessage {
   BigQuerySource createEmptyInstance() => create();
   static $pb.PbList<BigQuerySource> createRepeated() =>
       $pb.PbList<BigQuerySource>();
-  static BigQuerySource getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static BigQuerySource getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BigQuerySource>(create);
   static BigQuerySource _defaultInstance;
 
-  $core.String get inputUri => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get inputUri => $_getSZ(0);
+  @$pb.TagNumber(1)
   set inputUri($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasInputUri() => $_has(0);
+  @$pb.TagNumber(1)
   void clearInputUri() => clearField(1);
 }
 
 class GcsDestination extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GcsDestination',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'outputUriPrefix')
     ..hasRequiredFields = false;
 
@@ -535,21 +628,28 @@ class GcsDestination extends $pb.GeneratedMessage {
   GcsDestination createEmptyInstance() => create();
   static $pb.PbList<GcsDestination> createRepeated() =>
       $pb.PbList<GcsDestination>();
-  static GcsDestination getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GcsDestination getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GcsDestination>(create);
   static GcsDestination _defaultInstance;
 
-  $core.String get outputUriPrefix => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get outputUriPrefix => $_getSZ(0);
+  @$pb.TagNumber(1)
   set outputUriPrefix($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasOutputUriPrefix() => $_has(0);
+  @$pb.TagNumber(1)
   void clearOutputUriPrefix() => clearField(1);
 }
 
 class BigQueryDestination extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('BigQueryDestination',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'outputUri')
     ..hasRequiredFields = false;
 
@@ -570,22 +670,28 @@ class BigQueryDestination extends $pb.GeneratedMessage {
   BigQueryDestination createEmptyInstance() => create();
   static $pb.PbList<BigQueryDestination> createRepeated() =>
       $pb.PbList<BigQueryDestination>();
-  static BigQueryDestination getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static BigQueryDestination getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BigQueryDestination>(create);
   static BigQueryDestination _defaultInstance;
 
-  $core.String get outputUri => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get outputUri => $_getSZ(0);
+  @$pb.TagNumber(1)
   set outputUri($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasOutputUri() => $_has(0);
+  @$pb.TagNumber(1)
   void clearOutputUri() => clearField(1);
 }
 
 class GcrDestination extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GcrDestination',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'outputUri')
     ..hasRequiredFields = false;
 
@@ -606,14 +712,20 @@ class GcrDestination extends $pb.GeneratedMessage {
   GcrDestination createEmptyInstance() => create();
   static $pb.PbList<GcrDestination> createRepeated() =>
       $pb.PbList<GcrDestination>();
-  static GcrDestination getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GcrDestination getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GcrDestination>(create);
   static GcrDestination _defaultInstance;
 
-  $core.String get outputUri => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get outputUri => $_getSZ(0);
+  @$pb.TagNumber(1)
   set outputUri($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasOutputUri() => $_has(0);
+  @$pb.TagNumber(1)
   void clearOutputUri() => clearField(1);
 }

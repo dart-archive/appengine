@@ -8,13 +8,14 @@
 const CreateAssessmentRequest$json = {
   '1': 'CreateAssessmentRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
     {
       '1': 'assessment',
       '3': 2,
       '4': 1,
       '5': 11,
       '6': '.google.cloud.recaptchaenterprise.v1beta1.Assessment',
+      '8': {},
       '10': 'assessment'
     },
   ],
@@ -23,7 +24,7 @@ const CreateAssessmentRequest$json = {
 const AnnotateAssessmentRequest$json = {
   '1': 'AnnotateAssessmentRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
     {
       '1': 'annotation',
       '3': 2,
@@ -31,6 +32,7 @@ const AnnotateAssessmentRequest$json = {
       '5': 14,
       '6':
           '.google.cloud.recaptchaenterprise.v1beta1.AnnotateAssessmentRequest.Annotation',
+      '8': {},
       '10': 'annotation'
     },
   ],
@@ -53,7 +55,7 @@ const AnnotateAssessmentResponse$json = {
 const Assessment$json = {
   '1': 'Assessment',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
     {
       '1': 'event',
       '3': 2,
@@ -62,13 +64,14 @@ const Assessment$json = {
       '6': '.google.cloud.recaptchaenterprise.v1beta1.Event',
       '10': 'event'
     },
-    {'1': 'score', '3': 3, '4': 1, '5': 2, '10': 'score'},
+    {'1': 'score', '3': 3, '4': 1, '5': 2, '8': {}, '10': 'score'},
     {
       '1': 'token_properties',
       '3': 4,
       '4': 1,
       '5': 11,
       '6': '.google.cloud.recaptchaenterprise.v1beta1.TokenProperties',
+      '8': {},
       '10': 'tokenProperties'
     },
     {
@@ -78,10 +81,12 @@ const Assessment$json = {
       '5': 14,
       '6':
           '.google.cloud.recaptchaenterprise.v1beta1.Assessment.ClassificationReason',
+      '8': {},
       '10': 'reasons'
     },
   ],
   '4': [Assessment_ClassificationReason$json],
+  '7': {},
 };
 
 const Assessment_ClassificationReason$json = {
@@ -90,16 +95,17 @@ const Assessment_ClassificationReason$json = {
     {'1': 'CLASSIFICATION_REASON_UNSPECIFIED', '2': 0},
     {'1': 'AUTOMATION', '2': 1},
     {'1': 'UNEXPECTED_ENVIRONMENT', '2': 2},
+    {'1': 'TOO_MUCH_TRAFFIC', '2': 3},
     {'1': 'UNEXPECTED_USAGE_PATTERNS', '2': 4},
-    {'1': 'PROVISIONAL_RISK_ANALYSIS', '2': 5},
+    {'1': 'LOW_CONFIDENCE_SCORE', '2': 5},
   ],
 };
 
 const Event$json = {
   '1': 'Event',
   '2': [
-    {'1': 'token', '3': 1, '4': 1, '5': 9, '10': 'token'},
-    {'1': 'site_key', '3': 2, '4': 1, '5': 9, '10': 'siteKey'},
+    {'1': 'token', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'token'},
+    {'1': 'site_key', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'siteKey'},
   ],
 };
 

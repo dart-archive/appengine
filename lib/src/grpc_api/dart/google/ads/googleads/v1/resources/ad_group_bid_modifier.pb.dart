@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -37,43 +36,30 @@ class AdGroupBidModifier extends $pb.GeneratedMessage {
     0: AdGroupBidModifier_Criterion.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AdGroupBidModifier',
-      package: const $pb.PackageName('google.ads.googleads.v1.resources'))
+      package: const $pb.PackageName('google.ads.googleads.v1.resources'),
+      createEmptyInstance: create)
     ..oo(0, [5, 6, 7, 8, 11, 12])
     ..aOS(1, 'resourceName')
-    ..a<$0.StringValue>(2, 'adGroup', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
-    ..a<$0.Int64Value>(3, 'criterionId', $pb.PbFieldType.OM,
-        $0.Int64Value.getDefault, $0.Int64Value.create)
-    ..a<$0.DoubleValue>(4, 'bidModifier', $pb.PbFieldType.OM,
-        $0.DoubleValue.getDefault, $0.DoubleValue.create)
-    ..a<$1.HotelDateSelectionTypeInfo>(
-        5,
-        'hotelDateSelectionType',
-        $pb.PbFieldType.OM,
-        $1.HotelDateSelectionTypeInfo.getDefault,
-        $1.HotelDateSelectionTypeInfo.create)
-    ..a<$1.HotelAdvanceBookingWindowInfo>(
-        6,
-        'hotelAdvanceBookingWindow',
-        $pb.PbFieldType.OM,
-        $1.HotelAdvanceBookingWindowInfo.getDefault,
-        $1.HotelAdvanceBookingWindowInfo.create)
-    ..a<$1.HotelLengthOfStayInfo>(7, 'hotelLengthOfStay', $pb.PbFieldType.OM,
-        $1.HotelLengthOfStayInfo.getDefault, $1.HotelLengthOfStayInfo.create)
-    ..a<$1.HotelCheckInDayInfo>(8, 'hotelCheckInDay', $pb.PbFieldType.OM,
-        $1.HotelCheckInDayInfo.getDefault, $1.HotelCheckInDayInfo.create)
-    ..a<$0.StringValue>(9, 'baseAdGroup', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
+    ..aOM<$0.StringValue>(2, 'adGroup', subBuilder: $0.StringValue.create)
+    ..aOM<$0.Int64Value>(3, 'criterionId', subBuilder: $0.Int64Value.create)
+    ..aOM<$0.DoubleValue>(4, 'bidModifier', subBuilder: $0.DoubleValue.create)
+    ..aOM<$1.HotelDateSelectionTypeInfo>(5, 'hotelDateSelectionType',
+        subBuilder: $1.HotelDateSelectionTypeInfo.create)
+    ..aOM<$1.HotelAdvanceBookingWindowInfo>(6, 'hotelAdvanceBookingWindow',
+        subBuilder: $1.HotelAdvanceBookingWindowInfo.create)
+    ..aOM<$1.HotelLengthOfStayInfo>(7, 'hotelLengthOfStay',
+        subBuilder: $1.HotelLengthOfStayInfo.create)
+    ..aOM<$1.HotelCheckInDayInfo>(8, 'hotelCheckInDay',
+        subBuilder: $1.HotelCheckInDayInfo.create)
+    ..aOM<$0.StringValue>(9, 'baseAdGroup', subBuilder: $0.StringValue.create)
     ..e<$2.BidModifierSourceEnum_BidModifierSource>(
-        10,
-        'bidModifierSource',
-        $pb.PbFieldType.OE,
-        $2.BidModifierSourceEnum_BidModifierSource.UNSPECIFIED,
-        $2.BidModifierSourceEnum_BidModifierSource.valueOf,
-        $2.BidModifierSourceEnum_BidModifierSource.values)
-    ..a<$1.DeviceInfo>(11, 'device', $pb.PbFieldType.OM,
-        $1.DeviceInfo.getDefault, $1.DeviceInfo.create)
-    ..a<$1.PreferredContentInfo>(12, 'preferredContent', $pb.PbFieldType.OM, $1.PreferredContentInfo.getDefault, $1.PreferredContentInfo.create)
+        10, 'bidModifierSource', $pb.PbFieldType.OE,
+        defaultOrMaker: $2.BidModifierSourceEnum_BidModifierSource.UNSPECIFIED,
+        valueOf: $2.BidModifierSourceEnum_BidModifierSource.valueOf,
+        enumValues: $2.BidModifierSourceEnum_BidModifierSource.values)
+    ..aOM<$1.DeviceInfo>(11, 'device', subBuilder: $1.DeviceInfo.create)
+    ..aOM<$1.PreferredContentInfo>(12, 'preferredContent',
+        subBuilder: $1.PreferredContentInfo.create)
     ..hasRequiredFields = false;
 
   AdGroupBidModifier._() : super();
@@ -93,107 +79,177 @@ class AdGroupBidModifier extends $pb.GeneratedMessage {
   AdGroupBidModifier createEmptyInstance() => create();
   static $pb.PbList<AdGroupBidModifier> createRepeated() =>
       $pb.PbList<AdGroupBidModifier>();
-  static AdGroupBidModifier getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static AdGroupBidModifier getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AdGroupBidModifier>(create);
   static AdGroupBidModifier _defaultInstance;
 
   AdGroupBidModifier_Criterion whichCriterion() =>
       _AdGroupBidModifier_CriterionByTag[$_whichOneof(0)];
   void clearCriterion() => clearField($_whichOneof(0));
 
-  $core.String get resourceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get resourceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set resourceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResourceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResourceName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $0.StringValue get adGroup => $_getN(1);
+  @$pb.TagNumber(2)
   set adGroup($0.StringValue v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasAdGroup() => $_has(1);
+  @$pb.TagNumber(2)
   void clearAdGroup() => clearField(2);
+  @$pb.TagNumber(2)
+  $0.StringValue ensureAdGroup() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $0.Int64Value get criterionId => $_getN(2);
+  @$pb.TagNumber(3)
   set criterionId($0.Int64Value v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasCriterionId() => $_has(2);
+  @$pb.TagNumber(3)
   void clearCriterionId() => clearField(3);
+  @$pb.TagNumber(3)
+  $0.Int64Value ensureCriterionId() => $_ensure(2);
 
+  @$pb.TagNumber(4)
   $0.DoubleValue get bidModifier => $_getN(3);
+  @$pb.TagNumber(4)
   set bidModifier($0.DoubleValue v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasBidModifier() => $_has(3);
+  @$pb.TagNumber(4)
   void clearBidModifier() => clearField(4);
+  @$pb.TagNumber(4)
+  $0.DoubleValue ensureBidModifier() => $_ensure(3);
 
+  @$pb.TagNumber(5)
   $1.HotelDateSelectionTypeInfo get hotelDateSelectionType => $_getN(4);
+  @$pb.TagNumber(5)
   set hotelDateSelectionType($1.HotelDateSelectionTypeInfo v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasHotelDateSelectionType() => $_has(4);
+  @$pb.TagNumber(5)
   void clearHotelDateSelectionType() => clearField(5);
+  @$pb.TagNumber(5)
+  $1.HotelDateSelectionTypeInfo ensureHotelDateSelectionType() => $_ensure(4);
 
+  @$pb.TagNumber(6)
   $1.HotelAdvanceBookingWindowInfo get hotelAdvanceBookingWindow => $_getN(5);
+  @$pb.TagNumber(6)
   set hotelAdvanceBookingWindow($1.HotelAdvanceBookingWindowInfo v) {
     setField(6, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasHotelAdvanceBookingWindow() => $_has(5);
+  @$pb.TagNumber(6)
   void clearHotelAdvanceBookingWindow() => clearField(6);
+  @$pb.TagNumber(6)
+  $1.HotelAdvanceBookingWindowInfo ensureHotelAdvanceBookingWindow() =>
+      $_ensure(5);
 
+  @$pb.TagNumber(7)
   $1.HotelLengthOfStayInfo get hotelLengthOfStay => $_getN(6);
+  @$pb.TagNumber(7)
   set hotelLengthOfStay($1.HotelLengthOfStayInfo v) {
     setField(7, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasHotelLengthOfStay() => $_has(6);
+  @$pb.TagNumber(7)
   void clearHotelLengthOfStay() => clearField(7);
+  @$pb.TagNumber(7)
+  $1.HotelLengthOfStayInfo ensureHotelLengthOfStay() => $_ensure(6);
 
+  @$pb.TagNumber(8)
   $1.HotelCheckInDayInfo get hotelCheckInDay => $_getN(7);
+  @$pb.TagNumber(8)
   set hotelCheckInDay($1.HotelCheckInDayInfo v) {
     setField(8, v);
   }
 
+  @$pb.TagNumber(8)
   $core.bool hasHotelCheckInDay() => $_has(7);
+  @$pb.TagNumber(8)
   void clearHotelCheckInDay() => clearField(8);
+  @$pb.TagNumber(8)
+  $1.HotelCheckInDayInfo ensureHotelCheckInDay() => $_ensure(7);
 
+  @$pb.TagNumber(9)
   $0.StringValue get baseAdGroup => $_getN(8);
+  @$pb.TagNumber(9)
   set baseAdGroup($0.StringValue v) {
     setField(9, v);
   }
 
+  @$pb.TagNumber(9)
   $core.bool hasBaseAdGroup() => $_has(8);
+  @$pb.TagNumber(9)
   void clearBaseAdGroup() => clearField(9);
+  @$pb.TagNumber(9)
+  $0.StringValue ensureBaseAdGroup() => $_ensure(8);
 
+  @$pb.TagNumber(10)
   $2.BidModifierSourceEnum_BidModifierSource get bidModifierSource => $_getN(9);
+  @$pb.TagNumber(10)
   set bidModifierSource($2.BidModifierSourceEnum_BidModifierSource v) {
     setField(10, v);
   }
 
+  @$pb.TagNumber(10)
   $core.bool hasBidModifierSource() => $_has(9);
+  @$pb.TagNumber(10)
   void clearBidModifierSource() => clearField(10);
 
+  @$pb.TagNumber(11)
   $1.DeviceInfo get device => $_getN(10);
+  @$pb.TagNumber(11)
   set device($1.DeviceInfo v) {
     setField(11, v);
   }
 
+  @$pb.TagNumber(11)
   $core.bool hasDevice() => $_has(10);
+  @$pb.TagNumber(11)
   void clearDevice() => clearField(11);
+  @$pb.TagNumber(11)
+  $1.DeviceInfo ensureDevice() => $_ensure(10);
 
+  @$pb.TagNumber(12)
   $1.PreferredContentInfo get preferredContent => $_getN(11);
+  @$pb.TagNumber(12)
   set preferredContent($1.PreferredContentInfo v) {
     setField(12, v);
   }
 
+  @$pb.TagNumber(12)
   $core.bool hasPreferredContent() => $_has(11);
+  @$pb.TagNumber(12)
   void clearPreferredContent() => clearField(12);
+  @$pb.TagNumber(12)
+  $1.PreferredContentInfo ensurePreferredContent() => $_ensure(11);
 }

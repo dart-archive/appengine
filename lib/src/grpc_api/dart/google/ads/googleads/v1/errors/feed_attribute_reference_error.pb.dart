@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -15,7 +14,8 @@ export 'feed_attribute_reference_error.pbenum.dart';
 class FeedAttributeReferenceErrorEnum extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'FeedAttributeReferenceErrorEnum',
-      package: const $pb.PackageName('google.ads.googleads.v1.errors'))
+      package: const $pb.PackageName('google.ads.googleads.v1.errors'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   FeedAttributeReferenceErrorEnum._() : super();
@@ -39,7 +39,9 @@ class FeedAttributeReferenceErrorEnum extends $pb.GeneratedMessage {
   FeedAttributeReferenceErrorEnum createEmptyInstance() => create();
   static $pb.PbList<FeedAttributeReferenceErrorEnum> createRepeated() =>
       $pb.PbList<FeedAttributeReferenceErrorEnum>();
-  static FeedAttributeReferenceErrorEnum getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static FeedAttributeReferenceErrorEnum getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<FeedAttributeReferenceErrorEnum>(
+          create);
   static FeedAttributeReferenceErrorEnum _defaultInstance;
 }

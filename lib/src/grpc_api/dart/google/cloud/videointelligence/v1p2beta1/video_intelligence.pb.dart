@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -21,12 +20,12 @@ export 'video_intelligence.pbenum.dart';
 class AnnotateVideoRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AnnotateVideoRequest',
       package:
-          const $pb.PackageName('google.cloud.videointelligence.v1p2beta1'))
+          const $pb.PackageName('google.cloud.videointelligence.v1p2beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'inputUri')
-    ..pc<Feature>(2, 'features', $pb.PbFieldType.PE, null, Feature.valueOf,
-        Feature.values)
-    ..a<VideoContext>(3, 'videoContext', $pb.PbFieldType.OM,
-        VideoContext.getDefault, VideoContext.create)
+    ..pc<Feature>(2, 'features', $pb.PbFieldType.PE,
+        valueOf: Feature.valueOf, enumValues: Feature.values)
+    ..aOM<VideoContext>(3, 'videoContext', subBuilder: VideoContext.create)
     ..aOS(4, 'outputUri')
     ..aOS(5, 'locationId')
     ..a<$core.List<$core.int>>(6, 'inputContent', $pb.PbFieldType.OY)
@@ -50,74 +49,92 @@ class AnnotateVideoRequest extends $pb.GeneratedMessage {
   AnnotateVideoRequest createEmptyInstance() => create();
   static $pb.PbList<AnnotateVideoRequest> createRepeated() =>
       $pb.PbList<AnnotateVideoRequest>();
-  static AnnotateVideoRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static AnnotateVideoRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AnnotateVideoRequest>(create);
   static AnnotateVideoRequest _defaultInstance;
 
-  $core.String get inputUri => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get inputUri => $_getSZ(0);
+  @$pb.TagNumber(1)
   set inputUri($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasInputUri() => $_has(0);
+  @$pb.TagNumber(1)
   void clearInputUri() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<Feature> get features => $_getList(1);
 
+  @$pb.TagNumber(3)
   VideoContext get videoContext => $_getN(2);
+  @$pb.TagNumber(3)
   set videoContext(VideoContext v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasVideoContext() => $_has(2);
+  @$pb.TagNumber(3)
   void clearVideoContext() => clearField(3);
+  @$pb.TagNumber(3)
+  VideoContext ensureVideoContext() => $_ensure(2);
 
-  $core.String get outputUri => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get outputUri => $_getSZ(3);
+  @$pb.TagNumber(4)
   set outputUri($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasOutputUri() => $_has(3);
+  @$pb.TagNumber(4)
   void clearOutputUri() => clearField(4);
 
-  $core.String get locationId => $_getS(4, '');
+  @$pb.TagNumber(5)
+  $core.String get locationId => $_getSZ(4);
+  @$pb.TagNumber(5)
   set locationId($core.String v) {
     $_setString(4, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasLocationId() => $_has(4);
+  @$pb.TagNumber(5)
   void clearLocationId() => clearField(5);
 
+  @$pb.TagNumber(6)
   $core.List<$core.int> get inputContent => $_getN(5);
+  @$pb.TagNumber(6)
   set inputContent($core.List<$core.int> v) {
     $_setBytes(5, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasInputContent() => $_has(5);
+  @$pb.TagNumber(6)
   void clearInputContent() => clearField(6);
 }
 
 class VideoContext extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('VideoContext',
       package:
-          const $pb.PackageName('google.cloud.videointelligence.v1p2beta1'))
-    ..pc<VideoSegment>(1, 'segments', $pb.PbFieldType.PM, VideoSegment.create)
-    ..a<LabelDetectionConfig>(2, 'labelDetectionConfig', $pb.PbFieldType.OM,
-        LabelDetectionConfig.getDefault, LabelDetectionConfig.create)
-    ..a<ShotChangeDetectionConfig>(
-        3,
-        'shotChangeDetectionConfig',
-        $pb.PbFieldType.OM,
-        ShotChangeDetectionConfig.getDefault,
-        ShotChangeDetectionConfig.create)
-    ..a<ExplicitContentDetectionConfig>(
-        4,
-        'explicitContentDetectionConfig',
-        $pb.PbFieldType.OM,
-        ExplicitContentDetectionConfig.getDefault,
-        ExplicitContentDetectionConfig.create)
-    ..a<TextDetectionConfig>(8, 'textDetectionConfig', $pb.PbFieldType.OM,
-        TextDetectionConfig.getDefault, TextDetectionConfig.create)
+          const $pb.PackageName('google.cloud.videointelligence.v1p2beta1'),
+      createEmptyInstance: create)
+    ..pc<VideoSegment>(1, 'segments', $pb.PbFieldType.PM,
+        subBuilder: VideoSegment.create)
+    ..aOM<LabelDetectionConfig>(2, 'labelDetectionConfig',
+        subBuilder: LabelDetectionConfig.create)
+    ..aOM<ShotChangeDetectionConfig>(3, 'shotChangeDetectionConfig',
+        subBuilder: ShotChangeDetectionConfig.create)
+    ..aOM<ExplicitContentDetectionConfig>(4, 'explicitContentDetectionConfig',
+        subBuilder: ExplicitContentDetectionConfig.create)
+    ..aOM<TextDetectionConfig>(8, 'textDetectionConfig',
+        subBuilder: TextDetectionConfig.create)
     ..hasRequiredFields = false;
 
   VideoContext._() : super();
@@ -137,56 +154,82 @@ class VideoContext extends $pb.GeneratedMessage {
   VideoContext createEmptyInstance() => create();
   static $pb.PbList<VideoContext> createRepeated() =>
       $pb.PbList<VideoContext>();
-  static VideoContext getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static VideoContext getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<VideoContext>(create);
   static VideoContext _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<VideoSegment> get segments => $_getList(0);
 
+  @$pb.TagNumber(2)
   LabelDetectionConfig get labelDetectionConfig => $_getN(1);
+  @$pb.TagNumber(2)
   set labelDetectionConfig(LabelDetectionConfig v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasLabelDetectionConfig() => $_has(1);
+  @$pb.TagNumber(2)
   void clearLabelDetectionConfig() => clearField(2);
+  @$pb.TagNumber(2)
+  LabelDetectionConfig ensureLabelDetectionConfig() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   ShotChangeDetectionConfig get shotChangeDetectionConfig => $_getN(2);
+  @$pb.TagNumber(3)
   set shotChangeDetectionConfig(ShotChangeDetectionConfig v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasShotChangeDetectionConfig() => $_has(2);
+  @$pb.TagNumber(3)
   void clearShotChangeDetectionConfig() => clearField(3);
+  @$pb.TagNumber(3)
+  ShotChangeDetectionConfig ensureShotChangeDetectionConfig() => $_ensure(2);
 
+  @$pb.TagNumber(4)
   ExplicitContentDetectionConfig get explicitContentDetectionConfig =>
       $_getN(3);
+  @$pb.TagNumber(4)
   set explicitContentDetectionConfig(ExplicitContentDetectionConfig v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasExplicitContentDetectionConfig() => $_has(3);
+  @$pb.TagNumber(4)
   void clearExplicitContentDetectionConfig() => clearField(4);
+  @$pb.TagNumber(4)
+  ExplicitContentDetectionConfig ensureExplicitContentDetectionConfig() =>
+      $_ensure(3);
 
+  @$pb.TagNumber(8)
   TextDetectionConfig get textDetectionConfig => $_getN(4);
+  @$pb.TagNumber(8)
   set textDetectionConfig(TextDetectionConfig v) {
     setField(8, v);
   }
 
+  @$pb.TagNumber(8)
   $core.bool hasTextDetectionConfig() => $_has(4);
+  @$pb.TagNumber(8)
   void clearTextDetectionConfig() => clearField(8);
+  @$pb.TagNumber(8)
+  TextDetectionConfig ensureTextDetectionConfig() => $_ensure(4);
 }
 
 class LabelDetectionConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('LabelDetectionConfig',
       package:
-          const $pb.PackageName('google.cloud.videointelligence.v1p2beta1'))
-    ..e<LabelDetectionMode>(
-        1,
-        'labelDetectionMode',
-        $pb.PbFieldType.OE,
-        LabelDetectionMode.LABEL_DETECTION_MODE_UNSPECIFIED,
-        LabelDetectionMode.valueOf,
-        LabelDetectionMode.values)
+          const $pb.PackageName('google.cloud.videointelligence.v1p2beta1'),
+      createEmptyInstance: create)
+    ..e<LabelDetectionMode>(1, 'labelDetectionMode', $pb.PbFieldType.OE,
+        defaultOrMaker: LabelDetectionMode.LABEL_DETECTION_MODE_UNSPECIFIED,
+        valueOf: LabelDetectionMode.valueOf,
+        enumValues: LabelDetectionMode.values)
     ..aOB(2, 'stationaryCamera')
     ..aOS(3, 'model')
     ..hasRequiredFields = false;
@@ -209,39 +252,53 @@ class LabelDetectionConfig extends $pb.GeneratedMessage {
   LabelDetectionConfig createEmptyInstance() => create();
   static $pb.PbList<LabelDetectionConfig> createRepeated() =>
       $pb.PbList<LabelDetectionConfig>();
-  static LabelDetectionConfig getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static LabelDetectionConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<LabelDetectionConfig>(create);
   static LabelDetectionConfig _defaultInstance;
 
+  @$pb.TagNumber(1)
   LabelDetectionMode get labelDetectionMode => $_getN(0);
+  @$pb.TagNumber(1)
   set labelDetectionMode(LabelDetectionMode v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasLabelDetectionMode() => $_has(0);
+  @$pb.TagNumber(1)
   void clearLabelDetectionMode() => clearField(1);
 
-  $core.bool get stationaryCamera => $_get(1, false);
+  @$pb.TagNumber(2)
+  $core.bool get stationaryCamera => $_getBF(1);
+  @$pb.TagNumber(2)
   set stationaryCamera($core.bool v) {
     $_setBool(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasStationaryCamera() => $_has(1);
+  @$pb.TagNumber(2)
   void clearStationaryCamera() => clearField(2);
 
-  $core.String get model => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get model => $_getSZ(2);
+  @$pb.TagNumber(3)
   set model($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasModel() => $_has(2);
+  @$pb.TagNumber(3)
   void clearModel() => clearField(3);
 }
 
 class ShotChangeDetectionConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ShotChangeDetectionConfig',
       package:
-          const $pb.PackageName('google.cloud.videointelligence.v1p2beta1'))
+          const $pb.PackageName('google.cloud.videointelligence.v1p2beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'model')
     ..hasRequiredFields = false;
 
@@ -265,16 +322,21 @@ class ShotChangeDetectionConfig extends $pb.GeneratedMessage {
   ShotChangeDetectionConfig createEmptyInstance() => create();
   static $pb.PbList<ShotChangeDetectionConfig> createRepeated() =>
       $pb.PbList<ShotChangeDetectionConfig>();
-  static ShotChangeDetectionConfig getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ShotChangeDetectionConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ShotChangeDetectionConfig>(create);
   static ShotChangeDetectionConfig _defaultInstance;
 
-  $core.String get model => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get model => $_getSZ(0);
+  @$pb.TagNumber(1)
   set model($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasModel() => $_has(0);
+  @$pb.TagNumber(1)
   void clearModel() => clearField(1);
 }
 
@@ -282,7 +344,8 @@ class ExplicitContentDetectionConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ExplicitContentDetectionConfig',
       package:
-          const $pb.PackageName('google.cloud.videointelligence.v1p2beta1'))
+          const $pb.PackageName('google.cloud.videointelligence.v1p2beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'model')
     ..hasRequiredFields = false;
 
@@ -307,23 +370,29 @@ class ExplicitContentDetectionConfig extends $pb.GeneratedMessage {
   ExplicitContentDetectionConfig createEmptyInstance() => create();
   static $pb.PbList<ExplicitContentDetectionConfig> createRepeated() =>
       $pb.PbList<ExplicitContentDetectionConfig>();
-  static ExplicitContentDetectionConfig getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ExplicitContentDetectionConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ExplicitContentDetectionConfig>(create);
   static ExplicitContentDetectionConfig _defaultInstance;
 
-  $core.String get model => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get model => $_getSZ(0);
+  @$pb.TagNumber(1)
   set model($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasModel() => $_has(0);
+  @$pb.TagNumber(1)
   void clearModel() => clearField(1);
 }
 
 class TextDetectionConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TextDetectionConfig',
       package:
-          const $pb.PackageName('google.cloud.videointelligence.v1p2beta1'))
+          const $pb.PackageName('google.cloud.videointelligence.v1p2beta1'),
+      createEmptyInstance: create)
     ..pPS(1, 'languageHints')
     ..hasRequiredFields = false;
 
@@ -344,21 +413,22 @@ class TextDetectionConfig extends $pb.GeneratedMessage {
   TextDetectionConfig createEmptyInstance() => create();
   static $pb.PbList<TextDetectionConfig> createRepeated() =>
       $pb.PbList<TextDetectionConfig>();
-  static TextDetectionConfig getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TextDetectionConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TextDetectionConfig>(create);
   static TextDetectionConfig _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$core.String> get languageHints => $_getList(0);
 }
 
 class VideoSegment extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('VideoSegment',
       package:
-          const $pb.PackageName('google.cloud.videointelligence.v1p2beta1'))
-    ..a<$3.Duration>(1, 'startTimeOffset', $pb.PbFieldType.OM,
-        $3.Duration.getDefault, $3.Duration.create)
-    ..a<$3.Duration>(2, 'endTimeOffset', $pb.PbFieldType.OM,
-        $3.Duration.getDefault, $3.Duration.create)
+          const $pb.PackageName('google.cloud.videointelligence.v1p2beta1'),
+      createEmptyInstance: create)
+    ..aOM<$3.Duration>(1, 'startTimeOffset', subBuilder: $3.Duration.create)
+    ..aOM<$3.Duration>(2, 'endTimeOffset', subBuilder: $3.Duration.create)
     ..hasRequiredFields = false;
 
   VideoSegment._() : super();
@@ -378,32 +448,46 @@ class VideoSegment extends $pb.GeneratedMessage {
   VideoSegment createEmptyInstance() => create();
   static $pb.PbList<VideoSegment> createRepeated() =>
       $pb.PbList<VideoSegment>();
-  static VideoSegment getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static VideoSegment getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<VideoSegment>(create);
   static VideoSegment _defaultInstance;
 
+  @$pb.TagNumber(1)
   $3.Duration get startTimeOffset => $_getN(0);
+  @$pb.TagNumber(1)
   set startTimeOffset($3.Duration v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasStartTimeOffset() => $_has(0);
+  @$pb.TagNumber(1)
   void clearStartTimeOffset() => clearField(1);
+  @$pb.TagNumber(1)
+  $3.Duration ensureStartTimeOffset() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $3.Duration get endTimeOffset => $_getN(1);
+  @$pb.TagNumber(2)
   set endTimeOffset($3.Duration v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasEndTimeOffset() => $_has(1);
+  @$pb.TagNumber(2)
   void clearEndTimeOffset() => clearField(2);
+  @$pb.TagNumber(2)
+  $3.Duration ensureEndTimeOffset() => $_ensure(1);
 }
 
 class LabelSegment extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('LabelSegment',
       package:
-          const $pb.PackageName('google.cloud.videointelligence.v1p2beta1'))
-    ..a<VideoSegment>(1, 'segment', $pb.PbFieldType.OM, VideoSegment.getDefault,
-        VideoSegment.create)
+          const $pb.PackageName('google.cloud.videointelligence.v1p2beta1'),
+      createEmptyInstance: create)
+    ..aOM<VideoSegment>(1, 'segment', subBuilder: VideoSegment.create)
     ..a<$core.double>(2, 'confidence', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
@@ -424,32 +508,44 @@ class LabelSegment extends $pb.GeneratedMessage {
   LabelSegment createEmptyInstance() => create();
   static $pb.PbList<LabelSegment> createRepeated() =>
       $pb.PbList<LabelSegment>();
-  static LabelSegment getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static LabelSegment getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<LabelSegment>(create);
   static LabelSegment _defaultInstance;
 
+  @$pb.TagNumber(1)
   VideoSegment get segment => $_getN(0);
+  @$pb.TagNumber(1)
   set segment(VideoSegment v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasSegment() => $_has(0);
+  @$pb.TagNumber(1)
   void clearSegment() => clearField(1);
+  @$pb.TagNumber(1)
+  VideoSegment ensureSegment() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $core.double get confidence => $_getN(1);
+  @$pb.TagNumber(2)
   set confidence($core.double v) {
     $_setFloat(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasConfidence() => $_has(1);
+  @$pb.TagNumber(2)
   void clearConfidence() => clearField(2);
 }
 
 class LabelFrame extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('LabelFrame',
       package:
-          const $pb.PackageName('google.cloud.videointelligence.v1p2beta1'))
-    ..a<$3.Duration>(1, 'timeOffset', $pb.PbFieldType.OM,
-        $3.Duration.getDefault, $3.Duration.create)
+          const $pb.PackageName('google.cloud.videointelligence.v1p2beta1'),
+      createEmptyInstance: create)
+    ..aOM<$3.Duration>(1, 'timeOffset', subBuilder: $3.Duration.create)
     ..a<$core.double>(2, 'confidence', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
@@ -469,30 +565,43 @@ class LabelFrame extends $pb.GeneratedMessage {
   static LabelFrame create() => LabelFrame._();
   LabelFrame createEmptyInstance() => create();
   static $pb.PbList<LabelFrame> createRepeated() => $pb.PbList<LabelFrame>();
-  static LabelFrame getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static LabelFrame getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<LabelFrame>(create);
   static LabelFrame _defaultInstance;
 
+  @$pb.TagNumber(1)
   $3.Duration get timeOffset => $_getN(0);
+  @$pb.TagNumber(1)
   set timeOffset($3.Duration v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasTimeOffset() => $_has(0);
+  @$pb.TagNumber(1)
   void clearTimeOffset() => clearField(1);
+  @$pb.TagNumber(1)
+  $3.Duration ensureTimeOffset() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $core.double get confidence => $_getN(1);
+  @$pb.TagNumber(2)
   set confidence($core.double v) {
     $_setFloat(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasConfidence() => $_has(1);
+  @$pb.TagNumber(2)
   void clearConfidence() => clearField(2);
 }
 
 class Entity extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Entity',
       package:
-          const $pb.PackageName('google.cloud.videointelligence.v1p2beta1'))
+          const $pb.PackageName('google.cloud.videointelligence.v1p2beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'entityId')
     ..aOS(2, 'description')
     ..aOS(3, 'languageCode')
@@ -514,43 +623,60 @@ class Entity extends $pb.GeneratedMessage {
   static Entity create() => Entity._();
   Entity createEmptyInstance() => create();
   static $pb.PbList<Entity> createRepeated() => $pb.PbList<Entity>();
-  static Entity getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Entity getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Entity>(create);
   static Entity _defaultInstance;
 
-  $core.String get entityId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get entityId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set entityId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasEntityId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearEntityId() => clearField(1);
 
-  $core.String get description => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get description => $_getSZ(1);
+  @$pb.TagNumber(2)
   set description($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasDescription() => $_has(1);
+  @$pb.TagNumber(2)
   void clearDescription() => clearField(2);
 
-  $core.String get languageCode => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get languageCode => $_getSZ(2);
+  @$pb.TagNumber(3)
   set languageCode($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasLanguageCode() => $_has(2);
+  @$pb.TagNumber(3)
   void clearLanguageCode() => clearField(3);
 }
 
 class LabelAnnotation extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('LabelAnnotation',
       package:
-          const $pb.PackageName('google.cloud.videointelligence.v1p2beta1'))
-    ..a<Entity>(
-        1, 'entity', $pb.PbFieldType.OM, Entity.getDefault, Entity.create)
-    ..pc<Entity>(2, 'categoryEntities', $pb.PbFieldType.PM, Entity.create)
-    ..pc<LabelSegment>(3, 'segments', $pb.PbFieldType.PM, LabelSegment.create)
-    ..pc<LabelFrame>(4, 'frames', $pb.PbFieldType.PM, LabelFrame.create)
+          const $pb.PackageName('google.cloud.videointelligence.v1p2beta1'),
+      createEmptyInstance: create)
+    ..aOM<Entity>(1, 'entity', subBuilder: Entity.create)
+    ..pc<Entity>(2, 'categoryEntities', $pb.PbFieldType.PM,
+        subBuilder: Entity.create)
+    ..pc<LabelSegment>(3, 'segments', $pb.PbFieldType.PM,
+        subBuilder: LabelSegment.create)
+    ..pc<LabelFrame>(4, 'frames', $pb.PbFieldType.PM,
+        subBuilder: LabelFrame.create)
     ..hasRequiredFields = false;
 
   LabelAnnotation._() : super();
@@ -570,38 +696,45 @@ class LabelAnnotation extends $pb.GeneratedMessage {
   LabelAnnotation createEmptyInstance() => create();
   static $pb.PbList<LabelAnnotation> createRepeated() =>
       $pb.PbList<LabelAnnotation>();
-  static LabelAnnotation getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static LabelAnnotation getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<LabelAnnotation>(create);
   static LabelAnnotation _defaultInstance;
 
+  @$pb.TagNumber(1)
   Entity get entity => $_getN(0);
+  @$pb.TagNumber(1)
   set entity(Entity v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasEntity() => $_has(0);
+  @$pb.TagNumber(1)
   void clearEntity() => clearField(1);
+  @$pb.TagNumber(1)
+  Entity ensureEntity() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $core.List<Entity> get categoryEntities => $_getList(1);
 
+  @$pb.TagNumber(3)
   $core.List<LabelSegment> get segments => $_getList(2);
 
+  @$pb.TagNumber(4)
   $core.List<LabelFrame> get frames => $_getList(3);
 }
 
 class ExplicitContentFrame extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ExplicitContentFrame',
       package:
-          const $pb.PackageName('google.cloud.videointelligence.v1p2beta1'))
-    ..a<$3.Duration>(1, 'timeOffset', $pb.PbFieldType.OM,
-        $3.Duration.getDefault, $3.Duration.create)
-    ..e<Likelihood>(
-        2,
-        'pornographyLikelihood',
-        $pb.PbFieldType.OE,
-        Likelihood.LIKELIHOOD_UNSPECIFIED,
-        Likelihood.valueOf,
-        Likelihood.values)
+          const $pb.PackageName('google.cloud.videointelligence.v1p2beta1'),
+      createEmptyInstance: create)
+    ..aOM<$3.Duration>(1, 'timeOffset', subBuilder: $3.Duration.create)
+    ..e<Likelihood>(2, 'pornographyLikelihood', $pb.PbFieldType.OE,
+        defaultOrMaker: Likelihood.LIKELIHOOD_UNSPECIFIED,
+        valueOf: Likelihood.valueOf,
+        enumValues: Likelihood.values)
     ..hasRequiredFields = false;
 
   ExplicitContentFrame._() : super();
@@ -622,33 +755,45 @@ class ExplicitContentFrame extends $pb.GeneratedMessage {
   ExplicitContentFrame createEmptyInstance() => create();
   static $pb.PbList<ExplicitContentFrame> createRepeated() =>
       $pb.PbList<ExplicitContentFrame>();
-  static ExplicitContentFrame getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ExplicitContentFrame getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ExplicitContentFrame>(create);
   static ExplicitContentFrame _defaultInstance;
 
+  @$pb.TagNumber(1)
   $3.Duration get timeOffset => $_getN(0);
+  @$pb.TagNumber(1)
   set timeOffset($3.Duration v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasTimeOffset() => $_has(0);
+  @$pb.TagNumber(1)
   void clearTimeOffset() => clearField(1);
+  @$pb.TagNumber(1)
+  $3.Duration ensureTimeOffset() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   Likelihood get pornographyLikelihood => $_getN(1);
+  @$pb.TagNumber(2)
   set pornographyLikelihood(Likelihood v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPornographyLikelihood() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPornographyLikelihood() => clearField(2);
 }
 
 class ExplicitContentAnnotation extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ExplicitContentAnnotation',
       package:
-          const $pb.PackageName('google.cloud.videointelligence.v1p2beta1'))
-    ..pc<ExplicitContentFrame>(
-        1, 'frames', $pb.PbFieldType.PM, ExplicitContentFrame.create)
+          const $pb.PackageName('google.cloud.videointelligence.v1p2beta1'),
+      createEmptyInstance: create)
+    ..pc<ExplicitContentFrame>(1, 'frames', $pb.PbFieldType.PM,
+        subBuilder: ExplicitContentFrame.create)
     ..hasRequiredFields = false;
 
   ExplicitContentAnnotation._() : super();
@@ -671,17 +816,20 @@ class ExplicitContentAnnotation extends $pb.GeneratedMessage {
   ExplicitContentAnnotation createEmptyInstance() => create();
   static $pb.PbList<ExplicitContentAnnotation> createRepeated() =>
       $pb.PbList<ExplicitContentAnnotation>();
-  static ExplicitContentAnnotation getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ExplicitContentAnnotation getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ExplicitContentAnnotation>(create);
   static ExplicitContentAnnotation _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<ExplicitContentFrame> get frames => $_getList(0);
 }
 
 class NormalizedBoundingBox extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('NormalizedBoundingBox',
       package:
-          const $pb.PackageName('google.cloud.videointelligence.v1p2beta1'))
+          const $pb.PackageName('google.cloud.videointelligence.v1p2beta1'),
+      createEmptyInstance: create)
     ..a<$core.double>(1, 'left', $pb.PbFieldType.OF)
     ..a<$core.double>(2, 'top', $pb.PbFieldType.OF)
     ..a<$core.double>(3, 'right', $pb.PbFieldType.OF)
@@ -707,64 +855,81 @@ class NormalizedBoundingBox extends $pb.GeneratedMessage {
   NormalizedBoundingBox createEmptyInstance() => create();
   static $pb.PbList<NormalizedBoundingBox> createRepeated() =>
       $pb.PbList<NormalizedBoundingBox>();
-  static NormalizedBoundingBox getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static NormalizedBoundingBox getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<NormalizedBoundingBox>(create);
   static NormalizedBoundingBox _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.double get left => $_getN(0);
+  @$pb.TagNumber(1)
   set left($core.double v) {
     $_setFloat(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasLeft() => $_has(0);
+  @$pb.TagNumber(1)
   void clearLeft() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.double get top => $_getN(1);
+  @$pb.TagNumber(2)
   set top($core.double v) {
     $_setFloat(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasTop() => $_has(1);
+  @$pb.TagNumber(2)
   void clearTop() => clearField(2);
 
+  @$pb.TagNumber(3)
   $core.double get right => $_getN(2);
+  @$pb.TagNumber(3)
   set right($core.double v) {
     $_setFloat(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasRight() => $_has(2);
+  @$pb.TagNumber(3)
   void clearRight() => clearField(3);
 
+  @$pb.TagNumber(4)
   $core.double get bottom => $_getN(3);
+  @$pb.TagNumber(4)
   set bottom($core.double v) {
     $_setFloat(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasBottom() => $_has(3);
+  @$pb.TagNumber(4)
   void clearBottom() => clearField(4);
 }
 
 class VideoAnnotationResults extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('VideoAnnotationResults',
       package:
-          const $pb.PackageName('google.cloud.videointelligence.v1p2beta1'))
+          const $pb.PackageName('google.cloud.videointelligence.v1p2beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'inputUri')
     ..pc<LabelAnnotation>(2, 'segmentLabelAnnotations', $pb.PbFieldType.PM,
-        LabelAnnotation.create)
-    ..pc<LabelAnnotation>(
-        3, 'shotLabelAnnotations', $pb.PbFieldType.PM, LabelAnnotation.create)
-    ..pc<LabelAnnotation>(
-        4, 'frameLabelAnnotations', $pb.PbFieldType.PM, LabelAnnotation.create)
-    ..pc<VideoSegment>(
-        6, 'shotAnnotations', $pb.PbFieldType.PM, VideoSegment.create)
-    ..a<ExplicitContentAnnotation>(7, 'explicitAnnotation', $pb.PbFieldType.OM,
-        ExplicitContentAnnotation.getDefault, ExplicitContentAnnotation.create)
-    ..a<$4.Status>(
-        9, 'error', $pb.PbFieldType.OM, $4.Status.getDefault, $4.Status.create)
-    ..pc<TextAnnotation>(
-        12, 'textAnnotations', $pb.PbFieldType.PM, TextAnnotation.create)
+        subBuilder: LabelAnnotation.create)
+    ..pc<LabelAnnotation>(3, 'shotLabelAnnotations', $pb.PbFieldType.PM,
+        subBuilder: LabelAnnotation.create)
+    ..pc<LabelAnnotation>(4, 'frameLabelAnnotations', $pb.PbFieldType.PM,
+        subBuilder: LabelAnnotation.create)
+    ..pc<VideoSegment>(6, 'shotAnnotations', $pb.PbFieldType.PM,
+        subBuilder: VideoSegment.create)
+    ..aOM<ExplicitContentAnnotation>(7, 'explicitAnnotation',
+        subBuilder: ExplicitContentAnnotation.create)
+    ..aOM<$4.Status>(9, 'error', subBuilder: $4.Status.create)
+    ..pc<TextAnnotation>(12, 'textAnnotations', $pb.PbFieldType.PM,
+        subBuilder: TextAnnotation.create)
     ..pc<ObjectTrackingAnnotation>(14, 'objectAnnotations', $pb.PbFieldType.PM,
-        ObjectTrackingAnnotation.create)
+        subBuilder: ObjectTrackingAnnotation.create)
     ..hasRequiredFields = false;
 
   VideoAnnotationResults._() : super();
@@ -786,53 +951,77 @@ class VideoAnnotationResults extends $pb.GeneratedMessage {
   VideoAnnotationResults createEmptyInstance() => create();
   static $pb.PbList<VideoAnnotationResults> createRepeated() =>
       $pb.PbList<VideoAnnotationResults>();
-  static VideoAnnotationResults getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static VideoAnnotationResults getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<VideoAnnotationResults>(create);
   static VideoAnnotationResults _defaultInstance;
 
-  $core.String get inputUri => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get inputUri => $_getSZ(0);
+  @$pb.TagNumber(1)
   set inputUri($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasInputUri() => $_has(0);
+  @$pb.TagNumber(1)
   void clearInputUri() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<LabelAnnotation> get segmentLabelAnnotations => $_getList(1);
 
+  @$pb.TagNumber(3)
   $core.List<LabelAnnotation> get shotLabelAnnotations => $_getList(2);
 
+  @$pb.TagNumber(4)
   $core.List<LabelAnnotation> get frameLabelAnnotations => $_getList(3);
 
+  @$pb.TagNumber(6)
   $core.List<VideoSegment> get shotAnnotations => $_getList(4);
 
+  @$pb.TagNumber(7)
   ExplicitContentAnnotation get explicitAnnotation => $_getN(5);
+  @$pb.TagNumber(7)
   set explicitAnnotation(ExplicitContentAnnotation v) {
     setField(7, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasExplicitAnnotation() => $_has(5);
+  @$pb.TagNumber(7)
   void clearExplicitAnnotation() => clearField(7);
+  @$pb.TagNumber(7)
+  ExplicitContentAnnotation ensureExplicitAnnotation() => $_ensure(5);
 
+  @$pb.TagNumber(9)
   $4.Status get error => $_getN(6);
+  @$pb.TagNumber(9)
   set error($4.Status v) {
     setField(9, v);
   }
 
+  @$pb.TagNumber(9)
   $core.bool hasError() => $_has(6);
+  @$pb.TagNumber(9)
   void clearError() => clearField(9);
+  @$pb.TagNumber(9)
+  $4.Status ensureError() => $_ensure(6);
 
+  @$pb.TagNumber(12)
   $core.List<TextAnnotation> get textAnnotations => $_getList(7);
 
+  @$pb.TagNumber(14)
   $core.List<ObjectTrackingAnnotation> get objectAnnotations => $_getList(8);
 }
 
 class AnnotateVideoResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AnnotateVideoResponse',
       package:
-          const $pb.PackageName('google.cloud.videointelligence.v1p2beta1'))
+          const $pb.PackageName('google.cloud.videointelligence.v1p2beta1'),
+      createEmptyInstance: create)
     ..pc<VideoAnnotationResults>(1, 'annotationResults', $pb.PbFieldType.PM,
-        VideoAnnotationResults.create)
+        subBuilder: VideoAnnotationResults.create)
     ..hasRequiredFields = false;
 
   AnnotateVideoResponse._() : super();
@@ -854,23 +1043,24 @@ class AnnotateVideoResponse extends $pb.GeneratedMessage {
   AnnotateVideoResponse createEmptyInstance() => create();
   static $pb.PbList<AnnotateVideoResponse> createRepeated() =>
       $pb.PbList<AnnotateVideoResponse>();
-  static AnnotateVideoResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static AnnotateVideoResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AnnotateVideoResponse>(create);
   static AnnotateVideoResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<VideoAnnotationResults> get annotationResults => $_getList(0);
 }
 
 class VideoAnnotationProgress extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('VideoAnnotationProgress',
       package:
-          const $pb.PackageName('google.cloud.videointelligence.v1p2beta1'))
+          const $pb.PackageName('google.cloud.videointelligence.v1p2beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'inputUri')
     ..a<$core.int>(2, 'progressPercent', $pb.PbFieldType.O3)
-    ..a<$5.Timestamp>(3, 'startTime', $pb.PbFieldType.OM,
-        $5.Timestamp.getDefault, $5.Timestamp.create)
-    ..a<$5.Timestamp>(4, 'updateTime', $pb.PbFieldType.OM,
-        $5.Timestamp.getDefault, $5.Timestamp.create)
+    ..aOM<$5.Timestamp>(3, 'startTime', subBuilder: $5.Timestamp.create)
+    ..aOM<$5.Timestamp>(4, 'updateTime', subBuilder: $5.Timestamp.create)
     ..hasRequiredFields = false;
 
   VideoAnnotationProgress._() : super();
@@ -892,49 +1082,71 @@ class VideoAnnotationProgress extends $pb.GeneratedMessage {
   VideoAnnotationProgress createEmptyInstance() => create();
   static $pb.PbList<VideoAnnotationProgress> createRepeated() =>
       $pb.PbList<VideoAnnotationProgress>();
-  static VideoAnnotationProgress getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static VideoAnnotationProgress getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<VideoAnnotationProgress>(create);
   static VideoAnnotationProgress _defaultInstance;
 
-  $core.String get inputUri => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get inputUri => $_getSZ(0);
+  @$pb.TagNumber(1)
   set inputUri($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasInputUri() => $_has(0);
+  @$pb.TagNumber(1)
   void clearInputUri() => clearField(1);
 
-  $core.int get progressPercent => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get progressPercent => $_getIZ(1);
+  @$pb.TagNumber(2)
   set progressPercent($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasProgressPercent() => $_has(1);
+  @$pb.TagNumber(2)
   void clearProgressPercent() => clearField(2);
 
+  @$pb.TagNumber(3)
   $5.Timestamp get startTime => $_getN(2);
+  @$pb.TagNumber(3)
   set startTime($5.Timestamp v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasStartTime() => $_has(2);
+  @$pb.TagNumber(3)
   void clearStartTime() => clearField(3);
+  @$pb.TagNumber(3)
+  $5.Timestamp ensureStartTime() => $_ensure(2);
 
+  @$pb.TagNumber(4)
   $5.Timestamp get updateTime => $_getN(3);
+  @$pb.TagNumber(4)
   set updateTime($5.Timestamp v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasUpdateTime() => $_has(3);
+  @$pb.TagNumber(4)
   void clearUpdateTime() => clearField(4);
+  @$pb.TagNumber(4)
+  $5.Timestamp ensureUpdateTime() => $_ensure(3);
 }
 
 class AnnotateVideoProgress extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AnnotateVideoProgress',
       package:
-          const $pb.PackageName('google.cloud.videointelligence.v1p2beta1'))
+          const $pb.PackageName('google.cloud.videointelligence.v1p2beta1'),
+      createEmptyInstance: create)
     ..pc<VideoAnnotationProgress>(1, 'annotationProgress', $pb.PbFieldType.PM,
-        VideoAnnotationProgress.create)
+        subBuilder: VideoAnnotationProgress.create)
     ..hasRequiredFields = false;
 
   AnnotateVideoProgress._() : super();
@@ -956,17 +1168,20 @@ class AnnotateVideoProgress extends $pb.GeneratedMessage {
   AnnotateVideoProgress createEmptyInstance() => create();
   static $pb.PbList<AnnotateVideoProgress> createRepeated() =>
       $pb.PbList<AnnotateVideoProgress>();
-  static AnnotateVideoProgress getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static AnnotateVideoProgress getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AnnotateVideoProgress>(create);
   static AnnotateVideoProgress _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<VideoAnnotationProgress> get annotationProgress => $_getList(0);
 }
 
 class NormalizedVertex extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('NormalizedVertex',
       package:
-          const $pb.PackageName('google.cloud.videointelligence.v1p2beta1'))
+          const $pb.PackageName('google.cloud.videointelligence.v1p2beta1'),
+      createEmptyInstance: create)
     ..a<$core.double>(1, 'x', $pb.PbFieldType.OF)
     ..a<$core.double>(2, 'y', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
@@ -988,33 +1203,43 @@ class NormalizedVertex extends $pb.GeneratedMessage {
   NormalizedVertex createEmptyInstance() => create();
   static $pb.PbList<NormalizedVertex> createRepeated() =>
       $pb.PbList<NormalizedVertex>();
-  static NormalizedVertex getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static NormalizedVertex getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<NormalizedVertex>(create);
   static NormalizedVertex _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.double get x => $_getN(0);
+  @$pb.TagNumber(1)
   set x($core.double v) {
     $_setFloat(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasX() => $_has(0);
+  @$pb.TagNumber(1)
   void clearX() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.double get y => $_getN(1);
+  @$pb.TagNumber(2)
   set y($core.double v) {
     $_setFloat(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasY() => $_has(1);
+  @$pb.TagNumber(2)
   void clearY() => clearField(2);
 }
 
 class NormalizedBoundingPoly extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('NormalizedBoundingPoly',
       package:
-          const $pb.PackageName('google.cloud.videointelligence.v1p2beta1'))
-    ..pc<NormalizedVertex>(
-        1, 'vertices', $pb.PbFieldType.PM, NormalizedVertex.create)
+          const $pb.PackageName('google.cloud.videointelligence.v1p2beta1'),
+      createEmptyInstance: create)
+    ..pc<NormalizedVertex>(1, 'vertices', $pb.PbFieldType.PM,
+        subBuilder: NormalizedVertex.create)
     ..hasRequiredFields = false;
 
   NormalizedBoundingPoly._() : super();
@@ -1036,21 +1261,24 @@ class NormalizedBoundingPoly extends $pb.GeneratedMessage {
   NormalizedBoundingPoly createEmptyInstance() => create();
   static $pb.PbList<NormalizedBoundingPoly> createRepeated() =>
       $pb.PbList<NormalizedBoundingPoly>();
-  static NormalizedBoundingPoly getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static NormalizedBoundingPoly getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<NormalizedBoundingPoly>(create);
   static NormalizedBoundingPoly _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<NormalizedVertex> get vertices => $_getList(0);
 }
 
 class TextSegment extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TextSegment',
       package:
-          const $pb.PackageName('google.cloud.videointelligence.v1p2beta1'))
-    ..a<VideoSegment>(1, 'segment', $pb.PbFieldType.OM, VideoSegment.getDefault,
-        VideoSegment.create)
+          const $pb.PackageName('google.cloud.videointelligence.v1p2beta1'),
+      createEmptyInstance: create)
+    ..aOM<VideoSegment>(1, 'segment', subBuilder: VideoSegment.create)
     ..a<$core.double>(2, 'confidence', $pb.PbFieldType.OF)
-    ..pc<TextFrame>(3, 'frames', $pb.PbFieldType.PM, TextFrame.create)
+    ..pc<TextFrame>(3, 'frames', $pb.PbFieldType.PM,
+        subBuilder: TextFrame.create)
     ..hasRequiredFields = false;
 
   TextSegment._() : super();
@@ -1069,36 +1297,49 @@ class TextSegment extends $pb.GeneratedMessage {
   static TextSegment create() => TextSegment._();
   TextSegment createEmptyInstance() => create();
   static $pb.PbList<TextSegment> createRepeated() => $pb.PbList<TextSegment>();
-  static TextSegment getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TextSegment getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TextSegment>(create);
   static TextSegment _defaultInstance;
 
+  @$pb.TagNumber(1)
   VideoSegment get segment => $_getN(0);
+  @$pb.TagNumber(1)
   set segment(VideoSegment v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasSegment() => $_has(0);
+  @$pb.TagNumber(1)
   void clearSegment() => clearField(1);
+  @$pb.TagNumber(1)
+  VideoSegment ensureSegment() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $core.double get confidence => $_getN(1);
+  @$pb.TagNumber(2)
   set confidence($core.double v) {
     $_setFloat(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasConfidence() => $_has(1);
+  @$pb.TagNumber(2)
   void clearConfidence() => clearField(2);
 
+  @$pb.TagNumber(3)
   $core.List<TextFrame> get frames => $_getList(2);
 }
 
 class TextFrame extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TextFrame',
       package:
-          const $pb.PackageName('google.cloud.videointelligence.v1p2beta1'))
-    ..a<NormalizedBoundingPoly>(1, 'rotatedBoundingBox', $pb.PbFieldType.OM,
-        NormalizedBoundingPoly.getDefault, NormalizedBoundingPoly.create)
-    ..a<$3.Duration>(2, 'timeOffset', $pb.PbFieldType.OM,
-        $3.Duration.getDefault, $3.Duration.create)
+          const $pb.PackageName('google.cloud.videointelligence.v1p2beta1'),
+      createEmptyInstance: create)
+    ..aOM<NormalizedBoundingPoly>(1, 'rotatedBoundingBox',
+        subBuilder: NormalizedBoundingPoly.create)
+    ..aOM<$3.Duration>(2, 'timeOffset', subBuilder: $3.Duration.create)
     ..hasRequiredFields = false;
 
   TextFrame._() : super();
@@ -1117,32 +1358,48 @@ class TextFrame extends $pb.GeneratedMessage {
   static TextFrame create() => TextFrame._();
   TextFrame createEmptyInstance() => create();
   static $pb.PbList<TextFrame> createRepeated() => $pb.PbList<TextFrame>();
-  static TextFrame getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TextFrame getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TextFrame>(create);
   static TextFrame _defaultInstance;
 
+  @$pb.TagNumber(1)
   NormalizedBoundingPoly get rotatedBoundingBox => $_getN(0);
+  @$pb.TagNumber(1)
   set rotatedBoundingBox(NormalizedBoundingPoly v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasRotatedBoundingBox() => $_has(0);
+  @$pb.TagNumber(1)
   void clearRotatedBoundingBox() => clearField(1);
+  @$pb.TagNumber(1)
+  NormalizedBoundingPoly ensureRotatedBoundingBox() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $3.Duration get timeOffset => $_getN(1);
+  @$pb.TagNumber(2)
   set timeOffset($3.Duration v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasTimeOffset() => $_has(1);
+  @$pb.TagNumber(2)
   void clearTimeOffset() => clearField(2);
+  @$pb.TagNumber(2)
+  $3.Duration ensureTimeOffset() => $_ensure(1);
 }
 
 class TextAnnotation extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TextAnnotation',
       package:
-          const $pb.PackageName('google.cloud.videointelligence.v1p2beta1'))
+          const $pb.PackageName('google.cloud.videointelligence.v1p2beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'text')
-    ..pc<TextSegment>(2, 'segments', $pb.PbFieldType.PM, TextSegment.create)
+    ..pc<TextSegment>(2, 'segments', $pb.PbFieldType.PM,
+        subBuilder: TextSegment.create)
     ..hasRequiredFields = false;
 
   TextAnnotation._() : super();
@@ -1162,28 +1419,35 @@ class TextAnnotation extends $pb.GeneratedMessage {
   TextAnnotation createEmptyInstance() => create();
   static $pb.PbList<TextAnnotation> createRepeated() =>
       $pb.PbList<TextAnnotation>();
-  static TextAnnotation getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TextAnnotation getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TextAnnotation>(create);
   static TextAnnotation _defaultInstance;
 
-  $core.String get text => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get text => $_getSZ(0);
+  @$pb.TagNumber(1)
   set text($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasText() => $_has(0);
+  @$pb.TagNumber(1)
   void clearText() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<TextSegment> get segments => $_getList(1);
 }
 
 class ObjectTrackingFrame extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ObjectTrackingFrame',
       package:
-          const $pb.PackageName('google.cloud.videointelligence.v1p2beta1'))
-    ..a<NormalizedBoundingBox>(1, 'normalizedBoundingBox', $pb.PbFieldType.OM,
-        NormalizedBoundingBox.getDefault, NormalizedBoundingBox.create)
-    ..a<$3.Duration>(2, 'timeOffset', $pb.PbFieldType.OM,
-        $3.Duration.getDefault, $3.Duration.create)
+          const $pb.PackageName('google.cloud.videointelligence.v1p2beta1'),
+      createEmptyInstance: create)
+    ..aOM<NormalizedBoundingBox>(1, 'normalizedBoundingBox',
+        subBuilder: NormalizedBoundingBox.create)
+    ..aOM<$3.Duration>(2, 'timeOffset', subBuilder: $3.Duration.create)
     ..hasRequiredFields = false;
 
   ObjectTrackingFrame._() : super();
@@ -1203,37 +1467,49 @@ class ObjectTrackingFrame extends $pb.GeneratedMessage {
   ObjectTrackingFrame createEmptyInstance() => create();
   static $pb.PbList<ObjectTrackingFrame> createRepeated() =>
       $pb.PbList<ObjectTrackingFrame>();
-  static ObjectTrackingFrame getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ObjectTrackingFrame getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ObjectTrackingFrame>(create);
   static ObjectTrackingFrame _defaultInstance;
 
+  @$pb.TagNumber(1)
   NormalizedBoundingBox get normalizedBoundingBox => $_getN(0);
+  @$pb.TagNumber(1)
   set normalizedBoundingBox(NormalizedBoundingBox v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasNormalizedBoundingBox() => $_has(0);
+  @$pb.TagNumber(1)
   void clearNormalizedBoundingBox() => clearField(1);
+  @$pb.TagNumber(1)
+  NormalizedBoundingBox ensureNormalizedBoundingBox() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $3.Duration get timeOffset => $_getN(1);
+  @$pb.TagNumber(2)
   set timeOffset($3.Duration v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasTimeOffset() => $_has(1);
+  @$pb.TagNumber(2)
   void clearTimeOffset() => clearField(2);
+  @$pb.TagNumber(2)
+  $3.Duration ensureTimeOffset() => $_ensure(1);
 }
 
 class ObjectTrackingAnnotation extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ObjectTrackingAnnotation',
       package:
-          const $pb.PackageName('google.cloud.videointelligence.v1p2beta1'))
-    ..a<Entity>(
-        1, 'entity', $pb.PbFieldType.OM, Entity.getDefault, Entity.create)
-    ..pc<ObjectTrackingFrame>(
-        2, 'frames', $pb.PbFieldType.PM, ObjectTrackingFrame.create)
-    ..a<VideoSegment>(3, 'segment', $pb.PbFieldType.OM, VideoSegment.getDefault,
-        VideoSegment.create)
+          const $pb.PackageName('google.cloud.videointelligence.v1p2beta1'),
+      createEmptyInstance: create)
+    ..aOM<Entity>(1, 'entity', subBuilder: Entity.create)
+    ..pc<ObjectTrackingFrame>(2, 'frames', $pb.PbFieldType.PM,
+        subBuilder: ObjectTrackingFrame.create)
+    ..aOM<VideoSegment>(3, 'segment', subBuilder: VideoSegment.create)
     ..a<$core.double>(4, 'confidence', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
@@ -1256,33 +1532,51 @@ class ObjectTrackingAnnotation extends $pb.GeneratedMessage {
   ObjectTrackingAnnotation createEmptyInstance() => create();
   static $pb.PbList<ObjectTrackingAnnotation> createRepeated() =>
       $pb.PbList<ObjectTrackingAnnotation>();
-  static ObjectTrackingAnnotation getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ObjectTrackingAnnotation getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ObjectTrackingAnnotation>(create);
   static ObjectTrackingAnnotation _defaultInstance;
 
+  @$pb.TagNumber(1)
   Entity get entity => $_getN(0);
+  @$pb.TagNumber(1)
   set entity(Entity v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasEntity() => $_has(0);
+  @$pb.TagNumber(1)
   void clearEntity() => clearField(1);
+  @$pb.TagNumber(1)
+  Entity ensureEntity() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $core.List<ObjectTrackingFrame> get frames => $_getList(1);
 
+  @$pb.TagNumber(3)
   VideoSegment get segment => $_getN(2);
+  @$pb.TagNumber(3)
   set segment(VideoSegment v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasSegment() => $_has(2);
+  @$pb.TagNumber(3)
   void clearSegment() => clearField(3);
+  @$pb.TagNumber(3)
+  VideoSegment ensureSegment() => $_ensure(2);
 
+  @$pb.TagNumber(4)
   $core.double get confidence => $_getN(3);
+  @$pb.TagNumber(4)
   set confidence($core.double v) {
     $_setFloat(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasConfidence() => $_has(3);
+  @$pb.TagNumber(4)
   void clearConfidence() => clearField(4);
 }

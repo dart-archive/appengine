@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -30,7 +29,8 @@ class ListGroupsRequest extends $pb.GeneratedMessage {
     0: ListGroupsRequest_Filter.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListGroupsRequest',
-      package: const $pb.PackageName('google.monitoring.v3'))
+      package: const $pb.PackageName('google.monitoring.v3'),
+      createEmptyInstance: create)
     ..oo(0, [2, 3, 4])
     ..aOS(2, 'childrenOfGroup')
     ..aOS(3, 'ancestorsOfGroup')
@@ -57,67 +57,93 @@ class ListGroupsRequest extends $pb.GeneratedMessage {
   ListGroupsRequest createEmptyInstance() => create();
   static $pb.PbList<ListGroupsRequest> createRepeated() =>
       $pb.PbList<ListGroupsRequest>();
-  static ListGroupsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListGroupsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListGroupsRequest>(create);
   static ListGroupsRequest _defaultInstance;
 
   ListGroupsRequest_Filter whichFilter() =>
       _ListGroupsRequest_FilterByTag[$_whichOneof(0)];
   void clearFilter() => clearField($_whichOneof(0));
 
-  $core.String get childrenOfGroup => $_getS(0, '');
+  @$pb.TagNumber(2)
+  $core.String get childrenOfGroup => $_getSZ(0);
+  @$pb.TagNumber(2)
   set childrenOfGroup($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasChildrenOfGroup() => $_has(0);
+  @$pb.TagNumber(2)
   void clearChildrenOfGroup() => clearField(2);
 
-  $core.String get ancestorsOfGroup => $_getS(1, '');
+  @$pb.TagNumber(3)
+  $core.String get ancestorsOfGroup => $_getSZ(1);
+  @$pb.TagNumber(3)
   set ancestorsOfGroup($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasAncestorsOfGroup() => $_has(1);
+  @$pb.TagNumber(3)
   void clearAncestorsOfGroup() => clearField(3);
 
-  $core.String get descendantsOfGroup => $_getS(2, '');
+  @$pb.TagNumber(4)
+  $core.String get descendantsOfGroup => $_getSZ(2);
+  @$pb.TagNumber(4)
   set descendantsOfGroup($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasDescendantsOfGroup() => $_has(2);
+  @$pb.TagNumber(4)
   void clearDescendantsOfGroup() => clearField(4);
 
-  $core.int get pageSize => $_get(3, 0);
+  @$pb.TagNumber(5)
+  $core.int get pageSize => $_getIZ(3);
+  @$pb.TagNumber(5)
   set pageSize($core.int v) {
     $_setSignedInt32(3, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasPageSize() => $_has(3);
+  @$pb.TagNumber(5)
   void clearPageSize() => clearField(5);
 
-  $core.String get pageToken => $_getS(4, '');
+  @$pb.TagNumber(6)
+  $core.String get pageToken => $_getSZ(4);
+  @$pb.TagNumber(6)
   set pageToken($core.String v) {
     $_setString(4, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasPageToken() => $_has(4);
+  @$pb.TagNumber(6)
   void clearPageToken() => clearField(6);
 
-  $core.String get name => $_getS(5, '');
+  @$pb.TagNumber(7)
+  $core.String get name => $_getSZ(5);
+  @$pb.TagNumber(7)
   set name($core.String v) {
     $_setString(5, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasName() => $_has(5);
+  @$pb.TagNumber(7)
   void clearName() => clearField(7);
 }
 
 class ListGroupsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListGroupsResponse',
-      package: const $pb.PackageName('google.monitoring.v3'))
-    ..pc<$1.Group>(1, 'group', $pb.PbFieldType.PM, $1.Group.create)
+      package: const $pb.PackageName('google.monitoring.v3'),
+      createEmptyInstance: create)
+    ..pc<$1.Group>(1, 'group', $pb.PbFieldType.PM, subBuilder: $1.Group.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -138,24 +164,31 @@ class ListGroupsResponse extends $pb.GeneratedMessage {
   ListGroupsResponse createEmptyInstance() => create();
   static $pb.PbList<ListGroupsResponse> createRepeated() =>
       $pb.PbList<ListGroupsResponse>();
-  static ListGroupsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListGroupsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListGroupsResponse>(create);
   static ListGroupsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$1.Group> get group => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class GetGroupRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetGroupRequest',
-      package: const $pb.PackageName('google.monitoring.v3'))
+      package: const $pb.PackageName('google.monitoring.v3'),
+      createEmptyInstance: create)
     ..aOS(3, 'name')
     ..hasRequiredFields = false;
 
@@ -176,24 +209,29 @@ class GetGroupRequest extends $pb.GeneratedMessage {
   GetGroupRequest createEmptyInstance() => create();
   static $pb.PbList<GetGroupRequest> createRepeated() =>
       $pb.PbList<GetGroupRequest>();
-  static GetGroupRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetGroupRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetGroupRequest>(create);
   static GetGroupRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(3)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(3)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(3)
   void clearName() => clearField(3);
 }
 
 class CreateGroupRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateGroupRequest',
-      package: const $pb.PackageName('google.monitoring.v3'))
-    ..a<$1.Group>(
-        2, 'group', $pb.PbFieldType.OM, $1.Group.getDefault, $1.Group.create)
+      package: const $pb.PackageName('google.monitoring.v3'),
+      createEmptyInstance: create)
+    ..aOM<$1.Group>(2, 'group', subBuilder: $1.Group.create)
     ..aOB(3, 'validateOnly')
     ..aOS(4, 'name')
     ..hasRequiredFields = false;
@@ -215,40 +253,55 @@ class CreateGroupRequest extends $pb.GeneratedMessage {
   CreateGroupRequest createEmptyInstance() => create();
   static $pb.PbList<CreateGroupRequest> createRepeated() =>
       $pb.PbList<CreateGroupRequest>();
-  static CreateGroupRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateGroupRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateGroupRequest>(create);
   static CreateGroupRequest _defaultInstance;
 
+  @$pb.TagNumber(2)
   $1.Group get group => $_getN(0);
+  @$pb.TagNumber(2)
   set group($1.Group v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasGroup() => $_has(0);
+  @$pb.TagNumber(2)
   void clearGroup() => clearField(2);
+  @$pb.TagNumber(2)
+  $1.Group ensureGroup() => $_ensure(0);
 
-  $core.bool get validateOnly => $_get(1, false);
+  @$pb.TagNumber(3)
+  $core.bool get validateOnly => $_getBF(1);
+  @$pb.TagNumber(3)
   set validateOnly($core.bool v) {
     $_setBool(1, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasValidateOnly() => $_has(1);
+  @$pb.TagNumber(3)
   void clearValidateOnly() => clearField(3);
 
-  $core.String get name => $_getS(2, '');
+  @$pb.TagNumber(4)
+  $core.String get name => $_getSZ(2);
+  @$pb.TagNumber(4)
   set name($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasName() => $_has(2);
+  @$pb.TagNumber(4)
   void clearName() => clearField(4);
 }
 
 class UpdateGroupRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateGroupRequest',
-      package: const $pb.PackageName('google.monitoring.v3'))
-    ..a<$1.Group>(
-        2, 'group', $pb.PbFieldType.OM, $1.Group.getDefault, $1.Group.create)
+      package: const $pb.PackageName('google.monitoring.v3'),
+      createEmptyInstance: create)
+    ..aOM<$1.Group>(2, 'group', subBuilder: $1.Group.create)
     ..aOB(3, 'validateOnly')
     ..hasRequiredFields = false;
 
@@ -269,31 +322,44 @@ class UpdateGroupRequest extends $pb.GeneratedMessage {
   UpdateGroupRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateGroupRequest> createRepeated() =>
       $pb.PbList<UpdateGroupRequest>();
-  static UpdateGroupRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateGroupRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateGroupRequest>(create);
   static UpdateGroupRequest _defaultInstance;
 
+  @$pb.TagNumber(2)
   $1.Group get group => $_getN(0);
+  @$pb.TagNumber(2)
   set group($1.Group v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasGroup() => $_has(0);
+  @$pb.TagNumber(2)
   void clearGroup() => clearField(2);
+  @$pb.TagNumber(2)
+  $1.Group ensureGroup() => $_ensure(0);
 
-  $core.bool get validateOnly => $_get(1, false);
+  @$pb.TagNumber(3)
+  $core.bool get validateOnly => $_getBF(1);
+  @$pb.TagNumber(3)
   set validateOnly($core.bool v) {
     $_setBool(1, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasValidateOnly() => $_has(1);
+  @$pb.TagNumber(3)
   void clearValidateOnly() => clearField(3);
 }
 
 class DeleteGroupRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteGroupRequest',
-      package: const $pb.PackageName('google.monitoring.v3'))
+      package: const $pb.PackageName('google.monitoring.v3'),
+      createEmptyInstance: create)
     ..aOS(3, 'name')
+    ..aOB(4, 'recursive')
     ..hasRequiredFields = false;
 
   DeleteGroupRequest._() : super();
@@ -313,27 +379,44 @@ class DeleteGroupRequest extends $pb.GeneratedMessage {
   DeleteGroupRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteGroupRequest> createRepeated() =>
       $pb.PbList<DeleteGroupRequest>();
-  static DeleteGroupRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteGroupRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteGroupRequest>(create);
   static DeleteGroupRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(3)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(3)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(3)
   void clearName() => clearField(3);
+
+  @$pb.TagNumber(4)
+  $core.bool get recursive => $_getBF(1);
+  @$pb.TagNumber(4)
+  set recursive($core.bool v) {
+    $_setBool(1, v);
+  }
+
+  @$pb.TagNumber(4)
+  $core.bool hasRecursive() => $_has(1);
+  @$pb.TagNumber(4)
+  void clearRecursive() => clearField(4);
 }
 
 class ListGroupMembersRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListGroupMembersRequest',
-      package: const $pb.PackageName('google.monitoring.v3'))
+      package: const $pb.PackageName('google.monitoring.v3'),
+      createEmptyInstance: create)
     ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(4, 'pageToken')
     ..aOS(5, 'filter')
-    ..a<$3.TimeInterval>(6, 'interval', $pb.PbFieldType.OM,
-        $3.TimeInterval.getDefault, $3.TimeInterval.create)
+    ..aOM<$3.TimeInterval>(6, 'interval', subBuilder: $3.TimeInterval.create)
     ..aOS(7, 'name')
     ..hasRequiredFields = false;
 
@@ -356,56 +439,80 @@ class ListGroupMembersRequest extends $pb.GeneratedMessage {
   ListGroupMembersRequest createEmptyInstance() => create();
   static $pb.PbList<ListGroupMembersRequest> createRepeated() =>
       $pb.PbList<ListGroupMembersRequest>();
-  static ListGroupMembersRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListGroupMembersRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListGroupMembersRequest>(create);
   static ListGroupMembersRequest _defaultInstance;
 
-  $core.int get pageSize => $_get(0, 0);
+  @$pb.TagNumber(3)
+  $core.int get pageSize => $_getIZ(0);
+  @$pb.TagNumber(3)
   set pageSize($core.int v) {
     $_setSignedInt32(0, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageSize() => $_has(0);
+  @$pb.TagNumber(3)
   void clearPageSize() => clearField(3);
 
-  $core.String get pageToken => $_getS(1, '');
+  @$pb.TagNumber(4)
+  $core.String get pageToken => $_getSZ(1);
+  @$pb.TagNumber(4)
   set pageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasPageToken() => $_has(1);
+  @$pb.TagNumber(4)
   void clearPageToken() => clearField(4);
 
-  $core.String get filter => $_getS(2, '');
+  @$pb.TagNumber(5)
+  $core.String get filter => $_getSZ(2);
+  @$pb.TagNumber(5)
   set filter($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasFilter() => $_has(2);
+  @$pb.TagNumber(5)
   void clearFilter() => clearField(5);
 
+  @$pb.TagNumber(6)
   $3.TimeInterval get interval => $_getN(3);
+  @$pb.TagNumber(6)
   set interval($3.TimeInterval v) {
     setField(6, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasInterval() => $_has(3);
+  @$pb.TagNumber(6)
   void clearInterval() => clearField(6);
+  @$pb.TagNumber(6)
+  $3.TimeInterval ensureInterval() => $_ensure(3);
 
-  $core.String get name => $_getS(4, '');
+  @$pb.TagNumber(7)
+  $core.String get name => $_getSZ(4);
+  @$pb.TagNumber(7)
   set name($core.String v) {
     $_setString(4, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasName() => $_has(4);
+  @$pb.TagNumber(7)
   void clearName() => clearField(7);
 }
 
 class ListGroupMembersResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListGroupMembersResponse',
-      package: const $pb.PackageName('google.monitoring.v3'))
-    ..pc<$4.MonitoredResource>(
-        1, 'members', $pb.PbFieldType.PM, $4.MonitoredResource.create)
+      package: const $pb.PackageName('google.monitoring.v3'),
+      createEmptyInstance: create)
+    ..pc<$4.MonitoredResource>(1, 'members', $pb.PbFieldType.PM,
+        subBuilder: $4.MonitoredResource.create)
     ..aOS(2, 'nextPageToken')
     ..a<$core.int>(3, 'totalSize', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
@@ -429,25 +536,35 @@ class ListGroupMembersResponse extends $pb.GeneratedMessage {
   ListGroupMembersResponse createEmptyInstance() => create();
   static $pb.PbList<ListGroupMembersResponse> createRepeated() =>
       $pb.PbList<ListGroupMembersResponse>();
-  static ListGroupMembersResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListGroupMembersResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListGroupMembersResponse>(create);
   static ListGroupMembersResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$4.MonitoredResource> get members => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 
-  $core.int get totalSize => $_get(2, 0);
+  @$pb.TagNumber(3)
+  $core.int get totalSize => $_getIZ(2);
+  @$pb.TagNumber(3)
   set totalSize($core.int v) {
     $_setSignedInt32(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasTotalSize() => $_has(2);
+  @$pb.TagNumber(3)
   void clearTotalSize() => clearField(3);
 }

@@ -37,6 +37,22 @@ const LogMetric$json = {
       '10': 'bucketOptions'
     },
     {
+      '1': 'create_time',
+      '3': 9,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'createTime'
+    },
+    {
+      '1': 'update_time',
+      '3': 10,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'updateTime'
+    },
+    {
       '1': 'version',
       '3': 4,
       '4': 1,

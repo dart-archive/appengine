@@ -14,6 +14,7 @@ const RecognizeRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.speech.v1.RecognitionConfig',
+      '8': {},
       '10': 'config'
     },
     {
@@ -22,6 +23,7 @@ const RecognizeRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.speech.v1.RecognitionAudio',
+      '8': {},
       '10': 'audio'
     },
   ],
@@ -36,6 +38,7 @@ const LongRunningRecognizeRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.speech.v1.RecognitionConfig',
+      '8': {},
       '10': 'config'
     },
     {
@@ -44,6 +47,7 @@ const LongRunningRecognizeRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.speech.v1.RecognitionAudio',
+      '8': {},
       '10': 'audio'
     },
   ],
@@ -84,6 +88,7 @@ const StreamingRecognitionConfig$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.speech.v1.RecognitionConfig',
+      '8': {},
       '10': 'config'
     },
     {'1': 'single_utterance', '3': 2, '4': 1, '5': 8, '10': 'singleUtterance'},
@@ -117,7 +122,14 @@ const RecognitionConfig$json = {
       '5': 8,
       '10': 'enableSeparateRecognitionPerChannel'
     },
-    {'1': 'language_code', '3': 3, '4': 1, '5': 9, '10': 'languageCode'},
+    {
+      '1': 'language_code',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'languageCode'
+    },
     {'1': 'max_alternatives', '3': 4, '4': 1, '5': 5, '10': 'maxAlternatives'},
     {'1': 'profanity_filter', '3': 5, '4': 1, '5': 8, '10': 'profanityFilter'},
     {
@@ -141,6 +153,14 @@ const RecognitionConfig$json = {
       '4': 1,
       '5': 8,
       '10': 'enableAutomaticPunctuation'
+    },
+    {
+      '1': 'diarization_config',
+      '3': 19,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.speech.v1.SpeakerDiarizationConfig',
+      '10': 'diarizationConfig'
     },
     {
       '1': 'metadata',
@@ -167,6 +187,22 @@ const RecognitionConfig_AudioEncoding$json = {
     {'1': 'AMR_WB', '2': 5},
     {'1': 'OGG_OPUS', '2': 6},
     {'1': 'SPEEX_WITH_HEADER_BYTE', '2': 7},
+  ],
+};
+
+const SpeakerDiarizationConfig$json = {
+  '1': 'SpeakerDiarizationConfig',
+  '2': [
+    {
+      '1': 'enable_speaker_diarization',
+      '3': 1,
+      '4': 1,
+      '5': 8,
+      '10': 'enableSpeakerDiarization'
+    },
+    {'1': 'min_speaker_count', '3': 2, '4': 1, '5': 5, '10': 'minSpeakerCount'},
+    {'1': 'max_speaker_count', '3': 3, '4': 1, '5': 5, '10': 'maxSpeakerCount'},
+    {'1': 'speaker_tag', '3': 5, '4': 1, '5': 5, '8': {}, '10': 'speakerTag'},
   ],
 };
 
@@ -413,7 +449,14 @@ const StreamingRecognitionResult$json = {
       '10': 'resultEndTime'
     },
     {'1': 'channel_tag', '3': 5, '4': 1, '5': 5, '10': 'channelTag'},
-    {'1': 'language_code', '3': 6, '4': 1, '5': 9, '10': 'languageCode'},
+    {
+      '1': 'language_code',
+      '3': 6,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'languageCode'
+    },
   ],
 };
 

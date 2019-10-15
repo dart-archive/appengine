@@ -325,6 +325,16 @@ const DeployModelRequest$json = {
       '9': 0,
       '10': 'imageObjectDetectionModelDeploymentMetadata'
     },
+    {
+      '1': 'image_classification_model_deployment_metadata',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6':
+          '.google.cloud.automl.v1beta1.ImageClassificationModelDeploymentMetadata',
+      '9': 0,
+      '10': 'imageClassificationModelDeploymentMetadata'
+    },
     {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
   ],
   '8': [

@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -14,7 +13,8 @@ export 'conversion_action_error.pbenum.dart';
 
 class ConversionActionErrorEnum extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ConversionActionErrorEnum',
-      package: const $pb.PackageName('google.ads.googleads.v2.errors'))
+      package: const $pb.PackageName('google.ads.googleads.v2.errors'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   ConversionActionErrorEnum._() : super();
@@ -37,7 +37,8 @@ class ConversionActionErrorEnum extends $pb.GeneratedMessage {
   ConversionActionErrorEnum createEmptyInstance() => create();
   static $pb.PbList<ConversionActionErrorEnum> createRepeated() =>
       $pb.PbList<ConversionActionErrorEnum>();
-  static ConversionActionErrorEnum getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ConversionActionErrorEnum getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ConversionActionErrorEnum>(create);
   static ConversionActionErrorEnum _defaultInstance;
 }

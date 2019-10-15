@@ -51,6 +51,10 @@ message PolicyReviewStatusEnum {
     // The resource has been resubmitted for approval or its policy decision has
     // been appealed.
     UNDER_APPEAL = 4;
+
+    // The resource is eligible and may be serving but could still undergo
+    // further review.
+    ELIGIBLE_MAY_SERVE = 5;
   }
 
 

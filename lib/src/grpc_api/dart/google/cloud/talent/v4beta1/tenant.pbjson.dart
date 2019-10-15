@@ -9,7 +9,7 @@ const Tenant$json = {
   '1': 'Tenant',
   '2': [
     {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    {'1': 'external_id', '3': 2, '4': 1, '5': 9, '10': 'externalId'},
+    {'1': 'external_id', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'externalId'},
     {
       '1': 'usage_type',
       '3': 3,

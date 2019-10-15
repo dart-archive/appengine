@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -16,8 +15,9 @@ export 'consumer.pbenum.dart';
 
 class ProjectProperties extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ProjectProperties',
-      package: const $pb.PackageName('google.api'))
-    ..pc<Property>(1, 'properties', $pb.PbFieldType.PM, Property.create)
+      package: const $pb.PackageName('google.api'), createEmptyInstance: create)
+    ..pc<Property>(1, 'properties', $pb.PbFieldType.PM,
+        subBuilder: Property.create)
     ..hasRequiredFields = false;
 
   ProjectProperties._() : super();
@@ -37,26 +37,25 @@ class ProjectProperties extends $pb.GeneratedMessage {
   ProjectProperties createEmptyInstance() => create();
   static $pb.PbList<ProjectProperties> createRepeated() =>
       $pb.PbList<ProjectProperties>();
-  static ProjectProperties getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ProjectProperties getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ProjectProperties>(create);
   static ProjectProperties _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<Property> get properties => $_getList(0);
 }
 
 class Property extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo('Property', package: const $pb.PackageName('google.api'))
-        ..aOS(1, 'name')
-        ..e<Property_PropertyType>(
-            2,
-            'type',
-            $pb.PbFieldType.OE,
-            Property_PropertyType.UNSPECIFIED,
-            Property_PropertyType.valueOf,
-            Property_PropertyType.values)
-        ..aOS(3, 'description')
-        ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Property',
+      package: const $pb.PackageName('google.api'), createEmptyInstance: create)
+    ..aOS(1, 'name')
+    ..e<Property_PropertyType>(2, 'type', $pb.PbFieldType.OE,
+        defaultOrMaker: Property_PropertyType.UNSPECIFIED,
+        valueOf: Property_PropertyType.valueOf,
+        enumValues: Property_PropertyType.values)
+    ..aOS(3, 'description')
+    ..hasRequiredFields = false;
 
   Property._() : super();
   factory Property() => create();
@@ -74,30 +73,44 @@ class Property extends $pb.GeneratedMessage {
   static Property create() => Property._();
   Property createEmptyInstance() => create();
   static $pb.PbList<Property> createRepeated() => $pb.PbList<Property>();
-  static Property getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Property getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Property>(create);
   static Property _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   Property_PropertyType get type => $_getN(1);
+  @$pb.TagNumber(2)
   set type(Property_PropertyType v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasType() => $_has(1);
+  @$pb.TagNumber(2)
   void clearType() => clearField(2);
 
-  $core.String get description => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get description => $_getSZ(2);
+  @$pb.TagNumber(3)
   set description($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasDescription() => $_has(2);
+  @$pb.TagNumber(3)
   void clearDescription() => clearField(3);
 }

@@ -72,6 +72,7 @@ const Asset$json = {
       '10': 'iamPolicy'
     },
   ],
+  '7': {},
 };
 
 const Resource$json = {

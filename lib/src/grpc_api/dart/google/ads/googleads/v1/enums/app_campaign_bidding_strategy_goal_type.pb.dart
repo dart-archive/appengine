@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -15,7 +14,8 @@ export 'app_campaign_bidding_strategy_goal_type.pbenum.dart';
 class AppCampaignBiddingStrategyGoalTypeEnum extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'AppCampaignBiddingStrategyGoalTypeEnum',
-      package: const $pb.PackageName('google.ads.googleads.v1.enums'))
+      package: const $pb.PackageName('google.ads.googleads.v1.enums'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   AppCampaignBiddingStrategyGoalTypeEnum._() : super();
@@ -40,7 +40,9 @@ class AppCampaignBiddingStrategyGoalTypeEnum extends $pb.GeneratedMessage {
   AppCampaignBiddingStrategyGoalTypeEnum createEmptyInstance() => create();
   static $pb.PbList<AppCampaignBiddingStrategyGoalTypeEnum> createRepeated() =>
       $pb.PbList<AppCampaignBiddingStrategyGoalTypeEnum>();
+  @$core.pragma('dart2js:noInline')
   static AppCampaignBiddingStrategyGoalTypeEnum getDefault() =>
-      _defaultInstance ??= create()..freeze();
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          AppCampaignBiddingStrategyGoalTypeEnum>(create);
   static AppCampaignBiddingStrategyGoalTypeEnum _defaultInstance;
 }

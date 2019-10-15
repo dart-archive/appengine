@@ -475,6 +475,14 @@ const Metrics$json = {
       '10': 'hotelAverageLeadValueMicros'
     },
     {
+      '1': 'hotel_price_difference_percentage',
+      '3': 129,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.DoubleValue',
+      '10': 'hotelPriceDifferencePercentage'
+    },
+    {
       '1': 'historical_creative_quality_score',
       '3': 80,
       '4': 1,

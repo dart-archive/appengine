@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -15,7 +14,8 @@ import 'device.pb.dart' as $3;
 
 class RequestSyncDevicesRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('RequestSyncDevicesRequest',
-      package: const $pb.PackageName('google.home.graph.v1'))
+      package: const $pb.PackageName('google.home.graph.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'agentUserId')
     ..aOB(2, 'async')
     ..hasRequiredFields = false;
@@ -40,31 +40,41 @@ class RequestSyncDevicesRequest extends $pb.GeneratedMessage {
   RequestSyncDevicesRequest createEmptyInstance() => create();
   static $pb.PbList<RequestSyncDevicesRequest> createRepeated() =>
       $pb.PbList<RequestSyncDevicesRequest>();
-  static RequestSyncDevicesRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static RequestSyncDevicesRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RequestSyncDevicesRequest>(create);
   static RequestSyncDevicesRequest _defaultInstance;
 
-  $core.String get agentUserId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get agentUserId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set agentUserId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasAgentUserId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearAgentUserId() => clearField(1);
 
-  $core.bool get async => $_get(1, false);
+  @$pb.TagNumber(2)
+  $core.bool get async => $_getBF(1);
+  @$pb.TagNumber(2)
   set async($core.bool v) {
     $_setBool(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasAsync() => $_has(1);
+  @$pb.TagNumber(2)
   void clearAsync() => clearField(2);
 }
 
 class RequestSyncDevicesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'RequestSyncDevicesResponse',
-      package: const $pb.PackageName('google.home.graph.v1'))
+      package: const $pb.PackageName('google.home.graph.v1'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   RequestSyncDevicesResponse._() : super();
@@ -87,23 +97,21 @@ class RequestSyncDevicesResponse extends $pb.GeneratedMessage {
   RequestSyncDevicesResponse createEmptyInstance() => create();
   static $pb.PbList<RequestSyncDevicesResponse> createRepeated() =>
       $pb.PbList<RequestSyncDevicesResponse>();
-  static RequestSyncDevicesResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static RequestSyncDevicesResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RequestSyncDevicesResponse>(create);
   static RequestSyncDevicesResponse _defaultInstance;
 }
 
 class ReportStateAndNotificationRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ReportStateAndNotificationRequest',
-      package: const $pb.PackageName('google.home.graph.v1'))
+      package: const $pb.PackageName('google.home.graph.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'requestId')
     ..aOS(2, 'agentUserId')
-    ..a<StateAndNotificationPayload>(
-        3,
-        'payload',
-        $pb.PbFieldType.OM,
-        StateAndNotificationPayload.getDefault,
-        StateAndNotificationPayload.create)
+    ..aOM<StateAndNotificationPayload>(3, 'payload',
+        subBuilder: StateAndNotificationPayload.create)
     ..aOS(4, 'eventId')
     ..aOS(5, 'followUpToken')
     ..hasRequiredFields = false;
@@ -129,55 +137,80 @@ class ReportStateAndNotificationRequest extends $pb.GeneratedMessage {
   ReportStateAndNotificationRequest createEmptyInstance() => create();
   static $pb.PbList<ReportStateAndNotificationRequest> createRepeated() =>
       $pb.PbList<ReportStateAndNotificationRequest>();
-  static ReportStateAndNotificationRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ReportStateAndNotificationRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ReportStateAndNotificationRequest>(
+          create);
   static ReportStateAndNotificationRequest _defaultInstance;
 
-  $core.String get requestId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get requestId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set requestId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasRequestId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearRequestId() => clearField(1);
 
-  $core.String get agentUserId => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get agentUserId => $_getSZ(1);
+  @$pb.TagNumber(2)
   set agentUserId($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasAgentUserId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearAgentUserId() => clearField(2);
 
+  @$pb.TagNumber(3)
   StateAndNotificationPayload get payload => $_getN(2);
+  @$pb.TagNumber(3)
   set payload(StateAndNotificationPayload v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPayload() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPayload() => clearField(3);
+  @$pb.TagNumber(3)
+  StateAndNotificationPayload ensurePayload() => $_ensure(2);
 
-  $core.String get eventId => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get eventId => $_getSZ(3);
+  @$pb.TagNumber(4)
   set eventId($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasEventId() => $_has(3);
+  @$pb.TagNumber(4)
   void clearEventId() => clearField(4);
 
-  $core.String get followUpToken => $_getS(4, '');
+  @$pb.TagNumber(5)
+  $core.String get followUpToken => $_getSZ(4);
+  @$pb.TagNumber(5)
   set followUpToken($core.String v) {
     $_setString(4, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasFollowUpToken() => $_has(4);
+  @$pb.TagNumber(5)
   void clearFollowUpToken() => clearField(5);
 }
 
 class ReportStateAndNotificationResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ReportStateAndNotificationResponse',
-      package: const $pb.PackageName('google.home.graph.v1'))
+      package: const $pb.PackageName('google.home.graph.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'requestId')
     ..hasRequiredFields = false;
 
@@ -202,29 +235,32 @@ class ReportStateAndNotificationResponse extends $pb.GeneratedMessage {
   ReportStateAndNotificationResponse createEmptyInstance() => create();
   static $pb.PbList<ReportStateAndNotificationResponse> createRepeated() =>
       $pb.PbList<ReportStateAndNotificationResponse>();
-  static ReportStateAndNotificationResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ReportStateAndNotificationResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ReportStateAndNotificationResponse>(
+          create);
   static ReportStateAndNotificationResponse _defaultInstance;
 
-  $core.String get requestId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get requestId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set requestId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasRequestId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearRequestId() => clearField(1);
 }
 
 class StateAndNotificationPayload extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'StateAndNotificationPayload',
-      package: const $pb.PackageName('google.home.graph.v1'))
-    ..a<ReportStateAndNotificationDevice>(
-        1,
-        'devices',
-        $pb.PbFieldType.OM,
-        ReportStateAndNotificationDevice.getDefault,
-        ReportStateAndNotificationDevice.create)
+      package: const $pb.PackageName('google.home.graph.v1'),
+      createEmptyInstance: create)
+    ..aOM<ReportStateAndNotificationDevice>(1, 'devices',
+        subBuilder: ReportStateAndNotificationDevice.create)
     ..hasRequiredFields = false;
 
   StateAndNotificationPayload._() : super();
@@ -248,27 +284,33 @@ class StateAndNotificationPayload extends $pb.GeneratedMessage {
   StateAndNotificationPayload createEmptyInstance() => create();
   static $pb.PbList<StateAndNotificationPayload> createRepeated() =>
       $pb.PbList<StateAndNotificationPayload>();
-  static StateAndNotificationPayload getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static StateAndNotificationPayload getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<StateAndNotificationPayload>(create);
   static StateAndNotificationPayload _defaultInstance;
 
+  @$pb.TagNumber(1)
   ReportStateAndNotificationDevice get devices => $_getN(0);
+  @$pb.TagNumber(1)
   set devices(ReportStateAndNotificationDevice v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasDevices() => $_has(0);
+  @$pb.TagNumber(1)
   void clearDevices() => clearField(1);
+  @$pb.TagNumber(1)
+  ReportStateAndNotificationDevice ensureDevices() => $_ensure(0);
 }
 
 class ReportStateAndNotificationDevice extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ReportStateAndNotificationDevice',
-      package: const $pb.PackageName('google.home.graph.v1'))
-    ..a<$2.Struct>(
-        1, 'states', $pb.PbFieldType.OM, $2.Struct.getDefault, $2.Struct.create)
-    ..a<$2.Struct>(2, 'notifications', $pb.PbFieldType.OM, $2.Struct.getDefault,
-        $2.Struct.create)
+      package: const $pb.PackageName('google.home.graph.v1'),
+      createEmptyInstance: create)
+    ..aOM<$2.Struct>(1, 'states', subBuilder: $2.Struct.create)
+    ..aOM<$2.Struct>(2, 'notifications', subBuilder: $2.Struct.create)
     ..hasRequiredFields = false;
 
   ReportStateAndNotificationDevice._() : super();
@@ -292,30 +334,45 @@ class ReportStateAndNotificationDevice extends $pb.GeneratedMessage {
   ReportStateAndNotificationDevice createEmptyInstance() => create();
   static $pb.PbList<ReportStateAndNotificationDevice> createRepeated() =>
       $pb.PbList<ReportStateAndNotificationDevice>();
-  static ReportStateAndNotificationDevice getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ReportStateAndNotificationDevice getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ReportStateAndNotificationDevice>(
+          create);
   static ReportStateAndNotificationDevice _defaultInstance;
 
+  @$pb.TagNumber(1)
   $2.Struct get states => $_getN(0);
+  @$pb.TagNumber(1)
   set states($2.Struct v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasStates() => $_has(0);
+  @$pb.TagNumber(1)
   void clearStates() => clearField(1);
+  @$pb.TagNumber(1)
+  $2.Struct ensureStates() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $2.Struct get notifications => $_getN(1);
+  @$pb.TagNumber(2)
   set notifications($2.Struct v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNotifications() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNotifications() => clearField(2);
+  @$pb.TagNumber(2)
+  $2.Struct ensureNotifications() => $_ensure(1);
 }
 
 class DeleteAgentUserRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteAgentUserRequest',
-      package: const $pb.PackageName('google.home.graph.v1'))
+      package: const $pb.PackageName('google.home.graph.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'requestId')
     ..aOS(2, 'agentUserId')
     ..hasRequiredFields = false;
@@ -339,34 +396,44 @@ class DeleteAgentUserRequest extends $pb.GeneratedMessage {
   DeleteAgentUserRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteAgentUserRequest> createRepeated() =>
       $pb.PbList<DeleteAgentUserRequest>();
-  static DeleteAgentUserRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteAgentUserRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteAgentUserRequest>(create);
   static DeleteAgentUserRequest _defaultInstance;
 
-  $core.String get requestId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get requestId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set requestId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasRequestId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearRequestId() => clearField(1);
 
-  $core.String get agentUserId => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get agentUserId => $_getSZ(1);
+  @$pb.TagNumber(2)
   set agentUserId($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasAgentUserId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearAgentUserId() => clearField(2);
 }
 
 class QueryRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('QueryRequest',
-      package: const $pb.PackageName('google.home.graph.v1'))
+      package: const $pb.PackageName('google.home.graph.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'requestId')
     ..aOS(2, 'agentUserId')
-    ..pc<QueryRequestInput>(
-        3, 'inputs', $pb.PbFieldType.PM, QueryRequestInput.create)
+    ..pc<QueryRequestInput>(3, 'inputs', $pb.PbFieldType.PM,
+        subBuilder: QueryRequestInput.create)
     ..hasRequiredFields = false;
 
   QueryRequest._() : super();
@@ -386,33 +453,45 @@ class QueryRequest extends $pb.GeneratedMessage {
   QueryRequest createEmptyInstance() => create();
   static $pb.PbList<QueryRequest> createRepeated() =>
       $pb.PbList<QueryRequest>();
-  static QueryRequest getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static QueryRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<QueryRequest>(create);
   static QueryRequest _defaultInstance;
 
-  $core.String get requestId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get requestId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set requestId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasRequestId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearRequestId() => clearField(1);
 
-  $core.String get agentUserId => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get agentUserId => $_getSZ(1);
+  @$pb.TagNumber(2)
   set agentUserId($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasAgentUserId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearAgentUserId() => clearField(2);
 
+  @$pb.TagNumber(3)
   $core.List<QueryRequestInput> get inputs => $_getList(2);
 }
 
 class QueryRequestInput extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('QueryRequestInput',
-      package: const $pb.PackageName('google.home.graph.v1'))
-    ..a<QueryRequestPayload>(1, 'payload', $pb.PbFieldType.OM,
-        QueryRequestPayload.getDefault, QueryRequestPayload.create)
+      package: const $pb.PackageName('google.home.graph.v1'),
+      createEmptyInstance: create)
+    ..aOM<QueryRequestPayload>(1, 'payload',
+        subBuilder: QueryRequestPayload.create)
     ..hasRequiredFields = false;
 
   QueryRequestInput._() : super();
@@ -432,23 +511,32 @@ class QueryRequestInput extends $pb.GeneratedMessage {
   QueryRequestInput createEmptyInstance() => create();
   static $pb.PbList<QueryRequestInput> createRepeated() =>
       $pb.PbList<QueryRequestInput>();
-  static QueryRequestInput getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static QueryRequestInput getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<QueryRequestInput>(create);
   static QueryRequestInput _defaultInstance;
 
+  @$pb.TagNumber(1)
   QueryRequestPayload get payload => $_getN(0);
+  @$pb.TagNumber(1)
   set payload(QueryRequestPayload v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasPayload() => $_has(0);
+  @$pb.TagNumber(1)
   void clearPayload() => clearField(1);
+  @$pb.TagNumber(1)
+  QueryRequestPayload ensurePayload() => $_ensure(0);
 }
 
 class QueryRequestPayload extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('QueryRequestPayload',
-      package: const $pb.PackageName('google.home.graph.v1'))
-    ..pc<AgentDeviceId>(1, 'devices', $pb.PbFieldType.PM, AgentDeviceId.create)
+      package: const $pb.PackageName('google.home.graph.v1'),
+      createEmptyInstance: create)
+    ..pc<AgentDeviceId>(1, 'devices', $pb.PbFieldType.PM,
+        subBuilder: AgentDeviceId.create)
     ..hasRequiredFields = false;
 
   QueryRequestPayload._() : super();
@@ -468,16 +556,19 @@ class QueryRequestPayload extends $pb.GeneratedMessage {
   QueryRequestPayload createEmptyInstance() => create();
   static $pb.PbList<QueryRequestPayload> createRepeated() =>
       $pb.PbList<QueryRequestPayload>();
-  static QueryRequestPayload getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static QueryRequestPayload getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<QueryRequestPayload>(create);
   static QueryRequestPayload _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<AgentDeviceId> get devices => $_getList(0);
 }
 
 class AgentDeviceId extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AgentDeviceId',
-      package: const $pb.PackageName('google.home.graph.v1'))
+      package: const $pb.PackageName('google.home.graph.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'id')
     ..hasRequiredFields = false;
 
@@ -498,24 +589,31 @@ class AgentDeviceId extends $pb.GeneratedMessage {
   AgentDeviceId createEmptyInstance() => create();
   static $pb.PbList<AgentDeviceId> createRepeated() =>
       $pb.PbList<AgentDeviceId>();
-  static AgentDeviceId getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static AgentDeviceId getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AgentDeviceId>(create);
   static AgentDeviceId _defaultInstance;
 
-  $core.String get id => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get id => $_getSZ(0);
+  @$pb.TagNumber(1)
   set id($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearId() => clearField(1);
 }
 
 class QueryResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('QueryResponse',
-      package: const $pb.PackageName('google.home.graph.v1'))
+      package: const $pb.PackageName('google.home.graph.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'requestId')
-    ..a<QueryResponsePayload>(2, 'payload', $pb.PbFieldType.OM,
-        QueryResponsePayload.getDefault, QueryResponsePayload.create)
+    ..aOM<QueryResponsePayload>(2, 'payload',
+        subBuilder: QueryResponsePayload.create)
     ..hasRequiredFields = false;
 
   QueryResponse._() : super();
@@ -535,39 +633,48 @@ class QueryResponse extends $pb.GeneratedMessage {
   QueryResponse createEmptyInstance() => create();
   static $pb.PbList<QueryResponse> createRepeated() =>
       $pb.PbList<QueryResponse>();
-  static QueryResponse getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static QueryResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<QueryResponse>(create);
   static QueryResponse _defaultInstance;
 
-  $core.String get requestId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get requestId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set requestId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasRequestId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearRequestId() => clearField(1);
 
+  @$pb.TagNumber(2)
   QueryResponsePayload get payload => $_getN(1);
+  @$pb.TagNumber(2)
   set payload(QueryResponsePayload v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPayload() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPayload() => clearField(2);
+  @$pb.TagNumber(2)
+  QueryResponsePayload ensurePayload() => $_ensure(1);
 }
 
 class QueryResponsePayload extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('QueryResponsePayload',
-      package: const $pb.PackageName('google.home.graph.v1'))
-    ..m<$core.String, $2.Struct>(
-        1,
-        'devices',
-        'QueryResponsePayload.DevicesEntry',
-        $pb.PbFieldType.OS,
-        $pb.PbFieldType.OM,
-        $2.Struct.create,
-        null,
-        null,
-        const $pb.PackageName('google.home.graph.v1'))
+      package: const $pb.PackageName('google.home.graph.v1'),
+      createEmptyInstance: create)
+    ..m<$core.String, $2.Struct>(1, 'devices',
+        entryClassName: 'QueryResponsePayload.DevicesEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OM,
+        valueCreator: $2.Struct.create,
+        packageName: const $pb.PackageName('google.home.graph.v1'))
     ..hasRequiredFields = false;
 
   QueryResponsePayload._() : super();
@@ -588,16 +695,19 @@ class QueryResponsePayload extends $pb.GeneratedMessage {
   QueryResponsePayload createEmptyInstance() => create();
   static $pb.PbList<QueryResponsePayload> createRepeated() =>
       $pb.PbList<QueryResponsePayload>();
-  static QueryResponsePayload getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static QueryResponsePayload getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<QueryResponsePayload>(create);
   static QueryResponsePayload _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.Map<$core.String, $2.Struct> get devices => $_getMap(0);
 }
 
 class SyncRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('SyncRequest',
-      package: const $pb.PackageName('google.home.graph.v1'))
+      package: const $pb.PackageName('google.home.graph.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'requestId')
     ..aOS(2, 'agentUserId')
     ..hasRequiredFields = false;
@@ -618,32 +728,43 @@ class SyncRequest extends $pb.GeneratedMessage {
   static SyncRequest create() => SyncRequest._();
   SyncRequest createEmptyInstance() => create();
   static $pb.PbList<SyncRequest> createRepeated() => $pb.PbList<SyncRequest>();
-  static SyncRequest getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static SyncRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SyncRequest>(create);
   static SyncRequest _defaultInstance;
 
-  $core.String get requestId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get requestId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set requestId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasRequestId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearRequestId() => clearField(1);
 
-  $core.String get agentUserId => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get agentUserId => $_getSZ(1);
+  @$pb.TagNumber(2)
   set agentUserId($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasAgentUserId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearAgentUserId() => clearField(2);
 }
 
 class SyncResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('SyncResponse',
-      package: const $pb.PackageName('google.home.graph.v1'))
+      package: const $pb.PackageName('google.home.graph.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'requestId')
-    ..a<SyncResponsePayload>(2, 'payload', $pb.PbFieldType.OM,
-        SyncResponsePayload.getDefault, SyncResponsePayload.create)
+    ..aOM<SyncResponsePayload>(2, 'payload',
+        subBuilder: SyncResponsePayload.create)
     ..hasRequiredFields = false;
 
   SyncResponse._() : super();
@@ -663,31 +784,45 @@ class SyncResponse extends $pb.GeneratedMessage {
   SyncResponse createEmptyInstance() => create();
   static $pb.PbList<SyncResponse> createRepeated() =>
       $pb.PbList<SyncResponse>();
-  static SyncResponse getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static SyncResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SyncResponse>(create);
   static SyncResponse _defaultInstance;
 
-  $core.String get requestId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get requestId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set requestId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasRequestId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearRequestId() => clearField(1);
 
+  @$pb.TagNumber(2)
   SyncResponsePayload get payload => $_getN(1);
+  @$pb.TagNumber(2)
   set payload(SyncResponsePayload v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPayload() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPayload() => clearField(2);
+  @$pb.TagNumber(2)
+  SyncResponsePayload ensurePayload() => $_ensure(1);
 }
 
 class SyncResponsePayload extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('SyncResponsePayload',
-      package: const $pb.PackageName('google.home.graph.v1'))
+      package: const $pb.PackageName('google.home.graph.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'agentUserId')
-    ..pc<$3.Device>(2, 'devices', $pb.PbFieldType.PM, $3.Device.create)
+    ..pc<$3.Device>(2, 'devices', $pb.PbFieldType.PM,
+        subBuilder: $3.Device.create)
     ..hasRequiredFields = false;
 
   SyncResponsePayload._() : super();
@@ -707,17 +842,23 @@ class SyncResponsePayload extends $pb.GeneratedMessage {
   SyncResponsePayload createEmptyInstance() => create();
   static $pb.PbList<SyncResponsePayload> createRepeated() =>
       $pb.PbList<SyncResponsePayload>();
-  static SyncResponsePayload getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static SyncResponsePayload getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SyncResponsePayload>(create);
   static SyncResponsePayload _defaultInstance;
 
-  $core.String get agentUserId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get agentUserId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set agentUserId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasAgentUserId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearAgentUserId() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<$3.Device> get devices => $_getList(1);
 }

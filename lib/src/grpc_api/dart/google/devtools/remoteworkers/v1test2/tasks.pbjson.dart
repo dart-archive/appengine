@@ -27,6 +27,7 @@ const Task$json = {
     },
   ],
   '3': [Task_LogsEntry$json],
+  '7': {},
 };
 
 const Task_LogsEntry$json = {
@@ -68,25 +69,27 @@ const TaskResult$json = {
       '10': 'meta'
     },
   ],
+  '7': {},
 };
 
 const GetTaskRequest$json = {
   '1': 'GetTaskRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
   ],
 };
 
 const UpdateTaskResultRequest$json = {
   '1': 'UpdateTaskResultRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
     {
       '1': 'result',
       '3': 2,
       '4': 1,
       '5': 11,
       '6': '.google.devtools.remoteworkers.v1test2.TaskResult',
+      '8': {},
       '10': 'result'
     },
     {
@@ -95,17 +98,18 @@ const UpdateTaskResultRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.FieldMask',
+      '8': {},
       '10': 'updateMask'
     },
-    {'1': 'source', '3': 4, '4': 1, '5': 9, '10': 'source'},
+    {'1': 'source', '3': 4, '4': 1, '5': 9, '8': {}, '10': 'source'},
   ],
 };
 
 const AddTaskLogRequest$json = {
   '1': 'AddTaskLogRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    {'1': 'log_id', '3': 2, '4': 1, '5': 9, '10': 'logId'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
+    {'1': 'log_id', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'logId'},
   ],
 };
 

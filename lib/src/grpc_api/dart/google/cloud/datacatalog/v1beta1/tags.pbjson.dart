@@ -9,12 +9,13 @@ const Tag$json = {
   '1': 'Tag',
   '2': [
     {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    {'1': 'template', '3': 2, '4': 1, '5': 9, '10': 'template'},
+    {'1': 'template', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'template'},
     {
       '1': 'template_display_name',
       '3': 5,
       '4': 1,
       '5': 9,
+      '8': {},
       '10': 'templateDisplayName'
     },
     {'1': 'column', '3': 4, '4': 1, '5': 9, '9': 0, '10': 'column'},
@@ -24,10 +25,12 @@ const Tag$json = {
       '4': 3,
       '5': 11,
       '6': '.google.cloud.datacatalog.v1beta1.Tag.FieldsEntry',
+      '8': {},
       '10': 'fields'
     },
   ],
   '3': [Tag_FieldsEntry$json],
+  '7': {},
   '8': [
     {'1': 'scope'},
   ],
@@ -52,7 +55,7 @@ const Tag_FieldsEntry$json = {
 const TagField$json = {
   '1': 'TagField',
   '2': [
-    {'1': 'display_name', '3': 1, '4': 1, '5': 9, '10': 'displayName'},
+    {'1': 'display_name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'displayName'},
     {'1': 'double_value', '3': 2, '4': 1, '5': 1, '9': 0, '10': 'doubleValue'},
     {'1': 'string_value', '3': 3, '4': 1, '5': 9, '9': 0, '10': 'stringValue'},
     {'1': 'bool_value', '3': 4, '4': 1, '5': 8, '9': 0, '10': 'boolValue'},
@@ -99,10 +102,12 @@ const TagTemplate$json = {
       '4': 3,
       '5': 11,
       '6': '.google.cloud.datacatalog.v1beta1.TagTemplate.FieldsEntry',
+      '8': {},
       '10': 'fields'
     },
   ],
   '3': [TagTemplate_FieldsEntry$json],
+  '7': {},
 };
 
 const TagTemplate_FieldsEntry$json = {
@@ -124,6 +129,7 @@ const TagTemplate_FieldsEntry$json = {
 const TagTemplateField$json = {
   '1': 'TagTemplateField',
   '2': [
+    {'1': 'name', '3': 6, '4': 1, '5': 9, '10': 'name'},
     {'1': 'display_name', '3': 1, '4': 1, '5': 9, '10': 'displayName'},
     {
       '1': 'type',
@@ -131,9 +137,11 @@ const TagTemplateField$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.datacatalog.v1beta1.FieldType',
+      '8': {},
       '10': 'type'
     },
   ],
+  '7': {},
 };
 
 const FieldType$json = {
@@ -183,7 +191,7 @@ const FieldType_EnumType$json = {
 const FieldType_EnumType_EnumValue$json = {
   '1': 'EnumValue',
   '2': [
-    {'1': 'display_name', '3': 1, '4': 1, '5': 9, '10': 'displayName'},
+    {'1': 'display_name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'displayName'},
   ],
 };
 

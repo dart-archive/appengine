@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -16,7 +15,8 @@ import '../../../../rpc/status.pb.dart' as $3;
 
 class GetBiddingStrategyRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetBiddingStrategyRequest',
-      package: const $pb.PackageName('google.ads.googleads.v2.services'))
+      package: const $pb.PackageName('google.ads.googleads.v2.services'),
+      createEmptyInstance: create)
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
@@ -40,26 +40,32 @@ class GetBiddingStrategyRequest extends $pb.GeneratedMessage {
   GetBiddingStrategyRequest createEmptyInstance() => create();
   static $pb.PbList<GetBiddingStrategyRequest> createRepeated() =>
       $pb.PbList<GetBiddingStrategyRequest>();
-  static GetBiddingStrategyRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetBiddingStrategyRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetBiddingStrategyRequest>(create);
   static GetBiddingStrategyRequest _defaultInstance;
 
-  $core.String get resourceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get resourceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set resourceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResourceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResourceName() => clearField(1);
 }
 
 class MutateBiddingStrategiesRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'MutateBiddingStrategiesRequest',
-      package: const $pb.PackageName('google.ads.googleads.v2.services'))
+      package: const $pb.PackageName('google.ads.googleads.v2.services'),
+      createEmptyInstance: create)
     ..aOS(1, 'customerId')
-    ..pc<BiddingStrategyOperation>(
-        2, 'operations', $pb.PbFieldType.PM, BiddingStrategyOperation.create)
+    ..pc<BiddingStrategyOperation>(2, 'operations', $pb.PbFieldType.PM,
+        subBuilder: BiddingStrategyOperation.create)
     ..aOB(3, 'partialFailure')
     ..aOB(4, 'validateOnly')
     ..hasRequiredFields = false;
@@ -85,34 +91,48 @@ class MutateBiddingStrategiesRequest extends $pb.GeneratedMessage {
   MutateBiddingStrategiesRequest createEmptyInstance() => create();
   static $pb.PbList<MutateBiddingStrategiesRequest> createRepeated() =>
       $pb.PbList<MutateBiddingStrategiesRequest>();
-  static MutateBiddingStrategiesRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MutateBiddingStrategiesRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MutateBiddingStrategiesRequest>(create);
   static MutateBiddingStrategiesRequest _defaultInstance;
 
-  $core.String get customerId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get customerId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set customerId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCustomerId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCustomerId() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<BiddingStrategyOperation> get operations => $_getList(1);
 
-  $core.bool get partialFailure => $_get(2, false);
+  @$pb.TagNumber(3)
+  $core.bool get partialFailure => $_getBF(2);
+  @$pb.TagNumber(3)
   set partialFailure($core.bool v) {
     $_setBool(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPartialFailure() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPartialFailure() => clearField(3);
 
-  $core.bool get validateOnly => $_get(3, false);
+  @$pb.TagNumber(4)
+  $core.bool get validateOnly => $_getBF(3);
+  @$pb.TagNumber(4)
   set validateOnly($core.bool v) {
     $_setBool(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasValidateOnly() => $_has(3);
+  @$pb.TagNumber(4)
   void clearValidateOnly() => clearField(4);
 }
 
@@ -127,15 +147,15 @@ class BiddingStrategyOperation extends $pb.GeneratedMessage {
     0: BiddingStrategyOperation_Operation.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('BiddingStrategyOperation',
-      package: const $pb.PackageName('google.ads.googleads.v2.services'))
+      package: const $pb.PackageName('google.ads.googleads.v2.services'),
+      createEmptyInstance: create)
     ..oo(0, [1, 2, 3])
-    ..a<$1.BiddingStrategy>(1, 'create_1', $pb.PbFieldType.OM,
-        $1.BiddingStrategy.getDefault, $1.BiddingStrategy.create)
-    ..a<$1.BiddingStrategy>(2, 'update', $pb.PbFieldType.OM,
-        $1.BiddingStrategy.getDefault, $1.BiddingStrategy.create)
+    ..aOM<$1.BiddingStrategy>(1, 'create',
+        subBuilder: $1.BiddingStrategy.create)
+    ..aOM<$1.BiddingStrategy>(2, 'update',
+        subBuilder: $1.BiddingStrategy.create)
     ..aOS(3, 'remove')
-    ..a<$2.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
-        $2.FieldMask.getDefault, $2.FieldMask.create)
+    ..aOM<$2.FieldMask>(4, 'updateMask', subBuilder: $2.FieldMask.create)
     ..hasRequiredFields = false;
 
   BiddingStrategyOperation._() : super();
@@ -157,55 +177,78 @@ class BiddingStrategyOperation extends $pb.GeneratedMessage {
   BiddingStrategyOperation createEmptyInstance() => create();
   static $pb.PbList<BiddingStrategyOperation> createRepeated() =>
       $pb.PbList<BiddingStrategyOperation>();
-  static BiddingStrategyOperation getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static BiddingStrategyOperation getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BiddingStrategyOperation>(create);
   static BiddingStrategyOperation _defaultInstance;
 
   BiddingStrategyOperation_Operation whichOperation() =>
       _BiddingStrategyOperation_OperationByTag[$_whichOneof(0)];
   void clearOperation() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   $1.BiddingStrategy get create_1 => $_getN(0);
+  @$pb.TagNumber(1)
   set create_1($1.BiddingStrategy v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCreate_1() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCreate_1() => clearField(1);
+  @$pb.TagNumber(1)
+  $1.BiddingStrategy ensureCreate_1() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $1.BiddingStrategy get update => $_getN(1);
+  @$pb.TagNumber(2)
   set update($1.BiddingStrategy v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasUpdate() => $_has(1);
+  @$pb.TagNumber(2)
   void clearUpdate() => clearField(2);
+  @$pb.TagNumber(2)
+  $1.BiddingStrategy ensureUpdate() => $_ensure(1);
 
-  $core.String get remove => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get remove => $_getSZ(2);
+  @$pb.TagNumber(3)
   set remove($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasRemove() => $_has(2);
+  @$pb.TagNumber(3)
   void clearRemove() => clearField(3);
 
+  @$pb.TagNumber(4)
   $2.FieldMask get updateMask => $_getN(3);
+  @$pb.TagNumber(4)
   set updateMask($2.FieldMask v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasUpdateMask() => $_has(3);
+  @$pb.TagNumber(4)
   void clearUpdateMask() => clearField(4);
+  @$pb.TagNumber(4)
+  $2.FieldMask ensureUpdateMask() => $_ensure(3);
 }
 
 class MutateBiddingStrategiesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'MutateBiddingStrategiesResponse',
-      package: const $pb.PackageName('google.ads.googleads.v2.services'))
-    ..pc<MutateBiddingStrategyResult>(
-        2, 'results', $pb.PbFieldType.PM, MutateBiddingStrategyResult.create)
-    ..a<$3.Status>(3, 'partialFailureError', $pb.PbFieldType.OM,
-        $3.Status.getDefault, $3.Status.create)
+      package: const $pb.PackageName('google.ads.googleads.v2.services'),
+      createEmptyInstance: create)
+    ..pc<MutateBiddingStrategyResult>(2, 'results', $pb.PbFieldType.PM,
+        subBuilder: MutateBiddingStrategyResult.create)
+    ..aOM<$3.Status>(3, 'partialFailureError', subBuilder: $3.Status.create)
     ..hasRequiredFields = false;
 
   MutateBiddingStrategiesResponse._() : super();
@@ -229,25 +272,35 @@ class MutateBiddingStrategiesResponse extends $pb.GeneratedMessage {
   MutateBiddingStrategiesResponse createEmptyInstance() => create();
   static $pb.PbList<MutateBiddingStrategiesResponse> createRepeated() =>
       $pb.PbList<MutateBiddingStrategiesResponse>();
-  static MutateBiddingStrategiesResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MutateBiddingStrategiesResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MutateBiddingStrategiesResponse>(
+          create);
   static MutateBiddingStrategiesResponse _defaultInstance;
 
+  @$pb.TagNumber(2)
   $core.List<MutateBiddingStrategyResult> get results => $_getList(0);
 
+  @$pb.TagNumber(3)
   $3.Status get partialFailureError => $_getN(1);
+  @$pb.TagNumber(3)
   set partialFailureError($3.Status v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPartialFailureError() => $_has(1);
+  @$pb.TagNumber(3)
   void clearPartialFailureError() => clearField(3);
+  @$pb.TagNumber(3)
+  $3.Status ensurePartialFailureError() => $_ensure(1);
 }
 
 class MutateBiddingStrategyResult extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'MutateBiddingStrategyResult',
-      package: const $pb.PackageName('google.ads.googleads.v2.services'))
+      package: const $pb.PackageName('google.ads.googleads.v2.services'),
+      createEmptyInstance: create)
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
@@ -272,15 +325,20 @@ class MutateBiddingStrategyResult extends $pb.GeneratedMessage {
   MutateBiddingStrategyResult createEmptyInstance() => create();
   static $pb.PbList<MutateBiddingStrategyResult> createRepeated() =>
       $pb.PbList<MutateBiddingStrategyResult>();
-  static MutateBiddingStrategyResult getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MutateBiddingStrategyResult getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MutateBiddingStrategyResult>(create);
   static MutateBiddingStrategyResult _defaultInstance;
 
-  $core.String get resourceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get resourceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set resourceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResourceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResourceName() => clearField(1);
 }

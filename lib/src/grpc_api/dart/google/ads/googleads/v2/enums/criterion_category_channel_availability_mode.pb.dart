@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -16,7 +15,8 @@ class CriterionCategoryChannelAvailabilityModeEnum
     extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'CriterionCategoryChannelAvailabilityModeEnum',
-      package: const $pb.PackageName('google.ads.googleads.v2.enums'))
+      package: const $pb.PackageName('google.ads.googleads.v2.enums'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   CriterionCategoryChannelAvailabilityModeEnum._() : super();
@@ -44,7 +44,9 @@ class CriterionCategoryChannelAvailabilityModeEnum
   static $pb.PbList<CriterionCategoryChannelAvailabilityModeEnum>
       createRepeated() =>
           $pb.PbList<CriterionCategoryChannelAvailabilityModeEnum>();
+  @$core.pragma('dart2js:noInline')
   static CriterionCategoryChannelAvailabilityModeEnum getDefault() =>
-      _defaultInstance ??= create()..freeze();
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          CriterionCategoryChannelAvailabilityModeEnum>(create);
   static CriterionCategoryChannelAvailabilityModeEnum _defaultInstance;
 }

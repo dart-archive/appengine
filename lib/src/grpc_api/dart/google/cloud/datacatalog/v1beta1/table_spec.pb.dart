@@ -5,10 +5,9 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
-import 'package:fixnum/fixnum.dart';
+import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'table_spec.pbenum.dart';
@@ -25,19 +24,15 @@ class BigQueryTableSpec extends $pb.GeneratedMessage {
     0: BigQueryTableSpec_TypeSpec.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('BigQueryTableSpec',
-      package: const $pb.PackageName('google.cloud.datacatalog.v1beta1'))
+      package: const $pb.PackageName('google.cloud.datacatalog.v1beta1'),
+      createEmptyInstance: create)
     ..oo(0, [2, 3])
-    ..e<TableSourceType>(
-        1,
-        'tableSourceType',
-        $pb.PbFieldType.OE,
-        TableSourceType.TABLE_SOURCE_TYPE_UNSPECIFIED,
-        TableSourceType.valueOf,
-        TableSourceType.values)
-    ..a<ViewSpec>(
-        2, 'viewSpec', $pb.PbFieldType.OM, ViewSpec.getDefault, ViewSpec.create)
-    ..a<TableSpec>(3, 'tableSpec', $pb.PbFieldType.OM, TableSpec.getDefault,
-        TableSpec.create)
+    ..e<TableSourceType>(1, 'tableSourceType', $pb.PbFieldType.OE,
+        defaultOrMaker: TableSourceType.TABLE_SOURCE_TYPE_UNSPECIFIED,
+        valueOf: TableSourceType.valueOf,
+        enumValues: TableSourceType.values)
+    ..aOM<ViewSpec>(2, 'viewSpec', subBuilder: ViewSpec.create)
+    ..aOM<TableSpec>(3, 'tableSpec', subBuilder: TableSpec.create)
     ..hasRequiredFields = false;
 
   BigQueryTableSpec._() : super();
@@ -57,42 +52,60 @@ class BigQueryTableSpec extends $pb.GeneratedMessage {
   BigQueryTableSpec createEmptyInstance() => create();
   static $pb.PbList<BigQueryTableSpec> createRepeated() =>
       $pb.PbList<BigQueryTableSpec>();
-  static BigQueryTableSpec getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static BigQueryTableSpec getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BigQueryTableSpec>(create);
   static BigQueryTableSpec _defaultInstance;
 
   BigQueryTableSpec_TypeSpec whichTypeSpec() =>
       _BigQueryTableSpec_TypeSpecByTag[$_whichOneof(0)];
   void clearTypeSpec() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   TableSourceType get tableSourceType => $_getN(0);
+  @$pb.TagNumber(1)
   set tableSourceType(TableSourceType v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasTableSourceType() => $_has(0);
+  @$pb.TagNumber(1)
   void clearTableSourceType() => clearField(1);
 
+  @$pb.TagNumber(2)
   ViewSpec get viewSpec => $_getN(1);
+  @$pb.TagNumber(2)
   set viewSpec(ViewSpec v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasViewSpec() => $_has(1);
+  @$pb.TagNumber(2)
   void clearViewSpec() => clearField(2);
+  @$pb.TagNumber(2)
+  ViewSpec ensureViewSpec() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   TableSpec get tableSpec => $_getN(2);
+  @$pb.TagNumber(3)
   set tableSpec(TableSpec v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasTableSpec() => $_has(2);
+  @$pb.TagNumber(3)
   void clearTableSpec() => clearField(3);
+  @$pb.TagNumber(3)
+  TableSpec ensureTableSpec() => $_ensure(2);
 }
 
 class ViewSpec extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ViewSpec',
-      package: const $pb.PackageName('google.cloud.datacatalog.v1beta1'))
+      package: const $pb.PackageName('google.cloud.datacatalog.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'viewQuery')
     ..hasRequiredFields = false;
 
@@ -112,21 +125,28 @@ class ViewSpec extends $pb.GeneratedMessage {
   static ViewSpec create() => ViewSpec._();
   ViewSpec createEmptyInstance() => create();
   static $pb.PbList<ViewSpec> createRepeated() => $pb.PbList<ViewSpec>();
-  static ViewSpec getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ViewSpec getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ViewSpec>(create);
   static ViewSpec _defaultInstance;
 
-  $core.String get viewQuery => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get viewQuery => $_getSZ(0);
+  @$pb.TagNumber(1)
   set viewQuery($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasViewQuery() => $_has(0);
+  @$pb.TagNumber(1)
   void clearViewQuery() => clearField(1);
 }
 
 class TableSpec extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TableSpec',
-      package: const $pb.PackageName('google.cloud.datacatalog.v1beta1'))
+      package: const $pb.PackageName('google.cloud.datacatalog.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'groupedEntry')
     ..hasRequiredFields = false;
 
@@ -146,21 +166,28 @@ class TableSpec extends $pb.GeneratedMessage {
   static TableSpec create() => TableSpec._();
   TableSpec createEmptyInstance() => create();
   static $pb.PbList<TableSpec> createRepeated() => $pb.PbList<TableSpec>();
-  static TableSpec getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TableSpec getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TableSpec>(create);
   static TableSpec _defaultInstance;
 
-  $core.String get groupedEntry => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get groupedEntry => $_getSZ(0);
+  @$pb.TagNumber(1)
   set groupedEntry($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasGroupedEntry() => $_has(0);
+  @$pb.TagNumber(1)
   void clearGroupedEntry() => clearField(1);
 }
 
 class BigQueryDateShardedSpec extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('BigQueryDateShardedSpec',
-      package: const $pb.PackageName('google.cloud.datacatalog.v1beta1'))
+      package: const $pb.PackageName('google.cloud.datacatalog.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'dataset')
     ..aOS(2, 'tablePrefix')
     ..aInt64(3, 'shardCount')
@@ -185,31 +212,44 @@ class BigQueryDateShardedSpec extends $pb.GeneratedMessage {
   BigQueryDateShardedSpec createEmptyInstance() => create();
   static $pb.PbList<BigQueryDateShardedSpec> createRepeated() =>
       $pb.PbList<BigQueryDateShardedSpec>();
-  static BigQueryDateShardedSpec getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static BigQueryDateShardedSpec getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BigQueryDateShardedSpec>(create);
   static BigQueryDateShardedSpec _defaultInstance;
 
-  $core.String get dataset => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get dataset => $_getSZ(0);
+  @$pb.TagNumber(1)
   set dataset($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasDataset() => $_has(0);
+  @$pb.TagNumber(1)
   void clearDataset() => clearField(1);
 
-  $core.String get tablePrefix => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get tablePrefix => $_getSZ(1);
+  @$pb.TagNumber(2)
   set tablePrefix($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasTablePrefix() => $_has(1);
+  @$pb.TagNumber(2)
   void clearTablePrefix() => clearField(2);
 
-  Int64 get shardCount => $_getI64(2);
-  set shardCount(Int64 v) {
+  @$pb.TagNumber(3)
+  $fixnum.Int64 get shardCount => $_getI64(2);
+  @$pb.TagNumber(3)
+  set shardCount($fixnum.Int64 v) {
     $_setInt64(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasShardCount() => $_has(2);
+  @$pb.TagNumber(3)
   void clearShardCount() => clearField(3);
 }

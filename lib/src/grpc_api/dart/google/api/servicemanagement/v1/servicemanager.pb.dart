@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -20,7 +19,8 @@ export 'servicemanager.pbenum.dart';
 
 class ListServicesRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListServicesRequest',
-      package: const $pb.PackageName('google.api.servicemanagement.v1'))
+      package: const $pb.PackageName('google.api.servicemanagement.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'producerProjectId')
     ..a<$core.int>(5, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(6, 'pageToken')
@@ -44,48 +44,66 @@ class ListServicesRequest extends $pb.GeneratedMessage {
   ListServicesRequest createEmptyInstance() => create();
   static $pb.PbList<ListServicesRequest> createRepeated() =>
       $pb.PbList<ListServicesRequest>();
-  static ListServicesRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListServicesRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListServicesRequest>(create);
   static ListServicesRequest _defaultInstance;
 
-  $core.String get producerProjectId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get producerProjectId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set producerProjectId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasProducerProjectId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearProducerProjectId() => clearField(1);
 
-  $core.int get pageSize => $_get(1, 0);
+  @$pb.TagNumber(5)
+  $core.int get pageSize => $_getIZ(1);
+  @$pb.TagNumber(5)
   set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasPageSize() => $_has(1);
+  @$pb.TagNumber(5)
   void clearPageSize() => clearField(5);
 
-  $core.String get pageToken => $_getS(2, '');
+  @$pb.TagNumber(6)
+  $core.String get pageToken => $_getSZ(2);
+  @$pb.TagNumber(6)
   set pageToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasPageToken() => $_has(2);
+  @$pb.TagNumber(6)
   void clearPageToken() => clearField(6);
 
-  $core.String get consumerId => $_getS(3, '');
+  @$pb.TagNumber(7)
+  $core.String get consumerId => $_getSZ(3);
+  @$pb.TagNumber(7)
   set consumerId($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasConsumerId() => $_has(3);
+  @$pb.TagNumber(7)
   void clearConsumerId() => clearField(7);
 }
 
 class ListServicesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListServicesResponse',
-      package: const $pb.PackageName('google.api.servicemanagement.v1'))
-    ..pc<$3.ManagedService>(
-        1, 'services', $pb.PbFieldType.PM, $3.ManagedService.create)
+      package: const $pb.PackageName('google.api.servicemanagement.v1'),
+      createEmptyInstance: create)
+    ..pc<$3.ManagedService>(1, 'services', $pb.PbFieldType.PM,
+        subBuilder: $3.ManagedService.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -107,24 +125,31 @@ class ListServicesResponse extends $pb.GeneratedMessage {
   ListServicesResponse createEmptyInstance() => create();
   static $pb.PbList<ListServicesResponse> createRepeated() =>
       $pb.PbList<ListServicesResponse>();
-  static ListServicesResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListServicesResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListServicesResponse>(create);
   static ListServicesResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$3.ManagedService> get services => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class GetServiceRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetServiceRequest',
-      package: const $pb.PackageName('google.api.servicemanagement.v1'))
+      package: const $pb.PackageName('google.api.servicemanagement.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'serviceName')
     ..hasRequiredFields = false;
 
@@ -145,24 +170,29 @@ class GetServiceRequest extends $pb.GeneratedMessage {
   GetServiceRequest createEmptyInstance() => create();
   static $pb.PbList<GetServiceRequest> createRepeated() =>
       $pb.PbList<GetServiceRequest>();
-  static GetServiceRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetServiceRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetServiceRequest>(create);
   static GetServiceRequest _defaultInstance;
 
-  $core.String get serviceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get serviceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set serviceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasServiceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearServiceName() => clearField(1);
 }
 
 class CreateServiceRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateServiceRequest',
-      package: const $pb.PackageName('google.api.servicemanagement.v1'))
-    ..a<$3.ManagedService>(1, 'service', $pb.PbFieldType.OM,
-        $3.ManagedService.getDefault, $3.ManagedService.create)
+      package: const $pb.PackageName('google.api.servicemanagement.v1'),
+      createEmptyInstance: create)
+    ..aOM<$3.ManagedService>(1, 'service', subBuilder: $3.ManagedService.create)
     ..hasRequiredFields = false;
 
   CreateServiceRequest._() : super();
@@ -183,22 +213,30 @@ class CreateServiceRequest extends $pb.GeneratedMessage {
   CreateServiceRequest createEmptyInstance() => create();
   static $pb.PbList<CreateServiceRequest> createRepeated() =>
       $pb.PbList<CreateServiceRequest>();
-  static CreateServiceRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateServiceRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateServiceRequest>(create);
   static CreateServiceRequest _defaultInstance;
 
+  @$pb.TagNumber(1)
   $3.ManagedService get service => $_getN(0);
+  @$pb.TagNumber(1)
   set service($3.ManagedService v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasService() => $_has(0);
+  @$pb.TagNumber(1)
   void clearService() => clearField(1);
+  @$pb.TagNumber(1)
+  $3.ManagedService ensureService() => $_ensure(0);
 }
 
 class DeleteServiceRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteServiceRequest',
-      package: const $pb.PackageName('google.api.servicemanagement.v1'))
+      package: const $pb.PackageName('google.api.servicemanagement.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'serviceName')
     ..hasRequiredFields = false;
 
@@ -220,22 +258,28 @@ class DeleteServiceRequest extends $pb.GeneratedMessage {
   DeleteServiceRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteServiceRequest> createRepeated() =>
       $pb.PbList<DeleteServiceRequest>();
-  static DeleteServiceRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteServiceRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteServiceRequest>(create);
   static DeleteServiceRequest _defaultInstance;
 
-  $core.String get serviceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get serviceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set serviceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasServiceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearServiceName() => clearField(1);
 }
 
 class UndeleteServiceRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UndeleteServiceRequest',
-      package: const $pb.PackageName('google.api.servicemanagement.v1'))
+      package: const $pb.PackageName('google.api.servicemanagement.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'serviceName')
     ..hasRequiredFields = false;
 
@@ -258,24 +302,29 @@ class UndeleteServiceRequest extends $pb.GeneratedMessage {
   UndeleteServiceRequest createEmptyInstance() => create();
   static $pb.PbList<UndeleteServiceRequest> createRepeated() =>
       $pb.PbList<UndeleteServiceRequest>();
-  static UndeleteServiceRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UndeleteServiceRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UndeleteServiceRequest>(create);
   static UndeleteServiceRequest _defaultInstance;
 
-  $core.String get serviceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get serviceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set serviceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasServiceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearServiceName() => clearField(1);
 }
 
 class UndeleteServiceResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UndeleteServiceResponse',
-      package: const $pb.PackageName('google.api.servicemanagement.v1'))
-    ..a<$3.ManagedService>(1, 'service', $pb.PbFieldType.OM,
-        $3.ManagedService.getDefault, $3.ManagedService.create)
+      package: const $pb.PackageName('google.api.servicemanagement.v1'),
+      createEmptyInstance: create)
+    ..aOM<$3.ManagedService>(1, 'service', subBuilder: $3.ManagedService.create)
     ..hasRequiredFields = false;
 
   UndeleteServiceResponse._() : super();
@@ -297,31 +346,36 @@ class UndeleteServiceResponse extends $pb.GeneratedMessage {
   UndeleteServiceResponse createEmptyInstance() => create();
   static $pb.PbList<UndeleteServiceResponse> createRepeated() =>
       $pb.PbList<UndeleteServiceResponse>();
-  static UndeleteServiceResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UndeleteServiceResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UndeleteServiceResponse>(create);
   static UndeleteServiceResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $3.ManagedService get service => $_getN(0);
+  @$pb.TagNumber(1)
   set service($3.ManagedService v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasService() => $_has(0);
+  @$pb.TagNumber(1)
   void clearService() => clearField(1);
+  @$pb.TagNumber(1)
+  $3.ManagedService ensureService() => $_ensure(0);
 }
 
 class GetServiceConfigRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetServiceConfigRequest',
-      package: const $pb.PackageName('google.api.servicemanagement.v1'))
+      package: const $pb.PackageName('google.api.servicemanagement.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'serviceName')
     ..aOS(2, 'configId')
-    ..e<GetServiceConfigRequest_ConfigView>(
-        3,
-        'view',
-        $pb.PbFieldType.OE,
-        GetServiceConfigRequest_ConfigView.BASIC,
-        GetServiceConfigRequest_ConfigView.valueOf,
-        GetServiceConfigRequest_ConfigView.values)
+    ..e<GetServiceConfigRequest_ConfigView>(3, 'view', $pb.PbFieldType.OE,
+        defaultOrMaker: GetServiceConfigRequest_ConfigView.BASIC,
+        valueOf: GetServiceConfigRequest_ConfigView.valueOf,
+        enumValues: GetServiceConfigRequest_ConfigView.values)
     ..hasRequiredFields = false;
 
   GetServiceConfigRequest._() : super();
@@ -343,38 +397,52 @@ class GetServiceConfigRequest extends $pb.GeneratedMessage {
   GetServiceConfigRequest createEmptyInstance() => create();
   static $pb.PbList<GetServiceConfigRequest> createRepeated() =>
       $pb.PbList<GetServiceConfigRequest>();
-  static GetServiceConfigRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetServiceConfigRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetServiceConfigRequest>(create);
   static GetServiceConfigRequest _defaultInstance;
 
-  $core.String get serviceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get serviceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set serviceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasServiceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearServiceName() => clearField(1);
 
-  $core.String get configId => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get configId => $_getSZ(1);
+  @$pb.TagNumber(2)
   set configId($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasConfigId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearConfigId() => clearField(2);
 
+  @$pb.TagNumber(3)
   GetServiceConfigRequest_ConfigView get view => $_getN(2);
+  @$pb.TagNumber(3)
   set view(GetServiceConfigRequest_ConfigView v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasView() => $_has(2);
+  @$pb.TagNumber(3)
   void clearView() => clearField(3);
 }
 
 class ListServiceConfigsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListServiceConfigsRequest',
-      package: const $pb.PackageName('google.api.servicemanagement.v1'))
+      package: const $pb.PackageName('google.api.servicemanagement.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'serviceName')
     ..aOS(2, 'pageToken')
     ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
@@ -400,40 +468,55 @@ class ListServiceConfigsRequest extends $pb.GeneratedMessage {
   ListServiceConfigsRequest createEmptyInstance() => create();
   static $pb.PbList<ListServiceConfigsRequest> createRepeated() =>
       $pb.PbList<ListServiceConfigsRequest>();
-  static ListServiceConfigsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListServiceConfigsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListServiceConfigsRequest>(create);
   static ListServiceConfigsRequest _defaultInstance;
 
-  $core.String get serviceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get serviceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set serviceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasServiceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearServiceName() => clearField(1);
 
-  $core.String get pageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get pageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set pageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageToken() => clearField(2);
 
-  $core.int get pageSize => $_get(2, 0);
+  @$pb.TagNumber(3)
+  $core.int get pageSize => $_getIZ(2);
+  @$pb.TagNumber(3)
   set pageSize($core.int v) {
     $_setSignedInt32(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageSize() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageSize() => clearField(3);
 }
 
 class ListServiceConfigsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListServiceConfigsResponse',
-      package: const $pb.PackageName('google.api.servicemanagement.v1'))
-    ..pc<$4.Service>(1, 'serviceConfigs', $pb.PbFieldType.PM, $4.Service.create)
+      package: const $pb.PackageName('google.api.servicemanagement.v1'),
+      createEmptyInstance: create)
+    ..pc<$4.Service>(1, 'serviceConfigs', $pb.PbFieldType.PM,
+        subBuilder: $4.Service.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -457,28 +540,34 @@ class ListServiceConfigsResponse extends $pb.GeneratedMessage {
   ListServiceConfigsResponse createEmptyInstance() => create();
   static $pb.PbList<ListServiceConfigsResponse> createRepeated() =>
       $pb.PbList<ListServiceConfigsResponse>();
-  static ListServiceConfigsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListServiceConfigsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListServiceConfigsResponse>(create);
   static ListServiceConfigsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$4.Service> get serviceConfigs => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class CreateServiceConfigRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'CreateServiceConfigRequest',
-      package: const $pb.PackageName('google.api.servicemanagement.v1'))
+      package: const $pb.PackageName('google.api.servicemanagement.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'serviceName')
-    ..a<$4.Service>(2, 'serviceConfig', $pb.PbFieldType.OM,
-        $4.Service.getDefault, $4.Service.create)
+    ..aOM<$4.Service>(2, 'serviceConfig', subBuilder: $4.Service.create)
     ..hasRequiredFields = false;
 
   CreateServiceConfigRequest._() : super();
@@ -501,33 +590,45 @@ class CreateServiceConfigRequest extends $pb.GeneratedMessage {
   CreateServiceConfigRequest createEmptyInstance() => create();
   static $pb.PbList<CreateServiceConfigRequest> createRepeated() =>
       $pb.PbList<CreateServiceConfigRequest>();
-  static CreateServiceConfigRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateServiceConfigRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateServiceConfigRequest>(create);
   static CreateServiceConfigRequest _defaultInstance;
 
-  $core.String get serviceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get serviceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set serviceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasServiceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearServiceName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $4.Service get serviceConfig => $_getN(1);
+  @$pb.TagNumber(2)
   set serviceConfig($4.Service v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasServiceConfig() => $_has(1);
+  @$pb.TagNumber(2)
   void clearServiceConfig() => clearField(2);
+  @$pb.TagNumber(2)
+  $4.Service ensureServiceConfig() => $_ensure(1);
 }
 
 class SubmitConfigSourceRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('SubmitConfigSourceRequest',
-      package: const $pb.PackageName('google.api.servicemanagement.v1'))
+      package: const $pb.PackageName('google.api.servicemanagement.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'serviceName')
-    ..a<$3.ConfigSource>(2, 'configSource', $pb.PbFieldType.OM,
-        $3.ConfigSource.getDefault, $3.ConfigSource.create)
+    ..aOM<$3.ConfigSource>(2, 'configSource',
+        subBuilder: $3.ConfigSource.create)
     ..aOB(3, 'validateOnly')
     ..hasRequiredFields = false;
 
@@ -551,41 +652,56 @@ class SubmitConfigSourceRequest extends $pb.GeneratedMessage {
   SubmitConfigSourceRequest createEmptyInstance() => create();
   static $pb.PbList<SubmitConfigSourceRequest> createRepeated() =>
       $pb.PbList<SubmitConfigSourceRequest>();
-  static SubmitConfigSourceRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static SubmitConfigSourceRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SubmitConfigSourceRequest>(create);
   static SubmitConfigSourceRequest _defaultInstance;
 
-  $core.String get serviceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get serviceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set serviceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasServiceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearServiceName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $3.ConfigSource get configSource => $_getN(1);
+  @$pb.TagNumber(2)
   set configSource($3.ConfigSource v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasConfigSource() => $_has(1);
+  @$pb.TagNumber(2)
   void clearConfigSource() => clearField(2);
+  @$pb.TagNumber(2)
+  $3.ConfigSource ensureConfigSource() => $_ensure(1);
 
-  $core.bool get validateOnly => $_get(2, false);
+  @$pb.TagNumber(3)
+  $core.bool get validateOnly => $_getBF(2);
+  @$pb.TagNumber(3)
   set validateOnly($core.bool v) {
     $_setBool(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasValidateOnly() => $_has(2);
+  @$pb.TagNumber(3)
   void clearValidateOnly() => clearField(3);
 }
 
 class SubmitConfigSourceResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'SubmitConfigSourceResponse',
-      package: const $pb.PackageName('google.api.servicemanagement.v1'))
-    ..a<$4.Service>(1, 'serviceConfig', $pb.PbFieldType.OM,
-        $4.Service.getDefault, $4.Service.create)
+      package: const $pb.PackageName('google.api.servicemanagement.v1'),
+      createEmptyInstance: create)
+    ..aOM<$4.Service>(1, 'serviceConfig', subBuilder: $4.Service.create)
     ..hasRequiredFields = false;
 
   SubmitConfigSourceResponse._() : super();
@@ -608,26 +724,33 @@ class SubmitConfigSourceResponse extends $pb.GeneratedMessage {
   SubmitConfigSourceResponse createEmptyInstance() => create();
   static $pb.PbList<SubmitConfigSourceResponse> createRepeated() =>
       $pb.PbList<SubmitConfigSourceResponse>();
-  static SubmitConfigSourceResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static SubmitConfigSourceResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SubmitConfigSourceResponse>(create);
   static SubmitConfigSourceResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $4.Service get serviceConfig => $_getN(0);
+  @$pb.TagNumber(1)
   set serviceConfig($4.Service v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasServiceConfig() => $_has(0);
+  @$pb.TagNumber(1)
   void clearServiceConfig() => clearField(1);
+  @$pb.TagNumber(1)
+  $4.Service ensureServiceConfig() => $_ensure(0);
 }
 
 class CreateServiceRolloutRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'CreateServiceRolloutRequest',
-      package: const $pb.PackageName('google.api.servicemanagement.v1'))
+      package: const $pb.PackageName('google.api.servicemanagement.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'serviceName')
-    ..a<$3.Rollout>(2, 'rollout', $pb.PbFieldType.OM, $3.Rollout.getDefault,
-        $3.Rollout.create)
+    ..aOM<$3.Rollout>(2, 'rollout', subBuilder: $3.Rollout.create)
     ..hasRequiredFields = false;
 
   CreateServiceRolloutRequest._() : super();
@@ -651,31 +774,43 @@ class CreateServiceRolloutRequest extends $pb.GeneratedMessage {
   CreateServiceRolloutRequest createEmptyInstance() => create();
   static $pb.PbList<CreateServiceRolloutRequest> createRepeated() =>
       $pb.PbList<CreateServiceRolloutRequest>();
-  static CreateServiceRolloutRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateServiceRolloutRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateServiceRolloutRequest>(create);
   static CreateServiceRolloutRequest _defaultInstance;
 
-  $core.String get serviceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get serviceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set serviceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasServiceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearServiceName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $3.Rollout get rollout => $_getN(1);
+  @$pb.TagNumber(2)
   set rollout($3.Rollout v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasRollout() => $_has(1);
+  @$pb.TagNumber(2)
   void clearRollout() => clearField(2);
+  @$pb.TagNumber(2)
+  $3.Rollout ensureRollout() => $_ensure(1);
 }
 
 class ListServiceRolloutsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListServiceRolloutsRequest',
-      package: const $pb.PackageName('google.api.servicemanagement.v1'))
+      package: const $pb.PackageName('google.api.servicemanagement.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'serviceName')
     ..aOS(2, 'pageToken')
     ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
@@ -702,48 +837,67 @@ class ListServiceRolloutsRequest extends $pb.GeneratedMessage {
   ListServiceRolloutsRequest createEmptyInstance() => create();
   static $pb.PbList<ListServiceRolloutsRequest> createRepeated() =>
       $pb.PbList<ListServiceRolloutsRequest>();
-  static ListServiceRolloutsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListServiceRolloutsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListServiceRolloutsRequest>(create);
   static ListServiceRolloutsRequest _defaultInstance;
 
-  $core.String get serviceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get serviceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set serviceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasServiceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearServiceName() => clearField(1);
 
-  $core.String get pageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get pageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set pageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageToken() => clearField(2);
 
-  $core.int get pageSize => $_get(2, 0);
+  @$pb.TagNumber(3)
+  $core.int get pageSize => $_getIZ(2);
+  @$pb.TagNumber(3)
   set pageSize($core.int v) {
     $_setSignedInt32(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageSize() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageSize() => clearField(3);
 
-  $core.String get filter => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get filter => $_getSZ(3);
+  @$pb.TagNumber(4)
   set filter($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasFilter() => $_has(3);
+  @$pb.TagNumber(4)
   void clearFilter() => clearField(4);
 }
 
 class ListServiceRolloutsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListServiceRolloutsResponse',
-      package: const $pb.PackageName('google.api.servicemanagement.v1'))
-    ..pc<$3.Rollout>(1, 'rollouts', $pb.PbFieldType.PM, $3.Rollout.create)
+      package: const $pb.PackageName('google.api.servicemanagement.v1'),
+      createEmptyInstance: create)
+    ..pc<$3.Rollout>(1, 'rollouts', $pb.PbFieldType.PM,
+        subBuilder: $3.Rollout.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -768,24 +922,31 @@ class ListServiceRolloutsResponse extends $pb.GeneratedMessage {
   ListServiceRolloutsResponse createEmptyInstance() => create();
   static $pb.PbList<ListServiceRolloutsResponse> createRepeated() =>
       $pb.PbList<ListServiceRolloutsResponse>();
-  static ListServiceRolloutsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListServiceRolloutsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListServiceRolloutsResponse>(create);
   static ListServiceRolloutsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$3.Rollout> get rollouts => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class GetServiceRolloutRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetServiceRolloutRequest',
-      package: const $pb.PackageName('google.api.servicemanagement.v1'))
+      package: const $pb.PackageName('google.api.servicemanagement.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'serviceName')
     ..aOS(2, 'rolloutId')
     ..hasRequiredFields = false;
@@ -809,30 +970,40 @@ class GetServiceRolloutRequest extends $pb.GeneratedMessage {
   GetServiceRolloutRequest createEmptyInstance() => create();
   static $pb.PbList<GetServiceRolloutRequest> createRepeated() =>
       $pb.PbList<GetServiceRolloutRequest>();
-  static GetServiceRolloutRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetServiceRolloutRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetServiceRolloutRequest>(create);
   static GetServiceRolloutRequest _defaultInstance;
 
-  $core.String get serviceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get serviceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set serviceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasServiceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearServiceName() => clearField(1);
 
-  $core.String get rolloutId => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get rolloutId => $_getSZ(1);
+  @$pb.TagNumber(2)
   set rolloutId($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasRolloutId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearRolloutId() => clearField(2);
 }
 
 class EnableServiceRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('EnableServiceRequest',
-      package: const $pb.PackageName('google.api.servicemanagement.v1'))
+      package: const $pb.PackageName('google.api.servicemanagement.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'serviceName')
     ..aOS(2, 'consumerId')
     ..hasRequiredFields = false;
@@ -855,30 +1026,40 @@ class EnableServiceRequest extends $pb.GeneratedMessage {
   EnableServiceRequest createEmptyInstance() => create();
   static $pb.PbList<EnableServiceRequest> createRepeated() =>
       $pb.PbList<EnableServiceRequest>();
-  static EnableServiceRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static EnableServiceRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<EnableServiceRequest>(create);
   static EnableServiceRequest _defaultInstance;
 
-  $core.String get serviceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get serviceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set serviceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasServiceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearServiceName() => clearField(1);
 
-  $core.String get consumerId => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get consumerId => $_getSZ(1);
+  @$pb.TagNumber(2)
   set consumerId($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasConsumerId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearConsumerId() => clearField(2);
 }
 
 class DisableServiceRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DisableServiceRequest',
-      package: const $pb.PackageName('google.api.servicemanagement.v1'))
+      package: const $pb.PackageName('google.api.servicemanagement.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'serviceName')
     ..aOS(2, 'consumerId')
     ..hasRequiredFields = false;
@@ -902,35 +1083,43 @@ class DisableServiceRequest extends $pb.GeneratedMessage {
   DisableServiceRequest createEmptyInstance() => create();
   static $pb.PbList<DisableServiceRequest> createRepeated() =>
       $pb.PbList<DisableServiceRequest>();
-  static DisableServiceRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DisableServiceRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DisableServiceRequest>(create);
   static DisableServiceRequest _defaultInstance;
 
-  $core.String get serviceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get serviceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set serviceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasServiceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearServiceName() => clearField(1);
 
-  $core.String get consumerId => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get consumerId => $_getSZ(1);
+  @$pb.TagNumber(2)
   set consumerId($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasConsumerId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearConsumerId() => clearField(2);
 }
 
 class GenerateConfigReportRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'GenerateConfigReportRequest',
-      package: const $pb.PackageName('google.api.servicemanagement.v1'))
-    ..a<$5.Any>(
-        1, 'newConfig', $pb.PbFieldType.OM, $5.Any.getDefault, $5.Any.create)
-    ..a<$5.Any>(
-        2, 'oldConfig', $pb.PbFieldType.OM, $5.Any.getDefault, $5.Any.create)
+      package: const $pb.PackageName('google.api.servicemanagement.v1'),
+      createEmptyInstance: create)
+    ..aOM<$5.Any>(1, 'newConfig', subBuilder: $5.Any.create)
+    ..aOM<$5.Any>(2, 'oldConfig', subBuilder: $5.Any.create)
     ..hasRequiredFields = false;
 
   GenerateConfigReportRequest._() : super();
@@ -954,37 +1143,51 @@ class GenerateConfigReportRequest extends $pb.GeneratedMessage {
   GenerateConfigReportRequest createEmptyInstance() => create();
   static $pb.PbList<GenerateConfigReportRequest> createRepeated() =>
       $pb.PbList<GenerateConfigReportRequest>();
-  static GenerateConfigReportRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GenerateConfigReportRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GenerateConfigReportRequest>(create);
   static GenerateConfigReportRequest _defaultInstance;
 
+  @$pb.TagNumber(1)
   $5.Any get newConfig => $_getN(0);
+  @$pb.TagNumber(1)
   set newConfig($5.Any v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasNewConfig() => $_has(0);
+  @$pb.TagNumber(1)
   void clearNewConfig() => clearField(1);
+  @$pb.TagNumber(1)
+  $5.Any ensureNewConfig() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $5.Any get oldConfig => $_getN(1);
+  @$pb.TagNumber(2)
   set oldConfig($5.Any v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasOldConfig() => $_has(1);
+  @$pb.TagNumber(2)
   void clearOldConfig() => clearField(2);
+  @$pb.TagNumber(2)
+  $5.Any ensureOldConfig() => $_ensure(1);
 }
 
 class GenerateConfigReportResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'GenerateConfigReportResponse',
-      package: const $pb.PackageName('google.api.servicemanagement.v1'))
+      package: const $pb.PackageName('google.api.servicemanagement.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'serviceName')
     ..aOS(2, 'id')
-    ..pc<$3.ChangeReport>(
-        3, 'changeReports', $pb.PbFieldType.PM, $3.ChangeReport.create)
-    ..pc<$3.Diagnostic>(
-        4, 'diagnostics', $pb.PbFieldType.PM, $3.Diagnostic.create)
+    ..pc<$3.ChangeReport>(3, 'changeReports', $pb.PbFieldType.PM,
+        subBuilder: $3.ChangeReport.create)
+    ..pc<$3.Diagnostic>(4, 'diagnostics', $pb.PbFieldType.PM,
+        subBuilder: $3.Diagnostic.create)
     ..hasRequiredFields = false;
 
   GenerateConfigReportResponse._() : super();
@@ -1008,27 +1211,38 @@ class GenerateConfigReportResponse extends $pb.GeneratedMessage {
   GenerateConfigReportResponse createEmptyInstance() => create();
   static $pb.PbList<GenerateConfigReportResponse> createRepeated() =>
       $pb.PbList<GenerateConfigReportResponse>();
-  static GenerateConfigReportResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GenerateConfigReportResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GenerateConfigReportResponse>(create);
   static GenerateConfigReportResponse _defaultInstance;
 
-  $core.String get serviceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get serviceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set serviceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasServiceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearServiceName() => clearField(1);
 
-  $core.String get id => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get id => $_getSZ(1);
+  @$pb.TagNumber(2)
   set id($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearId() => clearField(2);
 
+  @$pb.TagNumber(3)
   $core.List<$3.ChangeReport> get changeReports => $_getList(2);
 
+  @$pb.TagNumber(4)
   $core.List<$3.Diagnostic> get diagnostics => $_getList(3);
 }

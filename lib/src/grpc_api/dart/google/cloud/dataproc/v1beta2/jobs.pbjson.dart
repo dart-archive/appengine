@@ -156,6 +156,7 @@ const PySparkJob$json = {
       '3': 1,
       '4': 1,
       '5': 9,
+      '8': {},
       '10': 'mainPythonFileUri'
     },
     {'1': 'args', '3': 2, '4': 3, '5': 9, '10': 'args'},
@@ -195,7 +196,7 @@ const PySparkJob_PropertiesEntry$json = {
 const QueryList$json = {
   '1': 'QueryList',
   '2': [
-    {'1': 'queries', '3': 1, '4': 3, '5': 9, '10': 'queries'},
+    {'1': 'queries', '3': 1, '4': 3, '5': 9, '8': {}, '10': 'queries'},
   ],
 };
 
@@ -421,7 +422,14 @@ const PigJob_PropertiesEntry$json = {
 const SparkRJob$json = {
   '1': 'SparkRJob',
   '2': [
-    {'1': 'main_r_file_uri', '3': 1, '4': 1, '5': 9, '10': 'mainRFileUri'},
+    {
+      '1': 'main_r_file_uri',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'mainRFileUri'
+    },
     {'1': 'args', '3': 2, '4': 3, '5': 9, '10': 'args'},
     {'1': 'file_uris', '3': 3, '4': 3, '5': 9, '10': 'fileUris'},
     {'1': 'archive_uris', '3': 4, '4': 3, '5': 9, '10': 'archiveUris'},
@@ -457,7 +465,7 @@ const SparkRJob_PropertiesEntry$json = {
 const JobPlacement$json = {
   '1': 'JobPlacement',
   '2': [
-    {'1': 'cluster_name', '3': 1, '4': 1, '5': 9, '10': 'clusterName'},
+    {'1': 'cluster_name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'clusterName'},
     {'1': 'cluster_uuid', '3': 2, '4': 1, '5': 9, '10': 'clusterUuid'},
   ],
 };
@@ -523,7 +531,7 @@ const JobStatus_Substate$json = {
 const JobReference$json = {
   '1': 'JobReference',
   '2': [
-    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
+    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'projectId'},
     {'1': 'job_id', '3': 2, '4': 1, '5': 9, '10': 'jobId'},
   ],
 };
@@ -531,17 +539,18 @@ const JobReference$json = {
 const YarnApplication$json = {
   '1': 'YarnApplication',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
     {
       '1': 'state',
       '3': 2,
       '4': 1,
       '5': 14,
       '6': '.google.cloud.dataproc.v1beta2.YarnApplication.State',
+      '8': {},
       '10': 'state'
     },
-    {'1': 'progress', '3': 3, '4': 1, '5': 2, '10': 'progress'},
-    {'1': 'tracking_url', '3': 4, '4': 1, '5': 9, '10': 'trackingUrl'},
+    {'1': 'progress', '3': 3, '4': 1, '5': 2, '8': {}, '10': 'progress'},
+    {'1': 'tracking_url', '3': 4, '4': 1, '5': 9, '8': {}, '10': 'trackingUrl'},
   ],
   '4': [YarnApplication_State$json],
 };
@@ -578,6 +587,7 @@ const Job$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.dataproc.v1beta2.JobPlacement',
+      '8': {},
       '10': 'placement'
     },
     {
@@ -731,14 +741,15 @@ const JobScheduling$json = {
 const SubmitJobRequest$json = {
   '1': 'SubmitJobRequest',
   '2': [
-    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
-    {'1': 'region', '3': 3, '4': 1, '5': 9, '10': 'region'},
+    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'projectId'},
+    {'1': 'region', '3': 3, '4': 1, '5': 9, '8': {}, '10': 'region'},
     {
       '1': 'job',
       '3': 2,
       '4': 1,
       '5': 11,
       '6': '.google.cloud.dataproc.v1beta2.Job',
+      '8': {},
       '10': 'job'
     },
     {'1': 'request_id', '3': 4, '4': 1, '5': 9, '10': 'requestId'},
@@ -748,17 +759,17 @@ const SubmitJobRequest$json = {
 const GetJobRequest$json = {
   '1': 'GetJobRequest',
   '2': [
-    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
-    {'1': 'region', '3': 3, '4': 1, '5': 9, '10': 'region'},
-    {'1': 'job_id', '3': 2, '4': 1, '5': 9, '10': 'jobId'},
+    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'projectId'},
+    {'1': 'region', '3': 3, '4': 1, '5': 9, '8': {}, '10': 'region'},
+    {'1': 'job_id', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'jobId'},
   ],
 };
 
 const ListJobsRequest$json = {
   '1': 'ListJobsRequest',
   '2': [
-    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
-    {'1': 'region', '3': 6, '4': 1, '5': 9, '10': 'region'},
+    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'projectId'},
+    {'1': 'region', '3': 6, '4': 1, '5': 9, '8': {}, '10': 'region'},
     {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
     {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
     {'1': 'cluster_name', '3': 4, '4': 1, '5': 9, '10': 'clusterName'},
@@ -787,15 +798,16 @@ const ListJobsRequest_JobStateMatcher$json = {
 const UpdateJobRequest$json = {
   '1': 'UpdateJobRequest',
   '2': [
-    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
-    {'1': 'region', '3': 2, '4': 1, '5': 9, '10': 'region'},
-    {'1': 'job_id', '3': 3, '4': 1, '5': 9, '10': 'jobId'},
+    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'projectId'},
+    {'1': 'region', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'region'},
+    {'1': 'job_id', '3': 3, '4': 1, '5': 9, '8': {}, '10': 'jobId'},
     {
       '1': 'job',
       '3': 4,
       '4': 1,
       '5': 11,
       '6': '.google.cloud.dataproc.v1beta2.Job',
+      '8': {},
       '10': 'job'
     },
     {
@@ -804,6 +816,7 @@ const UpdateJobRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.FieldMask',
+      '8': {},
       '10': 'updateMask'
     },
   ],
@@ -827,17 +840,17 @@ const ListJobsResponse$json = {
 const CancelJobRequest$json = {
   '1': 'CancelJobRequest',
   '2': [
-    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
-    {'1': 'region', '3': 3, '4': 1, '5': 9, '10': 'region'},
-    {'1': 'job_id', '3': 2, '4': 1, '5': 9, '10': 'jobId'},
+    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'projectId'},
+    {'1': 'region', '3': 3, '4': 1, '5': 9, '8': {}, '10': 'region'},
+    {'1': 'job_id', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'jobId'},
   ],
 };
 
 const DeleteJobRequest$json = {
   '1': 'DeleteJobRequest',
   '2': [
-    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
-    {'1': 'region', '3': 3, '4': 1, '5': 9, '10': 'region'},
-    {'1': 'job_id', '3': 2, '4': 1, '5': 9, '10': 'jobId'},
+    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'projectId'},
+    {'1': 'region', '3': 3, '4': 1, '5': 9, '8': {}, '10': 'region'},
+    {'1': 'job_id', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'jobId'},
   ],
 };

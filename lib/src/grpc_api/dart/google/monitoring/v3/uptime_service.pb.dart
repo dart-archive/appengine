@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -16,7 +15,8 @@ import '../../protobuf/field_mask.pb.dart' as $3;
 class ListUptimeCheckConfigsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListUptimeCheckConfigsRequest',
-      package: const $pb.PackageName('google.monitoring.v3'))
+      package: const $pb.PackageName('google.monitoring.v3'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(4, 'pageToken')
@@ -43,41 +43,55 @@ class ListUptimeCheckConfigsRequest extends $pb.GeneratedMessage {
   ListUptimeCheckConfigsRequest createEmptyInstance() => create();
   static $pb.PbList<ListUptimeCheckConfigsRequest> createRepeated() =>
       $pb.PbList<ListUptimeCheckConfigsRequest>();
-  static ListUptimeCheckConfigsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListUptimeCheckConfigsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListUptimeCheckConfigsRequest>(create);
   static ListUptimeCheckConfigsRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.int get pageSize => $_get(1, 0);
+  @$pb.TagNumber(3)
+  $core.int get pageSize => $_getIZ(1);
+  @$pb.TagNumber(3)
   set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageSize() => $_has(1);
+  @$pb.TagNumber(3)
   void clearPageSize() => clearField(3);
 
-  $core.String get pageToken => $_getS(2, '');
+  @$pb.TagNumber(4)
+  $core.String get pageToken => $_getSZ(2);
+  @$pb.TagNumber(4)
   set pageToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasPageToken() => $_has(2);
+  @$pb.TagNumber(4)
   void clearPageToken() => clearField(4);
 }
 
 class ListUptimeCheckConfigsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListUptimeCheckConfigsResponse',
-      package: const $pb.PackageName('google.monitoring.v3'))
+      package: const $pb.PackageName('google.monitoring.v3'),
+      createEmptyInstance: create)
     ..pc<$1.UptimeCheckConfig>(1, 'uptimeCheckConfigs', $pb.PbFieldType.PM,
-        $1.UptimeCheckConfig.create)
+        subBuilder: $1.UptimeCheckConfig.create)
     ..aOS(2, 'nextPageToken')
     ..a<$core.int>(3, 'totalSize', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
@@ -103,33 +117,44 @@ class ListUptimeCheckConfigsResponse extends $pb.GeneratedMessage {
   ListUptimeCheckConfigsResponse createEmptyInstance() => create();
   static $pb.PbList<ListUptimeCheckConfigsResponse> createRepeated() =>
       $pb.PbList<ListUptimeCheckConfigsResponse>();
-  static ListUptimeCheckConfigsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListUptimeCheckConfigsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListUptimeCheckConfigsResponse>(create);
   static ListUptimeCheckConfigsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$1.UptimeCheckConfig> get uptimeCheckConfigs => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 
-  $core.int get totalSize => $_get(2, 0);
+  @$pb.TagNumber(3)
+  $core.int get totalSize => $_getIZ(2);
+  @$pb.TagNumber(3)
   set totalSize($core.int v) {
     $_setSignedInt32(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasTotalSize() => $_has(2);
+  @$pb.TagNumber(3)
   void clearTotalSize() => clearField(3);
 }
 
 class GetUptimeCheckConfigRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'GetUptimeCheckConfigRequest',
-      package: const $pb.PackageName('google.monitoring.v3'))
+      package: const $pb.PackageName('google.monitoring.v3'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -154,26 +179,32 @@ class GetUptimeCheckConfigRequest extends $pb.GeneratedMessage {
   GetUptimeCheckConfigRequest createEmptyInstance() => create();
   static $pb.PbList<GetUptimeCheckConfigRequest> createRepeated() =>
       $pb.PbList<GetUptimeCheckConfigRequest>();
-  static GetUptimeCheckConfigRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetUptimeCheckConfigRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetUptimeCheckConfigRequest>(create);
   static GetUptimeCheckConfigRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class CreateUptimeCheckConfigRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'CreateUptimeCheckConfigRequest',
-      package: const $pb.PackageName('google.monitoring.v3'))
+      package: const $pb.PackageName('google.monitoring.v3'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
-    ..a<$1.UptimeCheckConfig>(2, 'uptimeCheckConfig', $pb.PbFieldType.OM,
-        $1.UptimeCheckConfig.getDefault, $1.UptimeCheckConfig.create)
+    ..aOM<$1.UptimeCheckConfig>(2, 'uptimeCheckConfig',
+        subBuilder: $1.UptimeCheckConfig.create)
     ..hasRequiredFields = false;
 
   CreateUptimeCheckConfigRequest._() : super();
@@ -197,35 +228,46 @@ class CreateUptimeCheckConfigRequest extends $pb.GeneratedMessage {
   CreateUptimeCheckConfigRequest createEmptyInstance() => create();
   static $pb.PbList<CreateUptimeCheckConfigRequest> createRepeated() =>
       $pb.PbList<CreateUptimeCheckConfigRequest>();
-  static CreateUptimeCheckConfigRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateUptimeCheckConfigRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateUptimeCheckConfigRequest>(create);
   static CreateUptimeCheckConfigRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  @$pb.TagNumber(2)
   $1.UptimeCheckConfig get uptimeCheckConfig => $_getN(1);
+  @$pb.TagNumber(2)
   set uptimeCheckConfig($1.UptimeCheckConfig v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasUptimeCheckConfig() => $_has(1);
+  @$pb.TagNumber(2)
   void clearUptimeCheckConfig() => clearField(2);
+  @$pb.TagNumber(2)
+  $1.UptimeCheckConfig ensureUptimeCheckConfig() => $_ensure(1);
 }
 
 class UpdateUptimeCheckConfigRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'UpdateUptimeCheckConfigRequest',
-      package: const $pb.PackageName('google.monitoring.v3'))
-    ..a<$3.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $3.FieldMask.getDefault, $3.FieldMask.create)
-    ..a<$1.UptimeCheckConfig>(3, 'uptimeCheckConfig', $pb.PbFieldType.OM,
-        $1.UptimeCheckConfig.getDefault, $1.UptimeCheckConfig.create)
+      package: const $pb.PackageName('google.monitoring.v3'),
+      createEmptyInstance: create)
+    ..aOM<$3.FieldMask>(2, 'updateMask', subBuilder: $3.FieldMask.create)
+    ..aOM<$1.UptimeCheckConfig>(3, 'uptimeCheckConfig',
+        subBuilder: $1.UptimeCheckConfig.create)
     ..hasRequiredFields = false;
 
   UpdateUptimeCheckConfigRequest._() : super();
@@ -249,31 +291,45 @@ class UpdateUptimeCheckConfigRequest extends $pb.GeneratedMessage {
   UpdateUptimeCheckConfigRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateUptimeCheckConfigRequest> createRepeated() =>
       $pb.PbList<UpdateUptimeCheckConfigRequest>();
-  static UpdateUptimeCheckConfigRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateUptimeCheckConfigRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateUptimeCheckConfigRequest>(create);
   static UpdateUptimeCheckConfigRequest _defaultInstance;
 
+  @$pb.TagNumber(2)
   $3.FieldMask get updateMask => $_getN(0);
+  @$pb.TagNumber(2)
   set updateMask($3.FieldMask v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasUpdateMask() => $_has(0);
+  @$pb.TagNumber(2)
   void clearUpdateMask() => clearField(2);
+  @$pb.TagNumber(2)
+  $3.FieldMask ensureUpdateMask() => $_ensure(0);
 
+  @$pb.TagNumber(3)
   $1.UptimeCheckConfig get uptimeCheckConfig => $_getN(1);
+  @$pb.TagNumber(3)
   set uptimeCheckConfig($1.UptimeCheckConfig v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasUptimeCheckConfig() => $_has(1);
+  @$pb.TagNumber(3)
   void clearUptimeCheckConfig() => clearField(3);
+  @$pb.TagNumber(3)
+  $1.UptimeCheckConfig ensureUptimeCheckConfig() => $_ensure(1);
 }
 
 class DeleteUptimeCheckConfigRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'DeleteUptimeCheckConfigRequest',
-      package: const $pb.PackageName('google.monitoring.v3'))
+      package: const $pb.PackageName('google.monitoring.v3'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -298,22 +354,28 @@ class DeleteUptimeCheckConfigRequest extends $pb.GeneratedMessage {
   DeleteUptimeCheckConfigRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteUptimeCheckConfigRequest> createRepeated() =>
       $pb.PbList<DeleteUptimeCheckConfigRequest>();
-  static DeleteUptimeCheckConfigRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteUptimeCheckConfigRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteUptimeCheckConfigRequest>(create);
   static DeleteUptimeCheckConfigRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class ListUptimeCheckIpsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListUptimeCheckIpsRequest',
-      package: const $pb.PackageName('google.monitoring.v3'))
+      package: const $pb.PackageName('google.monitoring.v3'),
+      createEmptyInstance: create)
     ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(3, 'pageToken')
     ..hasRequiredFields = false;
@@ -338,33 +400,43 @@ class ListUptimeCheckIpsRequest extends $pb.GeneratedMessage {
   ListUptimeCheckIpsRequest createEmptyInstance() => create();
   static $pb.PbList<ListUptimeCheckIpsRequest> createRepeated() =>
       $pb.PbList<ListUptimeCheckIpsRequest>();
-  static ListUptimeCheckIpsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListUptimeCheckIpsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListUptimeCheckIpsRequest>(create);
   static ListUptimeCheckIpsRequest _defaultInstance;
 
-  $core.int get pageSize => $_get(0, 0);
+  @$pb.TagNumber(2)
+  $core.int get pageSize => $_getIZ(0);
+  @$pb.TagNumber(2)
   set pageSize($core.int v) {
     $_setSignedInt32(0, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(0);
+  @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
-  $core.String get pageToken => $_getS(1, '');
+  @$pb.TagNumber(3)
+  $core.String get pageToken => $_getSZ(1);
+  @$pb.TagNumber(3)
   set pageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(1);
+  @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
 }
 
 class ListUptimeCheckIpsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListUptimeCheckIpsResponse',
-      package: const $pb.PackageName('google.monitoring.v3'))
-    ..pc<$1.UptimeCheckIp>(
-        1, 'uptimeCheckIps', $pb.PbFieldType.PM, $1.UptimeCheckIp.create)
+      package: const $pb.PackageName('google.monitoring.v3'),
+      createEmptyInstance: create)
+    ..pc<$1.UptimeCheckIp>(1, 'uptimeCheckIps', $pb.PbFieldType.PM,
+        subBuilder: $1.UptimeCheckIp.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -388,17 +460,23 @@ class ListUptimeCheckIpsResponse extends $pb.GeneratedMessage {
   ListUptimeCheckIpsResponse createEmptyInstance() => create();
   static $pb.PbList<ListUptimeCheckIpsResponse> createRepeated() =>
       $pb.PbList<ListUptimeCheckIpsResponse>();
-  static ListUptimeCheckIpsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListUptimeCheckIpsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListUptimeCheckIpsResponse>(create);
   static ListUptimeCheckIpsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$1.UptimeCheckIp> get uptimeCheckIps => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }

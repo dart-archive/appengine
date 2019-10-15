@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -15,7 +14,8 @@ export 'search_term_targeting_status.pbenum.dart';
 class SearchTermTargetingStatusEnum extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'SearchTermTargetingStatusEnum',
-      package: const $pb.PackageName('google.ads.googleads.v2.enums'))
+      package: const $pb.PackageName('google.ads.googleads.v2.enums'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   SearchTermTargetingStatusEnum._() : super();
@@ -39,7 +39,8 @@ class SearchTermTargetingStatusEnum extends $pb.GeneratedMessage {
   SearchTermTargetingStatusEnum createEmptyInstance() => create();
   static $pb.PbList<SearchTermTargetingStatusEnum> createRepeated() =>
       $pb.PbList<SearchTermTargetingStatusEnum>();
-  static SearchTermTargetingStatusEnum getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static SearchTermTargetingStatusEnum getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SearchTermTargetingStatusEnum>(create);
   static SearchTermTargetingStatusEnum _defaultInstance;
 }

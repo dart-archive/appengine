@@ -8,14 +8,15 @@
 const Cluster$json = {
   '1': 'Cluster',
   '2': [
-    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
-    {'1': 'cluster_name', '3': 2, '4': 1, '5': 9, '10': 'clusterName'},
+    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'projectId'},
+    {'1': 'cluster_name', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'clusterName'},
     {
       '1': 'config',
       '3': 3,
       '4': 1,
       '5': 11,
       '6': '.google.cloud.dataproc.v1beta2.ClusterConfig',
+      '8': {},
       '10': 'config'
     },
     {
@@ -24,6 +25,7 @@ const Cluster$json = {
       '4': 3,
       '5': 11,
       '6': '.google.cloud.dataproc.v1beta2.Cluster.LabelsEntry',
+      '8': {},
       '10': 'labels'
     },
     {
@@ -32,6 +34,7 @@ const Cluster$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.dataproc.v1beta2.ClusterStatus',
+      '8': {},
       '10': 'status'
     },
     {
@@ -40,15 +43,17 @@ const Cluster$json = {
       '4': 3,
       '5': 11,
       '6': '.google.cloud.dataproc.v1beta2.ClusterStatus',
+      '8': {},
       '10': 'statusHistory'
     },
-    {'1': 'cluster_uuid', '3': 6, '4': 1, '5': 9, '10': 'clusterUuid'},
+    {'1': 'cluster_uuid', '3': 6, '4': 1, '5': 9, '8': {}, '10': 'clusterUuid'},
     {
       '1': 'metrics',
       '3': 9,
       '4': 1,
       '5': 11,
       '6': '.google.cloud.dataproc.v1beta2.ClusterMetrics',
+      '8': {},
       '10': 'metrics'
     },
   ],
@@ -67,13 +72,21 @@ const Cluster_LabelsEntry$json = {
 const ClusterConfig$json = {
   '1': 'ClusterConfig',
   '2': [
-    {'1': 'config_bucket', '3': 1, '4': 1, '5': 9, '10': 'configBucket'},
+    {
+      '1': 'config_bucket',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'configBucket'
+    },
     {
       '1': 'gce_cluster_config',
       '3': 8,
       '4': 1,
       '5': 11,
       '6': '.google.cloud.dataproc.v1beta2.GceClusterConfig',
+      '8': {},
       '10': 'gceClusterConfig'
     },
     {
@@ -82,6 +95,7 @@ const ClusterConfig$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.dataproc.v1beta2.InstanceGroupConfig',
+      '8': {},
       '10': 'masterConfig'
     },
     {
@@ -90,6 +104,7 @@ const ClusterConfig$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.dataproc.v1beta2.InstanceGroupConfig',
+      '8': {},
       '10': 'workerConfig'
     },
     {
@@ -98,6 +113,7 @@ const ClusterConfig$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.dataproc.v1beta2.InstanceGroupConfig',
+      '8': {},
       '10': 'secondaryWorkerConfig'
     },
     {
@@ -106,6 +122,7 @@ const ClusterConfig$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.dataproc.v1beta2.SoftwareConfig',
+      '8': {},
       '10': 'softwareConfig'
     },
     {
@@ -114,6 +131,7 @@ const ClusterConfig$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.dataproc.v1beta2.LifecycleConfig',
+      '8': {},
       '10': 'lifecycleConfig'
     },
     {
@@ -122,6 +140,7 @@ const ClusterConfig$json = {
       '4': 3,
       '5': 11,
       '6': '.google.cloud.dataproc.v1beta2.NodeInitializationAction',
+      '8': {},
       '10': 'initializationActions'
     },
     {
@@ -130,6 +149,7 @@ const ClusterConfig$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.dataproc.v1beta2.EncryptionConfig',
+      '8': {},
       '10': 'encryptionConfig'
     },
     {
@@ -138,6 +158,7 @@ const ClusterConfig$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.dataproc.v1beta2.AutoscalingConfig',
+      '8': {},
       '10': 'autoscalingConfig'
     },
     {
@@ -146,6 +167,7 @@ const ClusterConfig$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.dataproc.v1beta2.EndpointConfig',
+      '8': {},
       '10': 'endpointConfig'
     },
     {
@@ -154,6 +176,7 @@ const ClusterConfig$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.dataproc.v1beta2.SecurityConfig',
+      '8': {},
       '10': 'securityConfig'
     },
   ],
@@ -168,6 +191,7 @@ const EndpointConfig$json = {
       '4': 3,
       '5': 11,
       '6': '.google.cloud.dataproc.v1beta2.EndpointConfig.HttpPortsEntry',
+      '8': {},
       '10': 'httpPorts'
     },
     {
@@ -175,6 +199,7 @@ const EndpointConfig$json = {
       '3': 2,
       '4': 1,
       '5': 8,
+      '8': {},
       '10': 'enableHttpPortAccess'
     },
   ],
@@ -193,7 +218,7 @@ const EndpointConfig_HttpPortsEntry$json = {
 const AutoscalingConfig$json = {
   '1': 'AutoscalingConfig',
   '2': [
-    {'1': 'policy_uri', '3': 1, '4': 1, '5': 9, '10': 'policyUri'},
+    {'1': 'policy_uri', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'policyUri'},
   ],
 };
 
@@ -205,6 +230,7 @@ const EncryptionConfig$json = {
       '3': 1,
       '4': 1,
       '5': 9,
+      '8': {},
       '10': 'gcePdKmsKeyName'
     },
   ],
@@ -213,16 +239,38 @@ const EncryptionConfig$json = {
 const GceClusterConfig$json = {
   '1': 'GceClusterConfig',
   '2': [
-    {'1': 'zone_uri', '3': 1, '4': 1, '5': 9, '10': 'zoneUri'},
-    {'1': 'network_uri', '3': 2, '4': 1, '5': 9, '10': 'networkUri'},
-    {'1': 'subnetwork_uri', '3': 6, '4': 1, '5': 9, '10': 'subnetworkUri'},
-    {'1': 'internal_ip_only', '3': 7, '4': 1, '5': 8, '10': 'internalIpOnly'},
-    {'1': 'service_account', '3': 8, '4': 1, '5': 9, '10': 'serviceAccount'},
+    {'1': 'zone_uri', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'zoneUri'},
+    {'1': 'network_uri', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'networkUri'},
+    {
+      '1': 'subnetwork_uri',
+      '3': 6,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'subnetworkUri'
+    },
+    {
+      '1': 'internal_ip_only',
+      '3': 7,
+      '4': 1,
+      '5': 8,
+      '8': {},
+      '10': 'internalIpOnly'
+    },
+    {
+      '1': 'service_account',
+      '3': 8,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'serviceAccount'
+    },
     {
       '1': 'service_account_scopes',
       '3': 3,
       '4': 3,
       '5': 9,
+      '8': {},
       '10': 'serviceAccountScopes'
     },
     {'1': 'tags', '3': 4, '4': 3, '5': 9, '10': 'tags'},
@@ -240,6 +288,7 @@ const GceClusterConfig$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.dataproc.v1beta2.ReservationAffinity',
+      '8': {},
       '10': 'reservationAffinity'
     },
   ],
@@ -258,25 +307,55 @@ const GceClusterConfig_MetadataEntry$json = {
 const InstanceGroupConfig$json = {
   '1': 'InstanceGroupConfig',
   '2': [
-    {'1': 'num_instances', '3': 1, '4': 1, '5': 5, '10': 'numInstances'},
-    {'1': 'instance_names', '3': 2, '4': 3, '5': 9, '10': 'instanceNames'},
-    {'1': 'image_uri', '3': 3, '4': 1, '5': 9, '10': 'imageUri'},
-    {'1': 'machine_type_uri', '3': 4, '4': 1, '5': 9, '10': 'machineTypeUri'},
+    {
+      '1': 'num_instances',
+      '3': 1,
+      '4': 1,
+      '5': 5,
+      '8': {},
+      '10': 'numInstances'
+    },
+    {
+      '1': 'instance_names',
+      '3': 2,
+      '4': 3,
+      '5': 9,
+      '8': {},
+      '10': 'instanceNames'
+    },
+    {'1': 'image_uri', '3': 3, '4': 1, '5': 9, '8': {}, '10': 'imageUri'},
+    {
+      '1': 'machine_type_uri',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'machineTypeUri'
+    },
     {
       '1': 'disk_config',
       '3': 5,
       '4': 1,
       '5': 11,
       '6': '.google.cloud.dataproc.v1beta2.DiskConfig',
+      '8': {},
       '10': 'diskConfig'
     },
-    {'1': 'is_preemptible', '3': 6, '4': 1, '5': 8, '10': 'isPreemptible'},
+    {
+      '1': 'is_preemptible',
+      '3': 6,
+      '4': 1,
+      '5': 8,
+      '8': {},
+      '10': 'isPreemptible'
+    },
     {
       '1': 'managed_group_config',
       '3': 7,
       '4': 1,
       '5': 11,
       '6': '.google.cloud.dataproc.v1beta2.ManagedGroupConfig',
+      '8': {},
       '10': 'managedGroupConfig'
     },
     {
@@ -285,6 +364,7 @@ const InstanceGroupConfig$json = {
       '4': 3,
       '5': 11,
       '6': '.google.cloud.dataproc.v1beta2.AcceleratorConfig',
+      '8': {},
       '10': 'accelerators'
     },
     {'1': 'min_cpu_platform', '3': 9, '4': 1, '5': 9, '10': 'minCpuPlatform'},
@@ -299,6 +379,7 @@ const ManagedGroupConfig$json = {
       '3': 1,
       '4': 1,
       '5': 9,
+      '8': {},
       '10': 'instanceTemplateName'
     },
     {
@@ -306,6 +387,7 @@ const ManagedGroupConfig$json = {
       '3': 2,
       '4': 1,
       '5': 9,
+      '8': {},
       '10': 'instanceGroupManagerName'
     },
   ],
@@ -334,8 +416,22 @@ const AcceleratorConfig$json = {
 const DiskConfig$json = {
   '1': 'DiskConfig',
   '2': [
-    {'1': 'boot_disk_type', '3': 3, '4': 1, '5': 9, '10': 'bootDiskType'},
-    {'1': 'boot_disk_size_gb', '3': 1, '4': 1, '5': 5, '10': 'bootDiskSizeGb'},
+    {
+      '1': 'boot_disk_type',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'bootDiskType'
+    },
+    {
+      '1': 'boot_disk_size_gb',
+      '3': 1,
+      '4': 1,
+      '5': 5,
+      '8': {},
+      '10': 'bootDiskSizeGb'
+    },
     {'1': 'num_local_ssds', '3': 2, '4': 1, '5': 5, '10': 'numLocalSsds'},
   ],
 };
@@ -349,6 +445,7 @@ const LifecycleConfig$json = {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Duration',
+      '8': {},
       '10': 'idleDeleteTtl'
     },
     {
@@ -368,6 +465,15 @@ const LifecycleConfig$json = {
       '6': '.google.protobuf.Duration',
       '9': 0,
       '10': 'autoDeleteTtl'
+    },
+    {
+      '1': 'idle_start_time',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '8': {},
+      '10': 'idleStartTime'
     },
   ],
   '8': [
@@ -392,30 +498,54 @@ const SecurityConfig$json = {
 const KerberosConfig$json = {
   '1': 'KerberosConfig',
   '2': [
-    {'1': 'enable_kerberos', '3': 1, '4': 1, '5': 8, '10': 'enableKerberos'},
+    {
+      '1': 'enable_kerberos',
+      '3': 1,
+      '4': 1,
+      '5': 8,
+      '8': {},
+      '10': 'enableKerberos'
+    },
     {
       '1': 'root_principal_password_uri',
       '3': 2,
       '4': 1,
       '5': 9,
+      '8': {},
       '10': 'rootPrincipalPasswordUri'
     },
-    {'1': 'kms_key_uri', '3': 3, '4': 1, '5': 9, '10': 'kmsKeyUri'},
-    {'1': 'keystore_uri', '3': 4, '4': 1, '5': 9, '10': 'keystoreUri'},
-    {'1': 'truststore_uri', '3': 5, '4': 1, '5': 9, '10': 'truststoreUri'},
+    {'1': 'kms_key_uri', '3': 3, '4': 1, '5': 9, '8': {}, '10': 'kmsKeyUri'},
+    {'1': 'keystore_uri', '3': 4, '4': 1, '5': 9, '8': {}, '10': 'keystoreUri'},
+    {
+      '1': 'truststore_uri',
+      '3': 5,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'truststoreUri'
+    },
     {
       '1': 'keystore_password_uri',
       '3': 6,
       '4': 1,
       '5': 9,
+      '8': {},
       '10': 'keystorePasswordUri'
     },
-    {'1': 'key_password_uri', '3': 7, '4': 1, '5': 9, '10': 'keyPasswordUri'},
+    {
+      '1': 'key_password_uri',
+      '3': 7,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'keyPasswordUri'
+    },
     {
       '1': 'truststore_password_uri',
       '3': 8,
       '4': 1,
       '5': 9,
+      '8': {},
       '10': 'truststorePasswordUri'
     },
     {
@@ -423,6 +553,7 @@ const KerberosConfig$json = {
       '3': 9,
       '4': 1,
       '5': 9,
+      '8': {},
       '10': 'crossRealmTrustRealm'
     },
     {
@@ -430,6 +561,7 @@ const KerberosConfig$json = {
       '3': 10,
       '4': 1,
       '5': 9,
+      '8': {},
       '10': 'crossRealmTrustKdc'
     },
     {
@@ -437,6 +569,7 @@ const KerberosConfig$json = {
       '3': 11,
       '4': 1,
       '5': 9,
+      '8': {},
       '10': 'crossRealmTrustAdminServer'
     },
     {
@@ -444,29 +577,47 @@ const KerberosConfig$json = {
       '3': 12,
       '4': 1,
       '5': 9,
+      '8': {},
       '10': 'crossRealmTrustSharedPasswordUri'
     },
-    {'1': 'kdc_db_key_uri', '3': 13, '4': 1, '5': 9, '10': 'kdcDbKeyUri'},
+    {
+      '1': 'kdc_db_key_uri',
+      '3': 13,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'kdcDbKeyUri'
+    },
     {
       '1': 'tgt_lifetime_hours',
       '3': 14,
       '4': 1,
       '5': 5,
+      '8': {},
       '10': 'tgtLifetimeHours'
     },
+    {'1': 'realm', '3': 15, '4': 1, '5': 9, '8': {}, '10': 'realm'},
   ],
 };
 
 const NodeInitializationAction$json = {
   '1': 'NodeInitializationAction',
   '2': [
-    {'1': 'executable_file', '3': 1, '4': 1, '5': 9, '10': 'executableFile'},
+    {
+      '1': 'executable_file',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'executableFile'
+    },
     {
       '1': 'execution_timeout',
       '3': 2,
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Duration',
+      '8': {},
       '10': 'executionTimeout'
     },
   ],
@@ -481,15 +632,17 @@ const ClusterStatus$json = {
       '4': 1,
       '5': 14,
       '6': '.google.cloud.dataproc.v1beta2.ClusterStatus.State',
+      '8': {},
       '10': 'state'
     },
-    {'1': 'detail', '3': 2, '4': 1, '5': 9, '10': 'detail'},
+    {'1': 'detail', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'detail'},
     {
       '1': 'state_start_time',
       '3': 3,
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
+      '8': {},
       '10': 'stateStartTime'
     },
     {
@@ -498,6 +651,7 @@ const ClusterStatus$json = {
       '4': 1,
       '5': 14,
       '6': '.google.cloud.dataproc.v1beta2.ClusterStatus.Substate',
+      '8': {},
       '10': 'substate'
     },
   ],
@@ -528,13 +682,21 @@ const ClusterStatus_Substate$json = {
 const SoftwareConfig$json = {
   '1': 'SoftwareConfig',
   '2': [
-    {'1': 'image_version', '3': 1, '4': 1, '5': 9, '10': 'imageVersion'},
+    {
+      '1': 'image_version',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'imageVersion'
+    },
     {
       '1': 'properties',
       '3': 2,
       '4': 3,
       '5': 11,
       '6': '.google.cloud.dataproc.v1beta2.SoftwareConfig.PropertiesEntry',
+      '8': {},
       '10': 'properties'
     },
     {
@@ -605,32 +767,34 @@ const ClusterMetrics_YarnMetricsEntry$json = {
 const CreateClusterRequest$json = {
   '1': 'CreateClusterRequest',
   '2': [
-    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
-    {'1': 'region', '3': 3, '4': 1, '5': 9, '10': 'region'},
+    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'projectId'},
+    {'1': 'region', '3': 3, '4': 1, '5': 9, '8': {}, '10': 'region'},
     {
       '1': 'cluster',
       '3': 2,
       '4': 1,
       '5': 11,
       '6': '.google.cloud.dataproc.v1beta2.Cluster',
+      '8': {},
       '10': 'cluster'
     },
-    {'1': 'request_id', '3': 4, '4': 1, '5': 9, '10': 'requestId'},
+    {'1': 'request_id', '3': 4, '4': 1, '5': 9, '8': {}, '10': 'requestId'},
   ],
 };
 
 const UpdateClusterRequest$json = {
   '1': 'UpdateClusterRequest',
   '2': [
-    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
-    {'1': 'region', '3': 5, '4': 1, '5': 9, '10': 'region'},
-    {'1': 'cluster_name', '3': 2, '4': 1, '5': 9, '10': 'clusterName'},
+    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'projectId'},
+    {'1': 'region', '3': 5, '4': 1, '5': 9, '8': {}, '10': 'region'},
+    {'1': 'cluster_name', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'clusterName'},
     {
       '1': 'cluster',
       '3': 3,
       '4': 1,
       '5': 11,
       '6': '.google.cloud.dataproc.v1beta2.Cluster',
+      '8': {},
       '10': 'cluster'
     },
     {
@@ -639,6 +803,7 @@ const UpdateClusterRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Duration',
+      '8': {},
       '10': 'gracefulDecommissionTimeout'
     },
     {
@@ -647,40 +812,41 @@ const UpdateClusterRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.FieldMask',
+      '8': {},
       '10': 'updateMask'
     },
-    {'1': 'request_id', '3': 7, '4': 1, '5': 9, '10': 'requestId'},
+    {'1': 'request_id', '3': 7, '4': 1, '5': 9, '8': {}, '10': 'requestId'},
   ],
 };
 
 const DeleteClusterRequest$json = {
   '1': 'DeleteClusterRequest',
   '2': [
-    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
-    {'1': 'region', '3': 3, '4': 1, '5': 9, '10': 'region'},
-    {'1': 'cluster_name', '3': 2, '4': 1, '5': 9, '10': 'clusterName'},
-    {'1': 'cluster_uuid', '3': 4, '4': 1, '5': 9, '10': 'clusterUuid'},
-    {'1': 'request_id', '3': 5, '4': 1, '5': 9, '10': 'requestId'},
+    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'projectId'},
+    {'1': 'region', '3': 3, '4': 1, '5': 9, '8': {}, '10': 'region'},
+    {'1': 'cluster_name', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'clusterName'},
+    {'1': 'cluster_uuid', '3': 4, '4': 1, '5': 9, '8': {}, '10': 'clusterUuid'},
+    {'1': 'request_id', '3': 5, '4': 1, '5': 9, '8': {}, '10': 'requestId'},
   ],
 };
 
 const GetClusterRequest$json = {
   '1': 'GetClusterRequest',
   '2': [
-    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
-    {'1': 'region', '3': 3, '4': 1, '5': 9, '10': 'region'},
-    {'1': 'cluster_name', '3': 2, '4': 1, '5': 9, '10': 'clusterName'},
+    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'projectId'},
+    {'1': 'region', '3': 3, '4': 1, '5': 9, '8': {}, '10': 'region'},
+    {'1': 'cluster_name', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'clusterName'},
   ],
 };
 
 const ListClustersRequest$json = {
   '1': 'ListClustersRequest',
   '2': [
-    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
-    {'1': 'region', '3': 4, '4': 1, '5': 9, '10': 'region'},
-    {'1': 'filter', '3': 5, '4': 1, '5': 9, '10': 'filter'},
-    {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
-    {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
+    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'projectId'},
+    {'1': 'region', '3': 4, '4': 1, '5': 9, '8': {}, '10': 'region'},
+    {'1': 'filter', '3': 5, '4': 1, '5': 9, '8': {}, '10': 'filter'},
+    {'1': 'page_size', '3': 2, '4': 1, '5': 5, '8': {}, '10': 'pageSize'},
+    {'1': 'page_token', '3': 3, '4': 1, '5': 9, '8': {}, '10': 'pageToken'},
   ],
 };
 
@@ -693,25 +859,33 @@ const ListClustersResponse$json = {
       '4': 3,
       '5': 11,
       '6': '.google.cloud.dataproc.v1beta2.Cluster',
+      '8': {},
       '10': 'clusters'
     },
-    {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
+    {
+      '1': 'next_page_token',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'nextPageToken'
+    },
   ],
 };
 
 const DiagnoseClusterRequest$json = {
   '1': 'DiagnoseClusterRequest',
   '2': [
-    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
-    {'1': 'region', '3': 3, '4': 1, '5': 9, '10': 'region'},
-    {'1': 'cluster_name', '3': 2, '4': 1, '5': 9, '10': 'clusterName'},
+    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'projectId'},
+    {'1': 'region', '3': 3, '4': 1, '5': 9, '8': {}, '10': 'region'},
+    {'1': 'cluster_name', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'clusterName'},
   ],
 };
 
 const DiagnoseClusterResults$json = {
   '1': 'DiagnoseClusterResults',
   '2': [
-    {'1': 'output_uri', '3': 1, '4': 1, '5': 9, '10': 'outputUri'},
+    {'1': 'output_uri', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'outputUri'},
   ],
 };
 
@@ -724,10 +898,11 @@ const ReservationAffinity$json = {
       '4': 1,
       '5': 14,
       '6': '.google.cloud.dataproc.v1beta2.ReservationAffinity.Type',
+      '8': {},
       '10': 'consumeReservationType'
     },
-    {'1': 'key', '3': 2, '4': 1, '5': 9, '10': 'key'},
-    {'1': 'values', '3': 3, '4': 3, '5': 9, '10': 'values'},
+    {'1': 'key', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'key'},
+    {'1': 'values', '3': 3, '4': 3, '5': 9, '8': {}, '10': 'values'},
   ],
   '4': [ReservationAffinity_Type$json],
 };

@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -19,24 +18,19 @@ export 'operation_metadata.pbenum.dart';
 
 class OperationMetadata extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('OperationMetadata',
-      package: const $pb.PackageName('google.cloud.ml.v1'))
-    ..a<$3.Timestamp>(1, 'createTime', $pb.PbFieldType.OM,
-        $3.Timestamp.getDefault, $3.Timestamp.create)
-    ..a<$3.Timestamp>(2, 'startTime', $pb.PbFieldType.OM,
-        $3.Timestamp.getDefault, $3.Timestamp.create)
-    ..a<$3.Timestamp>(3, 'endTime', $pb.PbFieldType.OM, $3.Timestamp.getDefault,
-        $3.Timestamp.create)
+      package: const $pb.PackageName('google.cloud.ml.v1'),
+      createEmptyInstance: create)
+    ..aOM<$3.Timestamp>(1, 'createTime', subBuilder: $3.Timestamp.create)
+    ..aOM<$3.Timestamp>(2, 'startTime', subBuilder: $3.Timestamp.create)
+    ..aOM<$3.Timestamp>(3, 'endTime', subBuilder: $3.Timestamp.create)
     ..aOB(4, 'isCancellationRequested')
-    ..e<OperationMetadata_OperationType>(
-        5,
-        'operationType',
-        $pb.PbFieldType.OE,
-        OperationMetadata_OperationType.OPERATION_TYPE_UNSPECIFIED,
-        OperationMetadata_OperationType.valueOf,
-        OperationMetadata_OperationType.values)
+    ..e<OperationMetadata_OperationType>(5, 'operationType', $pb.PbFieldType.OE,
+        defaultOrMaker:
+            OperationMetadata_OperationType.OPERATION_TYPE_UNSPECIFIED,
+        valueOf: OperationMetadata_OperationType.valueOf,
+        enumValues: OperationMetadata_OperationType.values)
     ..aOS(6, 'modelName')
-    ..a<$2.Version>(7, 'version', $pb.PbFieldType.OM, $2.Version.getDefault,
-        $2.Version.create)
+    ..aOM<$2.Version>(7, 'version', subBuilder: $2.Version.create)
     ..hasRequiredFields = false;
 
   OperationMetadata._() : super();
@@ -56,63 +50,100 @@ class OperationMetadata extends $pb.GeneratedMessage {
   OperationMetadata createEmptyInstance() => create();
   static $pb.PbList<OperationMetadata> createRepeated() =>
       $pb.PbList<OperationMetadata>();
-  static OperationMetadata getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static OperationMetadata getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<OperationMetadata>(create);
   static OperationMetadata _defaultInstance;
 
+  @$pb.TagNumber(1)
   $3.Timestamp get createTime => $_getN(0);
+  @$pb.TagNumber(1)
   set createTime($3.Timestamp v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCreateTime() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCreateTime() => clearField(1);
+  @$pb.TagNumber(1)
+  $3.Timestamp ensureCreateTime() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $3.Timestamp get startTime => $_getN(1);
+  @$pb.TagNumber(2)
   set startTime($3.Timestamp v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasStartTime() => $_has(1);
+  @$pb.TagNumber(2)
   void clearStartTime() => clearField(2);
+  @$pb.TagNumber(2)
+  $3.Timestamp ensureStartTime() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $3.Timestamp get endTime => $_getN(2);
+  @$pb.TagNumber(3)
   set endTime($3.Timestamp v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasEndTime() => $_has(2);
+  @$pb.TagNumber(3)
   void clearEndTime() => clearField(3);
+  @$pb.TagNumber(3)
+  $3.Timestamp ensureEndTime() => $_ensure(2);
 
-  $core.bool get isCancellationRequested => $_get(3, false);
+  @$pb.TagNumber(4)
+  $core.bool get isCancellationRequested => $_getBF(3);
+  @$pb.TagNumber(4)
   set isCancellationRequested($core.bool v) {
     $_setBool(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasIsCancellationRequested() => $_has(3);
+  @$pb.TagNumber(4)
   void clearIsCancellationRequested() => clearField(4);
 
+  @$pb.TagNumber(5)
   OperationMetadata_OperationType get operationType => $_getN(4);
+  @$pb.TagNumber(5)
   set operationType(OperationMetadata_OperationType v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasOperationType() => $_has(4);
+  @$pb.TagNumber(5)
   void clearOperationType() => clearField(5);
 
-  $core.String get modelName => $_getS(5, '');
+  @$pb.TagNumber(6)
+  $core.String get modelName => $_getSZ(5);
+  @$pb.TagNumber(6)
   set modelName($core.String v) {
     $_setString(5, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasModelName() => $_has(5);
+  @$pb.TagNumber(6)
   void clearModelName() => clearField(6);
 
+  @$pb.TagNumber(7)
   $2.Version get version => $_getN(6);
+  @$pb.TagNumber(7)
   set version($2.Version v) {
     setField(7, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasVersion() => $_has(6);
+  @$pb.TagNumber(7)
   void clearVersion() => clearField(7);
+  @$pb.TagNumber(7)
+  $2.Version ensureVersion() => $_ensure(6);
 }

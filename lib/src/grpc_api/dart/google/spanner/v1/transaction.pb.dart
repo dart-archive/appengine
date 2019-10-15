@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -16,7 +15,8 @@ import '../../protobuf/duration.pb.dart' as $1;
 class TransactionOptions_ReadWrite extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'TransactionOptions.ReadWrite',
-      package: const $pb.PackageName('google.spanner.v1'))
+      package: const $pb.PackageName('google.spanner.v1'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   TransactionOptions_ReadWrite._() : super();
@@ -40,15 +40,17 @@ class TransactionOptions_ReadWrite extends $pb.GeneratedMessage {
   TransactionOptions_ReadWrite createEmptyInstance() => create();
   static $pb.PbList<TransactionOptions_ReadWrite> createRepeated() =>
       $pb.PbList<TransactionOptions_ReadWrite>();
-  static TransactionOptions_ReadWrite getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TransactionOptions_ReadWrite getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TransactionOptions_ReadWrite>(create);
   static TransactionOptions_ReadWrite _defaultInstance;
 }
 
 class TransactionOptions_PartitionedDml extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'TransactionOptions.PartitionedDml',
-      package: const $pb.PackageName('google.spanner.v1'))
+      package: const $pb.PackageName('google.spanner.v1'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   TransactionOptions_PartitionedDml._() : super();
@@ -72,8 +74,10 @@ class TransactionOptions_PartitionedDml extends $pb.GeneratedMessage {
   TransactionOptions_PartitionedDml createEmptyInstance() => create();
   static $pb.PbList<TransactionOptions_PartitionedDml> createRepeated() =>
       $pb.PbList<TransactionOptions_PartitionedDml>();
-  static TransactionOptions_PartitionedDml getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TransactionOptions_PartitionedDml getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TransactionOptions_PartitionedDml>(
+          create);
   static TransactionOptions_PartitionedDml _defaultInstance;
 }
 
@@ -98,17 +102,14 @@ class TransactionOptions_ReadOnly extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'TransactionOptions.ReadOnly',
-      package: const $pb.PackageName('google.spanner.v1'))
+      package: const $pb.PackageName('google.spanner.v1'),
+      createEmptyInstance: create)
     ..oo(0, [1, 2, 3, 4, 5])
     ..aOB(1, 'strong')
-    ..a<$0.Timestamp>(2, 'minReadTimestamp', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
-    ..a<$1.Duration>(3, 'maxStaleness', $pb.PbFieldType.OM,
-        $1.Duration.getDefault, $1.Duration.create)
-    ..a<$0.Timestamp>(4, 'readTimestamp', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
-    ..a<$1.Duration>(5, 'exactStaleness', $pb.PbFieldType.OM,
-        $1.Duration.getDefault, $1.Duration.create)
+    ..aOM<$0.Timestamp>(2, 'minReadTimestamp', subBuilder: $0.Timestamp.create)
+    ..aOM<$1.Duration>(3, 'maxStaleness', subBuilder: $1.Duration.create)
+    ..aOM<$0.Timestamp>(4, 'readTimestamp', subBuilder: $0.Timestamp.create)
+    ..aOM<$1.Duration>(5, 'exactStaleness', subBuilder: $1.Duration.create)
     ..aOB(6, 'returnReadTimestamp')
     ..hasRequiredFields = false;
 
@@ -133,60 +134,93 @@ class TransactionOptions_ReadOnly extends $pb.GeneratedMessage {
   TransactionOptions_ReadOnly createEmptyInstance() => create();
   static $pb.PbList<TransactionOptions_ReadOnly> createRepeated() =>
       $pb.PbList<TransactionOptions_ReadOnly>();
-  static TransactionOptions_ReadOnly getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TransactionOptions_ReadOnly getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TransactionOptions_ReadOnly>(create);
   static TransactionOptions_ReadOnly _defaultInstance;
 
   TransactionOptions_ReadOnly_TimestampBound whichTimestampBound() =>
       _TransactionOptions_ReadOnly_TimestampBoundByTag[$_whichOneof(0)];
   void clearTimestampBound() => clearField($_whichOneof(0));
 
-  $core.bool get strong => $_get(0, false);
+  @$pb.TagNumber(1)
+  $core.bool get strong => $_getBF(0);
+  @$pb.TagNumber(1)
   set strong($core.bool v) {
     $_setBool(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasStrong() => $_has(0);
+  @$pb.TagNumber(1)
   void clearStrong() => clearField(1);
 
+  @$pb.TagNumber(2)
   $0.Timestamp get minReadTimestamp => $_getN(1);
+  @$pb.TagNumber(2)
   set minReadTimestamp($0.Timestamp v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasMinReadTimestamp() => $_has(1);
+  @$pb.TagNumber(2)
   void clearMinReadTimestamp() => clearField(2);
+  @$pb.TagNumber(2)
+  $0.Timestamp ensureMinReadTimestamp() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $1.Duration get maxStaleness => $_getN(2);
+  @$pb.TagNumber(3)
   set maxStaleness($1.Duration v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasMaxStaleness() => $_has(2);
+  @$pb.TagNumber(3)
   void clearMaxStaleness() => clearField(3);
+  @$pb.TagNumber(3)
+  $1.Duration ensureMaxStaleness() => $_ensure(2);
 
+  @$pb.TagNumber(4)
   $0.Timestamp get readTimestamp => $_getN(3);
+  @$pb.TagNumber(4)
   set readTimestamp($0.Timestamp v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasReadTimestamp() => $_has(3);
+  @$pb.TagNumber(4)
   void clearReadTimestamp() => clearField(4);
+  @$pb.TagNumber(4)
+  $0.Timestamp ensureReadTimestamp() => $_ensure(3);
 
+  @$pb.TagNumber(5)
   $1.Duration get exactStaleness => $_getN(4);
+  @$pb.TagNumber(5)
   set exactStaleness($1.Duration v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasExactStaleness() => $_has(4);
+  @$pb.TagNumber(5)
   void clearExactStaleness() => clearField(5);
+  @$pb.TagNumber(5)
+  $1.Duration ensureExactStaleness() => $_ensure(4);
 
-  $core.bool get returnReadTimestamp => $_get(5, false);
+  @$pb.TagNumber(6)
+  $core.bool get returnReadTimestamp => $_getBF(5);
+  @$pb.TagNumber(6)
   set returnReadTimestamp($core.bool v) {
     $_setBool(5, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasReturnReadTimestamp() => $_has(5);
+  @$pb.TagNumber(6)
   void clearReturnReadTimestamp() => clearField(6);
 }
 
@@ -201,26 +235,15 @@ class TransactionOptions extends $pb.GeneratedMessage {
     0: TransactionOptions_Mode.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TransactionOptions',
-      package: const $pb.PackageName('google.spanner.v1'))
+      package: const $pb.PackageName('google.spanner.v1'),
+      createEmptyInstance: create)
     ..oo(0, [1, 2, 3])
-    ..a<TransactionOptions_ReadWrite>(
-        1,
-        'readWrite',
-        $pb.PbFieldType.OM,
-        TransactionOptions_ReadWrite.getDefault,
-        TransactionOptions_ReadWrite.create)
-    ..a<TransactionOptions_ReadOnly>(
-        2,
-        'readOnly',
-        $pb.PbFieldType.OM,
-        TransactionOptions_ReadOnly.getDefault,
-        TransactionOptions_ReadOnly.create)
-    ..a<TransactionOptions_PartitionedDml>(
-        3,
-        'partitionedDml',
-        $pb.PbFieldType.OM,
-        TransactionOptions_PartitionedDml.getDefault,
-        TransactionOptions_PartitionedDml.create)
+    ..aOM<TransactionOptions_ReadWrite>(1, 'readWrite',
+        subBuilder: TransactionOptions_ReadWrite.create)
+    ..aOM<TransactionOptions_ReadOnly>(2, 'readOnly',
+        subBuilder: TransactionOptions_ReadOnly.create)
+    ..aOM<TransactionOptions_PartitionedDml>(3, 'partitionedDml',
+        subBuilder: TransactionOptions_PartitionedDml.create)
     ..hasRequiredFields = false;
 
   TransactionOptions._() : super();
@@ -240,45 +263,64 @@ class TransactionOptions extends $pb.GeneratedMessage {
   TransactionOptions createEmptyInstance() => create();
   static $pb.PbList<TransactionOptions> createRepeated() =>
       $pb.PbList<TransactionOptions>();
-  static TransactionOptions getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TransactionOptions getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TransactionOptions>(create);
   static TransactionOptions _defaultInstance;
 
   TransactionOptions_Mode whichMode() =>
       _TransactionOptions_ModeByTag[$_whichOneof(0)];
   void clearMode() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   TransactionOptions_ReadWrite get readWrite => $_getN(0);
+  @$pb.TagNumber(1)
   set readWrite(TransactionOptions_ReadWrite v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasReadWrite() => $_has(0);
+  @$pb.TagNumber(1)
   void clearReadWrite() => clearField(1);
+  @$pb.TagNumber(1)
+  TransactionOptions_ReadWrite ensureReadWrite() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   TransactionOptions_ReadOnly get readOnly => $_getN(1);
+  @$pb.TagNumber(2)
   set readOnly(TransactionOptions_ReadOnly v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasReadOnly() => $_has(1);
+  @$pb.TagNumber(2)
   void clearReadOnly() => clearField(2);
+  @$pb.TagNumber(2)
+  TransactionOptions_ReadOnly ensureReadOnly() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   TransactionOptions_PartitionedDml get partitionedDml => $_getN(2);
+  @$pb.TagNumber(3)
   set partitionedDml(TransactionOptions_PartitionedDml v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPartitionedDml() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPartitionedDml() => clearField(3);
+  @$pb.TagNumber(3)
+  TransactionOptions_PartitionedDml ensurePartitionedDml() => $_ensure(2);
 }
 
 class Transaction extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Transaction',
-      package: const $pb.PackageName('google.spanner.v1'))
+      package: const $pb.PackageName('google.spanner.v1'),
+      createEmptyInstance: create)
     ..a<$core.List<$core.int>>(1, 'id', $pb.PbFieldType.OY)
-    ..a<$0.Timestamp>(2, 'readTimestamp', $pb.PbFieldType.OM,
-        $0.Timestamp.getDefault, $0.Timestamp.create)
+    ..aOM<$0.Timestamp>(2, 'readTimestamp', subBuilder: $0.Timestamp.create)
     ..hasRequiredFields = false;
 
   Transaction._() : super();
@@ -297,24 +339,36 @@ class Transaction extends $pb.GeneratedMessage {
   static Transaction create() => Transaction._();
   Transaction createEmptyInstance() => create();
   static $pb.PbList<Transaction> createRepeated() => $pb.PbList<Transaction>();
-  static Transaction getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Transaction getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Transaction>(create);
   static Transaction _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$core.int> get id => $_getN(0);
+  @$pb.TagNumber(1)
   set id($core.List<$core.int> v) {
     $_setBytes(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearId() => clearField(1);
 
+  @$pb.TagNumber(2)
   $0.Timestamp get readTimestamp => $_getN(1);
+  @$pb.TagNumber(2)
   set readTimestamp($0.Timestamp v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasReadTimestamp() => $_has(1);
+  @$pb.TagNumber(2)
   void clearReadTimestamp() => clearField(2);
+  @$pb.TagNumber(2)
+  $0.Timestamp ensureReadTimestamp() => $_ensure(1);
 }
 
 enum TransactionSelector_Selector { singleUse, id, begin, notSet }
@@ -328,13 +382,13 @@ class TransactionSelector extends $pb.GeneratedMessage {
     0: TransactionSelector_Selector.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TransactionSelector',
-      package: const $pb.PackageName('google.spanner.v1'))
+      package: const $pb.PackageName('google.spanner.v1'),
+      createEmptyInstance: create)
     ..oo(0, [1, 2, 3])
-    ..a<TransactionOptions>(1, 'singleUse', $pb.PbFieldType.OM,
-        TransactionOptions.getDefault, TransactionOptions.create)
+    ..aOM<TransactionOptions>(1, 'singleUse',
+        subBuilder: TransactionOptions.create)
     ..a<$core.List<$core.int>>(2, 'id', $pb.PbFieldType.OY)
-    ..a<TransactionOptions>(3, 'begin', $pb.PbFieldType.OM,
-        TransactionOptions.getDefault, TransactionOptions.create)
+    ..aOM<TransactionOptions>(3, 'begin', subBuilder: TransactionOptions.create)
     ..hasRequiredFields = false;
 
   TransactionSelector._() : super();
@@ -354,35 +408,52 @@ class TransactionSelector extends $pb.GeneratedMessage {
   TransactionSelector createEmptyInstance() => create();
   static $pb.PbList<TransactionSelector> createRepeated() =>
       $pb.PbList<TransactionSelector>();
-  static TransactionSelector getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TransactionSelector getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TransactionSelector>(create);
   static TransactionSelector _defaultInstance;
 
   TransactionSelector_Selector whichSelector() =>
       _TransactionSelector_SelectorByTag[$_whichOneof(0)];
   void clearSelector() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   TransactionOptions get singleUse => $_getN(0);
+  @$pb.TagNumber(1)
   set singleUse(TransactionOptions v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasSingleUse() => $_has(0);
+  @$pb.TagNumber(1)
   void clearSingleUse() => clearField(1);
+  @$pb.TagNumber(1)
+  TransactionOptions ensureSingleUse() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $core.List<$core.int> get id => $_getN(1);
+  @$pb.TagNumber(2)
   set id($core.List<$core.int> v) {
     $_setBytes(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearId() => clearField(2);
 
+  @$pb.TagNumber(3)
   TransactionOptions get begin => $_getN(2);
+  @$pb.TagNumber(3)
   set begin(TransactionOptions v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasBegin() => $_has(2);
+  @$pb.TagNumber(3)
   void clearBegin() => clearField(3);
+  @$pb.TagNumber(3)
+  TransactionOptions ensureBegin() => $_ensure(2);
 }

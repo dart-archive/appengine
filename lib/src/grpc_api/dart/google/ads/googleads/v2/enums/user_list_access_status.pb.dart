@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -14,7 +13,8 @@ export 'user_list_access_status.pbenum.dart';
 
 class UserListAccessStatusEnum extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UserListAccessStatusEnum',
-      package: const $pb.PackageName('google.ads.googleads.v2.enums'))
+      package: const $pb.PackageName('google.ads.googleads.v2.enums'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   UserListAccessStatusEnum._() : super();
@@ -36,7 +36,8 @@ class UserListAccessStatusEnum extends $pb.GeneratedMessage {
   UserListAccessStatusEnum createEmptyInstance() => create();
   static $pb.PbList<UserListAccessStatusEnum> createRepeated() =>
       $pb.PbList<UserListAccessStatusEnum>();
-  static UserListAccessStatusEnum getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UserListAccessStatusEnum getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UserListAccessStatusEnum>(create);
   static UserListAccessStatusEnum _defaultInstance;
 }

@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -18,7 +17,8 @@ export 'entity_type.pbenum.dart';
 
 class EntityType_Entity extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('EntityType.Entity',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'value')
     ..pPS(2, 'synonyms')
     ..hasRequiredFields = false;
@@ -40,42 +40,46 @@ class EntityType_Entity extends $pb.GeneratedMessage {
   EntityType_Entity createEmptyInstance() => create();
   static $pb.PbList<EntityType_Entity> createRepeated() =>
       $pb.PbList<EntityType_Entity>();
-  static EntityType_Entity getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static EntityType_Entity getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<EntityType_Entity>(create);
   static EntityType_Entity _defaultInstance;
 
-  $core.String get value => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get value => $_getSZ(0);
+  @$pb.TagNumber(1)
   set value($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasValue() => $_has(0);
+  @$pb.TagNumber(1)
   void clearValue() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<$core.String> get synonyms => $_getList(1);
 }
 
 class EntityType extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('EntityType',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..aOS(2, 'displayName')
-    ..e<EntityType_Kind>(
-        3,
-        'kind',
-        $pb.PbFieldType.OE,
-        EntityType_Kind.KIND_UNSPECIFIED,
-        EntityType_Kind.valueOf,
-        EntityType_Kind.values)
+    ..e<EntityType_Kind>(3, 'kind', $pb.PbFieldType.OE,
+        defaultOrMaker: EntityType_Kind.KIND_UNSPECIFIED,
+        valueOf: EntityType_Kind.valueOf,
+        enumValues: EntityType_Kind.values)
     ..e<EntityType_AutoExpansionMode>(
-        4,
-        'autoExpansionMode',
-        $pb.PbFieldType.OE,
-        EntityType_AutoExpansionMode.AUTO_EXPANSION_MODE_UNSPECIFIED,
-        EntityType_AutoExpansionMode.valueOf,
-        EntityType_AutoExpansionMode.values)
-    ..pc<EntityType_Entity>(
-        6, 'entities', $pb.PbFieldType.PM, EntityType_Entity.create)
+        4, 'autoExpansionMode', $pb.PbFieldType.OE,
+        defaultOrMaker:
+            EntityType_AutoExpansionMode.AUTO_EXPANSION_MODE_UNSPECIFIED,
+        valueOf: EntityType_AutoExpansionMode.valueOf,
+        enumValues: EntityType_AutoExpansionMode.values)
+    ..pc<EntityType_Entity>(6, 'entities', $pb.PbFieldType.PM,
+        subBuilder: EntityType_Entity.create)
+    ..aOB(7, 'enableFuzzyExtraction')
     ..hasRequiredFields = false;
 
   EntityType._() : super();
@@ -94,47 +98,79 @@ class EntityType extends $pb.GeneratedMessage {
   static EntityType create() => EntityType._();
   EntityType createEmptyInstance() => create();
   static $pb.PbList<EntityType> createRepeated() => $pb.PbList<EntityType>();
-  static EntityType getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static EntityType getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<EntityType>(create);
   static EntityType _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.String get displayName => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get displayName => $_getSZ(1);
+  @$pb.TagNumber(2)
   set displayName($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasDisplayName() => $_has(1);
+  @$pb.TagNumber(2)
   void clearDisplayName() => clearField(2);
 
+  @$pb.TagNumber(3)
   EntityType_Kind get kind => $_getN(2);
+  @$pb.TagNumber(3)
   set kind(EntityType_Kind v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasKind() => $_has(2);
+  @$pb.TagNumber(3)
   void clearKind() => clearField(3);
 
+  @$pb.TagNumber(4)
   EntityType_AutoExpansionMode get autoExpansionMode => $_getN(3);
+  @$pb.TagNumber(4)
   set autoExpansionMode(EntityType_AutoExpansionMode v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasAutoExpansionMode() => $_has(3);
+  @$pb.TagNumber(4)
   void clearAutoExpansionMode() => clearField(4);
 
+  @$pb.TagNumber(6)
   $core.List<EntityType_Entity> get entities => $_getList(4);
+
+  @$pb.TagNumber(7)
+  $core.bool get enableFuzzyExtraction => $_getBF(5);
+  @$pb.TagNumber(7)
+  set enableFuzzyExtraction($core.bool v) {
+    $_setBool(5, v);
+  }
+
+  @$pb.TagNumber(7)
+  $core.bool hasEnableFuzzyExtraction() => $_has(5);
+  @$pb.TagNumber(7)
+  void clearEnableFuzzyExtraction() => clearField(7);
 }
 
 class ListEntityTypesRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListEntityTypesRequest',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..aOS(2, 'languageCode')
     ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
@@ -160,47 +196,66 @@ class ListEntityTypesRequest extends $pb.GeneratedMessage {
   ListEntityTypesRequest createEmptyInstance() => create();
   static $pb.PbList<ListEntityTypesRequest> createRepeated() =>
       $pb.PbList<ListEntityTypesRequest>();
-  static ListEntityTypesRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListEntityTypesRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListEntityTypesRequest>(create);
   static ListEntityTypesRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.String get languageCode => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get languageCode => $_getSZ(1);
+  @$pb.TagNumber(2)
   set languageCode($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasLanguageCode() => $_has(1);
+  @$pb.TagNumber(2)
   void clearLanguageCode() => clearField(2);
 
-  $core.int get pageSize => $_get(2, 0);
+  @$pb.TagNumber(3)
+  $core.int get pageSize => $_getIZ(2);
+  @$pb.TagNumber(3)
   set pageSize($core.int v) {
     $_setSignedInt32(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageSize() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageSize() => clearField(3);
 
-  $core.String get pageToken => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get pageToken => $_getSZ(3);
+  @$pb.TagNumber(4)
   set pageToken($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasPageToken() => $_has(3);
+  @$pb.TagNumber(4)
   void clearPageToken() => clearField(4);
 }
 
 class ListEntityTypesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListEntityTypesResponse',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
-    ..pc<EntityType>(1, 'entityTypes', $pb.PbFieldType.PM, EntityType.create)
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
+    ..pc<EntityType>(1, 'entityTypes', $pb.PbFieldType.PM,
+        subBuilder: EntityType.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -223,24 +278,31 @@ class ListEntityTypesResponse extends $pb.GeneratedMessage {
   ListEntityTypesResponse createEmptyInstance() => create();
   static $pb.PbList<ListEntityTypesResponse> createRepeated() =>
       $pb.PbList<ListEntityTypesResponse>();
-  static ListEntityTypesResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListEntityTypesResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListEntityTypesResponse>(create);
   static ListEntityTypesResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<EntityType> get entityTypes => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class GetEntityTypeRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetEntityTypeRequest',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..aOS(2, 'languageCode')
     ..hasRequiredFields = false;
@@ -263,33 +325,42 @@ class GetEntityTypeRequest extends $pb.GeneratedMessage {
   GetEntityTypeRequest createEmptyInstance() => create();
   static $pb.PbList<GetEntityTypeRequest> createRepeated() =>
       $pb.PbList<GetEntityTypeRequest>();
-  static GetEntityTypeRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetEntityTypeRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetEntityTypeRequest>(create);
   static GetEntityTypeRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.String get languageCode => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get languageCode => $_getSZ(1);
+  @$pb.TagNumber(2)
   set languageCode($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasLanguageCode() => $_has(1);
+  @$pb.TagNumber(2)
   void clearLanguageCode() => clearField(2);
 }
 
 class CreateEntityTypeRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateEntityTypeRequest',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
-    ..a<EntityType>(2, 'entityType', $pb.PbFieldType.OM, EntityType.getDefault,
-        EntityType.create)
+    ..aOM<EntityType>(2, 'entityType', subBuilder: EntityType.create)
     ..aOS(3, 'languageCode')
     ..hasRequiredFields = false;
 
@@ -312,43 +383,57 @@ class CreateEntityTypeRequest extends $pb.GeneratedMessage {
   CreateEntityTypeRequest createEmptyInstance() => create();
   static $pb.PbList<CreateEntityTypeRequest> createRepeated() =>
       $pb.PbList<CreateEntityTypeRequest>();
-  static CreateEntityTypeRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateEntityTypeRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateEntityTypeRequest>(create);
   static CreateEntityTypeRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  @$pb.TagNumber(2)
   EntityType get entityType => $_getN(1);
+  @$pb.TagNumber(2)
   set entityType(EntityType v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasEntityType() => $_has(1);
+  @$pb.TagNumber(2)
   void clearEntityType() => clearField(2);
+  @$pb.TagNumber(2)
+  EntityType ensureEntityType() => $_ensure(1);
 
-  $core.String get languageCode => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get languageCode => $_getSZ(2);
+  @$pb.TagNumber(3)
   set languageCode($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasLanguageCode() => $_has(2);
+  @$pb.TagNumber(3)
   void clearLanguageCode() => clearField(3);
 }
 
 class UpdateEntityTypeRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateEntityTypeRequest',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
-    ..a<EntityType>(1, 'entityType', $pb.PbFieldType.OM, EntityType.getDefault,
-        EntityType.create)
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
+    ..aOM<EntityType>(1, 'entityType', subBuilder: EntityType.create)
     ..aOS(2, 'languageCode')
-    ..a<$3.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $3.FieldMask.getDefault, $3.FieldMask.create)
+    ..aOM<$3.FieldMask>(3, 'updateMask', subBuilder: $3.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateEntityTypeRequest._() : super();
@@ -370,38 +455,56 @@ class UpdateEntityTypeRequest extends $pb.GeneratedMessage {
   UpdateEntityTypeRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateEntityTypeRequest> createRepeated() =>
       $pb.PbList<UpdateEntityTypeRequest>();
-  static UpdateEntityTypeRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateEntityTypeRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateEntityTypeRequest>(create);
   static UpdateEntityTypeRequest _defaultInstance;
 
+  @$pb.TagNumber(1)
   EntityType get entityType => $_getN(0);
+  @$pb.TagNumber(1)
   set entityType(EntityType v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasEntityType() => $_has(0);
+  @$pb.TagNumber(1)
   void clearEntityType() => clearField(1);
+  @$pb.TagNumber(1)
+  EntityType ensureEntityType() => $_ensure(0);
 
-  $core.String get languageCode => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get languageCode => $_getSZ(1);
+  @$pb.TagNumber(2)
   set languageCode($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasLanguageCode() => $_has(1);
+  @$pb.TagNumber(2)
   void clearLanguageCode() => clearField(2);
 
+  @$pb.TagNumber(3)
   $3.FieldMask get updateMask => $_getN(2);
+  @$pb.TagNumber(3)
   set updateMask($3.FieldMask v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasUpdateMask() => $_has(2);
+  @$pb.TagNumber(3)
   void clearUpdateMask() => clearField(3);
+  @$pb.TagNumber(3)
+  $3.FieldMask ensureUpdateMask() => $_ensure(2);
 }
 
 class DeleteEntityTypeRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteEntityTypeRequest',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -424,16 +527,21 @@ class DeleteEntityTypeRequest extends $pb.GeneratedMessage {
   DeleteEntityTypeRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteEntityTypeRequest> createRepeated() =>
       $pb.PbList<DeleteEntityTypeRequest>();
-  static DeleteEntityTypeRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteEntityTypeRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteEntityTypeRequest>(create);
   static DeleteEntityTypeRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
@@ -453,15 +561,15 @@ class BatchUpdateEntityTypesRequest extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'BatchUpdateEntityTypesRequest',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
     ..oo(0, [2, 3])
     ..aOS(1, 'parent')
     ..aOS(2, 'entityTypeBatchUri')
-    ..a<EntityTypeBatch>(3, 'entityTypeBatchInline', $pb.PbFieldType.OM,
-        EntityTypeBatch.getDefault, EntityTypeBatch.create)
+    ..aOM<EntityTypeBatch>(3, 'entityTypeBatchInline',
+        subBuilder: EntityTypeBatch.create)
     ..aOS(4, 'languageCode')
-    ..a<$3.FieldMask>(5, 'updateMask', $pb.PbFieldType.OM,
-        $3.FieldMask.getDefault, $3.FieldMask.create)
+    ..aOM<$3.FieldMask>(5, 'updateMask', subBuilder: $3.FieldMask.create)
     ..hasRequiredFields = false;
 
   BatchUpdateEntityTypesRequest._() : super();
@@ -485,60 +593,87 @@ class BatchUpdateEntityTypesRequest extends $pb.GeneratedMessage {
   BatchUpdateEntityTypesRequest createEmptyInstance() => create();
   static $pb.PbList<BatchUpdateEntityTypesRequest> createRepeated() =>
       $pb.PbList<BatchUpdateEntityTypesRequest>();
-  static BatchUpdateEntityTypesRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static BatchUpdateEntityTypesRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BatchUpdateEntityTypesRequest>(create);
   static BatchUpdateEntityTypesRequest _defaultInstance;
 
   BatchUpdateEntityTypesRequest_EntityTypeBatch whichEntityTypeBatch() =>
       _BatchUpdateEntityTypesRequest_EntityTypeBatchByTag[$_whichOneof(0)];
   void clearEntityTypeBatch() => clearField($_whichOneof(0));
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.String get entityTypeBatchUri => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get entityTypeBatchUri => $_getSZ(1);
+  @$pb.TagNumber(2)
   set entityTypeBatchUri($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasEntityTypeBatchUri() => $_has(1);
+  @$pb.TagNumber(2)
   void clearEntityTypeBatchUri() => clearField(2);
 
+  @$pb.TagNumber(3)
   EntityTypeBatch get entityTypeBatchInline => $_getN(2);
+  @$pb.TagNumber(3)
   set entityTypeBatchInline(EntityTypeBatch v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasEntityTypeBatchInline() => $_has(2);
+  @$pb.TagNumber(3)
   void clearEntityTypeBatchInline() => clearField(3);
+  @$pb.TagNumber(3)
+  EntityTypeBatch ensureEntityTypeBatchInline() => $_ensure(2);
 
-  $core.String get languageCode => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get languageCode => $_getSZ(3);
+  @$pb.TagNumber(4)
   set languageCode($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasLanguageCode() => $_has(3);
+  @$pb.TagNumber(4)
   void clearLanguageCode() => clearField(4);
 
+  @$pb.TagNumber(5)
   $3.FieldMask get updateMask => $_getN(4);
+  @$pb.TagNumber(5)
   set updateMask($3.FieldMask v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasUpdateMask() => $_has(4);
+  @$pb.TagNumber(5)
   void clearUpdateMask() => clearField(5);
+  @$pb.TagNumber(5)
+  $3.FieldMask ensureUpdateMask() => $_ensure(4);
 }
 
 class BatchUpdateEntityTypesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'BatchUpdateEntityTypesResponse',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
-    ..pc<EntityType>(1, 'entityTypes', $pb.PbFieldType.PM, EntityType.create)
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
+    ..pc<EntityType>(1, 'entityTypes', $pb.PbFieldType.PM,
+        subBuilder: EntityType.create)
     ..hasRequiredFields = false;
 
   BatchUpdateEntityTypesResponse._() : super();
@@ -562,17 +697,20 @@ class BatchUpdateEntityTypesResponse extends $pb.GeneratedMessage {
   BatchUpdateEntityTypesResponse createEmptyInstance() => create();
   static $pb.PbList<BatchUpdateEntityTypesResponse> createRepeated() =>
       $pb.PbList<BatchUpdateEntityTypesResponse>();
-  static BatchUpdateEntityTypesResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static BatchUpdateEntityTypesResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BatchUpdateEntityTypesResponse>(create);
   static BatchUpdateEntityTypesResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<EntityType> get entityTypes => $_getList(0);
 }
 
 class BatchDeleteEntityTypesRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'BatchDeleteEntityTypesRequest',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..pPS(2, 'entityTypeNames')
     ..hasRequiredFields = false;
@@ -598,28 +736,35 @@ class BatchDeleteEntityTypesRequest extends $pb.GeneratedMessage {
   BatchDeleteEntityTypesRequest createEmptyInstance() => create();
   static $pb.PbList<BatchDeleteEntityTypesRequest> createRepeated() =>
       $pb.PbList<BatchDeleteEntityTypesRequest>();
-  static BatchDeleteEntityTypesRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static BatchDeleteEntityTypesRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BatchDeleteEntityTypesRequest>(create);
   static BatchDeleteEntityTypesRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<$core.String> get entityTypeNames => $_getList(1);
 }
 
 class BatchCreateEntitiesRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'BatchCreateEntitiesRequest',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
-    ..pc<EntityType_Entity>(
-        2, 'entities', $pb.PbFieldType.PM, EntityType_Entity.create)
+    ..pc<EntityType_Entity>(2, 'entities', $pb.PbFieldType.PM,
+        subBuilder: EntityType_Entity.create)
     ..aOS(3, 'languageCode')
     ..hasRequiredFields = false;
 
@@ -643,39 +788,49 @@ class BatchCreateEntitiesRequest extends $pb.GeneratedMessage {
   BatchCreateEntitiesRequest createEmptyInstance() => create();
   static $pb.PbList<BatchCreateEntitiesRequest> createRepeated() =>
       $pb.PbList<BatchCreateEntitiesRequest>();
-  static BatchCreateEntitiesRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static BatchCreateEntitiesRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BatchCreateEntitiesRequest>(create);
   static BatchCreateEntitiesRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<EntityType_Entity> get entities => $_getList(1);
 
-  $core.String get languageCode => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get languageCode => $_getSZ(2);
+  @$pb.TagNumber(3)
   set languageCode($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasLanguageCode() => $_has(2);
+  @$pb.TagNumber(3)
   void clearLanguageCode() => clearField(3);
 }
 
 class BatchUpdateEntitiesRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'BatchUpdateEntitiesRequest',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
-    ..pc<EntityType_Entity>(
-        2, 'entities', $pb.PbFieldType.PM, EntityType_Entity.create)
+    ..pc<EntityType_Entity>(2, 'entities', $pb.PbFieldType.PM,
+        subBuilder: EntityType_Entity.create)
     ..aOS(3, 'languageCode')
-    ..a<$3.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
-        $3.FieldMask.getDefault, $3.FieldMask.create)
+    ..aOM<$3.FieldMask>(4, 'updateMask', subBuilder: $3.FieldMask.create)
     ..hasRequiredFields = false;
 
   BatchUpdateEntitiesRequest._() : super();
@@ -698,41 +853,58 @@ class BatchUpdateEntitiesRequest extends $pb.GeneratedMessage {
   BatchUpdateEntitiesRequest createEmptyInstance() => create();
   static $pb.PbList<BatchUpdateEntitiesRequest> createRepeated() =>
       $pb.PbList<BatchUpdateEntitiesRequest>();
-  static BatchUpdateEntitiesRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static BatchUpdateEntitiesRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BatchUpdateEntitiesRequest>(create);
   static BatchUpdateEntitiesRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<EntityType_Entity> get entities => $_getList(1);
 
-  $core.String get languageCode => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get languageCode => $_getSZ(2);
+  @$pb.TagNumber(3)
   set languageCode($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasLanguageCode() => $_has(2);
+  @$pb.TagNumber(3)
   void clearLanguageCode() => clearField(3);
 
+  @$pb.TagNumber(4)
   $3.FieldMask get updateMask => $_getN(3);
+  @$pb.TagNumber(4)
   set updateMask($3.FieldMask v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasUpdateMask() => $_has(3);
+  @$pb.TagNumber(4)
   void clearUpdateMask() => clearField(4);
+  @$pb.TagNumber(4)
+  $3.FieldMask ensureUpdateMask() => $_ensure(3);
 }
 
 class BatchDeleteEntitiesRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'BatchDeleteEntitiesRequest',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..pPS(2, 'entityValues')
     ..aOS(3, 'languageCode')
@@ -758,33 +930,45 @@ class BatchDeleteEntitiesRequest extends $pb.GeneratedMessage {
   BatchDeleteEntitiesRequest createEmptyInstance() => create();
   static $pb.PbList<BatchDeleteEntitiesRequest> createRepeated() =>
       $pb.PbList<BatchDeleteEntitiesRequest>();
-  static BatchDeleteEntitiesRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static BatchDeleteEntitiesRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BatchDeleteEntitiesRequest>(create);
   static BatchDeleteEntitiesRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<$core.String> get entityValues => $_getList(1);
 
-  $core.String get languageCode => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get languageCode => $_getSZ(2);
+  @$pb.TagNumber(3)
   set languageCode($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasLanguageCode() => $_has(2);
+  @$pb.TagNumber(3)
   void clearLanguageCode() => clearField(3);
 }
 
 class EntityTypeBatch extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('EntityTypeBatch',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2'))
-    ..pc<EntityType>(1, 'entityTypes', $pb.PbFieldType.PM, EntityType.create)
+      package: const $pb.PackageName('google.cloud.dialogflow.v2'),
+      createEmptyInstance: create)
+    ..pc<EntityType>(1, 'entityTypes', $pb.PbFieldType.PM,
+        subBuilder: EntityType.create)
     ..hasRequiredFields = false;
 
   EntityTypeBatch._() : super();
@@ -804,9 +988,11 @@ class EntityTypeBatch extends $pb.GeneratedMessage {
   EntityTypeBatch createEmptyInstance() => create();
   static $pb.PbList<EntityTypeBatch> createRepeated() =>
       $pb.PbList<EntityTypeBatch>();
-  static EntityTypeBatch getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static EntityTypeBatch getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<EntityTypeBatch>(create);
   static EntityTypeBatch _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<EntityType> get entityTypes => $_getList(0);
 }

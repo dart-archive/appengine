@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -21,7 +20,8 @@ export 'product_search_service.pbenum.dart';
 
 class Product_KeyValue extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Product.KeyValue',
-      package: const $pb.PackageName('google.cloud.vision.v1'))
+      package: const $pb.PackageName('google.cloud.vision.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'key')
     ..aOS(2, 'value')
     ..hasRequiredFields = false;
@@ -43,36 +43,46 @@ class Product_KeyValue extends $pb.GeneratedMessage {
   Product_KeyValue createEmptyInstance() => create();
   static $pb.PbList<Product_KeyValue> createRepeated() =>
       $pb.PbList<Product_KeyValue>();
-  static Product_KeyValue getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Product_KeyValue getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Product_KeyValue>(create);
   static Product_KeyValue _defaultInstance;
 
-  $core.String get key => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get key => $_getSZ(0);
+  @$pb.TagNumber(1)
   set key($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasKey() => $_has(0);
+  @$pb.TagNumber(1)
   void clearKey() => clearField(1);
 
-  $core.String get value => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get value => $_getSZ(1);
+  @$pb.TagNumber(2)
   set value($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasValue() => $_has(1);
+  @$pb.TagNumber(2)
   void clearValue() => clearField(2);
 }
 
 class Product extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Product',
-      package: const $pb.PackageName('google.cloud.vision.v1'))
+      package: const $pb.PackageName('google.cloud.vision.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..aOS(2, 'displayName')
     ..aOS(3, 'description')
     ..aOS(4, 'productCategory')
-    ..pc<Product_KeyValue>(
-        5, 'productLabels', $pb.PbFieldType.PM, Product_KeyValue.create)
+    ..pc<Product_KeyValue>(5, 'productLabels', $pb.PbFieldType.PM,
+        subBuilder: Product_KeyValue.create)
     ..hasRequiredFields = false;
 
   Product._() : super();
@@ -91,53 +101,71 @@ class Product extends $pb.GeneratedMessage {
   static Product create() => Product._();
   Product createEmptyInstance() => create();
   static $pb.PbList<Product> createRepeated() => $pb.PbList<Product>();
-  static Product getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Product getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Product>(create);
   static Product _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.String get displayName => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get displayName => $_getSZ(1);
+  @$pb.TagNumber(2)
   set displayName($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasDisplayName() => $_has(1);
+  @$pb.TagNumber(2)
   void clearDisplayName() => clearField(2);
 
-  $core.String get description => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get description => $_getSZ(2);
+  @$pb.TagNumber(3)
   set description($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasDescription() => $_has(2);
+  @$pb.TagNumber(3)
   void clearDescription() => clearField(3);
 
-  $core.String get productCategory => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get productCategory => $_getSZ(3);
+  @$pb.TagNumber(4)
   set productCategory($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasProductCategory() => $_has(3);
+  @$pb.TagNumber(4)
   void clearProductCategory() => clearField(4);
 
+  @$pb.TagNumber(5)
   $core.List<Product_KeyValue> get productLabels => $_getList(4);
 }
 
 class ProductSet extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ProductSet',
-      package: const $pb.PackageName('google.cloud.vision.v1'))
+      package: const $pb.PackageName('google.cloud.vision.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..aOS(2, 'displayName')
-    ..a<$3.Timestamp>(3, 'indexTime', $pb.PbFieldType.OM,
-        $3.Timestamp.getDefault, $3.Timestamp.create)
-    ..a<$4.Status>(4, 'indexError', $pb.PbFieldType.OM, $4.Status.getDefault,
-        $4.Status.create)
+    ..aOM<$3.Timestamp>(3, 'indexTime', subBuilder: $3.Timestamp.create)
+    ..aOM<$4.Status>(4, 'indexError', subBuilder: $4.Status.create)
     ..hasRequiredFields = false;
 
   ProductSet._() : super();
@@ -156,49 +184,72 @@ class ProductSet extends $pb.GeneratedMessage {
   static ProductSet create() => ProductSet._();
   ProductSet createEmptyInstance() => create();
   static $pb.PbList<ProductSet> createRepeated() => $pb.PbList<ProductSet>();
-  static ProductSet getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ProductSet getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ProductSet>(create);
   static ProductSet _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.String get displayName => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get displayName => $_getSZ(1);
+  @$pb.TagNumber(2)
   set displayName($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasDisplayName() => $_has(1);
+  @$pb.TagNumber(2)
   void clearDisplayName() => clearField(2);
 
+  @$pb.TagNumber(3)
   $3.Timestamp get indexTime => $_getN(2);
+  @$pb.TagNumber(3)
   set indexTime($3.Timestamp v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasIndexTime() => $_has(2);
+  @$pb.TagNumber(3)
   void clearIndexTime() => clearField(3);
+  @$pb.TagNumber(3)
+  $3.Timestamp ensureIndexTime() => $_ensure(2);
 
+  @$pb.TagNumber(4)
   $4.Status get indexError => $_getN(3);
+  @$pb.TagNumber(4)
   set indexError($4.Status v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasIndexError() => $_has(3);
+  @$pb.TagNumber(4)
   void clearIndexError() => clearField(4);
+  @$pb.TagNumber(4)
+  $4.Status ensureIndexError() => $_ensure(3);
 }
 
 class ReferenceImage extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ReferenceImage',
-      package: const $pb.PackageName('google.cloud.vision.v1'))
+      package: const $pb.PackageName('google.cloud.vision.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..aOS(2, 'uri')
-    ..pc<$5.BoundingPoly>(
-        3, 'boundingPolys', $pb.PbFieldType.PM, $5.BoundingPoly.create)
+    ..pc<$5.BoundingPoly>(3, 'boundingPolys', $pb.PbFieldType.PM,
+        subBuilder: $5.BoundingPoly.create)
     ..hasRequiredFields = false;
 
   ReferenceImage._() : super();
@@ -218,34 +269,45 @@ class ReferenceImage extends $pb.GeneratedMessage {
   ReferenceImage createEmptyInstance() => create();
   static $pb.PbList<ReferenceImage> createRepeated() =>
       $pb.PbList<ReferenceImage>();
-  static ReferenceImage getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ReferenceImage getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ReferenceImage>(create);
   static ReferenceImage _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.String get uri => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get uri => $_getSZ(1);
+  @$pb.TagNumber(2)
   set uri($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasUri() => $_has(1);
+  @$pb.TagNumber(2)
   void clearUri() => clearField(2);
 
+  @$pb.TagNumber(3)
   $core.List<$5.BoundingPoly> get boundingPolys => $_getList(2);
 }
 
 class CreateProductRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateProductRequest',
-      package: const $pb.PackageName('google.cloud.vision.v1'))
+      package: const $pb.PackageName('google.cloud.vision.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
-    ..a<Product>(
-        2, 'product', $pb.PbFieldType.OM, Product.getDefault, Product.create)
+    ..aOM<Product>(2, 'product', subBuilder: Product.create)
     ..aOS(3, 'productId')
     ..hasRequiredFields = false;
 
@@ -267,38 +329,54 @@ class CreateProductRequest extends $pb.GeneratedMessage {
   CreateProductRequest createEmptyInstance() => create();
   static $pb.PbList<CreateProductRequest> createRepeated() =>
       $pb.PbList<CreateProductRequest>();
-  static CreateProductRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateProductRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateProductRequest>(create);
   static CreateProductRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  @$pb.TagNumber(2)
   Product get product => $_getN(1);
+  @$pb.TagNumber(2)
   set product(Product v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasProduct() => $_has(1);
+  @$pb.TagNumber(2)
   void clearProduct() => clearField(2);
+  @$pb.TagNumber(2)
+  Product ensureProduct() => $_ensure(1);
 
-  $core.String get productId => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get productId => $_getSZ(2);
+  @$pb.TagNumber(3)
   set productId($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasProductId() => $_has(2);
+  @$pb.TagNumber(3)
   void clearProductId() => clearField(3);
 }
 
 class ListProductsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListProductsRequest',
-      package: const $pb.PackageName('google.cloud.vision.v1'))
+      package: const $pb.PackageName('google.cloud.vision.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(3, 'pageToken')
@@ -321,39 +399,53 @@ class ListProductsRequest extends $pb.GeneratedMessage {
   ListProductsRequest createEmptyInstance() => create();
   static $pb.PbList<ListProductsRequest> createRepeated() =>
       $pb.PbList<ListProductsRequest>();
-  static ListProductsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListProductsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListProductsRequest>(create);
   static ListProductsRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.int get pageSize => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get pageSize => $_getIZ(1);
+  @$pb.TagNumber(2)
   set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
-  $core.String get pageToken => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get pageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
   set pageToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
 }
 
 class ListProductsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListProductsResponse',
-      package: const $pb.PackageName('google.cloud.vision.v1'))
-    ..pc<Product>(1, 'products', $pb.PbFieldType.PM, Product.create)
+      package: const $pb.PackageName('google.cloud.vision.v1'),
+      createEmptyInstance: create)
+    ..pc<Product>(1, 'products', $pb.PbFieldType.PM, subBuilder: Product.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -375,24 +467,31 @@ class ListProductsResponse extends $pb.GeneratedMessage {
   ListProductsResponse createEmptyInstance() => create();
   static $pb.PbList<ListProductsResponse> createRepeated() =>
       $pb.PbList<ListProductsResponse>();
-  static ListProductsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListProductsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListProductsResponse>(create);
   static ListProductsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<Product> get products => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class GetProductRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetProductRequest',
-      package: const $pb.PackageName('google.cloud.vision.v1'))
+      package: const $pb.PackageName('google.cloud.vision.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -413,26 +512,30 @@ class GetProductRequest extends $pb.GeneratedMessage {
   GetProductRequest createEmptyInstance() => create();
   static $pb.PbList<GetProductRequest> createRepeated() =>
       $pb.PbList<GetProductRequest>();
-  static GetProductRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetProductRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetProductRequest>(create);
   static GetProductRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class UpdateProductRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateProductRequest',
-      package: const $pb.PackageName('google.cloud.vision.v1'))
-    ..a<Product>(
-        1, 'product', $pb.PbFieldType.OM, Product.getDefault, Product.create)
-    ..a<$6.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $6.FieldMask.getDefault, $6.FieldMask.create)
+      package: const $pb.PackageName('google.cloud.vision.v1'),
+      createEmptyInstance: create)
+    ..aOM<Product>(1, 'product', subBuilder: Product.create)
+    ..aOM<$6.FieldMask>(2, 'updateMask', subBuilder: $6.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateProductRequest._() : super();
@@ -453,30 +556,44 @@ class UpdateProductRequest extends $pb.GeneratedMessage {
   UpdateProductRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateProductRequest> createRepeated() =>
       $pb.PbList<UpdateProductRequest>();
-  static UpdateProductRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateProductRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateProductRequest>(create);
   static UpdateProductRequest _defaultInstance;
 
+  @$pb.TagNumber(1)
   Product get product => $_getN(0);
+  @$pb.TagNumber(1)
   set product(Product v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasProduct() => $_has(0);
+  @$pb.TagNumber(1)
   void clearProduct() => clearField(1);
+  @$pb.TagNumber(1)
+  Product ensureProduct() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $6.FieldMask get updateMask => $_getN(1);
+  @$pb.TagNumber(2)
   set updateMask($6.FieldMask v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasUpdateMask() => $_has(1);
+  @$pb.TagNumber(2)
   void clearUpdateMask() => clearField(2);
+  @$pb.TagNumber(2)
+  $6.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
 class DeleteProductRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteProductRequest',
-      package: const $pb.PackageName('google.cloud.vision.v1'))
+      package: const $pb.PackageName('google.cloud.vision.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -498,25 +615,30 @@ class DeleteProductRequest extends $pb.GeneratedMessage {
   DeleteProductRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteProductRequest> createRepeated() =>
       $pb.PbList<DeleteProductRequest>();
-  static DeleteProductRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteProductRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteProductRequest>(create);
   static DeleteProductRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class CreateProductSetRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateProductSetRequest',
-      package: const $pb.PackageName('google.cloud.vision.v1'))
+      package: const $pb.PackageName('google.cloud.vision.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
-    ..a<ProductSet>(2, 'productSet', $pb.PbFieldType.OM, ProductSet.getDefault,
-        ProductSet.create)
+    ..aOM<ProductSet>(2, 'productSet', subBuilder: ProductSet.create)
     ..aOS(3, 'productSetId')
     ..hasRequiredFields = false;
 
@@ -539,38 +661,54 @@ class CreateProductSetRequest extends $pb.GeneratedMessage {
   CreateProductSetRequest createEmptyInstance() => create();
   static $pb.PbList<CreateProductSetRequest> createRepeated() =>
       $pb.PbList<CreateProductSetRequest>();
-  static CreateProductSetRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateProductSetRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateProductSetRequest>(create);
   static CreateProductSetRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  @$pb.TagNumber(2)
   ProductSet get productSet => $_getN(1);
+  @$pb.TagNumber(2)
   set productSet(ProductSet v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasProductSet() => $_has(1);
+  @$pb.TagNumber(2)
   void clearProductSet() => clearField(2);
+  @$pb.TagNumber(2)
+  ProductSet ensureProductSet() => $_ensure(1);
 
-  $core.String get productSetId => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get productSetId => $_getSZ(2);
+  @$pb.TagNumber(3)
   set productSetId($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasProductSetId() => $_has(2);
+  @$pb.TagNumber(3)
   void clearProductSetId() => clearField(3);
 }
 
 class ListProductSetsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListProductSetsRequest',
-      package: const $pb.PackageName('google.cloud.vision.v1'))
+      package: const $pb.PackageName('google.cloud.vision.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(3, 'pageToken')
@@ -595,39 +733,54 @@ class ListProductSetsRequest extends $pb.GeneratedMessage {
   ListProductSetsRequest createEmptyInstance() => create();
   static $pb.PbList<ListProductSetsRequest> createRepeated() =>
       $pb.PbList<ListProductSetsRequest>();
-  static ListProductSetsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListProductSetsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListProductSetsRequest>(create);
   static ListProductSetsRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.int get pageSize => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get pageSize => $_getIZ(1);
+  @$pb.TagNumber(2)
   set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
-  $core.String get pageToken => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get pageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
   set pageToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
 }
 
 class ListProductSetsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListProductSetsResponse',
-      package: const $pb.PackageName('google.cloud.vision.v1'))
-    ..pc<ProductSet>(1, 'productSets', $pb.PbFieldType.PM, ProductSet.create)
+      package: const $pb.PackageName('google.cloud.vision.v1'),
+      createEmptyInstance: create)
+    ..pc<ProductSet>(1, 'productSets', $pb.PbFieldType.PM,
+        subBuilder: ProductSet.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -650,24 +803,31 @@ class ListProductSetsResponse extends $pb.GeneratedMessage {
   ListProductSetsResponse createEmptyInstance() => create();
   static $pb.PbList<ListProductSetsResponse> createRepeated() =>
       $pb.PbList<ListProductSetsResponse>();
-  static ListProductSetsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListProductSetsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListProductSetsResponse>(create);
   static ListProductSetsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<ProductSet> get productSets => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class GetProductSetRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetProductSetRequest',
-      package: const $pb.PackageName('google.cloud.vision.v1'))
+      package: const $pb.PackageName('google.cloud.vision.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -689,26 +849,30 @@ class GetProductSetRequest extends $pb.GeneratedMessage {
   GetProductSetRequest createEmptyInstance() => create();
   static $pb.PbList<GetProductSetRequest> createRepeated() =>
       $pb.PbList<GetProductSetRequest>();
-  static GetProductSetRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetProductSetRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetProductSetRequest>(create);
   static GetProductSetRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class UpdateProductSetRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateProductSetRequest',
-      package: const $pb.PackageName('google.cloud.vision.v1'))
-    ..a<ProductSet>(1, 'productSet', $pb.PbFieldType.OM, ProductSet.getDefault,
-        ProductSet.create)
-    ..a<$6.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $6.FieldMask.getDefault, $6.FieldMask.create)
+      package: const $pb.PackageName('google.cloud.vision.v1'),
+      createEmptyInstance: create)
+    ..aOM<ProductSet>(1, 'productSet', subBuilder: ProductSet.create)
+    ..aOM<$6.FieldMask>(2, 'updateMask', subBuilder: $6.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateProductSetRequest._() : super();
@@ -730,30 +894,44 @@ class UpdateProductSetRequest extends $pb.GeneratedMessage {
   UpdateProductSetRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateProductSetRequest> createRepeated() =>
       $pb.PbList<UpdateProductSetRequest>();
-  static UpdateProductSetRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateProductSetRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateProductSetRequest>(create);
   static UpdateProductSetRequest _defaultInstance;
 
+  @$pb.TagNumber(1)
   ProductSet get productSet => $_getN(0);
+  @$pb.TagNumber(1)
   set productSet(ProductSet v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasProductSet() => $_has(0);
+  @$pb.TagNumber(1)
   void clearProductSet() => clearField(1);
+  @$pb.TagNumber(1)
+  ProductSet ensureProductSet() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $6.FieldMask get updateMask => $_getN(1);
+  @$pb.TagNumber(2)
   set updateMask($6.FieldMask v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasUpdateMask() => $_has(1);
+  @$pb.TagNumber(2)
   void clearUpdateMask() => clearField(2);
+  @$pb.TagNumber(2)
+  $6.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
 class DeleteProductSetRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteProductSetRequest',
-      package: const $pb.PackageName('google.cloud.vision.v1'))
+      package: const $pb.PackageName('google.cloud.vision.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -776,26 +954,32 @@ class DeleteProductSetRequest extends $pb.GeneratedMessage {
   DeleteProductSetRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteProductSetRequest> createRepeated() =>
       $pb.PbList<DeleteProductSetRequest>();
-  static DeleteProductSetRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteProductSetRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteProductSetRequest>(create);
   static DeleteProductSetRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class CreateReferenceImageRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'CreateReferenceImageRequest',
-      package: const $pb.PackageName('google.cloud.vision.v1'))
+      package: const $pb.PackageName('google.cloud.vision.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
-    ..a<ReferenceImage>(2, 'referenceImage', $pb.PbFieldType.OM,
-        ReferenceImage.getDefault, ReferenceImage.create)
+    ..aOM<ReferenceImage>(2, 'referenceImage',
+        subBuilder: ReferenceImage.create)
     ..aOS(3, 'referenceImageId')
     ..hasRequiredFields = false;
 
@@ -820,39 +1004,55 @@ class CreateReferenceImageRequest extends $pb.GeneratedMessage {
   CreateReferenceImageRequest createEmptyInstance() => create();
   static $pb.PbList<CreateReferenceImageRequest> createRepeated() =>
       $pb.PbList<CreateReferenceImageRequest>();
-  static CreateReferenceImageRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateReferenceImageRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateReferenceImageRequest>(create);
   static CreateReferenceImageRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  @$pb.TagNumber(2)
   ReferenceImage get referenceImage => $_getN(1);
+  @$pb.TagNumber(2)
   set referenceImage(ReferenceImage v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasReferenceImage() => $_has(1);
+  @$pb.TagNumber(2)
   void clearReferenceImage() => clearField(2);
+  @$pb.TagNumber(2)
+  ReferenceImage ensureReferenceImage() => $_ensure(1);
 
-  $core.String get referenceImageId => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get referenceImageId => $_getSZ(2);
+  @$pb.TagNumber(3)
   set referenceImageId($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasReferenceImageId() => $_has(2);
+  @$pb.TagNumber(3)
   void clearReferenceImageId() => clearField(3);
 }
 
 class ListReferenceImagesRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListReferenceImagesRequest',
-      package: const $pb.PackageName('google.cloud.vision.v1'))
+      package: const $pb.PackageName('google.cloud.vision.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(3, 'pageToken')
@@ -878,41 +1078,55 @@ class ListReferenceImagesRequest extends $pb.GeneratedMessage {
   ListReferenceImagesRequest createEmptyInstance() => create();
   static $pb.PbList<ListReferenceImagesRequest> createRepeated() =>
       $pb.PbList<ListReferenceImagesRequest>();
-  static ListReferenceImagesRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListReferenceImagesRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListReferenceImagesRequest>(create);
   static ListReferenceImagesRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.int get pageSize => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get pageSize => $_getIZ(1);
+  @$pb.TagNumber(2)
   set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
-  $core.String get pageToken => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get pageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
   set pageToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
 }
 
 class ListReferenceImagesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListReferenceImagesResponse',
-      package: const $pb.PackageName('google.cloud.vision.v1'))
-    ..pc<ReferenceImage>(
-        1, 'referenceImages', $pb.PbFieldType.PM, ReferenceImage.create)
+      package: const $pb.PackageName('google.cloud.vision.v1'),
+      createEmptyInstance: create)
+    ..pc<ReferenceImage>(1, 'referenceImages', $pb.PbFieldType.PM,
+        subBuilder: ReferenceImage.create)
     ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(3, 'nextPageToken')
     ..hasRequiredFields = false;
@@ -938,32 +1152,43 @@ class ListReferenceImagesResponse extends $pb.GeneratedMessage {
   ListReferenceImagesResponse createEmptyInstance() => create();
   static $pb.PbList<ListReferenceImagesResponse> createRepeated() =>
       $pb.PbList<ListReferenceImagesResponse>();
-  static ListReferenceImagesResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListReferenceImagesResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListReferenceImagesResponse>(create);
   static ListReferenceImagesResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<ReferenceImage> get referenceImages => $_getList(0);
 
-  $core.int get pageSize => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get pageSize => $_getIZ(1);
+  @$pb.TagNumber(2)
   set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
-  $core.String get nextPageToken => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get nextPageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
   set nextPageToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasNextPageToken() => $_has(2);
+  @$pb.TagNumber(3)
   void clearNextPageToken() => clearField(3);
 }
 
 class GetReferenceImageRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetReferenceImageRequest',
-      package: const $pb.PackageName('google.cloud.vision.v1'))
+      package: const $pb.PackageName('google.cloud.vision.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -986,23 +1211,29 @@ class GetReferenceImageRequest extends $pb.GeneratedMessage {
   GetReferenceImageRequest createEmptyInstance() => create();
   static $pb.PbList<GetReferenceImageRequest> createRepeated() =>
       $pb.PbList<GetReferenceImageRequest>();
-  static GetReferenceImageRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetReferenceImageRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetReferenceImageRequest>(create);
   static GetReferenceImageRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class DeleteReferenceImageRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'DeleteReferenceImageRequest',
-      package: const $pb.PackageName('google.cloud.vision.v1'))
+      package: const $pb.PackageName('google.cloud.vision.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -1027,23 +1258,29 @@ class DeleteReferenceImageRequest extends $pb.GeneratedMessage {
   DeleteReferenceImageRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteReferenceImageRequest> createRepeated() =>
       $pb.PbList<DeleteReferenceImageRequest>();
-  static DeleteReferenceImageRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteReferenceImageRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteReferenceImageRequest>(create);
   static DeleteReferenceImageRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class AddProductToProductSetRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'AddProductToProductSetRequest',
-      package: const $pb.PackageName('google.cloud.vision.v1'))
+      package: const $pb.PackageName('google.cloud.vision.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..aOS(2, 'product')
     ..hasRequiredFields = false;
@@ -1069,31 +1306,41 @@ class AddProductToProductSetRequest extends $pb.GeneratedMessage {
   AddProductToProductSetRequest createEmptyInstance() => create();
   static $pb.PbList<AddProductToProductSetRequest> createRepeated() =>
       $pb.PbList<AddProductToProductSetRequest>();
-  static AddProductToProductSetRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static AddProductToProductSetRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AddProductToProductSetRequest>(create);
   static AddProductToProductSetRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.String get product => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get product => $_getSZ(1);
+  @$pb.TagNumber(2)
   set product($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasProduct() => $_has(1);
+  @$pb.TagNumber(2)
   void clearProduct() => clearField(2);
 }
 
 class RemoveProductFromProductSetRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'RemoveProductFromProductSetRequest',
-      package: const $pb.PackageName('google.cloud.vision.v1'))
+      package: const $pb.PackageName('google.cloud.vision.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..aOS(2, 'product')
     ..hasRequiredFields = false;
@@ -1119,31 +1366,42 @@ class RemoveProductFromProductSetRequest extends $pb.GeneratedMessage {
   RemoveProductFromProductSetRequest createEmptyInstance() => create();
   static $pb.PbList<RemoveProductFromProductSetRequest> createRepeated() =>
       $pb.PbList<RemoveProductFromProductSetRequest>();
-  static RemoveProductFromProductSetRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static RemoveProductFromProductSetRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RemoveProductFromProductSetRequest>(
+          create);
   static RemoveProductFromProductSetRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.String get product => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get product => $_getSZ(1);
+  @$pb.TagNumber(2)
   set product($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasProduct() => $_has(1);
+  @$pb.TagNumber(2)
   void clearProduct() => clearField(2);
 }
 
 class ListProductsInProductSetRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListProductsInProductSetRequest',
-      package: const $pb.PackageName('google.cloud.vision.v1'))
+      package: const $pb.PackageName('google.cloud.vision.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(3, 'pageToken')
@@ -1170,40 +1428,55 @@ class ListProductsInProductSetRequest extends $pb.GeneratedMessage {
   ListProductsInProductSetRequest createEmptyInstance() => create();
   static $pb.PbList<ListProductsInProductSetRequest> createRepeated() =>
       $pb.PbList<ListProductsInProductSetRequest>();
-  static ListProductsInProductSetRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListProductsInProductSetRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListProductsInProductSetRequest>(
+          create);
   static ListProductsInProductSetRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.int get pageSize => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get pageSize => $_getIZ(1);
+  @$pb.TagNumber(2)
   set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
-  $core.String get pageToken => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get pageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
   set pageToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
 }
 
 class ListProductsInProductSetResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListProductsInProductSetResponse',
-      package: const $pb.PackageName('google.cloud.vision.v1'))
-    ..pc<Product>(1, 'products', $pb.PbFieldType.PM, Product.create)
+      package: const $pb.PackageName('google.cloud.vision.v1'),
+      createEmptyInstance: create)
+    ..pc<Product>(1, 'products', $pb.PbFieldType.PM, subBuilder: Product.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -1228,25 +1501,33 @@ class ListProductsInProductSetResponse extends $pb.GeneratedMessage {
   ListProductsInProductSetResponse createEmptyInstance() => create();
   static $pb.PbList<ListProductsInProductSetResponse> createRepeated() =>
       $pb.PbList<ListProductsInProductSetResponse>();
-  static ListProductsInProductSetResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListProductsInProductSetResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListProductsInProductSetResponse>(
+          create);
   static ListProductsInProductSetResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<Product> get products => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class ImportProductSetsGcsSource extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ImportProductSetsGcsSource',
-      package: const $pb.PackageName('google.cloud.vision.v1'))
+      package: const $pb.PackageName('google.cloud.vision.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'csvFileUri')
     ..hasRequiredFields = false;
 
@@ -1270,16 +1551,21 @@ class ImportProductSetsGcsSource extends $pb.GeneratedMessage {
   ImportProductSetsGcsSource createEmptyInstance() => create();
   static $pb.PbList<ImportProductSetsGcsSource> createRepeated() =>
       $pb.PbList<ImportProductSetsGcsSource>();
-  static ImportProductSetsGcsSource getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ImportProductSetsGcsSource getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ImportProductSetsGcsSource>(create);
   static ImportProductSetsGcsSource _defaultInstance;
 
-  $core.String get csvFileUri => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get csvFileUri => $_getSZ(0);
+  @$pb.TagNumber(1)
   set csvFileUri($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCsvFileUri() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCsvFileUri() => clearField(1);
 }
 
@@ -1293,14 +1579,11 @@ class ImportProductSetsInputConfig extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ImportProductSetsInputConfig',
-      package: const $pb.PackageName('google.cloud.vision.v1'))
+      package: const $pb.PackageName('google.cloud.vision.v1'),
+      createEmptyInstance: create)
     ..oo(0, [1])
-    ..a<ImportProductSetsGcsSource>(
-        1,
-        'gcsSource',
-        $pb.PbFieldType.OM,
-        ImportProductSetsGcsSource.getDefault,
-        ImportProductSetsGcsSource.create)
+    ..aOM<ImportProductSetsGcsSource>(1, 'gcsSource',
+        subBuilder: ImportProductSetsGcsSource.create)
     ..hasRequiredFields = false;
 
   ImportProductSetsInputConfig._() : super();
@@ -1324,33 +1607,37 @@ class ImportProductSetsInputConfig extends $pb.GeneratedMessage {
   ImportProductSetsInputConfig createEmptyInstance() => create();
   static $pb.PbList<ImportProductSetsInputConfig> createRepeated() =>
       $pb.PbList<ImportProductSetsInputConfig>();
-  static ImportProductSetsInputConfig getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ImportProductSetsInputConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ImportProductSetsInputConfig>(create);
   static ImportProductSetsInputConfig _defaultInstance;
 
   ImportProductSetsInputConfig_Source whichSource() =>
       _ImportProductSetsInputConfig_SourceByTag[$_whichOneof(0)];
   void clearSource() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   ImportProductSetsGcsSource get gcsSource => $_getN(0);
+  @$pb.TagNumber(1)
   set gcsSource(ImportProductSetsGcsSource v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasGcsSource() => $_has(0);
+  @$pb.TagNumber(1)
   void clearGcsSource() => clearField(1);
+  @$pb.TagNumber(1)
+  ImportProductSetsGcsSource ensureGcsSource() => $_ensure(0);
 }
 
 class ImportProductSetsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ImportProductSetsRequest',
-      package: const $pb.PackageName('google.cloud.vision.v1'))
+      package: const $pb.PackageName('google.cloud.vision.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
-    ..a<ImportProductSetsInputConfig>(
-        2,
-        'inputConfig',
-        $pb.PbFieldType.OM,
-        ImportProductSetsInputConfig.getDefault,
-        ImportProductSetsInputConfig.create)
+    ..aOM<ImportProductSetsInputConfig>(2, 'inputConfig',
+        subBuilder: ImportProductSetsInputConfig.create)
     ..hasRequiredFields = false;
 
   ImportProductSetsRequest._() : super();
@@ -1372,33 +1659,46 @@ class ImportProductSetsRequest extends $pb.GeneratedMessage {
   ImportProductSetsRequest createEmptyInstance() => create();
   static $pb.PbList<ImportProductSetsRequest> createRepeated() =>
       $pb.PbList<ImportProductSetsRequest>();
-  static ImportProductSetsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ImportProductSetsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ImportProductSetsRequest>(create);
   static ImportProductSetsRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  @$pb.TagNumber(2)
   ImportProductSetsInputConfig get inputConfig => $_getN(1);
+  @$pb.TagNumber(2)
   set inputConfig(ImportProductSetsInputConfig v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasInputConfig() => $_has(1);
+  @$pb.TagNumber(2)
   void clearInputConfig() => clearField(2);
+  @$pb.TagNumber(2)
+  ImportProductSetsInputConfig ensureInputConfig() => $_ensure(1);
 }
 
 class ImportProductSetsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ImportProductSetsResponse',
-      package: const $pb.PackageName('google.cloud.vision.v1'))
-    ..pc<ReferenceImage>(
-        1, 'referenceImages', $pb.PbFieldType.PM, ReferenceImage.create)
-    ..pc<$4.Status>(2, 'statuses', $pb.PbFieldType.PM, $4.Status.create)
+      package: const $pb.PackageName('google.cloud.vision.v1'),
+      createEmptyInstance: create)
+    ..pc<ReferenceImage>(1, 'referenceImages', $pb.PbFieldType.PM,
+        subBuilder: ReferenceImage.create)
+    ..pc<$4.Status>(2, 'statuses', $pb.PbFieldType.PM,
+        subBuilder: $4.Status.create)
     ..hasRequiredFields = false;
 
   ImportProductSetsResponse._() : super();
@@ -1421,29 +1721,28 @@ class ImportProductSetsResponse extends $pb.GeneratedMessage {
   ImportProductSetsResponse createEmptyInstance() => create();
   static $pb.PbList<ImportProductSetsResponse> createRepeated() =>
       $pb.PbList<ImportProductSetsResponse>();
-  static ImportProductSetsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ImportProductSetsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ImportProductSetsResponse>(create);
   static ImportProductSetsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<ReferenceImage> get referenceImages => $_getList(0);
 
+  @$pb.TagNumber(2)
   $core.List<$4.Status> get statuses => $_getList(1);
 }
 
 class BatchOperationMetadata extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('BatchOperationMetadata',
-      package: const $pb.PackageName('google.cloud.vision.v1'))
-    ..e<BatchOperationMetadata_State>(
-        1,
-        'state',
-        $pb.PbFieldType.OE,
-        BatchOperationMetadata_State.STATE_UNSPECIFIED,
-        BatchOperationMetadata_State.valueOf,
-        BatchOperationMetadata_State.values)
-    ..a<$3.Timestamp>(2, 'submitTime', $pb.PbFieldType.OM,
-        $3.Timestamp.getDefault, $3.Timestamp.create)
-    ..a<$3.Timestamp>(3, 'endTime', $pb.PbFieldType.OM, $3.Timestamp.getDefault,
-        $3.Timestamp.create)
+      package: const $pb.PackageName('google.cloud.vision.v1'),
+      createEmptyInstance: create)
+    ..e<BatchOperationMetadata_State>(1, 'state', $pb.PbFieldType.OE,
+        defaultOrMaker: BatchOperationMetadata_State.STATE_UNSPECIFIED,
+        valueOf: BatchOperationMetadata_State.valueOf,
+        enumValues: BatchOperationMetadata_State.values)
+    ..aOM<$3.Timestamp>(2, 'submitTime', subBuilder: $3.Timestamp.create)
+    ..aOM<$3.Timestamp>(3, 'endTime', subBuilder: $3.Timestamp.create)
     ..hasRequiredFields = false;
 
   BatchOperationMetadata._() : super();
@@ -1465,38 +1764,56 @@ class BatchOperationMetadata extends $pb.GeneratedMessage {
   BatchOperationMetadata createEmptyInstance() => create();
   static $pb.PbList<BatchOperationMetadata> createRepeated() =>
       $pb.PbList<BatchOperationMetadata>();
-  static BatchOperationMetadata getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static BatchOperationMetadata getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BatchOperationMetadata>(create);
   static BatchOperationMetadata _defaultInstance;
 
+  @$pb.TagNumber(1)
   BatchOperationMetadata_State get state => $_getN(0);
+  @$pb.TagNumber(1)
   set state(BatchOperationMetadata_State v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasState() => $_has(0);
+  @$pb.TagNumber(1)
   void clearState() => clearField(1);
 
+  @$pb.TagNumber(2)
   $3.Timestamp get submitTime => $_getN(1);
+  @$pb.TagNumber(2)
   set submitTime($3.Timestamp v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasSubmitTime() => $_has(1);
+  @$pb.TagNumber(2)
   void clearSubmitTime() => clearField(2);
+  @$pb.TagNumber(2)
+  $3.Timestamp ensureSubmitTime() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $3.Timestamp get endTime => $_getN(2);
+  @$pb.TagNumber(3)
   set endTime($3.Timestamp v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasEndTime() => $_has(2);
+  @$pb.TagNumber(3)
   void clearEndTime() => clearField(3);
+  @$pb.TagNumber(3)
+  $3.Timestamp ensureEndTime() => $_ensure(2);
 }
 
 class ProductSetPurgeConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ProductSetPurgeConfig',
-      package: const $pb.PackageName('google.cloud.vision.v1'))
+      package: const $pb.PackageName('google.cloud.vision.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'productSetId')
     ..hasRequiredFields = false;
 
@@ -1519,16 +1836,21 @@ class ProductSetPurgeConfig extends $pb.GeneratedMessage {
   ProductSetPurgeConfig createEmptyInstance() => create();
   static $pb.PbList<ProductSetPurgeConfig> createRepeated() =>
       $pb.PbList<ProductSetPurgeConfig>();
-  static ProductSetPurgeConfig getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ProductSetPurgeConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ProductSetPurgeConfig>(create);
   static ProductSetPurgeConfig _defaultInstance;
 
-  $core.String get productSetId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get productSetId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set productSetId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasProductSetId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearProductSetId() => clearField(1);
 }
 
@@ -1546,11 +1868,12 @@ class PurgeProductsRequest extends $pb.GeneratedMessage {
     0: PurgeProductsRequest_Target.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('PurgeProductsRequest',
-      package: const $pb.PackageName('google.cloud.vision.v1'))
+      package: const $pb.PackageName('google.cloud.vision.v1'),
+      createEmptyInstance: create)
     ..oo(0, [2, 3])
     ..aOS(1, 'parent')
-    ..a<ProductSetPurgeConfig>(2, 'productSetPurgeConfig', $pb.PbFieldType.OM,
-        ProductSetPurgeConfig.getDefault, ProductSetPurgeConfig.create)
+    ..aOM<ProductSetPurgeConfig>(2, 'productSetPurgeConfig',
+        subBuilder: ProductSetPurgeConfig.create)
     ..aOB(3, 'deleteOrphanProducts')
     ..aOB(4, 'force')
     ..hasRequiredFields = false;
@@ -1573,43 +1896,62 @@ class PurgeProductsRequest extends $pb.GeneratedMessage {
   PurgeProductsRequest createEmptyInstance() => create();
   static $pb.PbList<PurgeProductsRequest> createRepeated() =>
       $pb.PbList<PurgeProductsRequest>();
-  static PurgeProductsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static PurgeProductsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PurgeProductsRequest>(create);
   static PurgeProductsRequest _defaultInstance;
 
   PurgeProductsRequest_Target whichTarget() =>
       _PurgeProductsRequest_TargetByTag[$_whichOneof(0)];
   void clearTarget() => clearField($_whichOneof(0));
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  @$pb.TagNumber(2)
   ProductSetPurgeConfig get productSetPurgeConfig => $_getN(1);
+  @$pb.TagNumber(2)
   set productSetPurgeConfig(ProductSetPurgeConfig v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasProductSetPurgeConfig() => $_has(1);
+  @$pb.TagNumber(2)
   void clearProductSetPurgeConfig() => clearField(2);
+  @$pb.TagNumber(2)
+  ProductSetPurgeConfig ensureProductSetPurgeConfig() => $_ensure(1);
 
-  $core.bool get deleteOrphanProducts => $_get(2, false);
+  @$pb.TagNumber(3)
+  $core.bool get deleteOrphanProducts => $_getBF(2);
+  @$pb.TagNumber(3)
   set deleteOrphanProducts($core.bool v) {
     $_setBool(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasDeleteOrphanProducts() => $_has(2);
+  @$pb.TagNumber(3)
   void clearDeleteOrphanProducts() => clearField(3);
 
-  $core.bool get force => $_get(3, false);
+  @$pb.TagNumber(4)
+  $core.bool get force => $_getBF(3);
+  @$pb.TagNumber(4)
   set force($core.bool v) {
     $_setBool(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasForce() => $_has(3);
+  @$pb.TagNumber(4)
   void clearForce() => clearField(4);
 }

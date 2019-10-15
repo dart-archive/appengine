@@ -50,6 +50,14 @@ const Ad$json = {
       '10': 'trackingUrlTemplate'
     },
     {
+      '1': 'final_url_suffix',
+      '3': 38,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.StringValue',
+      '10': 'finalUrlSuffix'
+    },
+    {
       '1': 'url_custom_parameters',
       '3': 10,
       '4': 3,

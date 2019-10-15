@@ -14,6 +14,7 @@ const RegisterDebuggeeRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.devtools.clouddebugger.v2.Debuggee',
+      '8': {},
       '10': 'debuggee'
     },
   ],
@@ -36,7 +37,7 @@ const RegisterDebuggeeResponse$json = {
 const ListActiveBreakpointsRequest$json = {
   '1': 'ListActiveBreakpointsRequest',
   '2': [
-    {'1': 'debuggee_id', '3': 1, '4': 1, '5': 9, '10': 'debuggeeId'},
+    {'1': 'debuggee_id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'debuggeeId'},
     {'1': 'wait_token', '3': 2, '4': 1, '5': 9, '10': 'waitToken'},
     {
       '1': 'success_on_timeout',
@@ -67,13 +68,14 @@ const ListActiveBreakpointsResponse$json = {
 const UpdateActiveBreakpointRequest$json = {
   '1': 'UpdateActiveBreakpointRequest',
   '2': [
-    {'1': 'debuggee_id', '3': 1, '4': 1, '5': 9, '10': 'debuggeeId'},
+    {'1': 'debuggee_id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'debuggeeId'},
     {
       '1': 'breakpoint',
       '3': 2,
       '4': 1,
       '5': 11,
       '6': '.google.devtools.clouddebugger.v2.Breakpoint',
+      '8': {},
       '10': 'breakpoint'
     },
   ],

@@ -371,6 +371,24 @@ const SafeSearchAnnotation$json = {
       '6': '.google.cloud.vision.v1.Likelihood',
       '10': 'racy'
     },
+    {'1': 'adult_confidence', '3': 16, '4': 1, '5': 2, '10': 'adultConfidence'},
+    {'1': 'spoof_confidence', '3': 18, '4': 1, '5': 2, '10': 'spoofConfidence'},
+    {
+      '1': 'medical_confidence',
+      '3': 20,
+      '4': 1,
+      '5': 2,
+      '10': 'medicalConfidence'
+    },
+    {
+      '1': 'violence_confidence',
+      '3': 22,
+      '4': 1,
+      '5': 2,
+      '10': 'violenceConfidence'
+    },
+    {'1': 'racy_confidence', '3': 24, '4': 1, '5': 2, '10': 'racyConfidence'},
+    {'1': 'nsfw_confidence', '3': 26, '4': 1, '5': 2, '10': 'nsfwConfidence'},
   ],
 };
 
@@ -691,37 +709,6 @@ const AnnotateImageResponse$json = {
   ],
 };
 
-const AnnotateFileResponse$json = {
-  '1': 'AnnotateFileResponse',
-  '2': [
-    {
-      '1': 'input_config',
-      '3': 1,
-      '4': 1,
-      '5': 11,
-      '6': '.google.cloud.vision.v1.InputConfig',
-      '10': 'inputConfig'
-    },
-    {
-      '1': 'responses',
-      '3': 2,
-      '4': 3,
-      '5': 11,
-      '6': '.google.cloud.vision.v1.AnnotateImageResponse',
-      '10': 'responses'
-    },
-    {'1': 'total_pages', '3': 3, '4': 1, '5': 5, '10': 'totalPages'},
-    {
-      '1': 'error',
-      '3': 4,
-      '4': 1,
-      '5': 11,
-      '6': '.google.rpc.Status',
-      '10': 'error'
-    },
-  ],
-};
-
 const BatchAnnotateImagesRequest$json = {
   '1': 'BatchAnnotateImagesRequest',
   '2': [
@@ -731,6 +718,7 @@ const BatchAnnotateImagesRequest$json = {
       '4': 3,
       '5': 11,
       '6': '.google.cloud.vision.v1.AnnotateImageRequest',
+      '8': {},
       '10': 'requests'
     },
     {'1': 'parent', '3': 4, '4': 1, '5': 9, '10': 'parent'},
@@ -782,6 +770,37 @@ const AnnotateFileRequest$json = {
   ],
 };
 
+const AnnotateFileResponse$json = {
+  '1': 'AnnotateFileResponse',
+  '2': [
+    {
+      '1': 'input_config',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.vision.v1.InputConfig',
+      '10': 'inputConfig'
+    },
+    {
+      '1': 'responses',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.vision.v1.AnnotateImageResponse',
+      '10': 'responses'
+    },
+    {'1': 'total_pages', '3': 3, '4': 1, '5': 5, '10': 'totalPages'},
+    {
+      '1': 'error',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.rpc.Status',
+      '10': 'error'
+    },
+  ],
+};
+
 const BatchAnnotateFilesRequest$json = {
   '1': 'BatchAnnotateFilesRequest',
   '2': [
@@ -791,6 +810,7 @@ const BatchAnnotateFilesRequest$json = {
       '4': 3,
       '5': 11,
       '6': '.google.cloud.vision.v1.AnnotateFileRequest',
+      '8': {},
       '10': 'requests'
     },
     {'1': 'parent', '3': 3, '4': 1, '5': 9, '10': 'parent'},
@@ -872,6 +892,7 @@ const AsyncBatchAnnotateImagesRequest$json = {
       '4': 3,
       '5': 11,
       '6': '.google.cloud.vision.v1.AnnotateImageRequest',
+      '8': {},
       '10': 'requests'
     },
     {
@@ -880,6 +901,7 @@ const AsyncBatchAnnotateImagesRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.vision.v1.OutputConfig',
+      '8': {},
       '10': 'outputConfig'
     },
     {'1': 'parent', '3': 4, '4': 1, '5': 9, '10': 'parent'},
@@ -909,6 +931,7 @@ const AsyncBatchAnnotateFilesRequest$json = {
       '4': 3,
       '5': 11,
       '6': '.google.cloud.vision.v1.AsyncAnnotateFileRequest',
+      '8': {},
       '10': 'requests'
     },
     {'1': 'parent', '3': 4, '4': 1, '5': 9, '10': 'parent'},

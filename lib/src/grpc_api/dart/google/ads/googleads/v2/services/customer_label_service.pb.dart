@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -15,7 +14,8 @@ import '../../../../rpc/status.pb.dart' as $2;
 
 class GetCustomerLabelRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetCustomerLabelRequest',
-      package: const $pb.PackageName('google.ads.googleads.v2.services'))
+      package: const $pb.PackageName('google.ads.googleads.v2.services'),
+      createEmptyInstance: create)
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
@@ -38,26 +38,32 @@ class GetCustomerLabelRequest extends $pb.GeneratedMessage {
   GetCustomerLabelRequest createEmptyInstance() => create();
   static $pb.PbList<GetCustomerLabelRequest> createRepeated() =>
       $pb.PbList<GetCustomerLabelRequest>();
-  static GetCustomerLabelRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetCustomerLabelRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetCustomerLabelRequest>(create);
   static GetCustomerLabelRequest _defaultInstance;
 
-  $core.String get resourceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get resourceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set resourceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResourceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResourceName() => clearField(1);
 }
 
 class MutateCustomerLabelsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'MutateCustomerLabelsRequest',
-      package: const $pb.PackageName('google.ads.googleads.v2.services'))
+      package: const $pb.PackageName('google.ads.googleads.v2.services'),
+      createEmptyInstance: create)
     ..aOS(1, 'customerId')
-    ..pc<CustomerLabelOperation>(
-        2, 'operations', $pb.PbFieldType.PM, CustomerLabelOperation.create)
+    ..pc<CustomerLabelOperation>(2, 'operations', $pb.PbFieldType.PM,
+        subBuilder: CustomerLabelOperation.create)
     ..aOB(3, 'partialFailure')
     ..aOB(4, 'validateOnly')
     ..hasRequiredFields = false;
@@ -83,34 +89,48 @@ class MutateCustomerLabelsRequest extends $pb.GeneratedMessage {
   MutateCustomerLabelsRequest createEmptyInstance() => create();
   static $pb.PbList<MutateCustomerLabelsRequest> createRepeated() =>
       $pb.PbList<MutateCustomerLabelsRequest>();
-  static MutateCustomerLabelsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MutateCustomerLabelsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MutateCustomerLabelsRequest>(create);
   static MutateCustomerLabelsRequest _defaultInstance;
 
-  $core.String get customerId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get customerId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set customerId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCustomerId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCustomerId() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<CustomerLabelOperation> get operations => $_getList(1);
 
-  $core.bool get partialFailure => $_get(2, false);
+  @$pb.TagNumber(3)
+  $core.bool get partialFailure => $_getBF(2);
+  @$pb.TagNumber(3)
   set partialFailure($core.bool v) {
     $_setBool(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPartialFailure() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPartialFailure() => clearField(3);
 
-  $core.bool get validateOnly => $_get(3, false);
+  @$pb.TagNumber(4)
+  $core.bool get validateOnly => $_getBF(3);
+  @$pb.TagNumber(4)
   set validateOnly($core.bool v) {
     $_setBool(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasValidateOnly() => $_has(3);
+  @$pb.TagNumber(4)
   void clearValidateOnly() => clearField(4);
 }
 
@@ -124,10 +144,10 @@ class CustomerLabelOperation extends $pb.GeneratedMessage {
     0: CustomerLabelOperation_Operation.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CustomerLabelOperation',
-      package: const $pb.PackageName('google.ads.googleads.v2.services'))
+      package: const $pb.PackageName('google.ads.googleads.v2.services'),
+      createEmptyInstance: create)
     ..oo(0, [1, 2])
-    ..a<$1.CustomerLabel>(1, 'create_1', $pb.PbFieldType.OM,
-        $1.CustomerLabel.getDefault, $1.CustomerLabel.create)
+    ..aOM<$1.CustomerLabel>(1, 'create', subBuilder: $1.CustomerLabel.create)
     ..aOS(2, 'remove')
     ..hasRequiredFields = false;
 
@@ -150,39 +170,50 @@ class CustomerLabelOperation extends $pb.GeneratedMessage {
   CustomerLabelOperation createEmptyInstance() => create();
   static $pb.PbList<CustomerLabelOperation> createRepeated() =>
       $pb.PbList<CustomerLabelOperation>();
-  static CustomerLabelOperation getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CustomerLabelOperation getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CustomerLabelOperation>(create);
   static CustomerLabelOperation _defaultInstance;
 
   CustomerLabelOperation_Operation whichOperation() =>
       _CustomerLabelOperation_OperationByTag[$_whichOneof(0)];
   void clearOperation() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   $1.CustomerLabel get create_1 => $_getN(0);
+  @$pb.TagNumber(1)
   set create_1($1.CustomerLabel v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCreate_1() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCreate_1() => clearField(1);
+  @$pb.TagNumber(1)
+  $1.CustomerLabel ensureCreate_1() => $_ensure(0);
 
-  $core.String get remove => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get remove => $_getSZ(1);
+  @$pb.TagNumber(2)
   set remove($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasRemove() => $_has(1);
+  @$pb.TagNumber(2)
   void clearRemove() => clearField(2);
 }
 
 class MutateCustomerLabelsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'MutateCustomerLabelsResponse',
-      package: const $pb.PackageName('google.ads.googleads.v2.services'))
-    ..pc<MutateCustomerLabelResult>(
-        2, 'results', $pb.PbFieldType.PM, MutateCustomerLabelResult.create)
-    ..a<$2.Status>(3, 'partialFailureError', $pb.PbFieldType.OM,
-        $2.Status.getDefault, $2.Status.create)
+      package: const $pb.PackageName('google.ads.googleads.v2.services'),
+      createEmptyInstance: create)
+    ..pc<MutateCustomerLabelResult>(2, 'results', $pb.PbFieldType.PM,
+        subBuilder: MutateCustomerLabelResult.create)
+    ..aOM<$2.Status>(3, 'partialFailureError', subBuilder: $2.Status.create)
     ..hasRequiredFields = false;
 
   MutateCustomerLabelsResponse._() : super();
@@ -206,24 +237,33 @@ class MutateCustomerLabelsResponse extends $pb.GeneratedMessage {
   MutateCustomerLabelsResponse createEmptyInstance() => create();
   static $pb.PbList<MutateCustomerLabelsResponse> createRepeated() =>
       $pb.PbList<MutateCustomerLabelsResponse>();
-  static MutateCustomerLabelsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MutateCustomerLabelsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MutateCustomerLabelsResponse>(create);
   static MutateCustomerLabelsResponse _defaultInstance;
 
+  @$pb.TagNumber(2)
   $core.List<MutateCustomerLabelResult> get results => $_getList(0);
 
+  @$pb.TagNumber(3)
   $2.Status get partialFailureError => $_getN(1);
+  @$pb.TagNumber(3)
   set partialFailureError($2.Status v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPartialFailureError() => $_has(1);
+  @$pb.TagNumber(3)
   void clearPartialFailureError() => clearField(3);
+  @$pb.TagNumber(3)
+  $2.Status ensurePartialFailureError() => $_ensure(1);
 }
 
 class MutateCustomerLabelResult extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('MutateCustomerLabelResult',
-      package: const $pb.PackageName('google.ads.googleads.v2.services'))
+      package: const $pb.PackageName('google.ads.googleads.v2.services'),
+      createEmptyInstance: create)
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
@@ -247,15 +287,20 @@ class MutateCustomerLabelResult extends $pb.GeneratedMessage {
   MutateCustomerLabelResult createEmptyInstance() => create();
   static $pb.PbList<MutateCustomerLabelResult> createRepeated() =>
       $pb.PbList<MutateCustomerLabelResult>();
-  static MutateCustomerLabelResult getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MutateCustomerLabelResult getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MutateCustomerLabelResult>(create);
   static MutateCustomerLabelResult _defaultInstance;
 
-  $core.String get resourceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get resourceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set resourceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResourceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResourceName() => clearField(1);
 }

@@ -76,6 +76,10 @@ message AuthorizationErrorEnum {
     // The developer token is not approved. Non-approved developer tokens can
     // only be used with test accounts.
     DEVELOPER_TOKEN_NOT_APPROVED = 10;
+
+    // The login customer specified does not have access to the account
+    // specified, so the request is invalid.
+    INVALID_LOGIN_CUSTOMER_ID_SERVING_CUSTOMER_ID_COMBINATION = 11;
   }
 
 

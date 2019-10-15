@@ -5,31 +5,27 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'session.pb.dart' as $7;
+import 'session.pb.dart' as $8;
 import 'intent.pb.dart' as $3;
-import '../../../protobuf/struct.pb.dart' as $8;
+import '../../../protobuf/struct.pb.dart' as $9;
 import 'context.pb.dart' as $0;
+import 'session_entity_type.pb.dart' as $7;
 
 class WebhookRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('WebhookRequest',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'))
+      package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'responseId')
-    ..a<$7.QueryResult>(2, 'queryResult', $pb.PbFieldType.OM,
-        $7.QueryResult.getDefault, $7.QueryResult.create)
-    ..a<OriginalDetectIntentRequest>(
-        3,
-        'originalDetectIntentRequest',
-        $pb.PbFieldType.OM,
-        OriginalDetectIntentRequest.getDefault,
-        OriginalDetectIntentRequest.create)
+    ..aOM<$8.QueryResult>(2, 'queryResult', subBuilder: $8.QueryResult.create)
+    ..aOM<OriginalDetectIntentRequest>(3, 'originalDetectIntentRequest',
+        subBuilder: OriginalDetectIntentRequest.create)
     ..aOS(4, 'session')
-    ..pc<$7.QueryResult>(
-        5, 'alternativeQueryResults', $pb.PbFieldType.PM, $7.QueryResult.create)
+    ..pc<$8.QueryResult>(5, 'alternativeQueryResults', $pb.PbFieldType.PM,
+        subBuilder: $8.QueryResult.create)
     ..hasRequiredFields = false;
 
   WebhookRequest._() : super();
@@ -49,57 +45,84 @@ class WebhookRequest extends $pb.GeneratedMessage {
   WebhookRequest createEmptyInstance() => create();
   static $pb.PbList<WebhookRequest> createRepeated() =>
       $pb.PbList<WebhookRequest>();
-  static WebhookRequest getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static WebhookRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<WebhookRequest>(create);
   static WebhookRequest _defaultInstance;
 
-  $core.String get responseId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get responseId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set responseId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResponseId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResponseId() => clearField(1);
 
-  $7.QueryResult get queryResult => $_getN(1);
-  set queryResult($7.QueryResult v) {
+  @$pb.TagNumber(2)
+  $8.QueryResult get queryResult => $_getN(1);
+  @$pb.TagNumber(2)
+  set queryResult($8.QueryResult v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasQueryResult() => $_has(1);
+  @$pb.TagNumber(2)
   void clearQueryResult() => clearField(2);
+  @$pb.TagNumber(2)
+  $8.QueryResult ensureQueryResult() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   OriginalDetectIntentRequest get originalDetectIntentRequest => $_getN(2);
+  @$pb.TagNumber(3)
   set originalDetectIntentRequest(OriginalDetectIntentRequest v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasOriginalDetectIntentRequest() => $_has(2);
+  @$pb.TagNumber(3)
   void clearOriginalDetectIntentRequest() => clearField(3);
+  @$pb.TagNumber(3)
+  OriginalDetectIntentRequest ensureOriginalDetectIntentRequest() =>
+      $_ensure(2);
 
-  $core.String get session => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get session => $_getSZ(3);
+  @$pb.TagNumber(4)
   set session($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasSession() => $_has(3);
+  @$pb.TagNumber(4)
   void clearSession() => clearField(4);
 
-  $core.List<$7.QueryResult> get alternativeQueryResults => $_getList(4);
+  @$pb.TagNumber(5)
+  $core.List<$8.QueryResult> get alternativeQueryResults => $_getList(4);
 }
 
 class WebhookResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('WebhookResponse',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'))
+      package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'fulfillmentText')
-    ..pc<$3.Intent_Message>(
-        2, 'fulfillmentMessages', $pb.PbFieldType.PM, $3.Intent_Message.create)
+    ..pc<$3.Intent_Message>(2, 'fulfillmentMessages', $pb.PbFieldType.PM,
+        subBuilder: $3.Intent_Message.create)
     ..aOS(3, 'source')
-    ..a<$8.Struct>(4, 'payload', $pb.PbFieldType.OM, $8.Struct.getDefault,
-        $8.Struct.create)
-    ..pc<$0.Context>(5, 'outputContexts', $pb.PbFieldType.PM, $0.Context.create)
-    ..a<$7.EventInput>(6, 'followupEventInput', $pb.PbFieldType.OM,
-        $7.EventInput.getDefault, $7.EventInput.create)
+    ..aOM<$9.Struct>(4, 'payload', subBuilder: $9.Struct.create)
+    ..pc<$0.Context>(5, 'outputContexts', $pb.PbFieldType.PM,
+        subBuilder: $0.Context.create)
+    ..aOM<$8.EventInput>(6, 'followupEventInput',
+        subBuilder: $8.EventInput.create)
     ..aOB(8, 'endInteraction')
+    ..pc<$7.SessionEntityType>(10, 'sessionEntityTypes', $pb.PbFieldType.PM,
+        subBuilder: $7.SessionEntityType.create)
     ..hasRequiredFields = false;
 
   WebhookResponse._() : super();
@@ -119,63 +142,93 @@ class WebhookResponse extends $pb.GeneratedMessage {
   WebhookResponse createEmptyInstance() => create();
   static $pb.PbList<WebhookResponse> createRepeated() =>
       $pb.PbList<WebhookResponse>();
-  static WebhookResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static WebhookResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<WebhookResponse>(create);
   static WebhookResponse _defaultInstance;
 
-  $core.String get fulfillmentText => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get fulfillmentText => $_getSZ(0);
+  @$pb.TagNumber(1)
   set fulfillmentText($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasFulfillmentText() => $_has(0);
+  @$pb.TagNumber(1)
   void clearFulfillmentText() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<$3.Intent_Message> get fulfillmentMessages => $_getList(1);
 
-  $core.String get source => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get source => $_getSZ(2);
+  @$pb.TagNumber(3)
   set source($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasSource() => $_has(2);
+  @$pb.TagNumber(3)
   void clearSource() => clearField(3);
 
-  $8.Struct get payload => $_getN(3);
-  set payload($8.Struct v) {
+  @$pb.TagNumber(4)
+  $9.Struct get payload => $_getN(3);
+  @$pb.TagNumber(4)
+  set payload($9.Struct v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasPayload() => $_has(3);
+  @$pb.TagNumber(4)
   void clearPayload() => clearField(4);
+  @$pb.TagNumber(4)
+  $9.Struct ensurePayload() => $_ensure(3);
 
+  @$pb.TagNumber(5)
   $core.List<$0.Context> get outputContexts => $_getList(4);
 
-  $7.EventInput get followupEventInput => $_getN(5);
-  set followupEventInput($7.EventInput v) {
+  @$pb.TagNumber(6)
+  $8.EventInput get followupEventInput => $_getN(5);
+  @$pb.TagNumber(6)
+  set followupEventInput($8.EventInput v) {
     setField(6, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasFollowupEventInput() => $_has(5);
+  @$pb.TagNumber(6)
   void clearFollowupEventInput() => clearField(6);
+  @$pb.TagNumber(6)
+  $8.EventInput ensureFollowupEventInput() => $_ensure(5);
 
-  $core.bool get endInteraction => $_get(6, false);
+  @$pb.TagNumber(8)
+  $core.bool get endInteraction => $_getBF(6);
+  @$pb.TagNumber(8)
   set endInteraction($core.bool v) {
     $_setBool(6, v);
   }
 
+  @$pb.TagNumber(8)
   $core.bool hasEndInteraction() => $_has(6);
+  @$pb.TagNumber(8)
   void clearEndInteraction() => clearField(8);
+
+  @$pb.TagNumber(10)
+  $core.List<$7.SessionEntityType> get sessionEntityTypes => $_getList(7);
 }
 
 class OriginalDetectIntentRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'OriginalDetectIntentRequest',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'))
+      package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'source')
     ..aOS(2, 'version')
-    ..a<$8.Struct>(3, 'payload', $pb.PbFieldType.OM, $8.Struct.getDefault,
-        $8.Struct.create)
+    ..aOM<$9.Struct>(3, 'payload', subBuilder: $9.Struct.create)
     ..hasRequiredFields = false;
 
   OriginalDetectIntentRequest._() : super();
@@ -199,31 +252,46 @@ class OriginalDetectIntentRequest extends $pb.GeneratedMessage {
   OriginalDetectIntentRequest createEmptyInstance() => create();
   static $pb.PbList<OriginalDetectIntentRequest> createRepeated() =>
       $pb.PbList<OriginalDetectIntentRequest>();
-  static OriginalDetectIntentRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static OriginalDetectIntentRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<OriginalDetectIntentRequest>(create);
   static OriginalDetectIntentRequest _defaultInstance;
 
-  $core.String get source => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get source => $_getSZ(0);
+  @$pb.TagNumber(1)
   set source($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasSource() => $_has(0);
+  @$pb.TagNumber(1)
   void clearSource() => clearField(1);
 
-  $core.String get version => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get version => $_getSZ(1);
+  @$pb.TagNumber(2)
   set version($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasVersion() => $_has(1);
+  @$pb.TagNumber(2)
   void clearVersion() => clearField(2);
 
-  $8.Struct get payload => $_getN(2);
-  set payload($8.Struct v) {
+  @$pb.TagNumber(3)
+  $9.Struct get payload => $_getN(2);
+  @$pb.TagNumber(3)
+  set payload($9.Struct v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPayload() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPayload() => clearField(3);
+  @$pb.TagNumber(3)
+  $9.Struct ensurePayload() => $_ensure(2);
 }

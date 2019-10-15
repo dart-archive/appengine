@@ -51,6 +51,7 @@ const Queue$json = {
     },
   ],
   '4': [Queue_State$json],
+  '7': {},
 };
 
 const Queue_State$json = {

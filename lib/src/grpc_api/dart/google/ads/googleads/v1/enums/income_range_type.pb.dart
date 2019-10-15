@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -14,7 +13,8 @@ export 'income_range_type.pbenum.dart';
 
 class IncomeRangeTypeEnum extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('IncomeRangeTypeEnum',
-      package: const $pb.PackageName('google.ads.googleads.v1.enums'))
+      package: const $pb.PackageName('google.ads.googleads.v1.enums'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   IncomeRangeTypeEnum._() : super();
@@ -34,7 +34,8 @@ class IncomeRangeTypeEnum extends $pb.GeneratedMessage {
   IncomeRangeTypeEnum createEmptyInstance() => create();
   static $pb.PbList<IncomeRangeTypeEnum> createRepeated() =>
       $pb.PbList<IncomeRangeTypeEnum>();
-  static IncomeRangeTypeEnum getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static IncomeRangeTypeEnum getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<IncomeRangeTypeEnum>(create);
   static IncomeRangeTypeEnum _defaultInstance;
 }

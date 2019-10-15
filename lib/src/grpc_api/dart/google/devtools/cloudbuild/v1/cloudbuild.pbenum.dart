@@ -6,7 +6,7 @@
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
-import 'dart:core' as $core show int, dynamic, String, List, Map;
+import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class Build_Status extends $pb.ProtobufEnum {
@@ -55,6 +55,27 @@ class Hash_HashType extends $pb.ProtobufEnum {
   static Hash_HashType valueOf($core.int value) => _byValue[value];
 
   const Hash_HashType._($core.int v, $core.String n) : super(v, n);
+}
+
+class PullRequestFilter_CommentControl extends $pb.ProtobufEnum {
+  static const PullRequestFilter_CommentControl COMMENTS_DISABLED =
+      PullRequestFilter_CommentControl._(0, 'COMMENTS_DISABLED');
+  static const PullRequestFilter_CommentControl COMMENTS_ENABLED =
+      PullRequestFilter_CommentControl._(1, 'COMMENTS_ENABLED');
+
+  static const $core.List<PullRequestFilter_CommentControl> values =
+      <PullRequestFilter_CommentControl>[
+    COMMENTS_DISABLED,
+    COMMENTS_ENABLED,
+  ];
+
+  static final $core.Map<$core.int, PullRequestFilter_CommentControl> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static PullRequestFilter_CommentControl valueOf($core.int value) =>
+      _byValue[value];
+
+  const PullRequestFilter_CommentControl._($core.int v, $core.String n)
+      : super(v, n);
 }
 
 class BuildOptions_VerifyOption extends $pb.ProtobufEnum {
@@ -163,4 +184,51 @@ class BuildOptions_LoggingMode extends $pb.ProtobufEnum {
   static BuildOptions_LoggingMode valueOf($core.int value) => _byValue[value];
 
   const BuildOptions_LoggingMode._($core.int v, $core.String n) : super(v, n);
+}
+
+class WorkerPool_Region extends $pb.ProtobufEnum {
+  static const WorkerPool_Region REGION_UNSPECIFIED =
+      WorkerPool_Region._(0, 'REGION_UNSPECIFIED');
+  static const WorkerPool_Region US_CENTRAL1 =
+      WorkerPool_Region._(1, 'US_CENTRAL1');
+  static const WorkerPool_Region US_WEST1 = WorkerPool_Region._(2, 'US_WEST1');
+  static const WorkerPool_Region US_EAST1 = WorkerPool_Region._(3, 'US_EAST1');
+  static const WorkerPool_Region US_EAST4 = WorkerPool_Region._(4, 'US_EAST4');
+
+  static const $core.List<WorkerPool_Region> values = <WorkerPool_Region>[
+    REGION_UNSPECIFIED,
+    US_CENTRAL1,
+    US_WEST1,
+    US_EAST1,
+    US_EAST4,
+  ];
+
+  static final $core.Map<$core.int, WorkerPool_Region> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static WorkerPool_Region valueOf($core.int value) => _byValue[value];
+
+  const WorkerPool_Region._($core.int v, $core.String n) : super(v, n);
+}
+
+class WorkerPool_Status extends $pb.ProtobufEnum {
+  static const WorkerPool_Status STATUS_UNSPECIFIED =
+      WorkerPool_Status._(0, 'STATUS_UNSPECIFIED');
+  static const WorkerPool_Status CREATING = WorkerPool_Status._(1, 'CREATING');
+  static const WorkerPool_Status RUNNING = WorkerPool_Status._(2, 'RUNNING');
+  static const WorkerPool_Status DELETING = WorkerPool_Status._(3, 'DELETING');
+  static const WorkerPool_Status DELETED = WorkerPool_Status._(4, 'DELETED');
+
+  static const $core.List<WorkerPool_Status> values = <WorkerPool_Status>[
+    STATUS_UNSPECIFIED,
+    CREATING,
+    RUNNING,
+    DELETING,
+    DELETED,
+  ];
+
+  static final $core.Map<$core.int, WorkerPool_Status> _byValue =
+      $pb.ProtobufEnum.initByValue(values);
+  static WorkerPool_Status valueOf($core.int value) => _byValue[value];
+
+  const WorkerPool_Status._($core.int v, $core.String n) : super(v, n);
 }

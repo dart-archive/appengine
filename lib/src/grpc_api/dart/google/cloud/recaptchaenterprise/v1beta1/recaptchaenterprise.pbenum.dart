@@ -6,7 +6,7 @@
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
-import 'dart:core' as $core show int, dynamic, String, List, Map;
+import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class AnnotateAssessmentRequest_Annotation extends $pb.ProtobufEnum {
@@ -41,18 +41,21 @@ class Assessment_ClassificationReason extends $pb.ProtobufEnum {
       Assessment_ClassificationReason._(1, 'AUTOMATION');
   static const Assessment_ClassificationReason UNEXPECTED_ENVIRONMENT =
       Assessment_ClassificationReason._(2, 'UNEXPECTED_ENVIRONMENT');
+  static const Assessment_ClassificationReason TOO_MUCH_TRAFFIC =
+      Assessment_ClassificationReason._(3, 'TOO_MUCH_TRAFFIC');
   static const Assessment_ClassificationReason UNEXPECTED_USAGE_PATTERNS =
       Assessment_ClassificationReason._(4, 'UNEXPECTED_USAGE_PATTERNS');
-  static const Assessment_ClassificationReason PROVISIONAL_RISK_ANALYSIS =
-      Assessment_ClassificationReason._(5, 'PROVISIONAL_RISK_ANALYSIS');
+  static const Assessment_ClassificationReason LOW_CONFIDENCE_SCORE =
+      Assessment_ClassificationReason._(5, 'LOW_CONFIDENCE_SCORE');
 
   static const $core.List<Assessment_ClassificationReason> values =
       <Assessment_ClassificationReason>[
     CLASSIFICATION_REASON_UNSPECIFIED,
     AUTOMATION,
     UNEXPECTED_ENVIRONMENT,
+    TOO_MUCH_TRAFFIC,
     UNEXPECTED_USAGE_PATTERNS,
-    PROVISIONAL_RISK_ANALYSIS,
+    LOW_CONFIDENCE_SCORE,
   ];
 
   static final $core.Map<$core.int, Assessment_ClassificationReason> _byValue =

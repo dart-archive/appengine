@@ -9,8 +9,8 @@ const Company$json = {
   '1': 'Company',
   '2': [
     {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    {'1': 'display_name', '3': 2, '4': 1, '5': 9, '10': 'displayName'},
-    {'1': 'external_id', '3': 3, '4': 1, '5': 9, '10': 'externalId'},
+    {'1': 'display_name', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'displayName'},
+    {'1': 'external_id', '3': 3, '4': 1, '5': 9, '8': {}, '10': 'externalId'},
     {
       '1': 'size',
       '3': 4,
@@ -44,9 +44,10 @@ const Company$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.talent.v4beta1.Company.DerivedInfo',
+      '8': {},
       '10': 'derivedInfo'
     },
-    {'1': 'suspended', '3': 13, '4': 1, '5': 8, '10': 'suspended'},
+    {'1': 'suspended', '3': 13, '4': 1, '5': 8, '8': {}, '10': 'suspended'},
   ],
   '3': [Company_DerivedInfo$json],
 };

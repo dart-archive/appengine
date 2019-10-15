@@ -77,6 +77,13 @@ message Campaign {
     google.protobuf.Int64Value hotel_center_id = 1;
   }
 
+  // Selective optimization setting for this campaign, which includes a set of
+  // conversion actions to optimize this campaign towards.
+  message SelectiveOptimization {
+    // The selected set of conversion actions for optimizing this campaign.
+    repeated google.protobuf.StringValue conversion_actions = 1;
+  }
+
   // The setting for controlling Dynamic Search Ads (DSA).
   message DynamicSearchAdsSetting {
     // The Internet domain name that this setting represents, e.g., "google.com"
@@ -91,6 +98,19 @@ message Campaign {
 
     // The list of page feeds associated with the campaign.
     repeated google.protobuf.StringValue feeds = 5;
+  }
+
+  // Campaign level settings for App Campaigns.
+  message AppCampaignSetting {
+    // Represents the goal which the bidding strategy of this app campaign
+    // should optimize towards.
+    google.ads.googleads.v2.enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType bidding_strategy_goal_type = 1;
+
+    // A string that uniquely identifies a mobile application.
+    google.protobuf.StringValue app_id = 2;
+
+    // The application store that distributes this specific app.
+    google.ads.googleads.v2.enums.AppCampaignAppStoreEnum.AppCampaignAppStore app_store = 3;
   }
 
   // The setting for Shopping campaigns. Defines the universe of products that
@@ -133,26 +153,6 @@ message Campaign {
 
     // The setting used for negative geotargeting in this particular campaign.
     google.ads.googleads.v2.enums.NegativeGeoTargetTypeEnum.NegativeGeoTargetType negative_geo_target_type = 2;
-  }
-
-  // Selective optimization setting for this campaign, which includes a set of
-  // conversion actions to optimize this campaign towards.
-  message SelectiveOptimization {
-    // The selected set of conversion actions for optimizing this campaign.
-    repeated google.protobuf.StringValue conversion_actions = 1;
-  }
-
-  // Campaign level settings for App Campaigns.
-  message AppCampaignSetting {
-    // Represents the goal which the bidding strategy of this app campaign
-    // should optimize towards.
-    google.ads.googleads.v2.enums.AppCampaignBiddingStrategyGoalTypeEnum.AppCampaignBiddingStrategyGoalType bidding_strategy_goal_type = 1;
-
-    // A string that uniquely identifies a mobile application.
-    google.protobuf.StringValue app_id = 2;
-
-    // The application store that distributes this specific app.
-    google.ads.googleads.v2.enums.AppCampaignAppStoreEnum.AppCampaignAppStore app_store = 3;
   }
 
   // Describes how unbranded pharma ads will be displayed.

@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -15,7 +14,8 @@ import '../../../protobuf/timestamp.pb.dart' as $4;
 
 class ListConfigsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListConfigsRequest',
-      package: const $pb.PackageName('google.cloud.runtimeconfig.v1beta1'))
+      package: const $pb.PackageName('google.cloud.runtimeconfig.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(3, 'pageToken')
@@ -38,40 +38,54 @@ class ListConfigsRequest extends $pb.GeneratedMessage {
   ListConfigsRequest createEmptyInstance() => create();
   static $pb.PbList<ListConfigsRequest> createRepeated() =>
       $pb.PbList<ListConfigsRequest>();
-  static ListConfigsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListConfigsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListConfigsRequest>(create);
   static ListConfigsRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.int get pageSize => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get pageSize => $_getIZ(1);
+  @$pb.TagNumber(2)
   set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
-  $core.String get pageToken => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get pageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
   set pageToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
 }
 
 class ListConfigsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListConfigsResponse',
-      package: const $pb.PackageName('google.cloud.runtimeconfig.v1beta1'))
-    ..pc<$3.RuntimeConfig>(
-        1, 'configs', $pb.PbFieldType.PM, $3.RuntimeConfig.create)
+      package: const $pb.PackageName('google.cloud.runtimeconfig.v1beta1'),
+      createEmptyInstance: create)
+    ..pc<$3.RuntimeConfig>(1, 'configs', $pb.PbFieldType.PM,
+        subBuilder: $3.RuntimeConfig.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -92,24 +106,31 @@ class ListConfigsResponse extends $pb.GeneratedMessage {
   ListConfigsResponse createEmptyInstance() => create();
   static $pb.PbList<ListConfigsResponse> createRepeated() =>
       $pb.PbList<ListConfigsResponse>();
-  static ListConfigsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListConfigsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListConfigsResponse>(create);
   static ListConfigsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$3.RuntimeConfig> get configs => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class GetConfigRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetConfigRequest',
-      package: const $pb.PackageName('google.cloud.runtimeconfig.v1beta1'))
+      package: const $pb.PackageName('google.cloud.runtimeconfig.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(2, 'name')
     ..hasRequiredFields = false;
 
@@ -130,25 +151,30 @@ class GetConfigRequest extends $pb.GeneratedMessage {
   GetConfigRequest createEmptyInstance() => create();
   static $pb.PbList<GetConfigRequest> createRepeated() =>
       $pb.PbList<GetConfigRequest>();
-  static GetConfigRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetConfigRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetConfigRequest>(create);
   static GetConfigRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(2)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(2)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(2)
   void clearName() => clearField(2);
 }
 
 class CreateConfigRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateConfigRequest',
-      package: const $pb.PackageName('google.cloud.runtimeconfig.v1beta1'))
+      package: const $pb.PackageName('google.cloud.runtimeconfig.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
-    ..a<$3.RuntimeConfig>(2, 'config', $pb.PbFieldType.OM,
-        $3.RuntimeConfig.getDefault, $3.RuntimeConfig.create)
+    ..aOM<$3.RuntimeConfig>(2, 'config', subBuilder: $3.RuntimeConfig.create)
     ..aOS(3, 'requestId')
     ..hasRequiredFields = false;
 
@@ -169,41 +195,56 @@ class CreateConfigRequest extends $pb.GeneratedMessage {
   CreateConfigRequest createEmptyInstance() => create();
   static $pb.PbList<CreateConfigRequest> createRepeated() =>
       $pb.PbList<CreateConfigRequest>();
-  static CreateConfigRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateConfigRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateConfigRequest>(create);
   static CreateConfigRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  @$pb.TagNumber(2)
   $3.RuntimeConfig get config => $_getN(1);
+  @$pb.TagNumber(2)
   set config($3.RuntimeConfig v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasConfig() => $_has(1);
+  @$pb.TagNumber(2)
   void clearConfig() => clearField(2);
+  @$pb.TagNumber(2)
+  $3.RuntimeConfig ensureConfig() => $_ensure(1);
 
-  $core.String get requestId => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get requestId => $_getSZ(2);
+  @$pb.TagNumber(3)
   set requestId($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasRequestId() => $_has(2);
+  @$pb.TagNumber(3)
   void clearRequestId() => clearField(3);
 }
 
 class UpdateConfigRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateConfigRequest',
-      package: const $pb.PackageName('google.cloud.runtimeconfig.v1beta1'))
+      package: const $pb.PackageName('google.cloud.runtimeconfig.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
-    ..a<$3.RuntimeConfig>(2, 'config', $pb.PbFieldType.OM,
-        $3.RuntimeConfig.getDefault, $3.RuntimeConfig.create)
+    ..aOM<$3.RuntimeConfig>(2, 'config', subBuilder: $3.RuntimeConfig.create)
     ..hasRequiredFields = false;
 
   UpdateConfigRequest._() : super();
@@ -223,30 +264,42 @@ class UpdateConfigRequest extends $pb.GeneratedMessage {
   UpdateConfigRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateConfigRequest> createRepeated() =>
       $pb.PbList<UpdateConfigRequest>();
-  static UpdateConfigRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateConfigRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateConfigRequest>(create);
   static UpdateConfigRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $3.RuntimeConfig get config => $_getN(1);
+  @$pb.TagNumber(2)
   set config($3.RuntimeConfig v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasConfig() => $_has(1);
+  @$pb.TagNumber(2)
   void clearConfig() => clearField(2);
+  @$pb.TagNumber(2)
+  $3.RuntimeConfig ensureConfig() => $_ensure(1);
 }
 
 class DeleteConfigRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteConfigRequest',
-      package: const $pb.PackageName('google.cloud.runtimeconfig.v1beta1'))
+      package: const $pb.PackageName('google.cloud.runtimeconfig.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -267,22 +320,28 @@ class DeleteConfigRequest extends $pb.GeneratedMessage {
   DeleteConfigRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteConfigRequest> createRepeated() =>
       $pb.PbList<DeleteConfigRequest>();
-  static DeleteConfigRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteConfigRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteConfigRequest>(create);
   static DeleteConfigRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class ListVariablesRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListVariablesRequest',
-      package: const $pb.PackageName('google.cloud.runtimeconfig.v1beta1'))
+      package: const $pb.PackageName('google.cloud.runtimeconfig.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..aOS(2, 'filter')
     ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
@@ -308,55 +367,78 @@ class ListVariablesRequest extends $pb.GeneratedMessage {
   ListVariablesRequest createEmptyInstance() => create();
   static $pb.PbList<ListVariablesRequest> createRepeated() =>
       $pb.PbList<ListVariablesRequest>();
-  static ListVariablesRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListVariablesRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListVariablesRequest>(create);
   static ListVariablesRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.String get filter => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get filter => $_getSZ(1);
+  @$pb.TagNumber(2)
   set filter($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasFilter() => $_has(1);
+  @$pb.TagNumber(2)
   void clearFilter() => clearField(2);
 
-  $core.int get pageSize => $_get(2, 0);
+  @$pb.TagNumber(3)
+  $core.int get pageSize => $_getIZ(2);
+  @$pb.TagNumber(3)
   set pageSize($core.int v) {
     $_setSignedInt32(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageSize() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageSize() => clearField(3);
 
-  $core.String get pageToken => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get pageToken => $_getSZ(3);
+  @$pb.TagNumber(4)
   set pageToken($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasPageToken() => $_has(3);
+  @$pb.TagNumber(4)
   void clearPageToken() => clearField(4);
 
-  $core.bool get returnValues => $_get(4, false);
+  @$pb.TagNumber(5)
+  $core.bool get returnValues => $_getBF(4);
+  @$pb.TagNumber(5)
   set returnValues($core.bool v) {
     $_setBool(4, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasReturnValues() => $_has(4);
+  @$pb.TagNumber(5)
   void clearReturnValues() => clearField(5);
 }
 
 class ListVariablesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListVariablesResponse',
-      package: const $pb.PackageName('google.cloud.runtimeconfig.v1beta1'))
-    ..pc<$3.Variable>(1, 'variables', $pb.PbFieldType.PM, $3.Variable.create)
+      package: const $pb.PackageName('google.cloud.runtimeconfig.v1beta1'),
+      createEmptyInstance: create)
+    ..pc<$3.Variable>(1, 'variables', $pb.PbFieldType.PM,
+        subBuilder: $3.Variable.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -379,27 +461,33 @@ class ListVariablesResponse extends $pb.GeneratedMessage {
   ListVariablesResponse createEmptyInstance() => create();
   static $pb.PbList<ListVariablesResponse> createRepeated() =>
       $pb.PbList<ListVariablesResponse>();
-  static ListVariablesResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListVariablesResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListVariablesResponse>(create);
   static ListVariablesResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$3.Variable> get variables => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class WatchVariableRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('WatchVariableRequest',
-      package: const $pb.PackageName('google.cloud.runtimeconfig.v1beta1'))
+      package: const $pb.PackageName('google.cloud.runtimeconfig.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
-    ..a<$4.Timestamp>(4, 'newerThan', $pb.PbFieldType.OM,
-        $4.Timestamp.getDefault, $4.Timestamp.create)
+    ..aOM<$4.Timestamp>(4, 'newerThan', subBuilder: $4.Timestamp.create)
     ..hasRequiredFields = false;
 
   WatchVariableRequest._() : super();
@@ -420,30 +508,42 @@ class WatchVariableRequest extends $pb.GeneratedMessage {
   WatchVariableRequest createEmptyInstance() => create();
   static $pb.PbList<WatchVariableRequest> createRepeated() =>
       $pb.PbList<WatchVariableRequest>();
-  static WatchVariableRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static WatchVariableRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<WatchVariableRequest>(create);
   static WatchVariableRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(4)
   $4.Timestamp get newerThan => $_getN(1);
+  @$pb.TagNumber(4)
   set newerThan($4.Timestamp v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasNewerThan() => $_has(1);
+  @$pb.TagNumber(4)
   void clearNewerThan() => clearField(4);
+  @$pb.TagNumber(4)
+  $4.Timestamp ensureNewerThan() => $_ensure(1);
 }
 
 class GetVariableRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetVariableRequest',
-      package: const $pb.PackageName('google.cloud.runtimeconfig.v1beta1'))
+      package: const $pb.PackageName('google.cloud.runtimeconfig.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -464,25 +564,30 @@ class GetVariableRequest extends $pb.GeneratedMessage {
   GetVariableRequest createEmptyInstance() => create();
   static $pb.PbList<GetVariableRequest> createRepeated() =>
       $pb.PbList<GetVariableRequest>();
-  static GetVariableRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetVariableRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetVariableRequest>(create);
   static GetVariableRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class CreateVariableRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateVariableRequest',
-      package: const $pb.PackageName('google.cloud.runtimeconfig.v1beta1'))
+      package: const $pb.PackageName('google.cloud.runtimeconfig.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
-    ..a<$3.Variable>(2, 'variable', $pb.PbFieldType.OM, $3.Variable.getDefault,
-        $3.Variable.create)
+    ..aOM<$3.Variable>(2, 'variable', subBuilder: $3.Variable.create)
     ..aOS(3, 'requestId')
     ..hasRequiredFields = false;
 
@@ -505,41 +610,56 @@ class CreateVariableRequest extends $pb.GeneratedMessage {
   CreateVariableRequest createEmptyInstance() => create();
   static $pb.PbList<CreateVariableRequest> createRepeated() =>
       $pb.PbList<CreateVariableRequest>();
-  static CreateVariableRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateVariableRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateVariableRequest>(create);
   static CreateVariableRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  @$pb.TagNumber(2)
   $3.Variable get variable => $_getN(1);
+  @$pb.TagNumber(2)
   set variable($3.Variable v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasVariable() => $_has(1);
+  @$pb.TagNumber(2)
   void clearVariable() => clearField(2);
+  @$pb.TagNumber(2)
+  $3.Variable ensureVariable() => $_ensure(1);
 
-  $core.String get requestId => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get requestId => $_getSZ(2);
+  @$pb.TagNumber(3)
   set requestId($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasRequestId() => $_has(2);
+  @$pb.TagNumber(3)
   void clearRequestId() => clearField(3);
 }
 
 class UpdateVariableRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateVariableRequest',
-      package: const $pb.PackageName('google.cloud.runtimeconfig.v1beta1'))
+      package: const $pb.PackageName('google.cloud.runtimeconfig.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
-    ..a<$3.Variable>(2, 'variable', $pb.PbFieldType.OM, $3.Variable.getDefault,
-        $3.Variable.create)
+    ..aOM<$3.Variable>(2, 'variable', subBuilder: $3.Variable.create)
     ..hasRequiredFields = false;
 
   UpdateVariableRequest._() : super();
@@ -561,30 +681,42 @@ class UpdateVariableRequest extends $pb.GeneratedMessage {
   UpdateVariableRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateVariableRequest> createRepeated() =>
       $pb.PbList<UpdateVariableRequest>();
-  static UpdateVariableRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateVariableRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateVariableRequest>(create);
   static UpdateVariableRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $3.Variable get variable => $_getN(1);
+  @$pb.TagNumber(2)
   set variable($3.Variable v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasVariable() => $_has(1);
+  @$pb.TagNumber(2)
   void clearVariable() => clearField(2);
+  @$pb.TagNumber(2)
+  $3.Variable ensureVariable() => $_ensure(1);
 }
 
 class DeleteVariableRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteVariableRequest',
-      package: const $pb.PackageName('google.cloud.runtimeconfig.v1beta1'))
+      package: const $pb.PackageName('google.cloud.runtimeconfig.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..aOB(2, 'recursive')
     ..hasRequiredFields = false;
@@ -608,30 +740,40 @@ class DeleteVariableRequest extends $pb.GeneratedMessage {
   DeleteVariableRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteVariableRequest> createRepeated() =>
       $pb.PbList<DeleteVariableRequest>();
-  static DeleteVariableRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteVariableRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteVariableRequest>(create);
   static DeleteVariableRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.bool get recursive => $_get(1, false);
+  @$pb.TagNumber(2)
+  $core.bool get recursive => $_getBF(1);
+  @$pb.TagNumber(2)
   set recursive($core.bool v) {
     $_setBool(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasRecursive() => $_has(1);
+  @$pb.TagNumber(2)
   void clearRecursive() => clearField(2);
 }
 
 class ListWaitersRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListWaitersRequest',
-      package: const $pb.PackageName('google.cloud.runtimeconfig.v1beta1'))
+      package: const $pb.PackageName('google.cloud.runtimeconfig.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(3, 'pageToken')
@@ -654,39 +796,54 @@ class ListWaitersRequest extends $pb.GeneratedMessage {
   ListWaitersRequest createEmptyInstance() => create();
   static $pb.PbList<ListWaitersRequest> createRepeated() =>
       $pb.PbList<ListWaitersRequest>();
-  static ListWaitersRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListWaitersRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListWaitersRequest>(create);
   static ListWaitersRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.int get pageSize => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get pageSize => $_getIZ(1);
+  @$pb.TagNumber(2)
   set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
-  $core.String get pageToken => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get pageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
   set pageToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
 }
 
 class ListWaitersResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListWaitersResponse',
-      package: const $pb.PackageName('google.cloud.runtimeconfig.v1beta1'))
-    ..pc<$3.Waiter>(1, 'waiters', $pb.PbFieldType.PM, $3.Waiter.create)
+      package: const $pb.PackageName('google.cloud.runtimeconfig.v1beta1'),
+      createEmptyInstance: create)
+    ..pc<$3.Waiter>(1, 'waiters', $pb.PbFieldType.PM,
+        subBuilder: $3.Waiter.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -707,24 +864,31 @@ class ListWaitersResponse extends $pb.GeneratedMessage {
   ListWaitersResponse createEmptyInstance() => create();
   static $pb.PbList<ListWaitersResponse> createRepeated() =>
       $pb.PbList<ListWaitersResponse>();
-  static ListWaitersResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListWaitersResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListWaitersResponse>(create);
   static ListWaitersResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$3.Waiter> get waiters => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class GetWaiterRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetWaiterRequest',
-      package: const $pb.PackageName('google.cloud.runtimeconfig.v1beta1'))
+      package: const $pb.PackageName('google.cloud.runtimeconfig.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -745,25 +909,30 @@ class GetWaiterRequest extends $pb.GeneratedMessage {
   GetWaiterRequest createEmptyInstance() => create();
   static $pb.PbList<GetWaiterRequest> createRepeated() =>
       $pb.PbList<GetWaiterRequest>();
-  static GetWaiterRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetWaiterRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetWaiterRequest>(create);
   static GetWaiterRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class CreateWaiterRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateWaiterRequest',
-      package: const $pb.PackageName('google.cloud.runtimeconfig.v1beta1'))
+      package: const $pb.PackageName('google.cloud.runtimeconfig.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
-    ..a<$3.Waiter>(
-        2, 'waiter', $pb.PbFieldType.OM, $3.Waiter.getDefault, $3.Waiter.create)
+    ..aOM<$3.Waiter>(2, 'waiter', subBuilder: $3.Waiter.create)
     ..aOS(3, 'requestId')
     ..hasRequiredFields = false;
 
@@ -784,38 +953,54 @@ class CreateWaiterRequest extends $pb.GeneratedMessage {
   CreateWaiterRequest createEmptyInstance() => create();
   static $pb.PbList<CreateWaiterRequest> createRepeated() =>
       $pb.PbList<CreateWaiterRequest>();
-  static CreateWaiterRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateWaiterRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateWaiterRequest>(create);
   static CreateWaiterRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  @$pb.TagNumber(2)
   $3.Waiter get waiter => $_getN(1);
+  @$pb.TagNumber(2)
   set waiter($3.Waiter v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasWaiter() => $_has(1);
+  @$pb.TagNumber(2)
   void clearWaiter() => clearField(2);
+  @$pb.TagNumber(2)
+  $3.Waiter ensureWaiter() => $_ensure(1);
 
-  $core.String get requestId => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get requestId => $_getSZ(2);
+  @$pb.TagNumber(3)
   set requestId($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasRequestId() => $_has(2);
+  @$pb.TagNumber(3)
   void clearRequestId() => clearField(3);
 }
 
 class DeleteWaiterRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteWaiterRequest',
-      package: const $pb.PackageName('google.cloud.runtimeconfig.v1beta1'))
+      package: const $pb.PackageName('google.cloud.runtimeconfig.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -836,15 +1021,20 @@ class DeleteWaiterRequest extends $pb.GeneratedMessage {
   DeleteWaiterRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteWaiterRequest> createRepeated() =>
       $pb.PbList<DeleteWaiterRequest>();
-  static DeleteWaiterRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteWaiterRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteWaiterRequest>(create);
   static DeleteWaiterRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }

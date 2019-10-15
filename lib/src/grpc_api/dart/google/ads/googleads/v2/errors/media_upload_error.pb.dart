@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -14,7 +13,8 @@ export 'media_upload_error.pbenum.dart';
 
 class MediaUploadErrorEnum extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('MediaUploadErrorEnum',
-      package: const $pb.PackageName('google.ads.googleads.v2.errors'))
+      package: const $pb.PackageName('google.ads.googleads.v2.errors'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   MediaUploadErrorEnum._() : super();
@@ -35,7 +35,8 @@ class MediaUploadErrorEnum extends $pb.GeneratedMessage {
   MediaUploadErrorEnum createEmptyInstance() => create();
   static $pb.PbList<MediaUploadErrorEnum> createRepeated() =>
       $pb.PbList<MediaUploadErrorEnum>();
-  static MediaUploadErrorEnum getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MediaUploadErrorEnum getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MediaUploadErrorEnum>(create);
   static MediaUploadErrorEnum _defaultInstance;
 }

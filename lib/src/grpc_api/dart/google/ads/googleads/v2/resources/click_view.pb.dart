@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -15,18 +14,16 @@ import '../common/click_location.pb.dart' as $1;
 
 class ClickView extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ClickView',
-      package: const $pb.PackageName('google.ads.googleads.v2.resources'))
+      package: const $pb.PackageName('google.ads.googleads.v2.resources'),
+      createEmptyInstance: create)
     ..aOS(1, 'resourceName')
-    ..a<$0.StringValue>(2, 'gclid', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
-    ..a<$1.ClickLocation>(3, 'areaOfInterest', $pb.PbFieldType.OM,
-        $1.ClickLocation.getDefault, $1.ClickLocation.create)
-    ..a<$1.ClickLocation>(4, 'locationOfPresence', $pb.PbFieldType.OM,
-        $1.ClickLocation.getDefault, $1.ClickLocation.create)
-    ..a<$0.Int64Value>(5, 'pageNumber', $pb.PbFieldType.OM,
-        $0.Int64Value.getDefault, $0.Int64Value.create)
-    ..a<$0.StringValue>(7, 'adGroupAd', $pb.PbFieldType.OM,
-        $0.StringValue.getDefault, $0.StringValue.create)
+    ..aOM<$0.StringValue>(2, 'gclid', subBuilder: $0.StringValue.create)
+    ..aOM<$1.ClickLocation>(3, 'areaOfInterest',
+        subBuilder: $1.ClickLocation.create)
+    ..aOM<$1.ClickLocation>(4, 'locationOfPresence',
+        subBuilder: $1.ClickLocation.create)
+    ..aOM<$0.Int64Value>(5, 'pageNumber', subBuilder: $0.Int64Value.create)
+    ..aOM<$0.StringValue>(7, 'adGroupAd', subBuilder: $0.StringValue.create)
     ..hasRequiredFields = false;
 
   ClickView._() : super();
@@ -45,54 +42,90 @@ class ClickView extends $pb.GeneratedMessage {
   static ClickView create() => ClickView._();
   ClickView createEmptyInstance() => create();
   static $pb.PbList<ClickView> createRepeated() => $pb.PbList<ClickView>();
-  static ClickView getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ClickView getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ClickView>(create);
   static ClickView _defaultInstance;
 
-  $core.String get resourceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get resourceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set resourceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResourceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResourceName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $0.StringValue get gclid => $_getN(1);
+  @$pb.TagNumber(2)
   set gclid($0.StringValue v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasGclid() => $_has(1);
+  @$pb.TagNumber(2)
   void clearGclid() => clearField(2);
+  @$pb.TagNumber(2)
+  $0.StringValue ensureGclid() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $1.ClickLocation get areaOfInterest => $_getN(2);
+  @$pb.TagNumber(3)
   set areaOfInterest($1.ClickLocation v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasAreaOfInterest() => $_has(2);
+  @$pb.TagNumber(3)
   void clearAreaOfInterest() => clearField(3);
+  @$pb.TagNumber(3)
+  $1.ClickLocation ensureAreaOfInterest() => $_ensure(2);
 
+  @$pb.TagNumber(4)
   $1.ClickLocation get locationOfPresence => $_getN(3);
+  @$pb.TagNumber(4)
   set locationOfPresence($1.ClickLocation v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasLocationOfPresence() => $_has(3);
+  @$pb.TagNumber(4)
   void clearLocationOfPresence() => clearField(4);
+  @$pb.TagNumber(4)
+  $1.ClickLocation ensureLocationOfPresence() => $_ensure(3);
 
+  @$pb.TagNumber(5)
   $0.Int64Value get pageNumber => $_getN(4);
+  @$pb.TagNumber(5)
   set pageNumber($0.Int64Value v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasPageNumber() => $_has(4);
+  @$pb.TagNumber(5)
   void clearPageNumber() => clearField(5);
+  @$pb.TagNumber(5)
+  $0.Int64Value ensurePageNumber() => $_ensure(4);
 
+  @$pb.TagNumber(7)
   $0.StringValue get adGroupAd => $_getN(5);
+  @$pb.TagNumber(7)
   set adGroupAd($0.StringValue v) {
     setField(7, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasAdGroupAd() => $_has(5);
+  @$pb.TagNumber(7)
   void clearAdGroupAd() => clearField(7);
+  @$pb.TagNumber(7)
+  $0.StringValue ensureAdGroupAd() => $_ensure(5);
 }

@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -18,10 +17,11 @@ export 'quota_controller.pbenum.dart';
 
 class AllocateQuotaRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AllocateQuotaRequest',
-      package: const $pb.PackageName('google.api.servicecontrol.v1'))
+      package: const $pb.PackageName('google.api.servicecontrol.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'serviceName')
-    ..a<QuotaOperation>(2, 'allocateOperation', $pb.PbFieldType.OM,
-        QuotaOperation.getDefault, QuotaOperation.create)
+    ..aOM<QuotaOperation>(2, 'allocateOperation',
+        subBuilder: QuotaOperation.create)
     ..aOS(4, 'serviceConfigId')
     ..hasRequiredFields = false;
 
@@ -43,60 +43,68 @@ class AllocateQuotaRequest extends $pb.GeneratedMessage {
   AllocateQuotaRequest createEmptyInstance() => create();
   static $pb.PbList<AllocateQuotaRequest> createRepeated() =>
       $pb.PbList<AllocateQuotaRequest>();
-  static AllocateQuotaRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static AllocateQuotaRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AllocateQuotaRequest>(create);
   static AllocateQuotaRequest _defaultInstance;
 
-  $core.String get serviceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get serviceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set serviceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasServiceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearServiceName() => clearField(1);
 
+  @$pb.TagNumber(2)
   QuotaOperation get allocateOperation => $_getN(1);
+  @$pb.TagNumber(2)
   set allocateOperation(QuotaOperation v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasAllocateOperation() => $_has(1);
+  @$pb.TagNumber(2)
   void clearAllocateOperation() => clearField(2);
+  @$pb.TagNumber(2)
+  QuotaOperation ensureAllocateOperation() => $_ensure(1);
 
-  $core.String get serviceConfigId => $_getS(2, '');
+  @$pb.TagNumber(4)
+  $core.String get serviceConfigId => $_getSZ(2);
+  @$pb.TagNumber(4)
   set serviceConfigId($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasServiceConfigId() => $_has(2);
+  @$pb.TagNumber(4)
   void clearServiceConfigId() => clearField(4);
 }
 
 class QuotaOperation extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('QuotaOperation',
-      package: const $pb.PackageName('google.api.servicecontrol.v1'))
+      package: const $pb.PackageName('google.api.servicecontrol.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'operationId')
     ..aOS(2, 'methodName')
     ..aOS(3, 'consumerId')
-    ..m<$core.String, $core.String>(
-        4,
-        'labels',
-        'QuotaOperation.LabelsEntry',
-        $pb.PbFieldType.OS,
-        $pb.PbFieldType.OS,
-        null,
-        null,
-        null,
-        const $pb.PackageName('google.api.servicecontrol.v1'))
-    ..pc<$1.MetricValueSet>(
-        5, 'quotaMetrics', $pb.PbFieldType.PM, $1.MetricValueSet.create)
-    ..e<QuotaOperation_QuotaMode>(
-        6,
-        'quotaMode',
-        $pb.PbFieldType.OE,
-        QuotaOperation_QuotaMode.UNSPECIFIED,
-        QuotaOperation_QuotaMode.valueOf,
-        QuotaOperation_QuotaMode.values)
+    ..m<$core.String, $core.String>(4, 'labels',
+        entryClassName: 'QuotaOperation.LabelsEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
+        packageName: const $pb.PackageName('google.api.servicecontrol.v1'))
+    ..pc<$1.MetricValueSet>(5, 'quotaMetrics', $pb.PbFieldType.PM,
+        subBuilder: $1.MetricValueSet.create)
+    ..e<QuotaOperation_QuotaMode>(6, 'quotaMode', $pb.PbFieldType.OE,
+        defaultOrMaker: QuotaOperation_QuotaMode.UNSPECIFIED,
+        valueOf: QuotaOperation_QuotaMode.valueOf,
+        enumValues: QuotaOperation_QuotaMode.values)
     ..hasRequiredFields = false;
 
   QuotaOperation._() : super();
@@ -116,53 +124,75 @@ class QuotaOperation extends $pb.GeneratedMessage {
   QuotaOperation createEmptyInstance() => create();
   static $pb.PbList<QuotaOperation> createRepeated() =>
       $pb.PbList<QuotaOperation>();
-  static QuotaOperation getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static QuotaOperation getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<QuotaOperation>(create);
   static QuotaOperation _defaultInstance;
 
-  $core.String get operationId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get operationId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set operationId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasOperationId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearOperationId() => clearField(1);
 
-  $core.String get methodName => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get methodName => $_getSZ(1);
+  @$pb.TagNumber(2)
   set methodName($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasMethodName() => $_has(1);
+  @$pb.TagNumber(2)
   void clearMethodName() => clearField(2);
 
-  $core.String get consumerId => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get consumerId => $_getSZ(2);
+  @$pb.TagNumber(3)
   set consumerId($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasConsumerId() => $_has(2);
+  @$pb.TagNumber(3)
   void clearConsumerId() => clearField(3);
 
+  @$pb.TagNumber(4)
   $core.Map<$core.String, $core.String> get labels => $_getMap(3);
 
+  @$pb.TagNumber(5)
   $core.List<$1.MetricValueSet> get quotaMetrics => $_getList(4);
 
+  @$pb.TagNumber(6)
   QuotaOperation_QuotaMode get quotaMode => $_getN(5);
+  @$pb.TagNumber(6)
   set quotaMode(QuotaOperation_QuotaMode v) {
     setField(6, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasQuotaMode() => $_has(5);
+  @$pb.TagNumber(6)
   void clearQuotaMode() => clearField(6);
 }
 
 class AllocateQuotaResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AllocateQuotaResponse',
-      package: const $pb.PackageName('google.api.servicecontrol.v1'))
+      package: const $pb.PackageName('google.api.servicecontrol.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'operationId')
-    ..pc<QuotaError>(2, 'allocateErrors', $pb.PbFieldType.PM, QuotaError.create)
-    ..pc<$1.MetricValueSet>(
-        3, 'quotaMetrics', $pb.PbFieldType.PM, $1.MetricValueSet.create)
+    ..pc<QuotaError>(2, 'allocateErrors', $pb.PbFieldType.PM,
+        subBuilder: QuotaError.create)
+    ..pc<$1.MetricValueSet>(3, 'quotaMetrics', $pb.PbFieldType.PM,
+        subBuilder: $1.MetricValueSet.create)
     ..aOS(4, 'serviceConfigId')
     ..hasRequiredFields = false;
 
@@ -185,41 +215,50 @@ class AllocateQuotaResponse extends $pb.GeneratedMessage {
   AllocateQuotaResponse createEmptyInstance() => create();
   static $pb.PbList<AllocateQuotaResponse> createRepeated() =>
       $pb.PbList<AllocateQuotaResponse>();
-  static AllocateQuotaResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static AllocateQuotaResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AllocateQuotaResponse>(create);
   static AllocateQuotaResponse _defaultInstance;
 
-  $core.String get operationId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get operationId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set operationId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasOperationId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearOperationId() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<QuotaError> get allocateErrors => $_getList(1);
 
+  @$pb.TagNumber(3)
   $core.List<$1.MetricValueSet> get quotaMetrics => $_getList(2);
 
-  $core.String get serviceConfigId => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get serviceConfigId => $_getSZ(3);
+  @$pb.TagNumber(4)
   set serviceConfigId($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasServiceConfigId() => $_has(3);
+  @$pb.TagNumber(4)
   void clearServiceConfigId() => clearField(4);
 }
 
 class QuotaError extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('QuotaError',
-      package: const $pb.PackageName('google.api.servicecontrol.v1'))
-    ..e<QuotaError_Code>(
-        1,
-        'code',
-        $pb.PbFieldType.OE,
-        QuotaError_Code.UNSPECIFIED,
-        QuotaError_Code.valueOf,
-        QuotaError_Code.values)
+      package: const $pb.PackageName('google.api.servicecontrol.v1'),
+      createEmptyInstance: create)
+    ..e<QuotaError_Code>(1, 'code', $pb.PbFieldType.OE,
+        defaultOrMaker: QuotaError_Code.UNSPECIFIED,
+        valueOf: QuotaError_Code.valueOf,
+        enumValues: QuotaError_Code.values)
     ..aOS(2, 'subject')
     ..aOS(3, 'description')
     ..hasRequiredFields = false;
@@ -240,30 +279,44 @@ class QuotaError extends $pb.GeneratedMessage {
   static QuotaError create() => QuotaError._();
   QuotaError createEmptyInstance() => create();
   static $pb.PbList<QuotaError> createRepeated() => $pb.PbList<QuotaError>();
-  static QuotaError getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static QuotaError getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<QuotaError>(create);
   static QuotaError _defaultInstance;
 
+  @$pb.TagNumber(1)
   QuotaError_Code get code => $_getN(0);
+  @$pb.TagNumber(1)
   set code(QuotaError_Code v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCode() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCode() => clearField(1);
 
-  $core.String get subject => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get subject => $_getSZ(1);
+  @$pb.TagNumber(2)
   set subject($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasSubject() => $_has(1);
+  @$pb.TagNumber(2)
   void clearSubject() => clearField(2);
 
-  $core.String get description => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get description => $_getSZ(2);
+  @$pb.TagNumber(3)
   set description($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasDescription() => $_has(2);
+  @$pb.TagNumber(3)
   void clearDescription() => clearField(3);
 }

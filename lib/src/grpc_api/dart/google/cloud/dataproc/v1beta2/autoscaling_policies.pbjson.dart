@@ -8,8 +8,8 @@
 const AutoscalingPolicy$json = {
   '1': 'AutoscalingPolicy',
   '2': [
-    {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
-    {'1': 'name', '3': 2, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'id'},
+    {'1': 'name', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'name'},
     {
       '1': 'basic_algorithm',
       '3': 3,
@@ -26,6 +26,7 @@ const AutoscalingPolicy$json = {
       '5': 11,
       '6':
           '.google.cloud.dataproc.v1beta2.InstanceGroupAutoscalingPolicyConfig',
+      '8': {},
       '10': 'workerConfig'
     },
     {
@@ -35,9 +36,11 @@ const AutoscalingPolicy$json = {
       '5': 11,
       '6':
           '.google.cloud.dataproc.v1beta2.InstanceGroupAutoscalingPolicyConfig',
+      '8': {},
       '10': 'secondaryWorkerConfig'
     },
   ],
+  '7': {},
   '8': [
     {'1': 'algorithm'},
   ],
@@ -52,6 +55,7 @@ const BasicAutoscalingAlgorithm$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.dataproc.v1beta2.BasicYarnAutoscalingConfig',
+      '8': {},
       '10': 'yarnConfig'
     },
     {
@@ -60,6 +64,7 @@ const BasicAutoscalingAlgorithm$json = {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Duration',
+      '8': {},
       '10': 'cooldownPeriod'
     },
   ],
@@ -74,15 +79,31 @@ const BasicYarnAutoscalingConfig$json = {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Duration',
+      '8': {},
       '10': 'gracefulDecommissionTimeout'
     },
-    {'1': 'scale_up_factor', '3': 1, '4': 1, '5': 1, '10': 'scaleUpFactor'},
-    {'1': 'scale_down_factor', '3': 2, '4': 1, '5': 1, '10': 'scaleDownFactor'},
+    {
+      '1': 'scale_up_factor',
+      '3': 1,
+      '4': 1,
+      '5': 1,
+      '8': {},
+      '10': 'scaleUpFactor'
+    },
+    {
+      '1': 'scale_down_factor',
+      '3': 2,
+      '4': 1,
+      '5': 1,
+      '8': {},
+      '10': 'scaleDownFactor'
+    },
     {
       '1': 'scale_up_min_worker_fraction',
       '3': 3,
       '4': 1,
       '5': 1,
+      '8': {},
       '10': 'scaleUpMinWorkerFraction'
     },
     {
@@ -90,6 +111,7 @@ const BasicYarnAutoscalingConfig$json = {
       '3': 4,
       '4': 1,
       '5': 1,
+      '8': {},
       '10': 'scaleDownMinWorkerFraction'
     },
   ],
@@ -98,22 +120,37 @@ const BasicYarnAutoscalingConfig$json = {
 const InstanceGroupAutoscalingPolicyConfig$json = {
   '1': 'InstanceGroupAutoscalingPolicyConfig',
   '2': [
-    {'1': 'min_instances', '3': 1, '4': 1, '5': 5, '10': 'minInstances'},
-    {'1': 'max_instances', '3': 2, '4': 1, '5': 5, '10': 'maxInstances'},
-    {'1': 'weight', '3': 3, '4': 1, '5': 5, '10': 'weight'},
+    {
+      '1': 'min_instances',
+      '3': 1,
+      '4': 1,
+      '5': 5,
+      '8': {},
+      '10': 'minInstances'
+    },
+    {
+      '1': 'max_instances',
+      '3': 2,
+      '4': 1,
+      '5': 5,
+      '8': {},
+      '10': 'maxInstances'
+    },
+    {'1': 'weight', '3': 3, '4': 1, '5': 5, '8': {}, '10': 'weight'},
   ],
 };
 
 const CreateAutoscalingPolicyRequest$json = {
   '1': 'CreateAutoscalingPolicyRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
     {
       '1': 'policy',
       '3': 2,
       '4': 1,
       '5': 11,
       '6': '.google.cloud.dataproc.v1beta2.AutoscalingPolicy',
+      '8': {},
       '10': 'policy'
     },
   ],
@@ -122,7 +159,7 @@ const CreateAutoscalingPolicyRequest$json = {
 const GetAutoscalingPolicyRequest$json = {
   '1': 'GetAutoscalingPolicyRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
   ],
 };
 
@@ -135,6 +172,7 @@ const UpdateAutoscalingPolicyRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.dataproc.v1beta2.AutoscalingPolicy',
+      '8': {},
       '10': 'policy'
     },
   ],
@@ -143,16 +181,16 @@ const UpdateAutoscalingPolicyRequest$json = {
 const DeleteAutoscalingPolicyRequest$json = {
   '1': 'DeleteAutoscalingPolicyRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
   ],
 };
 
 const ListAutoscalingPoliciesRequest$json = {
   '1': 'ListAutoscalingPoliciesRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
-    {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
+    {'1': 'page_size', '3': 2, '4': 1, '5': 5, '8': {}, '10': 'pageSize'},
+    {'1': 'page_token', '3': 3, '4': 1, '5': 9, '8': {}, '10': 'pageToken'},
   ],
 };
 
@@ -165,8 +203,16 @@ const ListAutoscalingPoliciesResponse$json = {
       '4': 3,
       '5': 11,
       '6': '.google.cloud.dataproc.v1beta2.AutoscalingPolicy',
+      '8': {},
       '10': 'policies'
     },
-    {'1': 'next_page_token', '3': 2, '4': 1, '5': 9, '10': 'nextPageToken'},
+    {
+      '1': 'next_page_token',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'nextPageToken'
+    },
   ],
 };

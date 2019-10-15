@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -15,7 +14,8 @@ import '../../../../rpc/status.pb.dart' as $2;
 
 class GetAdGroupAdLabelRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetAdGroupAdLabelRequest',
-      package: const $pb.PackageName('google.ads.googleads.v1.services'))
+      package: const $pb.PackageName('google.ads.googleads.v1.services'),
+      createEmptyInstance: create)
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
@@ -38,26 +38,32 @@ class GetAdGroupAdLabelRequest extends $pb.GeneratedMessage {
   GetAdGroupAdLabelRequest createEmptyInstance() => create();
   static $pb.PbList<GetAdGroupAdLabelRequest> createRepeated() =>
       $pb.PbList<GetAdGroupAdLabelRequest>();
-  static GetAdGroupAdLabelRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetAdGroupAdLabelRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetAdGroupAdLabelRequest>(create);
   static GetAdGroupAdLabelRequest _defaultInstance;
 
-  $core.String get resourceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get resourceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set resourceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResourceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResourceName() => clearField(1);
 }
 
 class MutateAdGroupAdLabelsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'MutateAdGroupAdLabelsRequest',
-      package: const $pb.PackageName('google.ads.googleads.v1.services'))
+      package: const $pb.PackageName('google.ads.googleads.v1.services'),
+      createEmptyInstance: create)
     ..aOS(1, 'customerId')
-    ..pc<AdGroupAdLabelOperation>(
-        2, 'operations', $pb.PbFieldType.PM, AdGroupAdLabelOperation.create)
+    ..pc<AdGroupAdLabelOperation>(2, 'operations', $pb.PbFieldType.PM,
+        subBuilder: AdGroupAdLabelOperation.create)
     ..aOB(3, 'partialFailure')
     ..aOB(4, 'validateOnly')
     ..hasRequiredFields = false;
@@ -83,34 +89,48 @@ class MutateAdGroupAdLabelsRequest extends $pb.GeneratedMessage {
   MutateAdGroupAdLabelsRequest createEmptyInstance() => create();
   static $pb.PbList<MutateAdGroupAdLabelsRequest> createRepeated() =>
       $pb.PbList<MutateAdGroupAdLabelsRequest>();
-  static MutateAdGroupAdLabelsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MutateAdGroupAdLabelsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MutateAdGroupAdLabelsRequest>(create);
   static MutateAdGroupAdLabelsRequest _defaultInstance;
 
-  $core.String get customerId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get customerId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set customerId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCustomerId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCustomerId() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<AdGroupAdLabelOperation> get operations => $_getList(1);
 
-  $core.bool get partialFailure => $_get(2, false);
+  @$pb.TagNumber(3)
+  $core.bool get partialFailure => $_getBF(2);
+  @$pb.TagNumber(3)
   set partialFailure($core.bool v) {
     $_setBool(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPartialFailure() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPartialFailure() => clearField(3);
 
-  $core.bool get validateOnly => $_get(3, false);
+  @$pb.TagNumber(4)
+  $core.bool get validateOnly => $_getBF(3);
+  @$pb.TagNumber(4)
   set validateOnly($core.bool v) {
     $_setBool(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasValidateOnly() => $_has(3);
+  @$pb.TagNumber(4)
   void clearValidateOnly() => clearField(4);
 }
 
@@ -124,10 +144,10 @@ class AdGroupAdLabelOperation extends $pb.GeneratedMessage {
     0: AdGroupAdLabelOperation_Operation.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AdGroupAdLabelOperation',
-      package: const $pb.PackageName('google.ads.googleads.v1.services'))
+      package: const $pb.PackageName('google.ads.googleads.v1.services'),
+      createEmptyInstance: create)
     ..oo(0, [1, 2])
-    ..a<$1.AdGroupAdLabel>(1, 'create_1', $pb.PbFieldType.OM,
-        $1.AdGroupAdLabel.getDefault, $1.AdGroupAdLabel.create)
+    ..aOM<$1.AdGroupAdLabel>(1, 'create', subBuilder: $1.AdGroupAdLabel.create)
     ..aOS(2, 'remove')
     ..hasRequiredFields = false;
 
@@ -150,39 +170,50 @@ class AdGroupAdLabelOperation extends $pb.GeneratedMessage {
   AdGroupAdLabelOperation createEmptyInstance() => create();
   static $pb.PbList<AdGroupAdLabelOperation> createRepeated() =>
       $pb.PbList<AdGroupAdLabelOperation>();
-  static AdGroupAdLabelOperation getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static AdGroupAdLabelOperation getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AdGroupAdLabelOperation>(create);
   static AdGroupAdLabelOperation _defaultInstance;
 
   AdGroupAdLabelOperation_Operation whichOperation() =>
       _AdGroupAdLabelOperation_OperationByTag[$_whichOneof(0)];
   void clearOperation() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   $1.AdGroupAdLabel get create_1 => $_getN(0);
+  @$pb.TagNumber(1)
   set create_1($1.AdGroupAdLabel v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCreate_1() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCreate_1() => clearField(1);
+  @$pb.TagNumber(1)
+  $1.AdGroupAdLabel ensureCreate_1() => $_ensure(0);
 
-  $core.String get remove => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get remove => $_getSZ(1);
+  @$pb.TagNumber(2)
   set remove($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasRemove() => $_has(1);
+  @$pb.TagNumber(2)
   void clearRemove() => clearField(2);
 }
 
 class MutateAdGroupAdLabelsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'MutateAdGroupAdLabelsResponse',
-      package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..pc<MutateAdGroupAdLabelResult>(
-        2, 'results', $pb.PbFieldType.PM, MutateAdGroupAdLabelResult.create)
-    ..a<$2.Status>(3, 'partialFailureError', $pb.PbFieldType.OM,
-        $2.Status.getDefault, $2.Status.create)
+      package: const $pb.PackageName('google.ads.googleads.v1.services'),
+      createEmptyInstance: create)
+    ..pc<MutateAdGroupAdLabelResult>(2, 'results', $pb.PbFieldType.PM,
+        subBuilder: MutateAdGroupAdLabelResult.create)
+    ..aOM<$2.Status>(3, 'partialFailureError', subBuilder: $2.Status.create)
     ..hasRequiredFields = false;
 
   MutateAdGroupAdLabelsResponse._() : super();
@@ -206,25 +237,34 @@ class MutateAdGroupAdLabelsResponse extends $pb.GeneratedMessage {
   MutateAdGroupAdLabelsResponse createEmptyInstance() => create();
   static $pb.PbList<MutateAdGroupAdLabelsResponse> createRepeated() =>
       $pb.PbList<MutateAdGroupAdLabelsResponse>();
-  static MutateAdGroupAdLabelsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MutateAdGroupAdLabelsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MutateAdGroupAdLabelsResponse>(create);
   static MutateAdGroupAdLabelsResponse _defaultInstance;
 
+  @$pb.TagNumber(2)
   $core.List<MutateAdGroupAdLabelResult> get results => $_getList(0);
 
+  @$pb.TagNumber(3)
   $2.Status get partialFailureError => $_getN(1);
+  @$pb.TagNumber(3)
   set partialFailureError($2.Status v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPartialFailureError() => $_has(1);
+  @$pb.TagNumber(3)
   void clearPartialFailureError() => clearField(3);
+  @$pb.TagNumber(3)
+  $2.Status ensurePartialFailureError() => $_ensure(1);
 }
 
 class MutateAdGroupAdLabelResult extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'MutateAdGroupAdLabelResult',
-      package: const $pb.PackageName('google.ads.googleads.v1.services'))
+      package: const $pb.PackageName('google.ads.googleads.v1.services'),
+      createEmptyInstance: create)
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
@@ -248,15 +288,20 @@ class MutateAdGroupAdLabelResult extends $pb.GeneratedMessage {
   MutateAdGroupAdLabelResult createEmptyInstance() => create();
   static $pb.PbList<MutateAdGroupAdLabelResult> createRepeated() =>
       $pb.PbList<MutateAdGroupAdLabelResult>();
-  static MutateAdGroupAdLabelResult getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MutateAdGroupAdLabelResult getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MutateAdGroupAdLabelResult>(create);
   static MutateAdGroupAdLabelResult _defaultInstance;
 
-  $core.String get resourceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get resourceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set resourceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResourceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResourceName() => clearField(1);
 }

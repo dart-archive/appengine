@@ -45,6 +45,7 @@ const ScanConfigError_Code$json = {
     {'1': 'FAILED_TO_AUTHENTICATE_TO_TARGET', '2': 19},
     {'1': 'FINDING_TYPE_UNSPECIFIED', '2': 20},
     {'1': 'FORBIDDEN_TO_SCAN_COMPUTE', '2': 21},
+    {'1': 'FORBIDDEN_UPDATE_TO_MANAGED_SCAN', '2': 43},
     {'1': 'MALFORMED_FILTER', '2': 22},
     {'1': 'MALFORMED_RESOURCE_NAME', '2': 23},
     {'1': 'PROJECT_INACTIVE', '2': 24},

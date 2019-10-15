@@ -303,6 +303,15 @@ const Segments$json = {
       '10': 'hotelRateType'
     },
     {
+      '1': 'hotel_price_bucket',
+      '3': 78,
+      '4': 1,
+      '5': 14,
+      '6':
+          '.google.ads.googleads.v2.enums.HotelPriceBucketEnum.HotelPriceBucket',
+      '10': 'hotelPriceBucket'
+    },
+    {
       '1': 'hotel_state',
       '3': 15,
       '4': 1,

@@ -8,13 +8,14 @@
 const DetectIntentRequest$json = {
   '1': 'DetectIntentRequest',
   '2': [
-    {'1': 'session', '3': 1, '4': 1, '5': 9, '10': 'session'},
+    {'1': 'session', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'session'},
     {
       '1': 'query_params',
       '3': 2,
       '4': 1,
       '5': 11,
       '6': '.google.cloud.dialogflow.v2.QueryParameters',
+      '8': {},
       '10': 'queryParams'
     },
     {
@@ -23,6 +24,7 @@ const DetectIntentRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.dialogflow.v2.QueryInput',
+      '8': {},
       '10': 'queryInput'
     },
     {
@@ -31,9 +33,10 @@ const DetectIntentRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.dialogflow.v2.OutputAudioConfig',
+      '8': {},
       '10': 'outputAudioConfig'
     },
-    {'1': 'input_audio', '3': 5, '4': 1, '5': 12, '10': 'inputAudio'},
+    {'1': 'input_audio', '3': 5, '4': 1, '5': 12, '8': {}, '10': 'inputAudio'},
   ],
 };
 
@@ -72,13 +75,14 @@ const DetectIntentResponse$json = {
 const QueryParameters$json = {
   '1': 'QueryParameters',
   '2': [
-    {'1': 'time_zone', '3': 1, '4': 1, '5': 9, '10': 'timeZone'},
+    {'1': 'time_zone', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'timeZone'},
     {
       '1': 'geo_location',
       '3': 2,
       '4': 1,
       '5': 11,
       '6': '.google.type.LatLng',
+      '8': {},
       '10': 'geoLocation'
     },
     {
@@ -87,15 +91,24 @@ const QueryParameters$json = {
       '4': 3,
       '5': 11,
       '6': '.google.cloud.dialogflow.v2.Context',
+      '8': {},
       '10': 'contexts'
     },
-    {'1': 'reset_contexts', '3': 4, '4': 1, '5': 8, '10': 'resetContexts'},
+    {
+      '1': 'reset_contexts',
+      '3': 4,
+      '4': 1,
+      '5': 8,
+      '8': {},
+      '10': 'resetContexts'
+    },
     {
       '1': 'session_entity_types',
       '3': 5,
       '4': 3,
       '5': 11,
       '6': '.google.cloud.dialogflow.v2.SessionEntityType',
+      '8': {},
       '10': 'sessionEntityTypes'
     },
     {
@@ -104,6 +117,7 @@ const QueryParameters$json = {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Struct',
+      '8': {},
       '10': 'payload'
     },
     {
@@ -112,6 +126,7 @@ const QueryParameters$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.dialogflow.v2.SentimentAnalysisRequestConfig',
+      '8': {},
       '10': 'sentimentAnalysisRequestConfig'
     },
   ],
@@ -244,13 +259,14 @@ const QueryResult$json = {
 const StreamingDetectIntentRequest$json = {
   '1': 'StreamingDetectIntentRequest',
   '2': [
-    {'1': 'session', '3': 1, '4': 1, '5': 9, '10': 'session'},
+    {'1': 'session', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'session'},
     {
       '1': 'query_params',
       '3': 2,
       '4': 1,
       '5': 11,
       '6': '.google.cloud.dialogflow.v2.QueryParameters',
+      '8': {},
       '10': 'queryParams'
     },
     {
@@ -259,6 +275,7 @@ const StreamingDetectIntentRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.dialogflow.v2.QueryInput',
+      '8': {},
       '10': 'queryInput'
     },
     {
@@ -275,9 +292,10 @@ const StreamingDetectIntentRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.dialogflow.v2.OutputAudioConfig',
+      '8': {},
       '10': 'outputAudioConfig'
     },
-    {'1': 'input_audio', '3': 6, '4': 1, '5': 12, '10': 'inputAudio'},
+    {'1': 'input_audio', '3': 6, '4': 1, '5': 12, '8': {}, '10': 'inputAudio'},
   ],
 };
 
@@ -351,24 +369,39 @@ const StreamingRecognitionResult_MessageType$json = {
 const TextInput$json = {
   '1': 'TextInput',
   '2': [
-    {'1': 'text', '3': 1, '4': 1, '5': 9, '10': 'text'},
-    {'1': 'language_code', '3': 2, '4': 1, '5': 9, '10': 'languageCode'},
+    {'1': 'text', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'text'},
+    {
+      '1': 'language_code',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'languageCode'
+    },
   ],
 };
 
 const EventInput$json = {
   '1': 'EventInput',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
     {
       '1': 'parameters',
       '3': 2,
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Struct',
+      '8': {},
       '10': 'parameters'
     },
-    {'1': 'language_code', '3': 3, '4': 1, '5': 9, '10': 'languageCode'},
+    {
+      '1': 'language_code',
+      '3': 3,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'languageCode'
+    },
   ],
 };
 
@@ -380,6 +413,7 @@ const SentimentAnalysisRequestConfig$json = {
       '3': 1,
       '4': 1,
       '5': 8,
+      '8': {},
       '10': 'analyzeQueryTextSentiment'
     },
   ],

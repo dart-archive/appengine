@@ -8,13 +8,14 @@
 const Agent$json = {
   '1': 'Agent',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    {'1': 'display_name', '3': 2, '4': 1, '5': 9, '10': 'displayName'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
+    {'1': 'display_name', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'displayName'},
     {
       '1': 'default_language_code',
       '3': 3,
       '4': 1,
       '5': 9,
+      '8': {},
       '10': 'defaultLanguageCode'
     },
     {
@@ -22,18 +23,27 @@ const Agent$json = {
       '3': 4,
       '4': 3,
       '5': 9,
+      '8': {},
       '10': 'supportedLanguageCodes'
     },
-    {'1': 'time_zone', '3': 5, '4': 1, '5': 9, '10': 'timeZone'},
-    {'1': 'description', '3': 6, '4': 1, '5': 9, '10': 'description'},
-    {'1': 'avatar_uri', '3': 7, '4': 1, '5': 9, '10': 'avatarUri'},
-    {'1': 'enable_logging', '3': 8, '4': 1, '5': 8, '10': 'enableLogging'},
+    {'1': 'time_zone', '3': 5, '4': 1, '5': 9, '8': {}, '10': 'timeZone'},
+    {'1': 'description', '3': 6, '4': 1, '5': 9, '8': {}, '10': 'description'},
+    {'1': 'avatar_uri', '3': 7, '4': 1, '5': 9, '8': {}, '10': 'avatarUri'},
+    {
+      '1': 'enable_logging',
+      '3': 8,
+      '4': 1,
+      '5': 8,
+      '8': {},
+      '10': 'enableLogging'
+    },
     {
       '1': 'match_mode',
       '3': 9,
       '4': 1,
       '5': 14,
       '6': '.google.cloud.dialogflow.v2.Agent.MatchMode',
+      '8': {},
       '10': 'matchMode'
     },
     {
@@ -41,6 +51,7 @@ const Agent$json = {
       '3': 10,
       '4': 1,
       '5': 2,
+      '8': {},
       '10': 'classificationThreshold'
     },
     {
@@ -49,6 +60,7 @@ const Agent$json = {
       '4': 1,
       '5': 14,
       '6': '.google.cloud.dialogflow.v2.Agent.ApiVersion',
+      '8': {},
       '10': 'apiVersion'
     },
     {
@@ -57,6 +69,7 @@ const Agent$json = {
       '4': 1,
       '5': 14,
       '6': '.google.cloud.dialogflow.v2.Agent.Tier',
+      '8': {},
       '10': 'tier'
     },
   ],
@@ -95,7 +108,7 @@ const Agent_Tier$json = {
 const GetAgentRequest$json = {
   '1': 'GetAgentRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
   ],
 };
 
@@ -108,6 +121,7 @@ const SetAgentRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.dialogflow.v2.Agent',
+      '8': {},
       '10': 'agent'
     },
     {
@@ -116,6 +130,7 @@ const SetAgentRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.FieldMask',
+      '8': {},
       '10': 'updateMask'
     },
   ],
@@ -124,15 +139,15 @@ const SetAgentRequest$json = {
 const DeleteAgentRequest$json = {
   '1': 'DeleteAgentRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
   ],
 };
 
 const SearchAgentsRequest$json = {
   '1': 'SearchAgentsRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    {'1': 'page_size', '3': 2, '4': 1, '5': 5, '10': 'pageSize'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
+    {'1': 'page_size', '3': 2, '4': 1, '5': 5, '8': {}, '10': 'pageSize'},
     {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
   ],
 };
@@ -155,15 +170,15 @@ const SearchAgentsResponse$json = {
 const TrainAgentRequest$json = {
   '1': 'TrainAgentRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
   ],
 };
 
 const ExportAgentRequest$json = {
   '1': 'ExportAgentRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    {'1': 'agent_uri', '3': 2, '4': 1, '5': 9, '10': 'agentUri'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
+    {'1': 'agent_uri', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'agentUri'},
   ],
 };
 
@@ -188,7 +203,7 @@ const ExportAgentResponse$json = {
 const ImportAgentRequest$json = {
   '1': 'ImportAgentRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
     {'1': 'agent_uri', '3': 2, '4': 1, '5': 9, '9': 0, '10': 'agentUri'},
     {
       '1': 'agent_content',
@@ -207,7 +222,7 @@ const ImportAgentRequest$json = {
 const RestoreAgentRequest$json = {
   '1': 'RestoreAgentRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
     {'1': 'agent_uri', '3': 2, '4': 1, '5': 9, '9': 0, '10': 'agentUri'},
     {
       '1': 'agent_content',

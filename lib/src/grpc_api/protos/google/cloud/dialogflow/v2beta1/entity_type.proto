@@ -18,10 +18,11 @@ syntax = "proto3";
 package google.cloud.dialogflow.v2beta1;
 
 import "google/api/annotations.proto";
+import "google/api/field_behavior.proto";
+import "google/api/resource.proto";
 import "google/longrunning/operations.proto";
 import "google/protobuf/empty.proto";
 import "google/protobuf/field_mask.proto";
-import "google/protobuf/struct.proto";
 import "google/api/client.proto";
 
 option cc_enable_arenas = true;
@@ -70,6 +71,9 @@ service EntityTypes {
   rpc ListEntityTypes(ListEntityTypesRequest) returns (ListEntityTypesResponse) {
     option (google.api.http) = {
       get: "/v2beta1/{parent=projects/*/agent}/entityTypes"
+      additional_bindings {
+        get: "/v2beta1/{parent=projects/*/locations/*/agent}/entityTypes"
+      }
     };
   }
 
@@ -77,6 +81,9 @@ service EntityTypes {
   rpc GetEntityType(GetEntityTypeRequest) returns (EntityType) {
     option (google.api.http) = {
       get: "/v2beta1/{name=projects/*/agent/entityTypes/*}"
+      additional_bindings {
+        get: "/v2beta1/{name=projects/*/locations/*/agent/entityTypes/*}"
+      }
     };
   }
 
@@ -85,6 +92,10 @@ service EntityTypes {
     option (google.api.http) = {
       post: "/v2beta1/{parent=projects/*/agent}/entityTypes"
       body: "entity_type"
+      additional_bindings {
+        post: "/v2beta1/{parent=projects/*/locations/*/agent}/entityTypes"
+        body: "entity_type"
+      }
     };
   }
 
@@ -93,6 +104,10 @@ service EntityTypes {
     option (google.api.http) = {
       patch: "/v2beta1/{entity_type.name=projects/*/agent/entityTypes/*}"
       body: "entity_type"
+      additional_bindings {
+        patch: "/v2beta1/{entity_type.name=projects/*/locations/*/agent/entityTypes/*}"
+        body: "entity_type"
+      }
     };
   }
 
@@ -100,6 +115,9 @@ service EntityTypes {
   rpc DeleteEntityType(DeleteEntityTypeRequest) returns (google.protobuf.Empty) {
     option (google.api.http) = {
       delete: "/v2beta1/{name=projects/*/agent/entityTypes/*}"
+      additional_bindings {
+        delete: "/v2beta1/{name=projects/*/locations/*/agent/entityTypes/*}"
+      }
     };
   }
 
@@ -110,6 +128,10 @@ service EntityTypes {
     option (google.api.http) = {
       post: "/v2beta1/{parent=projects/*/agent}/entityTypes:batchUpdate"
       body: "*"
+      additional_bindings {
+        post: "/v2beta1/{parent=projects/*/locations/*/agent}/entityTypes:batchUpdate"
+        body: "*"
+      }
     };
   }
 
@@ -120,6 +142,10 @@ service EntityTypes {
     option (google.api.http) = {
       post: "/v2beta1/{parent=projects/*/agent}/entityTypes:batchDelete"
       body: "*"
+      additional_bindings {
+        post: "/v2beta1/{parent=projects/*/locations/*/agent}/entityTypes:batchDelete"
+        body: "*"
+      }
     };
   }
 
@@ -130,6 +156,10 @@ service EntityTypes {
     option (google.api.http) = {
       post: "/v2beta1/{parent=projects/*/agent/entityTypes/*}/entities:batchCreate"
       body: "*"
+      additional_bindings {
+        post: "/v2beta1/{parent=projects/*/locations/*/agent/entityTypes/*}/entities:batchCreate"
+        body: "*"
+      }
     };
   }
 
@@ -142,6 +172,10 @@ service EntityTypes {
     option (google.api.http) = {
       post: "/v2beta1/{parent=projects/*/agent/entityTypes/*}/entities:batchUpdate"
       body: "*"
+      additional_bindings {
+        post: "/v2beta1/{parent=projects/*/locations/*/agent/entityTypes/*}/entities:batchUpdate"
+        body: "*"
+      }
     };
   }
 
@@ -152,6 +186,10 @@ service EntityTypes {
     option (google.api.http) = {
       post: "/v2beta1/{parent=projects/*/agent/entityTypes/*}/entities:batchDelete"
       body: "*"
+      additional_bindings {
+        post: "/v2beta1/{parent=projects/*/locations/*/agent/entityTypes/*}/entities:batchDelete"
+        body: "*"
+      }
     };
   }
 }
@@ -199,6 +237,10 @@ message EntityType {
     // values. However, list entity types can contain references to other entity
     // types (with or without aliases).
     KIND_LIST = 2;
+
+    // Regexp entity types allow to specify regular expressions in entries
+    // values.
+    KIND_REGEXP = 3;
   }
 
   // Represents different entity type expansion modes. Automated expansion
@@ -231,6 +273,9 @@ message EntityType {
 
   // Optional. The collection of entity entries associated with the entity type.
   repeated Entity entities = 6;
+
+  // Optional. Enables fuzzy entity extraction during classification.
+  bool enable_fuzzy_extraction = 7;
 }
 
 // The request message for [EntityTypes.ListEntityTypes][google.cloud.dialogflow.v2beta1.EntityTypes.ListEntityTypes].

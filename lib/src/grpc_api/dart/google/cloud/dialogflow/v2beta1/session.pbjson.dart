@@ -8,7 +8,7 @@
 const DetectIntentRequest$json = {
   '1': 'DetectIntentRequest',
   '2': [
-    {'1': 'session', '3': 1, '4': 1, '5': 9, '10': 'session'},
+    {'1': 'session', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'session'},
     {
       '1': 'query_params',
       '3': 2,
@@ -282,7 +282,7 @@ const KnowledgeAnswers$json = {
 const KnowledgeAnswers_Answer$json = {
   '1': 'Answer',
   '2': [
-    {'1': 'source', '3': 1, '4': 1, '5': 9, '10': 'source'},
+    {'1': 'source', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'source'},
     {'1': 'faq_question', '3': 2, '4': 1, '5': 9, '10': 'faqQuestion'},
     {'1': 'answer', '3': 3, '4': 1, '5': 9, '10': 'answer'},
     {

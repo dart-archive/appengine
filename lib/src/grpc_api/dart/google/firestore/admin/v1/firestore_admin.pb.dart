@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -16,10 +15,10 @@ import '../../../protobuf/field_mask.pb.dart' as $5;
 
 class CreateIndexRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateIndexRequest',
-      package: const $pb.PackageName('google.firestore.admin.v1'))
+      package: const $pb.PackageName('google.firestore.admin.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
-    ..a<$3.Index>(
-        2, 'index', $pb.PbFieldType.OM, $3.Index.getDefault, $3.Index.create)
+    ..aOM<$3.Index>(2, 'index', subBuilder: $3.Index.create)
     ..hasRequiredFields = false;
 
   CreateIndexRequest._() : super();
@@ -39,30 +38,42 @@ class CreateIndexRequest extends $pb.GeneratedMessage {
   CreateIndexRequest createEmptyInstance() => create();
   static $pb.PbList<CreateIndexRequest> createRepeated() =>
       $pb.PbList<CreateIndexRequest>();
-  static CreateIndexRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateIndexRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateIndexRequest>(create);
   static CreateIndexRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  @$pb.TagNumber(2)
   $3.Index get index => $_getN(1);
+  @$pb.TagNumber(2)
   set index($3.Index v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasIndex() => $_has(1);
+  @$pb.TagNumber(2)
   void clearIndex() => clearField(2);
+  @$pb.TagNumber(2)
+  $3.Index ensureIndex() => $_ensure(1);
 }
 
 class ListIndexesRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListIndexesRequest',
-      package: const $pb.PackageName('google.firestore.admin.v1'))
+      package: const $pb.PackageName('google.firestore.admin.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..aOS(2, 'filter')
     ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
@@ -86,47 +97,66 @@ class ListIndexesRequest extends $pb.GeneratedMessage {
   ListIndexesRequest createEmptyInstance() => create();
   static $pb.PbList<ListIndexesRequest> createRepeated() =>
       $pb.PbList<ListIndexesRequest>();
-  static ListIndexesRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListIndexesRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListIndexesRequest>(create);
   static ListIndexesRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.String get filter => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get filter => $_getSZ(1);
+  @$pb.TagNumber(2)
   set filter($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasFilter() => $_has(1);
+  @$pb.TagNumber(2)
   void clearFilter() => clearField(2);
 
-  $core.int get pageSize => $_get(2, 0);
+  @$pb.TagNumber(3)
+  $core.int get pageSize => $_getIZ(2);
+  @$pb.TagNumber(3)
   set pageSize($core.int v) {
     $_setSignedInt32(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageSize() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageSize() => clearField(3);
 
-  $core.String get pageToken => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get pageToken => $_getSZ(3);
+  @$pb.TagNumber(4)
   set pageToken($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasPageToken() => $_has(3);
+  @$pb.TagNumber(4)
   void clearPageToken() => clearField(4);
 }
 
 class ListIndexesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListIndexesResponse',
-      package: const $pb.PackageName('google.firestore.admin.v1'))
-    ..pc<$3.Index>(1, 'indexes', $pb.PbFieldType.PM, $3.Index.create)
+      package: const $pb.PackageName('google.firestore.admin.v1'),
+      createEmptyInstance: create)
+    ..pc<$3.Index>(1, 'indexes', $pb.PbFieldType.PM,
+        subBuilder: $3.Index.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -147,24 +177,31 @@ class ListIndexesResponse extends $pb.GeneratedMessage {
   ListIndexesResponse createEmptyInstance() => create();
   static $pb.PbList<ListIndexesResponse> createRepeated() =>
       $pb.PbList<ListIndexesResponse>();
-  static ListIndexesResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListIndexesResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListIndexesResponse>(create);
   static ListIndexesResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$3.Index> get indexes => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class GetIndexRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetIndexRequest',
-      package: const $pb.PackageName('google.firestore.admin.v1'))
+      package: const $pb.PackageName('google.firestore.admin.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -185,22 +222,28 @@ class GetIndexRequest extends $pb.GeneratedMessage {
   GetIndexRequest createEmptyInstance() => create();
   static $pb.PbList<GetIndexRequest> createRepeated() =>
       $pb.PbList<GetIndexRequest>();
-  static GetIndexRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetIndexRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetIndexRequest>(create);
   static GetIndexRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class DeleteIndexRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteIndexRequest',
-      package: const $pb.PackageName('google.firestore.admin.v1'))
+      package: const $pb.PackageName('google.firestore.admin.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -221,26 +264,30 @@ class DeleteIndexRequest extends $pb.GeneratedMessage {
   DeleteIndexRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteIndexRequest> createRepeated() =>
       $pb.PbList<DeleteIndexRequest>();
-  static DeleteIndexRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteIndexRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteIndexRequest>(create);
   static DeleteIndexRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class UpdateFieldRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateFieldRequest',
-      package: const $pb.PackageName('google.firestore.admin.v1'))
-    ..a<$4.Field>(
-        1, 'field_1', $pb.PbFieldType.OM, $4.Field.getDefault, $4.Field.create)
-    ..a<$5.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $5.FieldMask.getDefault, $5.FieldMask.create)
+      package: const $pb.PackageName('google.firestore.admin.v1'),
+      createEmptyInstance: create)
+    ..aOM<$4.Field>(1, 'field', subBuilder: $4.Field.create)
+    ..aOM<$5.FieldMask>(2, 'updateMask', subBuilder: $5.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateFieldRequest._() : super();
@@ -260,30 +307,44 @@ class UpdateFieldRequest extends $pb.GeneratedMessage {
   UpdateFieldRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateFieldRequest> createRepeated() =>
       $pb.PbList<UpdateFieldRequest>();
-  static UpdateFieldRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateFieldRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateFieldRequest>(create);
   static UpdateFieldRequest _defaultInstance;
 
+  @$pb.TagNumber(1)
   $4.Field get field_1 => $_getN(0);
+  @$pb.TagNumber(1)
   set field_1($4.Field v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasField_1() => $_has(0);
+  @$pb.TagNumber(1)
   void clearField_1() => clearField(1);
+  @$pb.TagNumber(1)
+  $4.Field ensureField_1() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $5.FieldMask get updateMask => $_getN(1);
+  @$pb.TagNumber(2)
   set updateMask($5.FieldMask v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasUpdateMask() => $_has(1);
+  @$pb.TagNumber(2)
   void clearUpdateMask() => clearField(2);
+  @$pb.TagNumber(2)
+  $5.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
 class GetFieldRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetFieldRequest',
-      package: const $pb.PackageName('google.firestore.admin.v1'))
+      package: const $pb.PackageName('google.firestore.admin.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -304,22 +365,28 @@ class GetFieldRequest extends $pb.GeneratedMessage {
   GetFieldRequest createEmptyInstance() => create();
   static $pb.PbList<GetFieldRequest> createRepeated() =>
       $pb.PbList<GetFieldRequest>();
-  static GetFieldRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetFieldRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetFieldRequest>(create);
   static GetFieldRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class ListFieldsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListFieldsRequest',
-      package: const $pb.PackageName('google.firestore.admin.v1'))
+      package: const $pb.PackageName('google.firestore.admin.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..aOS(2, 'filter')
     ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
@@ -343,47 +410,65 @@ class ListFieldsRequest extends $pb.GeneratedMessage {
   ListFieldsRequest createEmptyInstance() => create();
   static $pb.PbList<ListFieldsRequest> createRepeated() =>
       $pb.PbList<ListFieldsRequest>();
-  static ListFieldsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListFieldsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListFieldsRequest>(create);
   static ListFieldsRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.String get filter => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get filter => $_getSZ(1);
+  @$pb.TagNumber(2)
   set filter($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasFilter() => $_has(1);
+  @$pb.TagNumber(2)
   void clearFilter() => clearField(2);
 
-  $core.int get pageSize => $_get(2, 0);
+  @$pb.TagNumber(3)
+  $core.int get pageSize => $_getIZ(2);
+  @$pb.TagNumber(3)
   set pageSize($core.int v) {
     $_setSignedInt32(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageSize() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageSize() => clearField(3);
 
-  $core.String get pageToken => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get pageToken => $_getSZ(3);
+  @$pb.TagNumber(4)
   set pageToken($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasPageToken() => $_has(3);
+  @$pb.TagNumber(4)
   void clearPageToken() => clearField(4);
 }
 
 class ListFieldsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListFieldsResponse',
-      package: const $pb.PackageName('google.firestore.admin.v1'))
-    ..pc<$4.Field>(1, 'fields', $pb.PbFieldType.PM, $4.Field.create)
+      package: const $pb.PackageName('google.firestore.admin.v1'),
+      createEmptyInstance: create)
+    ..pc<$4.Field>(1, 'fields', $pb.PbFieldType.PM, subBuilder: $4.Field.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -404,24 +489,31 @@ class ListFieldsResponse extends $pb.GeneratedMessage {
   ListFieldsResponse createEmptyInstance() => create();
   static $pb.PbList<ListFieldsResponse> createRepeated() =>
       $pb.PbList<ListFieldsResponse>();
-  static ListFieldsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListFieldsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListFieldsResponse>(create);
   static ListFieldsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$4.Field> get fields => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class ExportDocumentsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ExportDocumentsRequest',
-      package: const $pb.PackageName('google.firestore.admin.v1'))
+      package: const $pb.PackageName('google.firestore.admin.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..pPS(2, 'collectionIds')
     ..aOS(3, 'outputUriPrefix')
@@ -446,32 +538,43 @@ class ExportDocumentsRequest extends $pb.GeneratedMessage {
   ExportDocumentsRequest createEmptyInstance() => create();
   static $pb.PbList<ExportDocumentsRequest> createRepeated() =>
       $pb.PbList<ExportDocumentsRequest>();
-  static ExportDocumentsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ExportDocumentsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ExportDocumentsRequest>(create);
   static ExportDocumentsRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<$core.String> get collectionIds => $_getList(1);
 
-  $core.String get outputUriPrefix => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get outputUriPrefix => $_getSZ(2);
+  @$pb.TagNumber(3)
   set outputUriPrefix($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasOutputUriPrefix() => $_has(2);
+  @$pb.TagNumber(3)
   void clearOutputUriPrefix() => clearField(3);
 }
 
 class ImportDocumentsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ImportDocumentsRequest',
-      package: const $pb.PackageName('google.firestore.admin.v1'))
+      package: const $pb.PackageName('google.firestore.admin.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..pPS(2, 'collectionIds')
     ..aOS(3, 'inputUriPrefix')
@@ -496,25 +599,35 @@ class ImportDocumentsRequest extends $pb.GeneratedMessage {
   ImportDocumentsRequest createEmptyInstance() => create();
   static $pb.PbList<ImportDocumentsRequest> createRepeated() =>
       $pb.PbList<ImportDocumentsRequest>();
-  static ImportDocumentsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ImportDocumentsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ImportDocumentsRequest>(create);
   static ImportDocumentsRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<$core.String> get collectionIds => $_getList(1);
 
-  $core.String get inputUriPrefix => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get inputUriPrefix => $_getSZ(2);
+  @$pb.TagNumber(3)
   set inputUriPrefix($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasInputUriPrefix() => $_has(2);
+  @$pb.TagNumber(3)
   void clearInputUriPrefix() => clearField(3);
 }

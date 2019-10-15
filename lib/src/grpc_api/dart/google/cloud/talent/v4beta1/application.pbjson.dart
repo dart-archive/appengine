@@ -9,8 +9,8 @@ const Application$json = {
   '1': 'Application',
   '2': [
     {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    {'1': 'external_id', '3': 31, '4': 1, '5': 9, '10': 'externalId'},
-    {'1': 'profile', '3': 2, '4': 1, '5': 9, '10': 'profile'},
+    {'1': 'external_id', '3': 31, '4': 1, '5': 9, '8': {}, '10': 'externalId'},
+    {'1': 'profile', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'profile'},
     {'1': 'job', '3': 4, '4': 1, '5': 9, '10': 'job'},
     {'1': 'company', '3': 5, '4': 1, '5': 9, '10': 'company'},
     {
@@ -27,6 +27,7 @@ const Application$json = {
       '4': 1,
       '5': 14,
       '6': '.google.cloud.talent.v4beta1.Application.ApplicationStage',
+      '8': {},
       '10': 'stage'
     },
     {
@@ -59,6 +60,7 @@ const Application$json = {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Timestamp',
+      '8': {},
       '10': 'createTime'
     },
     {
@@ -84,6 +86,7 @@ const Application$json = {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.BoolValue',
+      '8': {},
       '10': 'isMatch'
     },
     {
@@ -91,6 +94,7 @@ const Application$json = {
       '3': 29,
       '4': 1,
       '5': 9,
+      '8': {},
       '10': 'jobTitleSnippet'
     },
   ],

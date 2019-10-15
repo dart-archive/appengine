@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -16,10 +15,11 @@ export 'file_processing_error.pbenum.dart';
 
 class FileProcessingErrors extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('FileProcessingErrors',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
     ..aOS(1, 'fileUid')
     ..pc<FileProcessingError>(3, 'fileProcessingErrors', $pb.PbFieldType.PM,
-        FileProcessingError.create)
+        subBuilder: FileProcessingError.create)
     ..hasRequiredFields = false;
 
   FileProcessingErrors._() : super();
@@ -40,31 +40,36 @@ class FileProcessingErrors extends $pb.GeneratedMessage {
   FileProcessingErrors createEmptyInstance() => create();
   static $pb.PbList<FileProcessingErrors> createRepeated() =>
       $pb.PbList<FileProcessingErrors>();
-  static FileProcessingErrors getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static FileProcessingErrors getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<FileProcessingErrors>(create);
   static FileProcessingErrors _defaultInstance;
 
-  $core.String get fileUid => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get fileUid => $_getSZ(0);
+  @$pb.TagNumber(1)
   set fileUid($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasFileUid() => $_has(0);
+  @$pb.TagNumber(1)
   void clearFileUid() => clearField(1);
 
+  @$pb.TagNumber(3)
   $core.List<FileProcessingError> get fileProcessingErrors => $_getList(1);
 }
 
 class FileProcessingError extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('FileProcessingError',
-      package: const $pb.PackageName('google.devtools.resultstore.v2'))
-    ..e<FileProcessingErrorType>(
-        1,
-        'type',
-        $pb.PbFieldType.OE,
-        FileProcessingErrorType.FILE_PROCESSING_ERROR_TYPE_UNSPECIFIED,
-        FileProcessingErrorType.valueOf,
-        FileProcessingErrorType.values)
+      package: const $pb.PackageName('google.devtools.resultstore.v2'),
+      createEmptyInstance: create)
+    ..e<FileProcessingErrorType>(1, 'type', $pb.PbFieldType.OE,
+        defaultOrMaker:
+            FileProcessingErrorType.FILE_PROCESSING_ERROR_TYPE_UNSPECIFIED,
+        valueOf: FileProcessingErrorType.valueOf,
+        enumValues: FileProcessingErrorType.values)
     ..aOS(2, 'message')
     ..hasRequiredFields = false;
 
@@ -85,23 +90,32 @@ class FileProcessingError extends $pb.GeneratedMessage {
   FileProcessingError createEmptyInstance() => create();
   static $pb.PbList<FileProcessingError> createRepeated() =>
       $pb.PbList<FileProcessingError>();
-  static FileProcessingError getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static FileProcessingError getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<FileProcessingError>(create);
   static FileProcessingError _defaultInstance;
 
+  @$pb.TagNumber(1)
   FileProcessingErrorType get type => $_getN(0);
+  @$pb.TagNumber(1)
   set type(FileProcessingErrorType v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasType() => $_has(0);
+  @$pb.TagNumber(1)
   void clearType() => clearField(1);
 
-  $core.String get message => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get message => $_getSZ(1);
+  @$pb.TagNumber(2)
   set message($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasMessage() => $_has(1);
+  @$pb.TagNumber(2)
   void clearMessage() => clearField(2);
 }

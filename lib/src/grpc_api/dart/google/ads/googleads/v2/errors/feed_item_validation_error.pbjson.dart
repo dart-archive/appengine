@@ -113,5 +113,7 @@ const FeedItemValidationErrorEnum_FeedItemValidationError$json = {
     {'1': 'INVALID_IMAGE_URL', '2': 94},
     {'1': 'MISSING_LATITUDE_VALUE', '2': 95},
     {'1': 'MISSING_LONGITUDE_VALUE', '2': 96},
+    {'1': 'ADDRESS_NOT_FOUND', '2': 97},
+    {'1': 'ADDRESS_NOT_TARGETABLE', '2': 98},
   ],
 };

@@ -38,6 +38,22 @@ const Profile$json = {
       '10': 'updateTime'
     },
     {
+      '1': 'candidate_update_time',
+      '3': 67,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'candidateUpdateTime'
+    },
+    {
+      '1': 'resume_update_time',
+      '3': 68,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'resumeUpdateTime'
+    },
+    {
       '1': 'resume',
       '3': 53,
       '4': 1,
@@ -149,8 +165,15 @@ const Profile$json = {
       '6': '.google.cloud.talent.v4beta1.Certification',
       '10': 'certifications'
     },
-    {'1': 'applications', '3': 47, '4': 3, '5': 9, '10': 'applications'},
-    {'1': 'assignments', '3': 48, '4': 3, '5': 9, '10': 'assignments'},
+    {
+      '1': 'applications',
+      '3': 47,
+      '4': 3,
+      '5': 9,
+      '8': {},
+      '10': 'applications'
+    },
+    {'1': 'assignments', '3': 48, '4': 3, '5': 9, '8': {}, '10': 'assignments'},
     {
       '1': 'custom_attributes',
       '3': 26,
@@ -159,8 +182,24 @@ const Profile$json = {
       '6': '.google.cloud.talent.v4beta1.Profile.CustomAttributesEntry',
       '10': 'customAttributes'
     },
-    {'1': 'processed', '3': 27, '4': 1, '5': 8, '10': 'processed'},
-    {'1': 'keyword_snippet', '3': 28, '4': 1, '5': 9, '10': 'keywordSnippet'},
+    {'1': 'processed', '3': 27, '4': 1, '5': 8, '8': {}, '10': 'processed'},
+    {
+      '1': 'keyword_snippet',
+      '3': 28,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'keywordSnippet'
+    },
+    {
+      '1': 'availability_signals',
+      '3': 70,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.talent.v4beta1.AvailabilitySignal',
+      '8': {},
+      '10': 'availabilitySignals'
+    },
     {
       '1': 'derived_addresses',
       '3': 64,
@@ -188,6 +227,36 @@ const Profile_CustomAttributesEntry$json = {
     },
   ],
   '7': {'7': true},
+};
+
+const AvailabilitySignal$json = {
+  '1': 'AvailabilitySignal',
+  '2': [
+    {
+      '1': 'type',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.google.cloud.talent.v4beta1.AvailabilitySignalType',
+      '10': 'type'
+    },
+    {
+      '1': 'last_update_time',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Timestamp',
+      '10': 'lastUpdateTime'
+    },
+    {
+      '1': 'filter_satisfied',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.BoolValue',
+      '10': 'filterSatisfied'
+    },
+  ],
 };
 
 const Resume$json = {
@@ -442,6 +511,7 @@ const EmploymentRecord$json = {
       '3': 11,
       '4': 1,
       '5': 9,
+      '8': {},
       '10': 'jobTitleSnippet'
     },
     {
@@ -449,6 +519,7 @@ const EmploymentRecord$json = {
       '3': 12,
       '4': 1,
       '5': 9,
+      '8': {},
       '10': 'jobDescriptionSnippet'
     },
     {
@@ -456,6 +527,7 @@ const EmploymentRecord$json = {
       '3': 13,
       '4': 1,
       '5': 9,
+      '8': {},
       '10': 'employerNameSnippet'
     },
   ],
@@ -528,9 +600,17 @@ const EducationRecord$json = {
       '3': 10,
       '4': 1,
       '5': 9,
+      '8': {},
       '10': 'schoolNameSnippet'
     },
-    {'1': 'degree_snippet', '3': 11, '4': 1, '5': 9, '10': 'degreeSnippet'},
+    {
+      '1': 'degree_snippet',
+      '3': 11,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'degreeSnippet'
+    },
   ],
   '8': [
     {'1': 'degree'},
@@ -589,6 +669,7 @@ const Activity$json = {
       '3': 8,
       '4': 1,
       '5': 9,
+      '8': {},
       '10': 'activityNameSnippet'
     },
     {
@@ -596,6 +677,7 @@ const Activity$json = {
       '3': 9,
       '4': 1,
       '5': 9,
+      '8': {},
       '10': 'activityDescriptionSnippet'
     },
     {
@@ -603,6 +685,7 @@ const Activity$json = {
       '3': 10,
       '4': 3,
       '5': 9,
+      '8': {},
       '10': 'skillsUsedSnippet'
     },
   ],

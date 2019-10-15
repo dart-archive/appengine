@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -14,7 +13,8 @@ export 'feed_mapping_status.pbenum.dart';
 
 class FeedMappingStatusEnum extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('FeedMappingStatusEnum',
-      package: const $pb.PackageName('google.ads.googleads.v1.enums'))
+      package: const $pb.PackageName('google.ads.googleads.v1.enums'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   FeedMappingStatusEnum._() : super();
@@ -36,7 +36,8 @@ class FeedMappingStatusEnum extends $pb.GeneratedMessage {
   FeedMappingStatusEnum createEmptyInstance() => create();
   static $pb.PbList<FeedMappingStatusEnum> createRepeated() =>
       $pb.PbList<FeedMappingStatusEnum>();
-  static FeedMappingStatusEnum getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static FeedMappingStatusEnum getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<FeedMappingStatusEnum>(create);
   static FeedMappingStatusEnum _defaultInstance;
 }

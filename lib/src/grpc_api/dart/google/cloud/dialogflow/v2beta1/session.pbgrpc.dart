@@ -7,31 +7,31 @@
 
 import 'dart:async' as $async;
 
-import 'dart:core' as $core show int, String, List;
+import 'dart:core' as $core;
 
 import 'package:grpc/service_api.dart' as $grpc;
-import 'session.pb.dart' as $7;
+import 'session.pb.dart' as $8;
 export 'session.pb.dart';
 
 class SessionsClient extends $grpc.Client {
   static final _$detectIntent =
-      $grpc.ClientMethod<$7.DetectIntentRequest, $7.DetectIntentResponse>(
+      $grpc.ClientMethod<$8.DetectIntentRequest, $8.DetectIntentResponse>(
           '/google.cloud.dialogflow.v2beta1.Sessions/DetectIntent',
-          ($7.DetectIntentRequest value) => value.writeToBuffer(),
+          ($8.DetectIntentRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
-              $7.DetectIntentResponse.fromBuffer(value));
+              $8.DetectIntentResponse.fromBuffer(value));
   static final _$streamingDetectIntent = $grpc.ClientMethod<
-          $7.StreamingDetectIntentRequest, $7.StreamingDetectIntentResponse>(
+          $8.StreamingDetectIntentRequest, $8.StreamingDetectIntentResponse>(
       '/google.cloud.dialogflow.v2beta1.Sessions/StreamingDetectIntent',
-      ($7.StreamingDetectIntentRequest value) => value.writeToBuffer(),
+      ($8.StreamingDetectIntentRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
-          $7.StreamingDetectIntentResponse.fromBuffer(value));
+          $8.StreamingDetectIntentResponse.fromBuffer(value));
 
   SessionsClient($grpc.ClientChannel channel, {$grpc.CallOptions options})
       : super(channel, options: options);
 
-  $grpc.ResponseFuture<$7.DetectIntentResponse> detectIntent(
-      $7.DetectIntentRequest request,
+  $grpc.ResponseFuture<$8.DetectIntentResponse> detectIntent(
+      $8.DetectIntentRequest request,
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$detectIntent, $async.Stream.fromIterable([request]),
@@ -39,8 +39,8 @@ class SessionsClient extends $grpc.Client {
     return $grpc.ResponseFuture(call);
   }
 
-  $grpc.ResponseStream<$7.StreamingDetectIntentResponse> streamingDetectIntent(
-      $async.Stream<$7.StreamingDetectIntentRequest> request,
+  $grpc.ResponseStream<$8.StreamingDetectIntentResponse> streamingDetectIntent(
+      $async.Stream<$8.StreamingDetectIntentRequest> request,
       {$grpc.CallOptions options}) {
     final call =
         $createCall(_$streamingDetectIntent, request, options: options);
@@ -53,34 +53,34 @@ abstract class SessionsServiceBase extends $grpc.Service {
 
   SessionsServiceBase() {
     $addMethod(
-        $grpc.ServiceMethod<$7.DetectIntentRequest, $7.DetectIntentResponse>(
+        $grpc.ServiceMethod<$8.DetectIntentRequest, $8.DetectIntentResponse>(
             'DetectIntent',
             detectIntent_Pre,
             false,
             false,
             ($core.List<$core.int> value) =>
-                $7.DetectIntentRequest.fromBuffer(value),
-            ($7.DetectIntentResponse value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$7.StreamingDetectIntentRequest,
-            $7.StreamingDetectIntentResponse>(
+                $8.DetectIntentRequest.fromBuffer(value),
+            ($8.DetectIntentResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$8.StreamingDetectIntentRequest,
+            $8.StreamingDetectIntentResponse>(
         'StreamingDetectIntent',
         streamingDetectIntent,
         true,
         true,
         ($core.List<$core.int> value) =>
-            $7.StreamingDetectIntentRequest.fromBuffer(value),
-        ($7.StreamingDetectIntentResponse value) => value.writeToBuffer()));
+            $8.StreamingDetectIntentRequest.fromBuffer(value),
+        ($8.StreamingDetectIntentResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$7.DetectIntentResponse> detectIntent_Pre(
+  $async.Future<$8.DetectIntentResponse> detectIntent_Pre(
       $grpc.ServiceCall call,
-      $async.Future<$7.DetectIntentRequest> request) async {
+      $async.Future<$8.DetectIntentRequest> request) async {
     return detectIntent(call, await request);
   }
 
-  $async.Future<$7.DetectIntentResponse> detectIntent(
-      $grpc.ServiceCall call, $7.DetectIntentRequest request);
-  $async.Stream<$7.StreamingDetectIntentResponse> streamingDetectIntent(
+  $async.Future<$8.DetectIntentResponse> detectIntent(
+      $grpc.ServiceCall call, $8.DetectIntentRequest request);
+  $async.Stream<$8.StreamingDetectIntentResponse> streamingDetectIntent(
       $grpc.ServiceCall call,
-      $async.Stream<$7.StreamingDetectIntentRequest> request);
+      $async.Stream<$8.StreamingDetectIntentRequest> request);
 }

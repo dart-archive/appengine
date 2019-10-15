@@ -5,10 +5,9 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
-import 'package:fixnum/fixnum.dart';
+import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import 'resources.pb.dart' as $3;
@@ -19,10 +18,11 @@ import 'resources.pbenum.dart' as $3;
 class CreateDeviceRegistryRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'CreateDeviceRegistryRequest',
-      package: const $pb.PackageName('google.cloud.iot.v1'))
+      package: const $pb.PackageName('google.cloud.iot.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
-    ..a<$3.DeviceRegistry>(2, 'deviceRegistry', $pb.PbFieldType.OM,
-        $3.DeviceRegistry.getDefault, $3.DeviceRegistry.create)
+    ..aOM<$3.DeviceRegistry>(2, 'deviceRegistry',
+        subBuilder: $3.DeviceRegistry.create)
     ..hasRequiredFields = false;
 
   CreateDeviceRegistryRequest._() : super();
@@ -46,30 +46,42 @@ class CreateDeviceRegistryRequest extends $pb.GeneratedMessage {
   CreateDeviceRegistryRequest createEmptyInstance() => create();
   static $pb.PbList<CreateDeviceRegistryRequest> createRepeated() =>
       $pb.PbList<CreateDeviceRegistryRequest>();
-  static CreateDeviceRegistryRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateDeviceRegistryRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateDeviceRegistryRequest>(create);
   static CreateDeviceRegistryRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  @$pb.TagNumber(2)
   $3.DeviceRegistry get deviceRegistry => $_getN(1);
+  @$pb.TagNumber(2)
   set deviceRegistry($3.DeviceRegistry v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasDeviceRegistry() => $_has(1);
+  @$pb.TagNumber(2)
   void clearDeviceRegistry() => clearField(2);
+  @$pb.TagNumber(2)
+  $3.DeviceRegistry ensureDeviceRegistry() => $_ensure(1);
 }
 
 class GetDeviceRegistryRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetDeviceRegistryRequest',
-      package: const $pb.PackageName('google.cloud.iot.v1'))
+      package: const $pb.PackageName('google.cloud.iot.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -92,23 +104,29 @@ class GetDeviceRegistryRequest extends $pb.GeneratedMessage {
   GetDeviceRegistryRequest createEmptyInstance() => create();
   static $pb.PbList<GetDeviceRegistryRequest> createRepeated() =>
       $pb.PbList<GetDeviceRegistryRequest>();
-  static GetDeviceRegistryRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetDeviceRegistryRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetDeviceRegistryRequest>(create);
   static GetDeviceRegistryRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class DeleteDeviceRegistryRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'DeleteDeviceRegistryRequest',
-      package: const $pb.PackageName('google.cloud.iot.v1'))
+      package: const $pb.PackageName('google.cloud.iot.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -133,27 +151,32 @@ class DeleteDeviceRegistryRequest extends $pb.GeneratedMessage {
   DeleteDeviceRegistryRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteDeviceRegistryRequest> createRepeated() =>
       $pb.PbList<DeleteDeviceRegistryRequest>();
-  static DeleteDeviceRegistryRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteDeviceRegistryRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteDeviceRegistryRequest>(create);
   static DeleteDeviceRegistryRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class UpdateDeviceRegistryRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'UpdateDeviceRegistryRequest',
-      package: const $pb.PackageName('google.cloud.iot.v1'))
-    ..a<$3.DeviceRegistry>(1, 'deviceRegistry', $pb.PbFieldType.OM,
-        $3.DeviceRegistry.getDefault, $3.DeviceRegistry.create)
-    ..a<$5.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $5.FieldMask.getDefault, $5.FieldMask.create)
+      package: const $pb.PackageName('google.cloud.iot.v1'),
+      createEmptyInstance: create)
+    ..aOM<$3.DeviceRegistry>(1, 'deviceRegistry',
+        subBuilder: $3.DeviceRegistry.create)
+    ..aOM<$5.FieldMask>(2, 'updateMask', subBuilder: $5.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateDeviceRegistryRequest._() : super();
@@ -177,31 +200,45 @@ class UpdateDeviceRegistryRequest extends $pb.GeneratedMessage {
   UpdateDeviceRegistryRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateDeviceRegistryRequest> createRepeated() =>
       $pb.PbList<UpdateDeviceRegistryRequest>();
-  static UpdateDeviceRegistryRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateDeviceRegistryRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateDeviceRegistryRequest>(create);
   static UpdateDeviceRegistryRequest _defaultInstance;
 
+  @$pb.TagNumber(1)
   $3.DeviceRegistry get deviceRegistry => $_getN(0);
+  @$pb.TagNumber(1)
   set deviceRegistry($3.DeviceRegistry v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasDeviceRegistry() => $_has(0);
+  @$pb.TagNumber(1)
   void clearDeviceRegistry() => clearField(1);
+  @$pb.TagNumber(1)
+  $3.DeviceRegistry ensureDeviceRegistry() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $5.FieldMask get updateMask => $_getN(1);
+  @$pb.TagNumber(2)
   set updateMask($5.FieldMask v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasUpdateMask() => $_has(1);
+  @$pb.TagNumber(2)
   void clearUpdateMask() => clearField(2);
+  @$pb.TagNumber(2)
+  $5.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
 class ListDeviceRegistriesRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListDeviceRegistriesRequest',
-      package: const $pb.PackageName('google.cloud.iot.v1'))
+      package: const $pb.PackageName('google.cloud.iot.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(3, 'pageToken')
@@ -228,41 +265,55 @@ class ListDeviceRegistriesRequest extends $pb.GeneratedMessage {
   ListDeviceRegistriesRequest createEmptyInstance() => create();
   static $pb.PbList<ListDeviceRegistriesRequest> createRepeated() =>
       $pb.PbList<ListDeviceRegistriesRequest>();
-  static ListDeviceRegistriesRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListDeviceRegistriesRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListDeviceRegistriesRequest>(create);
   static ListDeviceRegistriesRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.int get pageSize => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get pageSize => $_getIZ(1);
+  @$pb.TagNumber(2)
   set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
-  $core.String get pageToken => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get pageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
   set pageToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
 }
 
 class ListDeviceRegistriesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListDeviceRegistriesResponse',
-      package: const $pb.PackageName('google.cloud.iot.v1'))
-    ..pc<$3.DeviceRegistry>(
-        1, 'deviceRegistries', $pb.PbFieldType.PM, $3.DeviceRegistry.create)
+      package: const $pb.PackageName('google.cloud.iot.v1'),
+      createEmptyInstance: create)
+    ..pc<$3.DeviceRegistry>(1, 'deviceRegistries', $pb.PbFieldType.PM,
+        subBuilder: $3.DeviceRegistry.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -287,27 +338,33 @@ class ListDeviceRegistriesResponse extends $pb.GeneratedMessage {
   ListDeviceRegistriesResponse createEmptyInstance() => create();
   static $pb.PbList<ListDeviceRegistriesResponse> createRepeated() =>
       $pb.PbList<ListDeviceRegistriesResponse>();
-  static ListDeviceRegistriesResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListDeviceRegistriesResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListDeviceRegistriesResponse>(create);
   static ListDeviceRegistriesResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$3.DeviceRegistry> get deviceRegistries => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class CreateDeviceRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateDeviceRequest',
-      package: const $pb.PackageName('google.cloud.iot.v1'))
+      package: const $pb.PackageName('google.cloud.iot.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
-    ..a<$3.Device>(
-        2, 'device', $pb.PbFieldType.OM, $3.Device.getDefault, $3.Device.create)
+    ..aOM<$3.Device>(2, 'device', subBuilder: $3.Device.create)
     ..hasRequiredFields = false;
 
   CreateDeviceRequest._() : super();
@@ -327,33 +384,44 @@ class CreateDeviceRequest extends $pb.GeneratedMessage {
   CreateDeviceRequest createEmptyInstance() => create();
   static $pb.PbList<CreateDeviceRequest> createRepeated() =>
       $pb.PbList<CreateDeviceRequest>();
-  static CreateDeviceRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateDeviceRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateDeviceRequest>(create);
   static CreateDeviceRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  @$pb.TagNumber(2)
   $3.Device get device => $_getN(1);
+  @$pb.TagNumber(2)
   set device($3.Device v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasDevice() => $_has(1);
+  @$pb.TagNumber(2)
   void clearDevice() => clearField(2);
+  @$pb.TagNumber(2)
+  $3.Device ensureDevice() => $_ensure(1);
 }
 
 class GetDeviceRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetDeviceRequest',
-      package: const $pb.PackageName('google.cloud.iot.v1'))
+      package: const $pb.PackageName('google.cloud.iot.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
-    ..a<$5.FieldMask>(2, 'fieldMask', $pb.PbFieldType.OM,
-        $5.FieldMask.getDefault, $5.FieldMask.create)
+    ..aOM<$5.FieldMask>(2, 'fieldMask', subBuilder: $5.FieldMask.create)
     ..hasRequiredFields = false;
 
   GetDeviceRequest._() : super();
@@ -373,34 +441,44 @@ class GetDeviceRequest extends $pb.GeneratedMessage {
   GetDeviceRequest createEmptyInstance() => create();
   static $pb.PbList<GetDeviceRequest> createRepeated() =>
       $pb.PbList<GetDeviceRequest>();
-  static GetDeviceRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetDeviceRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetDeviceRequest>(create);
   static GetDeviceRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $5.FieldMask get fieldMask => $_getN(1);
+  @$pb.TagNumber(2)
   set fieldMask($5.FieldMask v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasFieldMask() => $_has(1);
+  @$pb.TagNumber(2)
   void clearFieldMask() => clearField(2);
+  @$pb.TagNumber(2)
+  $5.FieldMask ensureFieldMask() => $_ensure(1);
 }
 
 class UpdateDeviceRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateDeviceRequest',
-      package: const $pb.PackageName('google.cloud.iot.v1'))
-    ..a<$3.Device>(
-        2, 'device', $pb.PbFieldType.OM, $3.Device.getDefault, $3.Device.create)
-    ..a<$5.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $5.FieldMask.getDefault, $5.FieldMask.create)
+      package: const $pb.PackageName('google.cloud.iot.v1'),
+      createEmptyInstance: create)
+    ..aOM<$3.Device>(2, 'device', subBuilder: $3.Device.create)
+    ..aOM<$5.FieldMask>(3, 'updateMask', subBuilder: $5.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateDeviceRequest._() : super();
@@ -420,30 +498,44 @@ class UpdateDeviceRequest extends $pb.GeneratedMessage {
   UpdateDeviceRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateDeviceRequest> createRepeated() =>
       $pb.PbList<UpdateDeviceRequest>();
-  static UpdateDeviceRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateDeviceRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateDeviceRequest>(create);
   static UpdateDeviceRequest _defaultInstance;
 
+  @$pb.TagNumber(2)
   $3.Device get device => $_getN(0);
+  @$pb.TagNumber(2)
   set device($3.Device v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasDevice() => $_has(0);
+  @$pb.TagNumber(2)
   void clearDevice() => clearField(2);
+  @$pb.TagNumber(2)
+  $3.Device ensureDevice() => $_ensure(0);
 
+  @$pb.TagNumber(3)
   $5.FieldMask get updateMask => $_getN(1);
+  @$pb.TagNumber(3)
   set updateMask($5.FieldMask v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasUpdateMask() => $_has(1);
+  @$pb.TagNumber(3)
   void clearUpdateMask() => clearField(3);
+  @$pb.TagNumber(3)
+  $5.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
 class DeleteDeviceRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteDeviceRequest',
-      package: const $pb.PackageName('google.cloud.iot.v1'))
+      package: const $pb.PackageName('google.cloud.iot.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -464,29 +556,34 @@ class DeleteDeviceRequest extends $pb.GeneratedMessage {
   DeleteDeviceRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteDeviceRequest> createRepeated() =>
       $pb.PbList<DeleteDeviceRequest>();
-  static DeleteDeviceRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteDeviceRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteDeviceRequest>(create);
   static DeleteDeviceRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class ListDevicesRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListDevicesRequest',
-      package: const $pb.PackageName('google.cloud.iot.v1'))
+      package: const $pb.PackageName('google.cloud.iot.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
-    ..p<Int64>(2, 'deviceNumIds', $pb.PbFieldType.PU6)
+    ..p<$fixnum.Int64>(2, 'deviceNumIds', $pb.PbFieldType.PU6)
     ..pPS(3, 'deviceIds')
-    ..a<$5.FieldMask>(4, 'fieldMask', $pb.PbFieldType.OM,
-        $5.FieldMask.getDefault, $5.FieldMask.create)
-    ..a<GatewayListOptions>(6, 'gatewayListOptions', $pb.PbFieldType.OM,
-        GatewayListOptions.getDefault, GatewayListOptions.create)
+    ..aOM<$5.FieldMask>(4, 'fieldMask', subBuilder: $5.FieldMask.create)
+    ..aOM<GatewayListOptions>(6, 'gatewayListOptions',
+        subBuilder: GatewayListOptions.create)
     ..a<$core.int>(100, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(101, 'pageToken')
     ..hasRequiredFields = false;
@@ -508,52 +605,79 @@ class ListDevicesRequest extends $pb.GeneratedMessage {
   ListDevicesRequest createEmptyInstance() => create();
   static $pb.PbList<ListDevicesRequest> createRepeated() =>
       $pb.PbList<ListDevicesRequest>();
-  static ListDevicesRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListDevicesRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListDevicesRequest>(create);
   static ListDevicesRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.List<Int64> get deviceNumIds => $_getList(1);
+  @$pb.TagNumber(2)
+  $core.List<$fixnum.Int64> get deviceNumIds => $_getList(1);
 
+  @$pb.TagNumber(3)
   $core.List<$core.String> get deviceIds => $_getList(2);
 
+  @$pb.TagNumber(4)
   $5.FieldMask get fieldMask => $_getN(3);
+  @$pb.TagNumber(4)
   set fieldMask($5.FieldMask v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasFieldMask() => $_has(3);
+  @$pb.TagNumber(4)
   void clearFieldMask() => clearField(4);
+  @$pb.TagNumber(4)
+  $5.FieldMask ensureFieldMask() => $_ensure(3);
 
+  @$pb.TagNumber(6)
   GatewayListOptions get gatewayListOptions => $_getN(4);
+  @$pb.TagNumber(6)
   set gatewayListOptions(GatewayListOptions v) {
     setField(6, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasGatewayListOptions() => $_has(4);
+  @$pb.TagNumber(6)
   void clearGatewayListOptions() => clearField(6);
+  @$pb.TagNumber(6)
+  GatewayListOptions ensureGatewayListOptions() => $_ensure(4);
 
-  $core.int get pageSize => $_get(5, 0);
+  @$pb.TagNumber(100)
+  $core.int get pageSize => $_getIZ(5);
+  @$pb.TagNumber(100)
   set pageSize($core.int v) {
     $_setSignedInt32(5, v);
   }
 
+  @$pb.TagNumber(100)
   $core.bool hasPageSize() => $_has(5);
+  @$pb.TagNumber(100)
   void clearPageSize() => clearField(100);
 
-  $core.String get pageToken => $_getS(6, '');
+  @$pb.TagNumber(101)
+  $core.String get pageToken => $_getSZ(6);
+  @$pb.TagNumber(101)
   set pageToken($core.String v) {
     $_setString(6, v);
   }
 
+  @$pb.TagNumber(101)
   $core.bool hasPageToken() => $_has(6);
+  @$pb.TagNumber(101)
   void clearPageToken() => clearField(101);
 }
 
@@ -573,15 +697,13 @@ class GatewayListOptions extends $pb.GeneratedMessage {
     0: GatewayListOptions_Filter.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GatewayListOptions',
-      package: const $pb.PackageName('google.cloud.iot.v1'))
+      package: const $pb.PackageName('google.cloud.iot.v1'),
+      createEmptyInstance: create)
     ..oo(0, [1, 2, 3])
-    ..e<$3.GatewayType>(
-        1,
-        'gatewayType',
-        $pb.PbFieldType.OE,
-        $3.GatewayType.GATEWAY_TYPE_UNSPECIFIED,
-        $3.GatewayType.valueOf,
-        $3.GatewayType.values)
+    ..e<$3.GatewayType>(1, 'gatewayType', $pb.PbFieldType.OE,
+        defaultOrMaker: $3.GatewayType.GATEWAY_TYPE_UNSPECIFIED,
+        valueOf: $3.GatewayType.valueOf,
+        enumValues: $3.GatewayType.values)
     ..aOS(2, 'associationsGatewayId')
     ..aOS(3, 'associationsDeviceId')
     ..hasRequiredFields = false;
@@ -603,43 +725,58 @@ class GatewayListOptions extends $pb.GeneratedMessage {
   GatewayListOptions createEmptyInstance() => create();
   static $pb.PbList<GatewayListOptions> createRepeated() =>
       $pb.PbList<GatewayListOptions>();
-  static GatewayListOptions getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GatewayListOptions getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GatewayListOptions>(create);
   static GatewayListOptions _defaultInstance;
 
   GatewayListOptions_Filter whichFilter() =>
       _GatewayListOptions_FilterByTag[$_whichOneof(0)];
   void clearFilter() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   $3.GatewayType get gatewayType => $_getN(0);
+  @$pb.TagNumber(1)
   set gatewayType($3.GatewayType v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasGatewayType() => $_has(0);
+  @$pb.TagNumber(1)
   void clearGatewayType() => clearField(1);
 
-  $core.String get associationsGatewayId => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get associationsGatewayId => $_getSZ(1);
+  @$pb.TagNumber(2)
   set associationsGatewayId($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasAssociationsGatewayId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearAssociationsGatewayId() => clearField(2);
 
-  $core.String get associationsDeviceId => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get associationsDeviceId => $_getSZ(2);
+  @$pb.TagNumber(3)
   set associationsDeviceId($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasAssociationsDeviceId() => $_has(2);
+  @$pb.TagNumber(3)
   void clearAssociationsDeviceId() => clearField(3);
 }
 
 class ListDevicesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListDevicesResponse',
-      package: const $pb.PackageName('google.cloud.iot.v1'))
-    ..pc<$3.Device>(1, 'devices', $pb.PbFieldType.PM, $3.Device.create)
+      package: const $pb.PackageName('google.cloud.iot.v1'),
+      createEmptyInstance: create)
+    ..pc<$3.Device>(1, 'devices', $pb.PbFieldType.PM,
+        subBuilder: $3.Device.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -660,25 +797,32 @@ class ListDevicesResponse extends $pb.GeneratedMessage {
   ListDevicesResponse createEmptyInstance() => create();
   static $pb.PbList<ListDevicesResponse> createRepeated() =>
       $pb.PbList<ListDevicesResponse>();
-  static ListDevicesResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListDevicesResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListDevicesResponse>(create);
   static ListDevicesResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$3.Device> get devices => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class ModifyCloudToDeviceConfigRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ModifyCloudToDeviceConfigRequest',
-      package: const $pb.PackageName('google.cloud.iot.v1'))
+      package: const $pb.PackageName('google.cloud.iot.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..aInt64(2, 'versionToUpdate')
     ..a<$core.List<$core.int>>(3, 'binaryData', $pb.PbFieldType.OY)
@@ -705,39 +849,54 @@ class ModifyCloudToDeviceConfigRequest extends $pb.GeneratedMessage {
   ModifyCloudToDeviceConfigRequest createEmptyInstance() => create();
   static $pb.PbList<ModifyCloudToDeviceConfigRequest> createRepeated() =>
       $pb.PbList<ModifyCloudToDeviceConfigRequest>();
-  static ModifyCloudToDeviceConfigRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ModifyCloudToDeviceConfigRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ModifyCloudToDeviceConfigRequest>(
+          create);
   static ModifyCloudToDeviceConfigRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  Int64 get versionToUpdate => $_getI64(1);
-  set versionToUpdate(Int64 v) {
+  @$pb.TagNumber(2)
+  $fixnum.Int64 get versionToUpdate => $_getI64(1);
+  @$pb.TagNumber(2)
+  set versionToUpdate($fixnum.Int64 v) {
     $_setInt64(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasVersionToUpdate() => $_has(1);
+  @$pb.TagNumber(2)
   void clearVersionToUpdate() => clearField(2);
 
+  @$pb.TagNumber(3)
   $core.List<$core.int> get binaryData => $_getN(2);
+  @$pb.TagNumber(3)
   set binaryData($core.List<$core.int> v) {
     $_setBytes(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasBinaryData() => $_has(2);
+  @$pb.TagNumber(3)
   void clearBinaryData() => clearField(3);
 }
 
 class ListDeviceConfigVersionsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListDeviceConfigVersionsRequest',
-      package: const $pb.PackageName('google.cloud.iot.v1'))
+      package: const $pb.PackageName('google.cloud.iot.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..a<$core.int>(2, 'numVersions', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
@@ -763,33 +922,44 @@ class ListDeviceConfigVersionsRequest extends $pb.GeneratedMessage {
   ListDeviceConfigVersionsRequest createEmptyInstance() => create();
   static $pb.PbList<ListDeviceConfigVersionsRequest> createRepeated() =>
       $pb.PbList<ListDeviceConfigVersionsRequest>();
-  static ListDeviceConfigVersionsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListDeviceConfigVersionsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListDeviceConfigVersionsRequest>(
+          create);
   static ListDeviceConfigVersionsRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.int get numVersions => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get numVersions => $_getIZ(1);
+  @$pb.TagNumber(2)
   set numVersions($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNumVersions() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNumVersions() => clearField(2);
 }
 
 class ListDeviceConfigVersionsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListDeviceConfigVersionsResponse',
-      package: const $pb.PackageName('google.cloud.iot.v1'))
-    ..pc<$3.DeviceConfig>(
-        1, 'deviceConfigs', $pb.PbFieldType.PM, $3.DeviceConfig.create)
+      package: const $pb.PackageName('google.cloud.iot.v1'),
+      createEmptyInstance: create)
+    ..pc<$3.DeviceConfig>(1, 'deviceConfigs', $pb.PbFieldType.PM,
+        subBuilder: $3.DeviceConfig.create)
     ..hasRequiredFields = false;
 
   ListDeviceConfigVersionsResponse._() : super();
@@ -813,16 +983,20 @@ class ListDeviceConfigVersionsResponse extends $pb.GeneratedMessage {
   ListDeviceConfigVersionsResponse createEmptyInstance() => create();
   static $pb.PbList<ListDeviceConfigVersionsResponse> createRepeated() =>
       $pb.PbList<ListDeviceConfigVersionsResponse>();
-  static ListDeviceConfigVersionsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListDeviceConfigVersionsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListDeviceConfigVersionsResponse>(
+          create);
   static ListDeviceConfigVersionsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$3.DeviceConfig> get deviceConfigs => $_getList(0);
 }
 
 class ListDeviceStatesRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListDeviceStatesRequest',
-      package: const $pb.PackageName('google.cloud.iot.v1'))
+      package: const $pb.PackageName('google.cloud.iot.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..a<$core.int>(2, 'numStates', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
@@ -846,32 +1020,42 @@ class ListDeviceStatesRequest extends $pb.GeneratedMessage {
   ListDeviceStatesRequest createEmptyInstance() => create();
   static $pb.PbList<ListDeviceStatesRequest> createRepeated() =>
       $pb.PbList<ListDeviceStatesRequest>();
-  static ListDeviceStatesRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListDeviceStatesRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListDeviceStatesRequest>(create);
   static ListDeviceStatesRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.int get numStates => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get numStates => $_getIZ(1);
+  @$pb.TagNumber(2)
   set numStates($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNumStates() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNumStates() => clearField(2);
 }
 
 class ListDeviceStatesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListDeviceStatesResponse',
-      package: const $pb.PackageName('google.cloud.iot.v1'))
-    ..pc<$3.DeviceState>(
-        1, 'deviceStates', $pb.PbFieldType.PM, $3.DeviceState.create)
+      package: const $pb.PackageName('google.cloud.iot.v1'),
+      createEmptyInstance: create)
+    ..pc<$3.DeviceState>(1, 'deviceStates', $pb.PbFieldType.PM,
+        subBuilder: $3.DeviceState.create)
     ..hasRequiredFields = false;
 
   ListDeviceStatesResponse._() : super();
@@ -893,17 +1077,20 @@ class ListDeviceStatesResponse extends $pb.GeneratedMessage {
   ListDeviceStatesResponse createEmptyInstance() => create();
   static $pb.PbList<ListDeviceStatesResponse> createRepeated() =>
       $pb.PbList<ListDeviceStatesResponse>();
-  static ListDeviceStatesResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListDeviceStatesResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListDeviceStatesResponse>(create);
   static ListDeviceStatesResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$3.DeviceState> get deviceStates => $_getList(0);
 }
 
 class SendCommandToDeviceRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'SendCommandToDeviceRequest',
-      package: const $pb.PackageName('google.cloud.iot.v1'))
+      package: const $pb.PackageName('google.cloud.iot.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..a<$core.List<$core.int>>(2, 'binaryData', $pb.PbFieldType.OY)
     ..aOS(3, 'subfolder')
@@ -929,39 +1116,53 @@ class SendCommandToDeviceRequest extends $pb.GeneratedMessage {
   SendCommandToDeviceRequest createEmptyInstance() => create();
   static $pb.PbList<SendCommandToDeviceRequest> createRepeated() =>
       $pb.PbList<SendCommandToDeviceRequest>();
-  static SendCommandToDeviceRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static SendCommandToDeviceRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SendCommandToDeviceRequest>(create);
   static SendCommandToDeviceRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<$core.int> get binaryData => $_getN(1);
+  @$pb.TagNumber(2)
   set binaryData($core.List<$core.int> v) {
     $_setBytes(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasBinaryData() => $_has(1);
+  @$pb.TagNumber(2)
   void clearBinaryData() => clearField(2);
 
-  $core.String get subfolder => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get subfolder => $_getSZ(2);
+  @$pb.TagNumber(3)
   set subfolder($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasSubfolder() => $_has(2);
+  @$pb.TagNumber(3)
   void clearSubfolder() => clearField(3);
 }
 
 class SendCommandToDeviceResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'SendCommandToDeviceResponse',
-      package: const $pb.PackageName('google.cloud.iot.v1'))
+      package: const $pb.PackageName('google.cloud.iot.v1'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   SendCommandToDeviceResponse._() : super();
@@ -985,15 +1186,17 @@ class SendCommandToDeviceResponse extends $pb.GeneratedMessage {
   SendCommandToDeviceResponse createEmptyInstance() => create();
   static $pb.PbList<SendCommandToDeviceResponse> createRepeated() =>
       $pb.PbList<SendCommandToDeviceResponse>();
-  static SendCommandToDeviceResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static SendCommandToDeviceResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SendCommandToDeviceResponse>(create);
   static SendCommandToDeviceResponse _defaultInstance;
 }
 
 class BindDeviceToGatewayRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'BindDeviceToGatewayRequest',
-      package: const $pb.PackageName('google.cloud.iot.v1'))
+      package: const $pb.PackageName('google.cloud.iot.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..aOS(2, 'gatewayId')
     ..aOS(3, 'deviceId')
@@ -1019,39 +1222,53 @@ class BindDeviceToGatewayRequest extends $pb.GeneratedMessage {
   BindDeviceToGatewayRequest createEmptyInstance() => create();
   static $pb.PbList<BindDeviceToGatewayRequest> createRepeated() =>
       $pb.PbList<BindDeviceToGatewayRequest>();
-  static BindDeviceToGatewayRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static BindDeviceToGatewayRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BindDeviceToGatewayRequest>(create);
   static BindDeviceToGatewayRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.String get gatewayId => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get gatewayId => $_getSZ(1);
+  @$pb.TagNumber(2)
   set gatewayId($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasGatewayId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearGatewayId() => clearField(2);
 
-  $core.String get deviceId => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get deviceId => $_getSZ(2);
+  @$pb.TagNumber(3)
   set deviceId($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasDeviceId() => $_has(2);
+  @$pb.TagNumber(3)
   void clearDeviceId() => clearField(3);
 }
 
 class BindDeviceToGatewayResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'BindDeviceToGatewayResponse',
-      package: const $pb.PackageName('google.cloud.iot.v1'))
+      package: const $pb.PackageName('google.cloud.iot.v1'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   BindDeviceToGatewayResponse._() : super();
@@ -1075,15 +1292,17 @@ class BindDeviceToGatewayResponse extends $pb.GeneratedMessage {
   BindDeviceToGatewayResponse createEmptyInstance() => create();
   static $pb.PbList<BindDeviceToGatewayResponse> createRepeated() =>
       $pb.PbList<BindDeviceToGatewayResponse>();
-  static BindDeviceToGatewayResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static BindDeviceToGatewayResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BindDeviceToGatewayResponse>(create);
   static BindDeviceToGatewayResponse _defaultInstance;
 }
 
 class UnbindDeviceFromGatewayRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'UnbindDeviceFromGatewayRequest',
-      package: const $pb.PackageName('google.cloud.iot.v1'))
+      package: const $pb.PackageName('google.cloud.iot.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..aOS(2, 'gatewayId')
     ..aOS(3, 'deviceId')
@@ -1110,39 +1329,53 @@ class UnbindDeviceFromGatewayRequest extends $pb.GeneratedMessage {
   UnbindDeviceFromGatewayRequest createEmptyInstance() => create();
   static $pb.PbList<UnbindDeviceFromGatewayRequest> createRepeated() =>
       $pb.PbList<UnbindDeviceFromGatewayRequest>();
-  static UnbindDeviceFromGatewayRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UnbindDeviceFromGatewayRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UnbindDeviceFromGatewayRequest>(create);
   static UnbindDeviceFromGatewayRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.String get gatewayId => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get gatewayId => $_getSZ(1);
+  @$pb.TagNumber(2)
   set gatewayId($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasGatewayId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearGatewayId() => clearField(2);
 
-  $core.String get deviceId => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get deviceId => $_getSZ(2);
+  @$pb.TagNumber(3)
   set deviceId($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasDeviceId() => $_has(2);
+  @$pb.TagNumber(3)
   void clearDeviceId() => clearField(3);
 }
 
 class UnbindDeviceFromGatewayResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'UnbindDeviceFromGatewayResponse',
-      package: const $pb.PackageName('google.cloud.iot.v1'))
+      package: const $pb.PackageName('google.cloud.iot.v1'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   UnbindDeviceFromGatewayResponse._() : super();
@@ -1166,7 +1399,9 @@ class UnbindDeviceFromGatewayResponse extends $pb.GeneratedMessage {
   UnbindDeviceFromGatewayResponse createEmptyInstance() => create();
   static $pb.PbList<UnbindDeviceFromGatewayResponse> createRepeated() =>
       $pb.PbList<UnbindDeviceFromGatewayResponse>();
-  static UnbindDeviceFromGatewayResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UnbindDeviceFromGatewayResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UnbindDeviceFromGatewayResponse>(
+          create);
   static UnbindDeviceFromGatewayResponse _defaultInstance;
 }

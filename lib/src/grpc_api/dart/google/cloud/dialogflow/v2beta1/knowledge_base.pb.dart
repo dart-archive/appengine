@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -14,7 +13,8 @@ import '../../../protobuf/field_mask.pb.dart' as $2;
 
 class KnowledgeBase extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('KnowledgeBase',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'))
+      package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..aOS(2, 'displayName')
     ..hasRequiredFields = false;
@@ -36,29 +36,40 @@ class KnowledgeBase extends $pb.GeneratedMessage {
   KnowledgeBase createEmptyInstance() => create();
   static $pb.PbList<KnowledgeBase> createRepeated() =>
       $pb.PbList<KnowledgeBase>();
-  static KnowledgeBase getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static KnowledgeBase getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<KnowledgeBase>(create);
   static KnowledgeBase _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.String get displayName => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get displayName => $_getSZ(1);
+  @$pb.TagNumber(2)
   set displayName($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasDisplayName() => $_has(1);
+  @$pb.TagNumber(2)
   void clearDisplayName() => clearField(2);
 }
 
 class ListKnowledgeBasesRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListKnowledgeBasesRequest',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'))
+      package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(3, 'pageToken')
@@ -84,41 +95,55 @@ class ListKnowledgeBasesRequest extends $pb.GeneratedMessage {
   ListKnowledgeBasesRequest createEmptyInstance() => create();
   static $pb.PbList<ListKnowledgeBasesRequest> createRepeated() =>
       $pb.PbList<ListKnowledgeBasesRequest>();
-  static ListKnowledgeBasesRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListKnowledgeBasesRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListKnowledgeBasesRequest>(create);
   static ListKnowledgeBasesRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.int get pageSize => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get pageSize => $_getIZ(1);
+  @$pb.TagNumber(2)
   set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
-  $core.String get pageToken => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get pageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
   set pageToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
 }
 
 class ListKnowledgeBasesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListKnowledgeBasesResponse',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'))
-    ..pc<KnowledgeBase>(
-        1, 'knowledgeBases', $pb.PbFieldType.PM, KnowledgeBase.create)
+      package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'),
+      createEmptyInstance: create)
+    ..pc<KnowledgeBase>(1, 'knowledgeBases', $pb.PbFieldType.PM,
+        subBuilder: KnowledgeBase.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -142,24 +167,31 @@ class ListKnowledgeBasesResponse extends $pb.GeneratedMessage {
   ListKnowledgeBasesResponse createEmptyInstance() => create();
   static $pb.PbList<ListKnowledgeBasesResponse> createRepeated() =>
       $pb.PbList<ListKnowledgeBasesResponse>();
-  static ListKnowledgeBasesResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListKnowledgeBasesResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListKnowledgeBasesResponse>(create);
   static ListKnowledgeBasesResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<KnowledgeBase> get knowledgeBases => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class GetKnowledgeBaseRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetKnowledgeBaseRequest',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'))
+      package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -182,26 +214,31 @@ class GetKnowledgeBaseRequest extends $pb.GeneratedMessage {
   GetKnowledgeBaseRequest createEmptyInstance() => create();
   static $pb.PbList<GetKnowledgeBaseRequest> createRepeated() =>
       $pb.PbList<GetKnowledgeBaseRequest>();
-  static GetKnowledgeBaseRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetKnowledgeBaseRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetKnowledgeBaseRequest>(create);
   static GetKnowledgeBaseRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class CreateKnowledgeBaseRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'CreateKnowledgeBaseRequest',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'))
+      package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
-    ..a<KnowledgeBase>(2, 'knowledgeBase', $pb.PbFieldType.OM,
-        KnowledgeBase.getDefault, KnowledgeBase.create)
+    ..aOM<KnowledgeBase>(2, 'knowledgeBase', subBuilder: KnowledgeBase.create)
     ..hasRequiredFields = false;
 
   CreateKnowledgeBaseRequest._() : super();
@@ -224,31 +261,43 @@ class CreateKnowledgeBaseRequest extends $pb.GeneratedMessage {
   CreateKnowledgeBaseRequest createEmptyInstance() => create();
   static $pb.PbList<CreateKnowledgeBaseRequest> createRepeated() =>
       $pb.PbList<CreateKnowledgeBaseRequest>();
-  static CreateKnowledgeBaseRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateKnowledgeBaseRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateKnowledgeBaseRequest>(create);
   static CreateKnowledgeBaseRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  @$pb.TagNumber(2)
   KnowledgeBase get knowledgeBase => $_getN(1);
+  @$pb.TagNumber(2)
   set knowledgeBase(KnowledgeBase v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasKnowledgeBase() => $_has(1);
+  @$pb.TagNumber(2)
   void clearKnowledgeBase() => clearField(2);
+  @$pb.TagNumber(2)
+  KnowledgeBase ensureKnowledgeBase() => $_ensure(1);
 }
 
 class DeleteKnowledgeBaseRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'DeleteKnowledgeBaseRequest',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'))
+      package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..aOB(2, 'force')
     ..hasRequiredFields = false;
@@ -273,35 +322,43 @@ class DeleteKnowledgeBaseRequest extends $pb.GeneratedMessage {
   DeleteKnowledgeBaseRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteKnowledgeBaseRequest> createRepeated() =>
       $pb.PbList<DeleteKnowledgeBaseRequest>();
-  static DeleteKnowledgeBaseRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteKnowledgeBaseRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteKnowledgeBaseRequest>(create);
   static DeleteKnowledgeBaseRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.bool get force => $_get(1, false);
+  @$pb.TagNumber(2)
+  $core.bool get force => $_getBF(1);
+  @$pb.TagNumber(2)
   set force($core.bool v) {
     $_setBool(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasForce() => $_has(1);
+  @$pb.TagNumber(2)
   void clearForce() => clearField(2);
 }
 
 class UpdateKnowledgeBaseRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'UpdateKnowledgeBaseRequest',
-      package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'))
-    ..a<KnowledgeBase>(1, 'knowledgeBase', $pb.PbFieldType.OM,
-        KnowledgeBase.getDefault, KnowledgeBase.create)
-    ..a<$2.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $2.FieldMask.getDefault, $2.FieldMask.create)
+      package: const $pb.PackageName('google.cloud.dialogflow.v2beta1'),
+      createEmptyInstance: create)
+    ..aOM<KnowledgeBase>(1, 'knowledgeBase', subBuilder: KnowledgeBase.create)
+    ..aOM<$2.FieldMask>(2, 'updateMask', subBuilder: $2.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateKnowledgeBaseRequest._() : super();
@@ -324,23 +381,36 @@ class UpdateKnowledgeBaseRequest extends $pb.GeneratedMessage {
   UpdateKnowledgeBaseRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateKnowledgeBaseRequest> createRepeated() =>
       $pb.PbList<UpdateKnowledgeBaseRequest>();
-  static UpdateKnowledgeBaseRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateKnowledgeBaseRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateKnowledgeBaseRequest>(create);
   static UpdateKnowledgeBaseRequest _defaultInstance;
 
+  @$pb.TagNumber(1)
   KnowledgeBase get knowledgeBase => $_getN(0);
+  @$pb.TagNumber(1)
   set knowledgeBase(KnowledgeBase v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasKnowledgeBase() => $_has(0);
+  @$pb.TagNumber(1)
   void clearKnowledgeBase() => clearField(1);
+  @$pb.TagNumber(1)
+  KnowledgeBase ensureKnowledgeBase() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $2.FieldMask get updateMask => $_getN(1);
+  @$pb.TagNumber(2)
   set updateMask($2.FieldMask v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasUpdateMask() => $_has(1);
+  @$pb.TagNumber(2)
   void clearUpdateMask() => clearField(2);
+  @$pb.TagNumber(2)
+  $2.FieldMask ensureUpdateMask() => $_ensure(1);
 }

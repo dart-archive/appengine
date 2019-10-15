@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -18,11 +17,10 @@ import '../../api/metric.pbenum.dart' as $1;
 
 class Point extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Point',
-      package: const $pb.PackageName('google.monitoring.v3'))
-    ..a<$0.TimeInterval>(1, 'interval', $pb.PbFieldType.OM,
-        $0.TimeInterval.getDefault, $0.TimeInterval.create)
-    ..a<$0.TypedValue>(2, 'value', $pb.PbFieldType.OM, $0.TypedValue.getDefault,
-        $0.TypedValue.create)
+      package: const $pb.PackageName('google.monitoring.v3'),
+      createEmptyInstance: create)
+    ..aOM<$0.TimeInterval>(1, 'interval', subBuilder: $0.TimeInterval.create)
+    ..aOM<$0.TypedValue>(2, 'value', subBuilder: $0.TypedValue.create)
     ..hasRequiredFields = false;
 
   Point._() : super();
@@ -41,54 +39,58 @@ class Point extends $pb.GeneratedMessage {
   static Point create() => Point._();
   Point createEmptyInstance() => create();
   static $pb.PbList<Point> createRepeated() => $pb.PbList<Point>();
-  static Point getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Point getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Point>(create);
   static Point _defaultInstance;
 
+  @$pb.TagNumber(1)
   $0.TimeInterval get interval => $_getN(0);
+  @$pb.TagNumber(1)
   set interval($0.TimeInterval v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasInterval() => $_has(0);
+  @$pb.TagNumber(1)
   void clearInterval() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.TimeInterval ensureInterval() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $0.TypedValue get value => $_getN(1);
+  @$pb.TagNumber(2)
   set value($0.TypedValue v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasValue() => $_has(1);
+  @$pb.TagNumber(2)
   void clearValue() => clearField(2);
+  @$pb.TagNumber(2)
+  $0.TypedValue ensureValue() => $_ensure(1);
 }
 
 class TimeSeries extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TimeSeries',
-      package: const $pb.PackageName('google.monitoring.v3'))
-    ..a<$1.Metric>(
-        1, 'metric', $pb.PbFieldType.OM, $1.Metric.getDefault, $1.Metric.create)
-    ..a<$2.MonitoredResource>(2, 'resource', $pb.PbFieldType.OM,
-        $2.MonitoredResource.getDefault, $2.MonitoredResource.create)
-    ..e<$1.MetricDescriptor_MetricKind>(
-        3,
-        'metricKind',
-        $pb.PbFieldType.OE,
-        $1.MetricDescriptor_MetricKind.METRIC_KIND_UNSPECIFIED,
-        $1.MetricDescriptor_MetricKind.valueOf,
-        $1.MetricDescriptor_MetricKind.values)
-    ..e<$1.MetricDescriptor_ValueType>(
-        4,
-        'valueType',
-        $pb.PbFieldType.OE,
-        $1.MetricDescriptor_ValueType.VALUE_TYPE_UNSPECIFIED,
-        $1.MetricDescriptor_ValueType.valueOf,
-        $1.MetricDescriptor_ValueType.values)
-    ..pc<Point>(5, 'points', $pb.PbFieldType.PM, Point.create)
-    ..a<$2.MonitoredResourceMetadata>(
-        7,
-        'metadata',
-        $pb.PbFieldType.OM,
-        $2.MonitoredResourceMetadata.getDefault,
-        $2.MonitoredResourceMetadata.create)
+      package: const $pb.PackageName('google.monitoring.v3'),
+      createEmptyInstance: create)
+    ..aOM<$1.Metric>(1, 'metric', subBuilder: $1.Metric.create)
+    ..aOM<$2.MonitoredResource>(2, 'resource',
+        subBuilder: $2.MonitoredResource.create)
+    ..e<$1.MetricDescriptor_MetricKind>(3, 'metricKind', $pb.PbFieldType.OE,
+        defaultOrMaker: $1.MetricDescriptor_MetricKind.METRIC_KIND_UNSPECIFIED,
+        valueOf: $1.MetricDescriptor_MetricKind.valueOf,
+        enumValues: $1.MetricDescriptor_MetricKind.values)
+    ..e<$1.MetricDescriptor_ValueType>(4, 'valueType', $pb.PbFieldType.OE,
+        defaultOrMaker: $1.MetricDescriptor_ValueType.VALUE_TYPE_UNSPECIFIED,
+        valueOf: $1.MetricDescriptor_ValueType.valueOf,
+        enumValues: $1.MetricDescriptor_ValueType.values)
+    ..pc<Point>(5, 'points', $pb.PbFieldType.PM, subBuilder: Point.create)
+    ..aOM<$2.MonitoredResourceMetadata>(7, 'metadata',
+        subBuilder: $2.MonitoredResourceMetadata.create)
     ..hasRequiredFields = false;
 
   TimeSeries._() : super();
@@ -107,48 +109,77 @@ class TimeSeries extends $pb.GeneratedMessage {
   static TimeSeries create() => TimeSeries._();
   TimeSeries createEmptyInstance() => create();
   static $pb.PbList<TimeSeries> createRepeated() => $pb.PbList<TimeSeries>();
-  static TimeSeries getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TimeSeries getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TimeSeries>(create);
   static TimeSeries _defaultInstance;
 
+  @$pb.TagNumber(1)
   $1.Metric get metric => $_getN(0);
+  @$pb.TagNumber(1)
   set metric($1.Metric v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasMetric() => $_has(0);
+  @$pb.TagNumber(1)
   void clearMetric() => clearField(1);
+  @$pb.TagNumber(1)
+  $1.Metric ensureMetric() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $2.MonitoredResource get resource => $_getN(1);
+  @$pb.TagNumber(2)
   set resource($2.MonitoredResource v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasResource() => $_has(1);
+  @$pb.TagNumber(2)
   void clearResource() => clearField(2);
+  @$pb.TagNumber(2)
+  $2.MonitoredResource ensureResource() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $1.MetricDescriptor_MetricKind get metricKind => $_getN(2);
+  @$pb.TagNumber(3)
   set metricKind($1.MetricDescriptor_MetricKind v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasMetricKind() => $_has(2);
+  @$pb.TagNumber(3)
   void clearMetricKind() => clearField(3);
 
+  @$pb.TagNumber(4)
   $1.MetricDescriptor_ValueType get valueType => $_getN(3);
+  @$pb.TagNumber(4)
   set valueType($1.MetricDescriptor_ValueType v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasValueType() => $_has(3);
+  @$pb.TagNumber(4)
   void clearValueType() => clearField(4);
 
+  @$pb.TagNumber(5)
   $core.List<Point> get points => $_getList(4);
 
+  @$pb.TagNumber(7)
   $2.MonitoredResourceMetadata get metadata => $_getN(5);
+  @$pb.TagNumber(7)
   set metadata($2.MonitoredResourceMetadata v) {
     setField(7, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasMetadata() => $_has(5);
+  @$pb.TagNumber(7)
   void clearMetadata() => clearField(7);
+  @$pb.TagNumber(7)
+  $2.MonitoredResourceMetadata ensureMetadata() => $_ensure(5);
 }

@@ -5,14 +5,14 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class FindingTypeStats extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('FindingTypeStats',
-      package: const $pb.PackageName('google.cloud.websecurityscanner.v1beta'))
+      package: const $pb.PackageName('google.cloud.websecurityscanner.v1beta'),
+      createEmptyInstance: create)
     ..aOS(1, 'findingType')
     ..a<$core.int>(2, 'findingCount', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
@@ -34,23 +34,32 @@ class FindingTypeStats extends $pb.GeneratedMessage {
   FindingTypeStats createEmptyInstance() => create();
   static $pb.PbList<FindingTypeStats> createRepeated() =>
       $pb.PbList<FindingTypeStats>();
-  static FindingTypeStats getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static FindingTypeStats getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<FindingTypeStats>(create);
   static FindingTypeStats _defaultInstance;
 
-  $core.String get findingType => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get findingType => $_getSZ(0);
+  @$pb.TagNumber(1)
   set findingType($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasFindingType() => $_has(0);
+  @$pb.TagNumber(1)
   void clearFindingType() => clearField(1);
 
-  $core.int get findingCount => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get findingCount => $_getIZ(1);
+  @$pb.TagNumber(2)
   set findingCount($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasFindingCount() => $_has(1);
+  @$pb.TagNumber(2)
   void clearFindingCount() => clearField(2);
 }

@@ -23,6 +23,7 @@ const BigQueryTableSpec$json = {
       '4': 1,
       '5': 14,
       '6': '.google.cloud.datacatalog.v1beta1.TableSourceType',
+      '8': {},
       '10': 'tableSourceType'
     },
     {
@@ -52,21 +53,28 @@ const BigQueryTableSpec$json = {
 const ViewSpec$json = {
   '1': 'ViewSpec',
   '2': [
-    {'1': 'view_query', '3': 1, '4': 1, '5': 9, '10': 'viewQuery'},
+    {'1': 'view_query', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'viewQuery'},
   ],
 };
 
 const TableSpec$json = {
   '1': 'TableSpec',
   '2': [
-    {'1': 'grouped_entry', '3': 1, '4': 1, '5': 9, '10': 'groupedEntry'},
+    {
+      '1': 'grouped_entry',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'groupedEntry'
+    },
   ],
 };
 
 const BigQueryDateShardedSpec$json = {
   '1': 'BigQueryDateShardedSpec',
   '2': [
-    {'1': 'dataset', '3': 1, '4': 1, '5': 9, '10': 'dataset'},
+    {'1': 'dataset', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'dataset'},
     {'1': 'table_prefix', '3': 2, '4': 1, '5': 9, '10': 'tablePrefix'},
     {'1': 'shard_count', '3': 3, '4': 1, '5': 3, '10': 'shardCount'},
   ],

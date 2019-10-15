@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -16,20 +15,16 @@ import '../../../protobuf/field_mask.pb.dart' as $3;
 
 class Task extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Task',
-      package: const $pb.PackageName('google.devtools.remoteworkers.v1test2'))
+      package: const $pb.PackageName('google.devtools.remoteworkers.v1test2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
-    ..a<$1.Any>(
-        2, 'description', $pb.PbFieldType.OM, $1.Any.getDefault, $1.Any.create)
-    ..m<$core.String, $core.String>(
-        3,
-        'logs',
-        'Task.LogsEntry',
-        $pb.PbFieldType.OS,
-        $pb.PbFieldType.OS,
-        null,
-        null,
-        null,
-        const $pb.PackageName('google.devtools.remoteworkers.v1test2'))
+    ..aOM<$1.Any>(2, 'description', subBuilder: $1.Any.create)
+    ..m<$core.String, $core.String>(3, 'logs',
+        entryClassName: 'Task.LogsEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
+        packageName:
+            const $pb.PackageName('google.devtools.remoteworkers.v1test2'))
     ..hasRequiredFields = false;
 
   Task._() : super();
@@ -48,38 +43,50 @@ class Task extends $pb.GeneratedMessage {
   static Task create() => Task._();
   Task createEmptyInstance() => create();
   static $pb.PbList<Task> createRepeated() => $pb.PbList<Task>();
-  static Task getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Task getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Task>(create);
   static Task _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $1.Any get description => $_getN(1);
+  @$pb.TagNumber(2)
   set description($1.Any v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasDescription() => $_has(1);
+  @$pb.TagNumber(2)
   void clearDescription() => clearField(2);
+  @$pb.TagNumber(2)
+  $1.Any ensureDescription() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $core.Map<$core.String, $core.String> get logs => $_getMap(2);
 }
 
 class TaskResult extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('TaskResult',
-      package: const $pb.PackageName('google.devtools.remoteworkers.v1test2'))
+      package: const $pb.PackageName('google.devtools.remoteworkers.v1test2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..aOB(2, 'complete')
-    ..a<$2.Status>(
-        3, 'status', $pb.PbFieldType.OM, $2.Status.getDefault, $2.Status.create)
-    ..a<$1.Any>(
-        4, 'output', $pb.PbFieldType.OM, $1.Any.getDefault, $1.Any.create)
-    ..a<$1.Any>(5, 'meta', $pb.PbFieldType.OM, $1.Any.getDefault, $1.Any.create)
+    ..aOM<$2.Status>(3, 'status', subBuilder: $2.Status.create)
+    ..aOM<$1.Any>(4, 'output', subBuilder: $1.Any.create)
+    ..aOM<$1.Any>(5, 'meta', subBuilder: $1.Any.create)
     ..hasRequiredFields = false;
 
   TaskResult._() : super();
@@ -98,53 +105,82 @@ class TaskResult extends $pb.GeneratedMessage {
   static TaskResult create() => TaskResult._();
   TaskResult createEmptyInstance() => create();
   static $pb.PbList<TaskResult> createRepeated() => $pb.PbList<TaskResult>();
-  static TaskResult getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static TaskResult getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<TaskResult>(create);
   static TaskResult _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.bool get complete => $_get(1, false);
+  @$pb.TagNumber(2)
+  $core.bool get complete => $_getBF(1);
+  @$pb.TagNumber(2)
   set complete($core.bool v) {
     $_setBool(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasComplete() => $_has(1);
+  @$pb.TagNumber(2)
   void clearComplete() => clearField(2);
 
+  @$pb.TagNumber(3)
   $2.Status get status => $_getN(2);
+  @$pb.TagNumber(3)
   set status($2.Status v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasStatus() => $_has(2);
+  @$pb.TagNumber(3)
   void clearStatus() => clearField(3);
+  @$pb.TagNumber(3)
+  $2.Status ensureStatus() => $_ensure(2);
 
+  @$pb.TagNumber(4)
   $1.Any get output => $_getN(3);
+  @$pb.TagNumber(4)
   set output($1.Any v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasOutput() => $_has(3);
+  @$pb.TagNumber(4)
   void clearOutput() => clearField(4);
+  @$pb.TagNumber(4)
+  $1.Any ensureOutput() => $_ensure(3);
 
+  @$pb.TagNumber(5)
   $1.Any get meta => $_getN(4);
+  @$pb.TagNumber(5)
   set meta($1.Any v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasMeta() => $_has(4);
+  @$pb.TagNumber(5)
   void clearMeta() => clearField(5);
+  @$pb.TagNumber(5)
+  $1.Any ensureMeta() => $_ensure(4);
 }
 
 class GetTaskRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetTaskRequest',
-      package: const $pb.PackageName('google.devtools.remoteworkers.v1test2'))
+      package: const $pb.PackageName('google.devtools.remoteworkers.v1test2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -165,26 +201,31 @@ class GetTaskRequest extends $pb.GeneratedMessage {
   GetTaskRequest createEmptyInstance() => create();
   static $pb.PbList<GetTaskRequest> createRepeated() =>
       $pb.PbList<GetTaskRequest>();
-  static GetTaskRequest getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetTaskRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetTaskRequest>(create);
   static GetTaskRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class UpdateTaskResultRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateTaskResultRequest',
-      package: const $pb.PackageName('google.devtools.remoteworkers.v1test2'))
+      package: const $pb.PackageName('google.devtools.remoteworkers.v1test2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
-    ..a<TaskResult>(2, 'result', $pb.PbFieldType.OM, TaskResult.getDefault,
-        TaskResult.create)
-    ..a<$3.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $3.FieldMask.getDefault, $3.FieldMask.create)
+    ..aOM<TaskResult>(2, 'result', subBuilder: TaskResult.create)
+    ..aOM<$3.FieldMask>(3, 'updateMask', subBuilder: $3.FieldMask.create)
     ..aOS(4, 'source')
     ..hasRequiredFields = false;
 
@@ -207,46 +248,68 @@ class UpdateTaskResultRequest extends $pb.GeneratedMessage {
   UpdateTaskResultRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateTaskResultRequest> createRepeated() =>
       $pb.PbList<UpdateTaskResultRequest>();
-  static UpdateTaskResultRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateTaskResultRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateTaskResultRequest>(create);
   static UpdateTaskResultRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   TaskResult get result => $_getN(1);
+  @$pb.TagNumber(2)
   set result(TaskResult v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasResult() => $_has(1);
+  @$pb.TagNumber(2)
   void clearResult() => clearField(2);
+  @$pb.TagNumber(2)
+  TaskResult ensureResult() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $3.FieldMask get updateMask => $_getN(2);
+  @$pb.TagNumber(3)
   set updateMask($3.FieldMask v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasUpdateMask() => $_has(2);
+  @$pb.TagNumber(3)
   void clearUpdateMask() => clearField(3);
+  @$pb.TagNumber(3)
+  $3.FieldMask ensureUpdateMask() => $_ensure(2);
 
-  $core.String get source => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get source => $_getSZ(3);
+  @$pb.TagNumber(4)
   set source($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasSource() => $_has(3);
+  @$pb.TagNumber(4)
   void clearSource() => clearField(4);
 }
 
 class AddTaskLogRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AddTaskLogRequest',
-      package: const $pb.PackageName('google.devtools.remoteworkers.v1test2'))
+      package: const $pb.PackageName('google.devtools.remoteworkers.v1test2'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..aOS(2, 'logId')
     ..hasRequiredFields = false;
@@ -268,30 +331,40 @@ class AddTaskLogRequest extends $pb.GeneratedMessage {
   AddTaskLogRequest createEmptyInstance() => create();
   static $pb.PbList<AddTaskLogRequest> createRepeated() =>
       $pb.PbList<AddTaskLogRequest>();
-  static AddTaskLogRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static AddTaskLogRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AddTaskLogRequest>(create);
   static AddTaskLogRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.String get logId => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get logId => $_getSZ(1);
+  @$pb.TagNumber(2)
   set logId($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasLogId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearLogId() => clearField(2);
 }
 
 class AddTaskLogResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AddTaskLogResponse',
-      package: const $pb.PackageName('google.devtools.remoteworkers.v1test2'))
+      package: const $pb.PackageName('google.devtools.remoteworkers.v1test2'),
+      createEmptyInstance: create)
     ..aOS(1, 'handle')
     ..hasRequiredFields = false;
 
@@ -312,15 +385,20 @@ class AddTaskLogResponse extends $pb.GeneratedMessage {
   AddTaskLogResponse createEmptyInstance() => create();
   static $pb.PbList<AddTaskLogResponse> createRepeated() =>
       $pb.PbList<AddTaskLogResponse>();
-  static AddTaskLogResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static AddTaskLogResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AddTaskLogResponse>(create);
   static AddTaskLogResponse _defaultInstance;
 
-  $core.String get handle => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get handle => $_getSZ(0);
+  @$pb.TagNumber(1)
   set handle($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasHandle() => $_has(0);
+  @$pb.TagNumber(1)
   void clearHandle() => clearField(1);
 }

@@ -5,14 +5,14 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class ReportPhishingRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ReportPhishingRequest',
-      package: const $pb.PackageName('google.cloud.phishingprotection.v1beta1'))
+      package: const $pb.PackageName('google.cloud.phishingprotection.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..aOS(2, 'uri')
     ..hasRequiredFields = false;
@@ -36,30 +36,40 @@ class ReportPhishingRequest extends $pb.GeneratedMessage {
   ReportPhishingRequest createEmptyInstance() => create();
   static $pb.PbList<ReportPhishingRequest> createRepeated() =>
       $pb.PbList<ReportPhishingRequest>();
-  static ReportPhishingRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ReportPhishingRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ReportPhishingRequest>(create);
   static ReportPhishingRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.String get uri => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get uri => $_getSZ(1);
+  @$pb.TagNumber(2)
   set uri($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasUri() => $_has(1);
+  @$pb.TagNumber(2)
   void clearUri() => clearField(2);
 }
 
 class ReportPhishingResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ReportPhishingResponse',
-      package: const $pb.PackageName('google.cloud.phishingprotection.v1beta1'))
+      package: const $pb.PackageName('google.cloud.phishingprotection.v1beta1'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   ReportPhishingResponse._() : super();
@@ -81,7 +91,8 @@ class ReportPhishingResponse extends $pb.GeneratedMessage {
   ReportPhishingResponse createEmptyInstance() => create();
   static $pb.PbList<ReportPhishingResponse> createRepeated() =>
       $pb.PbList<ReportPhishingResponse>();
-  static ReportPhishingResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ReportPhishingResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ReportPhishingResponse>(create);
   static ReportPhishingResponse _defaultInstance;
 }

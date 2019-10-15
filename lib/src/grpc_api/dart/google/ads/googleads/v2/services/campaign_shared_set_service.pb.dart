@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -16,7 +15,8 @@ import '../../../../rpc/status.pb.dart' as $2;
 class GetCampaignSharedSetRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'GetCampaignSharedSetRequest',
-      package: const $pb.PackageName('google.ads.googleads.v2.services'))
+      package: const $pb.PackageName('google.ads.googleads.v2.services'),
+      createEmptyInstance: create)
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
@@ -41,26 +41,32 @@ class GetCampaignSharedSetRequest extends $pb.GeneratedMessage {
   GetCampaignSharedSetRequest createEmptyInstance() => create();
   static $pb.PbList<GetCampaignSharedSetRequest> createRepeated() =>
       $pb.PbList<GetCampaignSharedSetRequest>();
-  static GetCampaignSharedSetRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetCampaignSharedSetRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetCampaignSharedSetRequest>(create);
   static GetCampaignSharedSetRequest _defaultInstance;
 
-  $core.String get resourceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get resourceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set resourceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResourceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResourceName() => clearField(1);
 }
 
 class MutateCampaignSharedSetsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'MutateCampaignSharedSetsRequest',
-      package: const $pb.PackageName('google.ads.googleads.v2.services'))
+      package: const $pb.PackageName('google.ads.googleads.v2.services'),
+      createEmptyInstance: create)
     ..aOS(1, 'customerId')
-    ..pc<CampaignSharedSetOperation>(
-        2, 'operations', $pb.PbFieldType.PM, CampaignSharedSetOperation.create)
+    ..pc<CampaignSharedSetOperation>(2, 'operations', $pb.PbFieldType.PM,
+        subBuilder: CampaignSharedSetOperation.create)
     ..aOB(3, 'partialFailure')
     ..aOB(4, 'validateOnly')
     ..hasRequiredFields = false;
@@ -86,34 +92,49 @@ class MutateCampaignSharedSetsRequest extends $pb.GeneratedMessage {
   MutateCampaignSharedSetsRequest createEmptyInstance() => create();
   static $pb.PbList<MutateCampaignSharedSetsRequest> createRepeated() =>
       $pb.PbList<MutateCampaignSharedSetsRequest>();
-  static MutateCampaignSharedSetsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MutateCampaignSharedSetsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MutateCampaignSharedSetsRequest>(
+          create);
   static MutateCampaignSharedSetsRequest _defaultInstance;
 
-  $core.String get customerId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get customerId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set customerId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCustomerId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCustomerId() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<CampaignSharedSetOperation> get operations => $_getList(1);
 
-  $core.bool get partialFailure => $_get(2, false);
+  @$pb.TagNumber(3)
+  $core.bool get partialFailure => $_getBF(2);
+  @$pb.TagNumber(3)
   set partialFailure($core.bool v) {
     $_setBool(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPartialFailure() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPartialFailure() => clearField(3);
 
-  $core.bool get validateOnly => $_get(3, false);
+  @$pb.TagNumber(4)
+  $core.bool get validateOnly => $_getBF(3);
+  @$pb.TagNumber(4)
   set validateOnly($core.bool v) {
     $_setBool(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasValidateOnly() => $_has(3);
+  @$pb.TagNumber(4)
   void clearValidateOnly() => clearField(4);
 }
 
@@ -128,10 +149,11 @@ class CampaignSharedSetOperation extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'CampaignSharedSetOperation',
-      package: const $pb.PackageName('google.ads.googleads.v2.services'))
+      package: const $pb.PackageName('google.ads.googleads.v2.services'),
+      createEmptyInstance: create)
     ..oo(0, [1, 3])
-    ..a<$1.CampaignSharedSet>(1, 'create_1', $pb.PbFieldType.OM,
-        $1.CampaignSharedSet.getDefault, $1.CampaignSharedSet.create)
+    ..aOM<$1.CampaignSharedSet>(1, 'create',
+        subBuilder: $1.CampaignSharedSet.create)
     ..aOS(3, 'remove')
     ..hasRequiredFields = false;
 
@@ -155,39 +177,50 @@ class CampaignSharedSetOperation extends $pb.GeneratedMessage {
   CampaignSharedSetOperation createEmptyInstance() => create();
   static $pb.PbList<CampaignSharedSetOperation> createRepeated() =>
       $pb.PbList<CampaignSharedSetOperation>();
-  static CampaignSharedSetOperation getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CampaignSharedSetOperation getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CampaignSharedSetOperation>(create);
   static CampaignSharedSetOperation _defaultInstance;
 
   CampaignSharedSetOperation_Operation whichOperation() =>
       _CampaignSharedSetOperation_OperationByTag[$_whichOneof(0)];
   void clearOperation() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   $1.CampaignSharedSet get create_1 => $_getN(0);
+  @$pb.TagNumber(1)
   set create_1($1.CampaignSharedSet v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCreate_1() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCreate_1() => clearField(1);
+  @$pb.TagNumber(1)
+  $1.CampaignSharedSet ensureCreate_1() => $_ensure(0);
 
-  $core.String get remove => $_getS(1, '');
+  @$pb.TagNumber(3)
+  $core.String get remove => $_getSZ(1);
+  @$pb.TagNumber(3)
   set remove($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasRemove() => $_has(1);
+  @$pb.TagNumber(3)
   void clearRemove() => clearField(3);
 }
 
 class MutateCampaignSharedSetsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'MutateCampaignSharedSetsResponse',
-      package: const $pb.PackageName('google.ads.googleads.v2.services'))
-    ..pc<MutateCampaignSharedSetResult>(
-        2, 'results', $pb.PbFieldType.PM, MutateCampaignSharedSetResult.create)
-    ..a<$2.Status>(3, 'partialFailureError', $pb.PbFieldType.OM,
-        $2.Status.getDefault, $2.Status.create)
+      package: const $pb.PackageName('google.ads.googleads.v2.services'),
+      createEmptyInstance: create)
+    ..pc<MutateCampaignSharedSetResult>(2, 'results', $pb.PbFieldType.PM,
+        subBuilder: MutateCampaignSharedSetResult.create)
+    ..aOM<$2.Status>(3, 'partialFailureError', subBuilder: $2.Status.create)
     ..hasRequiredFields = false;
 
   MutateCampaignSharedSetsResponse._() : super();
@@ -211,25 +244,35 @@ class MutateCampaignSharedSetsResponse extends $pb.GeneratedMessage {
   MutateCampaignSharedSetsResponse createEmptyInstance() => create();
   static $pb.PbList<MutateCampaignSharedSetsResponse> createRepeated() =>
       $pb.PbList<MutateCampaignSharedSetsResponse>();
-  static MutateCampaignSharedSetsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MutateCampaignSharedSetsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MutateCampaignSharedSetsResponse>(
+          create);
   static MutateCampaignSharedSetsResponse _defaultInstance;
 
+  @$pb.TagNumber(2)
   $core.List<MutateCampaignSharedSetResult> get results => $_getList(0);
 
+  @$pb.TagNumber(3)
   $2.Status get partialFailureError => $_getN(1);
+  @$pb.TagNumber(3)
   set partialFailureError($2.Status v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPartialFailureError() => $_has(1);
+  @$pb.TagNumber(3)
   void clearPartialFailureError() => clearField(3);
+  @$pb.TagNumber(3)
+  $2.Status ensurePartialFailureError() => $_ensure(1);
 }
 
 class MutateCampaignSharedSetResult extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'MutateCampaignSharedSetResult',
-      package: const $pb.PackageName('google.ads.googleads.v2.services'))
+      package: const $pb.PackageName('google.ads.googleads.v2.services'),
+      createEmptyInstance: create)
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
@@ -254,15 +297,20 @@ class MutateCampaignSharedSetResult extends $pb.GeneratedMessage {
   MutateCampaignSharedSetResult createEmptyInstance() => create();
   static $pb.PbList<MutateCampaignSharedSetResult> createRepeated() =>
       $pb.PbList<MutateCampaignSharedSetResult>();
-  static MutateCampaignSharedSetResult getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MutateCampaignSharedSetResult getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MutateCampaignSharedSetResult>(create);
   static MutateCampaignSharedSetResult _defaultInstance;
 
-  $core.String get resourceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get resourceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set resourceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResourceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResourceName() => clearField(1);
 }

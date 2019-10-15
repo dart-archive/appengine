@@ -5,14 +5,14 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class BillingAccount extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('BillingAccount',
-      package: const $pb.PackageName('google.cloud.billing.v1'))
+      package: const $pb.PackageName('google.cloud.billing.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..aOB(2, 'open')
     ..aOS(3, 'displayName')
@@ -35,37 +35,52 @@ class BillingAccount extends $pb.GeneratedMessage {
   BillingAccount createEmptyInstance() => create();
   static $pb.PbList<BillingAccount> createRepeated() =>
       $pb.PbList<BillingAccount>();
-  static BillingAccount getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static BillingAccount getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BillingAccount>(create);
   static BillingAccount _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.bool get open => $_get(1, false);
+  @$pb.TagNumber(2)
+  $core.bool get open => $_getBF(1);
+  @$pb.TagNumber(2)
   set open($core.bool v) {
     $_setBool(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasOpen() => $_has(1);
+  @$pb.TagNumber(2)
   void clearOpen() => clearField(2);
 
-  $core.String get displayName => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get displayName => $_getSZ(2);
+  @$pb.TagNumber(3)
   set displayName($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasDisplayName() => $_has(2);
+  @$pb.TagNumber(3)
   void clearDisplayName() => clearField(3);
 }
 
 class ProjectBillingInfo extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ProjectBillingInfo',
-      package: const $pb.PackageName('google.cloud.billing.v1'))
+      package: const $pb.PackageName('google.cloud.billing.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..aOS(2, 'projectId')
     ..aOS(3, 'billingAccountName')
@@ -89,46 +104,64 @@ class ProjectBillingInfo extends $pb.GeneratedMessage {
   ProjectBillingInfo createEmptyInstance() => create();
   static $pb.PbList<ProjectBillingInfo> createRepeated() =>
       $pb.PbList<ProjectBillingInfo>();
-  static ProjectBillingInfo getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ProjectBillingInfo getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ProjectBillingInfo>(create);
   static ProjectBillingInfo _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.String get projectId => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get projectId => $_getSZ(1);
+  @$pb.TagNumber(2)
   set projectId($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasProjectId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearProjectId() => clearField(2);
 
-  $core.String get billingAccountName => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get billingAccountName => $_getSZ(2);
+  @$pb.TagNumber(3)
   set billingAccountName($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasBillingAccountName() => $_has(2);
+  @$pb.TagNumber(3)
   void clearBillingAccountName() => clearField(3);
 
-  $core.bool get billingEnabled => $_get(3, false);
+  @$pb.TagNumber(4)
+  $core.bool get billingEnabled => $_getBF(3);
+  @$pb.TagNumber(4)
   set billingEnabled($core.bool v) {
     $_setBool(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasBillingEnabled() => $_has(3);
+  @$pb.TagNumber(4)
   void clearBillingEnabled() => clearField(4);
 }
 
 class GetBillingAccountRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetBillingAccountRequest',
-      package: const $pb.PackageName('google.cloud.billing.v1'))
+      package: const $pb.PackageName('google.cloud.billing.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -151,23 +184,29 @@ class GetBillingAccountRequest extends $pb.GeneratedMessage {
   GetBillingAccountRequest createEmptyInstance() => create();
   static $pb.PbList<GetBillingAccountRequest> createRepeated() =>
       $pb.PbList<GetBillingAccountRequest>();
-  static GetBillingAccountRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetBillingAccountRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetBillingAccountRequest>(create);
   static GetBillingAccountRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class ListBillingAccountsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListBillingAccountsRequest',
-      package: const $pb.PackageName('google.cloud.billing.v1'))
+      package: const $pb.PackageName('google.cloud.billing.v1'),
+      createEmptyInstance: create)
     ..a<$core.int>(1, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(2, 'pageToken')
     ..hasRequiredFields = false;
@@ -192,33 +231,43 @@ class ListBillingAccountsRequest extends $pb.GeneratedMessage {
   ListBillingAccountsRequest createEmptyInstance() => create();
   static $pb.PbList<ListBillingAccountsRequest> createRepeated() =>
       $pb.PbList<ListBillingAccountsRequest>();
-  static ListBillingAccountsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListBillingAccountsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListBillingAccountsRequest>(create);
   static ListBillingAccountsRequest _defaultInstance;
 
-  $core.int get pageSize => $_get(0, 0);
+  @$pb.TagNumber(1)
+  $core.int get pageSize => $_getIZ(0);
+  @$pb.TagNumber(1)
   set pageSize($core.int v) {
     $_setSignedInt32(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasPageSize() => $_has(0);
+  @$pb.TagNumber(1)
   void clearPageSize() => clearField(1);
 
-  $core.String get pageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get pageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set pageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageToken() => clearField(2);
 }
 
 class ListBillingAccountsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListBillingAccountsResponse',
-      package: const $pb.PackageName('google.cloud.billing.v1'))
-    ..pc<BillingAccount>(
-        1, 'billingAccounts', $pb.PbFieldType.PM, BillingAccount.create)
+      package: const $pb.PackageName('google.cloud.billing.v1'),
+      createEmptyInstance: create)
+    ..pc<BillingAccount>(1, 'billingAccounts', $pb.PbFieldType.PM,
+        subBuilder: BillingAccount.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -243,25 +292,32 @@ class ListBillingAccountsResponse extends $pb.GeneratedMessage {
   ListBillingAccountsResponse createEmptyInstance() => create();
   static $pb.PbList<ListBillingAccountsResponse> createRepeated() =>
       $pb.PbList<ListBillingAccountsResponse>();
-  static ListBillingAccountsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListBillingAccountsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListBillingAccountsResponse>(create);
   static ListBillingAccountsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<BillingAccount> get billingAccounts => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class ListProjectBillingInfoRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListProjectBillingInfoRequest',
-      package: const $pb.PackageName('google.cloud.billing.v1'))
+      package: const $pb.PackageName('google.cloud.billing.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(3, 'pageToken')
@@ -288,41 +344,55 @@ class ListProjectBillingInfoRequest extends $pb.GeneratedMessage {
   ListProjectBillingInfoRequest createEmptyInstance() => create();
   static $pb.PbList<ListProjectBillingInfoRequest> createRepeated() =>
       $pb.PbList<ListProjectBillingInfoRequest>();
-  static ListProjectBillingInfoRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListProjectBillingInfoRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListProjectBillingInfoRequest>(create);
   static ListProjectBillingInfoRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.int get pageSize => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get pageSize => $_getIZ(1);
+  @$pb.TagNumber(2)
   set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
-  $core.String get pageToken => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get pageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
   set pageToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
 }
 
 class ListProjectBillingInfoResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListProjectBillingInfoResponse',
-      package: const $pb.PackageName('google.cloud.billing.v1'))
-    ..pc<ProjectBillingInfo>(
-        1, 'projectBillingInfo', $pb.PbFieldType.PM, ProjectBillingInfo.create)
+      package: const $pb.PackageName('google.cloud.billing.v1'),
+      createEmptyInstance: create)
+    ..pc<ProjectBillingInfo>(1, 'projectBillingInfo', $pb.PbFieldType.PM,
+        subBuilder: ProjectBillingInfo.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -347,25 +417,32 @@ class ListProjectBillingInfoResponse extends $pb.GeneratedMessage {
   ListProjectBillingInfoResponse createEmptyInstance() => create();
   static $pb.PbList<ListProjectBillingInfoResponse> createRepeated() =>
       $pb.PbList<ListProjectBillingInfoResponse>();
-  static ListProjectBillingInfoResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListProjectBillingInfoResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListProjectBillingInfoResponse>(create);
   static ListProjectBillingInfoResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<ProjectBillingInfo> get projectBillingInfo => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class GetProjectBillingInfoRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'GetProjectBillingInfoRequest',
-      package: const $pb.PackageName('google.cloud.billing.v1'))
+      package: const $pb.PackageName('google.cloud.billing.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -390,26 +467,32 @@ class GetProjectBillingInfoRequest extends $pb.GeneratedMessage {
   GetProjectBillingInfoRequest createEmptyInstance() => create();
   static $pb.PbList<GetProjectBillingInfoRequest> createRepeated() =>
       $pb.PbList<GetProjectBillingInfoRequest>();
-  static GetProjectBillingInfoRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetProjectBillingInfoRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetProjectBillingInfoRequest>(create);
   static GetProjectBillingInfoRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class UpdateProjectBillingInfoRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'UpdateProjectBillingInfoRequest',
-      package: const $pb.PackageName('google.cloud.billing.v1'))
+      package: const $pb.PackageName('google.cloud.billing.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
-    ..a<ProjectBillingInfo>(2, 'projectBillingInfo', $pb.PbFieldType.OM,
-        ProjectBillingInfo.getDefault, ProjectBillingInfo.create)
+    ..aOM<ProjectBillingInfo>(2, 'projectBillingInfo',
+        subBuilder: ProjectBillingInfo.create)
     ..hasRequiredFields = false;
 
   UpdateProjectBillingInfoRequest._() : super();
@@ -433,23 +516,35 @@ class UpdateProjectBillingInfoRequest extends $pb.GeneratedMessage {
   UpdateProjectBillingInfoRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateProjectBillingInfoRequest> createRepeated() =>
       $pb.PbList<UpdateProjectBillingInfoRequest>();
-  static UpdateProjectBillingInfoRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateProjectBillingInfoRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateProjectBillingInfoRequest>(
+          create);
   static UpdateProjectBillingInfoRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   ProjectBillingInfo get projectBillingInfo => $_getN(1);
+  @$pb.TagNumber(2)
   set projectBillingInfo(ProjectBillingInfo v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasProjectBillingInfo() => $_has(1);
+  @$pb.TagNumber(2)
   void clearProjectBillingInfo() => clearField(2);
+  @$pb.TagNumber(2)
+  ProjectBillingInfo ensureProjectBillingInfo() => $_ensure(1);
 }

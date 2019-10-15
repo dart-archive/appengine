@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -14,7 +13,8 @@ export 'local_placeholder_field.pbenum.dart';
 
 class LocalPlaceholderFieldEnum extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('LocalPlaceholderFieldEnum',
-      package: const $pb.PackageName('google.ads.googleads.v1.enums'))
+      package: const $pb.PackageName('google.ads.googleads.v1.enums'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   LocalPlaceholderFieldEnum._() : super();
@@ -37,7 +37,8 @@ class LocalPlaceholderFieldEnum extends $pb.GeneratedMessage {
   LocalPlaceholderFieldEnum createEmptyInstance() => create();
   static $pb.PbList<LocalPlaceholderFieldEnum> createRepeated() =>
       $pb.PbList<LocalPlaceholderFieldEnum>();
-  static LocalPlaceholderFieldEnum getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static LocalPlaceholderFieldEnum getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<LocalPlaceholderFieldEnum>(create);
   static LocalPlaceholderFieldEnum _defaultInstance;
 }

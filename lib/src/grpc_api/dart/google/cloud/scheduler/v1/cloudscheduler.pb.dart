@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -15,7 +14,8 @@ import '../../../protobuf/field_mask.pb.dart' as $3;
 
 class ListJobsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListJobsRequest',
-      package: const $pb.PackageName('google.cloud.scheduler.v1'))
+      package: const $pb.PackageName('google.cloud.scheduler.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..a<$core.int>(5, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(6, 'pageToken')
@@ -38,39 +38,53 @@ class ListJobsRequest extends $pb.GeneratedMessage {
   ListJobsRequest createEmptyInstance() => create();
   static $pb.PbList<ListJobsRequest> createRepeated() =>
       $pb.PbList<ListJobsRequest>();
-  static ListJobsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListJobsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListJobsRequest>(create);
   static ListJobsRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.int get pageSize => $_get(1, 0);
+  @$pb.TagNumber(5)
+  $core.int get pageSize => $_getIZ(1);
+  @$pb.TagNumber(5)
   set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasPageSize() => $_has(1);
+  @$pb.TagNumber(5)
   void clearPageSize() => clearField(5);
 
-  $core.String get pageToken => $_getS(2, '');
+  @$pb.TagNumber(6)
+  $core.String get pageToken => $_getSZ(2);
+  @$pb.TagNumber(6)
   set pageToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasPageToken() => $_has(2);
+  @$pb.TagNumber(6)
   void clearPageToken() => clearField(6);
 }
 
 class ListJobsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListJobsResponse',
-      package: const $pb.PackageName('google.cloud.scheduler.v1'))
-    ..pc<$1.Job>(1, 'jobs', $pb.PbFieldType.PM, $1.Job.create)
+      package: const $pb.PackageName('google.cloud.scheduler.v1'),
+      createEmptyInstance: create)
+    ..pc<$1.Job>(1, 'jobs', $pb.PbFieldType.PM, subBuilder: $1.Job.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -91,24 +105,31 @@ class ListJobsResponse extends $pb.GeneratedMessage {
   ListJobsResponse createEmptyInstance() => create();
   static $pb.PbList<ListJobsResponse> createRepeated() =>
       $pb.PbList<ListJobsResponse>();
-  static ListJobsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListJobsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListJobsResponse>(create);
   static ListJobsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$1.Job> get jobs => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class GetJobRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetJobRequest',
-      package: const $pb.PackageName('google.cloud.scheduler.v1'))
+      package: const $pb.PackageName('google.cloud.scheduler.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -129,23 +150,30 @@ class GetJobRequest extends $pb.GeneratedMessage {
   GetJobRequest createEmptyInstance() => create();
   static $pb.PbList<GetJobRequest> createRepeated() =>
       $pb.PbList<GetJobRequest>();
-  static GetJobRequest getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetJobRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetJobRequest>(create);
   static GetJobRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class CreateJobRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateJobRequest',
-      package: const $pb.PackageName('google.cloud.scheduler.v1'))
+      package: const $pb.PackageName('google.cloud.scheduler.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
-    ..a<$1.Job>(2, 'job', $pb.PbFieldType.OM, $1.Job.getDefault, $1.Job.create)
+    ..aOM<$1.Job>(2, 'job', subBuilder: $1.Job.create)
     ..hasRequiredFields = false;
 
   CreateJobRequest._() : super();
@@ -165,33 +193,44 @@ class CreateJobRequest extends $pb.GeneratedMessage {
   CreateJobRequest createEmptyInstance() => create();
   static $pb.PbList<CreateJobRequest> createRepeated() =>
       $pb.PbList<CreateJobRequest>();
-  static CreateJobRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateJobRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateJobRequest>(create);
   static CreateJobRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  @$pb.TagNumber(2)
   $1.Job get job => $_getN(1);
+  @$pb.TagNumber(2)
   set job($1.Job v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasJob() => $_has(1);
+  @$pb.TagNumber(2)
   void clearJob() => clearField(2);
+  @$pb.TagNumber(2)
+  $1.Job ensureJob() => $_ensure(1);
 }
 
 class UpdateJobRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateJobRequest',
-      package: const $pb.PackageName('google.cloud.scheduler.v1'))
-    ..a<$1.Job>(1, 'job', $pb.PbFieldType.OM, $1.Job.getDefault, $1.Job.create)
-    ..a<$3.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $3.FieldMask.getDefault, $3.FieldMask.create)
+      package: const $pb.PackageName('google.cloud.scheduler.v1'),
+      createEmptyInstance: create)
+    ..aOM<$1.Job>(1, 'job', subBuilder: $1.Job.create)
+    ..aOM<$3.FieldMask>(2, 'updateMask', subBuilder: $3.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateJobRequest._() : super();
@@ -211,30 +250,44 @@ class UpdateJobRequest extends $pb.GeneratedMessage {
   UpdateJobRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateJobRequest> createRepeated() =>
       $pb.PbList<UpdateJobRequest>();
-  static UpdateJobRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateJobRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateJobRequest>(create);
   static UpdateJobRequest _defaultInstance;
 
+  @$pb.TagNumber(1)
   $1.Job get job => $_getN(0);
+  @$pb.TagNumber(1)
   set job($1.Job v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasJob() => $_has(0);
+  @$pb.TagNumber(1)
   void clearJob() => clearField(1);
+  @$pb.TagNumber(1)
+  $1.Job ensureJob() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $3.FieldMask get updateMask => $_getN(1);
+  @$pb.TagNumber(2)
   set updateMask($3.FieldMask v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasUpdateMask() => $_has(1);
+  @$pb.TagNumber(2)
   void clearUpdateMask() => clearField(2);
+  @$pb.TagNumber(2)
+  $3.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
 class DeleteJobRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteJobRequest',
-      package: const $pb.PackageName('google.cloud.scheduler.v1'))
+      package: const $pb.PackageName('google.cloud.scheduler.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -255,22 +308,28 @@ class DeleteJobRequest extends $pb.GeneratedMessage {
   DeleteJobRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteJobRequest> createRepeated() =>
       $pb.PbList<DeleteJobRequest>();
-  static DeleteJobRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteJobRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteJobRequest>(create);
   static DeleteJobRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class PauseJobRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('PauseJobRequest',
-      package: const $pb.PackageName('google.cloud.scheduler.v1'))
+      package: const $pb.PackageName('google.cloud.scheduler.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -291,22 +350,28 @@ class PauseJobRequest extends $pb.GeneratedMessage {
   PauseJobRequest createEmptyInstance() => create();
   static $pb.PbList<PauseJobRequest> createRepeated() =>
       $pb.PbList<PauseJobRequest>();
-  static PauseJobRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static PauseJobRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PauseJobRequest>(create);
   static PauseJobRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class ResumeJobRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ResumeJobRequest',
-      package: const $pb.PackageName('google.cloud.scheduler.v1'))
+      package: const $pb.PackageName('google.cloud.scheduler.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -327,22 +392,28 @@ class ResumeJobRequest extends $pb.GeneratedMessage {
   ResumeJobRequest createEmptyInstance() => create();
   static $pb.PbList<ResumeJobRequest> createRepeated() =>
       $pb.PbList<ResumeJobRequest>();
-  static ResumeJobRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ResumeJobRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ResumeJobRequest>(create);
   static ResumeJobRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class RunJobRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('RunJobRequest',
-      package: const $pb.PackageName('google.cloud.scheduler.v1'))
+      package: const $pb.PackageName('google.cloud.scheduler.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -363,14 +434,20 @@ class RunJobRequest extends $pb.GeneratedMessage {
   RunJobRequest createEmptyInstance() => create();
   static $pb.PbList<RunJobRequest> createRepeated() =>
       $pb.PbList<RunJobRequest>();
-  static RunJobRequest getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static RunJobRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RunJobRequest>(create);
   static RunJobRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }

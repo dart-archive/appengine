@@ -684,3 +684,25 @@ const SitelinkFeedItem$json = {
     },
   ],
 };
+
+const HotelCalloutFeedItem$json = {
+  '1': 'HotelCalloutFeedItem',
+  '2': [
+    {
+      '1': 'text',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.StringValue',
+      '10': 'text'
+    },
+    {
+      '1': 'language_code',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.StringValue',
+      '10': 'languageCode'
+    },
+  ],
+};

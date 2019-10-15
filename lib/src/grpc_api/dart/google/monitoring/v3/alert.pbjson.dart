@@ -51,6 +51,14 @@ const AlertPolicy$json = {
       '10': 'enabled'
     },
     {
+      '1': 'validity',
+      '3': 18,
+      '4': 1,
+      '5': 11,
+      '6': '.google.rpc.Status',
+      '10': 'validity'
+    },
+    {
       '1': 'notification_channels',
       '3': 14,
       '4': 3,

@@ -19,13 +19,14 @@ const JobView$json = {
 const CreateJobRequest$json = {
   '1': 'CreateJobRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
     {
       '1': 'job',
       '3': 2,
       '4': 1,
       '5': 11,
       '6': '.google.cloud.talent.v4beta1.Job',
+      '8': {},
       '10': 'job'
     },
   ],
@@ -34,7 +35,7 @@ const CreateJobRequest$json = {
 const GetJobRequest$json = {
   '1': 'GetJobRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
   ],
 };
 
@@ -47,6 +48,7 @@ const UpdateJobRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.talent.v4beta1.Job',
+      '8': {},
       '10': 'job'
     },
     {
@@ -63,23 +65,23 @@ const UpdateJobRequest$json = {
 const DeleteJobRequest$json = {
   '1': 'DeleteJobRequest',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
   ],
 };
 
 const BatchDeleteJobsRequest$json = {
   '1': 'BatchDeleteJobsRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    {'1': 'filter', '3': 2, '4': 1, '5': 9, '10': 'filter'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
+    {'1': 'filter', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'filter'},
   ],
 };
 
 const ListJobsRequest$json = {
   '1': 'ListJobsRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
-    {'1': 'filter', '3': 2, '4': 1, '5': 9, '10': 'filter'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
+    {'1': 'filter', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'filter'},
     {'1': 'page_token', '3': 3, '4': 1, '5': 9, '10': 'pageToken'},
     {'1': 'page_size', '3': 4, '4': 1, '5': 5, '10': 'pageSize'},
     {
@@ -119,7 +121,7 @@ const ListJobsResponse$json = {
 const SearchJobsRequest$json = {
   '1': 'SearchJobsRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
     {
       '1': 'search_mode',
       '3': 2,
@@ -134,6 +136,7 @@ const SearchJobsRequest$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.talent.v4beta1.RequestMetadata',
+      '8': {},
       '10': 'requestMetadata'
     },
     {
@@ -220,6 +223,7 @@ const SearchJobsRequest_CustomRankingInfo$json = {
       '5': 14,
       '6':
           '.google.cloud.talent.v4beta1.SearchJobsRequest.CustomRankingInfo.ImportanceLevel',
+      '8': {},
       '10': 'importanceLevel'
     },
     {
@@ -227,6 +231,7 @@ const SearchJobsRequest_CustomRankingInfo$json = {
       '3': 2,
       '4': 1,
       '5': 9,
+      '8': {},
       '10': 'rankingExpression'
     },
   ],
@@ -386,13 +391,14 @@ const SearchJobsResponse_CommuteInfo$json = {
 const BatchCreateJobsRequest$json = {
   '1': 'BatchCreateJobsRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
     {
       '1': 'jobs',
       '3': 2,
       '4': 3,
       '5': 11,
       '6': '.google.cloud.talent.v4beta1.Job',
+      '8': {},
       '10': 'jobs'
     },
   ],
@@ -401,7 +407,7 @@ const BatchCreateJobsRequest$json = {
 const BatchUpdateJobsRequest$json = {
   '1': 'BatchUpdateJobsRequest',
   '2': [
-    {'1': 'parent', '3': 1, '4': 1, '5': 9, '10': 'parent'},
+    {'1': 'parent', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'parent'},
     {
       '1': 'jobs',
       '3': 2,
@@ -417,6 +423,43 @@ const BatchUpdateJobsRequest$json = {
       '5': 11,
       '6': '.google.protobuf.FieldMask',
       '10': 'updateMask'
+    },
+  ],
+};
+
+const JobOperationResult$json = {
+  '1': 'JobOperationResult',
+  '2': [
+    {
+      '1': 'job_results',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.talent.v4beta1.JobOperationResult.JobResult',
+      '10': 'jobResults'
+    },
+  ],
+  '3': [JobOperationResult_JobResult$json],
+};
+
+const JobOperationResult_JobResult$json = {
+  '1': 'JobResult',
+  '2': [
+    {
+      '1': 'job',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.talent.v4beta1.Job',
+      '10': 'job'
+    },
+    {
+      '1': 'status',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.rpc.Status',
+      '10': 'status'
     },
   ],
 };

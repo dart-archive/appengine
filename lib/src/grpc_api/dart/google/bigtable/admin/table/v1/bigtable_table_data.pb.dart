@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -19,27 +18,20 @@ export 'bigtable_table_data.pbenum.dart';
 
 class Table extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Table',
-      package: const $pb.PackageName('google.bigtable.admin.table.v1'))
+      package: const $pb.PackageName('google.bigtable.admin.table.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
-    ..a<$0.Operation>(2, 'currentOperation', $pb.PbFieldType.OM,
-        $0.Operation.getDefault, $0.Operation.create)
-    ..m<$core.String, ColumnFamily>(
-        3,
-        'columnFamilies',
-        'Table.ColumnFamiliesEntry',
-        $pb.PbFieldType.OS,
-        $pb.PbFieldType.OM,
-        ColumnFamily.create,
-        null,
-        null,
-        const $pb.PackageName('google.bigtable.admin.table.v1'))
-    ..e<Table_TimestampGranularity>(
-        4,
-        'granularity',
-        $pb.PbFieldType.OE,
-        Table_TimestampGranularity.MILLIS,
-        Table_TimestampGranularity.valueOf,
-        Table_TimestampGranularity.values)
+    ..aOM<$0.Operation>(2, 'currentOperation', subBuilder: $0.Operation.create)
+    ..m<$core.String, ColumnFamily>(3, 'columnFamilies',
+        entryClassName: 'Table.ColumnFamiliesEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OM,
+        valueCreator: ColumnFamily.create,
+        packageName: const $pb.PackageName('google.bigtable.admin.table.v1'))
+    ..e<Table_TimestampGranularity>(4, 'granularity', $pb.PbFieldType.OE,
+        defaultOrMaker: Table_TimestampGranularity.MILLIS,
+        valueOf: Table_TimestampGranularity.valueOf,
+        enumValues: Table_TimestampGranularity.values)
     ..hasRequiredFields = false;
 
   Table._() : super();
@@ -58,43 +50,60 @@ class Table extends $pb.GeneratedMessage {
   static Table create() => Table._();
   Table createEmptyInstance() => create();
   static $pb.PbList<Table> createRepeated() => $pb.PbList<Table>();
-  static Table getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Table getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Table>(create);
   static Table _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $0.Operation get currentOperation => $_getN(1);
+  @$pb.TagNumber(2)
   set currentOperation($0.Operation v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasCurrentOperation() => $_has(1);
+  @$pb.TagNumber(2)
   void clearCurrentOperation() => clearField(2);
+  @$pb.TagNumber(2)
+  $0.Operation ensureCurrentOperation() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $core.Map<$core.String, ColumnFamily> get columnFamilies => $_getMap(2);
 
+  @$pb.TagNumber(4)
   Table_TimestampGranularity get granularity => $_getN(3);
+  @$pb.TagNumber(4)
   set granularity(Table_TimestampGranularity v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasGranularity() => $_has(3);
+  @$pb.TagNumber(4)
   void clearGranularity() => clearField(4);
 }
 
 class ColumnFamily extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ColumnFamily',
-      package: const $pb.PackageName('google.bigtable.admin.table.v1'))
+      package: const $pb.PackageName('google.bigtable.admin.table.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..aOS(2, 'gcExpression')
-    ..a<GcRule>(
-        3, 'gcRule', $pb.PbFieldType.OM, GcRule.getDefault, GcRule.create)
+    ..aOM<GcRule>(3, 'gcRule', subBuilder: GcRule.create)
     ..hasRequiredFields = false;
 
   ColumnFamily._() : super();
@@ -114,38 +123,55 @@ class ColumnFamily extends $pb.GeneratedMessage {
   ColumnFamily createEmptyInstance() => create();
   static $pb.PbList<ColumnFamily> createRepeated() =>
       $pb.PbList<ColumnFamily>();
-  static ColumnFamily getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ColumnFamily getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ColumnFamily>(create);
   static ColumnFamily _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.String get gcExpression => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get gcExpression => $_getSZ(1);
+  @$pb.TagNumber(2)
   set gcExpression($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasGcExpression() => $_has(1);
+  @$pb.TagNumber(2)
   void clearGcExpression() => clearField(2);
 
+  @$pb.TagNumber(3)
   GcRule get gcRule => $_getN(2);
+  @$pb.TagNumber(3)
   set gcRule(GcRule v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasGcRule() => $_has(2);
+  @$pb.TagNumber(3)
   void clearGcRule() => clearField(3);
+  @$pb.TagNumber(3)
+  GcRule ensureGcRule() => $_ensure(2);
 }
 
 class GcRule_Intersection extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GcRule.Intersection',
-      package: const $pb.PackageName('google.bigtable.admin.table.v1'))
-    ..pc<GcRule>(1, 'rules', $pb.PbFieldType.PM, GcRule.create)
+      package: const $pb.PackageName('google.bigtable.admin.table.v1'),
+      createEmptyInstance: create)
+    ..pc<GcRule>(1, 'rules', $pb.PbFieldType.PM, subBuilder: GcRule.create)
     ..hasRequiredFields = false;
 
   GcRule_Intersection._() : super();
@@ -165,17 +191,20 @@ class GcRule_Intersection extends $pb.GeneratedMessage {
   GcRule_Intersection createEmptyInstance() => create();
   static $pb.PbList<GcRule_Intersection> createRepeated() =>
       $pb.PbList<GcRule_Intersection>();
-  static GcRule_Intersection getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GcRule_Intersection getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GcRule_Intersection>(create);
   static GcRule_Intersection _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<GcRule> get rules => $_getList(0);
 }
 
 class GcRule_Union extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GcRule.Union',
-      package: const $pb.PackageName('google.bigtable.admin.table.v1'))
-    ..pc<GcRule>(1, 'rules', $pb.PbFieldType.PM, GcRule.create)
+      package: const $pb.PackageName('google.bigtable.admin.table.v1'),
+      createEmptyInstance: create)
+    ..pc<GcRule>(1, 'rules', $pb.PbFieldType.PM, subBuilder: GcRule.create)
     ..hasRequiredFields = false;
 
   GcRule_Union._() : super();
@@ -195,9 +224,12 @@ class GcRule_Union extends $pb.GeneratedMessage {
   GcRule_Union createEmptyInstance() => create();
   static $pb.PbList<GcRule_Union> createRepeated() =>
       $pb.PbList<GcRule_Union>();
-  static GcRule_Union getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GcRule_Union getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GcRule_Union>(create);
   static GcRule_Union _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<GcRule> get rules => $_getList(0);
 }
 
@@ -212,15 +244,14 @@ class GcRule extends $pb.GeneratedMessage {
     0: GcRule_Rule.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GcRule',
-      package: const $pb.PackageName('google.bigtable.admin.table.v1'))
+      package: const $pb.PackageName('google.bigtable.admin.table.v1'),
+      createEmptyInstance: create)
     ..oo(0, [1, 2, 3, 4])
     ..a<$core.int>(1, 'maxNumVersions', $pb.PbFieldType.O3)
-    ..a<$2.Duration>(2, 'maxAge', $pb.PbFieldType.OM, $2.Duration.getDefault,
-        $2.Duration.create)
-    ..a<GcRule_Intersection>(3, 'intersection', $pb.PbFieldType.OM,
-        GcRule_Intersection.getDefault, GcRule_Intersection.create)
-    ..a<GcRule_Union>(4, 'union', $pb.PbFieldType.OM, GcRule_Union.getDefault,
-        GcRule_Union.create)
+    ..aOM<$2.Duration>(2, 'maxAge', subBuilder: $2.Duration.create)
+    ..aOM<GcRule_Intersection>(3, 'intersection',
+        subBuilder: GcRule_Intersection.create)
+    ..aOM<GcRule_Union>(4, 'union', subBuilder: GcRule_Union.create)
     ..hasRequiredFields = false;
 
   GcRule._() : super();
@@ -239,41 +270,65 @@ class GcRule extends $pb.GeneratedMessage {
   static GcRule create() => GcRule._();
   GcRule createEmptyInstance() => create();
   static $pb.PbList<GcRule> createRepeated() => $pb.PbList<GcRule>();
-  static GcRule getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GcRule getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<GcRule>(create);
   static GcRule _defaultInstance;
 
   GcRule_Rule whichRule() => _GcRule_RuleByTag[$_whichOneof(0)];
   void clearRule() => clearField($_whichOneof(0));
 
-  $core.int get maxNumVersions => $_get(0, 0);
+  @$pb.TagNumber(1)
+  $core.int get maxNumVersions => $_getIZ(0);
+  @$pb.TagNumber(1)
   set maxNumVersions($core.int v) {
     $_setSignedInt32(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasMaxNumVersions() => $_has(0);
+  @$pb.TagNumber(1)
   void clearMaxNumVersions() => clearField(1);
 
+  @$pb.TagNumber(2)
   $2.Duration get maxAge => $_getN(1);
+  @$pb.TagNumber(2)
   set maxAge($2.Duration v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasMaxAge() => $_has(1);
+  @$pb.TagNumber(2)
   void clearMaxAge() => clearField(2);
+  @$pb.TagNumber(2)
+  $2.Duration ensureMaxAge() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   GcRule_Intersection get intersection => $_getN(2);
+  @$pb.TagNumber(3)
   set intersection(GcRule_Intersection v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasIntersection() => $_has(2);
+  @$pb.TagNumber(3)
   void clearIntersection() => clearField(3);
+  @$pb.TagNumber(3)
+  GcRule_Intersection ensureIntersection() => $_ensure(2);
 
+  @$pb.TagNumber(4)
   GcRule_Union get union => $_getN(3);
+  @$pb.TagNumber(4)
   set union(GcRule_Union v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasUnion() => $_has(3);
+  @$pb.TagNumber(4)
   void clearUnion() => clearField(4);
+  @$pb.TagNumber(4)
+  GcRule_Union ensureUnion() => $_ensure(3);
 }

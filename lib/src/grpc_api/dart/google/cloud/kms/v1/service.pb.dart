@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -17,7 +16,8 @@ import 'resources.pbenum.dart' as $1;
 
 class ListKeyRingsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListKeyRingsRequest',
-      package: const $pb.PackageName('google.cloud.kms.v1'))
+      package: const $pb.PackageName('google.cloud.kms.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(3, 'pageToken')
@@ -42,65 +42,85 @@ class ListKeyRingsRequest extends $pb.GeneratedMessage {
   ListKeyRingsRequest createEmptyInstance() => create();
   static $pb.PbList<ListKeyRingsRequest> createRepeated() =>
       $pb.PbList<ListKeyRingsRequest>();
-  static ListKeyRingsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListKeyRingsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListKeyRingsRequest>(create);
   static ListKeyRingsRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.int get pageSize => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get pageSize => $_getIZ(1);
+  @$pb.TagNumber(2)
   set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
-  $core.String get pageToken => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get pageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
   set pageToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
 
-  $core.String get filter => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get filter => $_getSZ(3);
+  @$pb.TagNumber(4)
   set filter($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasFilter() => $_has(3);
+  @$pb.TagNumber(4)
   void clearFilter() => clearField(4);
 
-  $core.String get orderBy => $_getS(4, '');
+  @$pb.TagNumber(5)
+  $core.String get orderBy => $_getSZ(4);
+  @$pb.TagNumber(5)
   set orderBy($core.String v) {
     $_setString(4, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasOrderBy() => $_has(4);
+  @$pb.TagNumber(5)
   void clearOrderBy() => clearField(5);
 }
 
 class ListCryptoKeysRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListCryptoKeysRequest',
-      package: const $pb.PackageName('google.cloud.kms.v1'))
+      package: const $pb.PackageName('google.cloud.kms.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(3, 'pageToken')
     ..e<$1.CryptoKeyVersion_CryptoKeyVersionView>(
-        4,
-        'versionView',
-        $pb.PbFieldType.OE,
-        $1.CryptoKeyVersion_CryptoKeyVersionView
+        4, 'versionView', $pb.PbFieldType.OE,
+        defaultOrMaker: $1.CryptoKeyVersion_CryptoKeyVersionView
             .CRYPTO_KEY_VERSION_VIEW_UNSPECIFIED,
-        $1.CryptoKeyVersion_CryptoKeyVersionView.valueOf,
-        $1.CryptoKeyVersion_CryptoKeyVersionView.values)
+        valueOf: $1.CryptoKeyVersion_CryptoKeyVersionView.valueOf,
+        enumValues: $1.CryptoKeyVersion_CryptoKeyVersionView.values)
     ..aOS(5, 'filter')
     ..aOS(6, 'orderBy')
     ..hasRequiredFields = false;
@@ -124,74 +144,97 @@ class ListCryptoKeysRequest extends $pb.GeneratedMessage {
   ListCryptoKeysRequest createEmptyInstance() => create();
   static $pb.PbList<ListCryptoKeysRequest> createRepeated() =>
       $pb.PbList<ListCryptoKeysRequest>();
-  static ListCryptoKeysRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListCryptoKeysRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListCryptoKeysRequest>(create);
   static ListCryptoKeysRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.int get pageSize => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get pageSize => $_getIZ(1);
+  @$pb.TagNumber(2)
   set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
-  $core.String get pageToken => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get pageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
   set pageToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
 
+  @$pb.TagNumber(4)
   $1.CryptoKeyVersion_CryptoKeyVersionView get versionView => $_getN(3);
+  @$pb.TagNumber(4)
   set versionView($1.CryptoKeyVersion_CryptoKeyVersionView v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasVersionView() => $_has(3);
+  @$pb.TagNumber(4)
   void clearVersionView() => clearField(4);
 
-  $core.String get filter => $_getS(4, '');
+  @$pb.TagNumber(5)
+  $core.String get filter => $_getSZ(4);
+  @$pb.TagNumber(5)
   set filter($core.String v) {
     $_setString(4, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasFilter() => $_has(4);
+  @$pb.TagNumber(5)
   void clearFilter() => clearField(5);
 
-  $core.String get orderBy => $_getS(5, '');
+  @$pb.TagNumber(6)
+  $core.String get orderBy => $_getSZ(5);
+  @$pb.TagNumber(6)
   set orderBy($core.String v) {
     $_setString(5, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasOrderBy() => $_has(5);
+  @$pb.TagNumber(6)
   void clearOrderBy() => clearField(6);
 }
 
 class ListCryptoKeyVersionsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListCryptoKeyVersionsRequest',
-      package: const $pb.PackageName('google.cloud.kms.v1'))
+      package: const $pb.PackageName('google.cloud.kms.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(3, 'pageToken')
-    ..e<$1.CryptoKeyVersion_CryptoKeyVersionView>(
-        4,
-        'view',
-        $pb.PbFieldType.OE,
-        $1.CryptoKeyVersion_CryptoKeyVersionView
+    ..e<$1.CryptoKeyVersion_CryptoKeyVersionView>(4, 'view', $pb.PbFieldType.OE,
+        defaultOrMaker: $1.CryptoKeyVersion_CryptoKeyVersionView
             .CRYPTO_KEY_VERSION_VIEW_UNSPECIFIED,
-        $1.CryptoKeyVersion_CryptoKeyVersionView.valueOf,
-        $1.CryptoKeyVersion_CryptoKeyVersionView.values)
+        valueOf: $1.CryptoKeyVersion_CryptoKeyVersionView.valueOf,
+        enumValues: $1.CryptoKeyVersion_CryptoKeyVersionView.values)
     ..aOS(5, 'filter')
     ..aOS(6, 'orderBy')
     ..hasRequiredFields = false;
@@ -217,62 +260,88 @@ class ListCryptoKeyVersionsRequest extends $pb.GeneratedMessage {
   ListCryptoKeyVersionsRequest createEmptyInstance() => create();
   static $pb.PbList<ListCryptoKeyVersionsRequest> createRepeated() =>
       $pb.PbList<ListCryptoKeyVersionsRequest>();
-  static ListCryptoKeyVersionsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListCryptoKeyVersionsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListCryptoKeyVersionsRequest>(create);
   static ListCryptoKeyVersionsRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.int get pageSize => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get pageSize => $_getIZ(1);
+  @$pb.TagNumber(2)
   set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
-  $core.String get pageToken => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get pageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
   set pageToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
 
+  @$pb.TagNumber(4)
   $1.CryptoKeyVersion_CryptoKeyVersionView get view => $_getN(3);
+  @$pb.TagNumber(4)
   set view($1.CryptoKeyVersion_CryptoKeyVersionView v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasView() => $_has(3);
+  @$pb.TagNumber(4)
   void clearView() => clearField(4);
 
-  $core.String get filter => $_getS(4, '');
+  @$pb.TagNumber(5)
+  $core.String get filter => $_getSZ(4);
+  @$pb.TagNumber(5)
   set filter($core.String v) {
     $_setString(4, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasFilter() => $_has(4);
+  @$pb.TagNumber(5)
   void clearFilter() => clearField(5);
 
-  $core.String get orderBy => $_getS(5, '');
+  @$pb.TagNumber(6)
+  $core.String get orderBy => $_getSZ(5);
+  @$pb.TagNumber(6)
   set orderBy($core.String v) {
     $_setString(5, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasOrderBy() => $_has(5);
+  @$pb.TagNumber(6)
   void clearOrderBy() => clearField(6);
 }
 
 class ListImportJobsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListImportJobsRequest',
-      package: const $pb.PackageName('google.cloud.kms.v1'))
+      package: const $pb.PackageName('google.cloud.kms.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..a<$core.int>(2, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(3, 'pageToken')
@@ -299,55 +368,78 @@ class ListImportJobsRequest extends $pb.GeneratedMessage {
   ListImportJobsRequest createEmptyInstance() => create();
   static $pb.PbList<ListImportJobsRequest> createRepeated() =>
       $pb.PbList<ListImportJobsRequest>();
-  static ListImportJobsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListImportJobsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListImportJobsRequest>(create);
   static ListImportJobsRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.int get pageSize => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get pageSize => $_getIZ(1);
+  @$pb.TagNumber(2)
   set pageSize($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageSize() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
-  $core.String get pageToken => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get pageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
   set pageToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
 
-  $core.String get filter => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get filter => $_getSZ(3);
+  @$pb.TagNumber(4)
   set filter($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasFilter() => $_has(3);
+  @$pb.TagNumber(4)
   void clearFilter() => clearField(4);
 
-  $core.String get orderBy => $_getS(4, '');
+  @$pb.TagNumber(5)
+  $core.String get orderBy => $_getSZ(4);
+  @$pb.TagNumber(5)
   set orderBy($core.String v) {
     $_setString(4, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasOrderBy() => $_has(4);
+  @$pb.TagNumber(5)
   void clearOrderBy() => clearField(5);
 }
 
 class ListKeyRingsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListKeyRingsResponse',
-      package: const $pb.PackageName('google.cloud.kms.v1'))
-    ..pc<$1.KeyRing>(1, 'keyRings', $pb.PbFieldType.PM, $1.KeyRing.create)
+      package: const $pb.PackageName('google.cloud.kms.v1'),
+      createEmptyInstance: create)
+    ..pc<$1.KeyRing>(1, 'keyRings', $pb.PbFieldType.PM,
+        subBuilder: $1.KeyRing.create)
     ..aOS(2, 'nextPageToken')
     ..a<$core.int>(3, 'totalSize', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
@@ -370,33 +462,45 @@ class ListKeyRingsResponse extends $pb.GeneratedMessage {
   ListKeyRingsResponse createEmptyInstance() => create();
   static $pb.PbList<ListKeyRingsResponse> createRepeated() =>
       $pb.PbList<ListKeyRingsResponse>();
-  static ListKeyRingsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListKeyRingsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListKeyRingsResponse>(create);
   static ListKeyRingsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$1.KeyRing> get keyRings => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 
-  $core.int get totalSize => $_get(2, 0);
+  @$pb.TagNumber(3)
+  $core.int get totalSize => $_getIZ(2);
+  @$pb.TagNumber(3)
   set totalSize($core.int v) {
     $_setSignedInt32(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasTotalSize() => $_has(2);
+  @$pb.TagNumber(3)
   void clearTotalSize() => clearField(3);
 }
 
 class ListCryptoKeysResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListCryptoKeysResponse',
-      package: const $pb.PackageName('google.cloud.kms.v1'))
-    ..pc<$1.CryptoKey>(1, 'cryptoKeys', $pb.PbFieldType.PM, $1.CryptoKey.create)
+      package: const $pb.PackageName('google.cloud.kms.v1'),
+      createEmptyInstance: create)
+    ..pc<$1.CryptoKey>(1, 'cryptoKeys', $pb.PbFieldType.PM,
+        subBuilder: $1.CryptoKey.create)
     ..aOS(2, 'nextPageToken')
     ..a<$core.int>(3, 'totalSize', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
@@ -420,35 +524,46 @@ class ListCryptoKeysResponse extends $pb.GeneratedMessage {
   ListCryptoKeysResponse createEmptyInstance() => create();
   static $pb.PbList<ListCryptoKeysResponse> createRepeated() =>
       $pb.PbList<ListCryptoKeysResponse>();
-  static ListCryptoKeysResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListCryptoKeysResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListCryptoKeysResponse>(create);
   static ListCryptoKeysResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$1.CryptoKey> get cryptoKeys => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 
-  $core.int get totalSize => $_get(2, 0);
+  @$pb.TagNumber(3)
+  $core.int get totalSize => $_getIZ(2);
+  @$pb.TagNumber(3)
   set totalSize($core.int v) {
     $_setSignedInt32(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasTotalSize() => $_has(2);
+  @$pb.TagNumber(3)
   void clearTotalSize() => clearField(3);
 }
 
 class ListCryptoKeyVersionsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListCryptoKeyVersionsResponse',
-      package: const $pb.PackageName('google.cloud.kms.v1'))
-    ..pc<$1.CryptoKeyVersion>(
-        1, 'cryptoKeyVersions', $pb.PbFieldType.PM, $1.CryptoKeyVersion.create)
+      package: const $pb.PackageName('google.cloud.kms.v1'),
+      createEmptyInstance: create)
+    ..pc<$1.CryptoKeyVersion>(1, 'cryptoKeyVersions', $pb.PbFieldType.PM,
+        subBuilder: $1.CryptoKeyVersion.create)
     ..aOS(2, 'nextPageToken')
     ..a<$core.int>(3, 'totalSize', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
@@ -474,33 +589,45 @@ class ListCryptoKeyVersionsResponse extends $pb.GeneratedMessage {
   ListCryptoKeyVersionsResponse createEmptyInstance() => create();
   static $pb.PbList<ListCryptoKeyVersionsResponse> createRepeated() =>
       $pb.PbList<ListCryptoKeyVersionsResponse>();
-  static ListCryptoKeyVersionsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListCryptoKeyVersionsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListCryptoKeyVersionsResponse>(create);
   static ListCryptoKeyVersionsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$1.CryptoKeyVersion> get cryptoKeyVersions => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 
-  $core.int get totalSize => $_get(2, 0);
+  @$pb.TagNumber(3)
+  $core.int get totalSize => $_getIZ(2);
+  @$pb.TagNumber(3)
   set totalSize($core.int v) {
     $_setSignedInt32(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasTotalSize() => $_has(2);
+  @$pb.TagNumber(3)
   void clearTotalSize() => clearField(3);
 }
 
 class ListImportJobsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListImportJobsResponse',
-      package: const $pb.PackageName('google.cloud.kms.v1'))
-    ..pc<$1.ImportJob>(1, 'importJobs', $pb.PbFieldType.PM, $1.ImportJob.create)
+      package: const $pb.PackageName('google.cloud.kms.v1'),
+      createEmptyInstance: create)
+    ..pc<$1.ImportJob>(1, 'importJobs', $pb.PbFieldType.PM,
+        subBuilder: $1.ImportJob.create)
     ..aOS(2, 'nextPageToken')
     ..a<$core.int>(3, 'totalSize', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
@@ -524,32 +651,43 @@ class ListImportJobsResponse extends $pb.GeneratedMessage {
   ListImportJobsResponse createEmptyInstance() => create();
   static $pb.PbList<ListImportJobsResponse> createRepeated() =>
       $pb.PbList<ListImportJobsResponse>();
-  static ListImportJobsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListImportJobsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListImportJobsResponse>(create);
   static ListImportJobsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$1.ImportJob> get importJobs => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 
-  $core.int get totalSize => $_get(2, 0);
+  @$pb.TagNumber(3)
+  $core.int get totalSize => $_getIZ(2);
+  @$pb.TagNumber(3)
   set totalSize($core.int v) {
     $_setSignedInt32(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasTotalSize() => $_has(2);
+  @$pb.TagNumber(3)
   void clearTotalSize() => clearField(3);
 }
 
 class GetKeyRingRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetKeyRingRequest',
-      package: const $pb.PackageName('google.cloud.kms.v1'))
+      package: const $pb.PackageName('google.cloud.kms.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -570,22 +708,28 @@ class GetKeyRingRequest extends $pb.GeneratedMessage {
   GetKeyRingRequest createEmptyInstance() => create();
   static $pb.PbList<GetKeyRingRequest> createRepeated() =>
       $pb.PbList<GetKeyRingRequest>();
-  static GetKeyRingRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetKeyRingRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetKeyRingRequest>(create);
   static GetKeyRingRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class GetCryptoKeyRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetCryptoKeyRequest',
-      package: const $pb.PackageName('google.cloud.kms.v1'))
+      package: const $pb.PackageName('google.cloud.kms.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -606,23 +750,29 @@ class GetCryptoKeyRequest extends $pb.GeneratedMessage {
   GetCryptoKeyRequest createEmptyInstance() => create();
   static $pb.PbList<GetCryptoKeyRequest> createRepeated() =>
       $pb.PbList<GetCryptoKeyRequest>();
-  static GetCryptoKeyRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetCryptoKeyRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetCryptoKeyRequest>(create);
   static GetCryptoKeyRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class GetCryptoKeyVersionRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'GetCryptoKeyVersionRequest',
-      package: const $pb.PackageName('google.cloud.kms.v1'))
+      package: const $pb.PackageName('google.cloud.kms.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -646,22 +796,28 @@ class GetCryptoKeyVersionRequest extends $pb.GeneratedMessage {
   GetCryptoKeyVersionRequest createEmptyInstance() => create();
   static $pb.PbList<GetCryptoKeyVersionRequest> createRepeated() =>
       $pb.PbList<GetCryptoKeyVersionRequest>();
-  static GetCryptoKeyVersionRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetCryptoKeyVersionRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetCryptoKeyVersionRequest>(create);
   static GetCryptoKeyVersionRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class GetPublicKeyRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetPublicKeyRequest',
-      package: const $pb.PackageName('google.cloud.kms.v1'))
+      package: const $pb.PackageName('google.cloud.kms.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -682,22 +838,28 @@ class GetPublicKeyRequest extends $pb.GeneratedMessage {
   GetPublicKeyRequest createEmptyInstance() => create();
   static $pb.PbList<GetPublicKeyRequest> createRepeated() =>
       $pb.PbList<GetPublicKeyRequest>();
-  static GetPublicKeyRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetPublicKeyRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetPublicKeyRequest>(create);
   static GetPublicKeyRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class GetImportJobRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetImportJobRequest',
-      package: const $pb.PackageName('google.cloud.kms.v1'))
+      package: const $pb.PackageName('google.cloud.kms.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -718,26 +880,31 @@ class GetImportJobRequest extends $pb.GeneratedMessage {
   GetImportJobRequest createEmptyInstance() => create();
   static $pb.PbList<GetImportJobRequest> createRepeated() =>
       $pb.PbList<GetImportJobRequest>();
-  static GetImportJobRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetImportJobRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetImportJobRequest>(create);
   static GetImportJobRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class CreateKeyRingRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateKeyRingRequest',
-      package: const $pb.PackageName('google.cloud.kms.v1'))
+      package: const $pb.PackageName('google.cloud.kms.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..aOS(2, 'keyRingId')
-    ..a<$1.KeyRing>(3, 'keyRing', $pb.PbFieldType.OM, $1.KeyRing.getDefault,
-        $1.KeyRing.create)
+    ..aOM<$1.KeyRing>(3, 'keyRing', subBuilder: $1.KeyRing.create)
     ..hasRequiredFields = false;
 
   CreateKeyRingRequest._() : super();
@@ -758,42 +925,57 @@ class CreateKeyRingRequest extends $pb.GeneratedMessage {
   CreateKeyRingRequest createEmptyInstance() => create();
   static $pb.PbList<CreateKeyRingRequest> createRepeated() =>
       $pb.PbList<CreateKeyRingRequest>();
-  static CreateKeyRingRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateKeyRingRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateKeyRingRequest>(create);
   static CreateKeyRingRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.String get keyRingId => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get keyRingId => $_getSZ(1);
+  @$pb.TagNumber(2)
   set keyRingId($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasKeyRingId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearKeyRingId() => clearField(2);
 
+  @$pb.TagNumber(3)
   $1.KeyRing get keyRing => $_getN(2);
+  @$pb.TagNumber(3)
   set keyRing($1.KeyRing v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasKeyRing() => $_has(2);
+  @$pb.TagNumber(3)
   void clearKeyRing() => clearField(3);
+  @$pb.TagNumber(3)
+  $1.KeyRing ensureKeyRing() => $_ensure(2);
 }
 
 class CreateCryptoKeyRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateCryptoKeyRequest',
-      package: const $pb.PackageName('google.cloud.kms.v1'))
+      package: const $pb.PackageName('google.cloud.kms.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..aOS(2, 'cryptoKeyId')
-    ..a<$1.CryptoKey>(3, 'cryptoKey', $pb.PbFieldType.OM,
-        $1.CryptoKey.getDefault, $1.CryptoKey.create)
+    ..aOM<$1.CryptoKey>(3, 'cryptoKey', subBuilder: $1.CryptoKey.create)
     ..aOB(5, 'skipInitialVersionCreation')
     ..hasRequiredFields = false;
 
@@ -816,50 +998,70 @@ class CreateCryptoKeyRequest extends $pb.GeneratedMessage {
   CreateCryptoKeyRequest createEmptyInstance() => create();
   static $pb.PbList<CreateCryptoKeyRequest> createRepeated() =>
       $pb.PbList<CreateCryptoKeyRequest>();
-  static CreateCryptoKeyRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateCryptoKeyRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateCryptoKeyRequest>(create);
   static CreateCryptoKeyRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.String get cryptoKeyId => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get cryptoKeyId => $_getSZ(1);
+  @$pb.TagNumber(2)
   set cryptoKeyId($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasCryptoKeyId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearCryptoKeyId() => clearField(2);
 
+  @$pb.TagNumber(3)
   $1.CryptoKey get cryptoKey => $_getN(2);
+  @$pb.TagNumber(3)
   set cryptoKey($1.CryptoKey v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasCryptoKey() => $_has(2);
+  @$pb.TagNumber(3)
   void clearCryptoKey() => clearField(3);
+  @$pb.TagNumber(3)
+  $1.CryptoKey ensureCryptoKey() => $_ensure(2);
 
-  $core.bool get skipInitialVersionCreation => $_get(3, false);
+  @$pb.TagNumber(5)
+  $core.bool get skipInitialVersionCreation => $_getBF(3);
+  @$pb.TagNumber(5)
   set skipInitialVersionCreation($core.bool v) {
     $_setBool(3, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasSkipInitialVersionCreation() => $_has(3);
+  @$pb.TagNumber(5)
   void clearSkipInitialVersionCreation() => clearField(5);
 }
 
 class CreateCryptoKeyVersionRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'CreateCryptoKeyVersionRequest',
-      package: const $pb.PackageName('google.cloud.kms.v1'))
+      package: const $pb.PackageName('google.cloud.kms.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
-    ..a<$1.CryptoKeyVersion>(2, 'cryptoKeyVersion', $pb.PbFieldType.OM,
-        $1.CryptoKeyVersion.getDefault, $1.CryptoKeyVersion.create)
+    ..aOM<$1.CryptoKeyVersion>(2, 'cryptoKeyVersion',
+        subBuilder: $1.CryptoKeyVersion.create)
     ..hasRequiredFields = false;
 
   CreateCryptoKeyVersionRequest._() : super();
@@ -883,25 +1085,36 @@ class CreateCryptoKeyVersionRequest extends $pb.GeneratedMessage {
   CreateCryptoKeyVersionRequest createEmptyInstance() => create();
   static $pb.PbList<CreateCryptoKeyVersionRequest> createRepeated() =>
       $pb.PbList<CreateCryptoKeyVersionRequest>();
-  static CreateCryptoKeyVersionRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateCryptoKeyVersionRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateCryptoKeyVersionRequest>(create);
   static CreateCryptoKeyVersionRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  @$pb.TagNumber(2)
   $1.CryptoKeyVersion get cryptoKeyVersion => $_getN(1);
+  @$pb.TagNumber(2)
   set cryptoKeyVersion($1.CryptoKeyVersion v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasCryptoKeyVersion() => $_has(1);
+  @$pb.TagNumber(2)
   void clearCryptoKeyVersion() => clearField(2);
+  @$pb.TagNumber(2)
+  $1.CryptoKeyVersion ensureCryptoKeyVersion() => $_ensure(1);
 }
 
 enum ImportCryptoKeyVersionRequest_WrappedKeyMaterial {
@@ -918,17 +1131,16 @@ class ImportCryptoKeyVersionRequest extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ImportCryptoKeyVersionRequest',
-      package: const $pb.PackageName('google.cloud.kms.v1'))
+      package: const $pb.PackageName('google.cloud.kms.v1'),
+      createEmptyInstance: create)
     ..oo(0, [5])
     ..aOS(1, 'parent')
     ..e<$1.CryptoKeyVersion_CryptoKeyVersionAlgorithm>(
-        2,
-        'algorithm',
-        $pb.PbFieldType.OE,
-        $1.CryptoKeyVersion_CryptoKeyVersionAlgorithm
+        2, 'algorithm', $pb.PbFieldType.OE,
+        defaultOrMaker: $1.CryptoKeyVersion_CryptoKeyVersionAlgorithm
             .CRYPTO_KEY_VERSION_ALGORITHM_UNSPECIFIED,
-        $1.CryptoKeyVersion_CryptoKeyVersionAlgorithm.valueOf,
-        $1.CryptoKeyVersion_CryptoKeyVersionAlgorithm.values)
+        valueOf: $1.CryptoKeyVersion_CryptoKeyVersionAlgorithm.valueOf,
+        enumValues: $1.CryptoKeyVersion_CryptoKeyVersionAlgorithm.values)
     ..aOS(4, 'importJob')
     ..a<$core.List<$core.int>>(5, 'rsaAesWrappedKey', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
@@ -954,54 +1166,71 @@ class ImportCryptoKeyVersionRequest extends $pb.GeneratedMessage {
   ImportCryptoKeyVersionRequest createEmptyInstance() => create();
   static $pb.PbList<ImportCryptoKeyVersionRequest> createRepeated() =>
       $pb.PbList<ImportCryptoKeyVersionRequest>();
-  static ImportCryptoKeyVersionRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ImportCryptoKeyVersionRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ImportCryptoKeyVersionRequest>(create);
   static ImportCryptoKeyVersionRequest _defaultInstance;
 
   ImportCryptoKeyVersionRequest_WrappedKeyMaterial whichWrappedKeyMaterial() =>
       _ImportCryptoKeyVersionRequest_WrappedKeyMaterialByTag[$_whichOneof(0)];
   void clearWrappedKeyMaterial() => clearField($_whichOneof(0));
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  @$pb.TagNumber(2)
   $1.CryptoKeyVersion_CryptoKeyVersionAlgorithm get algorithm => $_getN(1);
+  @$pb.TagNumber(2)
   set algorithm($1.CryptoKeyVersion_CryptoKeyVersionAlgorithm v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasAlgorithm() => $_has(1);
+  @$pb.TagNumber(2)
   void clearAlgorithm() => clearField(2);
 
-  $core.String get importJob => $_getS(2, '');
+  @$pb.TagNumber(4)
+  $core.String get importJob => $_getSZ(2);
+  @$pb.TagNumber(4)
   set importJob($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasImportJob() => $_has(2);
+  @$pb.TagNumber(4)
   void clearImportJob() => clearField(4);
 
+  @$pb.TagNumber(5)
   $core.List<$core.int> get rsaAesWrappedKey => $_getN(3);
+  @$pb.TagNumber(5)
   set rsaAesWrappedKey($core.List<$core.int> v) {
     $_setBytes(3, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasRsaAesWrappedKey() => $_has(3);
+  @$pb.TagNumber(5)
   void clearRsaAesWrappedKey() => clearField(5);
 }
 
 class CreateImportJobRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateImportJobRequest',
-      package: const $pb.PackageName('google.cloud.kms.v1'))
+      package: const $pb.PackageName('google.cloud.kms.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..aOS(2, 'importJobId')
-    ..a<$1.ImportJob>(3, 'importJob', $pb.PbFieldType.OM,
-        $1.ImportJob.getDefault, $1.ImportJob.create)
+    ..aOM<$1.ImportJob>(3, 'importJob', subBuilder: $1.ImportJob.create)
     ..hasRequiredFields = false;
 
   CreateImportJobRequest._() : super();
@@ -1023,42 +1252,56 @@ class CreateImportJobRequest extends $pb.GeneratedMessage {
   CreateImportJobRequest createEmptyInstance() => create();
   static $pb.PbList<CreateImportJobRequest> createRepeated() =>
       $pb.PbList<CreateImportJobRequest>();
-  static CreateImportJobRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateImportJobRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateImportJobRequest>(create);
   static CreateImportJobRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.String get importJobId => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get importJobId => $_getSZ(1);
+  @$pb.TagNumber(2)
   set importJobId($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasImportJobId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearImportJobId() => clearField(2);
 
+  @$pb.TagNumber(3)
   $1.ImportJob get importJob => $_getN(2);
+  @$pb.TagNumber(3)
   set importJob($1.ImportJob v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasImportJob() => $_has(2);
+  @$pb.TagNumber(3)
   void clearImportJob() => clearField(3);
+  @$pb.TagNumber(3)
+  $1.ImportJob ensureImportJob() => $_ensure(2);
 }
 
 class UpdateCryptoKeyRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateCryptoKeyRequest',
-      package: const $pb.PackageName('google.cloud.kms.v1'))
-    ..a<$1.CryptoKey>(1, 'cryptoKey', $pb.PbFieldType.OM,
-        $1.CryptoKey.getDefault, $1.CryptoKey.create)
-    ..a<$2.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $2.FieldMask.getDefault, $2.FieldMask.create)
+      package: const $pb.PackageName('google.cloud.kms.v1'),
+      createEmptyInstance: create)
+    ..aOM<$1.CryptoKey>(1, 'cryptoKey', subBuilder: $1.CryptoKey.create)
+    ..aOM<$2.FieldMask>(2, 'updateMask', subBuilder: $2.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateCryptoKeyRequest._() : super();
@@ -1080,35 +1323,48 @@ class UpdateCryptoKeyRequest extends $pb.GeneratedMessage {
   UpdateCryptoKeyRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateCryptoKeyRequest> createRepeated() =>
       $pb.PbList<UpdateCryptoKeyRequest>();
-  static UpdateCryptoKeyRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateCryptoKeyRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateCryptoKeyRequest>(create);
   static UpdateCryptoKeyRequest _defaultInstance;
 
+  @$pb.TagNumber(1)
   $1.CryptoKey get cryptoKey => $_getN(0);
+  @$pb.TagNumber(1)
   set cryptoKey($1.CryptoKey v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCryptoKey() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCryptoKey() => clearField(1);
+  @$pb.TagNumber(1)
+  $1.CryptoKey ensureCryptoKey() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $2.FieldMask get updateMask => $_getN(1);
+  @$pb.TagNumber(2)
   set updateMask($2.FieldMask v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasUpdateMask() => $_has(1);
+  @$pb.TagNumber(2)
   void clearUpdateMask() => clearField(2);
+  @$pb.TagNumber(2)
+  $2.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
 class UpdateCryptoKeyVersionRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'UpdateCryptoKeyVersionRequest',
-      package: const $pb.PackageName('google.cloud.kms.v1'))
-    ..a<$1.CryptoKeyVersion>(1, 'cryptoKeyVersion', $pb.PbFieldType.OM,
-        $1.CryptoKeyVersion.getDefault, $1.CryptoKeyVersion.create)
-    ..a<$2.FieldMask>(2, 'updateMask', $pb.PbFieldType.OM,
-        $2.FieldMask.getDefault, $2.FieldMask.create)
+      package: const $pb.PackageName('google.cloud.kms.v1'),
+      createEmptyInstance: create)
+    ..aOM<$1.CryptoKeyVersion>(1, 'cryptoKeyVersion',
+        subBuilder: $1.CryptoKeyVersion.create)
+    ..aOM<$2.FieldMask>(2, 'updateMask', subBuilder: $2.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateCryptoKeyVersionRequest._() : super();
@@ -1132,30 +1388,44 @@ class UpdateCryptoKeyVersionRequest extends $pb.GeneratedMessage {
   UpdateCryptoKeyVersionRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateCryptoKeyVersionRequest> createRepeated() =>
       $pb.PbList<UpdateCryptoKeyVersionRequest>();
-  static UpdateCryptoKeyVersionRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateCryptoKeyVersionRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateCryptoKeyVersionRequest>(create);
   static UpdateCryptoKeyVersionRequest _defaultInstance;
 
+  @$pb.TagNumber(1)
   $1.CryptoKeyVersion get cryptoKeyVersion => $_getN(0);
+  @$pb.TagNumber(1)
   set cryptoKeyVersion($1.CryptoKeyVersion v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCryptoKeyVersion() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCryptoKeyVersion() => clearField(1);
+  @$pb.TagNumber(1)
+  $1.CryptoKeyVersion ensureCryptoKeyVersion() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $2.FieldMask get updateMask => $_getN(1);
+  @$pb.TagNumber(2)
   set updateMask($2.FieldMask v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasUpdateMask() => $_has(1);
+  @$pb.TagNumber(2)
   void clearUpdateMask() => clearField(2);
+  @$pb.TagNumber(2)
+  $2.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
 class EncryptRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('EncryptRequest',
-      package: const $pb.PackageName('google.cloud.kms.v1'))
+      package: const $pb.PackageName('google.cloud.kms.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..a<$core.List<$core.int>>(2, 'plaintext', $pb.PbFieldType.OY)
     ..a<$core.List<$core.int>>(
@@ -1179,37 +1449,52 @@ class EncryptRequest extends $pb.GeneratedMessage {
   EncryptRequest createEmptyInstance() => create();
   static $pb.PbList<EncryptRequest> createRepeated() =>
       $pb.PbList<EncryptRequest>();
-  static EncryptRequest getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static EncryptRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<EncryptRequest>(create);
   static EncryptRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<$core.int> get plaintext => $_getN(1);
+  @$pb.TagNumber(2)
   set plaintext($core.List<$core.int> v) {
     $_setBytes(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPlaintext() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPlaintext() => clearField(2);
 
+  @$pb.TagNumber(3)
   $core.List<$core.int> get additionalAuthenticatedData => $_getN(2);
+  @$pb.TagNumber(3)
   set additionalAuthenticatedData($core.List<$core.int> v) {
     $_setBytes(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasAdditionalAuthenticatedData() => $_has(2);
+  @$pb.TagNumber(3)
   void clearAdditionalAuthenticatedData() => clearField(3);
 }
 
 class DecryptRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DecryptRequest',
-      package: const $pb.PackageName('google.cloud.kms.v1'))
+      package: const $pb.PackageName('google.cloud.kms.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..a<$core.List<$core.int>>(2, 'ciphertext', $pb.PbFieldType.OY)
     ..a<$core.List<$core.int>>(
@@ -1233,40 +1518,54 @@ class DecryptRequest extends $pb.GeneratedMessage {
   DecryptRequest createEmptyInstance() => create();
   static $pb.PbList<DecryptRequest> createRepeated() =>
       $pb.PbList<DecryptRequest>();
-  static DecryptRequest getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DecryptRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DecryptRequest>(create);
   static DecryptRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<$core.int> get ciphertext => $_getN(1);
+  @$pb.TagNumber(2)
   set ciphertext($core.List<$core.int> v) {
     $_setBytes(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasCiphertext() => $_has(1);
+  @$pb.TagNumber(2)
   void clearCiphertext() => clearField(2);
 
+  @$pb.TagNumber(3)
   $core.List<$core.int> get additionalAuthenticatedData => $_getN(2);
+  @$pb.TagNumber(3)
   set additionalAuthenticatedData($core.List<$core.int> v) {
     $_setBytes(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasAdditionalAuthenticatedData() => $_has(2);
+  @$pb.TagNumber(3)
   void clearAdditionalAuthenticatedData() => clearField(3);
 }
 
 class AsymmetricSignRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AsymmetricSignRequest',
-      package: const $pb.PackageName('google.cloud.kms.v1'))
+      package: const $pb.PackageName('google.cloud.kms.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
-    ..a<Digest>(
-        3, 'digest', $pb.PbFieldType.OM, Digest.getDefault, Digest.create)
+    ..aOM<Digest>(3, 'digest', subBuilder: Digest.create)
     ..hasRequiredFields = false;
 
   AsymmetricSignRequest._() : super();
@@ -1288,30 +1587,42 @@ class AsymmetricSignRequest extends $pb.GeneratedMessage {
   AsymmetricSignRequest createEmptyInstance() => create();
   static $pb.PbList<AsymmetricSignRequest> createRepeated() =>
       $pb.PbList<AsymmetricSignRequest>();
-  static AsymmetricSignRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static AsymmetricSignRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AsymmetricSignRequest>(create);
   static AsymmetricSignRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(3)
   Digest get digest => $_getN(1);
+  @$pb.TagNumber(3)
   set digest(Digest v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasDigest() => $_has(1);
+  @$pb.TagNumber(3)
   void clearDigest() => clearField(3);
+  @$pb.TagNumber(3)
+  Digest ensureDigest() => $_ensure(1);
 }
 
 class AsymmetricDecryptRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AsymmetricDecryptRequest',
-      package: const $pb.PackageName('google.cloud.kms.v1'))
+      package: const $pb.PackageName('google.cloud.kms.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..a<$core.List<$core.int>>(3, 'ciphertext', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
@@ -1335,30 +1646,40 @@ class AsymmetricDecryptRequest extends $pb.GeneratedMessage {
   AsymmetricDecryptRequest createEmptyInstance() => create();
   static $pb.PbList<AsymmetricDecryptRequest> createRepeated() =>
       $pb.PbList<AsymmetricDecryptRequest>();
-  static AsymmetricDecryptRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static AsymmetricDecryptRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AsymmetricDecryptRequest>(create);
   static AsymmetricDecryptRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(3)
   $core.List<$core.int> get ciphertext => $_getN(1);
+  @$pb.TagNumber(3)
   set ciphertext($core.List<$core.int> v) {
     $_setBytes(1, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasCiphertext() => $_has(1);
+  @$pb.TagNumber(3)
   void clearCiphertext() => clearField(3);
 }
 
 class DecryptResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DecryptResponse',
-      package: const $pb.PackageName('google.cloud.kms.v1'))
+      package: const $pb.PackageName('google.cloud.kms.v1'),
+      createEmptyInstance: create)
     ..a<$core.List<$core.int>>(1, 'plaintext', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
@@ -1379,22 +1700,28 @@ class DecryptResponse extends $pb.GeneratedMessage {
   DecryptResponse createEmptyInstance() => create();
   static $pb.PbList<DecryptResponse> createRepeated() =>
       $pb.PbList<DecryptResponse>();
-  static DecryptResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DecryptResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DecryptResponse>(create);
   static DecryptResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$core.int> get plaintext => $_getN(0);
+  @$pb.TagNumber(1)
   set plaintext($core.List<$core.int> v) {
     $_setBytes(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasPlaintext() => $_has(0);
+  @$pb.TagNumber(1)
   void clearPlaintext() => clearField(1);
 }
 
 class EncryptResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('EncryptResponse',
-      package: const $pb.PackageName('google.cloud.kms.v1'))
+      package: const $pb.PackageName('google.cloud.kms.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..a<$core.List<$core.int>>(2, 'ciphertext', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
@@ -1416,30 +1743,40 @@ class EncryptResponse extends $pb.GeneratedMessage {
   EncryptResponse createEmptyInstance() => create();
   static $pb.PbList<EncryptResponse> createRepeated() =>
       $pb.PbList<EncryptResponse>();
-  static EncryptResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static EncryptResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<EncryptResponse>(create);
   static EncryptResponse _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<$core.int> get ciphertext => $_getN(1);
+  @$pb.TagNumber(2)
   set ciphertext($core.List<$core.int> v) {
     $_setBytes(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasCiphertext() => $_has(1);
+  @$pb.TagNumber(2)
   void clearCiphertext() => clearField(2);
 }
 
 class AsymmetricSignResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AsymmetricSignResponse',
-      package: const $pb.PackageName('google.cloud.kms.v1'))
+      package: const $pb.PackageName('google.cloud.kms.v1'),
+      createEmptyInstance: create)
     ..a<$core.List<$core.int>>(1, 'signature', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
@@ -1462,22 +1799,28 @@ class AsymmetricSignResponse extends $pb.GeneratedMessage {
   AsymmetricSignResponse createEmptyInstance() => create();
   static $pb.PbList<AsymmetricSignResponse> createRepeated() =>
       $pb.PbList<AsymmetricSignResponse>();
-  static AsymmetricSignResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static AsymmetricSignResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AsymmetricSignResponse>(create);
   static AsymmetricSignResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$core.int> get signature => $_getN(0);
+  @$pb.TagNumber(1)
   set signature($core.List<$core.int> v) {
     $_setBytes(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasSignature() => $_has(0);
+  @$pb.TagNumber(1)
   void clearSignature() => clearField(1);
 }
 
 class AsymmetricDecryptResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AsymmetricDecryptResponse',
-      package: const $pb.PackageName('google.cloud.kms.v1'))
+      package: const $pb.PackageName('google.cloud.kms.v1'),
+      createEmptyInstance: create)
     ..a<$core.List<$core.int>>(1, 'plaintext', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
@@ -1501,23 +1844,29 @@ class AsymmetricDecryptResponse extends $pb.GeneratedMessage {
   AsymmetricDecryptResponse createEmptyInstance() => create();
   static $pb.PbList<AsymmetricDecryptResponse> createRepeated() =>
       $pb.PbList<AsymmetricDecryptResponse>();
-  static AsymmetricDecryptResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static AsymmetricDecryptResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AsymmetricDecryptResponse>(create);
   static AsymmetricDecryptResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$core.int> get plaintext => $_getN(0);
+  @$pb.TagNumber(1)
   set plaintext($core.List<$core.int> v) {
     $_setBytes(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasPlaintext() => $_has(0);
+  @$pb.TagNumber(1)
   void clearPlaintext() => clearField(1);
 }
 
 class UpdateCryptoKeyPrimaryVersionRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'UpdateCryptoKeyPrimaryVersionRequest',
-      package: const $pb.PackageName('google.cloud.kms.v1'))
+      package: const $pb.PackageName('google.cloud.kms.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..aOS(2, 'cryptoKeyVersionId')
     ..hasRequiredFields = false;
@@ -1544,31 +1893,42 @@ class UpdateCryptoKeyPrimaryVersionRequest extends $pb.GeneratedMessage {
   UpdateCryptoKeyPrimaryVersionRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateCryptoKeyPrimaryVersionRequest> createRepeated() =>
       $pb.PbList<UpdateCryptoKeyPrimaryVersionRequest>();
+  @$core.pragma('dart2js:noInline')
   static UpdateCryptoKeyPrimaryVersionRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          UpdateCryptoKeyPrimaryVersionRequest>(create);
   static UpdateCryptoKeyPrimaryVersionRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.String get cryptoKeyVersionId => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get cryptoKeyVersionId => $_getSZ(1);
+  @$pb.TagNumber(2)
   set cryptoKeyVersionId($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasCryptoKeyVersionId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearCryptoKeyVersionId() => clearField(2);
 }
 
 class DestroyCryptoKeyVersionRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'DestroyCryptoKeyVersionRequest',
-      package: const $pb.PackageName('google.cloud.kms.v1'))
+      package: const $pb.PackageName('google.cloud.kms.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -1593,23 +1953,29 @@ class DestroyCryptoKeyVersionRequest extends $pb.GeneratedMessage {
   DestroyCryptoKeyVersionRequest createEmptyInstance() => create();
   static $pb.PbList<DestroyCryptoKeyVersionRequest> createRepeated() =>
       $pb.PbList<DestroyCryptoKeyVersionRequest>();
-  static DestroyCryptoKeyVersionRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DestroyCryptoKeyVersionRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DestroyCryptoKeyVersionRequest>(create);
   static DestroyCryptoKeyVersionRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class RestoreCryptoKeyVersionRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'RestoreCryptoKeyVersionRequest',
-      package: const $pb.PackageName('google.cloud.kms.v1'))
+      package: const $pb.PackageName('google.cloud.kms.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -1634,16 +2000,21 @@ class RestoreCryptoKeyVersionRequest extends $pb.GeneratedMessage {
   RestoreCryptoKeyVersionRequest createEmptyInstance() => create();
   static $pb.PbList<RestoreCryptoKeyVersionRequest> createRepeated() =>
       $pb.PbList<RestoreCryptoKeyVersionRequest>();
-  static RestoreCryptoKeyVersionRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static RestoreCryptoKeyVersionRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RestoreCryptoKeyVersionRequest>(create);
   static RestoreCryptoKeyVersionRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
@@ -1657,7 +2028,8 @@ class Digest extends $pb.GeneratedMessage {
     0: Digest_Digest.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Digest',
-      package: const $pb.PackageName('google.cloud.kms.v1'))
+      package: const $pb.PackageName('google.cloud.kms.v1'),
+      createEmptyInstance: create)
     ..oo(0, [1, 2, 3])
     ..a<$core.List<$core.int>>(1, 'sha256', $pb.PbFieldType.OY)
     ..a<$core.List<$core.int>>(2, 'sha384', $pb.PbFieldType.OY)
@@ -1680,40 +2052,55 @@ class Digest extends $pb.GeneratedMessage {
   static Digest create() => Digest._();
   Digest createEmptyInstance() => create();
   static $pb.PbList<Digest> createRepeated() => $pb.PbList<Digest>();
-  static Digest getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Digest getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Digest>(create);
   static Digest _defaultInstance;
 
   Digest_Digest whichDigest() => _Digest_DigestByTag[$_whichOneof(0)];
   void clearDigest() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   $core.List<$core.int> get sha256 => $_getN(0);
+  @$pb.TagNumber(1)
   set sha256($core.List<$core.int> v) {
     $_setBytes(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasSha256() => $_has(0);
+  @$pb.TagNumber(1)
   void clearSha256() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<$core.int> get sha384 => $_getN(1);
+  @$pb.TagNumber(2)
   set sha384($core.List<$core.int> v) {
     $_setBytes(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasSha384() => $_has(1);
+  @$pb.TagNumber(2)
   void clearSha384() => clearField(2);
 
+  @$pb.TagNumber(3)
   $core.List<$core.int> get sha512 => $_getN(2);
+  @$pb.TagNumber(3)
   set sha512($core.List<$core.int> v) {
     $_setBytes(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasSha512() => $_has(2);
+  @$pb.TagNumber(3)
   void clearSha512() => clearField(3);
 }
 
 class LocationMetadata extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('LocationMetadata',
-      package: const $pb.PackageName('google.cloud.kms.v1'))
+      package: const $pb.PackageName('google.cloud.kms.v1'),
+      createEmptyInstance: create)
     ..aOB(1, 'hsmAvailable')
     ..hasRequiredFields = false;
 
@@ -1734,15 +2121,20 @@ class LocationMetadata extends $pb.GeneratedMessage {
   LocationMetadata createEmptyInstance() => create();
   static $pb.PbList<LocationMetadata> createRepeated() =>
       $pb.PbList<LocationMetadata>();
-  static LocationMetadata getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static LocationMetadata getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<LocationMetadata>(create);
   static LocationMetadata _defaultInstance;
 
-  $core.bool get hsmAvailable => $_get(0, false);
+  @$pb.TagNumber(1)
+  $core.bool get hsmAvailable => $_getBF(0);
+  @$pb.TagNumber(1)
   set hsmAvailable($core.bool v) {
     $_setBool(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasHsmAvailable() => $_has(0);
+  @$pb.TagNumber(1)
   void clearHsmAvailable() => clearField(1);
 }

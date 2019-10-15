@@ -123,6 +123,9 @@ message CallOnlyAdInfo {
 message ExpandedDynamicSearchAdInfo {
   // The description of the ad.
   google.protobuf.StringValue description = 1;
+
+  // The second description of the ad.
+  google.protobuf.StringValue description2 = 2;
 }
 
 // A hotel ad.

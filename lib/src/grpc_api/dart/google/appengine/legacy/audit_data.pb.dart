@@ -5,25 +5,20 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class AuditData extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AuditData',
-      package: const $pb.PackageName('google.appengine.legacy'))
+      package: const $pb.PackageName('google.appengine.legacy'),
+      createEmptyInstance: create)
     ..aOS(1, 'eventMessage')
-    ..m<$core.String, $core.String>(
-        2,
-        'eventData',
-        'AuditData.EventDataEntry',
-        $pb.PbFieldType.OS,
-        $pb.PbFieldType.OS,
-        null,
-        null,
-        null,
-        const $pb.PackageName('google.appengine.legacy'))
+    ..m<$core.String, $core.String>(2, 'eventData',
+        entryClassName: 'AuditData.EventDataEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
+        packageName: const $pb.PackageName('google.appengine.legacy'))
     ..hasRequiredFields = false;
 
   AuditData._() : super();
@@ -42,16 +37,23 @@ class AuditData extends $pb.GeneratedMessage {
   static AuditData create() => AuditData._();
   AuditData createEmptyInstance() => create();
   static $pb.PbList<AuditData> createRepeated() => $pb.PbList<AuditData>();
-  static AuditData getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static AuditData getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<AuditData>(create);
   static AuditData _defaultInstance;
 
-  $core.String get eventMessage => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get eventMessage => $_getSZ(0);
+  @$pb.TagNumber(1)
   set eventMessage($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasEventMessage() => $_has(0);
+  @$pb.TagNumber(1)
   void clearEventMessage() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.Map<$core.String, $core.String> get eventData => $_getMap(1);
 }

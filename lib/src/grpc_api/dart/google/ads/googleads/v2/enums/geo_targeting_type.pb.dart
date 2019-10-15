@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -14,7 +13,8 @@ export 'geo_targeting_type.pbenum.dart';
 
 class GeoTargetingTypeEnum extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GeoTargetingTypeEnum',
-      package: const $pb.PackageName('google.ads.googleads.v2.enums'))
+      package: const $pb.PackageName('google.ads.googleads.v2.enums'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   GeoTargetingTypeEnum._() : super();
@@ -35,7 +35,8 @@ class GeoTargetingTypeEnum extends $pb.GeneratedMessage {
   GeoTargetingTypeEnum createEmptyInstance() => create();
   static $pb.PbList<GeoTargetingTypeEnum> createRepeated() =>
       $pb.PbList<GeoTargetingTypeEnum>();
-  static GeoTargetingTypeEnum getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GeoTargetingTypeEnum getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GeoTargetingTypeEnum>(create);
   static GeoTargetingTypeEnum _defaultInstance;
 }

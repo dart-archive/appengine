@@ -261,6 +261,14 @@ const Subscription$json = {
       '6': '.google.pubsub.v1.ExpirationPolicy',
       '10': 'expirationPolicy'
     },
+    {
+      '1': 'dead_letter_policy',
+      '3': 13,
+      '4': 1,
+      '5': 11,
+      '6': '.google.pubsub.v1.DeadLetterPolicy',
+      '10': 'deadLetterPolicy'
+    },
   ],
   '3': [Subscription_LabelsEntry$json],
 };
@@ -272,6 +280,20 @@ const Subscription_LabelsEntry$json = {
     {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
   ],
   '7': {'7': true},
+};
+
+const DeadLetterPolicy$json = {
+  '1': 'DeadLetterPolicy',
+  '2': [
+    {'1': 'dead_letter_topic', '3': 1, '4': 1, '5': 9, '10': 'deadLetterTopic'},
+    {
+      '1': 'max_delivery_attempts',
+      '3': 2,
+      '4': 1,
+      '5': 5,
+      '10': 'maxDeliveryAttempts'
+    },
+  ],
 };
 
 const ExpirationPolicy$json = {
@@ -351,6 +373,7 @@ const ReceivedMessage$json = {
       '6': '.google.pubsub.v1.PubsubMessage',
       '10': 'message'
     },
+    {'1': 'delivery_attempt', '3': 3, '4': 1, '5': 5, '10': 'deliveryAttempt'},
   ],
 };
 

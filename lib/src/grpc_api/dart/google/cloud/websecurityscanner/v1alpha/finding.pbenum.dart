@@ -6,7 +6,7 @@
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
-import 'dart:core' as $core show int, dynamic, String, List, Map;
+import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class Finding_FindingType extends $pb.ProtobufEnum {
@@ -24,6 +24,16 @@ class Finding_FindingType extends $pb.ProtobufEnum {
       Finding_FindingType._(4, 'XSS_ERROR');
   static const Finding_FindingType CLEAR_TEXT_PASSWORD =
       Finding_FindingType._(6, 'CLEAR_TEXT_PASSWORD');
+  static const Finding_FindingType INVALID_CONTENT_TYPE =
+      Finding_FindingType._(7, 'INVALID_CONTENT_TYPE');
+  static const Finding_FindingType XSS_ANGULAR_CALLBACK =
+      Finding_FindingType._(8, 'XSS_ANGULAR_CALLBACK');
+  static const Finding_FindingType INVALID_HEADER =
+      Finding_FindingType._(9, 'INVALID_HEADER');
+  static const Finding_FindingType MISSPELLED_SECURITY_HEADER_NAME =
+      Finding_FindingType._(10, 'MISSPELLED_SECURITY_HEADER_NAME');
+  static const Finding_FindingType MISMATCHING_SECURITY_HEADER_VALUES =
+      Finding_FindingType._(11, 'MISMATCHING_SECURITY_HEADER_VALUES');
 
   static const $core.List<Finding_FindingType> values = <Finding_FindingType>[
     FINDING_TYPE_UNSPECIFIED,
@@ -33,6 +43,11 @@ class Finding_FindingType extends $pb.ProtobufEnum {
     XSS_CALLBACK,
     XSS_ERROR,
     CLEAR_TEXT_PASSWORD,
+    INVALID_CONTENT_TYPE,
+    XSS_ANGULAR_CALLBACK,
+    INVALID_HEADER,
+    MISSPELLED_SECURITY_HEADER_NAME,
+    MISMATCHING_SECURITY_HEADER_VALUES,
   ];
 
   static final $core.Map<$core.int, Finding_FindingType> _byValue =

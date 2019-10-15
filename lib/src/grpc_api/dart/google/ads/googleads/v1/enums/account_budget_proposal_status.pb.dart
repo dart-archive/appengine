@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -15,7 +14,8 @@ export 'account_budget_proposal_status.pbenum.dart';
 class AccountBudgetProposalStatusEnum extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'AccountBudgetProposalStatusEnum',
-      package: const $pb.PackageName('google.ads.googleads.v1.enums'))
+      package: const $pb.PackageName('google.ads.googleads.v1.enums'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   AccountBudgetProposalStatusEnum._() : super();
@@ -39,7 +39,9 @@ class AccountBudgetProposalStatusEnum extends $pb.GeneratedMessage {
   AccountBudgetProposalStatusEnum createEmptyInstance() => create();
   static $pb.PbList<AccountBudgetProposalStatusEnum> createRepeated() =>
       $pb.PbList<AccountBudgetProposalStatusEnum>();
-  static AccountBudgetProposalStatusEnum getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static AccountBudgetProposalStatusEnum getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AccountBudgetProposalStatusEnum>(
+          create);
   static AccountBudgetProposalStatusEnum _defaultInstance;
 }

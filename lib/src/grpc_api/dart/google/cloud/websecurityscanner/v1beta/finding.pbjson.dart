@@ -67,4 +67,5 @@ const Finding$json = {
       '10': 'xss'
     },
   ],
+  '7': {},
 };

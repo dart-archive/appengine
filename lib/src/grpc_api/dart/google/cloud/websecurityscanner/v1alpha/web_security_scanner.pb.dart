@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -19,10 +18,10 @@ import 'finding_type_stats.pb.dart' as $7;
 
 class CreateScanConfigRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateScanConfigRequest',
-      package: const $pb.PackageName('google.cloud.websecurityscanner.v1alpha'))
+      package: const $pb.PackageName('google.cloud.websecurityscanner.v1alpha'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
-    ..a<$1.ScanConfig>(2, 'scanConfig', $pb.PbFieldType.OM,
-        $1.ScanConfig.getDefault, $1.ScanConfig.create)
+    ..aOM<$1.ScanConfig>(2, 'scanConfig', subBuilder: $1.ScanConfig.create)
     ..hasRequiredFields = false;
 
   CreateScanConfigRequest._() : super();
@@ -44,30 +43,42 @@ class CreateScanConfigRequest extends $pb.GeneratedMessage {
   CreateScanConfigRequest createEmptyInstance() => create();
   static $pb.PbList<CreateScanConfigRequest> createRepeated() =>
       $pb.PbList<CreateScanConfigRequest>();
-  static CreateScanConfigRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateScanConfigRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateScanConfigRequest>(create);
   static CreateScanConfigRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  @$pb.TagNumber(2)
   $1.ScanConfig get scanConfig => $_getN(1);
+  @$pb.TagNumber(2)
   set scanConfig($1.ScanConfig v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasScanConfig() => $_has(1);
+  @$pb.TagNumber(2)
   void clearScanConfig() => clearField(2);
+  @$pb.TagNumber(2)
+  $1.ScanConfig ensureScanConfig() => $_ensure(1);
 }
 
 class DeleteScanConfigRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteScanConfigRequest',
-      package: const $pb.PackageName('google.cloud.websecurityscanner.v1alpha'))
+      package: const $pb.PackageName('google.cloud.websecurityscanner.v1alpha'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -90,22 +101,28 @@ class DeleteScanConfigRequest extends $pb.GeneratedMessage {
   DeleteScanConfigRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteScanConfigRequest> createRepeated() =>
       $pb.PbList<DeleteScanConfigRequest>();
-  static DeleteScanConfigRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteScanConfigRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteScanConfigRequest>(create);
   static DeleteScanConfigRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class GetScanConfigRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetScanConfigRequest',
-      package: const $pb.PackageName('google.cloud.websecurityscanner.v1alpha'))
+      package: const $pb.PackageName('google.cloud.websecurityscanner.v1alpha'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -127,22 +144,28 @@ class GetScanConfigRequest extends $pb.GeneratedMessage {
   GetScanConfigRequest createEmptyInstance() => create();
   static $pb.PbList<GetScanConfigRequest> createRepeated() =>
       $pb.PbList<GetScanConfigRequest>();
-  static GetScanConfigRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetScanConfigRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetScanConfigRequest>(create);
   static GetScanConfigRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class ListScanConfigsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListScanConfigsRequest',
-      package: const $pb.PackageName('google.cloud.websecurityscanner.v1alpha'))
+      package: const $pb.PackageName('google.cloud.websecurityscanner.v1alpha'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..aOS(2, 'pageToken')
     ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
@@ -167,42 +190,54 @@ class ListScanConfigsRequest extends $pb.GeneratedMessage {
   ListScanConfigsRequest createEmptyInstance() => create();
   static $pb.PbList<ListScanConfigsRequest> createRepeated() =>
       $pb.PbList<ListScanConfigsRequest>();
-  static ListScanConfigsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListScanConfigsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListScanConfigsRequest>(create);
   static ListScanConfigsRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.String get pageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get pageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set pageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageToken() => clearField(2);
 
-  $core.int get pageSize => $_get(2, 0);
+  @$pb.TagNumber(3)
+  $core.int get pageSize => $_getIZ(2);
+  @$pb.TagNumber(3)
   set pageSize($core.int v) {
     $_setSignedInt32(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageSize() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageSize() => clearField(3);
 }
 
 class UpdateScanConfigRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateScanConfigRequest',
-      package: const $pb.PackageName('google.cloud.websecurityscanner.v1alpha'))
-    ..a<$1.ScanConfig>(2, 'scanConfig', $pb.PbFieldType.OM,
-        $1.ScanConfig.getDefault, $1.ScanConfig.create)
-    ..a<$5.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $5.FieldMask.getDefault, $5.FieldMask.create)
+      package: const $pb.PackageName('google.cloud.websecurityscanner.v1alpha'),
+      createEmptyInstance: create)
+    ..aOM<$1.ScanConfig>(2, 'scanConfig', subBuilder: $1.ScanConfig.create)
+    ..aOM<$5.FieldMask>(3, 'updateMask', subBuilder: $5.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateScanConfigRequest._() : super();
@@ -224,32 +259,46 @@ class UpdateScanConfigRequest extends $pb.GeneratedMessage {
   UpdateScanConfigRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateScanConfigRequest> createRepeated() =>
       $pb.PbList<UpdateScanConfigRequest>();
-  static UpdateScanConfigRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateScanConfigRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateScanConfigRequest>(create);
   static UpdateScanConfigRequest _defaultInstance;
 
+  @$pb.TagNumber(2)
   $1.ScanConfig get scanConfig => $_getN(0);
+  @$pb.TagNumber(2)
   set scanConfig($1.ScanConfig v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasScanConfig() => $_has(0);
+  @$pb.TagNumber(2)
   void clearScanConfig() => clearField(2);
+  @$pb.TagNumber(2)
+  $1.ScanConfig ensureScanConfig() => $_ensure(0);
 
+  @$pb.TagNumber(3)
   $5.FieldMask get updateMask => $_getN(1);
+  @$pb.TagNumber(3)
   set updateMask($5.FieldMask v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasUpdateMask() => $_has(1);
+  @$pb.TagNumber(3)
   void clearUpdateMask() => clearField(3);
+  @$pb.TagNumber(3)
+  $5.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
 class ListScanConfigsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListScanConfigsResponse',
-      package: const $pb.PackageName('google.cloud.websecurityscanner.v1alpha'))
-    ..pc<$1.ScanConfig>(
-        1, 'scanConfigs', $pb.PbFieldType.PM, $1.ScanConfig.create)
+      package: const $pb.PackageName('google.cloud.websecurityscanner.v1alpha'),
+      createEmptyInstance: create)
+    ..pc<$1.ScanConfig>(1, 'scanConfigs', $pb.PbFieldType.PM,
+        subBuilder: $1.ScanConfig.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -272,24 +321,31 @@ class ListScanConfigsResponse extends $pb.GeneratedMessage {
   ListScanConfigsResponse createEmptyInstance() => create();
   static $pb.PbList<ListScanConfigsResponse> createRepeated() =>
       $pb.PbList<ListScanConfigsResponse>();
-  static ListScanConfigsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListScanConfigsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListScanConfigsResponse>(create);
   static ListScanConfigsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$1.ScanConfig> get scanConfigs => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class StartScanRunRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('StartScanRunRequest',
-      package: const $pb.PackageName('google.cloud.websecurityscanner.v1alpha'))
+      package: const $pb.PackageName('google.cloud.websecurityscanner.v1alpha'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -310,22 +366,28 @@ class StartScanRunRequest extends $pb.GeneratedMessage {
   StartScanRunRequest createEmptyInstance() => create();
   static $pb.PbList<StartScanRunRequest> createRepeated() =>
       $pb.PbList<StartScanRunRequest>();
-  static StartScanRunRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static StartScanRunRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<StartScanRunRequest>(create);
   static StartScanRunRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class GetScanRunRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetScanRunRequest',
-      package: const $pb.PackageName('google.cloud.websecurityscanner.v1alpha'))
+      package: const $pb.PackageName('google.cloud.websecurityscanner.v1alpha'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -346,22 +408,28 @@ class GetScanRunRequest extends $pb.GeneratedMessage {
   GetScanRunRequest createEmptyInstance() => create();
   static $pb.PbList<GetScanRunRequest> createRepeated() =>
       $pb.PbList<GetScanRunRequest>();
-  static GetScanRunRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetScanRunRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetScanRunRequest>(create);
   static GetScanRunRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class ListScanRunsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListScanRunsRequest',
-      package: const $pb.PackageName('google.cloud.websecurityscanner.v1alpha'))
+      package: const $pb.PackageName('google.cloud.websecurityscanner.v1alpha'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..aOS(2, 'pageToken')
     ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
@@ -384,39 +452,54 @@ class ListScanRunsRequest extends $pb.GeneratedMessage {
   ListScanRunsRequest createEmptyInstance() => create();
   static $pb.PbList<ListScanRunsRequest> createRepeated() =>
       $pb.PbList<ListScanRunsRequest>();
-  static ListScanRunsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListScanRunsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListScanRunsRequest>(create);
   static ListScanRunsRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.String get pageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get pageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set pageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageToken() => clearField(2);
 
-  $core.int get pageSize => $_get(2, 0);
+  @$pb.TagNumber(3)
+  $core.int get pageSize => $_getIZ(2);
+  @$pb.TagNumber(3)
   set pageSize($core.int v) {
     $_setSignedInt32(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageSize() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageSize() => clearField(3);
 }
 
 class ListScanRunsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListScanRunsResponse',
-      package: const $pb.PackageName('google.cloud.websecurityscanner.v1alpha'))
-    ..pc<$3.ScanRun>(1, 'scanRuns', $pb.PbFieldType.PM, $3.ScanRun.create)
+      package: const $pb.PackageName('google.cloud.websecurityscanner.v1alpha'),
+      createEmptyInstance: create)
+    ..pc<$3.ScanRun>(1, 'scanRuns', $pb.PbFieldType.PM,
+        subBuilder: $3.ScanRun.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -438,24 +521,31 @@ class ListScanRunsResponse extends $pb.GeneratedMessage {
   ListScanRunsResponse createEmptyInstance() => create();
   static $pb.PbList<ListScanRunsResponse> createRepeated() =>
       $pb.PbList<ListScanRunsResponse>();
-  static ListScanRunsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListScanRunsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListScanRunsResponse>(create);
   static ListScanRunsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$3.ScanRun> get scanRuns => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class StopScanRunRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('StopScanRunRequest',
-      package: const $pb.PackageName('google.cloud.websecurityscanner.v1alpha'))
+      package: const $pb.PackageName('google.cloud.websecurityscanner.v1alpha'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -476,22 +566,28 @@ class StopScanRunRequest extends $pb.GeneratedMessage {
   StopScanRunRequest createEmptyInstance() => create();
   static $pb.PbList<StopScanRunRequest> createRepeated() =>
       $pb.PbList<StopScanRunRequest>();
-  static StopScanRunRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static StopScanRunRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<StopScanRunRequest>(create);
   static StopScanRunRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class ListCrawledUrlsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListCrawledUrlsRequest',
-      package: const $pb.PackageName('google.cloud.websecurityscanner.v1alpha'))
+      package: const $pb.PackageName('google.cloud.websecurityscanner.v1alpha'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..aOS(2, 'pageToken')
     ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
@@ -516,40 +612,54 @@ class ListCrawledUrlsRequest extends $pb.GeneratedMessage {
   ListCrawledUrlsRequest createEmptyInstance() => create();
   static $pb.PbList<ListCrawledUrlsRequest> createRepeated() =>
       $pb.PbList<ListCrawledUrlsRequest>();
-  static ListCrawledUrlsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListCrawledUrlsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListCrawledUrlsRequest>(create);
   static ListCrawledUrlsRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.String get pageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get pageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set pageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPageToken() => clearField(2);
 
-  $core.int get pageSize => $_get(2, 0);
+  @$pb.TagNumber(3)
+  $core.int get pageSize => $_getIZ(2);
+  @$pb.TagNumber(3)
   set pageSize($core.int v) {
     $_setSignedInt32(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageSize() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageSize() => clearField(3);
 }
 
 class ListCrawledUrlsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListCrawledUrlsResponse',
-      package: const $pb.PackageName('google.cloud.websecurityscanner.v1alpha'))
-    ..pc<$6.CrawledUrl>(
-        1, 'crawledUrls', $pb.PbFieldType.PM, $6.CrawledUrl.create)
+      package: const $pb.PackageName('google.cloud.websecurityscanner.v1alpha'),
+      createEmptyInstance: create)
+    ..pc<$6.CrawledUrl>(1, 'crawledUrls', $pb.PbFieldType.PM,
+        subBuilder: $6.CrawledUrl.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -572,24 +682,31 @@ class ListCrawledUrlsResponse extends $pb.GeneratedMessage {
   ListCrawledUrlsResponse createEmptyInstance() => create();
   static $pb.PbList<ListCrawledUrlsResponse> createRepeated() =>
       $pb.PbList<ListCrawledUrlsResponse>();
-  static ListCrawledUrlsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListCrawledUrlsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListCrawledUrlsResponse>(create);
   static ListCrawledUrlsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$6.CrawledUrl> get crawledUrls => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class GetFindingRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetFindingRequest',
-      package: const $pb.PackageName('google.cloud.websecurityscanner.v1alpha'))
+      package: const $pb.PackageName('google.cloud.websecurityscanner.v1alpha'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -610,22 +727,28 @@ class GetFindingRequest extends $pb.GeneratedMessage {
   GetFindingRequest createEmptyInstance() => create();
   static $pb.PbList<GetFindingRequest> createRepeated() =>
       $pb.PbList<GetFindingRequest>();
-  static GetFindingRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetFindingRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetFindingRequest>(create);
   static GetFindingRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class ListFindingsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListFindingsRequest',
-      package: const $pb.PackageName('google.cloud.websecurityscanner.v1alpha'))
+      package: const $pb.PackageName('google.cloud.websecurityscanner.v1alpha'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..aOS(2, 'filter')
     ..aOS(3, 'pageToken')
@@ -649,47 +772,66 @@ class ListFindingsRequest extends $pb.GeneratedMessage {
   ListFindingsRequest createEmptyInstance() => create();
   static $pb.PbList<ListFindingsRequest> createRepeated() =>
       $pb.PbList<ListFindingsRequest>();
-  static ListFindingsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListFindingsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListFindingsRequest>(create);
   static ListFindingsRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.String get filter => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get filter => $_getSZ(1);
+  @$pb.TagNumber(2)
   set filter($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasFilter() => $_has(1);
+  @$pb.TagNumber(2)
   void clearFilter() => clearField(2);
 
-  $core.String get pageToken => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get pageToken => $_getSZ(2);
+  @$pb.TagNumber(3)
   set pageToken($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageToken() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
 
-  $core.int get pageSize => $_get(3, 0);
+  @$pb.TagNumber(4)
+  $core.int get pageSize => $_getIZ(3);
+  @$pb.TagNumber(4)
   set pageSize($core.int v) {
     $_setSignedInt32(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasPageSize() => $_has(3);
+  @$pb.TagNumber(4)
   void clearPageSize() => clearField(4);
 }
 
 class ListFindingsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListFindingsResponse',
-      package: const $pb.PackageName('google.cloud.websecurityscanner.v1alpha'))
-    ..pc<$4.Finding>(1, 'findings', $pb.PbFieldType.PM, $4.Finding.create)
+      package: const $pb.PackageName('google.cloud.websecurityscanner.v1alpha'),
+      createEmptyInstance: create)
+    ..pc<$4.Finding>(1, 'findings', $pb.PbFieldType.PM,
+        subBuilder: $4.Finding.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -711,25 +853,32 @@ class ListFindingsResponse extends $pb.GeneratedMessage {
   ListFindingsResponse createEmptyInstance() => create();
   static $pb.PbList<ListFindingsResponse> createRepeated() =>
       $pb.PbList<ListFindingsResponse>();
-  static ListFindingsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListFindingsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListFindingsResponse>(create);
   static ListFindingsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$4.Finding> get findings => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class ListFindingTypeStatsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListFindingTypeStatsRequest',
-      package: const $pb.PackageName('google.cloud.websecurityscanner.v1alpha'))
+      package: const $pb.PackageName('google.cloud.websecurityscanner.v1alpha'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..hasRequiredFields = false;
 
@@ -754,25 +903,31 @@ class ListFindingTypeStatsRequest extends $pb.GeneratedMessage {
   ListFindingTypeStatsRequest createEmptyInstance() => create();
   static $pb.PbList<ListFindingTypeStatsRequest> createRepeated() =>
       $pb.PbList<ListFindingTypeStatsRequest>();
-  static ListFindingTypeStatsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListFindingTypeStatsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListFindingTypeStatsRequest>(create);
   static ListFindingTypeStatsRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 }
 
 class ListFindingTypeStatsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ListFindingTypeStatsResponse',
-      package: const $pb.PackageName('google.cloud.websecurityscanner.v1alpha'))
-    ..pc<$7.FindingTypeStats>(
-        1, 'findingTypeStats', $pb.PbFieldType.PM, $7.FindingTypeStats.create)
+      package: const $pb.PackageName('google.cloud.websecurityscanner.v1alpha'),
+      createEmptyInstance: create)
+    ..pc<$7.FindingTypeStats>(1, 'findingTypeStats', $pb.PbFieldType.PM,
+        subBuilder: $7.FindingTypeStats.create)
     ..hasRequiredFields = false;
 
   ListFindingTypeStatsResponse._() : super();
@@ -796,9 +951,11 @@ class ListFindingTypeStatsResponse extends $pb.GeneratedMessage {
   ListFindingTypeStatsResponse createEmptyInstance() => create();
   static $pb.PbList<ListFindingTypeStatsResponse> createRepeated() =>
       $pb.PbList<ListFindingTypeStatsResponse>();
-  static ListFindingTypeStatsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListFindingTypeStatsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListFindingTypeStatsResponse>(create);
   static ListFindingTypeStatsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$7.FindingTypeStats> get findingTypeStats => $_getList(0);
 }

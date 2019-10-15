@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -15,20 +14,17 @@ import '../../../protobuf/field_mask.pb.dart' as $3;
 
 class LoginProfile extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('LoginProfile',
-      package: const $pb.PackageName('google.cloud.oslogin.v1alpha'))
+      package: const $pb.PackageName('google.cloud.oslogin.v1alpha'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
-    ..pc<$2.PosixAccount>(
-        2, 'posixAccounts', $pb.PbFieldType.PM, $2.PosixAccount.create)
-    ..m<$core.String, $2.SshPublicKey>(
-        3,
-        'sshPublicKeys',
-        'LoginProfile.SshPublicKeysEntry',
-        $pb.PbFieldType.OS,
-        $pb.PbFieldType.OM,
-        $2.SshPublicKey.create,
-        null,
-        null,
-        const $pb.PackageName('google.cloud.oslogin.v1alpha'))
+    ..pc<$2.PosixAccount>(2, 'posixAccounts', $pb.PbFieldType.PM,
+        subBuilder: $2.PosixAccount.create)
+    ..m<$core.String, $2.SshPublicKey>(3, 'sshPublicKeys',
+        entryClassName: 'LoginProfile.SshPublicKeysEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OM,
+        valueCreator: $2.SshPublicKey.create,
+        packageName: const $pb.PackageName('google.cloud.oslogin.v1alpha'))
     ..aOB(4, 'suspended')
     ..hasRequiredFields = false;
 
@@ -49,33 +45,46 @@ class LoginProfile extends $pb.GeneratedMessage {
   LoginProfile createEmptyInstance() => create();
   static $pb.PbList<LoginProfile> createRepeated() =>
       $pb.PbList<LoginProfile>();
-  static LoginProfile getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static LoginProfile getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<LoginProfile>(create);
   static LoginProfile _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<$2.PosixAccount> get posixAccounts => $_getList(1);
 
+  @$pb.TagNumber(3)
   $core.Map<$core.String, $2.SshPublicKey> get sshPublicKeys => $_getMap(2);
 
-  $core.bool get suspended => $_get(3, false);
+  @$pb.TagNumber(4)
+  $core.bool get suspended => $_getBF(3);
+  @$pb.TagNumber(4)
   set suspended($core.bool v) {
     $_setBool(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasSuspended() => $_has(3);
+  @$pb.TagNumber(4)
   void clearSuspended() => clearField(4);
 }
 
 class DeletePosixAccountRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeletePosixAccountRequest',
-      package: const $pb.PackageName('google.cloud.oslogin.v1alpha'))
+      package: const $pb.PackageName('google.cloud.oslogin.v1alpha'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -99,22 +108,28 @@ class DeletePosixAccountRequest extends $pb.GeneratedMessage {
   DeletePosixAccountRequest createEmptyInstance() => create();
   static $pb.PbList<DeletePosixAccountRequest> createRepeated() =>
       $pb.PbList<DeletePosixAccountRequest>();
-  static DeletePosixAccountRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeletePosixAccountRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeletePosixAccountRequest>(create);
   static DeletePosixAccountRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class DeleteSshPublicKeyRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteSshPublicKeyRequest',
-      package: const $pb.PackageName('google.cloud.oslogin.v1alpha'))
+      package: const $pb.PackageName('google.cloud.oslogin.v1alpha'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -138,22 +153,28 @@ class DeleteSshPublicKeyRequest extends $pb.GeneratedMessage {
   DeleteSshPublicKeyRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteSshPublicKeyRequest> createRepeated() =>
       $pb.PbList<DeleteSshPublicKeyRequest>();
-  static DeleteSshPublicKeyRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteSshPublicKeyRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteSshPublicKeyRequest>(create);
   static DeleteSshPublicKeyRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class GetLoginProfileRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetLoginProfileRequest',
-      package: const $pb.PackageName('google.cloud.oslogin.v1alpha'))
+      package: const $pb.PackageName('google.cloud.oslogin.v1alpha'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -176,22 +197,28 @@ class GetLoginProfileRequest extends $pb.GeneratedMessage {
   GetLoginProfileRequest createEmptyInstance() => create();
   static $pb.PbList<GetLoginProfileRequest> createRepeated() =>
       $pb.PbList<GetLoginProfileRequest>();
-  static GetLoginProfileRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetLoginProfileRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetLoginProfileRequest>(create);
   static GetLoginProfileRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class GetSshPublicKeyRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetSshPublicKeyRequest',
-      package: const $pb.PackageName('google.cloud.oslogin.v1alpha'))
+      package: const $pb.PackageName('google.cloud.oslogin.v1alpha'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -214,25 +241,31 @@ class GetSshPublicKeyRequest extends $pb.GeneratedMessage {
   GetSshPublicKeyRequest createEmptyInstance() => create();
   static $pb.PbList<GetSshPublicKeyRequest> createRepeated() =>
       $pb.PbList<GetSshPublicKeyRequest>();
-  static GetSshPublicKeyRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetSshPublicKeyRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetSshPublicKeyRequest>(create);
   static GetSshPublicKeyRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class ImportSshPublicKeyRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ImportSshPublicKeyRequest',
-      package: const $pb.PackageName('google.cloud.oslogin.v1alpha'))
+      package: const $pb.PackageName('google.cloud.oslogin.v1alpha'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
-    ..a<$2.SshPublicKey>(2, 'sshPublicKey', $pb.PbFieldType.OM,
-        $2.SshPublicKey.getDefault, $2.SshPublicKey.create)
+    ..aOM<$2.SshPublicKey>(2, 'sshPublicKey',
+        subBuilder: $2.SshPublicKey.create)
     ..aOS(3, 'projectId')
     ..hasRequiredFields = false;
 
@@ -256,41 +289,56 @@ class ImportSshPublicKeyRequest extends $pb.GeneratedMessage {
   ImportSshPublicKeyRequest createEmptyInstance() => create();
   static $pb.PbList<ImportSshPublicKeyRequest> createRepeated() =>
       $pb.PbList<ImportSshPublicKeyRequest>();
-  static ImportSshPublicKeyRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ImportSshPublicKeyRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ImportSshPublicKeyRequest>(create);
   static ImportSshPublicKeyRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  @$pb.TagNumber(2)
   $2.SshPublicKey get sshPublicKey => $_getN(1);
+  @$pb.TagNumber(2)
   set sshPublicKey($2.SshPublicKey v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasSshPublicKey() => $_has(1);
+  @$pb.TagNumber(2)
   void clearSshPublicKey() => clearField(2);
+  @$pb.TagNumber(2)
+  $2.SshPublicKey ensureSshPublicKey() => $_ensure(1);
 
-  $core.String get projectId => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get projectId => $_getSZ(2);
+  @$pb.TagNumber(3)
   set projectId($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasProjectId() => $_has(2);
+  @$pb.TagNumber(3)
   void clearProjectId() => clearField(3);
 }
 
 class ImportSshPublicKeyResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ImportSshPublicKeyResponse',
-      package: const $pb.PackageName('google.cloud.oslogin.v1alpha'))
-    ..a<LoginProfile>(1, 'loginProfile', $pb.PbFieldType.OM,
-        LoginProfile.getDefault, LoginProfile.create)
+      package: const $pb.PackageName('google.cloud.oslogin.v1alpha'),
+      createEmptyInstance: create)
+    ..aOM<LoginProfile>(1, 'loginProfile', subBuilder: LoginProfile.create)
     ..hasRequiredFields = false;
 
   ImportSshPublicKeyResponse._() : super();
@@ -313,27 +361,34 @@ class ImportSshPublicKeyResponse extends $pb.GeneratedMessage {
   ImportSshPublicKeyResponse createEmptyInstance() => create();
   static $pb.PbList<ImportSshPublicKeyResponse> createRepeated() =>
       $pb.PbList<ImportSshPublicKeyResponse>();
-  static ImportSshPublicKeyResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ImportSshPublicKeyResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ImportSshPublicKeyResponse>(create);
   static ImportSshPublicKeyResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   LoginProfile get loginProfile => $_getN(0);
+  @$pb.TagNumber(1)
   set loginProfile(LoginProfile v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasLoginProfile() => $_has(0);
+  @$pb.TagNumber(1)
   void clearLoginProfile() => clearField(1);
+  @$pb.TagNumber(1)
+  LoginProfile ensureLoginProfile() => $_ensure(0);
 }
 
 class UpdateSshPublicKeyRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateSshPublicKeyRequest',
-      package: const $pb.PackageName('google.cloud.oslogin.v1alpha'))
+      package: const $pb.PackageName('google.cloud.oslogin.v1alpha'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
-    ..a<$2.SshPublicKey>(2, 'sshPublicKey', $pb.PbFieldType.OM,
-        $2.SshPublicKey.getDefault, $2.SshPublicKey.create)
-    ..a<$3.FieldMask>(3, 'updateMask', $pb.PbFieldType.OM,
-        $3.FieldMask.getDefault, $3.FieldMask.create)
+    ..aOM<$2.SshPublicKey>(2, 'sshPublicKey',
+        subBuilder: $2.SshPublicKey.create)
+    ..aOM<$3.FieldMask>(3, 'updateMask', subBuilder: $3.FieldMask.create)
     ..hasRequiredFields = false;
 
   UpdateSshPublicKeyRequest._() : super();
@@ -356,31 +411,48 @@ class UpdateSshPublicKeyRequest extends $pb.GeneratedMessage {
   UpdateSshPublicKeyRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateSshPublicKeyRequest> createRepeated() =>
       $pb.PbList<UpdateSshPublicKeyRequest>();
-  static UpdateSshPublicKeyRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateSshPublicKeyRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateSshPublicKeyRequest>(create);
   static UpdateSshPublicKeyRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $2.SshPublicKey get sshPublicKey => $_getN(1);
+  @$pb.TagNumber(2)
   set sshPublicKey($2.SshPublicKey v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasSshPublicKey() => $_has(1);
+  @$pb.TagNumber(2)
   void clearSshPublicKey() => clearField(2);
+  @$pb.TagNumber(2)
+  $2.SshPublicKey ensureSshPublicKey() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $3.FieldMask get updateMask => $_getN(2);
+  @$pb.TagNumber(3)
   set updateMask($3.FieldMask v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasUpdateMask() => $_has(2);
+  @$pb.TagNumber(3)
   void clearUpdateMask() => clearField(3);
+  @$pb.TagNumber(3)
+  $3.FieldMask ensureUpdateMask() => $_ensure(2);
 }

@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -16,7 +15,8 @@ import '../../../../protobuf/field_mask.pb.dart' as $2;
 class GetCustomerManagerLinkRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'GetCustomerManagerLinkRequest',
-      package: const $pb.PackageName('google.ads.googleads.v2.services'))
+      package: const $pb.PackageName('google.ads.googleads.v2.services'),
+      createEmptyInstance: create)
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
@@ -41,26 +41,32 @@ class GetCustomerManagerLinkRequest extends $pb.GeneratedMessage {
   GetCustomerManagerLinkRequest createEmptyInstance() => create();
   static $pb.PbList<GetCustomerManagerLinkRequest> createRepeated() =>
       $pb.PbList<GetCustomerManagerLinkRequest>();
-  static GetCustomerManagerLinkRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetCustomerManagerLinkRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetCustomerManagerLinkRequest>(create);
   static GetCustomerManagerLinkRequest _defaultInstance;
 
-  $core.String get resourceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get resourceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set resourceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResourceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResourceName() => clearField(1);
 }
 
 class MutateCustomerManagerLinkRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'MutateCustomerManagerLinkRequest',
-      package: const $pb.PackageName('google.ads.googleads.v2.services'))
+      package: const $pb.PackageName('google.ads.googleads.v2.services'),
+      createEmptyInstance: create)
     ..aOS(1, 'customerId')
     ..pc<CustomerManagerLinkOperation>(2, 'operations', $pb.PbFieldType.PM,
-        CustomerManagerLinkOperation.create)
+        subBuilder: CustomerManagerLinkOperation.create)
     ..hasRequiredFields = false;
 
   MutateCustomerManagerLinkRequest._() : super();
@@ -84,18 +90,25 @@ class MutateCustomerManagerLinkRequest extends $pb.GeneratedMessage {
   MutateCustomerManagerLinkRequest createEmptyInstance() => create();
   static $pb.PbList<MutateCustomerManagerLinkRequest> createRepeated() =>
       $pb.PbList<MutateCustomerManagerLinkRequest>();
-  static MutateCustomerManagerLinkRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MutateCustomerManagerLinkRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MutateCustomerManagerLinkRequest>(
+          create);
   static MutateCustomerManagerLinkRequest _defaultInstance;
 
-  $core.String get customerId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get customerId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set customerId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCustomerId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCustomerId() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<CustomerManagerLinkOperation> get operations => $_getList(1);
 }
 
@@ -109,12 +122,12 @@ class CustomerManagerLinkOperation extends $pb.GeneratedMessage {
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'CustomerManagerLinkOperation',
-      package: const $pb.PackageName('google.ads.googleads.v2.services'))
+      package: const $pb.PackageName('google.ads.googleads.v2.services'),
+      createEmptyInstance: create)
     ..oo(0, [2])
-    ..a<$1.CustomerManagerLink>(2, 'update', $pb.PbFieldType.OM,
-        $1.CustomerManagerLink.getDefault, $1.CustomerManagerLink.create)
-    ..a<$2.FieldMask>(4, 'updateMask', $pb.PbFieldType.OM,
-        $2.FieldMask.getDefault, $2.FieldMask.create)
+    ..aOM<$1.CustomerManagerLink>(2, 'update',
+        subBuilder: $1.CustomerManagerLink.create)
+    ..aOM<$2.FieldMask>(4, 'updateMask', subBuilder: $2.FieldMask.create)
     ..hasRequiredFields = false;
 
   CustomerManagerLinkOperation._() : super();
@@ -138,37 +151,51 @@ class CustomerManagerLinkOperation extends $pb.GeneratedMessage {
   CustomerManagerLinkOperation createEmptyInstance() => create();
   static $pb.PbList<CustomerManagerLinkOperation> createRepeated() =>
       $pb.PbList<CustomerManagerLinkOperation>();
-  static CustomerManagerLinkOperation getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CustomerManagerLinkOperation getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CustomerManagerLinkOperation>(create);
   static CustomerManagerLinkOperation _defaultInstance;
 
   CustomerManagerLinkOperation_Operation whichOperation() =>
       _CustomerManagerLinkOperation_OperationByTag[$_whichOneof(0)];
   void clearOperation() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(2)
   $1.CustomerManagerLink get update => $_getN(0);
+  @$pb.TagNumber(2)
   set update($1.CustomerManagerLink v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasUpdate() => $_has(0);
+  @$pb.TagNumber(2)
   void clearUpdate() => clearField(2);
+  @$pb.TagNumber(2)
+  $1.CustomerManagerLink ensureUpdate() => $_ensure(0);
 
+  @$pb.TagNumber(4)
   $2.FieldMask get updateMask => $_getN(1);
+  @$pb.TagNumber(4)
   set updateMask($2.FieldMask v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasUpdateMask() => $_has(1);
+  @$pb.TagNumber(4)
   void clearUpdateMask() => clearField(4);
+  @$pb.TagNumber(4)
+  $2.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
 class MutateCustomerManagerLinkResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'MutateCustomerManagerLinkResponse',
-      package: const $pb.PackageName('google.ads.googleads.v2.services'))
+      package: const $pb.PackageName('google.ads.googleads.v2.services'),
+      createEmptyInstance: create)
     ..pc<MutateCustomerManagerLinkResult>(1, 'results', $pb.PbFieldType.PM,
-        MutateCustomerManagerLinkResult.create)
+        subBuilder: MutateCustomerManagerLinkResult.create)
     ..hasRequiredFields = false;
 
   MutateCustomerManagerLinkResponse._() : super();
@@ -192,17 +219,21 @@ class MutateCustomerManagerLinkResponse extends $pb.GeneratedMessage {
   MutateCustomerManagerLinkResponse createEmptyInstance() => create();
   static $pb.PbList<MutateCustomerManagerLinkResponse> createRepeated() =>
       $pb.PbList<MutateCustomerManagerLinkResponse>();
-  static MutateCustomerManagerLinkResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MutateCustomerManagerLinkResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MutateCustomerManagerLinkResponse>(
+          create);
   static MutateCustomerManagerLinkResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<MutateCustomerManagerLinkResult> get results => $_getList(0);
 }
 
 class MutateCustomerManagerLinkResult extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'MutateCustomerManagerLinkResult',
-      package: const $pb.PackageName('google.ads.googleads.v2.services'))
+      package: const $pb.PackageName('google.ads.googleads.v2.services'),
+      createEmptyInstance: create)
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
@@ -227,15 +258,21 @@ class MutateCustomerManagerLinkResult extends $pb.GeneratedMessage {
   MutateCustomerManagerLinkResult createEmptyInstance() => create();
   static $pb.PbList<MutateCustomerManagerLinkResult> createRepeated() =>
       $pb.PbList<MutateCustomerManagerLinkResult>();
-  static MutateCustomerManagerLinkResult getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MutateCustomerManagerLinkResult getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MutateCustomerManagerLinkResult>(
+          create);
   static MutateCustomerManagerLinkResult _defaultInstance;
 
-  $core.String get resourceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get resourceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set resourceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResourceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResourceName() => clearField(1);
 }

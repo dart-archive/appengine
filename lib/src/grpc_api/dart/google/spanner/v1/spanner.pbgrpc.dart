@@ -7,7 +7,7 @@
 
 import 'dart:async' as $async;
 
-import 'dart:core' as $core show int, String, List;
+import 'dart:core' as $core;
 
 import 'package:grpc/service_api.dart' as $grpc;
 import 'spanner.pb.dart' as $0;
@@ -22,6 +22,12 @@ class SpannerClient extends $grpc.Client {
           '/google.spanner.v1.Spanner/CreateSession',
           ($0.CreateSessionRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $0.Session.fromBuffer(value));
+  static final _$batchCreateSessions = $grpc.ClientMethod<
+          $0.BatchCreateSessionsRequest, $0.BatchCreateSessionsResponse>(
+      '/google.spanner.v1.Spanner/BatchCreateSessions',
+      ($0.BatchCreateSessionsRequest value) => value.writeToBuffer(),
+      ($core.List<$core.int> value) =>
+          $0.BatchCreateSessionsResponse.fromBuffer(value));
   static final _$getSession =
       $grpc.ClientMethod<$0.GetSessionRequest, $0.Session>(
           '/google.spanner.v1.Spanner/GetSession',
@@ -100,6 +106,15 @@ class SpannerClient extends $grpc.Client {
       {$grpc.CallOptions options}) {
     final call = $createCall(
         _$createSession, $async.Stream.fromIterable([request]),
+        options: options);
+    return $grpc.ResponseFuture(call);
+  }
+
+  $grpc.ResponseFuture<$0.BatchCreateSessionsResponse> batchCreateSessions(
+      $0.BatchCreateSessionsRequest request,
+      {$grpc.CallOptions options}) {
+    final call = $createCall(
+        _$batchCreateSessions, $async.Stream.fromIterable([request]),
         options: options);
     return $grpc.ResponseFuture(call);
   }
@@ -225,6 +240,15 @@ abstract class SpannerServiceBase extends $grpc.Service {
         ($core.List<$core.int> value) =>
             $0.CreateSessionRequest.fromBuffer(value),
         ($0.Session value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$0.BatchCreateSessionsRequest,
+            $0.BatchCreateSessionsResponse>(
+        'BatchCreateSessions',
+        batchCreateSessions_Pre,
+        false,
+        false,
+        ($core.List<$core.int> value) =>
+            $0.BatchCreateSessionsRequest.fromBuffer(value),
+        ($0.BatchCreateSessionsResponse value) => value.writeToBuffer()));
     $addMethod($grpc.ServiceMethod<$0.GetSessionRequest, $0.Session>(
         'GetSession',
         getSession_Pre,
@@ -333,6 +357,12 @@ abstract class SpannerServiceBase extends $grpc.Service {
     return createSession(call, await request);
   }
 
+  $async.Future<$0.BatchCreateSessionsResponse> batchCreateSessions_Pre(
+      $grpc.ServiceCall call,
+      $async.Future<$0.BatchCreateSessionsRequest> request) async {
+    return batchCreateSessions(call, await request);
+  }
+
   $async.Future<$0.Session> getSession_Pre($grpc.ServiceCall call,
       $async.Future<$0.GetSessionRequest> request) async {
     return getSession(call, await request);
@@ -403,6 +433,8 @@ abstract class SpannerServiceBase extends $grpc.Service {
 
   $async.Future<$0.Session> createSession(
       $grpc.ServiceCall call, $0.CreateSessionRequest request);
+  $async.Future<$0.BatchCreateSessionsResponse> batchCreateSessions(
+      $grpc.ServiceCall call, $0.BatchCreateSessionsRequest request);
   $async.Future<$0.Session> getSession(
       $grpc.ServiceCall call, $0.GetSessionRequest request);
   $async.Future<$0.ListSessionsResponse> listSessions(

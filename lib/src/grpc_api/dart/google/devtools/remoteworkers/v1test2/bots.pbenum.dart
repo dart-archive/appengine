@@ -6,7 +6,7 @@
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
-import 'dart:core' as $core show int, dynamic, String, List, Map;
+import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class BotStatus extends $pb.ProtobufEnum {
@@ -16,6 +16,7 @@ class BotStatus extends $pb.ProtobufEnum {
   static const BotStatus UNHEALTHY = BotStatus._(2, 'UNHEALTHY');
   static const BotStatus HOST_REBOOTING = BotStatus._(3, 'HOST_REBOOTING');
   static const BotStatus BOT_TERMINATING = BotStatus._(4, 'BOT_TERMINATING');
+  static const BotStatus INITIALIZING = BotStatus._(5, 'INITIALIZING');
 
   static const $core.List<BotStatus> values = <BotStatus>[
     BOT_STATUS_UNSPECIFIED,
@@ -23,6 +24,7 @@ class BotStatus extends $pb.ProtobufEnum {
     UNHEALTHY,
     HOST_REBOOTING,
     BOT_TERMINATING,
+    INITIALIZING,
   ];
 
   static final $core.Map<$core.int, BotStatus> _byValue =
@@ -80,28 +82,4 @@ class AdminTemp_Command extends $pb.ProtobufEnum {
   static AdminTemp_Command valueOf($core.int value) => _byValue[value];
 
   const AdminTemp_Command._($core.int v, $core.String n) : super(v, n);
-}
-
-class PostBotEventTempRequest_Type extends $pb.ProtobufEnum {
-  static const PostBotEventTempRequest_Type UNSPECIFIED =
-      PostBotEventTempRequest_Type._(0, 'UNSPECIFIED');
-  static const PostBotEventTempRequest_Type INFO =
-      PostBotEventTempRequest_Type._(1, 'INFO');
-  static const PostBotEventTempRequest_Type ERROR =
-      PostBotEventTempRequest_Type._(2, 'ERROR');
-
-  static const $core.List<PostBotEventTempRequest_Type> values =
-      <PostBotEventTempRequest_Type>[
-    UNSPECIFIED,
-    INFO,
-    ERROR,
-  ];
-
-  static final $core.Map<$core.int, PostBotEventTempRequest_Type> _byValue =
-      $pb.ProtobufEnum.initByValue(values);
-  static PostBotEventTempRequest_Type valueOf($core.int value) =>
-      _byValue[value];
-
-  const PostBotEventTempRequest_Type._($core.int v, $core.String n)
-      : super(v, n);
 }

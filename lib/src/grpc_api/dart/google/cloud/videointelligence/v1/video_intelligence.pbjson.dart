@@ -52,6 +52,7 @@ const AnnotateVideoRequest$json = {
       '4': 3,
       '5': 14,
       '6': '.google.cloud.videointelligence.v1.Feature',
+      '8': {},
       '10': 'features'
     },
     {
@@ -62,8 +63,8 @@ const AnnotateVideoRequest$json = {
       '6': '.google.cloud.videointelligence.v1.VideoContext',
       '10': 'videoContext'
     },
-    {'1': 'output_uri', '3': 4, '4': 1, '5': 9, '10': 'outputUri'},
-    {'1': 'location_id', '3': 5, '4': 1, '5': 9, '10': 'locationId'},
+    {'1': 'output_uri', '3': 4, '4': 1, '5': 9, '8': {}, '10': 'outputUri'},
+    {'1': 'location_id', '3': 5, '4': 1, '5': 9, '8': {}, '10': 'locationId'},
   ],
 };
 
@@ -180,8 +181,8 @@ const ShotChangeDetectionConfig$json = {
   ],
 };
 
-const ExplicitContentDetectionConfig$json = {
-  '1': 'ExplicitContentDetectionConfig',
+const ObjectTrackingConfig$json = {
+  '1': 'ObjectTrackingConfig',
   '2': [
     {'1': 'model', '3': 1, '4': 1, '5': 9, '10': 'model'},
   ],
@@ -201,8 +202,8 @@ const FaceDetectionConfig$json = {
   ],
 };
 
-const ObjectTrackingConfig$json = {
-  '1': 'ObjectTrackingConfig',
+const ExplicitContentDetectionConfig$json = {
+  '1': 'ExplicitContentDetectionConfig',
   '2': [
     {'1': 'model', '3': 1, '4': 1, '5': 9, '10': 'model'},
   ],
@@ -602,15 +603,37 @@ const AnnotateVideoProgress$json = {
 const SpeechTranscriptionConfig$json = {
   '1': 'SpeechTranscriptionConfig',
   '2': [
-    {'1': 'language_code', '3': 1, '4': 1, '5': 9, '10': 'languageCode'},
-    {'1': 'max_alternatives', '3': 2, '4': 1, '5': 5, '10': 'maxAlternatives'},
-    {'1': 'filter_profanity', '3': 3, '4': 1, '5': 8, '10': 'filterProfanity'},
+    {
+      '1': 'language_code',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'languageCode'
+    },
+    {
+      '1': 'max_alternatives',
+      '3': 2,
+      '4': 1,
+      '5': 5,
+      '8': {},
+      '10': 'maxAlternatives'
+    },
+    {
+      '1': 'filter_profanity',
+      '3': 3,
+      '4': 1,
+      '5': 8,
+      '8': {},
+      '10': 'filterProfanity'
+    },
     {
       '1': 'speech_contexts',
       '3': 4,
       '4': 3,
       '5': 11,
       '6': '.google.cloud.videointelligence.v1.SpeechContext',
+      '8': {},
       '10': 'speechContexts'
     },
     {
@@ -618,14 +641,16 @@ const SpeechTranscriptionConfig$json = {
       '3': 5,
       '4': 1,
       '5': 8,
+      '8': {},
       '10': 'enableAutomaticPunctuation'
     },
-    {'1': 'audio_tracks', '3': 6, '4': 3, '5': 5, '10': 'audioTracks'},
+    {'1': 'audio_tracks', '3': 6, '4': 3, '5': 5, '8': {}, '10': 'audioTracks'},
     {
       '1': 'enable_speaker_diarization',
       '3': 7,
       '4': 1,
       '5': 8,
+      '8': {},
       '10': 'enableSpeakerDiarization'
     },
     {
@@ -633,6 +658,7 @@ const SpeechTranscriptionConfig$json = {
       '3': 8,
       '4': 1,
       '5': 5,
+      '8': {},
       '10': 'diarizationSpeakerCount'
     },
     {
@@ -640,6 +666,7 @@ const SpeechTranscriptionConfig$json = {
       '3': 9,
       '4': 1,
       '5': 8,
+      '8': {},
       '10': 'enableWordConfidence'
     },
   ],
@@ -648,7 +675,7 @@ const SpeechTranscriptionConfig$json = {
 const SpeechContext$json = {
   '1': 'SpeechContext',
   '2': [
-    {'1': 'phrases', '3': 1, '4': 3, '5': 9, '10': 'phrases'},
+    {'1': 'phrases', '3': 1, '4': 3, '5': 9, '8': {}, '10': 'phrases'},
   ],
 };
 
@@ -663,7 +690,14 @@ const SpeechTranscription$json = {
       '6': '.google.cloud.videointelligence.v1.SpeechRecognitionAlternative',
       '10': 'alternatives'
     },
-    {'1': 'language_code', '3': 2, '4': 1, '5': 9, '10': 'languageCode'},
+    {
+      '1': 'language_code',
+      '3': 2,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'languageCode'
+    },
   ],
 };
 
@@ -671,13 +705,14 @@ const SpeechRecognitionAlternative$json = {
   '1': 'SpeechRecognitionAlternative',
   '2': [
     {'1': 'transcript', '3': 1, '4': 1, '5': 9, '10': 'transcript'},
-    {'1': 'confidence', '3': 2, '4': 1, '5': 2, '10': 'confidence'},
+    {'1': 'confidence', '3': 2, '4': 1, '5': 2, '8': {}, '10': 'confidence'},
     {
       '1': 'words',
       '3': 3,
       '4': 3,
       '5': 11,
       '6': '.google.cloud.videointelligence.v1.WordInfo',
+      '8': {},
       '10': 'words'
     },
   ],
@@ -703,8 +738,8 @@ const WordInfo$json = {
       '10': 'endTime'
     },
     {'1': 'word', '3': 3, '4': 1, '5': 9, '10': 'word'},
-    {'1': 'confidence', '3': 4, '4': 1, '5': 2, '10': 'confidence'},
-    {'1': 'speaker_tag', '3': 5, '4': 1, '5': 5, '10': 'speakerTag'},
+    {'1': 'confidence', '3': 4, '4': 1, '5': 2, '8': {}, '10': 'confidence'},
+    {'1': 'speaker_tag', '3': 5, '4': 1, '5': 5, '8': {}, '10': 'speakerTag'},
   ],
 };
 

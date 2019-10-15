@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -18,13 +17,12 @@ export 'embedded_assistant.pbenum.dart';
 
 class ConverseConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ConverseConfig',
-      package: const $pb.PackageName('google.assistant.embedded.v1alpha1'))
-    ..a<AudioInConfig>(1, 'audioInConfig', $pb.PbFieldType.OM,
-        AudioInConfig.getDefault, AudioInConfig.create)
-    ..a<AudioOutConfig>(2, 'audioOutConfig', $pb.PbFieldType.OM,
-        AudioOutConfig.getDefault, AudioOutConfig.create)
-    ..a<ConverseState>(3, 'converseState', $pb.PbFieldType.OM,
-        ConverseState.getDefault, ConverseState.create)
+      package: const $pb.PackageName('google.assistant.embedded.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOM<AudioInConfig>(1, 'audioInConfig', subBuilder: AudioInConfig.create)
+    ..aOM<AudioOutConfig>(2, 'audioOutConfig',
+        subBuilder: AudioOutConfig.create)
+    ..aOM<ConverseState>(3, 'converseState', subBuilder: ConverseState.create)
     ..hasRequiredFields = false;
 
   ConverseConfig._() : super();
@@ -44,44 +42,62 @@ class ConverseConfig extends $pb.GeneratedMessage {
   ConverseConfig createEmptyInstance() => create();
   static $pb.PbList<ConverseConfig> createRepeated() =>
       $pb.PbList<ConverseConfig>();
-  static ConverseConfig getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ConverseConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ConverseConfig>(create);
   static ConverseConfig _defaultInstance;
 
+  @$pb.TagNumber(1)
   AudioInConfig get audioInConfig => $_getN(0);
+  @$pb.TagNumber(1)
   set audioInConfig(AudioInConfig v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasAudioInConfig() => $_has(0);
+  @$pb.TagNumber(1)
   void clearAudioInConfig() => clearField(1);
+  @$pb.TagNumber(1)
+  AudioInConfig ensureAudioInConfig() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   AudioOutConfig get audioOutConfig => $_getN(1);
+  @$pb.TagNumber(2)
   set audioOutConfig(AudioOutConfig v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasAudioOutConfig() => $_has(1);
+  @$pb.TagNumber(2)
   void clearAudioOutConfig() => clearField(2);
+  @$pb.TagNumber(2)
+  AudioOutConfig ensureAudioOutConfig() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   ConverseState get converseState => $_getN(2);
+  @$pb.TagNumber(3)
   set converseState(ConverseState v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasConverseState() => $_has(2);
+  @$pb.TagNumber(3)
   void clearConverseState() => clearField(3);
+  @$pb.TagNumber(3)
+  ConverseState ensureConverseState() => $_ensure(2);
 }
 
 class AudioInConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AudioInConfig',
-      package: const $pb.PackageName('google.assistant.embedded.v1alpha1'))
-    ..e<AudioInConfig_Encoding>(
-        1,
-        'encoding',
-        $pb.PbFieldType.OE,
-        AudioInConfig_Encoding.ENCODING_UNSPECIFIED,
-        AudioInConfig_Encoding.valueOf,
-        AudioInConfig_Encoding.values)
+      package: const $pb.PackageName('google.assistant.embedded.v1alpha1'),
+      createEmptyInstance: create)
+    ..e<AudioInConfig_Encoding>(1, 'encoding', $pb.PbFieldType.OE,
+        defaultOrMaker: AudioInConfig_Encoding.ENCODING_UNSPECIFIED,
+        valueOf: AudioInConfig_Encoding.valueOf,
+        enumValues: AudioInConfig_Encoding.values)
     ..a<$core.int>(2, 'sampleRateHertz', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
@@ -102,36 +118,44 @@ class AudioInConfig extends $pb.GeneratedMessage {
   AudioInConfig createEmptyInstance() => create();
   static $pb.PbList<AudioInConfig> createRepeated() =>
       $pb.PbList<AudioInConfig>();
-  static AudioInConfig getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static AudioInConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AudioInConfig>(create);
   static AudioInConfig _defaultInstance;
 
+  @$pb.TagNumber(1)
   AudioInConfig_Encoding get encoding => $_getN(0);
+  @$pb.TagNumber(1)
   set encoding(AudioInConfig_Encoding v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasEncoding() => $_has(0);
+  @$pb.TagNumber(1)
   void clearEncoding() => clearField(1);
 
-  $core.int get sampleRateHertz => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get sampleRateHertz => $_getIZ(1);
+  @$pb.TagNumber(2)
   set sampleRateHertz($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasSampleRateHertz() => $_has(1);
+  @$pb.TagNumber(2)
   void clearSampleRateHertz() => clearField(2);
 }
 
 class AudioOutConfig extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AudioOutConfig',
-      package: const $pb.PackageName('google.assistant.embedded.v1alpha1'))
-    ..e<AudioOutConfig_Encoding>(
-        1,
-        'encoding',
-        $pb.PbFieldType.OE,
-        AudioOutConfig_Encoding.ENCODING_UNSPECIFIED,
-        AudioOutConfig_Encoding.valueOf,
-        AudioOutConfig_Encoding.values)
+      package: const $pb.PackageName('google.assistant.embedded.v1alpha1'),
+      createEmptyInstance: create)
+    ..e<AudioOutConfig_Encoding>(1, 'encoding', $pb.PbFieldType.OE,
+        defaultOrMaker: AudioOutConfig_Encoding.ENCODING_UNSPECIFIED,
+        valueOf: AudioOutConfig_Encoding.valueOf,
+        enumValues: AudioOutConfig_Encoding.values)
     ..a<$core.int>(2, 'sampleRateHertz', $pb.PbFieldType.O3)
     ..a<$core.int>(3, 'volumePercentage', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
@@ -153,37 +177,52 @@ class AudioOutConfig extends $pb.GeneratedMessage {
   AudioOutConfig createEmptyInstance() => create();
   static $pb.PbList<AudioOutConfig> createRepeated() =>
       $pb.PbList<AudioOutConfig>();
-  static AudioOutConfig getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static AudioOutConfig getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AudioOutConfig>(create);
   static AudioOutConfig _defaultInstance;
 
+  @$pb.TagNumber(1)
   AudioOutConfig_Encoding get encoding => $_getN(0);
+  @$pb.TagNumber(1)
   set encoding(AudioOutConfig_Encoding v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasEncoding() => $_has(0);
+  @$pb.TagNumber(1)
   void clearEncoding() => clearField(1);
 
-  $core.int get sampleRateHertz => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get sampleRateHertz => $_getIZ(1);
+  @$pb.TagNumber(2)
   set sampleRateHertz($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasSampleRateHertz() => $_has(1);
+  @$pb.TagNumber(2)
   void clearSampleRateHertz() => clearField(2);
 
-  $core.int get volumePercentage => $_get(2, 0);
+  @$pb.TagNumber(3)
+  $core.int get volumePercentage => $_getIZ(2);
+  @$pb.TagNumber(3)
   set volumePercentage($core.int v) {
     $_setSignedInt32(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasVolumePercentage() => $_has(2);
+  @$pb.TagNumber(3)
   void clearVolumePercentage() => clearField(3);
 }
 
 class ConverseState extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ConverseState',
-      package: const $pb.PackageName('google.assistant.embedded.v1alpha1'))
+      package: const $pb.PackageName('google.assistant.embedded.v1alpha1'),
+      createEmptyInstance: create)
     ..a<$core.List<$core.int>>(1, 'conversationState', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
@@ -204,21 +243,28 @@ class ConverseState extends $pb.GeneratedMessage {
   ConverseState createEmptyInstance() => create();
   static $pb.PbList<ConverseState> createRepeated() =>
       $pb.PbList<ConverseState>();
-  static ConverseState getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ConverseState getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ConverseState>(create);
   static ConverseState _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$core.int> get conversationState => $_getN(0);
+  @$pb.TagNumber(1)
   set conversationState($core.List<$core.int> v) {
     $_setBytes(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasConversationState() => $_has(0);
+  @$pb.TagNumber(1)
   void clearConversationState() => clearField(1);
 }
 
 class AudioOut extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AudioOut',
-      package: const $pb.PackageName('google.assistant.embedded.v1alpha1'))
+      package: const $pb.PackageName('google.assistant.embedded.v1alpha1'),
+      createEmptyInstance: create)
     ..a<$core.List<$core.int>>(1, 'audioData', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
@@ -238,31 +284,36 @@ class AudioOut extends $pb.GeneratedMessage {
   static AudioOut create() => AudioOut._();
   AudioOut createEmptyInstance() => create();
   static $pb.PbList<AudioOut> createRepeated() => $pb.PbList<AudioOut>();
-  static AudioOut getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static AudioOut getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<AudioOut>(create);
   static AudioOut _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$core.int> get audioData => $_getN(0);
+  @$pb.TagNumber(1)
   set audioData($core.List<$core.int> v) {
     $_setBytes(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasAudioData() => $_has(0);
+  @$pb.TagNumber(1)
   void clearAudioData() => clearField(1);
 }
 
 class ConverseResult extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ConverseResult',
-      package: const $pb.PackageName('google.assistant.embedded.v1alpha1'))
+      package: const $pb.PackageName('google.assistant.embedded.v1alpha1'),
+      createEmptyInstance: create)
     ..aOS(1, 'spokenRequestText')
     ..aOS(2, 'spokenResponseText')
     ..a<$core.List<$core.int>>(3, 'conversationState', $pb.PbFieldType.OY)
-    ..e<ConverseResult_MicrophoneMode>(
-        4,
-        'microphoneMode',
-        $pb.PbFieldType.OE,
-        ConverseResult_MicrophoneMode.MICROPHONE_MODE_UNSPECIFIED,
-        ConverseResult_MicrophoneMode.valueOf,
-        ConverseResult_MicrophoneMode.values)
+    ..e<ConverseResult_MicrophoneMode>(4, 'microphoneMode', $pb.PbFieldType.OE,
+        defaultOrMaker:
+            ConverseResult_MicrophoneMode.MICROPHONE_MODE_UNSPECIFIED,
+        valueOf: ConverseResult_MicrophoneMode.valueOf,
+        enumValues: ConverseResult_MicrophoneMode.values)
     ..a<$core.int>(5, 'volumePercentage', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
@@ -283,47 +334,69 @@ class ConverseResult extends $pb.GeneratedMessage {
   ConverseResult createEmptyInstance() => create();
   static $pb.PbList<ConverseResult> createRepeated() =>
       $pb.PbList<ConverseResult>();
-  static ConverseResult getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ConverseResult getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ConverseResult>(create);
   static ConverseResult _defaultInstance;
 
-  $core.String get spokenRequestText => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get spokenRequestText => $_getSZ(0);
+  @$pb.TagNumber(1)
   set spokenRequestText($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasSpokenRequestText() => $_has(0);
+  @$pb.TagNumber(1)
   void clearSpokenRequestText() => clearField(1);
 
-  $core.String get spokenResponseText => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get spokenResponseText => $_getSZ(1);
+  @$pb.TagNumber(2)
   set spokenResponseText($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasSpokenResponseText() => $_has(1);
+  @$pb.TagNumber(2)
   void clearSpokenResponseText() => clearField(2);
 
+  @$pb.TagNumber(3)
   $core.List<$core.int> get conversationState => $_getN(2);
+  @$pb.TagNumber(3)
   set conversationState($core.List<$core.int> v) {
     $_setBytes(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasConversationState() => $_has(2);
+  @$pb.TagNumber(3)
   void clearConversationState() => clearField(3);
 
+  @$pb.TagNumber(4)
   ConverseResult_MicrophoneMode get microphoneMode => $_getN(3);
+  @$pb.TagNumber(4)
   set microphoneMode(ConverseResult_MicrophoneMode v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasMicrophoneMode() => $_has(3);
+  @$pb.TagNumber(4)
   void clearMicrophoneMode() => clearField(4);
 
-  $core.int get volumePercentage => $_get(4, 0);
+  @$pb.TagNumber(5)
+  $core.int get volumePercentage => $_getIZ(4);
+  @$pb.TagNumber(5)
   set volumePercentage($core.int v) {
     $_setSignedInt32(4, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasVolumePercentage() => $_has(4);
+  @$pb.TagNumber(5)
   void clearVolumePercentage() => clearField(5);
 }
 
@@ -337,10 +410,10 @@ class ConverseRequest extends $pb.GeneratedMessage {
     0: ConverseRequest_ConverseRequest.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ConverseRequest',
-      package: const $pb.PackageName('google.assistant.embedded.v1alpha1'))
+      package: const $pb.PackageName('google.assistant.embedded.v1alpha1'),
+      createEmptyInstance: create)
     ..oo(0, [1, 2])
-    ..a<ConverseConfig>(1, 'config', $pb.PbFieldType.OM,
-        ConverseConfig.getDefault, ConverseConfig.create)
+    ..aOM<ConverseConfig>(1, 'config', subBuilder: ConverseConfig.create)
     ..a<$core.List<$core.int>>(2, 'audioIn', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
@@ -361,28 +434,39 @@ class ConverseRequest extends $pb.GeneratedMessage {
   ConverseRequest createEmptyInstance() => create();
   static $pb.PbList<ConverseRequest> createRepeated() =>
       $pb.PbList<ConverseRequest>();
-  static ConverseRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ConverseRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ConverseRequest>(create);
   static ConverseRequest _defaultInstance;
 
   ConverseRequest_ConverseRequest whichConverseRequest() =>
       _ConverseRequest_ConverseRequestByTag[$_whichOneof(0)];
   void clearConverseRequest() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   ConverseConfig get config => $_getN(0);
+  @$pb.TagNumber(1)
   set config(ConverseConfig v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasConfig() => $_has(0);
+  @$pb.TagNumber(1)
   void clearConfig() => clearField(1);
+  @$pb.TagNumber(1)
+  ConverseConfig ensureConfig() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $core.List<$core.int> get audioIn => $_getN(1);
+  @$pb.TagNumber(2)
   set audioIn($core.List<$core.int> v) {
     $_setBytes(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasAudioIn() => $_has(1);
+  @$pb.TagNumber(2)
   void clearAudioIn() => clearField(2);
 }
 
@@ -404,21 +488,16 @@ class ConverseResponse extends $pb.GeneratedMessage {
     0: ConverseResponse_ConverseResponse.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ConverseResponse',
-      package: const $pb.PackageName('google.assistant.embedded.v1alpha1'))
+      package: const $pb.PackageName('google.assistant.embedded.v1alpha1'),
+      createEmptyInstance: create)
     ..oo(0, [1, 2, 3, 5])
-    ..a<$1.Status>(
-        1, 'error', $pb.PbFieldType.OM, $1.Status.getDefault, $1.Status.create)
-    ..e<ConverseResponse_EventType>(
-        2,
-        'eventType',
-        $pb.PbFieldType.OE,
-        ConverseResponse_EventType.EVENT_TYPE_UNSPECIFIED,
-        ConverseResponse_EventType.valueOf,
-        ConverseResponse_EventType.values)
-    ..a<AudioOut>(
-        3, 'audioOut', $pb.PbFieldType.OM, AudioOut.getDefault, AudioOut.create)
-    ..a<ConverseResult>(5, 'result', $pb.PbFieldType.OM,
-        ConverseResult.getDefault, ConverseResult.create)
+    ..aOM<$1.Status>(1, 'error', subBuilder: $1.Status.create)
+    ..e<ConverseResponse_EventType>(2, 'eventType', $pb.PbFieldType.OE,
+        defaultOrMaker: ConverseResponse_EventType.EVENT_TYPE_UNSPECIFIED,
+        valueOf: ConverseResponse_EventType.valueOf,
+        enumValues: ConverseResponse_EventType.values)
+    ..aOM<AudioOut>(3, 'audioOut', subBuilder: AudioOut.create)
+    ..aOM<ConverseResult>(5, 'result', subBuilder: ConverseResult.create)
     ..hasRequiredFields = false;
 
   ConverseResponse._() : super();
@@ -438,43 +517,66 @@ class ConverseResponse extends $pb.GeneratedMessage {
   ConverseResponse createEmptyInstance() => create();
   static $pb.PbList<ConverseResponse> createRepeated() =>
       $pb.PbList<ConverseResponse>();
-  static ConverseResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ConverseResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ConverseResponse>(create);
   static ConverseResponse _defaultInstance;
 
   ConverseResponse_ConverseResponse whichConverseResponse() =>
       _ConverseResponse_ConverseResponseByTag[$_whichOneof(0)];
   void clearConverseResponse() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   $1.Status get error => $_getN(0);
+  @$pb.TagNumber(1)
   set error($1.Status v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasError() => $_has(0);
+  @$pb.TagNumber(1)
   void clearError() => clearField(1);
+  @$pb.TagNumber(1)
+  $1.Status ensureError() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   ConverseResponse_EventType get eventType => $_getN(1);
+  @$pb.TagNumber(2)
   set eventType(ConverseResponse_EventType v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasEventType() => $_has(1);
+  @$pb.TagNumber(2)
   void clearEventType() => clearField(2);
 
+  @$pb.TagNumber(3)
   AudioOut get audioOut => $_getN(2);
+  @$pb.TagNumber(3)
   set audioOut(AudioOut v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasAudioOut() => $_has(2);
+  @$pb.TagNumber(3)
   void clearAudioOut() => clearField(3);
+  @$pb.TagNumber(3)
+  AudioOut ensureAudioOut() => $_ensure(2);
 
+  @$pb.TagNumber(5)
   ConverseResult get result => $_getN(3);
+  @$pb.TagNumber(5)
   set result(ConverseResult v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasResult() => $_has(3);
+  @$pb.TagNumber(5)
   void clearResult() => clearField(5);
+  @$pb.TagNumber(5)
+  ConverseResult ensureResult() => $_ensure(3);
 }

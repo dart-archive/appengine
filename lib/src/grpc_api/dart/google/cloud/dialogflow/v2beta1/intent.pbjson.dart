@@ -118,6 +118,7 @@ const Intent$json = {
     Intent_FollowupIntentInfo$json
   ],
   '4': [Intent_WebhookState$json],
+  '7': {},
 };
 
 const Intent_TrainingPhrase$json = {
@@ -348,6 +349,33 @@ const Intent_Message$json = {
       '10': 'rbmCarouselRichCard'
     },
     {
+      '1': 'browse_carousel_card',
+      '3': 22,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.dialogflow.v2beta1.Intent.Message.BrowseCarouselCard',
+      '9': 0,
+      '10': 'browseCarouselCard'
+    },
+    {
+      '1': 'table_card',
+      '3': 23,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.dialogflow.v2beta1.Intent.Message.TableCard',
+      '9': 0,
+      '10': 'tableCard'
+    },
+    {
+      '1': 'media_content',
+      '3': 24,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.dialogflow.v2beta1.Intent.Message.MediaContent',
+      '9': 0,
+      '10': 'mediaContent'
+    },
+    {
       '1': 'platform',
       '3': 6,
       '4': 1,
@@ -379,7 +407,13 @@ const Intent_Message$json = {
     Intent_Message_RbmCardContent$json,
     Intent_Message_RbmSuggestion$json,
     Intent_Message_RbmSuggestedReply$json,
-    Intent_Message_RbmSuggestedAction$json
+    Intent_Message_RbmSuggestedAction$json,
+    Intent_Message_MediaContent$json,
+    Intent_Message_BrowseCarouselCard$json,
+    Intent_Message_TableCard$json,
+    Intent_Message_ColumnProperties$json,
+    Intent_Message_TableCardRow$json,
+    Intent_Message_TableCardCell$json
   ],
   '4': [Intent_Message_Platform$json],
   '8': [
@@ -910,6 +944,255 @@ const Intent_Message_RbmSuggestedAction_RbmSuggestedActionOpenUri$json = {
 
 const Intent_Message_RbmSuggestedAction_RbmSuggestedActionShareLocation$json = {
   '1': 'RbmSuggestedActionShareLocation',
+};
+
+const Intent_Message_MediaContent$json = {
+  '1': 'MediaContent',
+  '2': [
+    {
+      '1': 'media_type',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6':
+          '.google.cloud.dialogflow.v2beta1.Intent.Message.MediaContent.ResponseMediaType',
+      '10': 'mediaType'
+    },
+    {
+      '1': 'media_objects',
+      '3': 2,
+      '4': 3,
+      '5': 11,
+      '6':
+          '.google.cloud.dialogflow.v2beta1.Intent.Message.MediaContent.ResponseMediaObject',
+      '10': 'mediaObjects'
+    },
+  ],
+  '3': [Intent_Message_MediaContent_ResponseMediaObject$json],
+  '4': [Intent_Message_MediaContent_ResponseMediaType$json],
+};
+
+const Intent_Message_MediaContent_ResponseMediaObject$json = {
+  '1': 'ResponseMediaObject',
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'description', '3': 2, '4': 1, '5': 9, '10': 'description'},
+    {
+      '1': 'large_image',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.dialogflow.v2beta1.Intent.Message.Image',
+      '9': 0,
+      '10': 'largeImage'
+    },
+    {
+      '1': 'icon',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.dialogflow.v2beta1.Intent.Message.Image',
+      '9': 0,
+      '10': 'icon'
+    },
+    {'1': 'content_url', '3': 5, '4': 1, '5': 9, '10': 'contentUrl'},
+  ],
+  '8': [
+    {'1': 'image'},
+  ],
+};
+
+const Intent_Message_MediaContent_ResponseMediaType$json = {
+  '1': 'ResponseMediaType',
+  '2': [
+    {'1': 'RESPONSE_MEDIA_TYPE_UNSPECIFIED', '2': 0},
+    {'1': 'AUDIO', '2': 1},
+  ],
+};
+
+const Intent_Message_BrowseCarouselCard$json = {
+  '1': 'BrowseCarouselCard',
+  '2': [
+    {
+      '1': 'items',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6':
+          '.google.cloud.dialogflow.v2beta1.Intent.Message.BrowseCarouselCard.BrowseCarouselCardItem',
+      '10': 'items'
+    },
+    {
+      '1': 'image_display_options',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6':
+          '.google.cloud.dialogflow.v2beta1.Intent.Message.BrowseCarouselCard.ImageDisplayOptions',
+      '10': 'imageDisplayOptions'
+    },
+  ],
+  '3': [Intent_Message_BrowseCarouselCard_BrowseCarouselCardItem$json],
+  '4': [Intent_Message_BrowseCarouselCard_ImageDisplayOptions$json],
+};
+
+const Intent_Message_BrowseCarouselCard_BrowseCarouselCardItem$json = {
+  '1': 'BrowseCarouselCardItem',
+  '2': [
+    {
+      '1': 'open_uri_action',
+      '3': 1,
+      '4': 1,
+      '5': 11,
+      '6':
+          '.google.cloud.dialogflow.v2beta1.Intent.Message.BrowseCarouselCard.BrowseCarouselCardItem.OpenUrlAction',
+      '10': 'openUriAction'
+    },
+    {'1': 'title', '3': 2, '4': 1, '5': 9, '10': 'title'},
+    {'1': 'description', '3': 3, '4': 1, '5': 9, '10': 'description'},
+    {
+      '1': 'image',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.dialogflow.v2beta1.Intent.Message.Image',
+      '10': 'image'
+    },
+    {'1': 'footer', '3': 5, '4': 1, '5': 9, '10': 'footer'},
+  ],
+  '3': [
+    Intent_Message_BrowseCarouselCard_BrowseCarouselCardItem_OpenUrlAction$json
+  ],
+};
+
+const Intent_Message_BrowseCarouselCard_BrowseCarouselCardItem_OpenUrlAction$json =
+    {
+  '1': 'OpenUrlAction',
+  '2': [
+    {'1': 'url', '3': 1, '4': 1, '5': 9, '10': 'url'},
+    {
+      '1': 'url_type_hint',
+      '3': 3,
+      '4': 1,
+      '5': 14,
+      '6':
+          '.google.cloud.dialogflow.v2beta1.Intent.Message.BrowseCarouselCard.BrowseCarouselCardItem.OpenUrlAction.UrlTypeHint',
+      '10': 'urlTypeHint'
+    },
+  ],
+  '4': [
+    Intent_Message_BrowseCarouselCard_BrowseCarouselCardItem_OpenUrlAction_UrlTypeHint$json
+  ],
+};
+
+const Intent_Message_BrowseCarouselCard_BrowseCarouselCardItem_OpenUrlAction_UrlTypeHint$json =
+    {
+  '1': 'UrlTypeHint',
+  '2': [
+    {'1': 'URL_TYPE_HINT_UNSPECIFIED', '2': 0},
+    {'1': 'AMP_ACTION', '2': 1},
+    {'1': 'AMP_CONTENT', '2': 2},
+  ],
+};
+
+const Intent_Message_BrowseCarouselCard_ImageDisplayOptions$json = {
+  '1': 'ImageDisplayOptions',
+  '2': [
+    {'1': 'IMAGE_DISPLAY_OPTIONS_UNSPECIFIED', '2': 0},
+    {'1': 'GRAY', '2': 1},
+    {'1': 'WHITE', '2': 2},
+    {'1': 'CROPPED', '2': 3},
+    {'1': 'BLURRED_BACKGROUND', '2': 4},
+  ],
+};
+
+const Intent_Message_TableCard$json = {
+  '1': 'TableCard',
+  '2': [
+    {'1': 'title', '3': 1, '4': 1, '5': 9, '10': 'title'},
+    {'1': 'subtitle', '3': 2, '4': 1, '5': 9, '10': 'subtitle'},
+    {
+      '1': 'image',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.dialogflow.v2beta1.Intent.Message.Image',
+      '10': 'image'
+    },
+    {
+      '1': 'column_properties',
+      '3': 4,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.dialogflow.v2beta1.Intent.Message.ColumnProperties',
+      '10': 'columnProperties'
+    },
+    {
+      '1': 'rows',
+      '3': 5,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.dialogflow.v2beta1.Intent.Message.TableCardRow',
+      '10': 'rows'
+    },
+    {
+      '1': 'buttons',
+      '3': 6,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.dialogflow.v2beta1.Intent.Message.BasicCard.Button',
+      '10': 'buttons'
+    },
+  ],
+};
+
+const Intent_Message_ColumnProperties$json = {
+  '1': 'ColumnProperties',
+  '2': [
+    {'1': 'header', '3': 1, '4': 1, '5': 9, '10': 'header'},
+    {
+      '1': 'horizontal_alignment',
+      '3': 2,
+      '4': 1,
+      '5': 14,
+      '6':
+          '.google.cloud.dialogflow.v2beta1.Intent.Message.ColumnProperties.HorizontalAlignment',
+      '10': 'horizontalAlignment'
+    },
+  ],
+  '4': [Intent_Message_ColumnProperties_HorizontalAlignment$json],
+};
+
+const Intent_Message_ColumnProperties_HorizontalAlignment$json = {
+  '1': 'HorizontalAlignment',
+  '2': [
+    {'1': 'HORIZONTAL_ALIGNMENT_UNSPECIFIED', '2': 0},
+    {'1': 'LEADING', '2': 1},
+    {'1': 'CENTER', '2': 2},
+    {'1': 'TRAILING', '2': 3},
+  ],
+};
+
+const Intent_Message_TableCardRow$json = {
+  '1': 'TableCardRow',
+  '2': [
+    {
+      '1': 'cells',
+      '3': 1,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.dialogflow.v2beta1.Intent.Message.TableCardCell',
+      '10': 'cells'
+    },
+    {'1': 'divider_after', '3': 2, '4': 1, '5': 8, '10': 'dividerAfter'},
+  ],
+};
+
+const Intent_Message_TableCardCell$json = {
+  '1': 'TableCardCell',
+  '2': [
+    {'1': 'text', '3': 1, '4': 1, '5': 9, '10': 'text'},
+  ],
 };
 
 const Intent_Message_Platform$json = {

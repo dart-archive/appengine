@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -16,9 +15,9 @@ import '../../../protobuf/duration.pb.dart' as $1;
 class ImageObjectDetectionAnnotation extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ImageObjectDetectionAnnotation',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
-    ..a<$0.BoundingPoly>(1, 'boundingBox', $pb.PbFieldType.OM,
-        $0.BoundingPoly.getDefault, $0.BoundingPoly.create)
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
+    ..aOM<$0.BoundingPoly>(1, 'boundingBox', subBuilder: $0.BoundingPoly.create)
     ..a<$core.double>(2, 'score', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
@@ -43,36 +42,46 @@ class ImageObjectDetectionAnnotation extends $pb.GeneratedMessage {
   ImageObjectDetectionAnnotation createEmptyInstance() => create();
   static $pb.PbList<ImageObjectDetectionAnnotation> createRepeated() =>
       $pb.PbList<ImageObjectDetectionAnnotation>();
-  static ImageObjectDetectionAnnotation getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ImageObjectDetectionAnnotation getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ImageObjectDetectionAnnotation>(create);
   static ImageObjectDetectionAnnotation _defaultInstance;
 
+  @$pb.TagNumber(1)
   $0.BoundingPoly get boundingBox => $_getN(0);
+  @$pb.TagNumber(1)
   set boundingBox($0.BoundingPoly v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasBoundingBox() => $_has(0);
+  @$pb.TagNumber(1)
   void clearBoundingBox() => clearField(1);
+  @$pb.TagNumber(1)
+  $0.BoundingPoly ensureBoundingBox() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $core.double get score => $_getN(1);
+  @$pb.TagNumber(2)
   set score($core.double v) {
     $_setFloat(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasScore() => $_has(1);
+  @$pb.TagNumber(2)
   void clearScore() => clearField(2);
 }
 
 class VideoObjectTrackingAnnotation extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'VideoObjectTrackingAnnotation',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
     ..aOS(1, 'instanceId')
-    ..a<$1.Duration>(2, 'timeOffset', $pb.PbFieldType.OM,
-        $1.Duration.getDefault, $1.Duration.create)
-    ..a<$0.BoundingPoly>(3, 'boundingBox', $pb.PbFieldType.OM,
-        $0.BoundingPoly.getDefault, $0.BoundingPoly.create)
+    ..aOM<$1.Duration>(2, 'timeOffset', subBuilder: $1.Duration.create)
+    ..aOM<$0.BoundingPoly>(3, 'boundingBox', subBuilder: $0.BoundingPoly.create)
     ..a<$core.double>(4, 'score', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
@@ -97,40 +106,61 @@ class VideoObjectTrackingAnnotation extends $pb.GeneratedMessage {
   VideoObjectTrackingAnnotation createEmptyInstance() => create();
   static $pb.PbList<VideoObjectTrackingAnnotation> createRepeated() =>
       $pb.PbList<VideoObjectTrackingAnnotation>();
-  static VideoObjectTrackingAnnotation getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static VideoObjectTrackingAnnotation getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<VideoObjectTrackingAnnotation>(create);
   static VideoObjectTrackingAnnotation _defaultInstance;
 
-  $core.String get instanceId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get instanceId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set instanceId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasInstanceId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearInstanceId() => clearField(1);
 
+  @$pb.TagNumber(2)
   $1.Duration get timeOffset => $_getN(1);
+  @$pb.TagNumber(2)
   set timeOffset($1.Duration v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasTimeOffset() => $_has(1);
+  @$pb.TagNumber(2)
   void clearTimeOffset() => clearField(2);
+  @$pb.TagNumber(2)
+  $1.Duration ensureTimeOffset() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $0.BoundingPoly get boundingBox => $_getN(2);
+  @$pb.TagNumber(3)
   set boundingBox($0.BoundingPoly v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasBoundingBox() => $_has(2);
+  @$pb.TagNumber(3)
   void clearBoundingBox() => clearField(3);
+  @$pb.TagNumber(3)
+  $0.BoundingPoly ensureBoundingBox() => $_ensure(2);
 
+  @$pb.TagNumber(4)
   $core.double get score => $_getN(3);
+  @$pb.TagNumber(4)
   set score($core.double v) {
     $_setFloat(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasScore() => $_has(3);
+  @$pb.TagNumber(4)
   void clearScore() => clearField(4);
 }
 
@@ -138,7 +168,8 @@ class BoundingBoxMetricsEntry_ConfidenceMetricsEntry
     extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'BoundingBoxMetricsEntry.ConfidenceMetricsEntry',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
     ..a<$core.double>(1, 'confidenceThreshold', $pb.PbFieldType.OF)
     ..a<$core.double>(2, 'recall', $pb.PbFieldType.OF)
     ..a<$core.double>(3, 'precision', $pb.PbFieldType.OF)
@@ -171,53 +202,70 @@ class BoundingBoxMetricsEntry_ConfidenceMetricsEntry
   static $pb.PbList<BoundingBoxMetricsEntry_ConfidenceMetricsEntry>
       createRepeated() =>
           $pb.PbList<BoundingBoxMetricsEntry_ConfidenceMetricsEntry>();
+  @$core.pragma('dart2js:noInline')
   static BoundingBoxMetricsEntry_ConfidenceMetricsEntry getDefault() =>
-      _defaultInstance ??= create()..freeze();
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          BoundingBoxMetricsEntry_ConfidenceMetricsEntry>(create);
   static BoundingBoxMetricsEntry_ConfidenceMetricsEntry _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.double get confidenceThreshold => $_getN(0);
+  @$pb.TagNumber(1)
   set confidenceThreshold($core.double v) {
     $_setFloat(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasConfidenceThreshold() => $_has(0);
+  @$pb.TagNumber(1)
   void clearConfidenceThreshold() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.double get recall => $_getN(1);
+  @$pb.TagNumber(2)
   set recall($core.double v) {
     $_setFloat(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasRecall() => $_has(1);
+  @$pb.TagNumber(2)
   void clearRecall() => clearField(2);
 
+  @$pb.TagNumber(3)
   $core.double get precision => $_getN(2);
+  @$pb.TagNumber(3)
   set precision($core.double v) {
     $_setFloat(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPrecision() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPrecision() => clearField(3);
 
+  @$pb.TagNumber(4)
   $core.double get f1Score => $_getN(3);
+  @$pb.TagNumber(4)
   set f1Score($core.double v) {
     $_setFloat(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasF1Score() => $_has(3);
+  @$pb.TagNumber(4)
   void clearF1Score() => clearField(4);
 }
 
 class BoundingBoxMetricsEntry extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('BoundingBoxMetricsEntry',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
     ..a<$core.double>(1, 'iouThreshold', $pb.PbFieldType.OF)
     ..a<$core.double>(2, 'meanAveragePrecision', $pb.PbFieldType.OF)
     ..pc<BoundingBoxMetricsEntry_ConfidenceMetricsEntry>(
-        3,
-        'confidenceMetricsEntries',
-        $pb.PbFieldType.PM,
-        BoundingBoxMetricsEntry_ConfidenceMetricsEntry.create)
+        3, 'confidenceMetricsEntries', $pb.PbFieldType.PM,
+        subBuilder: BoundingBoxMetricsEntry_ConfidenceMetricsEntry.create)
     ..hasRequiredFields = false;
 
   BoundingBoxMetricsEntry._() : super();
@@ -239,26 +287,36 @@ class BoundingBoxMetricsEntry extends $pb.GeneratedMessage {
   BoundingBoxMetricsEntry createEmptyInstance() => create();
   static $pb.PbList<BoundingBoxMetricsEntry> createRepeated() =>
       $pb.PbList<BoundingBoxMetricsEntry>();
-  static BoundingBoxMetricsEntry getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static BoundingBoxMetricsEntry getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BoundingBoxMetricsEntry>(create);
   static BoundingBoxMetricsEntry _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.double get iouThreshold => $_getN(0);
+  @$pb.TagNumber(1)
   set iouThreshold($core.double v) {
     $_setFloat(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasIouThreshold() => $_has(0);
+  @$pb.TagNumber(1)
   void clearIouThreshold() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.double get meanAveragePrecision => $_getN(1);
+  @$pb.TagNumber(2)
   set meanAveragePrecision($core.double v) {
     $_setFloat(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasMeanAveragePrecision() => $_has(1);
+  @$pb.TagNumber(2)
   void clearMeanAveragePrecision() => clearField(2);
 
+  @$pb.TagNumber(3)
   $core.List<BoundingBoxMetricsEntry_ConfidenceMetricsEntry>
       get confidenceMetricsEntries => $_getList(2);
 }
@@ -266,10 +324,12 @@ class BoundingBoxMetricsEntry extends $pb.GeneratedMessage {
 class ImageObjectDetectionEvaluationMetrics extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ImageObjectDetectionEvaluationMetrics',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
     ..a<$core.int>(1, 'evaluatedBoundingBoxCount', $pb.PbFieldType.O3)
-    ..pc<BoundingBoxMetricsEntry>(2, 'boundingBoxMetricsEntries',
-        $pb.PbFieldType.PM, BoundingBoxMetricsEntry.create)
+    ..pc<BoundingBoxMetricsEntry>(
+        2, 'boundingBoxMetricsEntries', $pb.PbFieldType.PM,
+        subBuilder: BoundingBoxMetricsEntry.create)
     ..a<$core.double>(3, 'boundingBoxMeanAveragePrecision', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
@@ -295,38 +355,51 @@ class ImageObjectDetectionEvaluationMetrics extends $pb.GeneratedMessage {
   ImageObjectDetectionEvaluationMetrics createEmptyInstance() => create();
   static $pb.PbList<ImageObjectDetectionEvaluationMetrics> createRepeated() =>
       $pb.PbList<ImageObjectDetectionEvaluationMetrics>();
+  @$core.pragma('dart2js:noInline')
   static ImageObjectDetectionEvaluationMetrics getDefault() =>
-      _defaultInstance ??= create()..freeze();
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          ImageObjectDetectionEvaluationMetrics>(create);
   static ImageObjectDetectionEvaluationMetrics _defaultInstance;
 
-  $core.int get evaluatedBoundingBoxCount => $_get(0, 0);
+  @$pb.TagNumber(1)
+  $core.int get evaluatedBoundingBoxCount => $_getIZ(0);
+  @$pb.TagNumber(1)
   set evaluatedBoundingBoxCount($core.int v) {
     $_setSignedInt32(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasEvaluatedBoundingBoxCount() => $_has(0);
+  @$pb.TagNumber(1)
   void clearEvaluatedBoundingBoxCount() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<BoundingBoxMetricsEntry> get boundingBoxMetricsEntries =>
       $_getList(1);
 
+  @$pb.TagNumber(3)
   $core.double get boundingBoxMeanAveragePrecision => $_getN(2);
+  @$pb.TagNumber(3)
   set boundingBoxMeanAveragePrecision($core.double v) {
     $_setFloat(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasBoundingBoxMeanAveragePrecision() => $_has(2);
+  @$pb.TagNumber(3)
   void clearBoundingBoxMeanAveragePrecision() => clearField(3);
 }
 
 class VideoObjectTrackingEvaluationMetrics extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'VideoObjectTrackingEvaluationMetrics',
-      package: const $pb.PackageName('google.cloud.automl.v1beta1'))
+      package: const $pb.PackageName('google.cloud.automl.v1beta1'),
+      createEmptyInstance: create)
     ..a<$core.int>(1, 'evaluatedFrameCount', $pb.PbFieldType.O3)
     ..a<$core.int>(2, 'evaluatedBoundingBoxCount', $pb.PbFieldType.O3)
-    ..pc<BoundingBoxMetricsEntry>(4, 'boundingBoxMetricsEntries',
-        $pb.PbFieldType.PM, BoundingBoxMetricsEntry.create)
+    ..pc<BoundingBoxMetricsEntry>(
+        4, 'boundingBoxMetricsEntries', $pb.PbFieldType.PM,
+        subBuilder: BoundingBoxMetricsEntry.create)
     ..a<$core.double>(6, 'boundingBoxMeanAveragePrecision', $pb.PbFieldType.OF)
     ..hasRequiredFields = false;
 
@@ -352,34 +425,49 @@ class VideoObjectTrackingEvaluationMetrics extends $pb.GeneratedMessage {
   VideoObjectTrackingEvaluationMetrics createEmptyInstance() => create();
   static $pb.PbList<VideoObjectTrackingEvaluationMetrics> createRepeated() =>
       $pb.PbList<VideoObjectTrackingEvaluationMetrics>();
+  @$core.pragma('dart2js:noInline')
   static VideoObjectTrackingEvaluationMetrics getDefault() =>
-      _defaultInstance ??= create()..freeze();
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
+          VideoObjectTrackingEvaluationMetrics>(create);
   static VideoObjectTrackingEvaluationMetrics _defaultInstance;
 
-  $core.int get evaluatedFrameCount => $_get(0, 0);
+  @$pb.TagNumber(1)
+  $core.int get evaluatedFrameCount => $_getIZ(0);
+  @$pb.TagNumber(1)
   set evaluatedFrameCount($core.int v) {
     $_setSignedInt32(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasEvaluatedFrameCount() => $_has(0);
+  @$pb.TagNumber(1)
   void clearEvaluatedFrameCount() => clearField(1);
 
-  $core.int get evaluatedBoundingBoxCount => $_get(1, 0);
+  @$pb.TagNumber(2)
+  $core.int get evaluatedBoundingBoxCount => $_getIZ(1);
+  @$pb.TagNumber(2)
   set evaluatedBoundingBoxCount($core.int v) {
     $_setSignedInt32(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasEvaluatedBoundingBoxCount() => $_has(1);
+  @$pb.TagNumber(2)
   void clearEvaluatedBoundingBoxCount() => clearField(2);
 
+  @$pb.TagNumber(4)
   $core.List<BoundingBoxMetricsEntry> get boundingBoxMetricsEntries =>
       $_getList(2);
 
+  @$pb.TagNumber(6)
   $core.double get boundingBoxMeanAveragePrecision => $_getN(3);
+  @$pb.TagNumber(6)
   set boundingBoxMeanAveragePrecision($core.double v) {
     $_setFloat(3, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasBoundingBoxMeanAveragePrecision() => $_has(3);
+  @$pb.TagNumber(6)
   void clearBoundingBoxMeanAveragePrecision() => clearField(6);
 }

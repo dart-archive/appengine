@@ -211,6 +211,14 @@ const ExpandedDynamicSearchAdInfo$json = {
       '6': '.google.protobuf.StringValue',
       '10': 'description'
     },
+    {
+      '1': 'description2',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.StringValue',
+      '10': 'description2'
+    },
   ],
 };
 

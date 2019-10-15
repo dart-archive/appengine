@@ -119,7 +119,7 @@ const AppEngineHttpTarget_HeadersEntry$json = {
 const PubsubTarget$json = {
   '1': 'PubsubTarget',
   '2': [
-    {'1': 'topic_name', '3': 1, '4': 1, '5': 9, '10': 'topicName'},
+    {'1': 'topic_name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'topicName'},
     {'1': 'data', '3': 3, '4': 1, '5': 12, '10': 'data'},
     {
       '1': 'attributes',

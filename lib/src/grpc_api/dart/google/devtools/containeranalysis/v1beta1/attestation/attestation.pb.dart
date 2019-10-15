@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -23,17 +22,16 @@ class PgpSignedAttestation extends $pb.GeneratedMessage {
     0: PgpSignedAttestation_KeyId.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('PgpSignedAttestation',
-      package: const $pb.PackageName('grafeas.v1beta1.attestation'))
+      package: const $pb.PackageName('grafeas.v1beta1.attestation'),
+      createEmptyInstance: create)
     ..oo(0, [2])
     ..aOS(1, 'signature')
     ..aOS(2, 'pgpKeyId')
-    ..e<PgpSignedAttestation_ContentType>(
-        3,
-        'contentType',
-        $pb.PbFieldType.OE,
-        PgpSignedAttestation_ContentType.CONTENT_TYPE_UNSPECIFIED,
-        PgpSignedAttestation_ContentType.valueOf,
-        PgpSignedAttestation_ContentType.values)
+    ..e<PgpSignedAttestation_ContentType>(3, 'contentType', $pb.PbFieldType.OE,
+        defaultOrMaker:
+            PgpSignedAttestation_ContentType.CONTENT_TYPE_UNSPECIFIED,
+        valueOf: PgpSignedAttestation_ContentType.valueOf,
+        enumValues: PgpSignedAttestation_ContentType.values)
     ..hasRequiredFields = false;
 
   PgpSignedAttestation._() : super();
@@ -54,42 +52,56 @@ class PgpSignedAttestation extends $pb.GeneratedMessage {
   PgpSignedAttestation createEmptyInstance() => create();
   static $pb.PbList<PgpSignedAttestation> createRepeated() =>
       $pb.PbList<PgpSignedAttestation>();
-  static PgpSignedAttestation getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static PgpSignedAttestation getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<PgpSignedAttestation>(create);
   static PgpSignedAttestation _defaultInstance;
 
   PgpSignedAttestation_KeyId whichKeyId() =>
       _PgpSignedAttestation_KeyIdByTag[$_whichOneof(0)];
   void clearKeyId() => clearField($_whichOneof(0));
 
-  $core.String get signature => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get signature => $_getSZ(0);
+  @$pb.TagNumber(1)
   set signature($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasSignature() => $_has(0);
+  @$pb.TagNumber(1)
   void clearSignature() => clearField(1);
 
-  $core.String get pgpKeyId => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get pgpKeyId => $_getSZ(1);
+  @$pb.TagNumber(2)
   set pgpKeyId($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasPgpKeyId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearPgpKeyId() => clearField(2);
 
+  @$pb.TagNumber(3)
   PgpSignedAttestation_ContentType get contentType => $_getN(2);
+  @$pb.TagNumber(3)
   set contentType(PgpSignedAttestation_ContentType v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasContentType() => $_has(2);
+  @$pb.TagNumber(3)
   void clearContentType() => clearField(3);
 }
 
 class Authority_Hint extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Authority.Hint',
-      package: const $pb.PackageName('grafeas.v1beta1.attestation'))
+      package: const $pb.PackageName('grafeas.v1beta1.attestation'),
+      createEmptyInstance: create)
     ..aOS(1, 'humanReadableName')
     ..hasRequiredFields = false;
 
@@ -110,23 +122,29 @@ class Authority_Hint extends $pb.GeneratedMessage {
   Authority_Hint createEmptyInstance() => create();
   static $pb.PbList<Authority_Hint> createRepeated() =>
       $pb.PbList<Authority_Hint>();
-  static Authority_Hint getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Authority_Hint getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Authority_Hint>(create);
   static Authority_Hint _defaultInstance;
 
-  $core.String get humanReadableName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get humanReadableName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set humanReadableName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasHumanReadableName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearHumanReadableName() => clearField(1);
 }
 
 class Authority extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Authority',
-      package: const $pb.PackageName('grafeas.v1beta1.attestation'))
-    ..a<Authority_Hint>(1, 'hint', $pb.PbFieldType.OM,
-        Authority_Hint.getDefault, Authority_Hint.create)
+      package: const $pb.PackageName('grafeas.v1beta1.attestation'),
+      createEmptyInstance: create)
+    ..aOM<Authority_Hint>(1, 'hint', subBuilder: Authority_Hint.create)
     ..hasRequiredFields = false;
 
   Authority._() : super();
@@ -145,23 +163,31 @@ class Authority extends $pb.GeneratedMessage {
   static Authority create() => Authority._();
   Authority createEmptyInstance() => create();
   static $pb.PbList<Authority> createRepeated() => $pb.PbList<Authority>();
-  static Authority getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Authority getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Authority>(create);
   static Authority _defaultInstance;
 
+  @$pb.TagNumber(1)
   Authority_Hint get hint => $_getN(0);
+  @$pb.TagNumber(1)
   set hint(Authority_Hint v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasHint() => $_has(0);
+  @$pb.TagNumber(1)
   void clearHint() => clearField(1);
+  @$pb.TagNumber(1)
+  Authority_Hint ensureHint() => $_ensure(0);
 }
 
 class Details extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Details',
-      package: const $pb.PackageName('grafeas.v1beta1.attestation'))
-    ..a<Attestation>(1, 'attestation', $pb.PbFieldType.OM,
-        Attestation.getDefault, Attestation.create)
+      package: const $pb.PackageName('grafeas.v1beta1.attestation'),
+      createEmptyInstance: create)
+    ..aOM<Attestation>(1, 'attestation', subBuilder: Attestation.create)
     ..hasRequiredFields = false;
 
   Details._() : super();
@@ -180,16 +206,24 @@ class Details extends $pb.GeneratedMessage {
   static Details create() => Details._();
   Details createEmptyInstance() => create();
   static $pb.PbList<Details> createRepeated() => $pb.PbList<Details>();
-  static Details getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Details getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Details>(create);
   static Details _defaultInstance;
 
+  @$pb.TagNumber(1)
   Attestation get attestation => $_getN(0);
+  @$pb.TagNumber(1)
   set attestation(Attestation v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasAttestation() => $_has(0);
+  @$pb.TagNumber(1)
   void clearAttestation() => clearField(1);
+  @$pb.TagNumber(1)
+  Attestation ensureAttestation() => $_ensure(0);
 }
 
 enum Attestation_Signature { pgpSignedAttestation, notSet }
@@ -201,10 +235,11 @@ class Attestation extends $pb.GeneratedMessage {
     0: Attestation_Signature.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Attestation',
-      package: const $pb.PackageName('grafeas.v1beta1.attestation'))
+      package: const $pb.PackageName('grafeas.v1beta1.attestation'),
+      createEmptyInstance: create)
     ..oo(0, [1])
-    ..a<PgpSignedAttestation>(1, 'pgpSignedAttestation', $pb.PbFieldType.OM,
-        PgpSignedAttestation.getDefault, PgpSignedAttestation.create)
+    ..aOM<PgpSignedAttestation>(1, 'pgpSignedAttestation',
+        subBuilder: PgpSignedAttestation.create)
     ..hasRequiredFields = false;
 
   Attestation._() : super();
@@ -223,18 +258,26 @@ class Attestation extends $pb.GeneratedMessage {
   static Attestation create() => Attestation._();
   Attestation createEmptyInstance() => create();
   static $pb.PbList<Attestation> createRepeated() => $pb.PbList<Attestation>();
-  static Attestation getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Attestation getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Attestation>(create);
   static Attestation _defaultInstance;
 
   Attestation_Signature whichSignature() =>
       _Attestation_SignatureByTag[$_whichOneof(0)];
   void clearSignature() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   PgpSignedAttestation get pgpSignedAttestation => $_getN(0);
+  @$pb.TagNumber(1)
   set pgpSignedAttestation(PgpSignedAttestation v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasPgpSignedAttestation() => $_has(0);
+  @$pb.TagNumber(1)
   void clearPgpSignedAttestation() => clearField(1);
+  @$pb.TagNumber(1)
+  PgpSignedAttestation ensurePgpSignedAttestation() => $_ensure(0);
 }

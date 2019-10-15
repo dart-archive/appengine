@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -15,7 +14,8 @@ export 'conversion_action_status.pbenum.dart';
 class ConversionActionStatusEnum extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'ConversionActionStatusEnum',
-      package: const $pb.PackageName('google.ads.googleads.v1.enums'))
+      package: const $pb.PackageName('google.ads.googleads.v1.enums'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   ConversionActionStatusEnum._() : super();
@@ -38,7 +38,8 @@ class ConversionActionStatusEnum extends $pb.GeneratedMessage {
   ConversionActionStatusEnum createEmptyInstance() => create();
   static $pb.PbList<ConversionActionStatusEnum> createRepeated() =>
       $pb.PbList<ConversionActionStatusEnum>();
-  static ConversionActionStatusEnum getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ConversionActionStatusEnum getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ConversionActionStatusEnum>(create);
   static ConversionActionStatusEnum _defaultInstance;
 }

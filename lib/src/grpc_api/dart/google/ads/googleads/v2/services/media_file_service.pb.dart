@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -15,7 +14,8 @@ import '../../../../rpc/status.pb.dart' as $2;
 
 class GetMediaFileRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetMediaFileRequest',
-      package: const $pb.PackageName('google.ads.googleads.v2.services'))
+      package: const $pb.PackageName('google.ads.googleads.v2.services'),
+      createEmptyInstance: create)
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
@@ -36,25 +36,31 @@ class GetMediaFileRequest extends $pb.GeneratedMessage {
   GetMediaFileRequest createEmptyInstance() => create();
   static $pb.PbList<GetMediaFileRequest> createRepeated() =>
       $pb.PbList<GetMediaFileRequest>();
-  static GetMediaFileRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetMediaFileRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetMediaFileRequest>(create);
   static GetMediaFileRequest _defaultInstance;
 
-  $core.String get resourceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get resourceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set resourceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResourceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResourceName() => clearField(1);
 }
 
 class MutateMediaFilesRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('MutateMediaFilesRequest',
-      package: const $pb.PackageName('google.ads.googleads.v2.services'))
+      package: const $pb.PackageName('google.ads.googleads.v2.services'),
+      createEmptyInstance: create)
     ..aOS(1, 'customerId')
-    ..pc<MediaFileOperation>(
-        2, 'operations', $pb.PbFieldType.PM, MediaFileOperation.create)
+    ..pc<MediaFileOperation>(2, 'operations', $pb.PbFieldType.PM,
+        subBuilder: MediaFileOperation.create)
     ..aOB(3, 'partialFailure')
     ..aOB(4, 'validateOnly')
     ..hasRequiredFields = false;
@@ -78,34 +84,48 @@ class MutateMediaFilesRequest extends $pb.GeneratedMessage {
   MutateMediaFilesRequest createEmptyInstance() => create();
   static $pb.PbList<MutateMediaFilesRequest> createRepeated() =>
       $pb.PbList<MutateMediaFilesRequest>();
-  static MutateMediaFilesRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MutateMediaFilesRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MutateMediaFilesRequest>(create);
   static MutateMediaFilesRequest _defaultInstance;
 
-  $core.String get customerId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get customerId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set customerId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCustomerId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCustomerId() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<MediaFileOperation> get operations => $_getList(1);
 
-  $core.bool get partialFailure => $_get(2, false);
+  @$pb.TagNumber(3)
+  $core.bool get partialFailure => $_getBF(2);
+  @$pb.TagNumber(3)
   set partialFailure($core.bool v) {
     $_setBool(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPartialFailure() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPartialFailure() => clearField(3);
 
-  $core.bool get validateOnly => $_get(3, false);
+  @$pb.TagNumber(4)
+  $core.bool get validateOnly => $_getBF(3);
+  @$pb.TagNumber(4)
   set validateOnly($core.bool v) {
     $_setBool(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasValidateOnly() => $_has(3);
+  @$pb.TagNumber(4)
   void clearValidateOnly() => clearField(4);
 }
 
@@ -118,10 +138,10 @@ class MediaFileOperation extends $pb.GeneratedMessage {
     0: MediaFileOperation_Operation.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('MediaFileOperation',
-      package: const $pb.PackageName('google.ads.googleads.v2.services'))
+      package: const $pb.PackageName('google.ads.googleads.v2.services'),
+      createEmptyInstance: create)
     ..oo(0, [1])
-    ..a<$1.MediaFile>(1, 'create_1', $pb.PbFieldType.OM,
-        $1.MediaFile.getDefault, $1.MediaFile.create)
+    ..aOM<$1.MediaFile>(1, 'create', subBuilder: $1.MediaFile.create)
     ..hasRequiredFields = false;
 
   MediaFileOperation._() : super();
@@ -141,30 +161,37 @@ class MediaFileOperation extends $pb.GeneratedMessage {
   MediaFileOperation createEmptyInstance() => create();
   static $pb.PbList<MediaFileOperation> createRepeated() =>
       $pb.PbList<MediaFileOperation>();
-  static MediaFileOperation getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MediaFileOperation getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MediaFileOperation>(create);
   static MediaFileOperation _defaultInstance;
 
   MediaFileOperation_Operation whichOperation() =>
       _MediaFileOperation_OperationByTag[$_whichOneof(0)];
   void clearOperation() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   $1.MediaFile get create_1 => $_getN(0);
+  @$pb.TagNumber(1)
   set create_1($1.MediaFile v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCreate_1() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCreate_1() => clearField(1);
+  @$pb.TagNumber(1)
+  $1.MediaFile ensureCreate_1() => $_ensure(0);
 }
 
 class MutateMediaFilesResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('MutateMediaFilesResponse',
-      package: const $pb.PackageName('google.ads.googleads.v2.services'))
-    ..pc<MutateMediaFileResult>(
-        2, 'results', $pb.PbFieldType.PM, MutateMediaFileResult.create)
-    ..a<$2.Status>(3, 'partialFailureError', $pb.PbFieldType.OM,
-        $2.Status.getDefault, $2.Status.create)
+      package: const $pb.PackageName('google.ads.googleads.v2.services'),
+      createEmptyInstance: create)
+    ..pc<MutateMediaFileResult>(2, 'results', $pb.PbFieldType.PM,
+        subBuilder: MutateMediaFileResult.create)
+    ..aOM<$2.Status>(3, 'partialFailureError', subBuilder: $2.Status.create)
     ..hasRequiredFields = false;
 
   MutateMediaFilesResponse._() : super();
@@ -186,24 +213,33 @@ class MutateMediaFilesResponse extends $pb.GeneratedMessage {
   MutateMediaFilesResponse createEmptyInstance() => create();
   static $pb.PbList<MutateMediaFilesResponse> createRepeated() =>
       $pb.PbList<MutateMediaFilesResponse>();
-  static MutateMediaFilesResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MutateMediaFilesResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MutateMediaFilesResponse>(create);
   static MutateMediaFilesResponse _defaultInstance;
 
+  @$pb.TagNumber(2)
   $core.List<MutateMediaFileResult> get results => $_getList(0);
 
+  @$pb.TagNumber(3)
   $2.Status get partialFailureError => $_getN(1);
+  @$pb.TagNumber(3)
   set partialFailureError($2.Status v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPartialFailureError() => $_has(1);
+  @$pb.TagNumber(3)
   void clearPartialFailureError() => clearField(3);
+  @$pb.TagNumber(3)
+  $2.Status ensurePartialFailureError() => $_ensure(1);
 }
 
 class MutateMediaFileResult extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('MutateMediaFileResult',
-      package: const $pb.PackageName('google.ads.googleads.v2.services'))
+      package: const $pb.PackageName('google.ads.googleads.v2.services'),
+      createEmptyInstance: create)
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
@@ -226,15 +262,20 @@ class MutateMediaFileResult extends $pb.GeneratedMessage {
   MutateMediaFileResult createEmptyInstance() => create();
   static $pb.PbList<MutateMediaFileResult> createRepeated() =>
       $pb.PbList<MutateMediaFileResult>();
-  static MutateMediaFileResult getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MutateMediaFileResult getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MutateMediaFileResult>(create);
   static MutateMediaFileResult _defaultInstance;
 
-  $core.String get resourceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get resourceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set resourceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResourceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResourceName() => clearField(1);
 }

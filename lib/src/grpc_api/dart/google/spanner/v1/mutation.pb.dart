@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -15,10 +14,12 @@ import 'keys.pb.dart' as $1;
 
 class Mutation_Write extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Mutation.Write',
-      package: const $pb.PackageName('google.spanner.v1'))
+      package: const $pb.PackageName('google.spanner.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'table')
     ..pPS(2, 'columns')
-    ..pc<$0.ListValue>(3, 'values', $pb.PbFieldType.PM, $0.ListValue.create)
+    ..pc<$0.ListValue>(3, 'values', $pb.PbFieldType.PM,
+        subBuilder: $0.ListValue.create)
     ..hasRequiredFields = false;
 
   Mutation_Write._() : super();
@@ -38,28 +39,36 @@ class Mutation_Write extends $pb.GeneratedMessage {
   Mutation_Write createEmptyInstance() => create();
   static $pb.PbList<Mutation_Write> createRepeated() =>
       $pb.PbList<Mutation_Write>();
-  static Mutation_Write getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Mutation_Write getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Mutation_Write>(create);
   static Mutation_Write _defaultInstance;
 
-  $core.String get table => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get table => $_getSZ(0);
+  @$pb.TagNumber(1)
   set table($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasTable() => $_has(0);
+  @$pb.TagNumber(1)
   void clearTable() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<$core.String> get columns => $_getList(1);
 
+  @$pb.TagNumber(3)
   $core.List<$0.ListValue> get values => $_getList(2);
 }
 
 class Mutation_Delete extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Mutation.Delete',
-      package: const $pb.PackageName('google.spanner.v1'))
+      package: const $pb.PackageName('google.spanner.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'table')
-    ..a<$1.KeySet>(
-        2, 'keySet', $pb.PbFieldType.OM, $1.KeySet.getDefault, $1.KeySet.create)
+    ..aOM<$1.KeySet>(2, 'keySet', subBuilder: $1.KeySet.create)
     ..hasRequiredFields = false;
 
   Mutation_Delete._() : super();
@@ -79,25 +88,36 @@ class Mutation_Delete extends $pb.GeneratedMessage {
   Mutation_Delete createEmptyInstance() => create();
   static $pb.PbList<Mutation_Delete> createRepeated() =>
       $pb.PbList<Mutation_Delete>();
-  static Mutation_Delete getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Mutation_Delete getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Mutation_Delete>(create);
   static Mutation_Delete _defaultInstance;
 
-  $core.String get table => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get table => $_getSZ(0);
+  @$pb.TagNumber(1)
   set table($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasTable() => $_has(0);
+  @$pb.TagNumber(1)
   void clearTable() => clearField(1);
 
+  @$pb.TagNumber(2)
   $1.KeySet get keySet => $_getN(1);
+  @$pb.TagNumber(2)
   set keySet($1.KeySet v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasKeySet() => $_has(1);
+  @$pb.TagNumber(2)
   void clearKeySet() => clearField(2);
+  @$pb.TagNumber(2)
+  $1.KeySet ensureKeySet() => $_ensure(1);
 }
 
 enum Mutation_Operation {
@@ -120,18 +140,15 @@ class Mutation extends $pb.GeneratedMessage {
     0: Mutation_Operation.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Mutation',
-      package: const $pb.PackageName('google.spanner.v1'))
+      package: const $pb.PackageName('google.spanner.v1'),
+      createEmptyInstance: create)
     ..oo(0, [1, 2, 3, 4, 5])
-    ..a<Mutation_Write>(1, 'insert', $pb.PbFieldType.OM,
-        Mutation_Write.getDefault, Mutation_Write.create)
-    ..a<Mutation_Write>(2, 'update', $pb.PbFieldType.OM,
-        Mutation_Write.getDefault, Mutation_Write.create)
-    ..a<Mutation_Write>(3, 'insertOrUpdate', $pb.PbFieldType.OM,
-        Mutation_Write.getDefault, Mutation_Write.create)
-    ..a<Mutation_Write>(4, 'replace', $pb.PbFieldType.OM,
-        Mutation_Write.getDefault, Mutation_Write.create)
-    ..a<Mutation_Delete>(5, 'delete', $pb.PbFieldType.OM,
-        Mutation_Delete.getDefault, Mutation_Delete.create)
+    ..aOM<Mutation_Write>(1, 'insert', subBuilder: Mutation_Write.create)
+    ..aOM<Mutation_Write>(2, 'update', subBuilder: Mutation_Write.create)
+    ..aOM<Mutation_Write>(3, 'insertOrUpdate',
+        subBuilder: Mutation_Write.create)
+    ..aOM<Mutation_Write>(4, 'replace', subBuilder: Mutation_Write.create)
+    ..aOM<Mutation_Delete>(5, 'delete', subBuilder: Mutation_Delete.create)
     ..hasRequiredFields = false;
 
   Mutation._() : super();
@@ -150,50 +167,82 @@ class Mutation extends $pb.GeneratedMessage {
   static Mutation create() => Mutation._();
   Mutation createEmptyInstance() => create();
   static $pb.PbList<Mutation> createRepeated() => $pb.PbList<Mutation>();
-  static Mutation getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Mutation getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Mutation>(create);
   static Mutation _defaultInstance;
 
   Mutation_Operation whichOperation() =>
       _Mutation_OperationByTag[$_whichOneof(0)];
   void clearOperation() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   Mutation_Write get insert => $_getN(0);
+  @$pb.TagNumber(1)
   set insert(Mutation_Write v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasInsert() => $_has(0);
+  @$pb.TagNumber(1)
   void clearInsert() => clearField(1);
+  @$pb.TagNumber(1)
+  Mutation_Write ensureInsert() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   Mutation_Write get update => $_getN(1);
+  @$pb.TagNumber(2)
   set update(Mutation_Write v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasUpdate() => $_has(1);
+  @$pb.TagNumber(2)
   void clearUpdate() => clearField(2);
+  @$pb.TagNumber(2)
+  Mutation_Write ensureUpdate() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   Mutation_Write get insertOrUpdate => $_getN(2);
+  @$pb.TagNumber(3)
   set insertOrUpdate(Mutation_Write v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasInsertOrUpdate() => $_has(2);
+  @$pb.TagNumber(3)
   void clearInsertOrUpdate() => clearField(3);
+  @$pb.TagNumber(3)
+  Mutation_Write ensureInsertOrUpdate() => $_ensure(2);
 
+  @$pb.TagNumber(4)
   Mutation_Write get replace => $_getN(3);
+  @$pb.TagNumber(4)
   set replace(Mutation_Write v) {
     setField(4, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasReplace() => $_has(3);
+  @$pb.TagNumber(4)
   void clearReplace() => clearField(4);
+  @$pb.TagNumber(4)
+  Mutation_Write ensureReplace() => $_ensure(3);
 
+  @$pb.TagNumber(5)
   Mutation_Delete get delete => $_getN(4);
+  @$pb.TagNumber(5)
   set delete(Mutation_Delete v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasDelete() => $_has(4);
+  @$pb.TagNumber(5)
   void clearDelete() => clearField(5);
+  @$pb.TagNumber(5)
+  Mutation_Delete ensureDelete() => $_ensure(4);
 }

@@ -189,7 +189,16 @@ const ProfileQuery$json = {
       '4': 1,
       '5': 11,
       '6': '.google.cloud.talent.v4beta1.CandidateAvailabilityFilter',
-      '10': 'candidateAvailabilityFilter'
+      '8': {'3': true},
+      '10': 'candidateAvailabilityFilter',
+    },
+    {
+      '1': 'availability_filters',
+      '3': 18,
+      '4': 3,
+      '5': 11,
+      '6': '.google.cloud.talent.v4beta1.AvailabilityFilter',
+      '10': 'availabilityFilters'
     },
     {
       '1': 'person_name_filters',
@@ -247,6 +256,7 @@ const CompensationFilter$json = {
       '4': 1,
       '5': 14,
       '6': '.google.cloud.talent.v4beta1.CompensationFilter.FilterType',
+      '8': {},
       '10': 'type'
     },
     {
@@ -255,6 +265,7 @@ const CompensationFilter$json = {
       '4': 3,
       '5': 14,
       '6': '.google.cloud.talent.v4beta1.CompensationInfo.CompensationUnit',
+      '8': {},
       '10': 'units'
     },
     {
@@ -296,6 +307,7 @@ const CommuteFilter$json = {
       '4': 1,
       '5': 14,
       '6': '.google.cloud.talent.v4beta1.CommuteMethod',
+      '8': {},
       '10': 'commuteMethod'
     },
     {
@@ -304,6 +316,7 @@ const CommuteFilter$json = {
       '4': 1,
       '5': 11,
       '6': '.google.type.LatLng',
+      '8': {},
       '10': 'startCoordinates'
     },
     {
@@ -312,6 +325,7 @@ const CommuteFilter$json = {
       '4': 1,
       '5': 11,
       '6': '.google.protobuf.Duration',
+      '8': {},
       '10': 'travelDuration'
     },
     {
@@ -358,7 +372,7 @@ const CommuteFilter_RoadTraffic$json = {
 const JobTitleFilter$json = {
   '1': 'JobTitleFilter',
   '2': [
-    {'1': 'job_title', '3': 1, '4': 1, '5': 9, '10': 'jobTitle'},
+    {'1': 'job_title', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'jobTitle'},
     {'1': 'negated', '3': 2, '4': 1, '5': 8, '10': 'negated'},
   ],
 };
@@ -366,7 +380,7 @@ const JobTitleFilter$json = {
 const SkillFilter$json = {
   '1': 'SkillFilter',
   '2': [
-    {'1': 'skill', '3': 1, '4': 1, '5': 9, '10': 'skill'},
+    {'1': 'skill', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'skill'},
     {'1': 'negated', '3': 2, '4': 1, '5': 8, '10': 'negated'},
   ],
 };
@@ -374,7 +388,7 @@ const SkillFilter$json = {
 const EmployerFilter$json = {
   '1': 'EmployerFilter',
   '2': [
-    {'1': 'employer', '3': 1, '4': 1, '5': 9, '10': 'employer'},
+    {'1': 'employer', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'employer'},
     {
       '1': 'mode',
       '3': 2,
@@ -462,7 +476,14 @@ const ApplicationDateFilter$json = {
 const ApplicationOutcomeNotesFilter$json = {
   '1': 'ApplicationOutcomeNotesFilter',
   '2': [
-    {'1': 'outcome_notes', '3': 1, '4': 1, '5': 9, '10': 'outcomeNotes'},
+    {
+      '1': 'outcome_notes',
+      '3': 1,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'outcomeNotes'
+    },
     {'1': 'negated', '3': 2, '4': 1, '5': 8, '10': 'negated'},
   ],
 };
@@ -527,11 +548,37 @@ const CandidateAvailabilityFilter$json = {
   '2': [
     {'1': 'negated', '3': 1, '4': 1, '5': 8, '10': 'negated'},
   ],
+  '7': {'3': true},
+};
+
+const AvailabilityFilter$json = {
+  '1': 'AvailabilityFilter',
+  '2': [
+    {
+      '1': 'signal_type',
+      '3': 1,
+      '4': 1,
+      '5': 14,
+      '6': '.google.cloud.talent.v4beta1.AvailabilitySignalType',
+      '8': {},
+      '10': 'signalType'
+    },
+    {
+      '1': 'range',
+      '3': 2,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.talent.v4beta1.TimestampRange',
+      '8': {},
+      '10': 'range'
+    },
+    {'1': 'required', '3': 3, '4': 1, '5': 8, '10': 'required'},
+  ],
 };
 
 const PersonNameFilter$json = {
   '1': 'PersonNameFilter',
   '2': [
-    {'1': 'person_name', '3': 1, '4': 1, '5': 9, '10': 'personName'},
+    {'1': 'person_name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'personName'},
   ],
 };

@@ -6,7 +6,7 @@
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
 // ignore_for_file: UNDEFINED_SHOWN_NAME,UNUSED_SHOWN_NAME
-import 'dart:core' as $core show int, dynamic, String, List, Map;
+import 'dart:core' as $core;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class FeedItemValidationErrorEnum_FeedItemValidationError
@@ -380,6 +380,13 @@ class FeedItemValidationErrorEnum_FeedItemValidationError
       MISSING_LONGITUDE_VALUE =
       FeedItemValidationErrorEnum_FeedItemValidationError._(
           96, 'MISSING_LONGITUDE_VALUE');
+  static const FeedItemValidationErrorEnum_FeedItemValidationError
+      ADDRESS_NOT_FOUND = FeedItemValidationErrorEnum_FeedItemValidationError._(
+          97, 'ADDRESS_NOT_FOUND');
+  static const FeedItemValidationErrorEnum_FeedItemValidationError
+      ADDRESS_NOT_TARGETABLE =
+      FeedItemValidationErrorEnum_FeedItemValidationError._(
+          98, 'ADDRESS_NOT_TARGETABLE');
 
   static const $core.List<FeedItemValidationErrorEnum_FeedItemValidationError>
       values = <FeedItemValidationErrorEnum_FeedItemValidationError>[
@@ -480,6 +487,8 @@ class FeedItemValidationErrorEnum_FeedItemValidationError
     INVALID_IMAGE_URL,
     MISSING_LATITUDE_VALUE,
     MISSING_LONGITUDE_VALUE,
+    ADDRESS_NOT_FOUND,
+    ADDRESS_NOT_TARGETABLE,
   ];
 
   static final $core

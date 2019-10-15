@@ -10,6 +10,14 @@ const ExtensionFeedItem$json = {
   '2': [
     {'1': 'resource_name', '3': 1, '4': 1, '5': 9, '10': 'resourceName'},
     {
+      '1': 'id',
+      '3': 24,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.Int64Value',
+      '10': 'id'
+    },
+    {
       '1': 'extension_type',
       '3': 13,
       '4': 1,
@@ -163,6 +171,15 @@ const ExtensionFeedItem$json = {
       '6': '.google.ads.googleads.v2.common.AffiliateLocationFeedItem',
       '9': 0,
       '10': 'affiliateLocationFeedItem'
+    },
+    {
+      '1': 'hotel_callout_feed_item',
+      '3': 23,
+      '4': 1,
+      '5': 11,
+      '6': '.google.ads.googleads.v2.common.HotelCalloutFeedItem',
+      '9': 0,
+      '10': 'hotelCalloutFeedItem'
     },
     {
       '1': 'targeted_campaign',

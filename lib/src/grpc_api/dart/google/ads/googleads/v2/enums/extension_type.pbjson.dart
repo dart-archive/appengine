@@ -26,5 +26,6 @@ const ExtensionTypeEnum_ExtensionType$json = {
     {'1': 'STRUCTURED_SNIPPET', '2': 11},
     {'1': 'LOCATION', '2': 12},
     {'1': 'AFFILIATE_LOCATION', '2': 13},
+    {'1': 'HOTEL_CALLOUT', '2': 15},
   ],
 };

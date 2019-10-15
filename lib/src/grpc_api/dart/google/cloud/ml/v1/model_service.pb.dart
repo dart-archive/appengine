@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -14,11 +13,11 @@ import '../../../protobuf/timestamp.pb.dart' as $3;
 
 class Model extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Model',
-      package: const $pb.PackageName('google.cloud.ml.v1'))
+      package: const $pb.PackageName('google.cloud.ml.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..aOS(2, 'description')
-    ..a<Version>(3, 'defaultVersion', $pb.PbFieldType.OM, Version.getDefault,
-        Version.create)
+    ..aOM<Version>(3, 'defaultVersion', subBuilder: Version.create)
     ..pPS(4, 'regions')
     ..aOB(5, 'onlinePredictionLogging')
     ..hasRequiredFields = false;
@@ -39,58 +38,77 @@ class Model extends $pb.GeneratedMessage {
   static Model create() => Model._();
   Model createEmptyInstance() => create();
   static $pb.PbList<Model> createRepeated() => $pb.PbList<Model>();
-  static Model getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Model getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Model>(create);
   static Model _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.String get description => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get description => $_getSZ(1);
+  @$pb.TagNumber(2)
   set description($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasDescription() => $_has(1);
+  @$pb.TagNumber(2)
   void clearDescription() => clearField(2);
 
+  @$pb.TagNumber(3)
   Version get defaultVersion => $_getN(2);
+  @$pb.TagNumber(3)
   set defaultVersion(Version v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasDefaultVersion() => $_has(2);
+  @$pb.TagNumber(3)
   void clearDefaultVersion() => clearField(3);
+  @$pb.TagNumber(3)
+  Version ensureDefaultVersion() => $_ensure(2);
 
+  @$pb.TagNumber(4)
   $core.List<$core.String> get regions => $_getList(3);
 
-  $core.bool get onlinePredictionLogging => $_get(4, false);
+  @$pb.TagNumber(5)
+  $core.bool get onlinePredictionLogging => $_getBF(4);
+  @$pb.TagNumber(5)
   set onlinePredictionLogging($core.bool v) {
     $_setBool(4, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasOnlinePredictionLogging() => $_has(4);
+  @$pb.TagNumber(5)
   void clearOnlinePredictionLogging() => clearField(5);
 }
 
 class Version extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Version',
-      package: const $pb.PackageName('google.cloud.ml.v1'))
+      package: const $pb.PackageName('google.cloud.ml.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..aOS(2, 'description')
     ..aOB(3, 'isDefault')
     ..aOS(4, 'deploymentUri')
-    ..a<$3.Timestamp>(5, 'createTime', $pb.PbFieldType.OM,
-        $3.Timestamp.getDefault, $3.Timestamp.create)
-    ..a<$3.Timestamp>(6, 'lastUseTime', $pb.PbFieldType.OM,
-        $3.Timestamp.getDefault, $3.Timestamp.create)
+    ..aOM<$3.Timestamp>(5, 'createTime', subBuilder: $3.Timestamp.create)
+    ..aOM<$3.Timestamp>(6, 'lastUseTime', subBuilder: $3.Timestamp.create)
     ..aOS(8, 'runtimeVersion')
-    ..a<ManualScaling>(9, 'manualScaling', $pb.PbFieldType.OM,
-        ManualScaling.getDefault, ManualScaling.create)
+    ..aOM<ManualScaling>(9, 'manualScaling', subBuilder: ManualScaling.create)
     ..hasRequiredFields = false;
 
   Version._() : super();
@@ -109,77 +127,118 @@ class Version extends $pb.GeneratedMessage {
   static Version create() => Version._();
   Version createEmptyInstance() => create();
   static $pb.PbList<Version> createRepeated() => $pb.PbList<Version>();
-  static Version getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Version getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Version>(create);
   static Version _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.String get description => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get description => $_getSZ(1);
+  @$pb.TagNumber(2)
   set description($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasDescription() => $_has(1);
+  @$pb.TagNumber(2)
   void clearDescription() => clearField(2);
 
-  $core.bool get isDefault => $_get(2, false);
+  @$pb.TagNumber(3)
+  $core.bool get isDefault => $_getBF(2);
+  @$pb.TagNumber(3)
   set isDefault($core.bool v) {
     $_setBool(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasIsDefault() => $_has(2);
+  @$pb.TagNumber(3)
   void clearIsDefault() => clearField(3);
 
-  $core.String get deploymentUri => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get deploymentUri => $_getSZ(3);
+  @$pb.TagNumber(4)
   set deploymentUri($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasDeploymentUri() => $_has(3);
+  @$pb.TagNumber(4)
   void clearDeploymentUri() => clearField(4);
 
+  @$pb.TagNumber(5)
   $3.Timestamp get createTime => $_getN(4);
+  @$pb.TagNumber(5)
   set createTime($3.Timestamp v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasCreateTime() => $_has(4);
+  @$pb.TagNumber(5)
   void clearCreateTime() => clearField(5);
+  @$pb.TagNumber(5)
+  $3.Timestamp ensureCreateTime() => $_ensure(4);
 
+  @$pb.TagNumber(6)
   $3.Timestamp get lastUseTime => $_getN(5);
+  @$pb.TagNumber(6)
   set lastUseTime($3.Timestamp v) {
     setField(6, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasLastUseTime() => $_has(5);
+  @$pb.TagNumber(6)
   void clearLastUseTime() => clearField(6);
+  @$pb.TagNumber(6)
+  $3.Timestamp ensureLastUseTime() => $_ensure(5);
 
-  $core.String get runtimeVersion => $_getS(6, '');
+  @$pb.TagNumber(8)
+  $core.String get runtimeVersion => $_getSZ(6);
+  @$pb.TagNumber(8)
   set runtimeVersion($core.String v) {
     $_setString(6, v);
   }
 
+  @$pb.TagNumber(8)
   $core.bool hasRuntimeVersion() => $_has(6);
+  @$pb.TagNumber(8)
   void clearRuntimeVersion() => clearField(8);
 
+  @$pb.TagNumber(9)
   ManualScaling get manualScaling => $_getN(7);
+  @$pb.TagNumber(9)
   set manualScaling(ManualScaling v) {
     setField(9, v);
   }
 
+  @$pb.TagNumber(9)
   $core.bool hasManualScaling() => $_has(7);
+  @$pb.TagNumber(9)
   void clearManualScaling() => clearField(9);
+  @$pb.TagNumber(9)
+  ManualScaling ensureManualScaling() => $_ensure(7);
 }
 
 class ManualScaling extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ManualScaling',
-      package: const $pb.PackageName('google.cloud.ml.v1'))
+      package: const $pb.PackageName('google.cloud.ml.v1'),
+      createEmptyInstance: create)
     ..a<$core.int>(1, 'nodes', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
@@ -200,23 +259,30 @@ class ManualScaling extends $pb.GeneratedMessage {
   ManualScaling createEmptyInstance() => create();
   static $pb.PbList<ManualScaling> createRepeated() =>
       $pb.PbList<ManualScaling>();
-  static ManualScaling getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ManualScaling getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ManualScaling>(create);
   static ManualScaling _defaultInstance;
 
-  $core.int get nodes => $_get(0, 0);
+  @$pb.TagNumber(1)
+  $core.int get nodes => $_getIZ(0);
+  @$pb.TagNumber(1)
   set nodes($core.int v) {
     $_setSignedInt32(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasNodes() => $_has(0);
+  @$pb.TagNumber(1)
   void clearNodes() => clearField(1);
 }
 
 class CreateModelRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateModelRequest',
-      package: const $pb.PackageName('google.cloud.ml.v1'))
+      package: const $pb.PackageName('google.cloud.ml.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
-    ..a<Model>(2, 'model', $pb.PbFieldType.OM, Model.getDefault, Model.create)
+    ..aOM<Model>(2, 'model', subBuilder: Model.create)
     ..hasRequiredFields = false;
 
   CreateModelRequest._() : super();
@@ -236,30 +302,42 @@ class CreateModelRequest extends $pb.GeneratedMessage {
   CreateModelRequest createEmptyInstance() => create();
   static $pb.PbList<CreateModelRequest> createRepeated() =>
       $pb.PbList<CreateModelRequest>();
-  static CreateModelRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateModelRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateModelRequest>(create);
   static CreateModelRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  @$pb.TagNumber(2)
   Model get model => $_getN(1);
+  @$pb.TagNumber(2)
   set model(Model v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasModel() => $_has(1);
+  @$pb.TagNumber(2)
   void clearModel() => clearField(2);
+  @$pb.TagNumber(2)
+  Model ensureModel() => $_ensure(1);
 }
 
 class ListModelsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListModelsRequest',
-      package: const $pb.PackageName('google.cloud.ml.v1'))
+      package: const $pb.PackageName('google.cloud.ml.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..aOS(4, 'pageToken')
     ..a<$core.int>(5, 'pageSize', $pb.PbFieldType.O3)
@@ -282,39 +360,53 @@ class ListModelsRequest extends $pb.GeneratedMessage {
   ListModelsRequest createEmptyInstance() => create();
   static $pb.PbList<ListModelsRequest> createRepeated() =>
       $pb.PbList<ListModelsRequest>();
-  static ListModelsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListModelsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListModelsRequest>(create);
   static ListModelsRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.String get pageToken => $_getS(1, '');
+  @$pb.TagNumber(4)
+  $core.String get pageToken => $_getSZ(1);
+  @$pb.TagNumber(4)
   set pageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasPageToken() => $_has(1);
+  @$pb.TagNumber(4)
   void clearPageToken() => clearField(4);
 
-  $core.int get pageSize => $_get(2, 0);
+  @$pb.TagNumber(5)
+  $core.int get pageSize => $_getIZ(2);
+  @$pb.TagNumber(5)
   set pageSize($core.int v) {
     $_setSignedInt32(2, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasPageSize() => $_has(2);
+  @$pb.TagNumber(5)
   void clearPageSize() => clearField(5);
 }
 
 class ListModelsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListModelsResponse',
-      package: const $pb.PackageName('google.cloud.ml.v1'))
-    ..pc<Model>(1, 'models', $pb.PbFieldType.PM, Model.create)
+      package: const $pb.PackageName('google.cloud.ml.v1'),
+      createEmptyInstance: create)
+    ..pc<Model>(1, 'models', $pb.PbFieldType.PM, subBuilder: Model.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -335,24 +427,31 @@ class ListModelsResponse extends $pb.GeneratedMessage {
   ListModelsResponse createEmptyInstance() => create();
   static $pb.PbList<ListModelsResponse> createRepeated() =>
       $pb.PbList<ListModelsResponse>();
-  static ListModelsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListModelsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListModelsResponse>(create);
   static ListModelsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<Model> get models => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class GetModelRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetModelRequest',
-      package: const $pb.PackageName('google.cloud.ml.v1'))
+      package: const $pb.PackageName('google.cloud.ml.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -373,22 +472,28 @@ class GetModelRequest extends $pb.GeneratedMessage {
   GetModelRequest createEmptyInstance() => create();
   static $pb.PbList<GetModelRequest> createRepeated() =>
       $pb.PbList<GetModelRequest>();
-  static GetModelRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetModelRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetModelRequest>(create);
   static GetModelRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class DeleteModelRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteModelRequest',
-      package: const $pb.PackageName('google.cloud.ml.v1'))
+      package: const $pb.PackageName('google.cloud.ml.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -409,25 +514,30 @@ class DeleteModelRequest extends $pb.GeneratedMessage {
   DeleteModelRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteModelRequest> createRepeated() =>
       $pb.PbList<DeleteModelRequest>();
-  static DeleteModelRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteModelRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteModelRequest>(create);
   static DeleteModelRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class CreateVersionRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('CreateVersionRequest',
-      package: const $pb.PackageName('google.cloud.ml.v1'))
+      package: const $pb.PackageName('google.cloud.ml.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
-    ..a<Version>(
-        2, 'version', $pb.PbFieldType.OM, Version.getDefault, Version.create)
+    ..aOM<Version>(2, 'version', subBuilder: Version.create)
     ..hasRequiredFields = false;
 
   CreateVersionRequest._() : super();
@@ -448,30 +558,42 @@ class CreateVersionRequest extends $pb.GeneratedMessage {
   CreateVersionRequest createEmptyInstance() => create();
   static $pb.PbList<CreateVersionRequest> createRepeated() =>
       $pb.PbList<CreateVersionRequest>();
-  static CreateVersionRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static CreateVersionRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<CreateVersionRequest>(create);
   static CreateVersionRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  @$pb.TagNumber(2)
   Version get version => $_getN(1);
+  @$pb.TagNumber(2)
   set version(Version v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasVersion() => $_has(1);
+  @$pb.TagNumber(2)
   void clearVersion() => clearField(2);
+  @$pb.TagNumber(2)
+  Version ensureVersion() => $_ensure(1);
 }
 
 class ListVersionsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListVersionsRequest',
-      package: const $pb.PackageName('google.cloud.ml.v1'))
+      package: const $pb.PackageName('google.cloud.ml.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'parent')
     ..aOS(4, 'pageToken')
     ..a<$core.int>(5, 'pageSize', $pb.PbFieldType.O3)
@@ -494,39 +616,53 @@ class ListVersionsRequest extends $pb.GeneratedMessage {
   ListVersionsRequest createEmptyInstance() => create();
   static $pb.PbList<ListVersionsRequest> createRepeated() =>
       $pb.PbList<ListVersionsRequest>();
-  static ListVersionsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListVersionsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListVersionsRequest>(create);
   static ListVersionsRequest _defaultInstance;
 
-  $core.String get parent => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get parent => $_getSZ(0);
+  @$pb.TagNumber(1)
   set parent($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasParent() => $_has(0);
+  @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
-  $core.String get pageToken => $_getS(1, '');
+  @$pb.TagNumber(4)
+  $core.String get pageToken => $_getSZ(1);
+  @$pb.TagNumber(4)
   set pageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasPageToken() => $_has(1);
+  @$pb.TagNumber(4)
   void clearPageToken() => clearField(4);
 
-  $core.int get pageSize => $_get(2, 0);
+  @$pb.TagNumber(5)
+  $core.int get pageSize => $_getIZ(2);
+  @$pb.TagNumber(5)
   set pageSize($core.int v) {
     $_setSignedInt32(2, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasPageSize() => $_has(2);
+  @$pb.TagNumber(5)
   void clearPageSize() => clearField(5);
 }
 
 class ListVersionsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ListVersionsResponse',
-      package: const $pb.PackageName('google.cloud.ml.v1'))
-    ..pc<Version>(1, 'versions', $pb.PbFieldType.PM, Version.create)
+      package: const $pb.PackageName('google.cloud.ml.v1'),
+      createEmptyInstance: create)
+    ..pc<Version>(1, 'versions', $pb.PbFieldType.PM, subBuilder: Version.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -548,24 +684,31 @@ class ListVersionsResponse extends $pb.GeneratedMessage {
   ListVersionsResponse createEmptyInstance() => create();
   static $pb.PbList<ListVersionsResponse> createRepeated() =>
       $pb.PbList<ListVersionsResponse>();
-  static ListVersionsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ListVersionsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ListVersionsResponse>(create);
   static ListVersionsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<Version> get versions => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class GetVersionRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetVersionRequest',
-      package: const $pb.PackageName('google.cloud.ml.v1'))
+      package: const $pb.PackageName('google.cloud.ml.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -586,22 +729,28 @@ class GetVersionRequest extends $pb.GeneratedMessage {
   GetVersionRequest createEmptyInstance() => create();
   static $pb.PbList<GetVersionRequest> createRepeated() =>
       $pb.PbList<GetVersionRequest>();
-  static GetVersionRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetVersionRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetVersionRequest>(create);
   static GetVersionRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class DeleteVersionRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeleteVersionRequest',
-      package: const $pb.PackageName('google.cloud.ml.v1'))
+      package: const $pb.PackageName('google.cloud.ml.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -623,22 +772,28 @@ class DeleteVersionRequest extends $pb.GeneratedMessage {
   DeleteVersionRequest createEmptyInstance() => create();
   static $pb.PbList<DeleteVersionRequest> createRepeated() =>
       $pb.PbList<DeleteVersionRequest>();
-  static DeleteVersionRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DeleteVersionRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DeleteVersionRequest>(create);
   static DeleteVersionRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
 
 class SetDefaultVersionRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('SetDefaultVersionRequest',
-      package: const $pb.PackageName('google.cloud.ml.v1'))
+      package: const $pb.PackageName('google.cloud.ml.v1'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..hasRequiredFields = false;
 
@@ -661,15 +816,20 @@ class SetDefaultVersionRequest extends $pb.GeneratedMessage {
   SetDefaultVersionRequest createEmptyInstance() => create();
   static $pb.PbList<SetDefaultVersionRequest> createRepeated() =>
       $pb.PbList<SetDefaultVersionRequest>();
-  static SetDefaultVersionRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static SetDefaultVersionRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SetDefaultVersionRequest>(create);
   static SetDefaultVersionRequest _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }

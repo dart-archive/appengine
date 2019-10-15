@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -15,7 +14,8 @@ export 'matching_function_operator.pbenum.dart';
 class MatchingFunctionOperatorEnum extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'MatchingFunctionOperatorEnum',
-      package: const $pb.PackageName('google.ads.googleads.v2.enums'))
+      package: const $pb.PackageName('google.ads.googleads.v2.enums'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   MatchingFunctionOperatorEnum._() : super();
@@ -39,7 +39,8 @@ class MatchingFunctionOperatorEnum extends $pb.GeneratedMessage {
   MatchingFunctionOperatorEnum createEmptyInstance() => create();
   static $pb.PbList<MatchingFunctionOperatorEnum> createRepeated() =>
       $pb.PbList<MatchingFunctionOperatorEnum>();
-  static MatchingFunctionOperatorEnum getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MatchingFunctionOperatorEnum getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MatchingFunctionOperatorEnum>(create);
   static MatchingFunctionOperatorEnum _defaultInstance;
 }

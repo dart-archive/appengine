@@ -5,14 +5,14 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
 class GetPolicyOptions extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetPolicyOptions',
-      package: const $pb.PackageName('google.iam.v1'))
+      package: const $pb.PackageName('google.iam.v1'),
+      createEmptyInstance: create)
     ..a<$core.int>(1, 'requestedPolicyVersion', $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
@@ -33,15 +33,20 @@ class GetPolicyOptions extends $pb.GeneratedMessage {
   GetPolicyOptions createEmptyInstance() => create();
   static $pb.PbList<GetPolicyOptions> createRepeated() =>
       $pb.PbList<GetPolicyOptions>();
-  static GetPolicyOptions getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetPolicyOptions getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetPolicyOptions>(create);
   static GetPolicyOptions _defaultInstance;
 
-  $core.int get requestedPolicyVersion => $_get(0, 0);
+  @$pb.TagNumber(1)
+  $core.int get requestedPolicyVersion => $_getIZ(0);
+  @$pb.TagNumber(1)
   set requestedPolicyVersion($core.int v) {
     $_setSignedInt32(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasRequestedPolicyVersion() => $_has(0);
+  @$pb.TagNumber(1)
   void clearRequestedPolicyVersion() => clearField(1);
 }

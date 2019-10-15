@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -15,7 +14,8 @@ import '../../../../rpc/status.pb.dart' as $2;
 
 class GetFeedMappingRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetFeedMappingRequest',
-      package: const $pb.PackageName('google.ads.googleads.v1.services'))
+      package: const $pb.PackageName('google.ads.googleads.v1.services'),
+      createEmptyInstance: create)
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
@@ -38,25 +38,31 @@ class GetFeedMappingRequest extends $pb.GeneratedMessage {
   GetFeedMappingRequest createEmptyInstance() => create();
   static $pb.PbList<GetFeedMappingRequest> createRepeated() =>
       $pb.PbList<GetFeedMappingRequest>();
-  static GetFeedMappingRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetFeedMappingRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetFeedMappingRequest>(create);
   static GetFeedMappingRequest _defaultInstance;
 
-  $core.String get resourceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get resourceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set resourceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResourceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResourceName() => clearField(1);
 }
 
 class MutateFeedMappingsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('MutateFeedMappingsRequest',
-      package: const $pb.PackageName('google.ads.googleads.v1.services'))
+      package: const $pb.PackageName('google.ads.googleads.v1.services'),
+      createEmptyInstance: create)
     ..aOS(1, 'customerId')
-    ..pc<FeedMappingOperation>(
-        2, 'operations', $pb.PbFieldType.PM, FeedMappingOperation.create)
+    ..pc<FeedMappingOperation>(2, 'operations', $pb.PbFieldType.PM,
+        subBuilder: FeedMappingOperation.create)
     ..aOB(3, 'partialFailure')
     ..aOB(4, 'validateOnly')
     ..hasRequiredFields = false;
@@ -81,34 +87,48 @@ class MutateFeedMappingsRequest extends $pb.GeneratedMessage {
   MutateFeedMappingsRequest createEmptyInstance() => create();
   static $pb.PbList<MutateFeedMappingsRequest> createRepeated() =>
       $pb.PbList<MutateFeedMappingsRequest>();
-  static MutateFeedMappingsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MutateFeedMappingsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MutateFeedMappingsRequest>(create);
   static MutateFeedMappingsRequest _defaultInstance;
 
-  $core.String get customerId => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get customerId => $_getSZ(0);
+  @$pb.TagNumber(1)
   set customerId($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCustomerId() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCustomerId() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<FeedMappingOperation> get operations => $_getList(1);
 
-  $core.bool get partialFailure => $_get(2, false);
+  @$pb.TagNumber(3)
+  $core.bool get partialFailure => $_getBF(2);
+  @$pb.TagNumber(3)
   set partialFailure($core.bool v) {
     $_setBool(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPartialFailure() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPartialFailure() => clearField(3);
 
-  $core.bool get validateOnly => $_get(3, false);
+  @$pb.TagNumber(4)
+  $core.bool get validateOnly => $_getBF(3);
+  @$pb.TagNumber(4)
   set validateOnly($core.bool v) {
     $_setBool(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasValidateOnly() => $_has(3);
+  @$pb.TagNumber(4)
   void clearValidateOnly() => clearField(4);
 }
 
@@ -122,10 +142,10 @@ class FeedMappingOperation extends $pb.GeneratedMessage {
     0: FeedMappingOperation_Operation.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('FeedMappingOperation',
-      package: const $pb.PackageName('google.ads.googleads.v1.services'))
+      package: const $pb.PackageName('google.ads.googleads.v1.services'),
+      createEmptyInstance: create)
     ..oo(0, [1, 3])
-    ..a<$1.FeedMapping>(1, 'create_1', $pb.PbFieldType.OM,
-        $1.FeedMapping.getDefault, $1.FeedMapping.create)
+    ..aOM<$1.FeedMapping>(1, 'create', subBuilder: $1.FeedMapping.create)
     ..aOS(3, 'remove')
     ..hasRequiredFields = false;
 
@@ -147,39 +167,50 @@ class FeedMappingOperation extends $pb.GeneratedMessage {
   FeedMappingOperation createEmptyInstance() => create();
   static $pb.PbList<FeedMappingOperation> createRepeated() =>
       $pb.PbList<FeedMappingOperation>();
-  static FeedMappingOperation getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static FeedMappingOperation getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<FeedMappingOperation>(create);
   static FeedMappingOperation _defaultInstance;
 
   FeedMappingOperation_Operation whichOperation() =>
       _FeedMappingOperation_OperationByTag[$_whichOneof(0)];
   void clearOperation() => clearField($_whichOneof(0));
 
+  @$pb.TagNumber(1)
   $1.FeedMapping get create_1 => $_getN(0);
+  @$pb.TagNumber(1)
   set create_1($1.FeedMapping v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCreate_1() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCreate_1() => clearField(1);
+  @$pb.TagNumber(1)
+  $1.FeedMapping ensureCreate_1() => $_ensure(0);
 
-  $core.String get remove => $_getS(1, '');
+  @$pb.TagNumber(3)
+  $core.String get remove => $_getSZ(1);
+  @$pb.TagNumber(3)
   set remove($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasRemove() => $_has(1);
+  @$pb.TagNumber(3)
   void clearRemove() => clearField(3);
 }
 
 class MutateFeedMappingsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'MutateFeedMappingsResponse',
-      package: const $pb.PackageName('google.ads.googleads.v1.services'))
-    ..pc<MutateFeedMappingResult>(
-        2, 'results', $pb.PbFieldType.PM, MutateFeedMappingResult.create)
-    ..a<$2.Status>(3, 'partialFailureError', $pb.PbFieldType.OM,
-        $2.Status.getDefault, $2.Status.create)
+      package: const $pb.PackageName('google.ads.googleads.v1.services'),
+      createEmptyInstance: create)
+    ..pc<MutateFeedMappingResult>(2, 'results', $pb.PbFieldType.PM,
+        subBuilder: MutateFeedMappingResult.create)
+    ..aOM<$2.Status>(3, 'partialFailureError', subBuilder: $2.Status.create)
     ..hasRequiredFields = false;
 
   MutateFeedMappingsResponse._() : super();
@@ -202,24 +233,33 @@ class MutateFeedMappingsResponse extends $pb.GeneratedMessage {
   MutateFeedMappingsResponse createEmptyInstance() => create();
   static $pb.PbList<MutateFeedMappingsResponse> createRepeated() =>
       $pb.PbList<MutateFeedMappingsResponse>();
-  static MutateFeedMappingsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MutateFeedMappingsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MutateFeedMappingsResponse>(create);
   static MutateFeedMappingsResponse _defaultInstance;
 
+  @$pb.TagNumber(2)
   $core.List<MutateFeedMappingResult> get results => $_getList(0);
 
+  @$pb.TagNumber(3)
   $2.Status get partialFailureError => $_getN(1);
+  @$pb.TagNumber(3)
   set partialFailureError($2.Status v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPartialFailureError() => $_has(1);
+  @$pb.TagNumber(3)
   void clearPartialFailureError() => clearField(3);
+  @$pb.TagNumber(3)
+  $2.Status ensurePartialFailureError() => $_ensure(1);
 }
 
 class MutateFeedMappingResult extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('MutateFeedMappingResult',
-      package: const $pb.PackageName('google.ads.googleads.v1.services'))
+      package: const $pb.PackageName('google.ads.googleads.v1.services'),
+      createEmptyInstance: create)
     ..aOS(1, 'resourceName')
     ..hasRequiredFields = false;
 
@@ -242,15 +282,20 @@ class MutateFeedMappingResult extends $pb.GeneratedMessage {
   MutateFeedMappingResult createEmptyInstance() => create();
   static $pb.PbList<MutateFeedMappingResult> createRepeated() =>
       $pb.PbList<MutateFeedMappingResult>();
-  static MutateFeedMappingResult getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static MutateFeedMappingResult getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<MutateFeedMappingResult>(create);
   static MutateFeedMappingResult _defaultInstance;
 
-  $core.String get resourceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get resourceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set resourceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResourceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResourceName() => clearField(1);
 }

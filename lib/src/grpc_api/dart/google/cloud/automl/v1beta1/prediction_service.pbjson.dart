@@ -50,6 +50,14 @@ const PredictResponse$json = {
       '10': 'payload'
     },
     {
+      '1': 'preprocessed_input',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.cloud.automl.v1beta1.ExamplePayload',
+      '10': 'preprocessedInput'
+    },
+    {
       '1': 'metadata',
       '3': 2,
       '4': 3,

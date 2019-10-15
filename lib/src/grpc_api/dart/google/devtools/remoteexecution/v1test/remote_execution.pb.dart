@@ -5,10 +5,9 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
-import 'package:fixnum/fixnum.dart';
+import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
 import '../../../protobuf/duration.pb.dart' as $3;
@@ -20,17 +19,14 @@ export 'remote_execution.pbenum.dart';
 
 class Action extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Action',
-      package: const $pb.PackageName('google.devtools.remoteexecution.v1test'))
-    ..a<Digest>(1, 'commandDigest', $pb.PbFieldType.OM, Digest.getDefault,
-        Digest.create)
-    ..a<Digest>(2, 'inputRootDigest', $pb.PbFieldType.OM, Digest.getDefault,
-        Digest.create)
+      package: const $pb.PackageName('google.devtools.remoteexecution.v1test'),
+      createEmptyInstance: create)
+    ..aOM<Digest>(1, 'commandDigest', subBuilder: Digest.create)
+    ..aOM<Digest>(2, 'inputRootDigest', subBuilder: Digest.create)
     ..pPS(3, 'outputFiles')
     ..pPS(4, 'outputDirectories')
-    ..a<Platform>(
-        5, 'platform', $pb.PbFieldType.OM, Platform.getDefault, Platform.create)
-    ..a<$3.Duration>(6, 'timeout', $pb.PbFieldType.OM, $3.Duration.getDefault,
-        $3.Duration.create)
+    ..aOM<Platform>(5, 'platform', subBuilder: Platform.create)
+    ..aOM<$3.Duration>(6, 'timeout', subBuilder: $3.Duration.create)
     ..aOB(7, 'doNotCache')
     ..hasRequiredFields = false;
 
@@ -50,58 +46,91 @@ class Action extends $pb.GeneratedMessage {
   static Action create() => Action._();
   Action createEmptyInstance() => create();
   static $pb.PbList<Action> createRepeated() => $pb.PbList<Action>();
-  static Action getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Action getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Action>(create);
   static Action _defaultInstance;
 
+  @$pb.TagNumber(1)
   Digest get commandDigest => $_getN(0);
+  @$pb.TagNumber(1)
   set commandDigest(Digest v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasCommandDigest() => $_has(0);
+  @$pb.TagNumber(1)
   void clearCommandDigest() => clearField(1);
+  @$pb.TagNumber(1)
+  Digest ensureCommandDigest() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   Digest get inputRootDigest => $_getN(1);
+  @$pb.TagNumber(2)
   set inputRootDigest(Digest v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasInputRootDigest() => $_has(1);
+  @$pb.TagNumber(2)
   void clearInputRootDigest() => clearField(2);
+  @$pb.TagNumber(2)
+  Digest ensureInputRootDigest() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $core.List<$core.String> get outputFiles => $_getList(2);
 
+  @$pb.TagNumber(4)
   $core.List<$core.String> get outputDirectories => $_getList(3);
 
+  @$pb.TagNumber(5)
   Platform get platform => $_getN(4);
+  @$pb.TagNumber(5)
   set platform(Platform v) {
     setField(5, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasPlatform() => $_has(4);
+  @$pb.TagNumber(5)
   void clearPlatform() => clearField(5);
+  @$pb.TagNumber(5)
+  Platform ensurePlatform() => $_ensure(4);
 
+  @$pb.TagNumber(6)
   $3.Duration get timeout => $_getN(5);
+  @$pb.TagNumber(6)
   set timeout($3.Duration v) {
     setField(6, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasTimeout() => $_has(5);
+  @$pb.TagNumber(6)
   void clearTimeout() => clearField(6);
+  @$pb.TagNumber(6)
+  $3.Duration ensureTimeout() => $_ensure(5);
 
-  $core.bool get doNotCache => $_get(6, false);
+  @$pb.TagNumber(7)
+  $core.bool get doNotCache => $_getBF(6);
+  @$pb.TagNumber(7)
   set doNotCache($core.bool v) {
     $_setBool(6, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasDoNotCache() => $_has(6);
+  @$pb.TagNumber(7)
   void clearDoNotCache() => clearField(7);
 }
 
 class Command_EnvironmentVariable extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'Command.EnvironmentVariable',
-      package: const $pb.PackageName('google.devtools.remoteexecution.v1test'))
+      package: const $pb.PackageName('google.devtools.remoteexecution.v1test'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..aOS(2, 'value')
     ..hasRequiredFields = false;
@@ -127,33 +156,44 @@ class Command_EnvironmentVariable extends $pb.GeneratedMessage {
   Command_EnvironmentVariable createEmptyInstance() => create();
   static $pb.PbList<Command_EnvironmentVariable> createRepeated() =>
       $pb.PbList<Command_EnvironmentVariable>();
-  static Command_EnvironmentVariable getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Command_EnvironmentVariable getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Command_EnvironmentVariable>(create);
   static Command_EnvironmentVariable _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.String get value => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get value => $_getSZ(1);
+  @$pb.TagNumber(2)
   set value($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasValue() => $_has(1);
+  @$pb.TagNumber(2)
   void clearValue() => clearField(2);
 }
 
 class Command extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Command',
-      package: const $pb.PackageName('google.devtools.remoteexecution.v1test'))
+      package: const $pb.PackageName('google.devtools.remoteexecution.v1test'),
+      createEmptyInstance: create)
     ..pPS(1, 'arguments')
-    ..pc<Command_EnvironmentVariable>(2, 'environmentVariables',
-        $pb.PbFieldType.PM, Command_EnvironmentVariable.create)
+    ..pc<Command_EnvironmentVariable>(
+        2, 'environmentVariables', $pb.PbFieldType.PM,
+        subBuilder: Command_EnvironmentVariable.create)
     ..hasRequiredFields = false;
 
   Command._() : super();
@@ -172,18 +212,23 @@ class Command extends $pb.GeneratedMessage {
   static Command create() => Command._();
   Command createEmptyInstance() => create();
   static $pb.PbList<Command> createRepeated() => $pb.PbList<Command>();
-  static Command getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Command getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Command>(create);
   static Command _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<$core.String> get arguments => $_getList(0);
 
+  @$pb.TagNumber(2)
   $core.List<Command_EnvironmentVariable> get environmentVariables =>
       $_getList(1);
 }
 
 class Platform_Property extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Platform.Property',
-      package: const $pb.PackageName('google.devtools.remoteexecution.v1test'))
+      package: const $pb.PackageName('google.devtools.remoteexecution.v1test'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
     ..aOS(2, 'value')
     ..hasRequiredFields = false;
@@ -205,32 +250,42 @@ class Platform_Property extends $pb.GeneratedMessage {
   Platform_Property createEmptyInstance() => create();
   static $pb.PbList<Platform_Property> createRepeated() =>
       $pb.PbList<Platform_Property>();
-  static Platform_Property getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Platform_Property getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Platform_Property>(create);
   static Platform_Property _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
-  $core.String get value => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get value => $_getSZ(1);
+  @$pb.TagNumber(2)
   set value($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasValue() => $_has(1);
+  @$pb.TagNumber(2)
   void clearValue() => clearField(2);
 }
 
 class Platform extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Platform',
-      package: const $pb.PackageName('google.devtools.remoteexecution.v1test'))
-    ..pc<Platform_Property>(
-        1, 'properties', $pb.PbFieldType.PM, Platform_Property.create)
+      package: const $pb.PackageName('google.devtools.remoteexecution.v1test'),
+      createEmptyInstance: create)
+    ..pc<Platform_Property>(1, 'properties', $pb.PbFieldType.PM,
+        subBuilder: Platform_Property.create)
     ..hasRequiredFields = false;
 
   Platform._() : super();
@@ -249,18 +304,22 @@ class Platform extends $pb.GeneratedMessage {
   static Platform create() => Platform._();
   Platform createEmptyInstance() => create();
   static $pb.PbList<Platform> createRepeated() => $pb.PbList<Platform>();
-  static Platform getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Platform getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Platform>(create);
   static Platform _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<Platform_Property> get properties => $_getList(0);
 }
 
 class Directory extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Directory',
-      package: const $pb.PackageName('google.devtools.remoteexecution.v1test'))
-    ..pc<FileNode>(1, 'files', $pb.PbFieldType.PM, FileNode.create)
-    ..pc<DirectoryNode>(
-        2, 'directories', $pb.PbFieldType.PM, DirectoryNode.create)
+      package: const $pb.PackageName('google.devtools.remoteexecution.v1test'),
+      createEmptyInstance: create)
+    ..pc<FileNode>(1, 'files', $pb.PbFieldType.PM, subBuilder: FileNode.create)
+    ..pc<DirectoryNode>(2, 'directories', $pb.PbFieldType.PM,
+        subBuilder: DirectoryNode.create)
     ..hasRequiredFields = false;
 
   Directory._() : super();
@@ -279,20 +338,24 @@ class Directory extends $pb.GeneratedMessage {
   static Directory create() => Directory._();
   Directory createEmptyInstance() => create();
   static $pb.PbList<Directory> createRepeated() => $pb.PbList<Directory>();
-  static Directory getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Directory getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Directory>(create);
   static Directory _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<FileNode> get files => $_getList(0);
 
+  @$pb.TagNumber(2)
   $core.List<DirectoryNode> get directories => $_getList(1);
 }
 
 class FileNode extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('FileNode',
-      package: const $pb.PackageName('google.devtools.remoteexecution.v1test'))
+      package: const $pb.PackageName('google.devtools.remoteexecution.v1test'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
-    ..a<Digest>(
-        2, 'digest', $pb.PbFieldType.OM, Digest.getDefault, Digest.create)
+    ..aOM<Digest>(2, 'digest', subBuilder: Digest.create)
     ..aOB(4, 'isExecutable')
     ..hasRequiredFields = false;
 
@@ -312,40 +375,56 @@ class FileNode extends $pb.GeneratedMessage {
   static FileNode create() => FileNode._();
   FileNode createEmptyInstance() => create();
   static $pb.PbList<FileNode> createRepeated() => $pb.PbList<FileNode>();
-  static FileNode getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static FileNode getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<FileNode>(create);
   static FileNode _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   Digest get digest => $_getN(1);
+  @$pb.TagNumber(2)
   set digest(Digest v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasDigest() => $_has(1);
+  @$pb.TagNumber(2)
   void clearDigest() => clearField(2);
+  @$pb.TagNumber(2)
+  Digest ensureDigest() => $_ensure(1);
 
-  $core.bool get isExecutable => $_get(2, false);
+  @$pb.TagNumber(4)
+  $core.bool get isExecutable => $_getBF(2);
+  @$pb.TagNumber(4)
   set isExecutable($core.bool v) {
     $_setBool(2, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasIsExecutable() => $_has(2);
+  @$pb.TagNumber(4)
   void clearIsExecutable() => clearField(4);
 }
 
 class DirectoryNode extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('DirectoryNode',
-      package: const $pb.PackageName('google.devtools.remoteexecution.v1test'))
+      package: const $pb.PackageName('google.devtools.remoteexecution.v1test'),
+      createEmptyInstance: create)
     ..aOS(1, 'name')
-    ..a<Digest>(
-        2, 'digest', $pb.PbFieldType.OM, Digest.getDefault, Digest.create)
+    ..aOM<Digest>(2, 'digest', subBuilder: Digest.create)
     ..hasRequiredFields = false;
 
   DirectoryNode._() : super();
@@ -365,29 +444,42 @@ class DirectoryNode extends $pb.GeneratedMessage {
   DirectoryNode createEmptyInstance() => create();
   static $pb.PbList<DirectoryNode> createRepeated() =>
       $pb.PbList<DirectoryNode>();
-  static DirectoryNode getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static DirectoryNode getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DirectoryNode>(create);
   static DirectoryNode _defaultInstance;
 
-  $core.String get name => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
   set name($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  @$pb.TagNumber(2)
   Digest get digest => $_getN(1);
+  @$pb.TagNumber(2)
   set digest(Digest v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasDigest() => $_has(1);
+  @$pb.TagNumber(2)
   void clearDigest() => clearField(2);
+  @$pb.TagNumber(2)
+  Digest ensureDigest() => $_ensure(1);
 }
 
 class Digest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Digest',
-      package: const $pb.PackageName('google.devtools.remoteexecution.v1test'))
+      package: const $pb.PackageName('google.devtools.remoteexecution.v1test'),
+      createEmptyInstance: create)
     ..aOS(1, 'hash')
     ..aInt64(2, 'sizeBytes')
     ..hasRequiredFields = false;
@@ -408,39 +500,49 @@ class Digest extends $pb.GeneratedMessage {
   static Digest create() => Digest._();
   Digest createEmptyInstance() => create();
   static $pb.PbList<Digest> createRepeated() => $pb.PbList<Digest>();
-  static Digest getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Digest getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Digest>(create);
   static Digest _defaultInstance;
 
-  $core.String get hash => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get hash => $_getSZ(0);
+  @$pb.TagNumber(1)
   set hash($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasHash() => $_has(0);
+  @$pb.TagNumber(1)
   void clearHash() => clearField(1);
 
-  Int64 get sizeBytes => $_getI64(1);
-  set sizeBytes(Int64 v) {
+  @$pb.TagNumber(2)
+  $fixnum.Int64 get sizeBytes => $_getI64(1);
+  @$pb.TagNumber(2)
+  set sizeBytes($fixnum.Int64 v) {
     $_setInt64(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasSizeBytes() => $_has(1);
+  @$pb.TagNumber(2)
   void clearSizeBytes() => clearField(2);
 }
 
 class ActionResult extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ActionResult',
-      package: const $pb.PackageName('google.devtools.remoteexecution.v1test'))
-    ..pc<OutputFile>(2, 'outputFiles', $pb.PbFieldType.PM, OutputFile.create)
-    ..pc<OutputDirectory>(
-        3, 'outputDirectories', $pb.PbFieldType.PM, OutputDirectory.create)
+      package: const $pb.PackageName('google.devtools.remoteexecution.v1test'),
+      createEmptyInstance: create)
+    ..pc<OutputFile>(2, 'outputFiles', $pb.PbFieldType.PM,
+        subBuilder: OutputFile.create)
+    ..pc<OutputDirectory>(3, 'outputDirectories', $pb.PbFieldType.PM,
+        subBuilder: OutputDirectory.create)
     ..a<$core.int>(4, 'exitCode', $pb.PbFieldType.O3)
     ..a<$core.List<$core.int>>(5, 'stdoutRaw', $pb.PbFieldType.OY)
-    ..a<Digest>(
-        6, 'stdoutDigest', $pb.PbFieldType.OM, Digest.getDefault, Digest.create)
+    ..aOM<Digest>(6, 'stdoutDigest', subBuilder: Digest.create)
     ..a<$core.List<$core.int>>(7, 'stderrRaw', $pb.PbFieldType.OY)
-    ..a<Digest>(
-        8, 'stderrDigest', $pb.PbFieldType.OM, Digest.getDefault, Digest.create)
+    ..aOM<Digest>(8, 'stderrDigest', subBuilder: Digest.create)
     ..hasRequiredFields = false;
 
   ActionResult._() : super();
@@ -460,60 +562,88 @@ class ActionResult extends $pb.GeneratedMessage {
   ActionResult createEmptyInstance() => create();
   static $pb.PbList<ActionResult> createRepeated() =>
       $pb.PbList<ActionResult>();
-  static ActionResult getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ActionResult getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ActionResult>(create);
   static ActionResult _defaultInstance;
 
+  @$pb.TagNumber(2)
   $core.List<OutputFile> get outputFiles => $_getList(0);
 
+  @$pb.TagNumber(3)
   $core.List<OutputDirectory> get outputDirectories => $_getList(1);
 
-  $core.int get exitCode => $_get(2, 0);
+  @$pb.TagNumber(4)
+  $core.int get exitCode => $_getIZ(2);
+  @$pb.TagNumber(4)
   set exitCode($core.int v) {
     $_setSignedInt32(2, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasExitCode() => $_has(2);
+  @$pb.TagNumber(4)
   void clearExitCode() => clearField(4);
 
+  @$pb.TagNumber(5)
   $core.List<$core.int> get stdoutRaw => $_getN(3);
+  @$pb.TagNumber(5)
   set stdoutRaw($core.List<$core.int> v) {
     $_setBytes(3, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasStdoutRaw() => $_has(3);
+  @$pb.TagNumber(5)
   void clearStdoutRaw() => clearField(5);
 
+  @$pb.TagNumber(6)
   Digest get stdoutDigest => $_getN(4);
+  @$pb.TagNumber(6)
   set stdoutDigest(Digest v) {
     setField(6, v);
   }
 
+  @$pb.TagNumber(6)
   $core.bool hasStdoutDigest() => $_has(4);
+  @$pb.TagNumber(6)
   void clearStdoutDigest() => clearField(6);
+  @$pb.TagNumber(6)
+  Digest ensureStdoutDigest() => $_ensure(4);
 
+  @$pb.TagNumber(7)
   $core.List<$core.int> get stderrRaw => $_getN(5);
+  @$pb.TagNumber(7)
   set stderrRaw($core.List<$core.int> v) {
     $_setBytes(5, v);
   }
 
+  @$pb.TagNumber(7)
   $core.bool hasStderrRaw() => $_has(5);
+  @$pb.TagNumber(7)
   void clearStderrRaw() => clearField(7);
 
+  @$pb.TagNumber(8)
   Digest get stderrDigest => $_getN(6);
+  @$pb.TagNumber(8)
   set stderrDigest(Digest v) {
     setField(8, v);
   }
 
+  @$pb.TagNumber(8)
   $core.bool hasStderrDigest() => $_has(6);
+  @$pb.TagNumber(8)
   void clearStderrDigest() => clearField(8);
+  @$pb.TagNumber(8)
+  Digest ensureStderrDigest() => $_ensure(6);
 }
 
 class OutputFile extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('OutputFile',
-      package: const $pb.PackageName('google.devtools.remoteexecution.v1test'))
+      package: const $pb.PackageName('google.devtools.remoteexecution.v1test'),
+      createEmptyInstance: create)
     ..aOS(1, 'path')
-    ..a<Digest>(
-        2, 'digest', $pb.PbFieldType.OM, Digest.getDefault, Digest.create)
+    ..aOM<Digest>(2, 'digest', subBuilder: Digest.create)
     ..a<$core.List<$core.int>>(3, 'content', $pb.PbFieldType.OY)
     ..aOB(4, 'isExecutable')
     ..hasRequiredFields = false;
@@ -534,48 +664,69 @@ class OutputFile extends $pb.GeneratedMessage {
   static OutputFile create() => OutputFile._();
   OutputFile createEmptyInstance() => create();
   static $pb.PbList<OutputFile> createRepeated() => $pb.PbList<OutputFile>();
-  static OutputFile getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static OutputFile getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<OutputFile>(create);
   static OutputFile _defaultInstance;
 
-  $core.String get path => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get path => $_getSZ(0);
+  @$pb.TagNumber(1)
   set path($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasPath() => $_has(0);
+  @$pb.TagNumber(1)
   void clearPath() => clearField(1);
 
+  @$pb.TagNumber(2)
   Digest get digest => $_getN(1);
+  @$pb.TagNumber(2)
   set digest(Digest v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasDigest() => $_has(1);
+  @$pb.TagNumber(2)
   void clearDigest() => clearField(2);
+  @$pb.TagNumber(2)
+  Digest ensureDigest() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   $core.List<$core.int> get content => $_getN(2);
+  @$pb.TagNumber(3)
   set content($core.List<$core.int> v) {
     $_setBytes(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasContent() => $_has(2);
+  @$pb.TagNumber(3)
   void clearContent() => clearField(3);
 
-  $core.bool get isExecutable => $_get(3, false);
+  @$pb.TagNumber(4)
+  $core.bool get isExecutable => $_getBF(3);
+  @$pb.TagNumber(4)
   set isExecutable($core.bool v) {
     $_setBool(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasIsExecutable() => $_has(3);
+  @$pb.TagNumber(4)
   void clearIsExecutable() => clearField(4);
 }
 
 class Tree extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('Tree',
-      package: const $pb.PackageName('google.devtools.remoteexecution.v1test'))
-    ..a<Directory>(
-        1, 'root', $pb.PbFieldType.OM, Directory.getDefault, Directory.create)
-    ..pc<Directory>(2, 'children', $pb.PbFieldType.PM, Directory.create)
+      package: const $pb.PackageName('google.devtools.remoteexecution.v1test'),
+      createEmptyInstance: create)
+    ..aOM<Directory>(1, 'root', subBuilder: Directory.create)
+    ..pc<Directory>(2, 'children', $pb.PbFieldType.PM,
+        subBuilder: Directory.create)
     ..hasRequiredFields = false;
 
   Tree._() : super();
@@ -594,28 +745,36 @@ class Tree extends $pb.GeneratedMessage {
   static Tree create() => Tree._();
   Tree createEmptyInstance() => create();
   static $pb.PbList<Tree> createRepeated() => $pb.PbList<Tree>();
-  static Tree getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static Tree getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Tree>(create);
   static Tree _defaultInstance;
 
+  @$pb.TagNumber(1)
   Directory get root => $_getN(0);
+  @$pb.TagNumber(1)
   set root(Directory v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasRoot() => $_has(0);
+  @$pb.TagNumber(1)
   void clearRoot() => clearField(1);
+  @$pb.TagNumber(1)
+  Directory ensureRoot() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $core.List<Directory> get children => $_getList(1);
 }
 
 class OutputDirectory extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('OutputDirectory',
-      package: const $pb.PackageName('google.devtools.remoteexecution.v1test'))
+      package: const $pb.PackageName('google.devtools.remoteexecution.v1test'),
+      createEmptyInstance: create)
     ..aOS(1, 'path')
-    ..a<Digest>(
-        2, 'digest', $pb.PbFieldType.OM, Digest.getDefault, Digest.create)
-    ..a<Digest>(
-        3, 'treeDigest', $pb.PbFieldType.OM, Digest.getDefault, Digest.create)
+    ..aOM<Digest>(2, 'digest', subBuilder: Digest.create)
+    ..aOM<Digest>(3, 'treeDigest', subBuilder: Digest.create)
     ..hasRequiredFields = false;
 
   OutputDirectory._() : super();
@@ -635,41 +794,58 @@ class OutputDirectory extends $pb.GeneratedMessage {
   OutputDirectory createEmptyInstance() => create();
   static $pb.PbList<OutputDirectory> createRepeated() =>
       $pb.PbList<OutputDirectory>();
-  static OutputDirectory getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static OutputDirectory getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<OutputDirectory>(create);
   static OutputDirectory _defaultInstance;
 
-  $core.String get path => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get path => $_getSZ(0);
+  @$pb.TagNumber(1)
   set path($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasPath() => $_has(0);
+  @$pb.TagNumber(1)
   void clearPath() => clearField(1);
 
+  @$pb.TagNumber(2)
   Digest get digest => $_getN(1);
+  @$pb.TagNumber(2)
   set digest(Digest v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasDigest() => $_has(1);
+  @$pb.TagNumber(2)
   void clearDigest() => clearField(2);
+  @$pb.TagNumber(2)
+  Digest ensureDigest() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   Digest get treeDigest => $_getN(2);
+  @$pb.TagNumber(3)
   set treeDigest(Digest v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasTreeDigest() => $_has(2);
+  @$pb.TagNumber(3)
   void clearTreeDigest() => clearField(3);
+  @$pb.TagNumber(3)
+  Digest ensureTreeDigest() => $_ensure(2);
 }
 
 class ExecuteRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ExecuteRequest',
-      package: const $pb.PackageName('google.devtools.remoteexecution.v1test'))
+      package: const $pb.PackageName('google.devtools.remoteexecution.v1test'),
+      createEmptyInstance: create)
     ..aOS(1, 'instanceName')
-    ..a<Action>(
-        2, 'action', $pb.PbFieldType.OM, Action.getDefault, Action.create)
+    ..aOM<Action>(2, 'action', subBuilder: Action.create)
     ..aOB(3, 'skipCacheLookup')
     ..a<$core.int>(4, 'totalInputFileCount', $pb.PbFieldType.O3)
     ..aInt64(5, 'totalInputFileBytes')
@@ -692,55 +868,79 @@ class ExecuteRequest extends $pb.GeneratedMessage {
   ExecuteRequest createEmptyInstance() => create();
   static $pb.PbList<ExecuteRequest> createRepeated() =>
       $pb.PbList<ExecuteRequest>();
-  static ExecuteRequest getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ExecuteRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ExecuteRequest>(create);
   static ExecuteRequest _defaultInstance;
 
-  $core.String get instanceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get instanceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set instanceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasInstanceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearInstanceName() => clearField(1);
 
+  @$pb.TagNumber(2)
   Action get action => $_getN(1);
+  @$pb.TagNumber(2)
   set action(Action v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasAction() => $_has(1);
+  @$pb.TagNumber(2)
   void clearAction() => clearField(2);
+  @$pb.TagNumber(2)
+  Action ensureAction() => $_ensure(1);
 
-  $core.bool get skipCacheLookup => $_get(2, false);
+  @$pb.TagNumber(3)
+  $core.bool get skipCacheLookup => $_getBF(2);
+  @$pb.TagNumber(3)
   set skipCacheLookup($core.bool v) {
     $_setBool(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasSkipCacheLookup() => $_has(2);
+  @$pb.TagNumber(3)
   void clearSkipCacheLookup() => clearField(3);
 
-  $core.int get totalInputFileCount => $_get(3, 0);
+  @$pb.TagNumber(4)
+  $core.int get totalInputFileCount => $_getIZ(3);
+  @$pb.TagNumber(4)
   set totalInputFileCount($core.int v) {
     $_setSignedInt32(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasTotalInputFileCount() => $_has(3);
+  @$pb.TagNumber(4)
   void clearTotalInputFileCount() => clearField(4);
 
-  Int64 get totalInputFileBytes => $_getI64(4);
-  set totalInputFileBytes(Int64 v) {
+  @$pb.TagNumber(5)
+  $fixnum.Int64 get totalInputFileBytes => $_getI64(4);
+  @$pb.TagNumber(5)
+  set totalInputFileBytes($fixnum.Int64 v) {
     $_setInt64(4, v);
   }
 
+  @$pb.TagNumber(5)
   $core.bool hasTotalInputFileBytes() => $_has(4);
+  @$pb.TagNumber(5)
   void clearTotalInputFileBytes() => clearField(5);
 }
 
 class LogFile extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('LogFile',
-      package: const $pb.PackageName('google.devtools.remoteexecution.v1test'))
-    ..a<Digest>(
-        1, 'digest', $pb.PbFieldType.OM, Digest.getDefault, Digest.create)
+      package: const $pb.PackageName('google.devtools.remoteexecution.v1test'),
+      createEmptyInstance: create)
+    ..aOM<Digest>(1, 'digest', subBuilder: Digest.create)
     ..aOB(2, 'humanReadable')
     ..hasRequiredFields = false;
 
@@ -760,44 +960,52 @@ class LogFile extends $pb.GeneratedMessage {
   static LogFile create() => LogFile._();
   LogFile createEmptyInstance() => create();
   static $pb.PbList<LogFile> createRepeated() => $pb.PbList<LogFile>();
-  static LogFile getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static LogFile getDefault() =>
+      _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<LogFile>(create);
   static LogFile _defaultInstance;
 
+  @$pb.TagNumber(1)
   Digest get digest => $_getN(0);
+  @$pb.TagNumber(1)
   set digest(Digest v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasDigest() => $_has(0);
+  @$pb.TagNumber(1)
   void clearDigest() => clearField(1);
+  @$pb.TagNumber(1)
+  Digest ensureDigest() => $_ensure(0);
 
-  $core.bool get humanReadable => $_get(1, false);
+  @$pb.TagNumber(2)
+  $core.bool get humanReadable => $_getBF(1);
+  @$pb.TagNumber(2)
   set humanReadable($core.bool v) {
     $_setBool(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasHumanReadable() => $_has(1);
+  @$pb.TagNumber(2)
   void clearHumanReadable() => clearField(2);
 }
 
 class ExecuteResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ExecuteResponse',
-      package: const $pb.PackageName('google.devtools.remoteexecution.v1test'))
-    ..a<ActionResult>(1, 'result', $pb.PbFieldType.OM, ActionResult.getDefault,
-        ActionResult.create)
+      package: const $pb.PackageName('google.devtools.remoteexecution.v1test'),
+      createEmptyInstance: create)
+    ..aOM<ActionResult>(1, 'result', subBuilder: ActionResult.create)
     ..aOB(2, 'cachedResult')
-    ..a<$4.Status>(
-        3, 'status', $pb.PbFieldType.OM, $4.Status.getDefault, $4.Status.create)
-    ..m<$core.String, LogFile>(
-        4,
-        'serverLogs',
-        'ExecuteResponse.ServerLogsEntry',
-        $pb.PbFieldType.OS,
-        $pb.PbFieldType.OM,
-        LogFile.create,
-        null,
-        null,
-        const $pb.PackageName('google.devtools.remoteexecution.v1test'))
+    ..aOM<$4.Status>(3, 'status', subBuilder: $4.Status.create)
+    ..m<$core.String, LogFile>(4, 'serverLogs',
+        entryClassName: 'ExecuteResponse.ServerLogsEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OM,
+        valueCreator: LogFile.create,
+        packageName:
+            const $pb.PackageName('google.devtools.remoteexecution.v1test'))
     ..hasRequiredFields = false;
 
   ExecuteResponse._() : super();
@@ -817,49 +1025,64 @@ class ExecuteResponse extends $pb.GeneratedMessage {
   ExecuteResponse createEmptyInstance() => create();
   static $pb.PbList<ExecuteResponse> createRepeated() =>
       $pb.PbList<ExecuteResponse>();
-  static ExecuteResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ExecuteResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ExecuteResponse>(create);
   static ExecuteResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   ActionResult get result => $_getN(0);
+  @$pb.TagNumber(1)
   set result(ActionResult v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasResult() => $_has(0);
+  @$pb.TagNumber(1)
   void clearResult() => clearField(1);
+  @$pb.TagNumber(1)
+  ActionResult ensureResult() => $_ensure(0);
 
-  $core.bool get cachedResult => $_get(1, false);
+  @$pb.TagNumber(2)
+  $core.bool get cachedResult => $_getBF(1);
+  @$pb.TagNumber(2)
   set cachedResult($core.bool v) {
     $_setBool(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasCachedResult() => $_has(1);
+  @$pb.TagNumber(2)
   void clearCachedResult() => clearField(2);
 
+  @$pb.TagNumber(3)
   $4.Status get status => $_getN(2);
+  @$pb.TagNumber(3)
   set status($4.Status v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasStatus() => $_has(2);
+  @$pb.TagNumber(3)
   void clearStatus() => clearField(3);
+  @$pb.TagNumber(3)
+  $4.Status ensureStatus() => $_ensure(2);
 
+  @$pb.TagNumber(4)
   $core.Map<$core.String, LogFile> get serverLogs => $_getMap(3);
 }
 
 class ExecuteOperationMetadata extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ExecuteOperationMetadata',
-      package: const $pb.PackageName('google.devtools.remoteexecution.v1test'))
-    ..e<ExecuteOperationMetadata_Stage>(
-        1,
-        'stage',
-        $pb.PbFieldType.OE,
-        ExecuteOperationMetadata_Stage.UNKNOWN,
-        ExecuteOperationMetadata_Stage.valueOf,
-        ExecuteOperationMetadata_Stage.values)
-    ..a<Digest>(
-        2, 'actionDigest', $pb.PbFieldType.OM, Digest.getDefault, Digest.create)
+      package: const $pb.PackageName('google.devtools.remoteexecution.v1test'),
+      createEmptyInstance: create)
+    ..e<ExecuteOperationMetadata_Stage>(1, 'stage', $pb.PbFieldType.OE,
+        defaultOrMaker: ExecuteOperationMetadata_Stage.UNKNOWN,
+        valueOf: ExecuteOperationMetadata_Stage.valueOf,
+        enumValues: ExecuteOperationMetadata_Stage.values)
+    ..aOM<Digest>(2, 'actionDigest', subBuilder: Digest.create)
     ..aOS(3, 'stdoutStreamName')
     ..aOS(4, 'stderrStreamName')
     ..hasRequiredFields = false;
@@ -883,49 +1106,68 @@ class ExecuteOperationMetadata extends $pb.GeneratedMessage {
   ExecuteOperationMetadata createEmptyInstance() => create();
   static $pb.PbList<ExecuteOperationMetadata> createRepeated() =>
       $pb.PbList<ExecuteOperationMetadata>();
-  static ExecuteOperationMetadata getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ExecuteOperationMetadata getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ExecuteOperationMetadata>(create);
   static ExecuteOperationMetadata _defaultInstance;
 
+  @$pb.TagNumber(1)
   ExecuteOperationMetadata_Stage get stage => $_getN(0);
+  @$pb.TagNumber(1)
   set stage(ExecuteOperationMetadata_Stage v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasStage() => $_has(0);
+  @$pb.TagNumber(1)
   void clearStage() => clearField(1);
 
+  @$pb.TagNumber(2)
   Digest get actionDigest => $_getN(1);
+  @$pb.TagNumber(2)
   set actionDigest(Digest v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasActionDigest() => $_has(1);
+  @$pb.TagNumber(2)
   void clearActionDigest() => clearField(2);
+  @$pb.TagNumber(2)
+  Digest ensureActionDigest() => $_ensure(1);
 
-  $core.String get stdoutStreamName => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get stdoutStreamName => $_getSZ(2);
+  @$pb.TagNumber(3)
   set stdoutStreamName($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasStdoutStreamName() => $_has(2);
+  @$pb.TagNumber(3)
   void clearStdoutStreamName() => clearField(3);
 
-  $core.String get stderrStreamName => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get stderrStreamName => $_getSZ(3);
+  @$pb.TagNumber(4)
   set stderrStreamName($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasStderrStreamName() => $_has(3);
+  @$pb.TagNumber(4)
   void clearStderrStreamName() => clearField(4);
 }
 
 class GetActionResultRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetActionResultRequest',
-      package: const $pb.PackageName('google.devtools.remoteexecution.v1test'))
+      package: const $pb.PackageName('google.devtools.remoteexecution.v1test'),
+      createEmptyInstance: create)
     ..aOS(1, 'instanceName')
-    ..a<Digest>(
-        2, 'actionDigest', $pb.PbFieldType.OM, Digest.getDefault, Digest.create)
+    ..aOM<Digest>(2, 'actionDigest', subBuilder: Digest.create)
     ..hasRequiredFields = false;
 
   GetActionResultRequest._() : super();
@@ -947,35 +1189,45 @@ class GetActionResultRequest extends $pb.GeneratedMessage {
   GetActionResultRequest createEmptyInstance() => create();
   static $pb.PbList<GetActionResultRequest> createRepeated() =>
       $pb.PbList<GetActionResultRequest>();
-  static GetActionResultRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetActionResultRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetActionResultRequest>(create);
   static GetActionResultRequest _defaultInstance;
 
-  $core.String get instanceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get instanceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set instanceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasInstanceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearInstanceName() => clearField(1);
 
+  @$pb.TagNumber(2)
   Digest get actionDigest => $_getN(1);
+  @$pb.TagNumber(2)
   set actionDigest(Digest v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasActionDigest() => $_has(1);
+  @$pb.TagNumber(2)
   void clearActionDigest() => clearField(2);
+  @$pb.TagNumber(2)
+  Digest ensureActionDigest() => $_ensure(1);
 }
 
 class UpdateActionResultRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateActionResultRequest',
-      package: const $pb.PackageName('google.devtools.remoteexecution.v1test'))
+      package: const $pb.PackageName('google.devtools.remoteexecution.v1test'),
+      createEmptyInstance: create)
     ..aOS(1, 'instanceName')
-    ..a<Digest>(
-        2, 'actionDigest', $pb.PbFieldType.OM, Digest.getDefault, Digest.create)
-    ..a<ActionResult>(3, 'actionResult', $pb.PbFieldType.OM,
-        ActionResult.getDefault, ActionResult.create)
+    ..aOM<Digest>(2, 'actionDigest', subBuilder: Digest.create)
+    ..aOM<ActionResult>(3, 'actionResult', subBuilder: ActionResult.create)
     ..hasRequiredFields = false;
 
   UpdateActionResultRequest._() : super();
@@ -998,40 +1250,59 @@ class UpdateActionResultRequest extends $pb.GeneratedMessage {
   UpdateActionResultRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateActionResultRequest> createRepeated() =>
       $pb.PbList<UpdateActionResultRequest>();
-  static UpdateActionResultRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateActionResultRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateActionResultRequest>(create);
   static UpdateActionResultRequest _defaultInstance;
 
-  $core.String get instanceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get instanceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set instanceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasInstanceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearInstanceName() => clearField(1);
 
+  @$pb.TagNumber(2)
   Digest get actionDigest => $_getN(1);
+  @$pb.TagNumber(2)
   set actionDigest(Digest v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasActionDigest() => $_has(1);
+  @$pb.TagNumber(2)
   void clearActionDigest() => clearField(2);
+  @$pb.TagNumber(2)
+  Digest ensureActionDigest() => $_ensure(1);
 
+  @$pb.TagNumber(3)
   ActionResult get actionResult => $_getN(2);
+  @$pb.TagNumber(3)
   set actionResult(ActionResult v) {
     setField(3, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasActionResult() => $_has(2);
+  @$pb.TagNumber(3)
   void clearActionResult() => clearField(3);
+  @$pb.TagNumber(3)
+  ActionResult ensureActionResult() => $_ensure(2);
 }
 
 class FindMissingBlobsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('FindMissingBlobsRequest',
-      package: const $pb.PackageName('google.devtools.remoteexecution.v1test'))
+      package: const $pb.PackageName('google.devtools.remoteexecution.v1test'),
+      createEmptyInstance: create)
     ..aOS(1, 'instanceName')
-    ..pc<Digest>(2, 'blobDigests', $pb.PbFieldType.PM, Digest.create)
+    ..pc<Digest>(2, 'blobDigests', $pb.PbFieldType.PM,
+        subBuilder: Digest.create)
     ..hasRequiredFields = false;
 
   FindMissingBlobsRequest._() : super();
@@ -1053,25 +1324,33 @@ class FindMissingBlobsRequest extends $pb.GeneratedMessage {
   FindMissingBlobsRequest createEmptyInstance() => create();
   static $pb.PbList<FindMissingBlobsRequest> createRepeated() =>
       $pb.PbList<FindMissingBlobsRequest>();
-  static FindMissingBlobsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static FindMissingBlobsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<FindMissingBlobsRequest>(create);
   static FindMissingBlobsRequest _defaultInstance;
 
-  $core.String get instanceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get instanceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set instanceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasInstanceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearInstanceName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<Digest> get blobDigests => $_getList(1);
 }
 
 class FindMissingBlobsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('FindMissingBlobsResponse',
-      package: const $pb.PackageName('google.devtools.remoteexecution.v1test'))
-    ..pc<Digest>(2, 'missingBlobDigests', $pb.PbFieldType.PM, Digest.create)
+      package: const $pb.PackageName('google.devtools.remoteexecution.v1test'),
+      createEmptyInstance: create)
+    ..pc<Digest>(2, 'missingBlobDigests', $pb.PbFieldType.PM,
+        subBuilder: Digest.create)
     ..hasRequiredFields = false;
 
   FindMissingBlobsResponse._() : super();
@@ -1093,18 +1372,20 @@ class FindMissingBlobsResponse extends $pb.GeneratedMessage {
   FindMissingBlobsResponse createEmptyInstance() => create();
   static $pb.PbList<FindMissingBlobsResponse> createRepeated() =>
       $pb.PbList<FindMissingBlobsResponse>();
-  static FindMissingBlobsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static FindMissingBlobsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<FindMissingBlobsResponse>(create);
   static FindMissingBlobsResponse _defaultInstance;
 
+  @$pb.TagNumber(2)
   $core.List<Digest> get missingBlobDigests => $_getList(0);
 }
 
 class UpdateBlobRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('UpdateBlobRequest',
-      package: const $pb.PackageName('google.devtools.remoteexecution.v1test'))
-    ..a<Digest>(1, 'contentDigest', $pb.PbFieldType.OM, Digest.getDefault,
-        Digest.create)
+      package: const $pb.PackageName('google.devtools.remoteexecution.v1test'),
+      createEmptyInstance: create)
+    ..aOM<Digest>(1, 'contentDigest', subBuilder: Digest.create)
     ..a<$core.List<$core.int>>(2, 'data', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
@@ -1125,33 +1406,45 @@ class UpdateBlobRequest extends $pb.GeneratedMessage {
   UpdateBlobRequest createEmptyInstance() => create();
   static $pb.PbList<UpdateBlobRequest> createRepeated() =>
       $pb.PbList<UpdateBlobRequest>();
-  static UpdateBlobRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static UpdateBlobRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<UpdateBlobRequest>(create);
   static UpdateBlobRequest _defaultInstance;
 
+  @$pb.TagNumber(1)
   Digest get contentDigest => $_getN(0);
+  @$pb.TagNumber(1)
   set contentDigest(Digest v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasContentDigest() => $_has(0);
+  @$pb.TagNumber(1)
   void clearContentDigest() => clearField(1);
+  @$pb.TagNumber(1)
+  Digest ensureContentDigest() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $core.List<$core.int> get data => $_getN(1);
+  @$pb.TagNumber(2)
   set data($core.List<$core.int> v) {
     $_setBytes(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasData() => $_has(1);
+  @$pb.TagNumber(2)
   void clearData() => clearField(2);
 }
 
 class BatchUpdateBlobsRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('BatchUpdateBlobsRequest',
-      package: const $pb.PackageName('google.devtools.remoteexecution.v1test'))
+      package: const $pb.PackageName('google.devtools.remoteexecution.v1test'),
+      createEmptyInstance: create)
     ..aOS(1, 'instanceName')
-    ..pc<UpdateBlobRequest>(
-        2, 'requests', $pb.PbFieldType.PM, UpdateBlobRequest.create)
+    ..pc<UpdateBlobRequest>(2, 'requests', $pb.PbFieldType.PM,
+        subBuilder: UpdateBlobRequest.create)
     ..hasRequiredFields = false;
 
   BatchUpdateBlobsRequest._() : super();
@@ -1173,29 +1466,34 @@ class BatchUpdateBlobsRequest extends $pb.GeneratedMessage {
   BatchUpdateBlobsRequest createEmptyInstance() => create();
   static $pb.PbList<BatchUpdateBlobsRequest> createRepeated() =>
       $pb.PbList<BatchUpdateBlobsRequest>();
-  static BatchUpdateBlobsRequest getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static BatchUpdateBlobsRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BatchUpdateBlobsRequest>(create);
   static BatchUpdateBlobsRequest _defaultInstance;
 
-  $core.String get instanceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get instanceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set instanceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasInstanceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearInstanceName() => clearField(1);
 
+  @$pb.TagNumber(2)
   $core.List<UpdateBlobRequest> get requests => $_getList(1);
 }
 
 class BatchUpdateBlobsResponse_Response extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
       'BatchUpdateBlobsResponse.Response',
-      package: const $pb.PackageName('google.devtools.remoteexecution.v1test'))
-    ..a<Digest>(
-        1, 'blobDigest', $pb.PbFieldType.OM, Digest.getDefault, Digest.create)
-    ..a<$4.Status>(
-        2, 'status', $pb.PbFieldType.OM, $4.Status.getDefault, $4.Status.create)
+      package: const $pb.PackageName('google.devtools.remoteexecution.v1test'),
+      createEmptyInstance: create)
+    ..aOM<Digest>(1, 'blobDigest', subBuilder: Digest.create)
+    ..aOM<$4.Status>(2, 'status', subBuilder: $4.Status.create)
     ..hasRequiredFields = false;
 
   BatchUpdateBlobsResponse_Response._() : super();
@@ -1219,32 +1517,47 @@ class BatchUpdateBlobsResponse_Response extends $pb.GeneratedMessage {
   BatchUpdateBlobsResponse_Response createEmptyInstance() => create();
   static $pb.PbList<BatchUpdateBlobsResponse_Response> createRepeated() =>
       $pb.PbList<BatchUpdateBlobsResponse_Response>();
-  static BatchUpdateBlobsResponse_Response getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static BatchUpdateBlobsResponse_Response getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BatchUpdateBlobsResponse_Response>(
+          create);
   static BatchUpdateBlobsResponse_Response _defaultInstance;
 
+  @$pb.TagNumber(1)
   Digest get blobDigest => $_getN(0);
+  @$pb.TagNumber(1)
   set blobDigest(Digest v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasBlobDigest() => $_has(0);
+  @$pb.TagNumber(1)
   void clearBlobDigest() => clearField(1);
+  @$pb.TagNumber(1)
+  Digest ensureBlobDigest() => $_ensure(0);
 
+  @$pb.TagNumber(2)
   $4.Status get status => $_getN(1);
+  @$pb.TagNumber(2)
   set status($4.Status v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasStatus() => $_has(1);
+  @$pb.TagNumber(2)
   void clearStatus() => clearField(2);
+  @$pb.TagNumber(2)
+  $4.Status ensureStatus() => $_ensure(1);
 }
 
 class BatchUpdateBlobsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('BatchUpdateBlobsResponse',
-      package: const $pb.PackageName('google.devtools.remoteexecution.v1test'))
+      package: const $pb.PackageName('google.devtools.remoteexecution.v1test'),
+      createEmptyInstance: create)
     ..pc<BatchUpdateBlobsResponse_Response>(1, 'responses', $pb.PbFieldType.PM,
-        BatchUpdateBlobsResponse_Response.create)
+        subBuilder: BatchUpdateBlobsResponse_Response.create)
     ..hasRequiredFields = false;
 
   BatchUpdateBlobsResponse._() : super();
@@ -1266,19 +1579,21 @@ class BatchUpdateBlobsResponse extends $pb.GeneratedMessage {
   BatchUpdateBlobsResponse createEmptyInstance() => create();
   static $pb.PbList<BatchUpdateBlobsResponse> createRepeated() =>
       $pb.PbList<BatchUpdateBlobsResponse>();
-  static BatchUpdateBlobsResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static BatchUpdateBlobsResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<BatchUpdateBlobsResponse>(create);
   static BatchUpdateBlobsResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<BatchUpdateBlobsResponse_Response> get responses => $_getList(0);
 }
 
 class GetTreeRequest extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetTreeRequest',
-      package: const $pb.PackageName('google.devtools.remoteexecution.v1test'))
+      package: const $pb.PackageName('google.devtools.remoteexecution.v1test'),
+      createEmptyInstance: create)
     ..aOS(1, 'instanceName')
-    ..a<Digest>(
-        2, 'rootDigest', $pb.PbFieldType.OM, Digest.getDefault, Digest.create)
+    ..aOM<Digest>(2, 'rootDigest', subBuilder: Digest.create)
     ..a<$core.int>(3, 'pageSize', $pb.PbFieldType.O3)
     ..aOS(4, 'pageToken')
     ..hasRequiredFields = false;
@@ -1300,46 +1615,68 @@ class GetTreeRequest extends $pb.GeneratedMessage {
   GetTreeRequest createEmptyInstance() => create();
   static $pb.PbList<GetTreeRequest> createRepeated() =>
       $pb.PbList<GetTreeRequest>();
-  static GetTreeRequest getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetTreeRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetTreeRequest>(create);
   static GetTreeRequest _defaultInstance;
 
-  $core.String get instanceName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get instanceName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set instanceName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasInstanceName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearInstanceName() => clearField(1);
 
+  @$pb.TagNumber(2)
   Digest get rootDigest => $_getN(1);
+  @$pb.TagNumber(2)
   set rootDigest(Digest v) {
     setField(2, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasRootDigest() => $_has(1);
+  @$pb.TagNumber(2)
   void clearRootDigest() => clearField(2);
+  @$pb.TagNumber(2)
+  Digest ensureRootDigest() => $_ensure(1);
 
-  $core.int get pageSize => $_get(2, 0);
+  @$pb.TagNumber(3)
+  $core.int get pageSize => $_getIZ(2);
+  @$pb.TagNumber(3)
   set pageSize($core.int v) {
     $_setSignedInt32(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasPageSize() => $_has(2);
+  @$pb.TagNumber(3)
   void clearPageSize() => clearField(3);
 
-  $core.String get pageToken => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get pageToken => $_getSZ(3);
+  @$pb.TagNumber(4)
   set pageToken($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasPageToken() => $_has(3);
+  @$pb.TagNumber(4)
   void clearPageToken() => clearField(4);
 }
 
 class GetTreeResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetTreeResponse',
-      package: const $pb.PackageName('google.devtools.remoteexecution.v1test'))
-    ..pc<Directory>(1, 'directories', $pb.PbFieldType.PM, Directory.create)
+      package: const $pb.PackageName('google.devtools.remoteexecution.v1test'),
+      createEmptyInstance: create)
+    ..pc<Directory>(1, 'directories', $pb.PbFieldType.PM,
+        subBuilder: Directory.create)
     ..aOS(2, 'nextPageToken')
     ..hasRequiredFields = false;
 
@@ -1360,24 +1697,31 @@ class GetTreeResponse extends $pb.GeneratedMessage {
   GetTreeResponse createEmptyInstance() => create();
   static $pb.PbList<GetTreeResponse> createRepeated() =>
       $pb.PbList<GetTreeResponse>();
-  static GetTreeResponse getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static GetTreeResponse getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<GetTreeResponse>(create);
   static GetTreeResponse _defaultInstance;
 
+  @$pb.TagNumber(1)
   $core.List<Directory> get directories => $_getList(0);
 
-  $core.String get nextPageToken => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get nextPageToken => $_getSZ(1);
+  @$pb.TagNumber(2)
   set nextPageToken($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasNextPageToken() => $_has(1);
+  @$pb.TagNumber(2)
   void clearNextPageToken() => clearField(2);
 }
 
 class ToolDetails extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('ToolDetails',
-      package: const $pb.PackageName('google.devtools.remoteexecution.v1test'))
+      package: const $pb.PackageName('google.devtools.remoteexecution.v1test'),
+      createEmptyInstance: create)
     ..aOS(1, 'toolName')
     ..aOS(2, 'toolVersion')
     ..hasRequiredFields = false;
@@ -1398,31 +1742,41 @@ class ToolDetails extends $pb.GeneratedMessage {
   static ToolDetails create() => ToolDetails._();
   ToolDetails createEmptyInstance() => create();
   static $pb.PbList<ToolDetails> createRepeated() => $pb.PbList<ToolDetails>();
-  static ToolDetails getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static ToolDetails getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<ToolDetails>(create);
   static ToolDetails _defaultInstance;
 
-  $core.String get toolName => $_getS(0, '');
+  @$pb.TagNumber(1)
+  $core.String get toolName => $_getSZ(0);
+  @$pb.TagNumber(1)
   set toolName($core.String v) {
     $_setString(0, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasToolName() => $_has(0);
+  @$pb.TagNumber(1)
   void clearToolName() => clearField(1);
 
-  $core.String get toolVersion => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get toolVersion => $_getSZ(1);
+  @$pb.TagNumber(2)
   set toolVersion($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasToolVersion() => $_has(1);
+  @$pb.TagNumber(2)
   void clearToolVersion() => clearField(2);
 }
 
 class RequestMetadata extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('RequestMetadata',
-      package: const $pb.PackageName('google.devtools.remoteexecution.v1test'))
-    ..a<ToolDetails>(1, 'toolDetails', $pb.PbFieldType.OM,
-        ToolDetails.getDefault, ToolDetails.create)
+      package: const $pb.PackageName('google.devtools.remoteexecution.v1test'),
+      createEmptyInstance: create)
+    ..aOM<ToolDetails>(1, 'toolDetails', subBuilder: ToolDetails.create)
     ..aOS(2, 'actionId')
     ..aOS(3, 'toolInvocationId')
     ..aOS(4, 'correlatedInvocationsId')
@@ -1445,39 +1799,58 @@ class RequestMetadata extends $pb.GeneratedMessage {
   RequestMetadata createEmptyInstance() => create();
   static $pb.PbList<RequestMetadata> createRepeated() =>
       $pb.PbList<RequestMetadata>();
-  static RequestMetadata getDefault() =>
-      _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static RequestMetadata getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<RequestMetadata>(create);
   static RequestMetadata _defaultInstance;
 
+  @$pb.TagNumber(1)
   ToolDetails get toolDetails => $_getN(0);
+  @$pb.TagNumber(1)
   set toolDetails(ToolDetails v) {
     setField(1, v);
   }
 
+  @$pb.TagNumber(1)
   $core.bool hasToolDetails() => $_has(0);
+  @$pb.TagNumber(1)
   void clearToolDetails() => clearField(1);
+  @$pb.TagNumber(1)
+  ToolDetails ensureToolDetails() => $_ensure(0);
 
-  $core.String get actionId => $_getS(1, '');
+  @$pb.TagNumber(2)
+  $core.String get actionId => $_getSZ(1);
+  @$pb.TagNumber(2)
   set actionId($core.String v) {
     $_setString(1, v);
   }
 
+  @$pb.TagNumber(2)
   $core.bool hasActionId() => $_has(1);
+  @$pb.TagNumber(2)
   void clearActionId() => clearField(2);
 
-  $core.String get toolInvocationId => $_getS(2, '');
+  @$pb.TagNumber(3)
+  $core.String get toolInvocationId => $_getSZ(2);
+  @$pb.TagNumber(3)
   set toolInvocationId($core.String v) {
     $_setString(2, v);
   }
 
+  @$pb.TagNumber(3)
   $core.bool hasToolInvocationId() => $_has(2);
+  @$pb.TagNumber(3)
   void clearToolInvocationId() => clearField(3);
 
-  $core.String get correlatedInvocationsId => $_getS(3, '');
+  @$pb.TagNumber(4)
+  $core.String get correlatedInvocationsId => $_getSZ(3);
+  @$pb.TagNumber(4)
   set correlatedInvocationsId($core.String v) {
     $_setString(3, v);
   }
 
+  @$pb.TagNumber(4)
   $core.bool hasCorrelatedInvocationsId() => $_has(3);
+  @$pb.TagNumber(4)
   void clearCorrelatedInvocationsId() => clearField(4);
 }

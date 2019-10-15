@@ -5,8 +5,7 @@
 // @dart = 2.3
 // ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
 
-import 'dart:core' as $core
-    show bool, Deprecated, double, int, List, Map, override, pragma, String;
+import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
@@ -14,7 +13,8 @@ export 'ad_type.pbenum.dart';
 
 class AdTypeEnum extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo('AdTypeEnum',
-      package: const $pb.PackageName('google.ads.googleads.v2.enums'))
+      package: const $pb.PackageName('google.ads.googleads.v2.enums'),
+      createEmptyInstance: create)
     ..hasRequiredFields = false;
 
   AdTypeEnum._() : super();
@@ -33,6 +33,8 @@ class AdTypeEnum extends $pb.GeneratedMessage {
   static AdTypeEnum create() => AdTypeEnum._();
   AdTypeEnum createEmptyInstance() => create();
   static $pb.PbList<AdTypeEnum> createRepeated() => $pb.PbList<AdTypeEnum>();
-  static AdTypeEnum getDefault() => _defaultInstance ??= create()..freeze();
+  @$core.pragma('dart2js:noInline')
+  static AdTypeEnum getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<AdTypeEnum>(create);
   static AdTypeEnum _defaultInstance;
 }
