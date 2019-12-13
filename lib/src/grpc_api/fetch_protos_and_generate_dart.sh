@@ -36,14 +36,23 @@ run git clone https://github.com/google/googleapis.git $GOOGLEAPIS_DIR
 run rm -rf $DIR/protos
 run mkdir -p $DIR/protos/google/protobuf
 run cp $PROTOBUF_DIR/src/google/protobuf/*.proto $DIR/protos/google/protobuf
-run cp -R $GOOGLEAPIS_DIR/google/* $DIR/protos/google
+# Note we only use protos from some subfolders, so we copy those in here.
+run cp -R $GOOGLEAPIS_DIR/google/appengine $DIR/protos/google
+run cp -R $GOOGLEAPIS_DIR/google/datastore $DIR/protos/google
+run cp -R $GOOGLEAPIS_DIR/google/logging $DIR/protos/google
+run cp -R $GOOGLEAPIS_DIR/google/api $DIR/protos/google
+run cp -R $GOOGLEAPIS_DIR/google/iam $DIR/protos/google
+run cp -R $GOOGLEAPIS_DIR/google/rpc $DIR/protos/google
+run cp -R $GOOGLEAPIS_DIR/google/type $DIR/protos/google
+run cp -R $GOOGLEAPIS_DIR/google/longrunning $DIR/protos/google
+
 
 # Generate the dart code.
 run rm -rf $DIR/dart
 run mkdir -p $DIR/dart
 for file in $(find $DIR/protos -name '*proto' | grep -v unittest); do
   echo -e "\nCompiling $file"
-  run protoc -I$DIR/protos --dart_out=grpc:$DIR/dart $file
+  run protoc "-I$DIR/protos" "--dart_out=grpc:$DIR/dart" "$file"
   echo
 done
 
