@@ -1,3 +1,8 @@
+## 0.10.4
+
+ * Updated protobuf source files.
+ * Reduced number of unnecessarily generated protos.
+
 ## 0.10.3
 
  * Update Protobuf to v1.0.0
