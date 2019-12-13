@@ -8,15 +8,16 @@
 const Index$json = {
   '1': 'Index',
   '2': [
-    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
-    {'1': 'index_id', '3': 3, '4': 1, '5': 9, '10': 'indexId'},
-    {'1': 'kind', '3': 4, '4': 1, '5': 9, '10': 'kind'},
+    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'projectId'},
+    {'1': 'index_id', '3': 3, '4': 1, '5': 9, '8': {}, '10': 'indexId'},
+    {'1': 'kind', '3': 4, '4': 1, '5': 9, '8': {}, '10': 'kind'},
     {
       '1': 'ancestor',
       '3': 5,
       '4': 1,
       '5': 14,
       '6': '.google.datastore.admin.v1.Index.AncestorMode',
+      '8': {},
       '10': 'ancestor'
     },
     {
@@ -25,6 +26,7 @@ const Index$json = {
       '4': 3,
       '5': 11,
       '6': '.google.datastore.admin.v1.Index.IndexedProperty',
+      '8': {},
       '10': 'properties'
     },
     {
@@ -33,6 +35,7 @@ const Index$json = {
       '4': 1,
       '5': 14,
       '6': '.google.datastore.admin.v1.Index.State',
+      '8': {},
       '10': 'state'
     },
   ],
@@ -43,13 +46,14 @@ const Index$json = {
 const Index_IndexedProperty$json = {
   '1': 'IndexedProperty',
   '2': [
-    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
     {
       '1': 'direction',
       '3': 2,
       '4': 1,
       '5': 14,
       '6': '.google.datastore.admin.v1.Index.Direction',
+      '8': {},
       '10': 'direction'
     },
   ],

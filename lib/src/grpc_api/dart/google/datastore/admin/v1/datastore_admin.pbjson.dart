@@ -98,7 +98,7 @@ const Progress$json = {
 const ExportEntitiesRequest$json = {
   '1': 'ExportEntitiesRequest',
   '2': [
-    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
+    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'projectId'},
     {
       '1': 'labels',
       '3': 2,
@@ -115,7 +115,14 @@ const ExportEntitiesRequest$json = {
       '6': '.google.datastore.admin.v1.EntityFilter',
       '10': 'entityFilter'
     },
-    {'1': 'output_url_prefix', '3': 4, '4': 1, '5': 9, '10': 'outputUrlPrefix'},
+    {
+      '1': 'output_url_prefix',
+      '3': 4,
+      '4': 1,
+      '5': 9,
+      '8': {},
+      '10': 'outputUrlPrefix'
+    },
   ],
   '3': [ExportEntitiesRequest_LabelsEntry$json],
 };
@@ -132,7 +139,7 @@ const ExportEntitiesRequest_LabelsEntry$json = {
 const ImportEntitiesRequest$json = {
   '1': 'ImportEntitiesRequest',
   '2': [
-    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
+    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'projectId'},
     {
       '1': 'labels',
       '3': 2,
@@ -141,7 +148,7 @@ const ImportEntitiesRequest$json = {
       '6': '.google.datastore.admin.v1.ImportEntitiesRequest.LabelsEntry',
       '10': 'labels'
     },
-    {'1': 'input_url', '3': 3, '4': 1, '5': 9, '10': 'inputUrl'},
+    {'1': 'input_url', '3': 3, '4': 1, '5': 9, '8': {}, '10': 'inputUrl'},
     {
       '1': 'entity_filter',
       '3': 4,

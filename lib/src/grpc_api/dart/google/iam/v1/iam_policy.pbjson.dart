@@ -40,7 +40,7 @@ const TestIamPermissionsRequest$json = {
   '1': 'TestIamPermissionsRequest',
   '2': [
     {'1': 'resource', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'resource'},
-    {'1': 'permissions', '3': 2, '4': 3, '5': 9, '10': 'permissions'},
+    {'1': 'permissions', '3': 2, '4': 3, '5': 9, '8': {}, '10': 'permissions'},
   ],
 };
 
