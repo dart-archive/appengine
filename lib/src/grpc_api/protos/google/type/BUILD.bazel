@@ -1,3 +1,5 @@
+load("@rules_proto//proto:defs.bzl", "proto_library")
+
 # This is an API workspace, having public visibility by default makes perfect sense.
 package(default_visibility = ["//visibility:public"])
 
@@ -20,6 +22,14 @@ proto_library(
 proto_library(
     name = "date_proto",
     srcs = ["date.proto"],
+)
+
+proto_library(
+    name = "datetime_proto",
+    srcs = ["datetime.proto"],
+    deps = [
+        "@com_google_protobuf//:duration_proto",
+    ],
 )
 
 proto_library(
@@ -105,6 +115,12 @@ go_proto_library(
     name = "date_go_proto",
     importpath = "google.golang.org/genproto/googleapis/type/date",
     protos = [":date_proto"],
+)
+
+go_proto_library(
+    name = "datetime_go_proto",
+    importpath = "google.golang.org/genproto/googleapis/type/date",
+    protos = [":datetime_proto"],
 )
 
 go_proto_library(

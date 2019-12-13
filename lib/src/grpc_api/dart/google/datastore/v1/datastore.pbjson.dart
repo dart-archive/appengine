@@ -8,7 +8,7 @@
 const LookupRequest$json = {
   '1': 'LookupRequest',
   '2': [
-    {'1': 'project_id', '3': 8, '4': 1, '5': 9, '10': 'projectId'},
+    {'1': 'project_id', '3': 8, '4': 1, '5': 9, '8': {}, '10': 'projectId'},
     {
       '1': 'read_options',
       '3': 1,
@@ -23,6 +23,7 @@ const LookupRequest$json = {
       '4': 3,
       '5': 11,
       '6': '.google.datastore.v1.Key',
+      '8': {},
       '10': 'keys'
     },
   ],
@@ -61,7 +62,7 @@ const LookupResponse$json = {
 const RunQueryRequest$json = {
   '1': 'RunQueryRequest',
   '2': [
-    {'1': 'project_id', '3': 8, '4': 1, '5': 9, '10': 'projectId'},
+    {'1': 'project_id', '3': 8, '4': 1, '5': 9, '8': {}, '10': 'projectId'},
     {
       '1': 'partition_id',
       '3': 2,
@@ -127,7 +128,7 @@ const RunQueryResponse$json = {
 const BeginTransactionRequest$json = {
   '1': 'BeginTransactionRequest',
   '2': [
-    {'1': 'project_id', '3': 8, '4': 1, '5': 9, '10': 'projectId'},
+    {'1': 'project_id', '3': 8, '4': 1, '5': 9, '8': {}, '10': 'projectId'},
     {
       '1': 'transaction_options',
       '3': 10,
@@ -149,8 +150,8 @@ const BeginTransactionResponse$json = {
 const RollbackRequest$json = {
   '1': 'RollbackRequest',
   '2': [
-    {'1': 'project_id', '3': 8, '4': 1, '5': 9, '10': 'projectId'},
-    {'1': 'transaction', '3': 1, '4': 1, '5': 12, '10': 'transaction'},
+    {'1': 'project_id', '3': 8, '4': 1, '5': 9, '8': {}, '10': 'projectId'},
+    {'1': 'transaction', '3': 1, '4': 1, '5': 12, '8': {}, '10': 'transaction'},
   ],
 };
 
@@ -161,7 +162,7 @@ const RollbackResponse$json = {
 const CommitRequest$json = {
   '1': 'CommitRequest',
   '2': [
-    {'1': 'project_id', '3': 8, '4': 1, '5': 9, '10': 'projectId'},
+    {'1': 'project_id', '3': 8, '4': 1, '5': 9, '8': {}, '10': 'projectId'},
     {
       '1': 'mode',
       '3': 5,
@@ -213,13 +214,14 @@ const CommitResponse$json = {
 const AllocateIdsRequest$json = {
   '1': 'AllocateIdsRequest',
   '2': [
-    {'1': 'project_id', '3': 8, '4': 1, '5': 9, '10': 'projectId'},
+    {'1': 'project_id', '3': 8, '4': 1, '5': 9, '8': {}, '10': 'projectId'},
     {
       '1': 'keys',
       '3': 1,
       '4': 3,
       '5': 11,
       '6': '.google.datastore.v1.Key',
+      '8': {},
       '10': 'keys'
     },
   ],
@@ -242,7 +244,7 @@ const AllocateIdsResponse$json = {
 const ReserveIdsRequest$json = {
   '1': 'ReserveIdsRequest',
   '2': [
-    {'1': 'project_id', '3': 8, '4': 1, '5': 9, '10': 'projectId'},
+    {'1': 'project_id', '3': 8, '4': 1, '5': 9, '8': {}, '10': 'projectId'},
     {'1': 'database_id', '3': 9, '4': 1, '5': 9, '10': 'databaseId'},
     {
       '1': 'keys',
@@ -250,6 +252,7 @@ const ReserveIdsRequest$json = {
       '4': 3,
       '5': 11,
       '6': '.google.datastore.v1.Key',
+      '8': {},
       '10': 'keys'
     },
   ],
