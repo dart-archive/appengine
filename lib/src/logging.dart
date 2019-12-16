@@ -45,7 +45,18 @@ abstract class Logging {
     log(LogLevel.DEBUG, string, timestamp: timestamp);
   }
 
-  void log(LogLevel level, String message, {DateTime timestamp});
+  /// Report an error, may print the error to log or report it to stackdriver
+  /// error reporting if [stackTrace] is given and running on appengine, not
+  /// localhost.
+  void reportError(Object error, StackTrace stackTrace, {DateTime timestamp}) {
+    log(LogLevel.ERROR, 'Error: $error\n$stackTrace', timestamp: timestamp);
+  }
+
+  void log(
+    LogLevel level,
+    String message, {
+    DateTime timestamp,
+  });
 
   Future<void> flush();
 }

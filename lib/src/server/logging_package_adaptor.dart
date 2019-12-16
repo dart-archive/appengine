@@ -51,7 +51,14 @@ void setupAppEngineLogging() {
             addBlock('Stack', '${record.stackTrace}');
           }
 
-          logging.log(level, message, timestamp: record.time);
+          logging.log(
+            level,
+            message,
+            timestamp: record.time,
+          );
+          if (record.error != null && record.stackTrace != null) {
+            logging.reportError(record.error, record.stackTrace);
+          }
         }
       }
     });
