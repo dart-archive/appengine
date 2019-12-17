@@ -12,6 +12,7 @@ import 'package:logging/logging.dart';
 
 class LoggingMock extends Logging {
   Function _logFunctionMock;
+  Function _reportErrorFunctionMock;
 
   LoggingMock();
 
@@ -19,11 +20,28 @@ class LoggingMock extends Logging {
     _logFunctionMock(level, message, timestamp);
   }
 
-  void expect(void func(LogLevel a, String b, DateTime c)) {
+  void reportError(LogLevel level, Object error, StackTrace stackTrace,
+      {DateTime timestamp}) {
+    _reportErrorFunctionMock(level, error, stackTrace, timestamp);
+  }
+
+  void expectReportError(
+      void func(
+          LogLevel level, Object error, StackTrace stackTrace, DateTime c)) {
+    _reportErrorFunctionMock = expectAsync4(func);
+  }
+
+  void expectNoReportErrorCall() {
+    _reportErrorFunctionMock = (_, __, ___, ____) {
+      throw StateError('Unexpected reportError() call');
+    };
+  }
+
+  void expectLog(void func(LogLevel a, String b, DateTime c)) {
     _logFunctionMock = expectAsync3(func);
   }
 
-  void expectNoCall() {
+  void expectNoLogCall() {
     _logFunctionMock = (_, __, ___) {
       throw StateError('Unexpected log() call');
     };
@@ -45,7 +63,8 @@ void main() {
         var logger = Logger('a.b');
         var mock = LoggingMock();
 
-        mock.expectNoCall();
+        mock.expectNoLogCall();
+        mock.expectNoReportErrorCall();
         logger.info('abc');
 
         return Future.value();
@@ -58,7 +77,8 @@ void main() {
         var mock = LoggingMock();
         registerLoggingService(mock);
 
-        mock.expectNoCall();
+        mock.expectNoLogCall();
+        mock.expectNoReportErrorCall();
         logger.info('abc');
       }));
     });
@@ -80,10 +100,11 @@ void main() {
           var level = Level.INFO;
           var appengineLevel = LogLevel.INFO;
 
-          mock.expect((LogLevel level, String message, DateTime ts) {
+          mock.expectLog((LogLevel level, String message, DateTime ts) {
             expect(level, equals(appengineLevel));
             expect(message, equals('abc'));
           });
+          mock.expectNoReportErrorCall();
           logger.log(level, 'abc');
         }));
       });
@@ -96,7 +117,8 @@ void main() {
         fork(expectAsync0(() async {
           registerLoggingService(mock);
 
-          mock.expectNoCall();
+          mock.expectNoLogCall();
+          mock.expectNoReportErrorCall();
           return testZone.run(() {
             logger.info('abc');
           });
@@ -110,6 +132,7 @@ void main() {
         return fork(expectAsync0(() async {
           registerLoggingService(mock);
 
+          mock.expectNoReportErrorCall();
           var logLevelMapping = {
             Level.OFF: null,
             Level.ALL: LogLevel.DEBUG,
@@ -125,13 +148,13 @@ void main() {
           logLevelMapping.forEach((level, appengineLevel) {
             if (logger.isLoggable(level)) {
               if (appengineLevel != null) {
-                mock.expect((LogLevel level, String message, DateTime ts) {
+                mock.expectLog((LogLevel level, String message, DateTime ts) {
                   expect(level, equals(appengineLevel));
                   expect(message, equals('a.b: abc'));
                 });
               }
             } else {
-              mock.expectNoCall();
+              mock.expectNoLogCall();
             }
             logger.log(level, 'abc');
           });
@@ -144,7 +167,8 @@ void main() {
 
         return fork(expectAsync0(() async {
           registerLoggingService(mock);
-          mock.expect((LogLevel level, String message, DateTime ts) {
+          mock.expectNoReportErrorCall();
+          mock.expectLog((LogLevel level, String message, DateTime ts) {
             expect(level, equals(LogLevel.INFO));
             expect(message, equals('a.b: abc\n\nError:\n    error'));
           });
@@ -158,7 +182,17 @@ void main() {
 
         return fork(expectAsync0(() async {
           registerLoggingService(mock);
-          mock.expect((LogLevel level, String message, DateTime ts) {
+          mock.expectReportError((
+            LogLevel level,
+            Object e,
+            StackTrace st,
+            DateTime ts,
+          ) {
+            expect(level, equals(LogLevel.INFO));
+            expect(e, equals('error'));
+            expect(st, isA<CustomStackTrace>());
+          });
+          mock.expectLog((LogLevel level, String message, DateTime ts) {
             expect(level, equals(LogLevel.INFO));
             expect(
                 message,
