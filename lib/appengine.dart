@@ -158,6 +158,12 @@ ClientContext get context => ss.lookup(_APPENGINE_CONTEXT);
 
 /// Will register for log events produced by `package:logging` and forwards
 /// log records to the AppEngine logging service.
+///
+/// Errors and exceptions logged with a stacktrace and severity `severe` or
+/// higher will also be reported to [Stackdriver Error Reporting][1] when
+/// running on AppEngine.
+///
+/// [1]: https://cloud.google.com/error-reporting/
 void useLoggingPackageAdaptor() {
   appengine_internal.useLoggingPackageAdaptor();
 }
