@@ -1,5 +1,10 @@
 ## 0.10.4
 
+ * Added `Logging.reportError` to the `logging interface, for reporting errors
+   to [Stackdriver Error Reporting](https://cloud.google.com/error-reporting/)
+   when running in AppEngine.
+ * Report errors logged through the `package:logging` adapter to
+   `Logging.reportError` (for reporting to Stackdriver Error Reporting).
  * Updated protobuf source files.
  * Reduced number of unnecessarily generated protos.
 
@@ -8,7 +13,6 @@
  * Update Protobuf to v1.0.0
  * Add client library identification header
  * Fix `grpc/datastore` tests
-
 
 ## 0.10.2
 
