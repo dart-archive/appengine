@@ -48,8 +48,16 @@ abstract class Logging {
   /// Report an error, may print the error to log or report it to stackdriver
   /// error reporting if [stackTrace] is given and running on appengine, not
   /// localhost.
-  void reportError(Object error, StackTrace stackTrace, {DateTime timestamp}) {
-    log(LogLevel.ERROR, 'Error: $error\n$stackTrace', timestamp: timestamp);
+  ///
+  /// Notice that Stackdriver Error Reporting only collects errors if [level] is
+  /// either [LogLevel.ERROR] or [LogLevel.CRITICAL].
+  void reportError(
+    LogLevel level,
+    Object error,
+    StackTrace stackTrace, {
+    DateTime timestamp,
+  }) {
+    log(level, 'Error: $error\n$stackTrace', timestamp: timestamp);
   }
 
   void log(

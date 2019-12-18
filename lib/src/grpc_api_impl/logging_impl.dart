@@ -124,11 +124,13 @@ class GrpcRequestLoggingImpl extends LoggingImpl {
   }
 
   @override
-  void reportError(Object error, StackTrace stackTrace, {DateTime timestamp}) {
+  void reportError(LogLevel level, Object error, StackTrace stackTrace,
+      {DateTime timestamp}) {
     if (stackTrace == null) {
-      super.reportError(error, stackTrace, timestamp: timestamp);
+      super.reportError(level, error, stackTrace, timestamp: timestamp);
       return;
     }
+    final api.LogSeverity severity = _severityFromLogLevel(level);
     error ??= 'unknown error';
     timestamp ??= DateTime.now();
 
@@ -143,7 +145,7 @@ class GrpcRequestLoggingImpl extends LoggingImpl {
       ..textPayload = _formatStackTrace(error, stackTrace)
       ..resource = gaeResource
       ..timestamp = nowTimestamp
-      ..severity = api.LogSeverity.ERROR
+      ..severity = severity
       // Write to stderr log, see:
       // https://cloud.google.com/error-reporting/docs/setup/app-engine-flexible-environment
       ..logName = _sharedLoggingService.backgroundLogName;
@@ -264,11 +266,13 @@ class GrpcBackgroundLoggingImpl extends Logging {
   }
 
   @override
-  void reportError(Object error, StackTrace stackTrace, {DateTime timestamp}) {
+  void reportError(LogLevel level, Object error, StackTrace stackTrace,
+      {DateTime timestamp}) {
     if (stackTrace == null) {
-      super.reportError(error, stackTrace, timestamp: timestamp);
+      super.reportError(level, error, stackTrace, timestamp: timestamp);
       return;
     }
+    final api.LogSeverity severity = _severityFromLogLevel(level);
     error ??= 'unknown error';
     timestamp ??= DateTime.now();
 
@@ -283,7 +287,7 @@ class GrpcBackgroundLoggingImpl extends Logging {
       ..textPayload = _formatStackTrace(error, stackTrace)
       ..resource = gaeResource
       ..timestamp = nowTimestamp
-      ..severity = api.LogSeverity.ERROR
+      ..severity = severity
       // Write to stderr log, see:
       // https://cloud.google.com/error-reporting/docs/setup/app-engine-flexible-environment
       ..logName = _sharedLoggingService.backgroundLogName;

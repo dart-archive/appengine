@@ -38,7 +38,7 @@ requestHandler(HttpRequest request) {
     // This will log the message to stackdriver logging along with the error
     // and stack trace. This will also send error and stack trace to stackdriver
     // error reporting service.
-    _log.warning('bad thing happend', e, st);
+    _log.severe('a bad thing happend', e, st);
   }
 
   // Respond hello world, when serving normal traffic.

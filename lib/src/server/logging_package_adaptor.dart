@@ -57,7 +57,7 @@ void setupAppEngineLogging() {
             timestamp: record.time,
           );
           if (record.error != null && record.stackTrace != null) {
-            logging.reportError(record.error, record.stackTrace);
+            logging.reportError(level, record.error, record.stackTrace);
           }
         }
       }
