@@ -45,8 +45,11 @@ class ContextRegistry {
   ClientContext add(HttpRequest request) {
     String traceId;
     // See https://cloud.google.com/trace/docs/support
-    final traceHeader = request.headers.value('X-Cloud-Trace-Context');
-    if (traceHeader != null) {
+    final traceHeader = _headerOrEmptyString(
+      request.headers,
+      'X-Cloud-Trace-Context',
+    );
+    if (traceHeader != '') {
       traceId = traceHeader.split('/')[0];
     }
 
@@ -79,8 +82,6 @@ class ContextRegistry {
     if (request != null) {
       final uri = request.requestedUri;
       final resource = uri.hasQuery ? '${uri.path}?${uri.query}' : uri.path;
-      final userAgent = request.headers.value(HttpHeaders.userAgentHeader);
-
       final List<String> forwardedFor = request.headers['x-forwarded-for'];
 
       String ip;
@@ -96,13 +97,14 @@ class ContextRegistry {
       }
 
       loggingService = _loggingFactory.newRequestSpecificLogger(
-          request.method,
-          resource,
-          userAgent,
-          uri.host,
-          ip,
-          traceId,
-          request.headers.value(HttpHeaders.refererHeader));
+        request.method,
+        resource,
+        _headerOrEmptyString(request.headers, HttpHeaders.userAgentHeader),
+        uri.host,
+        ip,
+        traceId,
+        _headerOrEmptyString(request.headers, HttpHeaders.refererHeader),
+      );
     } else {
       loggingService = _loggingFactory.newBackgroundLogger();
     }
@@ -124,8 +126,17 @@ class _ClientContextImpl implements ClientContext {
   final String traceId;
 
   @override
-  bool get isDevelopmentEnvironment => applicationContext.isDevelopmentEnvironment;
+  bool get isDevelopmentEnvironment =>
+      applicationContext.isDevelopmentEnvironment;
 
   @override
   bool get isProductionEnvironment => !isDevelopmentEnvironment;
+}
+
+String _headerOrEmptyString(HttpHeaders headers, String headerName) {
+  final elements = headers[headerName];
+  if (elements != null && elements.isNotEmpty) {
+    return elements.first;
+  }
+  return '';
 }

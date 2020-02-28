@@ -1,3 +1,7 @@
+## 0.10.5
+
+ * Handle duplicate `user-agent` headers.
+
 ## 0.10.4
 
  * Added `Logging.reportError` to the `logging interface, for reporting errors
