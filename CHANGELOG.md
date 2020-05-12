@@ -1,3 +1,7 @@
+## 0.11.0
+
+ * Upgrade `gcloud` to `0.7.0` with breaking changes in datastore keys.
+
 ## 0.10.5
 
  * Handle duplicate `user-agent` headers.
