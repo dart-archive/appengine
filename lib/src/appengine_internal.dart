@@ -14,7 +14,6 @@ import 'package:gcloud/service_scope.dart' as ss;
 import 'package:gcloud/storage.dart' as storage;
 import 'package:grpc/grpc.dart' as grpc;
 import 'package:googleapis_auth/auth_io.dart' as auth;
-import 'package:grpc/src/client/channel.dart';
 import 'package:grpc/src/client/connection.dart';
 import 'package:http/http.dart' as http;
 import 'package:path/path.dart' as p;
