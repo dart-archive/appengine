@@ -21,7 +21,6 @@ import 'package:path/path.dart' as p;
 import 'api_impl/stderr_logging_impl.dart' as stderr_logging_impl;
 import 'appengine_context.dart';
 import 'client_context.dart';
-import 'errors.dart' as errors;
 import 'grpc_api_impl/datastore_impl.dart' as grpc_datastore_impl;
 import 'grpc_api_impl/logging_impl.dart' as grpc_logging_impl;
 import 'logging.dart' as logging;
@@ -143,13 +142,10 @@ Future<ContextRegistry> _initializeAppEngine() async {
     return value;
   }
 
-  final projectId = _findEnvironmentVariable('GCLOUD_PROJECT', needed: true);
-
-  // If we find the "GCLOUD_KEY" environment variable, we'll use it for
-  // authentication otherwise the assumption is we're running in the cloud and
-  // can use the metadata server.
-  final gcloudKey =
-      _findEnvironmentVariable('GCLOUD_KEY', onlyInDev: true, needed: true);
+  final projectId = _findEnvironmentVariable(
+    'GOOGLE_CLOUD_PROJECT',
+    needed: true,
+  );
 
   // For local testing the gcloud sdk brings now a gRPC-ready datastore
   // emulator which will tell the user to use this environment variable.
@@ -175,12 +171,13 @@ Future<ContextRegistry> _initializeAppEngine() async {
   final context = AppEngineContext(isDevEnvironment, projectId, versionId,
       serviceId, instance, instanceId, pubServeUrl);
 
-  final loggerFactory = await _obtainLoggerFactory(context, gcloudKey, zoneId);
-  final storageService =
-      await _obtainStorageService(context.applicationID, gcloudKey);
+  final loggerFactory = await _obtainLoggerFactory(context, zoneId);
+  final storageService = await _obtainStorageService(context.applicationID);
 
   final dbService = await _obtainDatastoreService(
-      context.applicationID, dbEmulatorHost, gcloudKey);
+    context.applicationID,
+    dbEmulatorHost,
+  );
 
   return ContextRegistry(loggerFactory, dbService, storageService, context);
 }
@@ -208,7 +205,9 @@ Future<ContextRegistry> _initializeAppEngine() async {
 /// The returned [db.DatastoreDB] will be usable within the current service
 /// scope.
 Future<db.DatastoreDB> _obtainDatastoreService(
-    String projectId, String dbEmulatorHost, String gcloudKey) async {
+  String projectId,
+  String dbEmulatorHost,
+) async {
   String endpoint = 'https://datastore.googleapis.com';
   bool needAuthorization = true;
   if (dbEmulatorHost != null && dbEmulatorHost.contains(':')) {
@@ -217,8 +216,9 @@ Future<db.DatastoreDB> _obtainDatastoreService(
     endpoint = 'http://$dbEmulatorHost';
     needAuthorization = false;
   }
-  final authenticator =
-      _obtainAuthenticator(gcloudKey, grpc_datastore_impl.OAuth2Scopes);
+  final authenticator = await grpc.applicationDefaultCredentialsAuthenticator(
+    grpc_datastore_impl.OAuth2Scopes,
+  );
   final grpcClient = _getGrpcClientChannel(endpoint, needAuthorization);
   final rawDatastore = grpc_datastore_impl.GrpcDatastoreImpl(
       grpcClient, authenticator, projectId);
@@ -227,11 +227,10 @@ Future<db.DatastoreDB> _obtainDatastoreService(
 
 /// Creates a storage service using the service account credentials (if given)
 /// or using the metadata to obtain access credentials.
-Future<storage.Storage> _obtainStorageService(
-    String projectId, String gcloudKey) async {
-  final serviceAccount = _obtainServiceAccountCredentials(gcloudKey);
-  final authClient =
-      await _getAuthClient(serviceAccount, storage.Storage.SCOPES);
+Future<storage.Storage> _obtainStorageService(String projectId) async {
+  final authClient = await auth.clientViaApplicationDefaultCredentials(
+    scopes: storage.Storage.SCOPES,
+  );
   return storage.Storage(authClient, projectId);
 }
 
@@ -240,12 +239,15 @@ Future<storage.Storage> _obtainStorageService(
 /// The underlying logging implementation will be usable within the current
 /// service scope.
 Future<LoggerFactory> _obtainLoggerFactory(
-    AppEngineContext context, String gcloudKey, String zoneId) async {
+  AppEngineContext context,
+  String zoneId,
+) async {
   if (context.isDevelopmentEnvironment) {
     return StderrLoggerFactory();
   } else {
-    final authenticator =
-        _obtainAuthenticator(gcloudKey, grpc_logging_impl.OAuth2Scopes);
+    final authenticator = await grpc.applicationDefaultCredentialsAuthenticator(
+      grpc_logging_impl.OAuth2Scopes,
+    );
     final sharedLoggingService = grpc_logging_impl.SharedLoggingService(
         _getGrpcClientChannel('https://logging.googleapis.com', true),
         authenticator,
@@ -336,38 +338,6 @@ class _ClientChannelWithClientId implements grpc.ClientChannel {
 
   @override
   Future<void> terminate() => _clientChannel.terminate();
-}
-
-auth.ServiceAccountCredentials _obtainServiceAccountCredentials(
-    String gcloudKey) {
-  if (gcloudKey != null && gcloudKey != '') {
-    try {
-      final serviceAccountJson = File(gcloudKey).readAsStringSync();
-      return auth.ServiceAccountCredentials.fromJson(serviceAccountJson);
-    } catch (e) {
-      throw errors.AppEngineError(
-          'There was problem using the GCLOUD_KEY "$gcloudKey". '
-          'It might be an invalid service account key in json form.\n'
-          '$e');
-    }
-  }
-  return null;
-}
-
-grpc.HttpBasedAuthenticator _obtainAuthenticator(
-    String gcloudKey, List<String> scopes) {
-  if (gcloudKey != null && gcloudKey != '') {
-    try {
-      final serviceAccountJson = File(gcloudKey).readAsStringSync();
-      return grpc.ServiceAccountAuthenticator(serviceAccountJson, scopes);
-    } catch (e) {
-      throw errors.AppEngineError(
-          'There was problem using the GCLOUD_KEY "$gcloudKey". '
-          'It might be an invalid service account key in json form.\n'
-          '$e');
-    }
-  }
-  return grpc.ComputeEngineAuthenticator();
 }
 
 Future<String> _getZoneInProduction() => _getMetadataValue('zone');

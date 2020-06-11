@@ -1,3 +1,13 @@
+## 0.12.0
+ * **Breaking**, now using the environment variable `GOOGLE_CLOUD_PROJECT`
+    instead of `GCLOUD_PROJECT` for project name.
+ * **Breaking**, now using
+   [Application Default Credentials](https://cloud.google.com/docs/authentication/production)
+   instead of using the environment variable `GCLOUD_KEY`.
+   This allows authentication by specifying an _exported service account key_
+   in `GOOGLE_APPLICATION_CREDENTIALS`, or running
+   `gcloud auth application-default login` on your local machine.
+
 ## 0.11.0
 
  * Upgrade `gcloud` to `0.7.0` with breaking changes in datastore keys.

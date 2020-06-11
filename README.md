@@ -20,17 +20,15 @@ To ensure gcloud was authorized to access the cloud project and we have the
 `app` component installed, we assume the following has been run:
 ```console
 $ gcloud auth login
+$ gcloud auth application-default login
 $ gcloud config set project <project-name>
 $ gcloud components update app
 ```
 
-### Creation service account
-
-Furthermore in order to operate on the data of the cloud project, a service
-account needs to be created which allows downloading a private key in JSON
-format. Such a key can be obtained via the
-[Cloud Console](https://console.cloud.google.com) under
-`IAM & Admin > Service Accounts > Create Service Account`.
+Instead of running `gcloud auth application-default login` it is also possible
+to authenticate by making the environment variable
+`GOOGLE_APPLICATION_CREDENTIALS` point to a file containing
+_exported service account credentials_.
 
 ## Creating a hello world application
 
@@ -58,9 +56,11 @@ FROM google/dart-runtime
 
 ### NOTE: Uncomment the following lines for local testing:
 #ADD key.json /project/key.json
-#ENV GCLOUD_KEY /project/key.json
-#ENV GCLOUD_PROJECT dartlang-pub
+#ENV GOOGLE_APPLICATION_CREDENTIALS /project/key.json
+#ENV GOOGLE_CLOUD_PROJECT dartlang-pub
 ```
+
+This requires _exported service account credentials_ in `key.json`.
 
 #### An `app/bin/server.dart` containing the app code
 ```dart
@@ -80,15 +80,14 @@ main() async {
 
 ## Running the app locally
 
-There are two ways to run the application locally - with or without docker. Both
-of which require a service account key.
+There are two ways to run the application locally - with or without docker.
 
 ### Running without Docker
 
 The simplest way to run the application is on the command line like this:
 ```console
-$ export GCLOUD_KEY=<path-to-service-account-key.json>
-$ export GCLOUD_PROJECT=<project-name>
+$ gcloud auth application-default login
+$ export GOOGLE_CLOUD_PROJECT=<project-name>
 $ dart bin/server.dart
 ```
 
@@ -101,11 +100,11 @@ docker container. In order to do so, docker needs to be installed first (see the
 [official instructions](https://docs.docker.com/engine/installation/).
 
 In order to run the application locally we uncomment the 3 lines in the
-`Dockerfile` and place the service account key in under `app/key.json`:
+`Dockerfile` and place the service account key in `key.json`:
 ```Dockerfile
 ADD key.json /project/key.json
-ENV GCLOUD_KEY /project/key.json
-ENV GCLOUD_PROJECT dartlang-pub
+ENV GOOGLE_APPLICATION_CREDENTIALS /project/key.json
+ENV GOOGLE_CLOUD_PROJECT dartlang-pub
 ```
 
 We can then run the application via:
@@ -150,29 +149,3 @@ You can find the URL to the version that got deployed
 in the output of `gcloud app deploy` (as well as via the
 [Cloud Console](https://console.cloud.google.com) under `AppEngine > Versions`).
 
-## Using the datastore emulator
-
-The gcloud sdk provides an easy-to-use datastore emulator. The emulator can be
-launched via
-
-```console
-$ gcloud beta emulators datastore start
-...
-[datastore] If you are using a library that supports the DATASTORE_EMULATOR_HOST
-[datastore] environment variable, run:
-[datastore] 
-[datastore]   export DATASTORE_EMULATOR_HOST=localhost:8268
-[datastore] 
-[datastore] Dev App Server is now running.
-...
-```
-
-To make the application use the emulator, the `DATASTORE_EMULATOR_HOST`
-environment variable needs to be set (in addition to the other variables):
-
-```console
-$ export DATASTORE_EMULATOR_HOST=localhost:8268
-$ export GCLOUD_KEY=<path-to-service-account-key.json>
-$ export GCLOUD_PROJECT=<project-name>
-$ dart bin/server.dart
-```
