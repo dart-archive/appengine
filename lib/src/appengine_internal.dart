@@ -9,11 +9,10 @@ import 'dart:io';
 
 import 'package:gcloud/datastore.dart' as datastore;
 import 'package:gcloud/db.dart' as db;
-import 'package:gcloud/http.dart' as gcloud_http;
 import 'package:gcloud/service_scope.dart' as ss;
 import 'package:gcloud/storage.dart' as storage;
-import 'package:grpc/grpc.dart' as grpc;
 import 'package:googleapis_auth/auth_io.dart' as auth;
+import 'package:grpc/grpc.dart' as grpc;
 import 'package:grpc/src/client/connection.dart';
 import 'package:http/http.dart' as http;
 import 'package:path/path.dart' as p;
@@ -260,23 +259,6 @@ Future<LoggerFactory> _obtainLoggerFactory(
     ss.registerScopeExitCallback(sharedLoggingService.close);
     return GrpcLoggerFactory(sharedLoggingService);
   }
-}
-
-/// Creates an authenticated http client using service account credentials for
-/// authorization.
-///
-/// The returned [auth.AuthClient] will be usable within the current service
-/// scope.
-Future<auth.AuthClient> _getAuthClient(
-    auth.ServiceAccountCredentials serviceAccount, List<String> scopes) async {
-  auth.AuthClient client;
-  if (serviceAccount != null) {
-    client = await auth.clientViaServiceAccount(serviceAccount, scopes);
-  } else {
-    client = await auth.clientViaMetadataServer();
-  }
-  gcloud_http.registerAuthClientService(client, close: true);
-  return client;
 }
 
 /// Creates a grpc client to the specified host using service account
