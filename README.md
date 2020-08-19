@@ -10,7 +10,7 @@ This package provides support for running server applications written in Dart on
 ### Install Dart and Cloud SDKs
 
 This page assumes the Dart SDK (see
-[dartlang.org/install](https://www.dartlang.org/install)) as well as the Google
+[dart.dev/get-dart](https://dart.dev/get-dart)) as well as the Google
 Cloud SDK (see [cloud.google.com/sdk](https://cloud.google.com/sdk/)) were
 installed and their bin folders have been added to `PATH`.
 
