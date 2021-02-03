@@ -42,7 +42,7 @@ environment:
   sdk: '>=2.0.0 <3.0.0'
 
 dependencies:
-  appengine: ^0.6.0
+  appengine: ^0.12.0
 ```
 #### An `app/app.yaml` file describing the AppEngine app:
 ```yaml
