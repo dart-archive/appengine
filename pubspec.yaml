@@ -1,5 +1,5 @@
 name: appengine
-version: 0.12.1-dev
+version: 0.12.1
 description: >-
   Support for using Dart as a custom runtime on
   Google App Engine Flexible Environment

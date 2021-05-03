@@ -1,4 +1,6 @@
-## 0.12.1-dev
+## 0.12.1
+ * Setup default `authClient` in `package:gcloud`, fixing regression from
+   introduction of _Application Default Credentials_ in `0.12.0`.
 
 ## 0.12.0
  * **Breaking**, now using the environment variable `GOOGLE_CLOUD_PROJECT`
