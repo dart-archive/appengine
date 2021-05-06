@@ -9,6 +9,7 @@ import 'dart:io';
 
 import 'package:gcloud/datastore.dart' as datastore;
 import 'package:gcloud/db.dart' as db;
+import 'package:gcloud/http.dart' as gcloud_http;
 import 'package:gcloud/service_scope.dart' as ss;
 import 'package:gcloud/storage.dart' as storage;
 import 'package:googleapis_auth/auth_io.dart' as auth;
@@ -177,6 +178,12 @@ Future<ContextRegistry> _initializeAppEngine() async {
     context.applicationID,
     dbEmulatorHost,
   );
+
+  // Setup a default authClient for package:gcloud
+  gcloud_http.registerAuthClientService(
+      await auth.clientViaApplicationDefaultCredentials(
+    scopes: ['https://www.googleapis.com/auth/cloud-platform'],
+  ));
 
   return ContextRegistry(loggerFactory, dbService, storageService, context);
 }
