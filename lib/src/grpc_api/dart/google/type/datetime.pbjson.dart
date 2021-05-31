@@ -2,9 +2,14 @@
 //  Generated code. Do not modify.
 //  source: google/type/datetime.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
+import 'dart:core' as $core;
+import 'dart:convert' as $convert;
+import 'dart:typed_data' as $typed_data;
+
+@$core.Deprecated('Use dateTimeDescriptor instead')
 const DateTime$json = {
   '1': 'DateTime',
   '2': [
@@ -39,6 +44,10 @@ const DateTime$json = {
   ],
 };
 
+/// Descriptor for `DateTime`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List dateTimeDescriptor = $convert.base64Decode(
+    'CghEYXRlVGltZRISCgR5ZWFyGAEgASgFUgR5ZWFyEhQKBW1vbnRoGAIgASgFUgVtb250aBIQCgNkYXkYAyABKAVSA2RheRIUCgVob3VycxgEIAEoBVIFaG91cnMSGAoHbWludXRlcxgFIAEoBVIHbWludXRlcxIYCgdzZWNvbmRzGAYgASgFUgdzZWNvbmRzEhQKBW5hbm9zGAcgASgFUgVuYW5vcxI6Cgp1dGNfb2Zmc2V0GAggASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uSABSCXV0Y09mZnNldBI0Cgl0aW1lX3pvbmUYCSABKAsyFS5nb29nbGUudHlwZS5UaW1lWm9uZUgAUgh0aW1lWm9uZUINCgt0aW1lX29mZnNldA==');
+@$core.Deprecated('Use timeZoneDescriptor instead')
 const TimeZone$json = {
   '1': 'TimeZone',
   '2': [
@@ -46,3 +55,7 @@ const TimeZone$json = {
     {'1': 'version', '3': 2, '4': 1, '5': 9, '10': 'version'},
   ],
 };
+
+/// Descriptor for `TimeZone`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List timeZoneDescriptor = $convert.base64Decode(
+    'CghUaW1lWm9uZRIOCgJpZBgBIAEoCVICaWQSGAoHdmVyc2lvbhgCIAEoCVIHdmVyc2lvbg==');

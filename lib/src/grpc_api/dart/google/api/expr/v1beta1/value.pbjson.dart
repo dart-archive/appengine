@@ -2,9 +2,14 @@
 //  Generated code. Do not modify.
 //  source: google/api/expr/v1beta1/value.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
+import 'dart:core' as $core;
+import 'dart:convert' as $convert;
+import 'dart:typed_data' as $typed_data;
+
+@$core.Deprecated('Use valueDescriptor instead')
 const Value$json = {
   '1': 'Value',
   '2': [
@@ -66,6 +71,10 @@ const Value$json = {
   ],
 };
 
+/// Descriptor for `Value`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List valueDescriptor = $convert.base64Decode(
+    'CgVWYWx1ZRI7CgpudWxsX3ZhbHVlGAEgASgOMhouZ29vZ2xlLnByb3RvYnVmLk51bGxWYWx1ZUgAUgludWxsVmFsdWUSHwoKYm9vbF92YWx1ZRgCIAEoCEgAUglib29sVmFsdWUSIQoLaW50NjRfdmFsdWUYAyABKANIAFIKaW50NjRWYWx1ZRIjCgx1aW50NjRfdmFsdWUYBCABKARIAFILdWludDY0VmFsdWUSIwoMZG91YmxlX3ZhbHVlGAUgASgBSABSC2RvdWJsZVZhbHVlEiMKDHN0cmluZ192YWx1ZRgGIAEoCUgAUgtzdHJpbmdWYWx1ZRIhCgtieXRlc192YWx1ZRgHIAEoDEgAUgpieXRlc1ZhbHVlEkMKCmVudW1fdmFsdWUYCSABKAsyIi5nb29nbGUuYXBpLmV4cHIudjFiZXRhMS5FbnVtVmFsdWVIAFIJZW51bVZhbHVlEjkKDG9iamVjdF92YWx1ZRgKIAEoCzIULmdvb2dsZS5wcm90b2J1Zi5BbnlIAFILb2JqZWN0VmFsdWUSQAoJbWFwX3ZhbHVlGAsgASgLMiEuZ29vZ2xlLmFwaS5leHByLnYxYmV0YTEuTWFwVmFsdWVIAFIIbWFwVmFsdWUSQwoKbGlzdF92YWx1ZRgMIAEoCzIiLmdvb2dsZS5hcGkuZXhwci52MWJldGExLkxpc3RWYWx1ZUgAUglsaXN0VmFsdWUSHwoKdHlwZV92YWx1ZRgPIAEoCUgAUgl0eXBlVmFsdWVCBgoEa2luZA==');
+@$core.Deprecated('Use enumValueDescriptor instead')
 const EnumValue$json = {
   '1': 'EnumValue',
   '2': [
@@ -74,6 +83,10 @@ const EnumValue$json = {
   ],
 };
 
+/// Descriptor for `EnumValue`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List enumValueDescriptor = $convert.base64Decode(
+    'CglFbnVtVmFsdWUSEgoEdHlwZRgBIAEoCVIEdHlwZRIUCgV2YWx1ZRgCIAEoBVIFdmFsdWU=');
+@$core.Deprecated('Use listValueDescriptor instead')
 const ListValue$json = {
   '1': 'ListValue',
   '2': [
@@ -88,6 +101,10 @@ const ListValue$json = {
   ],
 };
 
+/// Descriptor for `ListValue`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listValueDescriptor = $convert.base64Decode(
+    'CglMaXN0VmFsdWUSNgoGdmFsdWVzGAEgAygLMh4uZ29vZ2xlLmFwaS5leHByLnYxYmV0YTEuVmFsdWVSBnZhbHVlcw==');
+@$core.Deprecated('Use mapValueDescriptor instead')
 const MapValue$json = {
   '1': 'MapValue',
   '2': [
@@ -103,6 +120,7 @@ const MapValue$json = {
   '3': [MapValue_Entry$json],
 };
 
+@$core.Deprecated('Use mapValueDescriptor instead')
 const MapValue_Entry$json = {
   '1': 'Entry',
   '2': [
@@ -124,3 +142,7 @@ const MapValue_Entry$json = {
     },
   ],
 };
+
+/// Descriptor for `MapValue`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List mapValueDescriptor = $convert.base64Decode(
+    'CghNYXBWYWx1ZRJBCgdlbnRyaWVzGAEgAygLMicuZ29vZ2xlLmFwaS5leHByLnYxYmV0YTEuTWFwVmFsdWUuRW50cnlSB2VudHJpZXMabwoFRW50cnkSMAoDa2V5GAEgASgLMh4uZ29vZ2xlLmFwaS5leHByLnYxYmV0YTEuVmFsdWVSA2tleRI0CgV2YWx1ZRgCIAEoCzIeLmdvb2dsZS5hcGkuZXhwci52MWJldGExLlZhbHVlUgV2YWx1ZQ==');

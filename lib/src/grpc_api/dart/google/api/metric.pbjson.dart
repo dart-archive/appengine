@@ -2,9 +2,14 @@
 //  Generated code. Do not modify.
 //  source: google/api/metric.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
+import 'dart:core' as $core;
+import 'dart:convert' as $convert;
+import 'dart:typed_data' as $typed_data;
+
+@$core.Deprecated('Use metricDescriptorDescriptor instead')
 const MetricDescriptor$json = {
   '1': 'MetricDescriptor',
   '2': [
@@ -53,11 +58,19 @@ const MetricDescriptor$json = {
       '6': '.google.api.LaunchStage',
       '10': 'launchStage'
     },
+    {
+      '1': 'monitored_resource_types',
+      '3': 13,
+      '4': 3,
+      '5': 9,
+      '10': 'monitoredResourceTypes'
+    },
   ],
   '3': [MetricDescriptor_MetricDescriptorMetadata$json],
   '4': [MetricDescriptor_MetricKind$json, MetricDescriptor_ValueType$json],
 };
 
+@$core.Deprecated('Use metricDescriptorDescriptor instead')
 const MetricDescriptor_MetricDescriptorMetadata$json = {
   '1': 'MetricDescriptorMetadata',
   '2': [
@@ -89,6 +102,7 @@ const MetricDescriptor_MetricDescriptorMetadata$json = {
   ],
 };
 
+@$core.Deprecated('Use metricDescriptorDescriptor instead')
 const MetricDescriptor_MetricKind$json = {
   '1': 'MetricKind',
   '2': [
@@ -99,6 +113,7 @@ const MetricDescriptor_MetricKind$json = {
   ],
 };
 
+@$core.Deprecated('Use metricDescriptorDescriptor instead')
 const MetricDescriptor_ValueType$json = {
   '1': 'ValueType',
   '2': [
@@ -112,6 +127,10 @@ const MetricDescriptor_ValueType$json = {
   ],
 };
 
+/// Descriptor for `MetricDescriptor`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List metricDescriptorDescriptor = $convert.base64Decode(
+    'ChBNZXRyaWNEZXNjcmlwdG9yEhIKBG5hbWUYASABKAlSBG5hbWUSEgoEdHlwZRgIIAEoCVIEdHlwZRIzCgZsYWJlbHMYAiADKAsyGy5nb29nbGUuYXBpLkxhYmVsRGVzY3JpcHRvclIGbGFiZWxzEkgKC21ldHJpY19raW5kGAMgASgOMicuZ29vZ2xlLmFwaS5NZXRyaWNEZXNjcmlwdG9yLk1ldHJpY0tpbmRSCm1ldHJpY0tpbmQSRQoKdmFsdWVfdHlwZRgEIAEoDjImLmdvb2dsZS5hcGkuTWV0cmljRGVzY3JpcHRvci5WYWx1ZVR5cGVSCXZhbHVlVHlwZRISCgR1bml0GAUgASgJUgR1bml0EiAKC2Rlc2NyaXB0aW9uGAYgASgJUgtkZXNjcmlwdGlvbhIhCgxkaXNwbGF5X25hbWUYByABKAlSC2Rpc3BsYXlOYW1lElEKCG1ldGFkYXRhGAogASgLMjUuZ29vZ2xlLmFwaS5NZXRyaWNEZXNjcmlwdG9yLk1ldHJpY0Rlc2NyaXB0b3JNZXRhZGF0YVIIbWV0YWRhdGESOgoMbGF1bmNoX3N0YWdlGAwgASgOMhcuZ29vZ2xlLmFwaS5MYXVuY2hTdGFnZVILbGF1bmNoU3RhZ2USOAoYbW9uaXRvcmVkX3Jlc291cmNlX3R5cGVzGA0gAygJUhZtb25pdG9yZWRSZXNvdXJjZVR5cGVzGtgBChhNZXRyaWNEZXNjcmlwdG9yTWV0YWRhdGESPgoMbGF1bmNoX3N0YWdlGAEgASgOMhcuZ29vZ2xlLmFwaS5MYXVuY2hTdGFnZUICGAFSC2xhdW5jaFN0YWdlEj4KDXNhbXBsZV9wZXJpb2QYAiABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25SDHNhbXBsZVBlcmlvZBI8Cgxpbmdlc3RfZGVsYXkYAyABKAsyGS5nb29nbGUucHJvdG9idWYuRHVyYXRpb25SC2luZ2VzdERlbGF5Ik8KCk1ldHJpY0tpbmQSGwoXTUVUUklDX0tJTkRfVU5TUEVDSUZJRUQQABIJCgVHQVVHRRABEgkKBURFTFRBEAISDgoKQ1VNVUxBVElWRRADInEKCVZhbHVlVHlwZRIaChZWQUxVRV9UWVBFX1VOU1BFQ0lGSUVEEAASCAoEQk9PTBABEgkKBUlOVDY0EAISCgoGRE9VQkxFEAMSCgoGU1RSSU5HEAQSEAoMRElTVFJJQlVUSU9OEAUSCQoFTU9ORVkQBg==');
+@$core.Deprecated('Use metricDescriptor instead')
 const Metric$json = {
   '1': 'Metric',
   '2': [
@@ -128,6 +147,7 @@ const Metric$json = {
   '3': [Metric_LabelsEntry$json],
 };
 
+@$core.Deprecated('Use metricDescriptor instead')
 const Metric_LabelsEntry$json = {
   '1': 'LabelsEntry',
   '2': [
@@ -136,3 +156,7 @@ const Metric_LabelsEntry$json = {
   ],
   '7': {'7': true},
 };
+
+/// Descriptor for `Metric`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List metricDescriptor = $convert.base64Decode(
+    'CgZNZXRyaWMSEgoEdHlwZRgDIAEoCVIEdHlwZRI2CgZsYWJlbHMYAiADKAsyHi5nb29nbGUuYXBpLk1ldHJpYy5MYWJlbHNFbnRyeVIGbGFiZWxzGjkKC0xhYmVsc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EhQKBXZhbHVlGAIgASgJUgV2YWx1ZToCOAE=');

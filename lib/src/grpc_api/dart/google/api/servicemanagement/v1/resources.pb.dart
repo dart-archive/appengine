@@ -2,8 +2,8 @@
 //  Generated code. Do not modify.
 //  source: google/api/servicemanagement/v1/resources.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:core' as $core;
 
@@ -17,24 +17,57 @@ import 'resources.pbenum.dart';
 export 'resources.pbenum.dart';
 
 class ManagedService extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ManagedService',
-      package: const $pb.PackageName('google.api.servicemanagement.v1'),
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ManagedService',
+      package: const $pb.PackageName(
+          $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.api.servicemanagement.v1'),
       createEmptyInstance: create)
-    ..aOS(2, 'serviceName')
-    ..aOS(3, 'producerProjectId')
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'serviceName')
+    ..aOS(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'producerProjectId')
     ..hasRequiredFields = false;
 
   ManagedService._() : super();
-  factory ManagedService() => create();
+  factory ManagedService({
+    $core.String? serviceName,
+    $core.String? producerProjectId,
+  }) {
+    final _result = create();
+    if (serviceName != null) {
+      _result.serviceName = serviceName;
+    }
+    if (producerProjectId != null) {
+      _result.producerProjectId = producerProjectId;
+    }
+    return _result;
+  }
   factory ManagedService.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ManagedService.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   ManagedService clone() => ManagedService()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   ManagedService copyWith(void Function(ManagedService) updates) =>
-      super.copyWith((message) => updates(message as ManagedService));
+      super.copyWith((message) => updates(message as ManagedService))
+          as ManagedService; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static ManagedService create() => ManagedService._();
@@ -44,7 +77,7 @@ class ManagedService extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static ManagedService getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ManagedService>(create);
-  static ManagedService _defaultInstance;
+  static ManagedService? _defaultInstance;
 
   @$pb.TagNumber(2)
   $core.String get serviceName => $_getSZ(0);
@@ -72,29 +105,63 @@ class ManagedService extends $pb.GeneratedMessage {
 }
 
 class OperationMetadata_Step extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('OperationMetadata.Step',
-      package: const $pb.PackageName('google.api.servicemanagement.v1'),
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'OperationMetadata.Step',
+      package: const $pb.PackageName(
+          $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.api.servicemanagement.v1'),
       createEmptyInstance: create)
-    ..aOS(2, 'description')
-    ..e<OperationMetadata_Status>(4, 'status', $pb.PbFieldType.OE,
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'description')
+    ..e<OperationMetadata_Status>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'status',
+        $pb.PbFieldType.OE,
         defaultOrMaker: OperationMetadata_Status.STATUS_UNSPECIFIED,
         valueOf: OperationMetadata_Status.valueOf,
         enumValues: OperationMetadata_Status.values)
     ..hasRequiredFields = false;
 
   OperationMetadata_Step._() : super();
-  factory OperationMetadata_Step() => create();
+  factory OperationMetadata_Step({
+    $core.String? description,
+    OperationMetadata_Status? status,
+  }) {
+    final _result = create();
+    if (description != null) {
+      _result.description = description;
+    }
+    if (status != null) {
+      _result.status = status;
+    }
+    return _result;
+  }
   factory OperationMetadata_Step.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory OperationMetadata_Step.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   OperationMetadata_Step clone() =>
       OperationMetadata_Step()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   OperationMetadata_Step copyWith(
           void Function(OperationMetadata_Step) updates) =>
-      super.copyWith((message) => updates(message as OperationMetadata_Step));
+      super.copyWith((message) => updates(message as OperationMetadata_Step))
+          as OperationMetadata_Step; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static OperationMetadata_Step create() => OperationMetadata_Step._();
@@ -104,7 +171,7 @@ class OperationMetadata_Step extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static OperationMetadata_Step getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<OperationMetadata_Step>(create);
-  static OperationMetadata_Step _defaultInstance;
+  static OperationMetadata_Step? _defaultInstance;
 
   @$pb.TagNumber(2)
   $core.String get description => $_getSZ(0);
@@ -132,27 +199,70 @@ class OperationMetadata_Step extends $pb.GeneratedMessage {
 }
 
 class OperationMetadata extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('OperationMetadata',
-      package: const $pb.PackageName('google.api.servicemanagement.v1'),
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'OperationMetadata',
+      package: const $pb.PackageName(
+          $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.api.servicemanagement.v1'),
       createEmptyInstance: create)
-    ..pPS(1, 'resourceNames')
-    ..pc<OperationMetadata_Step>(2, 'steps', $pb.PbFieldType.PM,
+    ..pPS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'resourceNames')
+    ..pc<OperationMetadata_Step>(
+        2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'steps', $pb.PbFieldType.PM,
         subBuilder: OperationMetadata_Step.create)
-    ..a<$core.int>(3, 'progressPercentage', $pb.PbFieldType.O3)
-    ..aOM<$2.Timestamp>(4, 'startTime', subBuilder: $2.Timestamp.create)
+    ..a<$core.int>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'progressPercentage',
+        $pb.PbFieldType.O3)
+    ..aOM<$2.Timestamp>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'startTime', subBuilder: $2.Timestamp.create)
     ..hasRequiredFields = false;
 
   OperationMetadata._() : super();
-  factory OperationMetadata() => create();
+  factory OperationMetadata({
+    $core.Iterable<$core.String>? resourceNames,
+    $core.Iterable<OperationMetadata_Step>? steps,
+    $core.int? progressPercentage,
+    $2.Timestamp? startTime,
+  }) {
+    final _result = create();
+    if (resourceNames != null) {
+      _result.resourceNames.addAll(resourceNames);
+    }
+    if (steps != null) {
+      _result.steps.addAll(steps);
+    }
+    if (progressPercentage != null) {
+      _result.progressPercentage = progressPercentage;
+    }
+    if (startTime != null) {
+      _result.startTime = startTime;
+    }
+    return _result;
+  }
   factory OperationMetadata.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory OperationMetadata.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   OperationMetadata clone() => OperationMetadata()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   OperationMetadata copyWith(void Function(OperationMetadata) updates) =>
-      super.copyWith((message) => updates(message as OperationMetadata));
+      super.copyWith((message) => updates(message as OperationMetadata))
+          as OperationMetadata; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static OperationMetadata create() => OperationMetadata._();
@@ -162,7 +272,7 @@ class OperationMetadata extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static OperationMetadata getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<OperationMetadata>(create);
-  static OperationMetadata _defaultInstance;
+  static OperationMetadata? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<$core.String> get resourceNames => $_getList(0);
@@ -198,28 +308,67 @@ class OperationMetadata extends $pb.GeneratedMessage {
 }
 
 class Diagnostic extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Diagnostic',
-      package: const $pb.PackageName('google.api.servicemanagement.v1'),
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'Diagnostic',
+      package: const $pb.PackageName(
+          $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.api.servicemanagement.v1'),
       createEmptyInstance: create)
-    ..aOS(1, 'location')
-    ..e<Diagnostic_Kind>(2, 'kind', $pb.PbFieldType.OE,
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'location')
+    ..e<Diagnostic_Kind>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'kind',
+        $pb.PbFieldType.OE,
         defaultOrMaker: Diagnostic_Kind.WARNING,
         valueOf: Diagnostic_Kind.valueOf,
         enumValues: Diagnostic_Kind.values)
-    ..aOS(3, 'message')
+    ..aOS(
+        3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'message')
     ..hasRequiredFields = false;
 
   Diagnostic._() : super();
-  factory Diagnostic() => create();
+  factory Diagnostic({
+    $core.String? location,
+    Diagnostic_Kind? kind,
+    $core.String? message,
+  }) {
+    final _result = create();
+    if (location != null) {
+      _result.location = location;
+    }
+    if (kind != null) {
+      _result.kind = kind;
+    }
+    if (message != null) {
+      _result.message = message;
+    }
+    return _result;
+  }
   factory Diagnostic.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Diagnostic.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   Diagnostic clone() => Diagnostic()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   Diagnostic copyWith(void Function(Diagnostic) updates) =>
-      super.copyWith((message) => updates(message as Diagnostic));
+      super.copyWith((message) => updates(message as Diagnostic))
+          as Diagnostic; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static Diagnostic create() => Diagnostic._();
@@ -228,7 +377,7 @@ class Diagnostic extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static Diagnostic getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Diagnostic>(create);
-  static Diagnostic _defaultInstance;
+  static Diagnostic? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get location => $_getSZ(0);
@@ -268,25 +417,56 @@ class Diagnostic extends $pb.GeneratedMessage {
 }
 
 class ConfigSource extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ConfigSource',
-      package: const $pb.PackageName('google.api.servicemanagement.v1'),
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ConfigSource',
+      package: const $pb.PackageName(
+          $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.api.servicemanagement.v1'),
       createEmptyInstance: create)
-    ..pc<ConfigFile>(2, 'files', $pb.PbFieldType.PM,
+    ..pc<ConfigFile>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'files',
+        $pb.PbFieldType.PM,
         subBuilder: ConfigFile.create)
-    ..aOS(5, 'id')
+    ..aOS(5,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
     ..hasRequiredFields = false;
 
   ConfigSource._() : super();
-  factory ConfigSource() => create();
+  factory ConfigSource({
+    $core.Iterable<ConfigFile>? files,
+    $core.String? id,
+  }) {
+    final _result = create();
+    if (files != null) {
+      _result.files.addAll(files);
+    }
+    if (id != null) {
+      _result.id = id;
+    }
+    return _result;
+  }
   factory ConfigSource.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ConfigSource.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   ConfigSource clone() => ConfigSource()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   ConfigSource copyWith(void Function(ConfigSource) updates) =>
-      super.copyWith((message) => updates(message as ConfigSource));
+      super.copyWith((message) => updates(message as ConfigSource))
+          as ConfigSource; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static ConfigSource create() => ConfigSource._();
@@ -296,7 +476,7 @@ class ConfigSource extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static ConfigSource getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ConfigSource>(create);
-  static ConfigSource _defaultInstance;
+  static ConfigSource? _defaultInstance;
 
   @$pb.TagNumber(2)
   $core.List<ConfigFile> get files => $_getList(0);
@@ -315,28 +495,69 @@ class ConfigSource extends $pb.GeneratedMessage {
 }
 
 class ConfigFile extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ConfigFile',
-      package: const $pb.PackageName('google.api.servicemanagement.v1'),
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ConfigFile',
+      package: const $pb.PackageName(
+          $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.api.servicemanagement.v1'),
       createEmptyInstance: create)
-    ..aOS(1, 'filePath')
-    ..a<$core.List<$core.int>>(3, 'fileContents', $pb.PbFieldType.OY)
-    ..e<ConfigFile_FileType>(4, 'fileType', $pb.PbFieldType.OE,
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'filePath')
+    ..a<$core.List<$core.int>>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'fileContents',
+        $pb.PbFieldType.OY)
+    ..e<ConfigFile_FileType>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'fileType',
+        $pb.PbFieldType.OE,
         defaultOrMaker: ConfigFile_FileType.FILE_TYPE_UNSPECIFIED,
         valueOf: ConfigFile_FileType.valueOf,
         enumValues: ConfigFile_FileType.values)
     ..hasRequiredFields = false;
 
   ConfigFile._() : super();
-  factory ConfigFile() => create();
+  factory ConfigFile({
+    $core.String? filePath,
+    $core.List<$core.int>? fileContents,
+    ConfigFile_FileType? fileType,
+  }) {
+    final _result = create();
+    if (filePath != null) {
+      _result.filePath = filePath;
+    }
+    if (fileContents != null) {
+      _result.fileContents = fileContents;
+    }
+    if (fileType != null) {
+      _result.fileType = fileType;
+    }
+    return _result;
+  }
   factory ConfigFile.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ConfigFile.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   ConfigFile clone() => ConfigFile()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   ConfigFile copyWith(void Function(ConfigFile) updates) =>
-      super.copyWith((message) => updates(message as ConfigFile));
+      super.copyWith((message) => updates(message as ConfigFile))
+          as ConfigFile; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static ConfigFile create() => ConfigFile._();
@@ -345,7 +566,7 @@ class ConfigFile extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static ConfigFile getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ConfigFile>(create);
-  static ConfigFile _defaultInstance;
+  static ConfigFile? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get filePath => $_getSZ(0);
@@ -385,23 +606,48 @@ class ConfigFile extends $pb.GeneratedMessage {
 }
 
 class ConfigRef extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ConfigRef',
-      package: const $pb.PackageName('google.api.servicemanagement.v1'),
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ConfigRef',
+      package: const $pb.PackageName(
+          $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.api.servicemanagement.v1'),
       createEmptyInstance: create)
-    ..aOS(1, 'name')
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'name')
     ..hasRequiredFields = false;
 
   ConfigRef._() : super();
-  factory ConfigRef() => create();
+  factory ConfigRef({
+    $core.String? name,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    return _result;
+  }
   factory ConfigRef.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ConfigRef.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   ConfigRef clone() => ConfigRef()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   ConfigRef copyWith(void Function(ConfigRef) updates) =>
-      super.copyWith((message) => updates(message as ConfigRef));
+      super.copyWith((message) => updates(message as ConfigRef))
+          as ConfigRef; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static ConfigRef create() => ConfigRef._();
@@ -410,7 +656,7 @@ class ConfigRef extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static ConfigRef getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ConfigRef>(create);
-  static ConfigRef _defaultInstance;
+  static ConfigRef? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
@@ -426,24 +672,50 @@ class ConfigRef extends $pb.GeneratedMessage {
 }
 
 class ChangeReport extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ChangeReport',
-      package: const $pb.PackageName('google.api.servicemanagement.v1'),
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ChangeReport',
+      package: const $pb.PackageName(
+          $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.api.servicemanagement.v1'),
       createEmptyInstance: create)
-    ..pc<$3.ConfigChange>(1, 'configChanges', $pb.PbFieldType.PM,
+    ..pc<$3.ConfigChange>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'configChanges',
+        $pb.PbFieldType.PM,
         subBuilder: $3.ConfigChange.create)
     ..hasRequiredFields = false;
 
   ChangeReport._() : super();
-  factory ChangeReport() => create();
+  factory ChangeReport({
+    $core.Iterable<$3.ConfigChange>? configChanges,
+  }) {
+    final _result = create();
+    if (configChanges != null) {
+      _result.configChanges.addAll(configChanges);
+    }
+    return _result;
+  }
   factory ChangeReport.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ChangeReport.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   ChangeReport clone() => ChangeReport()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   ChangeReport copyWith(void Function(ChangeReport) updates) =>
-      super.copyWith((message) => updates(message as ChangeReport));
+      super.copyWith((message) => updates(message as ChangeReport))
+          as ChangeReport; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static ChangeReport create() => ChangeReport._();
@@ -453,7 +725,7 @@ class ChangeReport extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static ChangeReport getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ChangeReport>(create);
-  static ChangeReport _defaultInstance;
+  static ChangeReport? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<$3.ConfigChange> get configChanges => $_getList(0);
@@ -461,10 +733,19 @@ class ChangeReport extends $pb.GeneratedMessage {
 
 class Rollout_TrafficPercentStrategy extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      'Rollout.TrafficPercentStrategy',
-      package: const $pb.PackageName('google.api.servicemanagement.v1'),
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'Rollout.TrafficPercentStrategy',
+      package: const $pb.PackageName(
+          $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.api.servicemanagement.v1'),
       createEmptyInstance: create)
-    ..m<$core.String, $core.double>(1, 'percentages',
+    ..m<$core.String, $core.double>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'percentages',
         entryClassName: 'Rollout.TrafficPercentStrategy.PercentagesEntry',
         keyFieldType: $pb.PbFieldType.OS,
         valueFieldType: $pb.PbFieldType.OD,
@@ -472,19 +753,34 @@ class Rollout_TrafficPercentStrategy extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   Rollout_TrafficPercentStrategy._() : super();
-  factory Rollout_TrafficPercentStrategy() => create();
+  factory Rollout_TrafficPercentStrategy({
+    $core.Map<$core.String, $core.double>? percentages,
+  }) {
+    final _result = create();
+    if (percentages != null) {
+      _result.percentages.addAll(percentages);
+    }
+    return _result;
+  }
   factory Rollout_TrafficPercentStrategy.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Rollout_TrafficPercentStrategy.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   Rollout_TrafficPercentStrategy clone() =>
       Rollout_TrafficPercentStrategy()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   Rollout_TrafficPercentStrategy copyWith(
           void Function(Rollout_TrafficPercentStrategy) updates) =>
       super.copyWith(
-          (message) => updates(message as Rollout_TrafficPercentStrategy));
+              (message) => updates(message as Rollout_TrafficPercentStrategy))
+          as Rollout_TrafficPercentStrategy; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static Rollout_TrafficPercentStrategy create() =>
@@ -495,7 +791,7 @@ class Rollout_TrafficPercentStrategy extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static Rollout_TrafficPercentStrategy getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Rollout_TrafficPercentStrategy>(create);
-  static Rollout_TrafficPercentStrategy _defaultInstance;
+  static Rollout_TrafficPercentStrategy? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.Map<$core.String, $core.double> get percentages => $_getMap(0);
@@ -503,8 +799,13 @@ class Rollout_TrafficPercentStrategy extends $pb.GeneratedMessage {
 
 class Rollout_DeleteServiceStrategy extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      'Rollout.DeleteServiceStrategy',
-      package: const $pb.PackageName('google.api.servicemanagement.v1'),
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'Rollout.DeleteServiceStrategy',
+      package: const $pb.PackageName(
+          $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.api.servicemanagement.v1'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -516,12 +817,19 @@ class Rollout_DeleteServiceStrategy extends $pb.GeneratedMessage {
   factory Rollout_DeleteServiceStrategy.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   Rollout_DeleteServiceStrategy clone() =>
       Rollout_DeleteServiceStrategy()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   Rollout_DeleteServiceStrategy copyWith(
           void Function(Rollout_DeleteServiceStrategy) updates) =>
       super.copyWith(
-          (message) => updates(message as Rollout_DeleteServiceStrategy));
+              (message) => updates(message as Rollout_DeleteServiceStrategy))
+          as Rollout_DeleteServiceStrategy; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static Rollout_DeleteServiceStrategy create() =>
@@ -532,7 +840,7 @@ class Rollout_DeleteServiceStrategy extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static Rollout_DeleteServiceStrategy getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Rollout_DeleteServiceStrategy>(create);
-  static Rollout_DeleteServiceStrategy _defaultInstance;
+  static Rollout_DeleteServiceStrategy? _defaultInstance;
 }
 
 enum Rollout_Strategy { trafficPercentStrategy, deleteServiceStrategy, notSet }
@@ -543,35 +851,85 @@ class Rollout extends $pb.GeneratedMessage {
     200: Rollout_Strategy.deleteServiceStrategy,
     0: Rollout_Strategy.notSet
   };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Rollout',
-      package: const $pb.PackageName('google.api.servicemanagement.v1'),
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Rollout',
+      package: const $pb.PackageName($core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'google.api.servicemanagement.v1'),
       createEmptyInstance: create)
     ..oo(0, [5, 200])
-    ..aOS(1, 'rolloutId')
-    ..aOM<$2.Timestamp>(2, 'createTime', subBuilder: $2.Timestamp.create)
-    ..aOS(3, 'createdBy')
-    ..e<Rollout_RolloutStatus>(4, 'status', $pb.PbFieldType.OE,
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'rolloutId')
+    ..aOM<$2.Timestamp>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'createTime',
+        subBuilder: $2.Timestamp.create)
+    ..aOS(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'createdBy')
+    ..e<Rollout_RolloutStatus>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'status', $pb.PbFieldType.OE,
         defaultOrMaker: Rollout_RolloutStatus.ROLLOUT_STATUS_UNSPECIFIED,
         valueOf: Rollout_RolloutStatus.valueOf,
         enumValues: Rollout_RolloutStatus.values)
-    ..aOM<Rollout_TrafficPercentStrategy>(5, 'trafficPercentStrategy',
+    ..aOM<Rollout_TrafficPercentStrategy>(
+        5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'trafficPercentStrategy',
         subBuilder: Rollout_TrafficPercentStrategy.create)
-    ..aOS(8, 'serviceName')
-    ..aOM<Rollout_DeleteServiceStrategy>(200, 'deleteServiceStrategy',
-        subBuilder: Rollout_DeleteServiceStrategy.create)
+    ..aOS(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'serviceName')
+    ..aOM<Rollout_DeleteServiceStrategy>(200, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'deleteServiceStrategy', subBuilder: Rollout_DeleteServiceStrategy.create)
     ..hasRequiredFields = false;
 
   Rollout._() : super();
-  factory Rollout() => create();
+  factory Rollout({
+    $core.String? rolloutId,
+    $2.Timestamp? createTime,
+    $core.String? createdBy,
+    Rollout_RolloutStatus? status,
+    Rollout_TrafficPercentStrategy? trafficPercentStrategy,
+    $core.String? serviceName,
+    Rollout_DeleteServiceStrategy? deleteServiceStrategy,
+  }) {
+    final _result = create();
+    if (rolloutId != null) {
+      _result.rolloutId = rolloutId;
+    }
+    if (createTime != null) {
+      _result.createTime = createTime;
+    }
+    if (createdBy != null) {
+      _result.createdBy = createdBy;
+    }
+    if (status != null) {
+      _result.status = status;
+    }
+    if (trafficPercentStrategy != null) {
+      _result.trafficPercentStrategy = trafficPercentStrategy;
+    }
+    if (serviceName != null) {
+      _result.serviceName = serviceName;
+    }
+    if (deleteServiceStrategy != null) {
+      _result.deleteServiceStrategy = deleteServiceStrategy;
+    }
+    return _result;
+  }
   factory Rollout.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Rollout.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   Rollout clone() => Rollout()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   Rollout copyWith(void Function(Rollout) updates) =>
-      super.copyWith((message) => updates(message as Rollout));
+      super.copyWith((message) => updates(message as Rollout))
+          as Rollout; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static Rollout create() => Rollout._();
@@ -580,9 +938,9 @@ class Rollout extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static Rollout getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Rollout>(create);
-  static Rollout _defaultInstance;
+  static Rollout? _defaultInstance;
 
-  Rollout_Strategy whichStrategy() => _Rollout_StrategyByTag[$_whichOneof(0)];
+  Rollout_Strategy whichStrategy() => _Rollout_StrategyByTag[$_whichOneof(0)]!;
   void clearStrategy() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)

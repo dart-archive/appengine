@@ -2,8 +2,8 @@
 //  Generated code. Do not modify.
 //  source: google/datastore/v1beta3/datastore.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:async' as $async;
 
@@ -55,62 +55,47 @@ class DatastoreClient extends $grpc.Client {
           ($core.List<$core.int> value) =>
               $0.ReserveIdsResponse.fromBuffer(value));
 
-  DatastoreClient($grpc.ClientChannel channel, {$grpc.CallOptions options})
-      : super(channel, options: options);
+  DatastoreClient($grpc.ClientChannel channel,
+      {$grpc.CallOptions? options,
+      $core.Iterable<$grpc.ClientInterceptor>? interceptors})
+      : super(channel, options: options, interceptors: interceptors);
 
   $grpc.ResponseFuture<$0.LookupResponse> lookup($0.LookupRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(_$lookup, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$lookup, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.RunQueryResponse> runQuery($0.RunQueryRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(_$runQuery, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$runQuery, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.BeginTransactionResponse> beginTransaction(
       $0.BeginTransactionRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$beginTransaction, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$beginTransaction, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.CommitResponse> commit($0.CommitRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(_$commit, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$commit, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.RollbackResponse> rollback($0.RollbackRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(_$rollback, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$rollback, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.AllocateIdsResponse> allocateIds(
       $0.AllocateIdsRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$allocateIds, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$allocateIds, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.ReserveIdsResponse> reserveIds(
       $0.ReserveIdsRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$reserveIds, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$reserveIds, request, options: options);
   }
 }
 

@@ -2,9 +2,14 @@
 //  Generated code. Do not modify.
 //  source: google/api/expr/v1alpha1/checked.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
+import 'dart:core' as $core;
+import 'dart:convert' as $convert;
+import 'dart:typed_data' as $typed_data;
+
+@$core.Deprecated('Use checkedExprDescriptor instead')
 const CheckedExpr$json = {
   '1': 'CheckedExpr',
   '2': [
@@ -44,6 +49,7 @@ const CheckedExpr$json = {
   '3': [CheckedExpr_ReferenceMapEntry$json, CheckedExpr_TypeMapEntry$json],
 };
 
+@$core.Deprecated('Use checkedExprDescriptor instead')
 const CheckedExpr_ReferenceMapEntry$json = {
   '1': 'ReferenceMapEntry',
   '2': [
@@ -60,6 +66,7 @@ const CheckedExpr_ReferenceMapEntry$json = {
   '7': {'7': true},
 };
 
+@$core.Deprecated('Use checkedExprDescriptor instead')
 const CheckedExpr_TypeMapEntry$json = {
   '1': 'TypeMapEntry',
   '2': [
@@ -76,6 +83,10 @@ const CheckedExpr_TypeMapEntry$json = {
   '7': {'7': true},
 };
 
+/// Descriptor for `CheckedExpr`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List checkedExprDescriptor = $convert.base64Decode(
+    'CgtDaGVja2VkRXhwchJcCg1yZWZlcmVuY2VfbWFwGAIgAygLMjcuZ29vZ2xlLmFwaS5leHByLnYxYWxwaGExLkNoZWNrZWRFeHByLlJlZmVyZW5jZU1hcEVudHJ5UgxyZWZlcmVuY2VNYXASTQoIdHlwZV9tYXAYAyADKAsyMi5nb29nbGUuYXBpLmV4cHIudjFhbHBoYTEuQ2hlY2tlZEV4cHIuVHlwZU1hcEVudHJ5Ugd0eXBlTWFwEkUKC3NvdXJjZV9pbmZvGAUgASgLMiQuZ29vZ2xlLmFwaS5leHByLnYxYWxwaGExLlNvdXJjZUluZm9SCnNvdXJjZUluZm8SMgoEZXhwchgEIAEoCzIeLmdvb2dsZS5hcGkuZXhwci52MWFscGhhMS5FeHByUgRleHByGmQKEVJlZmVyZW5jZU1hcEVudHJ5EhAKA2tleRgBIAEoA1IDa2V5EjkKBXZhbHVlGAIgASgLMiMuZ29vZ2xlLmFwaS5leHByLnYxYWxwaGExLlJlZmVyZW5jZVIFdmFsdWU6AjgBGloKDFR5cGVNYXBFbnRyeRIQCgNrZXkYASABKANSA2tleRI0CgV2YWx1ZRgCIAEoCzIeLmdvb2dsZS5hcGkuZXhwci52MWFscGhhMS5UeXBlUgV2YWx1ZToCOAE=');
+@$core.Deprecated('Use typeDescriptor instead')
 const Type$json = {
   '1': 'Type',
   '2': [
@@ -193,6 +204,7 @@ const Type$json = {
   ],
 };
 
+@$core.Deprecated('Use typeDescriptor instead')
 const Type_ListType$json = {
   '1': 'ListType',
   '2': [
@@ -207,6 +219,7 @@ const Type_ListType$json = {
   ],
 };
 
+@$core.Deprecated('Use typeDescriptor instead')
 const Type_MapType$json = {
   '1': 'MapType',
   '2': [
@@ -229,6 +242,7 @@ const Type_MapType$json = {
   ],
 };
 
+@$core.Deprecated('Use typeDescriptor instead')
 const Type_FunctionType$json = {
   '1': 'FunctionType',
   '2': [
@@ -251,6 +265,7 @@ const Type_FunctionType$json = {
   ],
 };
 
+@$core.Deprecated('Use typeDescriptor instead')
 const Type_AbstractType$json = {
   '1': 'AbstractType',
   '2': [
@@ -266,6 +281,7 @@ const Type_AbstractType$json = {
   ],
 };
 
+@$core.Deprecated('Use typeDescriptor instead')
 const Type_PrimitiveType$json = {
   '1': 'PrimitiveType',
   '2': [
@@ -279,6 +295,7 @@ const Type_PrimitiveType$json = {
   ],
 };
 
+@$core.Deprecated('Use typeDescriptor instead')
 const Type_WellKnownType$json = {
   '1': 'WellKnownType',
   '2': [
@@ -289,6 +306,10 @@ const Type_WellKnownType$json = {
   ],
 };
 
+/// Descriptor for `Type`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List typeDescriptor = $convert.base64Decode(
+    'CgRUeXBlEioKA2R5bhgBIAEoCzIWLmdvb2dsZS5wcm90b2J1Zi5FbXB0eUgAUgNkeW4SMAoEbnVsbBgCIAEoDjIaLmdvb2dsZS5wcm90b2J1Zi5OdWxsVmFsdWVIAFIEbnVsbBJMCglwcmltaXRpdmUYAyABKA4yLC5nb29nbGUuYXBpLmV4cHIudjFhbHBoYTEuVHlwZS5QcmltaXRpdmVUeXBlSABSCXByaW1pdGl2ZRJICgd3cmFwcGVyGAQgASgOMiwuZ29vZ2xlLmFwaS5leHByLnYxYWxwaGExLlR5cGUuUHJpbWl0aXZlVHlwZUgAUgd3cmFwcGVyEk0KCndlbGxfa25vd24YBSABKA4yLC5nb29nbGUuYXBpLmV4cHIudjFhbHBoYTEuVHlwZS5XZWxsS25vd25UeXBlSABSCXdlbGxLbm93bhJGCglsaXN0X3R5cGUYBiABKAsyJy5nb29nbGUuYXBpLmV4cHIudjFhbHBoYTEuVHlwZS5MaXN0VHlwZUgAUghsaXN0VHlwZRJDCghtYXBfdHlwZRgHIAEoCzImLmdvb2dsZS5hcGkuZXhwci52MWFscGhhMS5UeXBlLk1hcFR5cGVIAFIHbWFwVHlwZRJJCghmdW5jdGlvbhgIIAEoCzIrLmdvb2dsZS5hcGkuZXhwci52MWFscGhhMS5UeXBlLkZ1bmN0aW9uVHlwZUgAUghmdW5jdGlvbhIjCgxtZXNzYWdlX3R5cGUYCSABKAlIAFILbWVzc2FnZVR5cGUSHwoKdHlwZV9wYXJhbRgKIAEoCUgAUgl0eXBlUGFyYW0SNAoEdHlwZRgLIAEoCzIeLmdvb2dsZS5hcGkuZXhwci52MWFscGhhMS5UeXBlSABSBHR5cGUSLgoFZXJyb3IYDCABKAsyFi5nb29nbGUucHJvdG9idWYuRW1wdHlIAFIFZXJyb3ISUgoNYWJzdHJhY3RfdHlwZRgOIAEoCzIrLmdvb2dsZS5hcGkuZXhwci52MWFscGhhMS5UeXBlLkFic3RyYWN0VHlwZUgAUgxhYnN0cmFjdFR5cGUaRwoITGlzdFR5cGUSOwoJZWxlbV90eXBlGAEgASgLMh4uZ29vZ2xlLmFwaS5leHByLnYxYWxwaGExLlR5cGVSCGVsZW1UeXBlGoMBCgdNYXBUeXBlEjkKCGtleV90eXBlGAEgASgLMh4uZ29vZ2xlLmFwaS5leHByLnYxYWxwaGExLlR5cGVSB2tleVR5cGUSPQoKdmFsdWVfdHlwZRgCIAEoCzIeLmdvb2dsZS5hcGkuZXhwci52MWFscGhhMS5UeXBlUgl2YWx1ZVR5cGUajAEKDEZ1bmN0aW9uVHlwZRI/CgtyZXN1bHRfdHlwZRgBIAEoCzIeLmdvb2dsZS5hcGkuZXhwci52MWFscGhhMS5UeXBlUgpyZXN1bHRUeXBlEjsKCWFyZ190eXBlcxgCIAMoCzIeLmdvb2dsZS5hcGkuZXhwci52MWFscGhhMS5UeXBlUghhcmdUeXBlcxprCgxBYnN0cmFjdFR5cGUSEgoEbmFtZRgBIAEoCVIEbmFtZRJHCg9wYXJhbWV0ZXJfdHlwZXMYAiADKAsyHi5nb29nbGUuYXBpLmV4cHIudjFhbHBoYTEuVHlwZVIOcGFyYW1ldGVyVHlwZXMicwoNUHJpbWl0aXZlVHlwZRIeChpQUklNSVRJVkVfVFlQRV9VTlNQRUNJRklFRBAAEggKBEJPT0wQARIJCgVJTlQ2NBACEgoKBlVJTlQ2NBADEgoKBkRPVUJMRRAEEgoKBlNUUklORxAFEgkKBUJZVEVTEAYiVgoNV2VsbEtub3duVHlwZRIfChtXRUxMX0tOT1dOX1RZUEVfVU5TUEVDSUZJRUQQABIHCgNBTlkQARINCglUSU1FU1RBTVAQAhIMCghEVVJBVElPThADQgsKCXR5cGVfa2luZA==');
+@$core.Deprecated('Use declDescriptor instead')
 const Decl$json = {
   '1': 'Decl',
   '2': [
@@ -318,6 +339,7 @@ const Decl$json = {
   ],
 };
 
+@$core.Deprecated('Use declDescriptor instead')
 const Decl_IdentDecl$json = {
   '1': 'IdentDecl',
   '2': [
@@ -341,6 +363,7 @@ const Decl_IdentDecl$json = {
   ],
 };
 
+@$core.Deprecated('Use declDescriptor instead')
 const Decl_FunctionDecl$json = {
   '1': 'FunctionDecl',
   '2': [
@@ -356,6 +379,7 @@ const Decl_FunctionDecl$json = {
   '3': [Decl_FunctionDecl_Overload$json],
 };
 
+@$core.Deprecated('Use declDescriptor instead')
 const Decl_FunctionDecl_Overload$json = {
   '1': 'Overload',
   '2': [
@@ -388,6 +412,10 @@ const Decl_FunctionDecl_Overload$json = {
   ],
 };
 
+/// Descriptor for `Decl`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List declDescriptor = $convert.base64Decode(
+    'CgREZWNsEhIKBG5hbWUYASABKAlSBG5hbWUSQAoFaWRlbnQYAiABKAsyKC5nb29nbGUuYXBpLmV4cHIudjFhbHBoYTEuRGVjbC5JZGVudERlY2xIAFIFaWRlbnQSSQoIZnVuY3Rpb24YAyABKAsyKy5nb29nbGUuYXBpLmV4cHIudjFhbHBoYTEuRGVjbC5GdW5jdGlvbkRlY2xIAFIIZnVuY3Rpb24aiwEKCUlkZW50RGVjbBIyCgR0eXBlGAEgASgLMh4uZ29vZ2xlLmFwaS5leHByLnYxYWxwaGExLlR5cGVSBHR5cGUSOAoFdmFsdWUYAiABKAsyIi5nb29nbGUuYXBpLmV4cHIudjFhbHBoYTEuQ29uc3RhbnRSBXZhbHVlEhAKA2RvYxgDIAEoCVIDZG9jGu4CCgxGdW5jdGlvbkRlY2wSUgoJb3ZlcmxvYWRzGAEgAygLMjQuZ29vZ2xlLmFwaS5leHByLnYxYWxwaGExLkRlY2wuRnVuY3Rpb25EZWNsLk92ZXJsb2FkUglvdmVybG9hZHMaiQIKCE92ZXJsb2FkEh8KC292ZXJsb2FkX2lkGAEgASgJUgpvdmVybG9hZElkEjYKBnBhcmFtcxgCIAMoCzIeLmdvb2dsZS5hcGkuZXhwci52MWFscGhhMS5UeXBlUgZwYXJhbXMSHwoLdHlwZV9wYXJhbXMYAyADKAlSCnR5cGVQYXJhbXMSPwoLcmVzdWx0X3R5cGUYBCABKAsyHi5nb29nbGUuYXBpLmV4cHIudjFhbHBoYTEuVHlwZVIKcmVzdWx0VHlwZRIwChRpc19pbnN0YW5jZV9mdW5jdGlvbhgFIAEoCFISaXNJbnN0YW5jZUZ1bmN0aW9uEhAKA2RvYxgGIAEoCVIDZG9jQgsKCWRlY2xfa2luZA==');
+@$core.Deprecated('Use referenceDescriptor instead')
 const Reference$json = {
   '1': 'Reference',
   '2': [
@@ -403,3 +431,7 @@ const Reference$json = {
     },
   ],
 };
+
+/// Descriptor for `Reference`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List referenceDescriptor = $convert.base64Decode(
+    'CglSZWZlcmVuY2USEgoEbmFtZRgBIAEoCVIEbmFtZRIfCgtvdmVybG9hZF9pZBgDIAMoCVIKb3ZlcmxvYWRJZBI4CgV2YWx1ZRgEIAEoCzIiLmdvb2dsZS5hcGkuZXhwci52MWFscGhhMS5Db25zdGFudFIFdmFsdWU=');

@@ -2,9 +2,14 @@
 //  Generated code. Do not modify.
 //  source: google/datastore/v1/entity.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
+import 'dart:core' as $core;
+import 'dart:convert' as $convert;
+import 'dart:typed_data' as $typed_data;
+
+@$core.Deprecated('Use partitionIdDescriptor instead')
 const PartitionId$json = {
   '1': 'PartitionId',
   '2': [
@@ -13,6 +18,10 @@ const PartitionId$json = {
   ],
 };
 
+/// Descriptor for `PartitionId`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List partitionIdDescriptor = $convert.base64Decode(
+    'CgtQYXJ0aXRpb25JZBIdCgpwcm9qZWN0X2lkGAIgASgJUglwcm9qZWN0SWQSIQoMbmFtZXNwYWNlX2lkGAQgASgJUgtuYW1lc3BhY2VJZA==');
+@$core.Deprecated('Use keyDescriptor instead')
 const Key$json = {
   '1': 'Key',
   '2': [
@@ -36,6 +45,7 @@ const Key$json = {
   '3': [Key_PathElement$json],
 };
 
+@$core.Deprecated('Use keyDescriptor instead')
 const Key_PathElement$json = {
   '1': 'PathElement',
   '2': [
@@ -48,6 +58,10 @@ const Key_PathElement$json = {
   ],
 };
 
+/// Descriptor for `Key`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List keyDescriptor = $convert.base64Decode(
+    'CgNLZXkSQwoMcGFydGl0aW9uX2lkGAEgASgLMiAuZ29vZ2xlLmRhdGFzdG9yZS52MS5QYXJ0aXRpb25JZFILcGFydGl0aW9uSWQSOAoEcGF0aBgCIAMoCzIkLmdvb2dsZS5kYXRhc3RvcmUudjEuS2V5LlBhdGhFbGVtZW50UgRwYXRoGlQKC1BhdGhFbGVtZW50EhIKBGtpbmQYASABKAlSBGtpbmQSEAoCaWQYAiABKANIAFICaWQSFAoEbmFtZRgDIAEoCUgAUgRuYW1lQgkKB2lkX3R5cGU=');
+@$core.Deprecated('Use arrayValueDescriptor instead')
 const ArrayValue$json = {
   '1': 'ArrayValue',
   '2': [
@@ -62,6 +76,10 @@ const ArrayValue$json = {
   ],
 };
 
+/// Descriptor for `ArrayValue`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List arrayValueDescriptor = $convert.base64Decode(
+    'CgpBcnJheVZhbHVlEjIKBnZhbHVlcxgBIAMoCzIaLmdvb2dsZS5kYXRhc3RvcmUudjEuVmFsdWVSBnZhbHVlcw==');
+@$core.Deprecated('Use valueDescriptor instead')
 const Value$json = {
   '1': 'Value',
   '2': [
@@ -152,6 +170,10 @@ const Value$json = {
   ],
 };
 
+/// Descriptor for `Value`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List valueDescriptor = $convert.base64Decode(
+    'CgVWYWx1ZRI7CgpudWxsX3ZhbHVlGAsgASgOMhouZ29vZ2xlLnByb3RvYnVmLk51bGxWYWx1ZUgAUgludWxsVmFsdWUSJQoNYm9vbGVhbl92YWx1ZRgBIAEoCEgAUgxib29sZWFuVmFsdWUSJQoNaW50ZWdlcl92YWx1ZRgCIAEoA0gAUgxpbnRlZ2VyVmFsdWUSIwoMZG91YmxlX3ZhbHVlGAMgASgBSABSC2RvdWJsZVZhbHVlEkUKD3RpbWVzdGFtcF92YWx1ZRgKIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBIAFIOdGltZXN0YW1wVmFsdWUSNwoJa2V5X3ZhbHVlGAUgASgLMhguZ29vZ2xlLmRhdGFzdG9yZS52MS5LZXlIAFIIa2V5VmFsdWUSIwoMc3RyaW5nX3ZhbHVlGBEgASgJSABSC3N0cmluZ1ZhbHVlEh8KCmJsb2JfdmFsdWUYEiABKAxIAFIJYmxvYlZhbHVlEj0KD2dlb19wb2ludF92YWx1ZRgIIAEoCzITLmdvb2dsZS50eXBlLkxhdExuZ0gAUg1nZW9Qb2ludFZhbHVlEkAKDGVudGl0eV92YWx1ZRgGIAEoCzIbLmdvb2dsZS5kYXRhc3RvcmUudjEuRW50aXR5SABSC2VudGl0eVZhbHVlEkIKC2FycmF5X3ZhbHVlGAkgASgLMh8uZ29vZ2xlLmRhdGFzdG9yZS52MS5BcnJheVZhbHVlSABSCmFycmF5VmFsdWUSGAoHbWVhbmluZxgOIAEoBVIHbWVhbmluZxIwChRleGNsdWRlX2Zyb21faW5kZXhlcxgTIAEoCFISZXhjbHVkZUZyb21JbmRleGVzQgwKCnZhbHVlX3R5cGU=');
+@$core.Deprecated('Use entityDescriptor instead')
 const Entity$json = {
   '1': 'Entity',
   '2': [
@@ -175,6 +197,7 @@ const Entity$json = {
   '3': [Entity_PropertiesEntry$json],
 };
 
+@$core.Deprecated('Use entityDescriptor instead')
 const Entity_PropertiesEntry$json = {
   '1': 'PropertiesEntry',
   '2': [
@@ -190,3 +213,7 @@ const Entity_PropertiesEntry$json = {
   ],
   '7': {'7': true},
 };
+
+/// Descriptor for `Entity`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List entityDescriptor = $convert.base64Decode(
+    'CgZFbnRpdHkSKgoDa2V5GAEgASgLMhguZ29vZ2xlLmRhdGFzdG9yZS52MS5LZXlSA2tleRJLCgpwcm9wZXJ0aWVzGAMgAygLMisuZ29vZ2xlLmRhdGFzdG9yZS52MS5FbnRpdHkuUHJvcGVydGllc0VudHJ5Ugpwcm9wZXJ0aWVzGlkKD1Byb3BlcnRpZXNFbnRyeRIQCgNrZXkYASABKAlSA2tleRIwCgV2YWx1ZRgCIAEoCzIaLmdvb2dsZS5kYXRhc3RvcmUudjEuVmFsdWVSBXZhbHVlOgI4AQ==');

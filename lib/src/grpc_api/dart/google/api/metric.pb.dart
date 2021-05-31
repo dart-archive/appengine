@@ -2,8 +2,8 @@
 //  Generated code. Do not modify.
 //  source: google/api/metric.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:core' as $core;
 
@@ -19,19 +19,45 @@ export 'metric.pbenum.dart';
 
 class MetricDescriptor_MetricDescriptorMetadata extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      'MetricDescriptor.MetricDescriptorMetadata',
-      package: const $pb.PackageName('google.api'),
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'MetricDescriptor.MetricDescriptorMetadata',
+      package: const $pb.PackageName($core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'google.api'),
       createEmptyInstance: create)
-    ..e<$2.LaunchStage>(1, 'launchStage', $pb.PbFieldType.OE,
+    ..e<$2.LaunchStage>(
+        1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'launchStage', $pb.PbFieldType.OE,
         defaultOrMaker: $2.LaunchStage.LAUNCH_STAGE_UNSPECIFIED,
         valueOf: $2.LaunchStage.valueOf,
         enumValues: $2.LaunchStage.values)
-    ..aOM<$1.Duration>(2, 'samplePeriod', subBuilder: $1.Duration.create)
-    ..aOM<$1.Duration>(3, 'ingestDelay', subBuilder: $1.Duration.create)
+    ..aOM<$1.Duration>(
+        2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'samplePeriod',
+        subBuilder: $1.Duration.create)
+    ..aOM<$1.Duration>(
+        3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ingestDelay',
+        subBuilder: $1.Duration.create)
     ..hasRequiredFields = false;
 
   MetricDescriptor_MetricDescriptorMetadata._() : super();
-  factory MetricDescriptor_MetricDescriptorMetadata() => create();
+  factory MetricDescriptor_MetricDescriptorMetadata({
+    @$core.Deprecated('This field is deprecated.') $2.LaunchStage? launchStage,
+    $1.Duration? samplePeriod,
+    $1.Duration? ingestDelay,
+  }) {
+    final _result = create();
+    if (launchStage != null) {
+      // ignore: deprecated_member_use_from_same_package
+      _result.launchStage = launchStage;
+    }
+    if (samplePeriod != null) {
+      _result.samplePeriod = samplePeriod;
+    }
+    if (ingestDelay != null) {
+      _result.ingestDelay = ingestDelay;
+    }
+    return _result;
+  }
   factory MetricDescriptor_MetricDescriptorMetadata.fromBuffer(
           $core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
@@ -39,12 +65,19 @@ class MetricDescriptor_MetricDescriptorMetadata extends $pb.GeneratedMessage {
   factory MetricDescriptor_MetricDescriptorMetadata.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   MetricDescriptor_MetricDescriptorMetadata clone() =>
       MetricDescriptor_MetricDescriptorMetadata()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   MetricDescriptor_MetricDescriptorMetadata copyWith(
           void Function(MetricDescriptor_MetricDescriptorMetadata) updates) =>
       super.copyWith((message) =>
-          updates(message as MetricDescriptor_MetricDescriptorMetadata));
+              updates(message as MetricDescriptor_MetricDescriptorMetadata))
+          as MetricDescriptor_MetricDescriptorMetadata; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static MetricDescriptor_MetricDescriptorMetadata create() =>
@@ -57,7 +90,7 @@ class MetricDescriptor_MetricDescriptorMetadata extends $pb.GeneratedMessage {
   static MetricDescriptor_MetricDescriptorMetadata getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<
           MetricDescriptor_MetricDescriptorMetadata>(create);
-  static MetricDescriptor_MetricDescriptorMetadata _defaultInstance;
+  static MetricDescriptor_MetricDescriptorMetadata? _defaultInstance;
 
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(1)
@@ -105,42 +138,107 @@ class MetricDescriptor_MetricDescriptorMetadata extends $pb.GeneratedMessage {
 }
 
 class MetricDescriptor extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('MetricDescriptor',
-      package: const $pb.PackageName('google.api'), createEmptyInstance: create)
-    ..aOS(1, 'name')
-    ..pc<$0.LabelDescriptor>(2, 'labels', $pb.PbFieldType.PM,
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'MetricDescriptor',
+      package: const $pb.PackageName(
+          $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.api'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'name')
+    ..pc<$0.LabelDescriptor>(
+        2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'labels', $pb.PbFieldType.PM,
         subBuilder: $0.LabelDescriptor.create)
-    ..e<MetricDescriptor_MetricKind>(3, 'metricKind', $pb.PbFieldType.OE,
+    ..e<MetricDescriptor_MetricKind>(
+        3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'metricKind', $pb.PbFieldType.OE,
         defaultOrMaker: MetricDescriptor_MetricKind.METRIC_KIND_UNSPECIFIED,
         valueOf: MetricDescriptor_MetricKind.valueOf,
         enumValues: MetricDescriptor_MetricKind.values)
-    ..e<MetricDescriptor_ValueType>(4, 'valueType', $pb.PbFieldType.OE,
+    ..e<MetricDescriptor_ValueType>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'valueType',
+        $pb.PbFieldType.OE,
         defaultOrMaker: MetricDescriptor_ValueType.VALUE_TYPE_UNSPECIFIED,
         valueOf: MetricDescriptor_ValueType.valueOf,
         enumValues: MetricDescriptor_ValueType.values)
-    ..aOS(5, 'unit')
-    ..aOS(6, 'description')
-    ..aOS(7, 'displayName')
-    ..aOS(8, 'type')
-    ..aOM<MetricDescriptor_MetricDescriptorMetadata>(10, 'metadata',
-        subBuilder: MetricDescriptor_MetricDescriptorMetadata.create)
-    ..e<$2.LaunchStage>(12, 'launchStage', $pb.PbFieldType.OE,
-        defaultOrMaker: $2.LaunchStage.LAUNCH_STAGE_UNSPECIFIED,
-        valueOf: $2.LaunchStage.valueOf,
-        enumValues: $2.LaunchStage.values)
+    ..aOS(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'unit')
+    ..aOS(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'description')
+    ..aOS(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'displayName')
+    ..aOS(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'type')
+    ..aOM<MetricDescriptor_MetricDescriptorMetadata>(10, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'metadata', subBuilder: MetricDescriptor_MetricDescriptorMetadata.create)
+    ..e<$2.LaunchStage>(12, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'launchStage', $pb.PbFieldType.OE, defaultOrMaker: $2.LaunchStage.LAUNCH_STAGE_UNSPECIFIED, valueOf: $2.LaunchStage.valueOf, enumValues: $2.LaunchStage.values)
+    ..pPS(13, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'monitoredResourceTypes')
     ..hasRequiredFields = false;
 
   MetricDescriptor._() : super();
-  factory MetricDescriptor() => create();
+  factory MetricDescriptor({
+    $core.String? name,
+    $core.Iterable<$0.LabelDescriptor>? labels,
+    MetricDescriptor_MetricKind? metricKind,
+    MetricDescriptor_ValueType? valueType,
+    $core.String? unit,
+    $core.String? description,
+    $core.String? displayName,
+    $core.String? type,
+    MetricDescriptor_MetricDescriptorMetadata? metadata,
+    $2.LaunchStage? launchStage,
+    $core.Iterable<$core.String>? monitoredResourceTypes,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    if (labels != null) {
+      _result.labels.addAll(labels);
+    }
+    if (metricKind != null) {
+      _result.metricKind = metricKind;
+    }
+    if (valueType != null) {
+      _result.valueType = valueType;
+    }
+    if (unit != null) {
+      _result.unit = unit;
+    }
+    if (description != null) {
+      _result.description = description;
+    }
+    if (displayName != null) {
+      _result.displayName = displayName;
+    }
+    if (type != null) {
+      _result.type = type;
+    }
+    if (metadata != null) {
+      _result.metadata = metadata;
+    }
+    if (launchStage != null) {
+      _result.launchStage = launchStage;
+    }
+    if (monitoredResourceTypes != null) {
+      _result.monitoredResourceTypes.addAll(monitoredResourceTypes);
+    }
+    return _result;
+  }
   factory MetricDescriptor.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory MetricDescriptor.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   MetricDescriptor clone() => MetricDescriptor()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   MetricDescriptor copyWith(void Function(MetricDescriptor) updates) =>
-      super.copyWith((message) => updates(message as MetricDescriptor));
+      super.copyWith((message) => updates(message as MetricDescriptor))
+          as MetricDescriptor; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static MetricDescriptor create() => MetricDescriptor._();
@@ -150,7 +248,7 @@ class MetricDescriptor extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static MetricDescriptor getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<MetricDescriptor>(create);
-  static MetricDescriptor _defaultInstance;
+  static MetricDescriptor? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
@@ -264,30 +362,64 @@ class MetricDescriptor extends $pb.GeneratedMessage {
   $core.bool hasLaunchStage() => $_has(9);
   @$pb.TagNumber(12)
   void clearLaunchStage() => clearField(12);
+
+  @$pb.TagNumber(13)
+  $core.List<$core.String> get monitoredResourceTypes => $_getList(10);
 }
 
 class Metric extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Metric',
-      package: const $pb.PackageName('google.api'), createEmptyInstance: create)
-    ..m<$core.String, $core.String>(2, 'labels',
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'Metric',
+      package: const $pb.PackageName(
+          $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.api'),
+      createEmptyInstance: create)
+    ..m<$core.String, $core.String>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'labels',
         entryClassName: 'Metric.LabelsEntry',
         keyFieldType: $pb.PbFieldType.OS,
         valueFieldType: $pb.PbFieldType.OS,
         packageName: const $pb.PackageName('google.api'))
-    ..aOS(3, 'type')
+    ..aOS(3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'type')
     ..hasRequiredFields = false;
 
   Metric._() : super();
-  factory Metric() => create();
+  factory Metric({
+    $core.Map<$core.String, $core.String>? labels,
+    $core.String? type,
+  }) {
+    final _result = create();
+    if (labels != null) {
+      _result.labels.addAll(labels);
+    }
+    if (type != null) {
+      _result.type = type;
+    }
+    return _result;
+  }
   factory Metric.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Metric.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   Metric clone() => Metric()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   Metric copyWith(void Function(Metric) updates) =>
-      super.copyWith((message) => updates(message as Metric));
+      super.copyWith((message) => updates(message as Metric))
+          as Metric; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static Metric create() => Metric._();
@@ -296,7 +428,7 @@ class Metric extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static Metric getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Metric>(create);
-  static Metric _defaultInstance;
+  static Metric? _defaultInstance;
 
   @$pb.TagNumber(2)
   $core.Map<$core.String, $core.String> get labels => $_getMap(0);

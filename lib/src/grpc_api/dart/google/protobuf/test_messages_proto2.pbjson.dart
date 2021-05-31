@@ -2,9 +2,14 @@
 //  Generated code. Do not modify.
 //  source: google/protobuf/test_messages_proto2.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
+import 'dart:core' as $core;
+import 'dart:convert' as $convert;
+import 'dart:typed_data' as $typed_data;
+
+@$core.Deprecated('Use foreignEnumProto2Descriptor instead')
 const ForeignEnumProto2$json = {
   '1': 'ForeignEnumProto2',
   '2': [
@@ -14,6 +19,10 @@ const ForeignEnumProto2$json = {
   ],
 };
 
+/// Descriptor for `ForeignEnumProto2`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List foreignEnumProto2Descriptor = $convert.base64Decode(
+    'ChFGb3JlaWduRW51bVByb3RvMhIPCgtGT1JFSUdOX0ZPTxAAEg8KC0ZPUkVJR05fQkFSEAESDwoLRk9SRUlHTl9CQVoQAg==');
+@$core.Deprecated('Use testAllTypesProto2Descriptor instead')
 const TestAllTypesProto2$json = {
   '1': 'TestAllTypesProto2',
   '2': [
@@ -689,6 +698,7 @@ const TestAllTypesProto2$json = {
   ],
 };
 
+@$core.Deprecated('Use testAllTypesProto2Descriptor instead')
 const TestAllTypesProto2_NestedMessage$json = {
   '1': 'NestedMessage',
   '2': [
@@ -704,6 +714,7 @@ const TestAllTypesProto2_NestedMessage$json = {
   ],
 };
 
+@$core.Deprecated('Use testAllTypesProto2Descriptor instead')
 const TestAllTypesProto2_MapInt32Int32Entry$json = {
   '1': 'MapInt32Int32Entry',
   '2': [
@@ -713,6 +724,7 @@ const TestAllTypesProto2_MapInt32Int32Entry$json = {
   '7': {'7': true},
 };
 
+@$core.Deprecated('Use testAllTypesProto2Descriptor instead')
 const TestAllTypesProto2_MapInt64Int64Entry$json = {
   '1': 'MapInt64Int64Entry',
   '2': [
@@ -722,6 +734,7 @@ const TestAllTypesProto2_MapInt64Int64Entry$json = {
   '7': {'7': true},
 };
 
+@$core.Deprecated('Use testAllTypesProto2Descriptor instead')
 const TestAllTypesProto2_MapUint32Uint32Entry$json = {
   '1': 'MapUint32Uint32Entry',
   '2': [
@@ -731,6 +744,7 @@ const TestAllTypesProto2_MapUint32Uint32Entry$json = {
   '7': {'7': true},
 };
 
+@$core.Deprecated('Use testAllTypesProto2Descriptor instead')
 const TestAllTypesProto2_MapUint64Uint64Entry$json = {
   '1': 'MapUint64Uint64Entry',
   '2': [
@@ -740,6 +754,7 @@ const TestAllTypesProto2_MapUint64Uint64Entry$json = {
   '7': {'7': true},
 };
 
+@$core.Deprecated('Use testAllTypesProto2Descriptor instead')
 const TestAllTypesProto2_MapSint32Sint32Entry$json = {
   '1': 'MapSint32Sint32Entry',
   '2': [
@@ -749,6 +764,7 @@ const TestAllTypesProto2_MapSint32Sint32Entry$json = {
   '7': {'7': true},
 };
 
+@$core.Deprecated('Use testAllTypesProto2Descriptor instead')
 const TestAllTypesProto2_MapSint64Sint64Entry$json = {
   '1': 'MapSint64Sint64Entry',
   '2': [
@@ -758,6 +774,7 @@ const TestAllTypesProto2_MapSint64Sint64Entry$json = {
   '7': {'7': true},
 };
 
+@$core.Deprecated('Use testAllTypesProto2Descriptor instead')
 const TestAllTypesProto2_MapFixed32Fixed32Entry$json = {
   '1': 'MapFixed32Fixed32Entry',
   '2': [
@@ -767,6 +784,7 @@ const TestAllTypesProto2_MapFixed32Fixed32Entry$json = {
   '7': {'7': true},
 };
 
+@$core.Deprecated('Use testAllTypesProto2Descriptor instead')
 const TestAllTypesProto2_MapFixed64Fixed64Entry$json = {
   '1': 'MapFixed64Fixed64Entry',
   '2': [
@@ -776,6 +794,7 @@ const TestAllTypesProto2_MapFixed64Fixed64Entry$json = {
   '7': {'7': true},
 };
 
+@$core.Deprecated('Use testAllTypesProto2Descriptor instead')
 const TestAllTypesProto2_MapSfixed32Sfixed32Entry$json = {
   '1': 'MapSfixed32Sfixed32Entry',
   '2': [
@@ -785,6 +804,7 @@ const TestAllTypesProto2_MapSfixed32Sfixed32Entry$json = {
   '7': {'7': true},
 };
 
+@$core.Deprecated('Use testAllTypesProto2Descriptor instead')
 const TestAllTypesProto2_MapSfixed64Sfixed64Entry$json = {
   '1': 'MapSfixed64Sfixed64Entry',
   '2': [
@@ -794,6 +814,7 @@ const TestAllTypesProto2_MapSfixed64Sfixed64Entry$json = {
   '7': {'7': true},
 };
 
+@$core.Deprecated('Use testAllTypesProto2Descriptor instead')
 const TestAllTypesProto2_MapInt32FloatEntry$json = {
   '1': 'MapInt32FloatEntry',
   '2': [
@@ -803,6 +824,7 @@ const TestAllTypesProto2_MapInt32FloatEntry$json = {
   '7': {'7': true},
 };
 
+@$core.Deprecated('Use testAllTypesProto2Descriptor instead')
 const TestAllTypesProto2_MapInt32DoubleEntry$json = {
   '1': 'MapInt32DoubleEntry',
   '2': [
@@ -812,6 +834,7 @@ const TestAllTypesProto2_MapInt32DoubleEntry$json = {
   '7': {'7': true},
 };
 
+@$core.Deprecated('Use testAllTypesProto2Descriptor instead')
 const TestAllTypesProto2_MapBoolBoolEntry$json = {
   '1': 'MapBoolBoolEntry',
   '2': [
@@ -821,6 +844,7 @@ const TestAllTypesProto2_MapBoolBoolEntry$json = {
   '7': {'7': true},
 };
 
+@$core.Deprecated('Use testAllTypesProto2Descriptor instead')
 const TestAllTypesProto2_MapStringStringEntry$json = {
   '1': 'MapStringStringEntry',
   '2': [
@@ -830,6 +854,7 @@ const TestAllTypesProto2_MapStringStringEntry$json = {
   '7': {'7': true},
 };
 
+@$core.Deprecated('Use testAllTypesProto2Descriptor instead')
 const TestAllTypesProto2_MapStringBytesEntry$json = {
   '1': 'MapStringBytesEntry',
   '2': [
@@ -839,6 +864,7 @@ const TestAllTypesProto2_MapStringBytesEntry$json = {
   '7': {'7': true},
 };
 
+@$core.Deprecated('Use testAllTypesProto2Descriptor instead')
 const TestAllTypesProto2_MapStringNestedMessageEntry$json = {
   '1': 'MapStringNestedMessageEntry',
   '2': [
@@ -855,6 +881,7 @@ const TestAllTypesProto2_MapStringNestedMessageEntry$json = {
   '7': {'7': true},
 };
 
+@$core.Deprecated('Use testAllTypesProto2Descriptor instead')
 const TestAllTypesProto2_MapStringForeignMessageEntry$json = {
   '1': 'MapStringForeignMessageEntry',
   '2': [
@@ -871,6 +898,7 @@ const TestAllTypesProto2_MapStringForeignMessageEntry$json = {
   '7': {'7': true},
 };
 
+@$core.Deprecated('Use testAllTypesProto2Descriptor instead')
 const TestAllTypesProto2_MapStringNestedEnumEntry$json = {
   '1': 'MapStringNestedEnumEntry',
   '2': [
@@ -887,6 +915,7 @@ const TestAllTypesProto2_MapStringNestedEnumEntry$json = {
   '7': {'7': true},
 };
 
+@$core.Deprecated('Use testAllTypesProto2Descriptor instead')
 const TestAllTypesProto2_MapStringForeignEnumEntry$json = {
   '1': 'MapStringForeignEnumEntry',
   '2': [
@@ -903,6 +932,7 @@ const TestAllTypesProto2_MapStringForeignEnumEntry$json = {
   '7': {'7': true},
 };
 
+@$core.Deprecated('Use testAllTypesProto2Descriptor instead')
 const TestAllTypesProto2_Data$json = {
   '1': 'Data',
   '2': [
@@ -911,6 +941,7 @@ const TestAllTypesProto2_Data$json = {
   ],
 };
 
+@$core.Deprecated('Use testAllTypesProto2Descriptor instead')
 const TestAllTypesProto2_MessageSetCorrect$json = {
   '1': 'MessageSetCorrect',
   '5': [
@@ -919,6 +950,7 @@ const TestAllTypesProto2_MessageSetCorrect$json = {
   '7': {'1': true},
 };
 
+@$core.Deprecated('Use testAllTypesProto2Descriptor instead')
 const TestAllTypesProto2_MessageSetCorrectExtension1$json = {
   '1': 'MessageSetCorrectExtension1',
   '2': [
@@ -939,6 +971,7 @@ const TestAllTypesProto2_MessageSetCorrectExtension1$json = {
   ],
 };
 
+@$core.Deprecated('Use testAllTypesProto2Descriptor instead')
 const TestAllTypesProto2_MessageSetCorrectExtension2$json = {
   '1': 'MessageSetCorrectExtension2',
   '2': [
@@ -959,6 +992,7 @@ const TestAllTypesProto2_MessageSetCorrectExtension2$json = {
   ],
 };
 
+@$core.Deprecated('Use testAllTypesProto2Descriptor instead')
 const TestAllTypesProto2_NestedEnum$json = {
   '1': 'NestedEnum',
   '2': [
@@ -969,6 +1003,10 @@ const TestAllTypesProto2_NestedEnum$json = {
   ],
 };
 
+/// Descriptor for `TestAllTypesProto2`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List testAllTypesProto2Descriptor = $convert.base64Decode(
+    'ChJUZXN0QWxsVHlwZXNQcm90bzISJQoOb3B0aW9uYWxfaW50MzIYASABKAVSDW9wdGlvbmFsSW50MzISJQoOb3B0aW9uYWxfaW50NjQYAiABKANSDW9wdGlvbmFsSW50NjQSJwoPb3B0aW9uYWxfdWludDMyGAMgASgNUg5vcHRpb25hbFVpbnQzMhInCg9vcHRpb25hbF91aW50NjQYBCABKARSDm9wdGlvbmFsVWludDY0EicKD29wdGlvbmFsX3NpbnQzMhgFIAEoEVIOb3B0aW9uYWxTaW50MzISJwoPb3B0aW9uYWxfc2ludDY0GAYgASgSUg5vcHRpb25hbFNpbnQ2NBIpChBvcHRpb25hbF9maXhlZDMyGAcgASgHUg9vcHRpb25hbEZpeGVkMzISKQoQb3B0aW9uYWxfZml4ZWQ2NBgIIAEoBlIPb3B0aW9uYWxGaXhlZDY0EisKEW9wdGlvbmFsX3NmaXhlZDMyGAkgASgPUhBvcHRpb25hbFNmaXhlZDMyEisKEW9wdGlvbmFsX3NmaXhlZDY0GAogASgQUhBvcHRpb25hbFNmaXhlZDY0EiUKDm9wdGlvbmFsX2Zsb2F0GAsgASgCUg1vcHRpb25hbEZsb2F0EicKD29wdGlvbmFsX2RvdWJsZRgMIAEoAVIOb3B0aW9uYWxEb3VibGUSIwoNb3B0aW9uYWxfYm9vbBgNIAEoCFIMb3B0aW9uYWxCb29sEicKD29wdGlvbmFsX3N0cmluZxgOIAEoCVIOb3B0aW9uYWxTdHJpbmcSJQoOb3B0aW9uYWxfYnl0ZXMYDyABKAxSDW9wdGlvbmFsQnl0ZXMSdwoXb3B0aW9uYWxfbmVzdGVkX21lc3NhZ2UYEiABKAsyPy5wcm90b2J1Zl90ZXN0X21lc3NhZ2VzLnByb3RvMi5UZXN0QWxsVHlwZXNQcm90bzIuTmVzdGVkTWVzc2FnZVIVb3B0aW9uYWxOZXN0ZWRNZXNzYWdlEm0KGG9wdGlvbmFsX2ZvcmVpZ25fbWVzc2FnZRgTIAEoCzIzLnByb3RvYnVmX3Rlc3RfbWVzc2FnZXMucHJvdG8yLkZvcmVpZ25NZXNzYWdlUHJvdG8yUhZvcHRpb25hbEZvcmVpZ25NZXNzYWdlEm4KFG9wdGlvbmFsX25lc3RlZF9lbnVtGBUgASgOMjwucHJvdG9idWZfdGVzdF9tZXNzYWdlcy5wcm90bzIuVGVzdEFsbFR5cGVzUHJvdG8yLk5lc3RlZEVudW1SEm9wdGlvbmFsTmVzdGVkRW51bRJkChVvcHRpb25hbF9mb3JlaWduX2VudW0YFiABKA4yMC5wcm90b2J1Zl90ZXN0X21lc3NhZ2VzLnByb3RvMi5Gb3JlaWduRW51bVByb3RvMlITb3B0aW9uYWxGb3JlaWduRW51bRI2ChVvcHRpb25hbF9zdHJpbmdfcGllY2UYGCABKAlCAggCUhNvcHRpb25hbFN0cmluZ1BpZWNlEicKDW9wdGlvbmFsX2NvcmQYGSABKAlCAggBUgxvcHRpb25hbENvcmQSXgoRcmVjdXJzaXZlX21lc3NhZ2UYGyABKAsyMS5wcm90b2J1Zl90ZXN0X21lc3NhZ2VzLnByb3RvMi5UZXN0QWxsVHlwZXNQcm90bzJSEHJlY3Vyc2l2ZU1lc3NhZ2USJQoOcmVwZWF0ZWRfaW50MzIYHyADKAVSDXJlcGVhdGVkSW50MzISJQoOcmVwZWF0ZWRfaW50NjQYICADKANSDXJlcGVhdGVkSW50NjQSJwoPcmVwZWF0ZWRfdWludDMyGCEgAygNUg5yZXBlYXRlZFVpbnQzMhInCg9yZXBlYXRlZF91aW50NjQYIiADKARSDnJlcGVhdGVkVWludDY0EicKD3JlcGVhdGVkX3NpbnQzMhgjIAMoEVIOcmVwZWF0ZWRTaW50MzISJwoPcmVwZWF0ZWRfc2ludDY0GCQgAygSUg5yZXBlYXRlZFNpbnQ2NBIpChByZXBlYXRlZF9maXhlZDMyGCUgAygHUg9yZXBlYXRlZEZpeGVkMzISKQoQcmVwZWF0ZWRfZml4ZWQ2NBgmIAMoBlIPcmVwZWF0ZWRGaXhlZDY0EisKEXJlcGVhdGVkX3NmaXhlZDMyGCcgAygPUhByZXBlYXRlZFNmaXhlZDMyEisKEXJlcGVhdGVkX3NmaXhlZDY0GCggAygQUhByZXBlYXRlZFNmaXhlZDY0EiUKDnJlcGVhdGVkX2Zsb2F0GCkgAygCUg1yZXBlYXRlZEZsb2F0EicKD3JlcGVhdGVkX2RvdWJsZRgqIAMoAVIOcmVwZWF0ZWREb3VibGUSIwoNcmVwZWF0ZWRfYm9vbBgrIAMoCFIMcmVwZWF0ZWRCb29sEicKD3JlcGVhdGVkX3N0cmluZxgsIAMoCVIOcmVwZWF0ZWRTdHJpbmcSJQoOcmVwZWF0ZWRfYnl0ZXMYLSADKAxSDXJlcGVhdGVkQnl0ZXMSdwoXcmVwZWF0ZWRfbmVzdGVkX21lc3NhZ2UYMCADKAsyPy5wcm90b2J1Zl90ZXN0X21lc3NhZ2VzLnByb3RvMi5UZXN0QWxsVHlwZXNQcm90bzIuTmVzdGVkTWVzc2FnZVIVcmVwZWF0ZWROZXN0ZWRNZXNzYWdlEm0KGHJlcGVhdGVkX2ZvcmVpZ25fbWVzc2FnZRgxIAMoCzIzLnByb3RvYnVmX3Rlc3RfbWVzc2FnZXMucHJvdG8yLkZvcmVpZ25NZXNzYWdlUHJvdG8yUhZyZXBlYXRlZEZvcmVpZ25NZXNzYWdlEm4KFHJlcGVhdGVkX25lc3RlZF9lbnVtGDMgAygOMjwucHJvdG9idWZfdGVzdF9tZXNzYWdlcy5wcm90bzIuVGVzdEFsbFR5cGVzUHJvdG8yLk5lc3RlZEVudW1SEnJlcGVhdGVkTmVzdGVkRW51bRJkChVyZXBlYXRlZF9mb3JlaWduX2VudW0YNCADKA4yMC5wcm90b2J1Zl90ZXN0X21lc3NhZ2VzLnByb3RvMi5Gb3JlaWduRW51bVByb3RvMlITcmVwZWF0ZWRGb3JlaWduRW51bRI2ChVyZXBlYXRlZF9zdHJpbmdfcGllY2UYNiADKAlCAggCUhNyZXBlYXRlZFN0cmluZ1BpZWNlEicKDXJlcGVhdGVkX2NvcmQYNyADKAlCAggBUgxyZXBlYXRlZENvcmQSJQoMcGFja2VkX2ludDMyGEsgAygFQgIQAVILcGFja2VkSW50MzISJQoMcGFja2VkX2ludDY0GEwgAygDQgIQAVILcGFja2VkSW50NjQSJwoNcGFja2VkX3VpbnQzMhhNIAMoDUICEAFSDHBhY2tlZFVpbnQzMhInCg1wYWNrZWRfdWludDY0GE4gAygEQgIQAVIMcGFja2VkVWludDY0EicKDXBhY2tlZF9zaW50MzIYTyADKBFCAhABUgxwYWNrZWRTaW50MzISJwoNcGFja2VkX3NpbnQ2NBhQIAMoEkICEAFSDHBhY2tlZFNpbnQ2NBIpCg5wYWNrZWRfZml4ZWQzMhhRIAMoB0ICEAFSDXBhY2tlZEZpeGVkMzISKQoOcGFja2VkX2ZpeGVkNjQYUiADKAZCAhABUg1wYWNrZWRGaXhlZDY0EisKD3BhY2tlZF9zZml4ZWQzMhhTIAMoD0ICEAFSDnBhY2tlZFNmaXhlZDMyEisKD3BhY2tlZF9zZml4ZWQ2NBhUIAMoEEICEAFSDnBhY2tlZFNmaXhlZDY0EiUKDHBhY2tlZF9mbG9hdBhVIAMoAkICEAFSC3BhY2tlZEZsb2F0EicKDXBhY2tlZF9kb3VibGUYViADKAFCAhABUgxwYWNrZWREb3VibGUSIwoLcGFja2VkX2Jvb2wYVyADKAhCAhABUgpwYWNrZWRCb29sEm4KEnBhY2tlZF9uZXN0ZWRfZW51bRhYIAMoDjI8LnByb3RvYnVmX3Rlc3RfbWVzc2FnZXMucHJvdG8yLlRlc3RBbGxUeXBlc1Byb3RvMi5OZXN0ZWRFbnVtQgIQAVIQcGFja2VkTmVzdGVkRW51bRIpCg51bnBhY2tlZF9pbnQzMhhZIAMoBUICEABSDXVucGFja2VkSW50MzISKQoOdW5wYWNrZWRfaW50NjQYWiADKANCAhAAUg11bnBhY2tlZEludDY0EisKD3VucGFja2VkX3VpbnQzMhhbIAMoDUICEABSDnVucGFja2VkVWludDMyEisKD3VucGFja2VkX3VpbnQ2NBhcIAMoBEICEABSDnVucGFja2VkVWludDY0EisKD3VucGFja2VkX3NpbnQzMhhdIAMoEUICEABSDnVucGFja2VkU2ludDMyEisKD3VucGFja2VkX3NpbnQ2NBheIAMoEkICEABSDnVucGFja2VkU2ludDY0Ei0KEHVucGFja2VkX2ZpeGVkMzIYXyADKAdCAhAAUg91bnBhY2tlZEZpeGVkMzISLQoQdW5wYWNrZWRfZml4ZWQ2NBhgIAMoBkICEABSD3VucGFja2VkRml4ZWQ2NBIvChF1bnBhY2tlZF9zZml4ZWQzMhhhIAMoD0ICEABSEHVucGFja2VkU2ZpeGVkMzISLwoRdW5wYWNrZWRfc2ZpeGVkNjQYYiADKBBCAhAAUhB1bnBhY2tlZFNmaXhlZDY0EikKDnVucGFja2VkX2Zsb2F0GGMgAygCQgIQAFINdW5wYWNrZWRGbG9hdBIrCg91bnBhY2tlZF9kb3VibGUYZCADKAFCAhAAUg51bnBhY2tlZERvdWJsZRInCg11bnBhY2tlZF9ib29sGGUgAygIQgIQAFIMdW5wYWNrZWRCb29sEnIKFHVucGFja2VkX25lc3RlZF9lbnVtGGYgAygOMjwucHJvdG9idWZfdGVzdF9tZXNzYWdlcy5wcm90bzIuVGVzdEFsbFR5cGVzUHJvdG8yLk5lc3RlZEVudW1CAhAAUhJ1bnBhY2tlZE5lc3RlZEVudW0SbAoPbWFwX2ludDMyX2ludDMyGDggAygLMkQucHJvdG9idWZfdGVzdF9tZXNzYWdlcy5wcm90bzIuVGVzdEFsbFR5cGVzUHJvdG8yLk1hcEludDMySW50MzJFbnRyeVINbWFwSW50MzJJbnQzMhJsCg9tYXBfaW50NjRfaW50NjQYOSADKAsyRC5wcm90b2J1Zl90ZXN0X21lc3NhZ2VzLnByb3RvMi5UZXN0QWxsVHlwZXNQcm90bzIuTWFwSW50NjRJbnQ2NEVudHJ5Ug1tYXBJbnQ2NEludDY0EnIKEW1hcF91aW50MzJfdWludDMyGDogAygLMkYucHJvdG9idWZfdGVzdF9tZXNzYWdlcy5wcm90bzIuVGVzdEFsbFR5cGVzUHJvdG8yLk1hcFVpbnQzMlVpbnQzMkVudHJ5Ug9tYXBVaW50MzJVaW50MzIScgoRbWFwX3VpbnQ2NF91aW50NjQYOyADKAsyRi5wcm90b2J1Zl90ZXN0X21lc3NhZ2VzLnByb3RvMi5UZXN0QWxsVHlwZXNQcm90bzIuTWFwVWludDY0VWludDY0RW50cnlSD21hcFVpbnQ2NFVpbnQ2NBJyChFtYXBfc2ludDMyX3NpbnQzMhg8IAMoCzJGLnByb3RvYnVmX3Rlc3RfbWVzc2FnZXMucHJvdG8yLlRlc3RBbGxUeXBlc1Byb3RvMi5NYXBTaW50MzJTaW50MzJFbnRyeVIPbWFwU2ludDMyU2ludDMyEnIKEW1hcF9zaW50NjRfc2ludDY0GD0gAygLMkYucHJvdG9idWZfdGVzdF9tZXNzYWdlcy5wcm90bzIuVGVzdEFsbFR5cGVzUHJvdG8yLk1hcFNpbnQ2NFNpbnQ2NEVudHJ5Ug9tYXBTaW50NjRTaW50NjQSeAoTbWFwX2ZpeGVkMzJfZml4ZWQzMhg+IAMoCzJILnByb3RvYnVmX3Rlc3RfbWVzc2FnZXMucHJvdG8yLlRlc3RBbGxUeXBlc1Byb3RvMi5NYXBGaXhlZDMyRml4ZWQzMkVudHJ5UhFtYXBGaXhlZDMyRml4ZWQzMhJ4ChNtYXBfZml4ZWQ2NF9maXhlZDY0GD8gAygLMkgucHJvdG9idWZfdGVzdF9tZXNzYWdlcy5wcm90bzIuVGVzdEFsbFR5cGVzUHJvdG8yLk1hcEZpeGVkNjRGaXhlZDY0RW50cnlSEW1hcEZpeGVkNjRGaXhlZDY0En4KFW1hcF9zZml4ZWQzMl9zZml4ZWQzMhhAIAMoCzJKLnByb3RvYnVmX3Rlc3RfbWVzc2FnZXMucHJvdG8yLlRlc3RBbGxUeXBlc1Byb3RvMi5NYXBTZml4ZWQzMlNmaXhlZDMyRW50cnlSE21hcFNmaXhlZDMyU2ZpeGVkMzISfgoVbWFwX3NmaXhlZDY0X3NmaXhlZDY0GEEgAygLMkoucHJvdG9idWZfdGVzdF9tZXNzYWdlcy5wcm90bzIuVGVzdEFsbFR5cGVzUHJvdG8yLk1hcFNmaXhlZDY0U2ZpeGVkNjRFbnRyeVITbWFwU2ZpeGVkNjRTZml4ZWQ2NBJsCg9tYXBfaW50MzJfZmxvYXQYQiADKAsyRC5wcm90b2J1Zl90ZXN0X21lc3NhZ2VzLnByb3RvMi5UZXN0QWxsVHlwZXNQcm90bzIuTWFwSW50MzJGbG9hdEVudHJ5Ug1tYXBJbnQzMkZsb2F0Em8KEG1hcF9pbnQzMl9kb3VibGUYQyADKAsyRS5wcm90b2J1Zl90ZXN0X21lc3NhZ2VzLnByb3RvMi5UZXN0QWxsVHlwZXNQcm90bzIuTWFwSW50MzJEb3VibGVFbnRyeVIObWFwSW50MzJEb3VibGUSZgoNbWFwX2Jvb2xfYm9vbBhEIAMoCzJCLnByb3RvYnVmX3Rlc3RfbWVzc2FnZXMucHJvdG8yLlRlc3RBbGxUeXBlc1Byb3RvMi5NYXBCb29sQm9vbEVudHJ5UgttYXBCb29sQm9vbBJyChFtYXBfc3RyaW5nX3N0cmluZxhFIAMoCzJGLnByb3RvYnVmX3Rlc3RfbWVzc2FnZXMucHJvdG8yLlRlc3RBbGxUeXBlc1Byb3RvMi5NYXBTdHJpbmdTdHJpbmdFbnRyeVIPbWFwU3RyaW5nU3RyaW5nEm8KEG1hcF9zdHJpbmdfYnl0ZXMYRiADKAsyRS5wcm90b2J1Zl90ZXN0X21lc3NhZ2VzLnByb3RvMi5UZXN0QWxsVHlwZXNQcm90bzIuTWFwU3RyaW5nQnl0ZXNFbnRyeVIObWFwU3RyaW5nQnl0ZXMSiAEKGW1hcF9zdHJpbmdfbmVzdGVkX21lc3NhZ2UYRyADKAsyTS5wcm90b2J1Zl90ZXN0X21lc3NhZ2VzLnByb3RvMi5UZXN0QWxsVHlwZXNQcm90bzIuTWFwU3RyaW5nTmVzdGVkTWVzc2FnZUVudHJ5UhZtYXBTdHJpbmdOZXN0ZWRNZXNzYWdlEosBChptYXBfc3RyaW5nX2ZvcmVpZ25fbWVzc2FnZRhIIAMoCzJOLnByb3RvYnVmX3Rlc3RfbWVzc2FnZXMucHJvdG8yLlRlc3RBbGxUeXBlc1Byb3RvMi5NYXBTdHJpbmdGb3JlaWduTWVzc2FnZUVudHJ5UhdtYXBTdHJpbmdGb3JlaWduTWVzc2FnZRJ/ChZtYXBfc3RyaW5nX25lc3RlZF9lbnVtGEkgAygLMkoucHJvdG9idWZfdGVzdF9tZXNzYWdlcy5wcm90bzIuVGVzdEFsbFR5cGVzUHJvdG8yLk1hcFN0cmluZ05lc3RlZEVudW1FbnRyeVITbWFwU3RyaW5nTmVzdGVkRW51bRKCAQoXbWFwX3N0cmluZ19mb3JlaWduX2VudW0YSiADKAsySy5wcm90b2J1Zl90ZXN0X21lc3NhZ2VzLnByb3RvMi5UZXN0QWxsVHlwZXNQcm90bzIuTWFwU3RyaW5nRm9yZWlnbkVudW1FbnRyeVIUbWFwU3RyaW5nRm9yZWlnbkVudW0SIwoMb25lb2ZfdWludDMyGG8gASgNSABSC29uZW9mVWludDMyEnMKFG9uZW9mX25lc3RlZF9tZXNzYWdlGHAgASgLMj8ucHJvdG9idWZfdGVzdF9tZXNzYWdlcy5wcm90bzIuVGVzdEFsbFR5cGVzUHJvdG8yLk5lc3RlZE1lc3NhZ2VIAFISb25lb2ZOZXN0ZWRNZXNzYWdlEiMKDG9uZW9mX3N0cmluZxhxIAEoCUgAUgtvbmVvZlN0cmluZxIhCgtvbmVvZl9ieXRlcxhyIAEoDEgAUgpvbmVvZkJ5dGVzEh8KCm9uZW9mX2Jvb2wYcyABKAhIAFIJb25lb2ZCb29sEiMKDG9uZW9mX3VpbnQ2NBh0IAEoBEgAUgtvbmVvZlVpbnQ2NBIhCgtvbmVvZl9mbG9hdBh1IAEoAkgAUgpvbmVvZkZsb2F0EiMKDG9uZW9mX2RvdWJsZRh2IAEoAUgAUgtvbmVvZkRvdWJsZRJdCgpvbmVvZl9lbnVtGHcgASgOMjwucHJvdG9idWZfdGVzdF9tZXNzYWdlcy5wcm90bzIuVGVzdEFsbFR5cGVzUHJvdG8yLk5lc3RlZEVudW1IAFIJb25lb2ZFbnVtEksKBGRhdGEYyQEgASgKMjYucHJvdG9idWZfdGVzdF9tZXNzYWdlcy5wcm90bzIuVGVzdEFsbFR5cGVzUHJvdG8yLkRhdGFSBGRhdGESHwoKZmllbGRuYW1lMRiRAyABKAVSCmZpZWxkbmFtZTESIAoLZmllbGRfbmFtZTIYkgMgASgFUgpmaWVsZE5hbWUyEiEKDF9maWVsZF9uYW1lMxiTAyABKAVSCkZpZWxkTmFtZTMSIgoNZmllbGRfX25hbWU0XxiUAyABKAVSCmZpZWxkTmFtZTQSIQoLZmllbGQwbmFtZTUYlQMgASgFUgtmaWVsZDBuYW1lNRIjCg1maWVsZF8wX25hbWU2GJYDIAEoBVILZmllbGQwTmFtZTYSHwoKZmllbGROYW1lNxiXAyABKAVSCmZpZWxkTmFtZTcSHwoKRmllbGROYW1lOBiYAyABKAVSCkZpZWxkTmFtZTgSIAoLZmllbGRfTmFtZTkYmQMgASgFUgpmaWVsZE5hbWU5EiIKDEZpZWxkX05hbWUxMBiaAyABKAVSC0ZpZWxkTmFtZTEwEiIKDEZJRUxEX05BTUUxMRibAyABKAVSC0ZJRUxETkFNRTExEiIKDEZJRUxEX25hbWUxMhicAyABKAVSC0ZJRUxETmFtZTEyEiQKDl9fZmllbGRfbmFtZTEzGJ0DIAEoBVILRmllbGROYW1lMTMSJAoOX19GaWVsZF9uYW1lMTQYngMgASgFUgtGaWVsZE5hbWUxNBIjCg1maWVsZF9fbmFtZTE1GJ8DIAEoBVILZmllbGROYW1lMTUSIwoNZmllbGRfX05hbWUxNhigAyABKAVSC2ZpZWxkTmFtZTE2EiQKDmZpZWxkX25hbWUxN19fGKEDIAEoBVILZmllbGROYW1lMTcSJAoORmllbGRfbmFtZTE4X18YogMgASgFUgtGaWVsZE5hbWUxOBpyCg1OZXN0ZWRNZXNzYWdlEgwKAWEYASABKAVSAWESUwoLY29yZWN1cnNpdmUYAiABKAsyMS5wcm90b2J1Zl90ZXN0X21lc3NhZ2VzLnByb3RvMi5UZXN0QWxsVHlwZXNQcm90bzJSC2NvcmVjdXJzaXZlGkAKEk1hcEludDMySW50MzJFbnRyeRIQCgNrZXkYASABKAVSA2tleRIUCgV2YWx1ZRgCIAEoBVIFdmFsdWU6AjgBGkAKEk1hcEludDY0SW50NjRFbnRyeRIQCgNrZXkYASABKANSA2tleRIUCgV2YWx1ZRgCIAEoA1IFdmFsdWU6AjgBGkIKFE1hcFVpbnQzMlVpbnQzMkVudHJ5EhAKA2tleRgBIAEoDVIDa2V5EhQKBXZhbHVlGAIgASgNUgV2YWx1ZToCOAEaQgoUTWFwVWludDY0VWludDY0RW50cnkSEAoDa2V5GAEgASgEUgNrZXkSFAoFdmFsdWUYAiABKARSBXZhbHVlOgI4ARpCChRNYXBTaW50MzJTaW50MzJFbnRyeRIQCgNrZXkYASABKBFSA2tleRIUCgV2YWx1ZRgCIAEoEVIFdmFsdWU6AjgBGkIKFE1hcFNpbnQ2NFNpbnQ2NEVudHJ5EhAKA2tleRgBIAEoElIDa2V5EhQKBXZhbHVlGAIgASgSUgV2YWx1ZToCOAEaRAoWTWFwRml4ZWQzMkZpeGVkMzJFbnRyeRIQCgNrZXkYASABKAdSA2tleRIUCgV2YWx1ZRgCIAEoB1IFdmFsdWU6AjgBGkQKFk1hcEZpeGVkNjRGaXhlZDY0RW50cnkSEAoDa2V5GAEgASgGUgNrZXkSFAoFdmFsdWUYAiABKAZSBXZhbHVlOgI4ARpGChhNYXBTZml4ZWQzMlNmaXhlZDMyRW50cnkSEAoDa2V5GAEgASgPUgNrZXkSFAoFdmFsdWUYAiABKA9SBXZhbHVlOgI4ARpGChhNYXBTZml4ZWQ2NFNmaXhlZDY0RW50cnkSEAoDa2V5GAEgASgQUgNrZXkSFAoFdmFsdWUYAiABKBBSBXZhbHVlOgI4ARpAChJNYXBJbnQzMkZsb2F0RW50cnkSEAoDa2V5GAEgASgFUgNrZXkSFAoFdmFsdWUYAiABKAJSBXZhbHVlOgI4ARpBChNNYXBJbnQzMkRvdWJsZUVudHJ5EhAKA2tleRgBIAEoBVIDa2V5EhQKBXZhbHVlGAIgASgBUgV2YWx1ZToCOAEaPgoQTWFwQm9vbEJvb2xFbnRyeRIQCgNrZXkYASABKAhSA2tleRIUCgV2YWx1ZRgCIAEoCFIFdmFsdWU6AjgBGkIKFE1hcFN0cmluZ1N0cmluZ0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EhQKBXZhbHVlGAIgASgJUgV2YWx1ZToCOAEaQQoTTWFwU3RyaW5nQnl0ZXNFbnRyeRIQCgNrZXkYASABKAlSA2tleRIUCgV2YWx1ZRgCIAEoDFIFdmFsdWU6AjgBGooBChtNYXBTdHJpbmdOZXN0ZWRNZXNzYWdlRW50cnkSEAoDa2V5GAEgASgJUgNrZXkSVQoFdmFsdWUYAiABKAsyPy5wcm90b2J1Zl90ZXN0X21lc3NhZ2VzLnByb3RvMi5UZXN0QWxsVHlwZXNQcm90bzIuTmVzdGVkTWVzc2FnZVIFdmFsdWU6AjgBGn8KHE1hcFN0cmluZ0ZvcmVpZ25NZXNzYWdlRW50cnkSEAoDa2V5GAEgASgJUgNrZXkSSQoFdmFsdWUYAiABKAsyMy5wcm90b2J1Zl90ZXN0X21lc3NhZ2VzLnByb3RvMi5Gb3JlaWduTWVzc2FnZVByb3RvMlIFdmFsdWU6AjgBGoQBChhNYXBTdHJpbmdOZXN0ZWRFbnVtRW50cnkSEAoDa2V5GAEgASgJUgNrZXkSUgoFdmFsdWUYAiABKA4yPC5wcm90b2J1Zl90ZXN0X21lc3NhZ2VzLnByb3RvMi5UZXN0QWxsVHlwZXNQcm90bzIuTmVzdGVkRW51bVIFdmFsdWU6AjgBGnkKGU1hcFN0cmluZ0ZvcmVpZ25FbnVtRW50cnkSEAoDa2V5GAEgASgJUgNrZXkSRgoFdmFsdWUYAiABKA4yMC5wcm90b2J1Zl90ZXN0X21lc3NhZ2VzLnByb3RvMi5Gb3JlaWduRW51bVByb3RvMlIFdmFsdWU6AjgBGkwKBERhdGESIAoLZ3JvdXBfaW50MzIYygEgASgFUgpncm91cEludDMyEiIKDGdyb3VwX3VpbnQzMhjLASABKA1SC2dyb3VwVWludDMyGiEKEU1lc3NhZ2VTZXRDb3JyZWN0KggIBBD/////BzoCCAEa+gEKG01lc3NhZ2VTZXRDb3JyZWN0RXh0ZW5zaW9uMRIQCgNzdHIYGSABKAlSA3N0cjLIAQoVbWVzc2FnZV9zZXRfZXh0ZW5zaW9uEkMucHJvdG9idWZfdGVzdF9tZXNzYWdlcy5wcm90bzIuVGVzdEFsbFR5cGVzUHJvdG8yLk1lc3NhZ2VTZXRDb3JyZWN0GPm7XiABKAsyTS5wcm90b2J1Zl90ZXN0X21lc3NhZ2VzLnByb3RvMi5UZXN0QWxsVHlwZXNQcm90bzIuTWVzc2FnZVNldENvcnJlY3RFeHRlbnNpb24xUhNtZXNzYWdlU2V0RXh0ZW5zaW9uGvcBChtNZXNzYWdlU2V0Q29ycmVjdEV4dGVuc2lvbjISDAoBaRgJIAEoBVIBaTLJAQoVbWVzc2FnZV9zZXRfZXh0ZW5zaW9uEkMucHJvdG9idWZfdGVzdF9tZXNzYWdlcy5wcm90bzIuVGVzdEFsbFR5cGVzUHJvdG8yLk1lc3NhZ2VTZXRDb3JyZWN0GJCz/AEgASgLMk0ucHJvdG9idWZfdGVzdF9tZXNzYWdlcy5wcm90bzIuVGVzdEFsbFR5cGVzUHJvdG8yLk1lc3NhZ2VTZXRDb3JyZWN0RXh0ZW5zaW9uMlITbWVzc2FnZVNldEV4dGVuc2lvbiI5CgpOZXN0ZWRFbnVtEgcKA0ZPTxAAEgcKA0JBUhABEgcKA0JBWhACEhAKA05FRxD///////////8BKgUIeBDJAUINCgtvbmVvZl9maWVsZEoGCOgHEJBO');
+@$core.Deprecated('Use foreignMessageProto2Descriptor instead')
 const ForeignMessageProto2$json = {
   '1': 'ForeignMessageProto2',
   '2': [
@@ -976,6 +1014,10 @@ const ForeignMessageProto2$json = {
   ],
 };
 
+/// Descriptor for `ForeignMessageProto2`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List foreignMessageProto2Descriptor =
+    $convert.base64Decode('ChRGb3JlaWduTWVzc2FnZVByb3RvMhIMCgFjGAEgASgFUgFj');
+@$core.Deprecated('Use unknownToTestAllTypesDescriptor instead')
 const UnknownToTestAllTypes$json = {
   '1': 'UnknownToTestAllTypes',
   '2': [
@@ -1003,9 +1045,14 @@ const UnknownToTestAllTypes$json = {
   '3': [UnknownToTestAllTypes_OptionalGroup$json],
 };
 
+@$core.Deprecated('Use unknownToTestAllTypesDescriptor instead')
 const UnknownToTestAllTypes_OptionalGroup$json = {
   '1': 'OptionalGroup',
   '2': [
     {'1': 'a', '3': 1, '4': 1, '5': 5, '10': 'a'},
   ],
 };
+
+/// Descriptor for `UnknownToTestAllTypes`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List unknownToTestAllTypesDescriptor = $convert.base64Decode(
+    'ChVVbmtub3duVG9UZXN0QWxsVHlwZXMSJgoOb3B0aW9uYWxfaW50MzIY6QcgASgFUg1vcHRpb25hbEludDMyEigKD29wdGlvbmFsX3N0cmluZxjqByABKAlSDm9wdGlvbmFsU3RyaW5nElsKDm5lc3RlZF9tZXNzYWdlGOsHIAEoCzIzLnByb3RvYnVmX3Rlc3RfbWVzc2FnZXMucHJvdG8yLkZvcmVpZ25NZXNzYWdlUHJvdG8yUg1uZXN0ZWRNZXNzYWdlEmkKDW9wdGlvbmFsZ3JvdXAY7AcgASgKMkIucHJvdG9idWZfdGVzdF9tZXNzYWdlcy5wcm90bzIuVW5rbm93blRvVGVzdEFsbFR5cGVzLk9wdGlvbmFsR3JvdXBSDW9wdGlvbmFsZ3JvdXASJAoNb3B0aW9uYWxfYm9vbBjuByABKAhSDG9wdGlvbmFsQm9vbBImCg5yZXBlYXRlZF9pbnQzMhjzByADKAVSDXJlcGVhdGVkSW50MzIaHQoNT3B0aW9uYWxHcm91cBIMCgFhGAEgASgFUgFh');

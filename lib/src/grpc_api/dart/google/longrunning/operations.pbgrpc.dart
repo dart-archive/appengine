@@ -2,8 +2,8 @@
 //  Generated code. Do not modify.
 //  source: google/longrunning/operations.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:async' as $async;
 
@@ -42,52 +42,39 @@ class OperationsClient extends $grpc.Client {
           ($0.WaitOperationRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $0.Operation.fromBuffer(value));
 
-  OperationsClient($grpc.ClientChannel channel, {$grpc.CallOptions options})
-      : super(channel, options: options);
+  OperationsClient($grpc.ClientChannel channel,
+      {$grpc.CallOptions? options,
+      $core.Iterable<$grpc.ClientInterceptor>? interceptors})
+      : super(channel, options: options, interceptors: interceptors);
 
   $grpc.ResponseFuture<$0.ListOperationsResponse> listOperations(
       $0.ListOperationsRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$listOperations, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listOperations, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.Operation> getOperation(
       $0.GetOperationRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getOperation, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getOperation, request, options: options);
   }
 
   $grpc.ResponseFuture<$1.Empty> deleteOperation(
       $0.DeleteOperationRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$deleteOperation, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$deleteOperation, request, options: options);
   }
 
   $grpc.ResponseFuture<$1.Empty> cancelOperation(
       $0.CancelOperationRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$cancelOperation, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$cancelOperation, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.Operation> waitOperation(
       $0.WaitOperationRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$waitOperation, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$waitOperation, request, options: options);
   }
 }
 

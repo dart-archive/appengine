@@ -2,9 +2,14 @@
 //  Generated code. Do not modify.
 //  source: google/iam/v1/policy.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
+import 'dart:core' as $core;
+import 'dart:convert' as $convert;
+import 'dart:typed_data' as $typed_data;
+
+@$core.Deprecated('Use policyDescriptor instead')
 const Policy$json = {
   '1': 'Policy',
   '2': [
@@ -21,6 +26,10 @@ const Policy$json = {
   ],
 };
 
+/// Descriptor for `Policy`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List policyDescriptor = $convert.base64Decode(
+    'CgZQb2xpY3kSGAoHdmVyc2lvbhgBIAEoBVIHdmVyc2lvbhIyCghiaW5kaW5ncxgEIAMoCzIWLmdvb2dsZS5pYW0udjEuQmluZGluZ1IIYmluZGluZ3MSEgoEZXRhZxgDIAEoDFIEZXRhZw==');
+@$core.Deprecated('Use bindingDescriptor instead')
 const Binding$json = {
   '1': 'Binding',
   '2': [
@@ -37,6 +46,10 @@ const Binding$json = {
   ],
 };
 
+/// Descriptor for `Binding`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List bindingDescriptor = $convert.base64Decode(
+    'CgdCaW5kaW5nEhIKBHJvbGUYASABKAlSBHJvbGUSGAoHbWVtYmVycxgCIAMoCVIHbWVtYmVycxIvCgljb25kaXRpb24YAyABKAsyES5nb29nbGUudHlwZS5FeHByUgljb25kaXRpb24=');
+@$core.Deprecated('Use policyDeltaDescriptor instead')
 const PolicyDelta$json = {
   '1': 'PolicyDelta',
   '2': [
@@ -59,6 +72,10 @@ const PolicyDelta$json = {
   ],
 };
 
+/// Descriptor for `PolicyDelta`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List policyDeltaDescriptor = $convert.base64Decode(
+    'CgtQb2xpY3lEZWx0YRJCCg5iaW5kaW5nX2RlbHRhcxgBIAMoCzIbLmdvb2dsZS5pYW0udjEuQmluZGluZ0RlbHRhUg1iaW5kaW5nRGVsdGFzEk8KE2F1ZGl0X2NvbmZpZ19kZWx0YXMYAiADKAsyHy5nb29nbGUuaWFtLnYxLkF1ZGl0Q29uZmlnRGVsdGFSEWF1ZGl0Q29uZmlnRGVsdGFz');
+@$core.Deprecated('Use bindingDeltaDescriptor instead')
 const BindingDelta$json = {
   '1': 'BindingDelta',
   '2': [
@@ -84,6 +101,7 @@ const BindingDelta$json = {
   '4': [BindingDelta_Action$json],
 };
 
+@$core.Deprecated('Use bindingDeltaDescriptor instead')
 const BindingDelta_Action$json = {
   '1': 'Action',
   '2': [
@@ -93,6 +111,10 @@ const BindingDelta_Action$json = {
   ],
 };
 
+/// Descriptor for `BindingDelta`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List bindingDeltaDescriptor = $convert.base64Decode(
+    'CgxCaW5kaW5nRGVsdGESOgoGYWN0aW9uGAEgASgOMiIuZ29vZ2xlLmlhbS52MS5CaW5kaW5nRGVsdGEuQWN0aW9uUgZhY3Rpb24SEgoEcm9sZRgCIAEoCVIEcm9sZRIWCgZtZW1iZXIYAyABKAlSBm1lbWJlchIvCgljb25kaXRpb24YBCABKAsyES5nb29nbGUudHlwZS5FeHByUgljb25kaXRpb24iNQoGQWN0aW9uEhYKEkFDVElPTl9VTlNQRUNJRklFRBAAEgcKA0FERBABEgoKBlJFTU9WRRAC');
+@$core.Deprecated('Use auditConfigDeltaDescriptor instead')
 const AuditConfigDelta$json = {
   '1': 'AuditConfigDelta',
   '2': [
@@ -111,6 +133,7 @@ const AuditConfigDelta$json = {
   '4': [AuditConfigDelta_Action$json],
 };
 
+@$core.Deprecated('Use auditConfigDeltaDescriptor instead')
 const AuditConfigDelta_Action$json = {
   '1': 'Action',
   '2': [
@@ -119,3 +142,7 @@ const AuditConfigDelta_Action$json = {
     {'1': 'REMOVE', '2': 2},
   ],
 };
+
+/// Descriptor for `AuditConfigDelta`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List auditConfigDeltaDescriptor = $convert.base64Decode(
+    'ChBBdWRpdENvbmZpZ0RlbHRhEj4KBmFjdGlvbhgBIAEoDjImLmdvb2dsZS5pYW0udjEuQXVkaXRDb25maWdEZWx0YS5BY3Rpb25SBmFjdGlvbhIYCgdzZXJ2aWNlGAIgASgJUgdzZXJ2aWNlEicKD2V4ZW1wdGVkX21lbWJlchgDIAEoCVIOZXhlbXB0ZWRNZW1iZXISGQoIbG9nX3R5cGUYBCABKAlSB2xvZ1R5cGUiNQoGQWN0aW9uEhYKEkFDVElPTl9VTlNQRUNJRklFRBAAEgcKA0FERBABEgoKBlJFTU9WRRAC');

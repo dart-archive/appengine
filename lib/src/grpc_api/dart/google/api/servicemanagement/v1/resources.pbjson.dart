@@ -2,9 +2,14 @@
 //  Generated code. Do not modify.
 //  source: google/api/servicemanagement/v1/resources.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
+import 'dart:core' as $core;
+import 'dart:convert' as $convert;
+import 'dart:typed_data' as $typed_data;
+
+@$core.Deprecated('Use managedServiceDescriptor instead')
 const ManagedService$json = {
   '1': 'ManagedService',
   '2': [
@@ -19,6 +24,10 @@ const ManagedService$json = {
   ],
 };
 
+/// Descriptor for `ManagedService`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List managedServiceDescriptor = $convert.base64Decode(
+    'Cg5NYW5hZ2VkU2VydmljZRIhCgxzZXJ2aWNlX25hbWUYAiABKAlSC3NlcnZpY2VOYW1lEi4KE3Byb2R1Y2VyX3Byb2plY3RfaWQYAyABKAlSEXByb2R1Y2VyUHJvamVjdElk');
+@$core.Deprecated('Use operationMetadataDescriptor instead')
 const OperationMetadata$json = {
   '1': 'OperationMetadata',
   '2': [
@@ -51,6 +60,7 @@ const OperationMetadata$json = {
   '4': [OperationMetadata_Status$json],
 };
 
+@$core.Deprecated('Use operationMetadataDescriptor instead')
 const OperationMetadata_Step$json = {
   '1': 'Step',
   '2': [
@@ -66,6 +76,7 @@ const OperationMetadata_Step$json = {
   ],
 };
 
+@$core.Deprecated('Use operationMetadataDescriptor instead')
 const OperationMetadata_Status$json = {
   '1': 'Status',
   '2': [
@@ -78,6 +89,10 @@ const OperationMetadata_Status$json = {
   ],
 };
 
+/// Descriptor for `OperationMetadata`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List operationMetadataDescriptor = $convert.base64Decode(
+    'ChFPcGVyYXRpb25NZXRhZGF0YRIlCg5yZXNvdXJjZV9uYW1lcxgBIAMoCVINcmVzb3VyY2VOYW1lcxJNCgVzdGVwcxgCIAMoCzI3Lmdvb2dsZS5hcGkuc2VydmljZW1hbmFnZW1lbnQudjEuT3BlcmF0aW9uTWV0YWRhdGEuU3RlcFIFc3RlcHMSLwoTcHJvZ3Jlc3NfcGVyY2VudGFnZRgDIAEoBVIScHJvZ3Jlc3NQZXJjZW50YWdlEjkKCnN0YXJ0X3RpbWUYBCABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUglzdGFydFRpbWUaewoEU3RlcBIgCgtkZXNjcmlwdGlvbhgCIAEoCVILZGVzY3JpcHRpb24SUQoGc3RhdHVzGAQgASgOMjkuZ29vZ2xlLmFwaS5zZXJ2aWNlbWFuYWdlbWVudC52MS5PcGVyYXRpb25NZXRhZGF0YS5TdGF0dXNSBnN0YXR1cyJnCgZTdGF0dXMSFgoSU1RBVFVTX1VOU1BFQ0lGSUVEEAASCAoERE9ORRABEg8KC05PVF9TVEFSVEVEEAISDwoLSU5fUFJPR1JFU1MQAxIKCgZGQUlMRUQQBBINCglDQU5DRUxMRUQQBQ==');
+@$core.Deprecated('Use diagnosticDescriptor instead')
 const Diagnostic$json = {
   '1': 'Diagnostic',
   '2': [
@@ -95,6 +110,7 @@ const Diagnostic$json = {
   '4': [Diagnostic_Kind$json],
 };
 
+@$core.Deprecated('Use diagnosticDescriptor instead')
 const Diagnostic_Kind$json = {
   '1': 'Kind',
   '2': [
@@ -103,6 +119,10 @@ const Diagnostic_Kind$json = {
   ],
 };
 
+/// Descriptor for `Diagnostic`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List diagnosticDescriptor = $convert.base64Decode(
+    'CgpEaWFnbm9zdGljEhoKCGxvY2F0aW9uGAEgASgJUghsb2NhdGlvbhJECgRraW5kGAIgASgOMjAuZ29vZ2xlLmFwaS5zZXJ2aWNlbWFuYWdlbWVudC52MS5EaWFnbm9zdGljLktpbmRSBGtpbmQSGAoHbWVzc2FnZRgDIAEoCVIHbWVzc2FnZSIeCgRLaW5kEgsKB1dBUk5JTkcQABIJCgVFUlJPUhAB');
+@$core.Deprecated('Use configSourceDescriptor instead')
 const ConfigSource$json = {
   '1': 'ConfigSource',
   '2': [
@@ -118,6 +138,10 @@ const ConfigSource$json = {
   ],
 };
 
+/// Descriptor for `ConfigSource`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List configSourceDescriptor = $convert.base64Decode(
+    'CgxDb25maWdTb3VyY2USDgoCaWQYBSABKAlSAmlkEkEKBWZpbGVzGAIgAygLMisuZ29vZ2xlLmFwaS5zZXJ2aWNlbWFuYWdlbWVudC52MS5Db25maWdGaWxlUgVmaWxlcw==');
+@$core.Deprecated('Use configFileDescriptor instead')
 const ConfigFile$json = {
   '1': 'ConfigFile',
   '2': [
@@ -135,6 +159,7 @@ const ConfigFile$json = {
   '4': [ConfigFile_FileType$json],
 };
 
+@$core.Deprecated('Use configFileDescriptor instead')
 const ConfigFile_FileType$json = {
   '1': 'FileType',
   '2': [
@@ -147,6 +172,10 @@ const ConfigFile_FileType$json = {
   ],
 };
 
+/// Descriptor for `ConfigFile`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List configFileDescriptor = $convert.base64Decode(
+    'CgpDb25maWdGaWxlEhsKCWZpbGVfcGF0aBgBIAEoCVIIZmlsZVBhdGgSIwoNZmlsZV9jb250ZW50cxgDIAEoDFIMZmlsZUNvbnRlbnRzElEKCWZpbGVfdHlwZRgEIAEoDjI0Lmdvb2dsZS5hcGkuc2VydmljZW1hbmFnZW1lbnQudjEuQ29uZmlnRmlsZS5GaWxlVHlwZVIIZmlsZVR5cGUikwEKCEZpbGVUeXBlEhkKFUZJTEVfVFlQRV9VTlNQRUNJRklFRBAAEhcKE1NFUlZJQ0VfQ09ORklHX1lBTUwQARIRCg1PUEVOX0FQSV9KU09OEAISEQoNT1BFTl9BUElfWUFNTBADEh0KGUZJTEVfREVTQ1JJUFRPUl9TRVRfUFJPVE8QBBIOCgpQUk9UT19GSUxFEAY=');
+@$core.Deprecated('Use configRefDescriptor instead')
 const ConfigRef$json = {
   '1': 'ConfigRef',
   '2': [
@@ -154,6 +183,10 @@ const ConfigRef$json = {
   ],
 };
 
+/// Descriptor for `ConfigRef`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List configRefDescriptor =
+    $convert.base64Decode('CglDb25maWdSZWYSEgoEbmFtZRgBIAEoCVIEbmFtZQ==');
+@$core.Deprecated('Use changeReportDescriptor instead')
 const ChangeReport$json = {
   '1': 'ChangeReport',
   '2': [
@@ -168,10 +201,14 @@ const ChangeReport$json = {
   ],
 };
 
+/// Descriptor for `ChangeReport`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List changeReportDescriptor = $convert.base64Decode(
+    'CgxDaGFuZ2VSZXBvcnQSPwoOY29uZmlnX2NoYW5nZXMYASADKAsyGC5nb29nbGUuYXBpLkNvbmZpZ0NoYW5nZVINY29uZmlnQ2hhbmdlcw==');
+@$core.Deprecated('Use rolloutDescriptor instead')
 const Rollout$json = {
   '1': 'Rollout',
   '2': [
-    {'1': 'rollout_id', '3': 1, '4': 1, '5': 9, '10': 'rolloutId'},
+    {'1': 'rollout_id', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'rolloutId'},
     {
       '1': 'create_time',
       '3': 2,
@@ -219,6 +256,7 @@ const Rollout$json = {
   ],
 };
 
+@$core.Deprecated('Use rolloutDescriptor instead')
 const Rollout_TrafficPercentStrategy$json = {
   '1': 'TrafficPercentStrategy',
   '2': [
@@ -235,6 +273,7 @@ const Rollout_TrafficPercentStrategy$json = {
   '3': [Rollout_TrafficPercentStrategy_PercentagesEntry$json],
 };
 
+@$core.Deprecated('Use rolloutDescriptor instead')
 const Rollout_TrafficPercentStrategy_PercentagesEntry$json = {
   '1': 'PercentagesEntry',
   '2': [
@@ -244,10 +283,12 @@ const Rollout_TrafficPercentStrategy_PercentagesEntry$json = {
   '7': {'7': true},
 };
 
+@$core.Deprecated('Use rolloutDescriptor instead')
 const Rollout_DeleteServiceStrategy$json = {
   '1': 'DeleteServiceStrategy',
 };
 
+@$core.Deprecated('Use rolloutDescriptor instead')
 const Rollout_RolloutStatus$json = {
   '1': 'RolloutStatus',
   '2': [
@@ -260,3 +301,7 @@ const Rollout_RolloutStatus$json = {
     {'1': 'FAILED_ROLLED_BACK', '2': 6},
   ],
 };
+
+/// Descriptor for `Rollout`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List rolloutDescriptor = $convert.base64Decode(
+    'CgdSb2xsb3V0EiIKCnJvbGxvdXRfaWQYASABKAlCA+BBAVIJcm9sbG91dElkEjsKC2NyZWF0ZV90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIKY3JlYXRlVGltZRIdCgpjcmVhdGVkX2J5GAMgASgJUgljcmVhdGVkQnkSTgoGc3RhdHVzGAQgASgOMjYuZ29vZ2xlLmFwaS5zZXJ2aWNlbWFuYWdlbWVudC52MS5Sb2xsb3V0LlJvbGxvdXRTdGF0dXNSBnN0YXR1cxJ7Chh0cmFmZmljX3BlcmNlbnRfc3RyYXRlZ3kYBSABKAsyPy5nb29nbGUuYXBpLnNlcnZpY2VtYW5hZ2VtZW50LnYxLlJvbGxvdXQuVHJhZmZpY1BlcmNlbnRTdHJhdGVneUgAUhZ0cmFmZmljUGVyY2VudFN0cmF0ZWd5EnkKF2RlbGV0ZV9zZXJ2aWNlX3N0cmF0ZWd5GMgBIAEoCzI+Lmdvb2dsZS5hcGkuc2VydmljZW1hbmFnZW1lbnQudjEuUm9sbG91dC5EZWxldGVTZXJ2aWNlU3RyYXRlZ3lIAFIVZGVsZXRlU2VydmljZVN0cmF0ZWd5EiEKDHNlcnZpY2VfbmFtZRgIIAEoCVILc2VydmljZU5hbWUazAEKFlRyYWZmaWNQZXJjZW50U3RyYXRlZ3kScgoLcGVyY2VudGFnZXMYASADKAsyUC5nb29nbGUuYXBpLnNlcnZpY2VtYW5hZ2VtZW50LnYxLlJvbGxvdXQuVHJhZmZpY1BlcmNlbnRTdHJhdGVneS5QZXJjZW50YWdlc0VudHJ5UgtwZXJjZW50YWdlcxo+ChBQZXJjZW50YWdlc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EhQKBXZhbHVlGAIgASgBUgV2YWx1ZToCOAEaFwoVRGVsZXRlU2VydmljZVN0cmF0ZWd5Io0BCg1Sb2xsb3V0U3RhdHVzEh4KGlJPTExPVVRfU1RBVFVTX1VOU1BFQ0lGSUVEEAASDwoLSU5fUFJPR1JFU1MQARILCgdTVUNDRVNTEAISDQoJQ0FOQ0VMTEVEEAMSCgoGRkFJTEVEEAQSCwoHUEVORElORxAFEhYKEkZBSUxFRF9ST0xMRURfQkFDSxAGQgoKCHN0cmF0ZWd5');

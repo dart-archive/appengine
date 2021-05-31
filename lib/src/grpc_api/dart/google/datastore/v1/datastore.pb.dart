@@ -2,8 +2,8 @@
 //  Generated code. Do not modify.
 //  source: google/datastore/v1/datastore.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:core' as $core;
 
@@ -18,25 +18,62 @@ import 'datastore.pbenum.dart';
 export 'datastore.pbenum.dart';
 
 class LookupRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('LookupRequest',
-      package: const $pb.PackageName('google.datastore.v1'),
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'LookupRequest',
+      package: const $pb.PackageName(
+          $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.datastore.v1'),
       createEmptyInstance: create)
-    ..aOM<ReadOptions>(1, 'readOptions', subBuilder: ReadOptions.create)
-    ..pc<$1.Key>(3, 'keys', $pb.PbFieldType.PM, subBuilder: $1.Key.create)
-    ..aOS(8, 'projectId')
+    ..aOM<ReadOptions>(
+        1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'readOptions',
+        subBuilder: ReadOptions.create)
+    ..pc<$1.Key>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'keys',
+        $pb.PbFieldType.PM,
+        subBuilder: $1.Key.create)
+    ..aOS(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'projectId')
     ..hasRequiredFields = false;
 
   LookupRequest._() : super();
-  factory LookupRequest() => create();
+  factory LookupRequest({
+    ReadOptions? readOptions,
+    $core.Iterable<$1.Key>? keys,
+    $core.String? projectId,
+  }) {
+    final _result = create();
+    if (readOptions != null) {
+      _result.readOptions = readOptions;
+    }
+    if (keys != null) {
+      _result.keys.addAll(keys);
+    }
+    if (projectId != null) {
+      _result.projectId = projectId;
+    }
+    return _result;
+  }
   factory LookupRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory LookupRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   LookupRequest clone() => LookupRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   LookupRequest copyWith(void Function(LookupRequest) updates) =>
-      super.copyWith((message) => updates(message as LookupRequest));
+      super.copyWith((message) => updates(message as LookupRequest))
+          as LookupRequest; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static LookupRequest create() => LookupRequest._();
@@ -46,7 +83,7 @@ class LookupRequest extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static LookupRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<LookupRequest>(create);
-  static LookupRequest _defaultInstance;
+  static LookupRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   ReadOptions get readOptions => $_getN(0);
@@ -79,27 +116,59 @@ class LookupRequest extends $pb.GeneratedMessage {
 }
 
 class LookupResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('LookupResponse',
-      package: const $pb.PackageName('google.datastore.v1'),
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'LookupResponse',
+      package: const $pb.PackageName(
+          $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.datastore.v1'),
       createEmptyInstance: create)
-    ..pc<$2.EntityResult>(1, 'found', $pb.PbFieldType.PM,
+    ..pc<$2.EntityResult>(
+        1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'found', $pb.PbFieldType.PM,
         subBuilder: $2.EntityResult.create)
-    ..pc<$2.EntityResult>(2, 'missing', $pb.PbFieldType.PM,
+    ..pc<$2.EntityResult>(
+        2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'missing', $pb.PbFieldType.PM,
         subBuilder: $2.EntityResult.create)
-    ..pc<$1.Key>(3, 'deferred', $pb.PbFieldType.PM, subBuilder: $1.Key.create)
+    ..pc<$1.Key>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'deferred', $pb.PbFieldType.PM,
+        subBuilder: $1.Key.create)
     ..hasRequiredFields = false;
 
   LookupResponse._() : super();
-  factory LookupResponse() => create();
+  factory LookupResponse({
+    $core.Iterable<$2.EntityResult>? found,
+    $core.Iterable<$2.EntityResult>? missing,
+    $core.Iterable<$1.Key>? deferred,
+  }) {
+    final _result = create();
+    if (found != null) {
+      _result.found.addAll(found);
+    }
+    if (missing != null) {
+      _result.missing.addAll(missing);
+    }
+    if (deferred != null) {
+      _result.deferred.addAll(deferred);
+    }
+    return _result;
+  }
   factory LookupResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory LookupResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   LookupResponse clone() => LookupResponse()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   LookupResponse copyWith(void Function(LookupResponse) updates) =>
-      super.copyWith((message) => updates(message as LookupResponse));
+      super.copyWith((message) => updates(message as LookupResponse))
+          as LookupResponse; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static LookupResponse create() => LookupResponse._();
@@ -109,7 +178,7 @@ class LookupResponse extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static LookupResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<LookupResponse>(create);
-  static LookupResponse _defaultInstance;
+  static LookupResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<$2.EntityResult> get found => $_getList(0);
@@ -130,28 +199,70 @@ class RunQueryRequest extends $pb.GeneratedMessage {
     7: RunQueryRequest_QueryType.gqlQuery,
     0: RunQueryRequest_QueryType.notSet
   };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('RunQueryRequest',
-      package: const $pb.PackageName('google.datastore.v1'),
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'RunQueryRequest',
+      package: const $pb.PackageName(
+          $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.datastore.v1'),
       createEmptyInstance: create)
     ..oo(0, [3, 7])
-    ..aOM<ReadOptions>(1, 'readOptions', subBuilder: ReadOptions.create)
-    ..aOM<$1.PartitionId>(2, 'partitionId', subBuilder: $1.PartitionId.create)
-    ..aOM<$2.Query>(3, 'query', subBuilder: $2.Query.create)
-    ..aOM<$2.GqlQuery>(7, 'gqlQuery', subBuilder: $2.GqlQuery.create)
-    ..aOS(8, 'projectId')
+    ..aOM<ReadOptions>(
+        1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'readOptions',
+        subBuilder: ReadOptions.create)
+    ..aOM<$1.PartitionId>(
+        2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'partitionId',
+        subBuilder: $1.PartitionId.create)
+    ..aOM<$2.Query>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'query',
+        subBuilder: $2.Query.create)
+    ..aOM<$2.GqlQuery>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'gqlQuery', subBuilder: $2.GqlQuery.create)
+    ..aOS(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'projectId')
     ..hasRequiredFields = false;
 
   RunQueryRequest._() : super();
-  factory RunQueryRequest() => create();
+  factory RunQueryRequest({
+    ReadOptions? readOptions,
+    $1.PartitionId? partitionId,
+    $2.Query? query,
+    $2.GqlQuery? gqlQuery,
+    $core.String? projectId,
+  }) {
+    final _result = create();
+    if (readOptions != null) {
+      _result.readOptions = readOptions;
+    }
+    if (partitionId != null) {
+      _result.partitionId = partitionId;
+    }
+    if (query != null) {
+      _result.query = query;
+    }
+    if (gqlQuery != null) {
+      _result.gqlQuery = gqlQuery;
+    }
+    if (projectId != null) {
+      _result.projectId = projectId;
+    }
+    return _result;
+  }
   factory RunQueryRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory RunQueryRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   RunQueryRequest clone() => RunQueryRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   RunQueryRequest copyWith(void Function(RunQueryRequest) updates) =>
-      super.copyWith((message) => updates(message as RunQueryRequest));
+      super.copyWith((message) => updates(message as RunQueryRequest))
+          as RunQueryRequest; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static RunQueryRequest create() => RunQueryRequest._();
@@ -161,10 +272,10 @@ class RunQueryRequest extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static RunQueryRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<RunQueryRequest>(create);
-  static RunQueryRequest _defaultInstance;
+  static RunQueryRequest? _defaultInstance;
 
   RunQueryRequest_QueryType whichQueryType() =>
-      _RunQueryRequest_QueryTypeByTag[$_whichOneof(0)];
+      _RunQueryRequest_QueryTypeByTag[$_whichOneof(0)]!;
   void clearQueryType() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
@@ -237,25 +348,56 @@ class RunQueryRequest extends $pb.GeneratedMessage {
 }
 
 class RunQueryResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('RunQueryResponse',
-      package: const $pb.PackageName('google.datastore.v1'),
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'RunQueryResponse',
+      package: const $pb.PackageName(
+          $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.datastore.v1'),
       createEmptyInstance: create)
-    ..aOM<$2.QueryResultBatch>(1, 'batch',
+    ..aOM<$2.QueryResultBatch>(
+        1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'batch',
         subBuilder: $2.QueryResultBatch.create)
-    ..aOM<$2.Query>(2, 'query', subBuilder: $2.Query.create)
+    ..aOM<$2.Query>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'query',
+        subBuilder: $2.Query.create)
     ..hasRequiredFields = false;
 
   RunQueryResponse._() : super();
-  factory RunQueryResponse() => create();
+  factory RunQueryResponse({
+    $2.QueryResultBatch? batch,
+    $2.Query? query,
+  }) {
+    final _result = create();
+    if (batch != null) {
+      _result.batch = batch;
+    }
+    if (query != null) {
+      _result.query = query;
+    }
+    return _result;
+  }
   factory RunQueryResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory RunQueryResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   RunQueryResponse clone() => RunQueryResponse()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   RunQueryResponse copyWith(void Function(RunQueryResponse) updates) =>
-      super.copyWith((message) => updates(message as RunQueryResponse));
+      super.copyWith((message) => updates(message as RunQueryResponse))
+          as RunQueryResponse; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static RunQueryResponse create() => RunQueryResponse._();
@@ -265,7 +407,7 @@ class RunQueryResponse extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static RunQueryResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<RunQueryResponse>(create);
-  static RunQueryResponse _defaultInstance;
+  static RunQueryResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
   $2.QueryResultBatch get batch => $_getN(0);
@@ -297,27 +439,60 @@ class RunQueryResponse extends $pb.GeneratedMessage {
 }
 
 class BeginTransactionRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('BeginTransactionRequest',
-      package: const $pb.PackageName('google.datastore.v1'),
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'BeginTransactionRequest',
+      package: const $pb.PackageName(
+          $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.datastore.v1'),
       createEmptyInstance: create)
-    ..aOS(8, 'projectId')
-    ..aOM<TransactionOptions>(10, 'transactionOptions',
+    ..aOS(
+        8,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'projectId')
+    ..aOM<TransactionOptions>(
+        10,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'transactionOptions',
         subBuilder: TransactionOptions.create)
     ..hasRequiredFields = false;
 
   BeginTransactionRequest._() : super();
-  factory BeginTransactionRequest() => create();
+  factory BeginTransactionRequest({
+    $core.String? projectId,
+    TransactionOptions? transactionOptions,
+  }) {
+    final _result = create();
+    if (projectId != null) {
+      _result.projectId = projectId;
+    }
+    if (transactionOptions != null) {
+      _result.transactionOptions = transactionOptions;
+    }
+    return _result;
+  }
   factory BeginTransactionRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory BeginTransactionRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   BeginTransactionRequest clone() =>
       BeginTransactionRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   BeginTransactionRequest copyWith(
           void Function(BeginTransactionRequest) updates) =>
-      super.copyWith((message) => updates(message as BeginTransactionRequest));
+      super.copyWith((message) => updates(message as BeginTransactionRequest))
+          as BeginTransactionRequest; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static BeginTransactionRequest create() => BeginTransactionRequest._();
@@ -327,7 +502,7 @@ class BeginTransactionRequest extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static BeginTransactionRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<BeginTransactionRequest>(create);
-  static BeginTransactionRequest _defaultInstance;
+  static BeginTransactionRequest? _defaultInstance;
 
   @$pb.TagNumber(8)
   $core.String get projectId => $_getSZ(0);
@@ -357,25 +532,51 @@ class BeginTransactionRequest extends $pb.GeneratedMessage {
 }
 
 class BeginTransactionResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('BeginTransactionResponse',
-      package: const $pb.PackageName('google.datastore.v1'),
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'BeginTransactionResponse',
+      package: const $pb.PackageName(
+          $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.datastore.v1'),
       createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, 'transaction', $pb.PbFieldType.OY)
+    ..a<$core.List<$core.int>>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'transaction',
+        $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
   BeginTransactionResponse._() : super();
-  factory BeginTransactionResponse() => create();
+  factory BeginTransactionResponse({
+    $core.List<$core.int>? transaction,
+  }) {
+    final _result = create();
+    if (transaction != null) {
+      _result.transaction = transaction;
+    }
+    return _result;
+  }
   factory BeginTransactionResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory BeginTransactionResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   BeginTransactionResponse clone() =>
       BeginTransactionResponse()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   BeginTransactionResponse copyWith(
           void Function(BeginTransactionResponse) updates) =>
-      super.copyWith((message) => updates(message as BeginTransactionResponse));
+      super.copyWith((message) => updates(message as BeginTransactionResponse))
+          as BeginTransactionResponse; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static BeginTransactionResponse create() => BeginTransactionResponse._();
@@ -385,7 +586,7 @@ class BeginTransactionResponse extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static BeginTransactionResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<BeginTransactionResponse>(create);
-  static BeginTransactionResponse _defaultInstance;
+  static BeginTransactionResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<$core.int> get transaction => $_getN(0);
@@ -401,24 +602,58 @@ class BeginTransactionResponse extends $pb.GeneratedMessage {
 }
 
 class RollbackRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('RollbackRequest',
-      package: const $pb.PackageName('google.datastore.v1'),
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'RollbackRequest',
+      package: const $pb.PackageName(
+          $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.datastore.v1'),
       createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, 'transaction', $pb.PbFieldType.OY)
-    ..aOS(8, 'projectId')
+    ..a<$core.List<$core.int>>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'transaction',
+        $pb.PbFieldType.OY)
+    ..aOS(
+        8,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'projectId')
     ..hasRequiredFields = false;
 
   RollbackRequest._() : super();
-  factory RollbackRequest() => create();
+  factory RollbackRequest({
+    $core.List<$core.int>? transaction,
+    $core.String? projectId,
+  }) {
+    final _result = create();
+    if (transaction != null) {
+      _result.transaction = transaction;
+    }
+    if (projectId != null) {
+      _result.projectId = projectId;
+    }
+    return _result;
+  }
   factory RollbackRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory RollbackRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   RollbackRequest clone() => RollbackRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   RollbackRequest copyWith(void Function(RollbackRequest) updates) =>
-      super.copyWith((message) => updates(message as RollbackRequest));
+      super.copyWith((message) => updates(message as RollbackRequest))
+          as RollbackRequest; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static RollbackRequest create() => RollbackRequest._();
@@ -428,7 +663,7 @@ class RollbackRequest extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static RollbackRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<RollbackRequest>(create);
-  static RollbackRequest _defaultInstance;
+  static RollbackRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<$core.int> get transaction => $_getN(0);
@@ -456,8 +691,14 @@ class RollbackRequest extends $pb.GeneratedMessage {
 }
 
 class RollbackResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('RollbackResponse',
-      package: const $pb.PackageName('google.datastore.v1'),
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'RollbackResponse',
+      package: const $pb.PackageName(
+          $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.datastore.v1'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -469,9 +710,16 @@ class RollbackResponse extends $pb.GeneratedMessage {
   factory RollbackResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   RollbackResponse clone() => RollbackResponse()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   RollbackResponse copyWith(void Function(RollbackResponse) updates) =>
-      super.copyWith((message) => updates(message as RollbackResponse));
+      super.copyWith((message) => updates(message as RollbackResponse))
+          as RollbackResponse; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static RollbackResponse create() => RollbackResponse._();
@@ -481,7 +729,7 @@ class RollbackResponse extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static RollbackResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<RollbackResponse>(create);
-  static RollbackResponse _defaultInstance;
+  static RollbackResponse? _defaultInstance;
 }
 
 enum CommitRequest_TransactionSelector { transaction, notSet }
@@ -492,31 +740,71 @@ class CommitRequest extends $pb.GeneratedMessage {
     1: CommitRequest_TransactionSelector.transaction,
     0: CommitRequest_TransactionSelector.notSet
   };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CommitRequest',
-      package: const $pb.PackageName('google.datastore.v1'),
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'CommitRequest',
+      package: const $pb.PackageName(
+          $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.datastore.v1'),
       createEmptyInstance: create)
     ..oo(0, [1])
-    ..a<$core.List<$core.int>>(1, 'transaction', $pb.PbFieldType.OY)
-    ..e<CommitRequest_Mode>(5, 'mode', $pb.PbFieldType.OE,
+    ..a<$core.List<$core.int>>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'transaction',
+        $pb.PbFieldType.OY)
+    ..e<CommitRequest_Mode>(
+        5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'mode', $pb.PbFieldType.OE,
         defaultOrMaker: CommitRequest_Mode.MODE_UNSPECIFIED,
         valueOf: CommitRequest_Mode.valueOf,
         enumValues: CommitRequest_Mode.values)
-    ..pc<Mutation>(6, 'mutations', $pb.PbFieldType.PM,
+    ..pc<Mutation>(
+        6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'mutations', $pb.PbFieldType.PM,
         subBuilder: Mutation.create)
-    ..aOS(8, 'projectId')
+    ..aOS(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'projectId')
     ..hasRequiredFields = false;
 
   CommitRequest._() : super();
-  factory CommitRequest() => create();
+  factory CommitRequest({
+    $core.List<$core.int>? transaction,
+    CommitRequest_Mode? mode,
+    $core.Iterable<Mutation>? mutations,
+    $core.String? projectId,
+  }) {
+    final _result = create();
+    if (transaction != null) {
+      _result.transaction = transaction;
+    }
+    if (mode != null) {
+      _result.mode = mode;
+    }
+    if (mutations != null) {
+      _result.mutations.addAll(mutations);
+    }
+    if (projectId != null) {
+      _result.projectId = projectId;
+    }
+    return _result;
+  }
   factory CommitRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CommitRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   CommitRequest clone() => CommitRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   CommitRequest copyWith(void Function(CommitRequest) updates) =>
-      super.copyWith((message) => updates(message as CommitRequest));
+      super.copyWith((message) => updates(message as CommitRequest))
+          as CommitRequest; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static CommitRequest create() => CommitRequest._();
@@ -526,10 +814,10 @@ class CommitRequest extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static CommitRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<CommitRequest>(create);
-  static CommitRequest _defaultInstance;
+  static CommitRequest? _defaultInstance;
 
   CommitRequest_TransactionSelector whichTransactionSelector() =>
-      _CommitRequest_TransactionSelectorByTag[$_whichOneof(0)];
+      _CommitRequest_TransactionSelectorByTag[$_whichOneof(0)]!;
   void clearTransactionSelector() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
@@ -573,25 +861,58 @@ class CommitRequest extends $pb.GeneratedMessage {
 }
 
 class CommitResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('CommitResponse',
-      package: const $pb.PackageName('google.datastore.v1'),
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'CommitResponse',
+      package: const $pb.PackageName(
+          $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.datastore.v1'),
       createEmptyInstance: create)
-    ..pc<MutationResult>(3, 'mutationResults', $pb.PbFieldType.PM,
+    ..pc<MutationResult>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'mutationResults',
+        $pb.PbFieldType.PM,
         subBuilder: MutationResult.create)
-    ..a<$core.int>(4, 'indexUpdates', $pb.PbFieldType.O3)
+    ..a<$core.int>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'indexUpdates',
+        $pb.PbFieldType.O3)
     ..hasRequiredFields = false;
 
   CommitResponse._() : super();
-  factory CommitResponse() => create();
+  factory CommitResponse({
+    $core.Iterable<MutationResult>? mutationResults,
+    $core.int? indexUpdates,
+  }) {
+    final _result = create();
+    if (mutationResults != null) {
+      _result.mutationResults.addAll(mutationResults);
+    }
+    if (indexUpdates != null) {
+      _result.indexUpdates = indexUpdates;
+    }
+    return _result;
+  }
   factory CommitResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CommitResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   CommitResponse clone() => CommitResponse()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   CommitResponse copyWith(void Function(CommitResponse) updates) =>
-      super.copyWith((message) => updates(message as CommitResponse));
+      super.copyWith((message) => updates(message as CommitResponse))
+          as CommitResponse; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static CommitResponse create() => CommitResponse._();
@@ -601,7 +922,7 @@ class CommitResponse extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static CommitResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<CommitResponse>(create);
-  static CommitResponse _defaultInstance;
+  static CommitResponse? _defaultInstance;
 
   @$pb.TagNumber(3)
   $core.List<MutationResult> get mutationResults => $_getList(0);
@@ -620,24 +941,56 @@ class CommitResponse extends $pb.GeneratedMessage {
 }
 
 class AllocateIdsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AllocateIdsRequest',
-      package: const $pb.PackageName('google.datastore.v1'),
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'AllocateIdsRequest',
+      package: const $pb.PackageName(
+          $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.datastore.v1'),
       createEmptyInstance: create)
-    ..pc<$1.Key>(1, 'keys', $pb.PbFieldType.PM, subBuilder: $1.Key.create)
-    ..aOS(8, 'projectId')
+    ..pc<$1.Key>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'keys',
+        $pb.PbFieldType.PM,
+        subBuilder: $1.Key.create)
+    ..aOS(8,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'projectId')
     ..hasRequiredFields = false;
 
   AllocateIdsRequest._() : super();
-  factory AllocateIdsRequest() => create();
+  factory AllocateIdsRequest({
+    $core.Iterable<$1.Key>? keys,
+    $core.String? projectId,
+  }) {
+    final _result = create();
+    if (keys != null) {
+      _result.keys.addAll(keys);
+    }
+    if (projectId != null) {
+      _result.projectId = projectId;
+    }
+    return _result;
+  }
   factory AllocateIdsRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory AllocateIdsRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   AllocateIdsRequest clone() => AllocateIdsRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   AllocateIdsRequest copyWith(void Function(AllocateIdsRequest) updates) =>
-      super.copyWith((message) => updates(message as AllocateIdsRequest));
+      super.copyWith((message) => updates(message as AllocateIdsRequest))
+          as AllocateIdsRequest; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static AllocateIdsRequest create() => AllocateIdsRequest._();
@@ -647,7 +1000,7 @@ class AllocateIdsRequest extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static AllocateIdsRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<AllocateIdsRequest>(create);
-  static AllocateIdsRequest _defaultInstance;
+  static AllocateIdsRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<$1.Key> get keys => $_getList(0);
@@ -666,23 +1019,50 @@ class AllocateIdsRequest extends $pb.GeneratedMessage {
 }
 
 class AllocateIdsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AllocateIdsResponse',
-      package: const $pb.PackageName('google.datastore.v1'),
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'AllocateIdsResponse',
+      package: const $pb.PackageName(
+          $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.datastore.v1'),
       createEmptyInstance: create)
-    ..pc<$1.Key>(1, 'keys', $pb.PbFieldType.PM, subBuilder: $1.Key.create)
+    ..pc<$1.Key>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'keys',
+        $pb.PbFieldType.PM,
+        subBuilder: $1.Key.create)
     ..hasRequiredFields = false;
 
   AllocateIdsResponse._() : super();
-  factory AllocateIdsResponse() => create();
+  factory AllocateIdsResponse({
+    $core.Iterable<$1.Key>? keys,
+  }) {
+    final _result = create();
+    if (keys != null) {
+      _result.keys.addAll(keys);
+    }
+    return _result;
+  }
   factory AllocateIdsResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory AllocateIdsResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   AllocateIdsResponse clone() => AllocateIdsResponse()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   AllocateIdsResponse copyWith(void Function(AllocateIdsResponse) updates) =>
-      super.copyWith((message) => updates(message as AllocateIdsResponse));
+      super.copyWith((message) => updates(message as AllocateIdsResponse))
+          as AllocateIdsResponse; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static AllocateIdsResponse create() => AllocateIdsResponse._();
@@ -692,32 +1072,68 @@ class AllocateIdsResponse extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static AllocateIdsResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<AllocateIdsResponse>(create);
-  static AllocateIdsResponse _defaultInstance;
+  static AllocateIdsResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<$1.Key> get keys => $_getList(0);
 }
 
 class ReserveIdsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ReserveIdsRequest',
-      package: const $pb.PackageName('google.datastore.v1'),
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ReserveIdsRequest',
+      package: const $pb.PackageName(
+          $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.datastore.v1'),
       createEmptyInstance: create)
-    ..pc<$1.Key>(1, 'keys', $pb.PbFieldType.PM, subBuilder: $1.Key.create)
-    ..aOS(8, 'projectId')
-    ..aOS(9, 'databaseId')
+    ..pc<$1.Key>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'keys',
+        $pb.PbFieldType.PM,
+        subBuilder: $1.Key.create)
+    ..aOS(8,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'projectId')
+    ..aOS(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'databaseId')
     ..hasRequiredFields = false;
 
   ReserveIdsRequest._() : super();
-  factory ReserveIdsRequest() => create();
+  factory ReserveIdsRequest({
+    $core.Iterable<$1.Key>? keys,
+    $core.String? projectId,
+    $core.String? databaseId,
+  }) {
+    final _result = create();
+    if (keys != null) {
+      _result.keys.addAll(keys);
+    }
+    if (projectId != null) {
+      _result.projectId = projectId;
+    }
+    if (databaseId != null) {
+      _result.databaseId = databaseId;
+    }
+    return _result;
+  }
   factory ReserveIdsRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ReserveIdsRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   ReserveIdsRequest clone() => ReserveIdsRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   ReserveIdsRequest copyWith(void Function(ReserveIdsRequest) updates) =>
-      super.copyWith((message) => updates(message as ReserveIdsRequest));
+      super.copyWith((message) => updates(message as ReserveIdsRequest))
+          as ReserveIdsRequest; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static ReserveIdsRequest create() => ReserveIdsRequest._();
@@ -727,7 +1143,7 @@ class ReserveIdsRequest extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static ReserveIdsRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ReserveIdsRequest>(create);
-  static ReserveIdsRequest _defaultInstance;
+  static ReserveIdsRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<$1.Key> get keys => $_getList(0);
@@ -758,8 +1174,14 @@ class ReserveIdsRequest extends $pb.GeneratedMessage {
 }
 
 class ReserveIdsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ReserveIdsResponse',
-      package: const $pb.PackageName('google.datastore.v1'),
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ReserveIdsResponse',
+      package: const $pb.PackageName(
+          $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.datastore.v1'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -771,9 +1193,16 @@ class ReserveIdsResponse extends $pb.GeneratedMessage {
   factory ReserveIdsResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   ReserveIdsResponse clone() => ReserveIdsResponse()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   ReserveIdsResponse copyWith(void Function(ReserveIdsResponse) updates) =>
-      super.copyWith((message) => updates(message as ReserveIdsResponse));
+      super.copyWith((message) => updates(message as ReserveIdsResponse))
+          as ReserveIdsResponse; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static ReserveIdsResponse create() => ReserveIdsResponse._();
@@ -783,7 +1212,7 @@ class ReserveIdsResponse extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static ReserveIdsResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ReserveIdsResponse>(create);
-  static ReserveIdsResponse _defaultInstance;
+  static ReserveIdsResponse? _defaultInstance;
 }
 
 enum Mutation_Operation { insert, update, upsert, delete, notSet }
@@ -804,29 +1233,71 @@ class Mutation extends $pb.GeneratedMessage {
     8: Mutation_ConflictDetectionStrategy.baseVersion,
     0: Mutation_ConflictDetectionStrategy.notSet
   };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Mutation',
-      package: const $pb.PackageName('google.datastore.v1'),
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'Mutation',
+      package: const $pb.PackageName(
+          $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.datastore.v1'),
       createEmptyInstance: create)
     ..oo(0, [4, 5, 6, 7])
     ..oo(1, [8])
-    ..aOM<$1.Entity>(4, 'insert', subBuilder: $1.Entity.create)
-    ..aOM<$1.Entity>(5, 'update', subBuilder: $1.Entity.create)
-    ..aOM<$1.Entity>(6, 'upsert', subBuilder: $1.Entity.create)
-    ..aOM<$1.Key>(7, 'delete', subBuilder: $1.Key.create)
-    ..aInt64(8, 'baseVersion')
+    ..aOM<$1.Entity>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'insert',
+        subBuilder: $1.Entity.create)
+    ..aOM<$1.Entity>(
+        5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'update',
+        subBuilder: $1.Entity.create)
+    ..aOM<$1.Entity>(
+        6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'upsert',
+        subBuilder: $1.Entity.create)
+    ..aOM<$1.Key>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'delete', subBuilder: $1.Key.create)
+    ..aInt64(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'baseVersion')
     ..hasRequiredFields = false;
 
   Mutation._() : super();
-  factory Mutation() => create();
+  factory Mutation({
+    $1.Entity? insert,
+    $1.Entity? update,
+    $1.Entity? upsert,
+    $1.Key? delete,
+    $fixnum.Int64? baseVersion,
+  }) {
+    final _result = create();
+    if (insert != null) {
+      _result.insert = insert;
+    }
+    if (update != null) {
+      _result.update = update;
+    }
+    if (upsert != null) {
+      _result.upsert = upsert;
+    }
+    if (delete != null) {
+      _result.delete = delete;
+    }
+    if (baseVersion != null) {
+      _result.baseVersion = baseVersion;
+    }
+    return _result;
+  }
   factory Mutation.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Mutation.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   Mutation clone() => Mutation()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   Mutation copyWith(void Function(Mutation) updates) =>
-      super.copyWith((message) => updates(message as Mutation));
+      super.copyWith((message) => updates(message as Mutation))
+          as Mutation; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static Mutation create() => Mutation._();
@@ -835,14 +1306,14 @@ class Mutation extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static Mutation getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Mutation>(create);
-  static Mutation _defaultInstance;
+  static Mutation? _defaultInstance;
 
   Mutation_Operation whichOperation() =>
-      _Mutation_OperationByTag[$_whichOneof(0)];
+      _Mutation_OperationByTag[$_whichOneof(0)]!;
   void clearOperation() => clearField($_whichOneof(0));
 
   Mutation_ConflictDetectionStrategy whichConflictDetectionStrategy() =>
-      _Mutation_ConflictDetectionStrategyByTag[$_whichOneof(1)];
+      _Mutation_ConflictDetectionStrategyByTag[$_whichOneof(1)]!;
   void clearConflictDetectionStrategy() => clearField($_whichOneof(1));
 
   @$pb.TagNumber(4)
@@ -915,25 +1386,63 @@ class Mutation extends $pb.GeneratedMessage {
 }
 
 class MutationResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('MutationResult',
-      package: const $pb.PackageName('google.datastore.v1'),
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'MutationResult',
+      package: const $pb.PackageName(
+          $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.datastore.v1'),
       createEmptyInstance: create)
-    ..aOM<$1.Key>(3, 'key', subBuilder: $1.Key.create)
-    ..aInt64(4, 'version')
-    ..aOB(5, 'conflictDetected')
+    ..aOM<$1.Key>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'key',
+        subBuilder: $1.Key.create)
+    ..aInt64(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'version')
+    ..aOB(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'conflictDetected')
     ..hasRequiredFields = false;
 
   MutationResult._() : super();
-  factory MutationResult() => create();
+  factory MutationResult({
+    $1.Key? key,
+    $fixnum.Int64? version,
+    $core.bool? conflictDetected,
+  }) {
+    final _result = create();
+    if (key != null) {
+      _result.key = key;
+    }
+    if (version != null) {
+      _result.version = version;
+    }
+    if (conflictDetected != null) {
+      _result.conflictDetected = conflictDetected;
+    }
+    return _result;
+  }
   factory MutationResult.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory MutationResult.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   MutationResult clone() => MutationResult()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   MutationResult copyWith(void Function(MutationResult) updates) =>
-      super.copyWith((message) => updates(message as MutationResult));
+      super.copyWith((message) => updates(message as MutationResult))
+          as MutationResult; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static MutationResult create() => MutationResult._();
@@ -943,7 +1452,7 @@ class MutationResult extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static MutationResult getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<MutationResult>(create);
-  static MutationResult _defaultInstance;
+  static MutationResult? _defaultInstance;
 
   @$pb.TagNumber(3)
   $1.Key get key => $_getN(0);
@@ -993,29 +1502,60 @@ class ReadOptions extends $pb.GeneratedMessage {
     2: ReadOptions_ConsistencyType.transaction,
     0: ReadOptions_ConsistencyType.notSet
   };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ReadOptions',
-      package: const $pb.PackageName('google.datastore.v1'),
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ReadOptions',
+      package: const $pb.PackageName(
+          $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.datastore.v1'),
       createEmptyInstance: create)
     ..oo(0, [1, 2])
-    ..e<ReadOptions_ReadConsistency>(1, 'readConsistency', $pb.PbFieldType.OE,
+    ..e<ReadOptions_ReadConsistency>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'readConsistency',
+        $pb.PbFieldType.OE,
         defaultOrMaker:
             ReadOptions_ReadConsistency.READ_CONSISTENCY_UNSPECIFIED,
         valueOf: ReadOptions_ReadConsistency.valueOf,
         enumValues: ReadOptions_ReadConsistency.values)
-    ..a<$core.List<$core.int>>(2, 'transaction', $pb.PbFieldType.OY)
+    ..a<$core.List<$core.int>>(
+        2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'transaction', $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
   ReadOptions._() : super();
-  factory ReadOptions() => create();
+  factory ReadOptions({
+    ReadOptions_ReadConsistency? readConsistency,
+    $core.List<$core.int>? transaction,
+  }) {
+    final _result = create();
+    if (readConsistency != null) {
+      _result.readConsistency = readConsistency;
+    }
+    if (transaction != null) {
+      _result.transaction = transaction;
+    }
+    return _result;
+  }
   factory ReadOptions.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ReadOptions.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   ReadOptions clone() => ReadOptions()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   ReadOptions copyWith(void Function(ReadOptions) updates) =>
-      super.copyWith((message) => updates(message as ReadOptions));
+      super.copyWith((message) => updates(message as ReadOptions))
+          as ReadOptions; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static ReadOptions create() => ReadOptions._();
@@ -1024,10 +1564,10 @@ class ReadOptions extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static ReadOptions getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ReadOptions>(create);
-  static ReadOptions _defaultInstance;
+  static ReadOptions? _defaultInstance;
 
   ReadOptions_ConsistencyType whichConsistencyType() =>
-      _ReadOptions_ConsistencyTypeByTag[$_whichOneof(0)];
+      _ReadOptions_ConsistencyTypeByTag[$_whichOneof(0)]!;
   void clearConsistencyType() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
@@ -1057,26 +1597,51 @@ class ReadOptions extends $pb.GeneratedMessage {
 
 class TransactionOptions_ReadWrite extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      'TransactionOptions.ReadWrite',
-      package: const $pb.PackageName('google.datastore.v1'),
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'TransactionOptions.ReadWrite',
+      package: const $pb.PackageName(
+          $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.datastore.v1'),
       createEmptyInstance: create)
-    ..a<$core.List<$core.int>>(1, 'previousTransaction', $pb.PbFieldType.OY)
+    ..a<$core.List<$core.int>>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'previousTransaction',
+        $pb.PbFieldType.OY)
     ..hasRequiredFields = false;
 
   TransactionOptions_ReadWrite._() : super();
-  factory TransactionOptions_ReadWrite() => create();
+  factory TransactionOptions_ReadWrite({
+    $core.List<$core.int>? previousTransaction,
+  }) {
+    final _result = create();
+    if (previousTransaction != null) {
+      _result.previousTransaction = previousTransaction;
+    }
+    return _result;
+  }
   factory TransactionOptions_ReadWrite.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory TransactionOptions_ReadWrite.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   TransactionOptions_ReadWrite clone() =>
       TransactionOptions_ReadWrite()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   TransactionOptions_ReadWrite copyWith(
           void Function(TransactionOptions_ReadWrite) updates) =>
       super.copyWith(
-          (message) => updates(message as TransactionOptions_ReadWrite));
+              (message) => updates(message as TransactionOptions_ReadWrite))
+          as TransactionOptions_ReadWrite; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static TransactionOptions_ReadWrite create() =>
@@ -1087,7 +1652,7 @@ class TransactionOptions_ReadWrite extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static TransactionOptions_ReadWrite getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<TransactionOptions_ReadWrite>(create);
-  static TransactionOptions_ReadWrite _defaultInstance;
+  static TransactionOptions_ReadWrite? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<$core.int> get previousTransaction => $_getN(0);
@@ -1104,8 +1669,13 @@ class TransactionOptions_ReadWrite extends $pb.GeneratedMessage {
 
 class TransactionOptions_ReadOnly extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      'TransactionOptions.ReadOnly',
-      package: const $pb.PackageName('google.datastore.v1'),
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'TransactionOptions.ReadOnly',
+      package: const $pb.PackageName(
+          $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.datastore.v1'),
       createEmptyInstance: create)
     ..hasRequiredFields = false;
 
@@ -1117,12 +1687,19 @@ class TransactionOptions_ReadOnly extends $pb.GeneratedMessage {
   factory TransactionOptions_ReadOnly.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   TransactionOptions_ReadOnly clone() =>
       TransactionOptions_ReadOnly()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   TransactionOptions_ReadOnly copyWith(
           void Function(TransactionOptions_ReadOnly) updates) =>
       super.copyWith(
-          (message) => updates(message as TransactionOptions_ReadOnly));
+              (message) => updates(message as TransactionOptions_ReadOnly))
+          as TransactionOptions_ReadOnly; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static TransactionOptions_ReadOnly create() =>
@@ -1133,7 +1710,7 @@ class TransactionOptions_ReadOnly extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static TransactionOptions_ReadOnly getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<TransactionOptions_ReadOnly>(create);
-  static TransactionOptions_ReadOnly _defaultInstance;
+  static TransactionOptions_ReadOnly? _defaultInstance;
 }
 
 enum TransactionOptions_Mode { readWrite, readOnly, notSet }
@@ -1145,27 +1722,57 @@ class TransactionOptions extends $pb.GeneratedMessage {
     2: TransactionOptions_Mode.readOnly,
     0: TransactionOptions_Mode.notSet
   };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('TransactionOptions',
-      package: const $pb.PackageName('google.datastore.v1'),
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'TransactionOptions',
+      package: const $pb.PackageName(
+          $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.datastore.v1'),
       createEmptyInstance: create)
     ..oo(0, [1, 2])
-    ..aOM<TransactionOptions_ReadWrite>(1, 'readWrite',
+    ..aOM<TransactionOptions_ReadWrite>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'readWrite',
         subBuilder: TransactionOptions_ReadWrite.create)
-    ..aOM<TransactionOptions_ReadOnly>(2, 'readOnly',
+    ..aOM<TransactionOptions_ReadOnly>(
+        2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'readOnly',
         subBuilder: TransactionOptions_ReadOnly.create)
     ..hasRequiredFields = false;
 
   TransactionOptions._() : super();
-  factory TransactionOptions() => create();
+  factory TransactionOptions({
+    TransactionOptions_ReadWrite? readWrite,
+    TransactionOptions_ReadOnly? readOnly,
+  }) {
+    final _result = create();
+    if (readWrite != null) {
+      _result.readWrite = readWrite;
+    }
+    if (readOnly != null) {
+      _result.readOnly = readOnly;
+    }
+    return _result;
+  }
   factory TransactionOptions.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory TransactionOptions.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   TransactionOptions clone() => TransactionOptions()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   TransactionOptions copyWith(void Function(TransactionOptions) updates) =>
-      super.copyWith((message) => updates(message as TransactionOptions));
+      super.copyWith((message) => updates(message as TransactionOptions))
+          as TransactionOptions; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static TransactionOptions create() => TransactionOptions._();
@@ -1175,10 +1782,10 @@ class TransactionOptions extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static TransactionOptions getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<TransactionOptions>(create);
-  static TransactionOptions _defaultInstance;
+  static TransactionOptions? _defaultInstance;
 
   TransactionOptions_Mode whichMode() =>
-      _TransactionOptions_ModeByTag[$_whichOneof(0)];
+      _TransactionOptions_ModeByTag[$_whichOneof(0)]!;
   void clearMode() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)

@@ -2,8 +2,8 @@
 //  Generated code. Do not modify.
 //  source: google/api/servicemanagement/v1/servicemanager.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:async' as $async;
 
@@ -97,142 +97,99 @@ class ServiceManagerClient extends $grpc.Client {
           ($2.DisableServiceRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) => $0.Operation.fromBuffer(value));
 
-  ServiceManagerClient($grpc.ClientChannel channel, {$grpc.CallOptions options})
-      : super(channel, options: options);
+  ServiceManagerClient($grpc.ClientChannel channel,
+      {$grpc.CallOptions? options,
+      $core.Iterable<$grpc.ClientInterceptor>? interceptors})
+      : super(channel, options: options, interceptors: interceptors);
 
   $grpc.ResponseFuture<$2.ListServicesResponse> listServices(
       $2.ListServicesRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$listServices, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listServices, request, options: options);
   }
 
   $grpc.ResponseFuture<$3.ManagedService> getService(
       $2.GetServiceRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getService, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getService, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.Operation> createService(
       $2.CreateServiceRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$createService, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$createService, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.Operation> deleteService(
       $2.DeleteServiceRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$deleteService, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$deleteService, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.Operation> undeleteService(
       $2.UndeleteServiceRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$undeleteService, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$undeleteService, request, options: options);
   }
 
   $grpc.ResponseFuture<$2.ListServiceConfigsResponse> listServiceConfigs(
       $2.ListServiceConfigsRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$listServiceConfigs, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listServiceConfigs, request, options: options);
   }
 
   $grpc.ResponseFuture<$4.Service> getServiceConfig(
       $2.GetServiceConfigRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getServiceConfig, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getServiceConfig, request, options: options);
   }
 
   $grpc.ResponseFuture<$4.Service> createServiceConfig(
       $2.CreateServiceConfigRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$createServiceConfig, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$createServiceConfig, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.Operation> submitConfigSource(
       $2.SubmitConfigSourceRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$submitConfigSource, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$submitConfigSource, request, options: options);
   }
 
   $grpc.ResponseFuture<$2.ListServiceRolloutsResponse> listServiceRollouts(
       $2.ListServiceRolloutsRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$listServiceRollouts, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listServiceRollouts, request, options: options);
   }
 
   $grpc.ResponseFuture<$3.Rollout> getServiceRollout(
       $2.GetServiceRolloutRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getServiceRollout, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getServiceRollout, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.Operation> createServiceRollout(
       $2.CreateServiceRolloutRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$createServiceRollout, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$createServiceRollout, request, options: options);
   }
 
   $grpc.ResponseFuture<$2.GenerateConfigReportResponse> generateConfigReport(
       $2.GenerateConfigReportRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$generateConfigReport, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$generateConfigReport, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.Operation> enableService(
       $2.EnableServiceRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$enableService, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$enableService, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.Operation> disableService(
       $2.DisableServiceRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$disableService, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$disableService, request, options: options);
   }
 }
 

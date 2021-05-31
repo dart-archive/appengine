@@ -2,8 +2,8 @@
 //  Generated code. Do not modify.
 //  source: google/datastore/v1/entity.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:core' as $core;
 
@@ -16,24 +16,57 @@ import '../../protobuf/timestamp.pb.dart' as $1;
 import '../../protobuf/struct.pbenum.dart' as $2;
 
 class PartitionId extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('PartitionId',
-      package: const $pb.PackageName('google.datastore.v1'),
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'PartitionId',
+      package: const $pb.PackageName(
+          $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.datastore.v1'),
       createEmptyInstance: create)
-    ..aOS(2, 'projectId')
-    ..aOS(4, 'namespaceId')
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'projectId')
+    ..aOS(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'namespaceId')
     ..hasRequiredFields = false;
 
   PartitionId._() : super();
-  factory PartitionId() => create();
+  factory PartitionId({
+    $core.String? projectId,
+    $core.String? namespaceId,
+  }) {
+    final _result = create();
+    if (projectId != null) {
+      _result.projectId = projectId;
+    }
+    if (namespaceId != null) {
+      _result.namespaceId = namespaceId;
+    }
+    return _result;
+  }
   factory PartitionId.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory PartitionId.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   PartitionId clone() => PartitionId()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   PartitionId copyWith(void Function(PartitionId) updates) =>
-      super.copyWith((message) => updates(message as PartitionId));
+      super.copyWith((message) => updates(message as PartitionId))
+          as PartitionId; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static PartitionId create() => PartitionId._();
@@ -42,7 +75,7 @@ class PartitionId extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static PartitionId getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<PartitionId>(create);
-  static PartitionId _defaultInstance;
+  static PartitionId? _defaultInstance;
 
   @$pb.TagNumber(2)
   $core.String get projectId => $_getSZ(0);
@@ -78,26 +111,67 @@ class Key_PathElement extends $pb.GeneratedMessage {
     3: Key_PathElement_IdType.name,
     0: Key_PathElement_IdType.notSet
   };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Key.PathElement',
-      package: const $pb.PackageName('google.datastore.v1'),
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'Key.PathElement',
+      package: const $pb.PackageName(
+          $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.datastore.v1'),
       createEmptyInstance: create)
     ..oo(0, [2, 3])
-    ..aOS(1, 'kind')
-    ..aInt64(2, 'id')
-    ..aOS(3, 'name')
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'kind')
+    ..aInt64(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'id')
+    ..aOS(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'name')
     ..hasRequiredFields = false;
 
   Key_PathElement._() : super();
-  factory Key_PathElement() => create();
+  factory Key_PathElement({
+    $core.String? kind,
+    $fixnum.Int64? id,
+    $core.String? name,
+  }) {
+    final _result = create();
+    if (kind != null) {
+      _result.kind = kind;
+    }
+    if (id != null) {
+      _result.id = id;
+    }
+    if (name != null) {
+      _result.name = name;
+    }
+    return _result;
+  }
   factory Key_PathElement.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Key_PathElement.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   Key_PathElement clone() => Key_PathElement()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   Key_PathElement copyWith(void Function(Key_PathElement) updates) =>
-      super.copyWith((message) => updates(message as Key_PathElement));
+      super.copyWith((message) => updates(message as Key_PathElement))
+          as Key_PathElement; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static Key_PathElement create() => Key_PathElement._();
@@ -107,10 +181,10 @@ class Key_PathElement extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static Key_PathElement getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Key_PathElement>(create);
-  static Key_PathElement _defaultInstance;
+  static Key_PathElement? _defaultInstance;
 
   Key_PathElement_IdType whichIdType() =>
-      _Key_PathElement_IdTypeByTag[$_whichOneof(0)];
+      _Key_PathElement_IdTypeByTag[$_whichOneof(0)]!;
   void clearIdType() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
@@ -151,25 +225,57 @@ class Key_PathElement extends $pb.GeneratedMessage {
 }
 
 class Key extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Key',
-      package: const $pb.PackageName('google.datastore.v1'),
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'Key',
+      package: const $pb.PackageName(
+          $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.datastore.v1'),
       createEmptyInstance: create)
-    ..aOM<PartitionId>(1, 'partitionId', subBuilder: PartitionId.create)
-    ..pc<Key_PathElement>(2, 'path', $pb.PbFieldType.PM,
+    ..aOM<PartitionId>(
+        1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'partitionId',
+        subBuilder: PartitionId.create)
+    ..pc<Key_PathElement>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'path',
+        $pb.PbFieldType.PM,
         subBuilder: Key_PathElement.create)
     ..hasRequiredFields = false;
 
   Key._() : super();
-  factory Key() => create();
+  factory Key({
+    PartitionId? partitionId,
+    $core.Iterable<Key_PathElement>? path,
+  }) {
+    final _result = create();
+    if (partitionId != null) {
+      _result.partitionId = partitionId;
+    }
+    if (path != null) {
+      _result.path.addAll(path);
+    }
+    return _result;
+  }
   factory Key.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Key.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   Key clone() => Key()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   Key copyWith(void Function(Key) updates) =>
-      super.copyWith((message) => updates(message as Key));
+      super.copyWith((message) => updates(message as Key))
+          as Key; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static Key create() => Key._();
@@ -178,7 +284,7 @@ class Key extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static Key getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Key>(create);
-  static Key _defaultInstance;
+  static Key? _defaultInstance;
 
   @$pb.TagNumber(1)
   PartitionId get partitionId => $_getN(0);
@@ -199,23 +305,50 @@ class Key extends $pb.GeneratedMessage {
 }
 
 class ArrayValue extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ArrayValue',
-      package: const $pb.PackageName('google.datastore.v1'),
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ArrayValue',
+      package: const $pb.PackageName(
+          $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.datastore.v1'),
       createEmptyInstance: create)
-    ..pc<Value>(1, 'values', $pb.PbFieldType.PM, subBuilder: Value.create)
+    ..pc<Value>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'values',
+        $pb.PbFieldType.PM,
+        subBuilder: Value.create)
     ..hasRequiredFields = false;
 
   ArrayValue._() : super();
-  factory ArrayValue() => create();
+  factory ArrayValue({
+    $core.Iterable<Value>? values,
+  }) {
+    final _result = create();
+    if (values != null) {
+      _result.values.addAll(values);
+    }
+    return _result;
+  }
   factory ArrayValue.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ArrayValue.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   ArrayValue clone() => ArrayValue()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   ArrayValue copyWith(void Function(ArrayValue) updates) =>
-      super.copyWith((message) => updates(message as ArrayValue));
+      super.copyWith((message) => updates(message as ArrayValue))
+          as ArrayValue; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static ArrayValue create() => ArrayValue._();
@@ -224,7 +357,7 @@ class ArrayValue extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static ArrayValue getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ArrayValue>(create);
-  static ArrayValue _defaultInstance;
+  static ArrayValue? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<Value> get values => $_getList(0);
@@ -260,39 +393,120 @@ class Value extends $pb.GeneratedMessage {
     18: Value_ValueType.blobValue,
     0: Value_ValueType.notSet
   };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Value',
-      package: const $pb.PackageName('google.datastore.v1'),
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'Value',
+      package: const $pb.PackageName(
+          $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.datastore.v1'),
       createEmptyInstance: create)
     ..oo(0, [1, 2, 3, 5, 6, 8, 9, 10, 11, 17, 18])
-    ..aOB(1, 'booleanValue')
-    ..aInt64(2, 'integerValue')
-    ..a<$core.double>(3, 'doubleValue', $pb.PbFieldType.OD)
-    ..aOM<Key>(5, 'keyValue', subBuilder: Key.create)
-    ..aOM<Entity>(6, 'entityValue', subBuilder: Entity.create)
-    ..aOM<$0.LatLng>(8, 'geoPointValue', subBuilder: $0.LatLng.create)
-    ..aOM<ArrayValue>(9, 'arrayValue', subBuilder: ArrayValue.create)
-    ..aOM<$1.Timestamp>(10, 'timestampValue', subBuilder: $1.Timestamp.create)
-    ..e<$2.NullValue>(11, 'nullValue', $pb.PbFieldType.OE,
-        defaultOrMaker: $2.NullValue.NULL_VALUE,
-        valueOf: $2.NullValue.valueOf,
-        enumValues: $2.NullValue.values)
-    ..a<$core.int>(14, 'meaning', $pb.PbFieldType.O3)
-    ..aOS(17, 'stringValue')
-    ..a<$core.List<$core.int>>(18, 'blobValue', $pb.PbFieldType.OY)
-    ..aOB(19, 'excludeFromIndexes')
+    ..aOB(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'booleanValue')
+    ..aInt64(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'integerValue')
+    ..a<$core.double>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'doubleValue',
+        $pb.PbFieldType.OD)
+    ..aOM<Key>(
+        5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'keyValue',
+        subBuilder: Key.create)
+    ..aOM<Entity>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'entityValue', subBuilder: Entity.create)
+    ..aOM<$0.LatLng>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'geoPointValue', subBuilder: $0.LatLng.create)
+    ..aOM<ArrayValue>(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'arrayValue', subBuilder: ArrayValue.create)
+    ..aOM<$1.Timestamp>(10, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'timestampValue', subBuilder: $1.Timestamp.create)
+    ..e<$2.NullValue>(11, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'nullValue', $pb.PbFieldType.OE, defaultOrMaker: $2.NullValue.NULL_VALUE, valueOf: $2.NullValue.valueOf, enumValues: $2.NullValue.values)
+    ..a<$core.int>(14, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'meaning', $pb.PbFieldType.O3)
+    ..aOS(17, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'stringValue')
+    ..a<$core.List<$core.int>>(18, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'blobValue', $pb.PbFieldType.OY)
+    ..aOB(19, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'excludeFromIndexes')
     ..hasRequiredFields = false;
 
   Value._() : super();
-  factory Value() => create();
+  factory Value({
+    $core.bool? booleanValue,
+    $fixnum.Int64? integerValue,
+    $core.double? doubleValue,
+    Key? keyValue,
+    Entity? entityValue,
+    $0.LatLng? geoPointValue,
+    ArrayValue? arrayValue,
+    $1.Timestamp? timestampValue,
+    $2.NullValue? nullValue,
+    $core.int? meaning,
+    $core.String? stringValue,
+    $core.List<$core.int>? blobValue,
+    $core.bool? excludeFromIndexes,
+  }) {
+    final _result = create();
+    if (booleanValue != null) {
+      _result.booleanValue = booleanValue;
+    }
+    if (integerValue != null) {
+      _result.integerValue = integerValue;
+    }
+    if (doubleValue != null) {
+      _result.doubleValue = doubleValue;
+    }
+    if (keyValue != null) {
+      _result.keyValue = keyValue;
+    }
+    if (entityValue != null) {
+      _result.entityValue = entityValue;
+    }
+    if (geoPointValue != null) {
+      _result.geoPointValue = geoPointValue;
+    }
+    if (arrayValue != null) {
+      _result.arrayValue = arrayValue;
+    }
+    if (timestampValue != null) {
+      _result.timestampValue = timestampValue;
+    }
+    if (nullValue != null) {
+      _result.nullValue = nullValue;
+    }
+    if (meaning != null) {
+      _result.meaning = meaning;
+    }
+    if (stringValue != null) {
+      _result.stringValue = stringValue;
+    }
+    if (blobValue != null) {
+      _result.blobValue = blobValue;
+    }
+    if (excludeFromIndexes != null) {
+      _result.excludeFromIndexes = excludeFromIndexes;
+    }
+    return _result;
+  }
   factory Value.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Value.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   Value clone() => Value()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   Value copyWith(void Function(Value) updates) =>
-      super.copyWith((message) => updates(message as Value));
+      super.copyWith((message) => updates(message as Value))
+          as Value; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static Value create() => Value._();
@@ -301,9 +515,9 @@ class Value extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static Value getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Value>(create);
-  static Value _defaultInstance;
+  static Value? _defaultInstance;
 
-  Value_ValueType whichValueType() => _Value_ValueTypeByTag[$_whichOneof(0)];
+  Value_ValueType whichValueType() => _Value_ValueTypeByTag[$_whichOneof(0)]!;
   void clearValueType() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
@@ -474,11 +688,23 @@ class Value extends $pb.GeneratedMessage {
 }
 
 class Entity extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Entity',
-      package: const $pb.PackageName('google.datastore.v1'),
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'Entity',
+      package: const $pb.PackageName(
+          $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.datastore.v1'),
       createEmptyInstance: create)
-    ..aOM<Key>(1, 'key', subBuilder: Key.create)
-    ..m<$core.String, Value>(3, 'properties',
+    ..aOM<Key>(
+        1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'key',
+        subBuilder: Key.create)
+    ..m<$core.String, Value>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'properties',
         entryClassName: 'Entity.PropertiesEntry',
         keyFieldType: $pb.PbFieldType.OS,
         valueFieldType: $pb.PbFieldType.OM,
@@ -487,16 +713,35 @@ class Entity extends $pb.GeneratedMessage {
     ..hasRequiredFields = false;
 
   Entity._() : super();
-  factory Entity() => create();
+  factory Entity({
+    Key? key,
+    $core.Map<$core.String, Value>? properties,
+  }) {
+    final _result = create();
+    if (key != null) {
+      _result.key = key;
+    }
+    if (properties != null) {
+      _result.properties.addAll(properties);
+    }
+    return _result;
+  }
   factory Entity.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Entity.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   Entity clone() => Entity()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   Entity copyWith(void Function(Entity) updates) =>
-      super.copyWith((message) => updates(message as Entity));
+      super.copyWith((message) => updates(message as Entity))
+          as Entity; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static Entity create() => Entity._();
@@ -505,7 +750,7 @@ class Entity extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static Entity getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Entity>(create);
-  static Entity _defaultInstance;
+  static Entity? _defaultInstance;
 
   @$pb.TagNumber(1)
   Key get key => $_getN(0);

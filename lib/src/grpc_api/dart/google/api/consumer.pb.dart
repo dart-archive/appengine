@@ -2,8 +2,8 @@
 //  Generated code. Do not modify.
 //  source: google/api/consumer.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:core' as $core;
 
@@ -14,23 +14,50 @@ import 'consumer.pbenum.dart';
 export 'consumer.pbenum.dart';
 
 class ProjectProperties extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('ProjectProperties',
-      package: const $pb.PackageName('google.api'), createEmptyInstance: create)
-    ..pc<Property>(1, 'properties', $pb.PbFieldType.PM,
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'ProjectProperties',
+      package: const $pb.PackageName(
+          $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.api'),
+      createEmptyInstance: create)
+    ..pc<Property>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'properties',
+        $pb.PbFieldType.PM,
         subBuilder: Property.create)
     ..hasRequiredFields = false;
 
   ProjectProperties._() : super();
-  factory ProjectProperties() => create();
+  factory ProjectProperties({
+    $core.Iterable<Property>? properties,
+  }) {
+    final _result = create();
+    if (properties != null) {
+      _result.properties.addAll(properties);
+    }
+    return _result;
+  }
   factory ProjectProperties.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ProjectProperties.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   ProjectProperties clone() => ProjectProperties()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   ProjectProperties copyWith(void Function(ProjectProperties) updates) =>
-      super.copyWith((message) => updates(message as ProjectProperties));
+      super.copyWith((message) => updates(message as ProjectProperties))
+          as ProjectProperties; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static ProjectProperties create() => ProjectProperties._();
@@ -40,34 +67,74 @@ class ProjectProperties extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static ProjectProperties getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<ProjectProperties>(create);
-  static ProjectProperties _defaultInstance;
+  static ProjectProperties? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<Property> get properties => $_getList(0);
 }
 
 class Property extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Property',
-      package: const $pb.PackageName('google.api'), createEmptyInstance: create)
-    ..aOS(1, 'name')
-    ..e<Property_PropertyType>(2, 'type', $pb.PbFieldType.OE,
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'Property',
+      package: const $pb.PackageName(
+          $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.api'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'name')
+    ..e<Property_PropertyType>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'type',
+        $pb.PbFieldType.OE,
         defaultOrMaker: Property_PropertyType.UNSPECIFIED,
         valueOf: Property_PropertyType.valueOf,
         enumValues: Property_PropertyType.values)
-    ..aOS(3, 'description')
+    ..aOS(
+        3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'description')
     ..hasRequiredFields = false;
 
   Property._() : super();
-  factory Property() => create();
+  factory Property({
+    $core.String? name,
+    Property_PropertyType? type,
+    $core.String? description,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    if (type != null) {
+      _result.type = type;
+    }
+    if (description != null) {
+      _result.description = description;
+    }
+    return _result;
+  }
   factory Property.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Property.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   Property clone() => Property()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   Property copyWith(void Function(Property) updates) =>
-      super.copyWith((message) => updates(message as Property));
+      super.copyWith((message) => updates(message as Property))
+          as Property; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static Property create() => Property._();
@@ -76,7 +143,7 @@ class Property extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static Property getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Property>(create);
-  static Property _defaultInstance;
+  static Property? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);

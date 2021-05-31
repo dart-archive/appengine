@@ -2,8 +2,8 @@
 //  Generated code. Do not modify.
 //  source: google/iam/v1/policy.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:core' as $core;
 
@@ -16,25 +16,67 @@ import 'policy.pbenum.dart';
 export 'policy.pbenum.dart';
 
 class Policy extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Policy',
-      package: const $pb.PackageName('google.iam.v1'),
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'Policy',
+      package: const $pb.PackageName($core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'google.iam.v1'),
       createEmptyInstance: create)
-    ..a<$core.int>(1, 'version', $pb.PbFieldType.O3)
-    ..a<$core.List<$core.int>>(3, 'etag', $pb.PbFieldType.OY)
-    ..pc<Binding>(4, 'bindings', $pb.PbFieldType.PM, subBuilder: Binding.create)
+    ..a<$core.int>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'version',
+        $pb.PbFieldType.O3)
+    ..a<$core.List<$core.int>>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'etag',
+        $pb.PbFieldType.OY)
+    ..pc<Binding>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'bindings',
+        $pb.PbFieldType.PM,
+        subBuilder: Binding.create)
     ..hasRequiredFields = false;
 
   Policy._() : super();
-  factory Policy() => create();
+  factory Policy({
+    $core.int? version,
+    $core.List<$core.int>? etag,
+    $core.Iterable<Binding>? bindings,
+  }) {
+    final _result = create();
+    if (version != null) {
+      _result.version = version;
+    }
+    if (etag != null) {
+      _result.etag = etag;
+    }
+    if (bindings != null) {
+      _result.bindings.addAll(bindings);
+    }
+    return _result;
+  }
   factory Policy.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Policy.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   Policy clone() => Policy()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   Policy copyWith(void Function(Policy) updates) =>
-      super.copyWith((message) => updates(message as Policy));
+      super.copyWith((message) => updates(message as Policy))
+          as Policy; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static Policy create() => Policy._();
@@ -43,7 +85,7 @@ class Policy extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static Policy getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Policy>(create);
-  static Policy _defaultInstance;
+  static Policy? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.int get version => $_getIZ(0);
@@ -74,25 +116,67 @@ class Policy extends $pb.GeneratedMessage {
 }
 
 class Binding extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Binding',
-      package: const $pb.PackageName('google.iam.v1'),
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'Binding',
+      package: const $pb.PackageName(
+          $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.iam.v1'),
       createEmptyInstance: create)
-    ..aOS(1, 'role')
-    ..pPS(2, 'members')
-    ..aOM<$0.Expr>(3, 'condition', subBuilder: $0.Expr.create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'role')
+    ..pPS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'members')
+    ..aOM<$0.Expr>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'condition',
+        subBuilder: $0.Expr.create)
     ..hasRequiredFields = false;
 
   Binding._() : super();
-  factory Binding() => create();
+  factory Binding({
+    $core.String? role,
+    $core.Iterable<$core.String>? members,
+    $0.Expr? condition,
+  }) {
+    final _result = create();
+    if (role != null) {
+      _result.role = role;
+    }
+    if (members != null) {
+      _result.members.addAll(members);
+    }
+    if (condition != null) {
+      _result.condition = condition;
+    }
+    return _result;
+  }
   factory Binding.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Binding.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   Binding clone() => Binding()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   Binding copyWith(void Function(Binding) updates) =>
-      super.copyWith((message) => updates(message as Binding));
+      super.copyWith((message) => updates(message as Binding))
+          as Binding; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static Binding create() => Binding._();
@@ -101,7 +185,7 @@ class Binding extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static Binding getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Binding>(create);
-  static Binding _defaultInstance;
+  static Binding? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get role => $_getSZ(0);
@@ -134,26 +218,57 @@ class Binding extends $pb.GeneratedMessage {
 }
 
 class PolicyDelta extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('PolicyDelta',
-      package: const $pb.PackageName('google.iam.v1'),
-      createEmptyInstance: create)
-    ..pc<BindingDelta>(1, 'bindingDeltas', $pb.PbFieldType.PM,
-        subBuilder: BindingDelta.create)
-    ..pc<AuditConfigDelta>(2, 'auditConfigDeltas', $pb.PbFieldType.PM,
-        subBuilder: AuditConfigDelta.create)
-    ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i =
+      $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'PolicyDelta',
+          package: const $pb.PackageName(
+              $core.bool.fromEnvironment('protobuf.omit_message_names')
+                  ? ''
+                  : 'google.iam.v1'),
+          createEmptyInstance: create)
+        ..pc<BindingDelta>(
+            1,
+            const $core.bool.fromEnvironment('protobuf.omit_field_names')
+                ? ''
+                : 'bindingDeltas',
+            $pb.PbFieldType.PM,
+            subBuilder: BindingDelta.create)
+        ..pc<AuditConfigDelta>(
+            2,
+            const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'auditConfigDeltas',
+            $pb.PbFieldType.PM,
+            subBuilder: AuditConfigDelta.create)
+        ..hasRequiredFields = false;
 
   PolicyDelta._() : super();
-  factory PolicyDelta() => create();
+  factory PolicyDelta({
+    $core.Iterable<BindingDelta>? bindingDeltas,
+    $core.Iterable<AuditConfigDelta>? auditConfigDeltas,
+  }) {
+    final _result = create();
+    if (bindingDeltas != null) {
+      _result.bindingDeltas.addAll(bindingDeltas);
+    }
+    if (auditConfigDeltas != null) {
+      _result.auditConfigDeltas.addAll(auditConfigDeltas);
+    }
+    return _result;
+  }
   factory PolicyDelta.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory PolicyDelta.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   PolicyDelta clone() => PolicyDelta()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   PolicyDelta copyWith(void Function(PolicyDelta) updates) =>
-      super.copyWith((message) => updates(message as PolicyDelta));
+      super.copyWith((message) => updates(message as PolicyDelta))
+          as PolicyDelta; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static PolicyDelta create() => PolicyDelta._();
@@ -162,7 +277,7 @@ class PolicyDelta extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static PolicyDelta getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<PolicyDelta>(create);
-  static PolicyDelta _defaultInstance;
+  static PolicyDelta? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<BindingDelta> get bindingDeltas => $_getList(0);
@@ -172,29 +287,68 @@ class PolicyDelta extends $pb.GeneratedMessage {
 }
 
 class BindingDelta extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('BindingDelta',
-      package: const $pb.PackageName('google.iam.v1'),
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'BindingDelta',
+      package: const $pb.PackageName(
+          $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.iam.v1'),
       createEmptyInstance: create)
-    ..e<BindingDelta_Action>(1, 'action', $pb.PbFieldType.OE,
+    ..e<BindingDelta_Action>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'action',
+        $pb.PbFieldType.OE,
         defaultOrMaker: BindingDelta_Action.ACTION_UNSPECIFIED,
         valueOf: BindingDelta_Action.valueOf,
         enumValues: BindingDelta_Action.values)
-    ..aOS(2, 'role')
-    ..aOS(3, 'member')
-    ..aOM<$0.Expr>(4, 'condition', subBuilder: $0.Expr.create)
+    ..aOS(2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'role')
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'member')
+    ..aOM<$0.Expr>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'condition', subBuilder: $0.Expr.create)
     ..hasRequiredFields = false;
 
   BindingDelta._() : super();
-  factory BindingDelta() => create();
+  factory BindingDelta({
+    BindingDelta_Action? action,
+    $core.String? role,
+    $core.String? member,
+    $0.Expr? condition,
+  }) {
+    final _result = create();
+    if (action != null) {
+      _result.action = action;
+    }
+    if (role != null) {
+      _result.role = role;
+    }
+    if (member != null) {
+      _result.member = member;
+    }
+    if (condition != null) {
+      _result.condition = condition;
+    }
+    return _result;
+  }
   factory BindingDelta.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory BindingDelta.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   BindingDelta clone() => BindingDelta()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   BindingDelta copyWith(void Function(BindingDelta) updates) =>
-      super.copyWith((message) => updates(message as BindingDelta));
+      super.copyWith((message) => updates(message as BindingDelta))
+          as BindingDelta; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static BindingDelta create() => BindingDelta._();
@@ -204,7 +358,7 @@ class BindingDelta extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static BindingDelta getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<BindingDelta>(create);
-  static BindingDelta _defaultInstance;
+  static BindingDelta? _defaultInstance;
 
   @$pb.TagNumber(1)
   BindingDelta_Action get action => $_getN(0);
@@ -258,29 +412,68 @@ class BindingDelta extends $pb.GeneratedMessage {
 }
 
 class AuditConfigDelta extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('AuditConfigDelta',
-      package: const $pb.PackageName('google.iam.v1'),
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'AuditConfigDelta',
+      package: const $pb.PackageName(
+          $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.iam.v1'),
       createEmptyInstance: create)
-    ..e<AuditConfigDelta_Action>(1, 'action', $pb.PbFieldType.OE,
+    ..e<AuditConfigDelta_Action>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'action',
+        $pb.PbFieldType.OE,
         defaultOrMaker: AuditConfigDelta_Action.ACTION_UNSPECIFIED,
         valueOf: AuditConfigDelta_Action.valueOf,
         enumValues: AuditConfigDelta_Action.values)
-    ..aOS(2, 'service')
-    ..aOS(3, 'exemptedMember')
-    ..aOS(4, 'logType')
+    ..aOS(2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'service')
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'exemptedMember')
+    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'logType')
     ..hasRequiredFields = false;
 
   AuditConfigDelta._() : super();
-  factory AuditConfigDelta() => create();
+  factory AuditConfigDelta({
+    AuditConfigDelta_Action? action,
+    $core.String? service,
+    $core.String? exemptedMember,
+    $core.String? logType,
+  }) {
+    final _result = create();
+    if (action != null) {
+      _result.action = action;
+    }
+    if (service != null) {
+      _result.service = service;
+    }
+    if (exemptedMember != null) {
+      _result.exemptedMember = exemptedMember;
+    }
+    if (logType != null) {
+      _result.logType = logType;
+    }
+    return _result;
+  }
   factory AuditConfigDelta.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory AuditConfigDelta.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   AuditConfigDelta clone() => AuditConfigDelta()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   AuditConfigDelta copyWith(void Function(AuditConfigDelta) updates) =>
-      super.copyWith((message) => updates(message as AuditConfigDelta));
+      super.copyWith((message) => updates(message as AuditConfigDelta))
+          as AuditConfigDelta; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static AuditConfigDelta create() => AuditConfigDelta._();
@@ -290,7 +483,7 @@ class AuditConfigDelta extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static AuditConfigDelta getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<AuditConfigDelta>(create);
-  static AuditConfigDelta _defaultInstance;
+  static AuditConfigDelta? _defaultInstance;
 
   @$pb.TagNumber(1)
   AuditConfigDelta_Action get action => $_getN(0);

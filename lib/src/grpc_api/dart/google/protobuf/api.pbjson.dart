@@ -2,9 +2,14 @@
 //  Generated code. Do not modify.
 //  source: google/protobuf/api.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
+import 'dart:core' as $core;
+import 'dart:convert' as $convert;
+import 'dart:typed_data' as $typed_data;
+
+@$core.Deprecated('Use apiDescriptor instead')
 const Api$json = {
   '1': 'Api',
   '2': [
@@ -53,6 +58,10 @@ const Api$json = {
   ],
 };
 
+/// Descriptor for `Api`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List apiDescriptor = $convert.base64Decode(
+    'CgNBcGkSEgoEbmFtZRgBIAEoCVIEbmFtZRIxCgdtZXRob2RzGAIgAygLMhcuZ29vZ2xlLnByb3RvYnVmLk1ldGhvZFIHbWV0aG9kcxIxCgdvcHRpb25zGAMgAygLMhcuZ29vZ2xlLnByb3RvYnVmLk9wdGlvblIHb3B0aW9ucxIYCgd2ZXJzaW9uGAQgASgJUgd2ZXJzaW9uEkUKDnNvdXJjZV9jb250ZXh0GAUgASgLMh4uZ29vZ2xlLnByb3RvYnVmLlNvdXJjZUNvbnRleHRSDXNvdXJjZUNvbnRleHQSLgoGbWl4aW5zGAYgAygLMhYuZ29vZ2xlLnByb3RvYnVmLk1peGluUgZtaXhpbnMSLwoGc3ludGF4GAcgASgOMhcuZ29vZ2xlLnByb3RvYnVmLlN5bnRheFIGc3ludGF4');
+@$core.Deprecated('Use methodDescriptor instead')
 const Method$json = {
   '1': 'Method',
   '2': [
@@ -92,6 +101,10 @@ const Method$json = {
   ],
 };
 
+/// Descriptor for `Method`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List methodDescriptor = $convert.base64Decode(
+    'CgZNZXRob2QSEgoEbmFtZRgBIAEoCVIEbmFtZRIoChByZXF1ZXN0X3R5cGVfdXJsGAIgASgJUg5yZXF1ZXN0VHlwZVVybBIrChFyZXF1ZXN0X3N0cmVhbWluZxgDIAEoCFIQcmVxdWVzdFN0cmVhbWluZxIqChFyZXNwb25zZV90eXBlX3VybBgEIAEoCVIPcmVzcG9uc2VUeXBlVXJsEi0KEnJlc3BvbnNlX3N0cmVhbWluZxgFIAEoCFIRcmVzcG9uc2VTdHJlYW1pbmcSMQoHb3B0aW9ucxgGIAMoCzIXLmdvb2dsZS5wcm90b2J1Zi5PcHRpb25SB29wdGlvbnMSLwoGc3ludGF4GAcgASgOMhcuZ29vZ2xlLnByb3RvYnVmLlN5bnRheFIGc3ludGF4');
+@$core.Deprecated('Use mixinDescriptor instead')
 const Mixin$json = {
   '1': 'Mixin',
   '2': [
@@ -99,3 +112,7 @@ const Mixin$json = {
     {'1': 'root', '3': 2, '4': 1, '5': 9, '10': 'root'},
   ],
 };
+
+/// Descriptor for `Mixin`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List mixinDescriptor = $convert.base64Decode(
+    'CgVNaXhpbhISCgRuYW1lGAEgASgJUgRuYW1lEhIKBHJvb3QYAiABKAlSBHJvb3Q=');

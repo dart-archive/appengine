@@ -2,9 +2,14 @@
 //  Generated code. Do not modify.
 //  source: google/api/http.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
+import 'dart:core' as $core;
+import 'dart:convert' as $convert;
+import 'dart:typed_data' as $typed_data;
+
+@$core.Deprecated('Use httpDescriptor instead')
 const Http$json = {
   '1': 'Http',
   '2': [
@@ -26,6 +31,10 @@ const Http$json = {
   ],
 };
 
+/// Descriptor for `Http`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List httpDescriptor = $convert.base64Decode(
+    'CgRIdHRwEioKBXJ1bGVzGAEgAygLMhQuZ29vZ2xlLmFwaS5IdHRwUnVsZVIFcnVsZXMSRQofZnVsbHlfZGVjb2RlX3Jlc2VydmVkX2V4cGFuc2lvbhgCIAEoCFIcZnVsbHlEZWNvZGVSZXNlcnZlZEV4cGFuc2lvbg==');
+@$core.Deprecated('Use httpRuleDescriptor instead')
 const HttpRule$json = {
   '1': 'HttpRule',
   '2': [
@@ -60,6 +69,10 @@ const HttpRule$json = {
   ],
 };
 
+/// Descriptor for `HttpRule`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List httpRuleDescriptor = $convert.base64Decode(
+    'CghIdHRwUnVsZRIaCghzZWxlY3RvchgBIAEoCVIIc2VsZWN0b3ISEgoDZ2V0GAIgASgJSABSA2dldBISCgNwdXQYAyABKAlIAFIDcHV0EhQKBHBvc3QYBCABKAlIAFIEcG9zdBIYCgZkZWxldGUYBSABKAlIAFIGZGVsZXRlEhYKBXBhdGNoGAYgASgJSABSBXBhdGNoEjcKBmN1c3RvbRgIIAEoCzIdLmdvb2dsZS5hcGkuQ3VzdG9tSHR0cFBhdHRlcm5IAFIGY3VzdG9tEhIKBGJvZHkYByABKAlSBGJvZHkSIwoNcmVzcG9uc2VfYm9keRgMIAEoCVIMcmVzcG9uc2VCb2R5EkUKE2FkZGl0aW9uYWxfYmluZGluZ3MYCyADKAsyFC5nb29nbGUuYXBpLkh0dHBSdWxlUhJhZGRpdGlvbmFsQmluZGluZ3NCCQoHcGF0dGVybg==');
+@$core.Deprecated('Use customHttpPatternDescriptor instead')
 const CustomHttpPattern$json = {
   '1': 'CustomHttpPattern',
   '2': [
@@ -67,3 +80,7 @@ const CustomHttpPattern$json = {
     {'1': 'path', '3': 2, '4': 1, '5': 9, '10': 'path'},
   ],
 };
+
+/// Descriptor for `CustomHttpPattern`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List customHttpPatternDescriptor = $convert.base64Decode(
+    'ChFDdXN0b21IdHRwUGF0dGVybhISCgRraW5kGAEgASgJUgRraW5kEhIKBHBhdGgYAiABKAlSBHBhdGg=');

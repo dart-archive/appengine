@@ -2,8 +2,8 @@
 //  Generated code. Do not modify.
 //  source: google/appengine/logging/v1/request_log.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:core' as $core;
 
@@ -16,30 +16,67 @@ import '../../../protobuf/duration.pb.dart' as $1;
 import '../../../logging/type/log_severity.pbenum.dart' as $2;
 
 class LogLine extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('LogLine',
-      package: const $pb.PackageName('google.appengine.logging.v1'),
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'LogLine',
+      package: const $pb.PackageName(
+          $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.appengine.logging.v1'),
       createEmptyInstance: create)
-    ..aOM<$0.Timestamp>(1, 'time', subBuilder: $0.Timestamp.create)
-    ..e<$2.LogSeverity>(2, 'severity', $pb.PbFieldType.OE,
+    ..aOM<$0.Timestamp>(
+        1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'time',
+        subBuilder: $0.Timestamp.create)
+    ..e<$2.LogSeverity>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'severity',
+        $pb.PbFieldType.OE,
         defaultOrMaker: $2.LogSeverity.DEFAULT,
         valueOf: $2.LogSeverity.valueOf,
         enumValues: $2.LogSeverity.values)
-    ..aOS(3, 'logMessage')
-    ..aOM<SourceLocation>(4, 'sourceLocation',
-        subBuilder: SourceLocation.create)
+    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'logMessage')
+    ..aOM<SourceLocation>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'sourceLocation', subBuilder: SourceLocation.create)
     ..hasRequiredFields = false;
 
   LogLine._() : super();
-  factory LogLine() => create();
+  factory LogLine({
+    $0.Timestamp? time,
+    $2.LogSeverity? severity,
+    $core.String? logMessage,
+    SourceLocation? sourceLocation,
+  }) {
+    final _result = create();
+    if (time != null) {
+      _result.time = time;
+    }
+    if (severity != null) {
+      _result.severity = severity;
+    }
+    if (logMessage != null) {
+      _result.logMessage = logMessage;
+    }
+    if (sourceLocation != null) {
+      _result.sourceLocation = sourceLocation;
+    }
+    return _result;
+  }
   factory LogLine.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory LogLine.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   LogLine clone() => LogLine()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   LogLine copyWith(void Function(LogLine) updates) =>
-      super.copyWith((message) => updates(message as LogLine));
+      super.copyWith((message) => updates(message as LogLine))
+          as LogLine; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static LogLine create() => LogLine._();
@@ -48,7 +85,7 @@ class LogLine extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static LogLine getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<LogLine>(create);
-  static LogLine _defaultInstance;
+  static LogLine? _defaultInstance;
 
   @$pb.TagNumber(1)
   $0.Timestamp get time => $_getN(0);
@@ -104,25 +141,66 @@ class LogLine extends $pb.GeneratedMessage {
 }
 
 class SourceLocation extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SourceLocation',
-      package: const $pb.PackageName('google.appengine.logging.v1'),
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'SourceLocation',
+      package: const $pb.PackageName(
+          $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.appengine.logging.v1'),
       createEmptyInstance: create)
-    ..aOS(1, 'file')
-    ..aInt64(2, 'line')
-    ..aOS(3, 'functionName')
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'file')
+    ..aInt64(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'line')
+    ..aOS(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'functionName')
     ..hasRequiredFields = false;
 
   SourceLocation._() : super();
-  factory SourceLocation() => create();
+  factory SourceLocation({
+    $core.String? file,
+    $fixnum.Int64? line,
+    $core.String? functionName,
+  }) {
+    final _result = create();
+    if (file != null) {
+      _result.file = file;
+    }
+    if (line != null) {
+      _result.line = line;
+    }
+    if (functionName != null) {
+      _result.functionName = functionName;
+    }
+    return _result;
+  }
   factory SourceLocation.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory SourceLocation.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   SourceLocation clone() => SourceLocation()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   SourceLocation copyWith(void Function(SourceLocation) updates) =>
-      super.copyWith((message) => updates(message as SourceLocation));
+      super.copyWith((message) => updates(message as SourceLocation))
+          as SourceLocation; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static SourceLocation create() => SourceLocation._();
@@ -132,7 +210,7 @@ class SourceLocation extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static SourceLocation getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<SourceLocation>(create);
-  static SourceLocation _defaultInstance;
+  static SourceLocation? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get file => $_getSZ(0);
@@ -172,24 +250,57 @@ class SourceLocation extends $pb.GeneratedMessage {
 }
 
 class SourceReference extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SourceReference',
-      package: const $pb.PackageName('google.appengine.logging.v1'),
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'SourceReference',
+      package: const $pb.PackageName(
+          $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.appengine.logging.v1'),
       createEmptyInstance: create)
-    ..aOS(1, 'repository')
-    ..aOS(2, 'revisionId')
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'repository')
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'revisionId')
     ..hasRequiredFields = false;
 
   SourceReference._() : super();
-  factory SourceReference() => create();
+  factory SourceReference({
+    $core.String? repository,
+    $core.String? revisionId,
+  }) {
+    final _result = create();
+    if (repository != null) {
+      _result.repository = repository;
+    }
+    if (revisionId != null) {
+      _result.revisionId = revisionId;
+    }
+    return _result;
+  }
   factory SourceReference.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory SourceReference.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   SourceReference clone() => SourceReference()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   SourceReference copyWith(void Function(SourceReference) updates) =>
-      super.copyWith((message) => updates(message as SourceReference));
+      super.copyWith((message) => updates(message as SourceReference))
+          as SourceReference; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static SourceReference create() => SourceReference._();
@@ -199,7 +310,7 @@ class SourceReference extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static SourceReference getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<SourceReference>(create);
-  static SourceReference _defaultInstance;
+  static SourceReference? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get repository => $_getSZ(0);
@@ -227,55 +338,217 @@ class SourceReference extends $pb.GeneratedMessage {
 }
 
 class RequestLog extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('RequestLog',
-      package: const $pb.PackageName('google.appengine.logging.v1'),
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'RequestLog',
+      package: const $pb.PackageName(
+          $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.appengine.logging.v1'),
       createEmptyInstance: create)
-    ..aOS(1, 'appId')
-    ..aOS(2, 'versionId')
-    ..aOS(3, 'requestId')
-    ..aOS(4, 'ip')
-    ..aOM<$0.Timestamp>(6, 'startTime', subBuilder: $0.Timestamp.create)
-    ..aOM<$0.Timestamp>(7, 'endTime', subBuilder: $0.Timestamp.create)
-    ..aOM<$1.Duration>(8, 'latency', subBuilder: $1.Duration.create)
-    ..aInt64(9, 'megaCycles')
-    ..aOS(10, 'method')
-    ..aOS(11, 'resource')
-    ..aOS(12, 'httpVersion')
-    ..a<$core.int>(13, 'status', $pb.PbFieldType.O3)
-    ..aInt64(14, 'responseSize')
-    ..aOS(15, 'referrer')
-    ..aOS(16, 'userAgent')
-    ..aOS(17, 'urlMapEntry')
-    ..aOS(20, 'host')
-    ..a<$core.double>(21, 'cost', $pb.PbFieldType.OD)
-    ..aOS(22, 'taskQueueName')
-    ..aOS(23, 'taskName')
-    ..aOB(24, 'wasLoadingRequest')
-    ..aOM<$1.Duration>(25, 'pendingTime', subBuilder: $1.Duration.create)
-    ..a<$core.int>(26, 'instanceIndex', $pb.PbFieldType.O3)
-    ..aOB(27, 'finished')
-    ..aOS(28, 'instanceId')
-    ..pc<LogLine>(29, 'line', $pb.PbFieldType.PM, subBuilder: LogLine.create)
-    ..aOS(37, 'moduleId')
-    ..aOS(38, 'appEngineRelease')
-    ..aOS(39, 'traceId')
-    ..aOS(40, 'nickname')
-    ..pc<SourceReference>(41, 'sourceReference', $pb.PbFieldType.PM,
-        subBuilder: SourceReference.create)
-    ..aOB(42, 'first')
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'appId')
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'versionId')
+    ..aOS(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'requestId')
+    ..aOS(4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ip')
+    ..aOM<$0.Timestamp>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'startTime', subBuilder: $0.Timestamp.create)
+    ..aOM<$0.Timestamp>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'endTime', subBuilder: $0.Timestamp.create)
+    ..aOM<$1.Duration>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'latency', subBuilder: $1.Duration.create)
+    ..aInt64(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'megaCycles')
+    ..aOS(10, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'method')
+    ..aOS(11, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'resource')
+    ..aOS(12, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'httpVersion')
+    ..a<$core.int>(13, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'status', $pb.PbFieldType.O3)
+    ..aInt64(14, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'responseSize')
+    ..aOS(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'referrer')
+    ..aOS(16, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'userAgent')
+    ..aOS(17, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'urlMapEntry')
+    ..aOS(20, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'host')
+    ..a<$core.double>(21, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'cost', $pb.PbFieldType.OD)
+    ..aOS(22, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'taskQueueName')
+    ..aOS(23, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'taskName')
+    ..aOB(24, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'wasLoadingRequest')
+    ..aOM<$1.Duration>(25, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'pendingTime', subBuilder: $1.Duration.create)
+    ..a<$core.int>(26, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'instanceIndex', $pb.PbFieldType.O3)
+    ..aOB(27, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'finished')
+    ..aOS(28, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'instanceId')
+    ..pc<LogLine>(29, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'line', $pb.PbFieldType.PM, subBuilder: LogLine.create)
+    ..aOS(37, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'moduleId')
+    ..aOS(38, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'appEngineRelease')
+    ..aOS(39, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'traceId')
+    ..aOS(40, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'nickname')
+    ..pc<SourceReference>(41, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'sourceReference', $pb.PbFieldType.PM, subBuilder: SourceReference.create)
+    ..aOB(42, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'first')
+    ..aOB(43, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'traceSampled')
     ..hasRequiredFields = false;
 
   RequestLog._() : super();
-  factory RequestLog() => create();
+  factory RequestLog({
+    $core.String? appId,
+    $core.String? versionId,
+    $core.String? requestId,
+    $core.String? ip,
+    $0.Timestamp? startTime,
+    $0.Timestamp? endTime,
+    $1.Duration? latency,
+    $fixnum.Int64? megaCycles,
+    $core.String? method,
+    $core.String? resource,
+    $core.String? httpVersion,
+    $core.int? status,
+    $fixnum.Int64? responseSize,
+    $core.String? referrer,
+    $core.String? userAgent,
+    $core.String? urlMapEntry,
+    $core.String? host,
+    $core.double? cost,
+    $core.String? taskQueueName,
+    $core.String? taskName,
+    $core.bool? wasLoadingRequest,
+    $1.Duration? pendingTime,
+    $core.int? instanceIndex,
+    $core.bool? finished,
+    $core.String? instanceId,
+    $core.Iterable<LogLine>? line,
+    $core.String? moduleId,
+    $core.String? appEngineRelease,
+    $core.String? traceId,
+    $core.String? nickname,
+    $core.Iterable<SourceReference>? sourceReference,
+    $core.bool? first,
+    $core.bool? traceSampled,
+  }) {
+    final _result = create();
+    if (appId != null) {
+      _result.appId = appId;
+    }
+    if (versionId != null) {
+      _result.versionId = versionId;
+    }
+    if (requestId != null) {
+      _result.requestId = requestId;
+    }
+    if (ip != null) {
+      _result.ip = ip;
+    }
+    if (startTime != null) {
+      _result.startTime = startTime;
+    }
+    if (endTime != null) {
+      _result.endTime = endTime;
+    }
+    if (latency != null) {
+      _result.latency = latency;
+    }
+    if (megaCycles != null) {
+      _result.megaCycles = megaCycles;
+    }
+    if (method != null) {
+      _result.method = method;
+    }
+    if (resource != null) {
+      _result.resource = resource;
+    }
+    if (httpVersion != null) {
+      _result.httpVersion = httpVersion;
+    }
+    if (status != null) {
+      _result.status = status;
+    }
+    if (responseSize != null) {
+      _result.responseSize = responseSize;
+    }
+    if (referrer != null) {
+      _result.referrer = referrer;
+    }
+    if (userAgent != null) {
+      _result.userAgent = userAgent;
+    }
+    if (urlMapEntry != null) {
+      _result.urlMapEntry = urlMapEntry;
+    }
+    if (host != null) {
+      _result.host = host;
+    }
+    if (cost != null) {
+      _result.cost = cost;
+    }
+    if (taskQueueName != null) {
+      _result.taskQueueName = taskQueueName;
+    }
+    if (taskName != null) {
+      _result.taskName = taskName;
+    }
+    if (wasLoadingRequest != null) {
+      _result.wasLoadingRequest = wasLoadingRequest;
+    }
+    if (pendingTime != null) {
+      _result.pendingTime = pendingTime;
+    }
+    if (instanceIndex != null) {
+      _result.instanceIndex = instanceIndex;
+    }
+    if (finished != null) {
+      _result.finished = finished;
+    }
+    if (instanceId != null) {
+      _result.instanceId = instanceId;
+    }
+    if (line != null) {
+      _result.line.addAll(line);
+    }
+    if (moduleId != null) {
+      _result.moduleId = moduleId;
+    }
+    if (appEngineRelease != null) {
+      _result.appEngineRelease = appEngineRelease;
+    }
+    if (traceId != null) {
+      _result.traceId = traceId;
+    }
+    if (nickname != null) {
+      _result.nickname = nickname;
+    }
+    if (sourceReference != null) {
+      _result.sourceReference.addAll(sourceReference);
+    }
+    if (first != null) {
+      _result.first = first;
+    }
+    if (traceSampled != null) {
+      _result.traceSampled = traceSampled;
+    }
+    return _result;
+  }
   factory RequestLog.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory RequestLog.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   RequestLog clone() => RequestLog()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   RequestLog copyWith(void Function(RequestLog) updates) =>
-      super.copyWith((message) => updates(message as RequestLog));
+      super.copyWith((message) => updates(message as RequestLog))
+          as RequestLog; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static RequestLog create() => RequestLog._();
@@ -284,7 +557,7 @@ class RequestLog extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static RequestLog getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<RequestLog>(create);
-  static RequestLog _defaultInstance;
+  static RequestLog? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get appId => $_getSZ(0);
@@ -659,4 +932,16 @@ class RequestLog extends $pb.GeneratedMessage {
   $core.bool hasFirst() => $_has(31);
   @$pb.TagNumber(42)
   void clearFirst() => clearField(42);
+
+  @$pb.TagNumber(43)
+  $core.bool get traceSampled => $_getBF(32);
+  @$pb.TagNumber(43)
+  set traceSampled($core.bool v) {
+    $_setBool(32, v);
+  }
+
+  @$pb.TagNumber(43)
+  $core.bool hasTraceSampled() => $_has(32);
+  @$pb.TagNumber(43)
+  void clearTraceSampled() => clearField(43);
 }

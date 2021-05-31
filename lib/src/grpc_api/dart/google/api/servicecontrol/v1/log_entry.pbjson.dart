@@ -2,9 +2,14 @@
 //  Generated code. Do not modify.
 //  source: google/api/servicecontrol/v1/log_entry.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
+import 'dart:core' as $core;
+import 'dart:convert' as $convert;
+import 'dart:typed_data' as $typed_data;
+
+@$core.Deprecated('Use logEntryDescriptor instead')
 const LogEntry$json = {
   '1': 'LogEntry',
   '2': [
@@ -25,6 +30,15 @@ const LogEntry$json = {
       '6': '.google.logging.type.LogSeverity',
       '10': 'severity'
     },
+    {
+      '1': 'http_request',
+      '3': 14,
+      '4': 1,
+      '5': 11,
+      '6': '.google.api.servicecontrol.v1.HttpRequest',
+      '10': 'httpRequest'
+    },
+    {'1': 'trace', '3': 15, '4': 1, '5': 9, '10': 'trace'},
     {'1': 'insert_id', '3': 4, '4': 1, '5': 9, '10': 'insertId'},
     {
       '1': 'labels',
@@ -53,6 +67,22 @@ const LogEntry$json = {
       '9': 0,
       '10': 'structPayload'
     },
+    {
+      '1': 'operation',
+      '3': 16,
+      '4': 1,
+      '5': 11,
+      '6': '.google.api.servicecontrol.v1.LogEntryOperation',
+      '10': 'operation'
+    },
+    {
+      '1': 'source_location',
+      '3': 17,
+      '4': 1,
+      '5': 11,
+      '6': '.google.api.servicecontrol.v1.LogEntrySourceLocation',
+      '10': 'sourceLocation'
+    },
   ],
   '3': [LogEntry_LabelsEntry$json],
   '8': [
@@ -60,6 +90,7 @@ const LogEntry$json = {
   ],
 };
 
+@$core.Deprecated('Use logEntryDescriptor instead')
 const LogEntry_LabelsEntry$json = {
   '1': 'LabelsEntry',
   '2': [
@@ -68,3 +99,35 @@ const LogEntry_LabelsEntry$json = {
   ],
   '7': {'7': true},
 };
+
+/// Descriptor for `LogEntry`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List logEntryDescriptor = $convert.base64Decode(
+    'CghMb2dFbnRyeRISCgRuYW1lGAogASgJUgRuYW1lEjgKCXRpbWVzdGFtcBgLIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSCXRpbWVzdGFtcBI8CghzZXZlcml0eRgMIAEoDjIgLmdvb2dsZS5sb2dnaW5nLnR5cGUuTG9nU2V2ZXJpdHlSCHNldmVyaXR5EkwKDGh0dHBfcmVxdWVzdBgOIAEoCzIpLmdvb2dsZS5hcGkuc2VydmljZWNvbnRyb2wudjEuSHR0cFJlcXVlc3RSC2h0dHBSZXF1ZXN0EhQKBXRyYWNlGA8gASgJUgV0cmFjZRIbCglpbnNlcnRfaWQYBCABKAlSCGluc2VydElkEkoKBmxhYmVscxgNIAMoCzIyLmdvb2dsZS5hcGkuc2VydmljZWNvbnRyb2wudjEuTG9nRW50cnkuTGFiZWxzRW50cnlSBmxhYmVscxI7Cg1wcm90b19wYXlsb2FkGAIgASgLMhQuZ29vZ2xlLnByb3RvYnVmLkFueUgAUgxwcm90b1BheWxvYWQSIwoMdGV4dF9wYXlsb2FkGAMgASgJSABSC3RleHRQYXlsb2FkEkAKDnN0cnVjdF9wYXlsb2FkGAYgASgLMhcuZ29vZ2xlLnByb3RvYnVmLlN0cnVjdEgAUg1zdHJ1Y3RQYXlsb2FkEk0KCW9wZXJhdGlvbhgQIAEoCzIvLmdvb2dsZS5hcGkuc2VydmljZWNvbnRyb2wudjEuTG9nRW50cnlPcGVyYXRpb25SCW9wZXJhdGlvbhJdCg9zb3VyY2VfbG9jYXRpb24YESABKAsyNC5nb29nbGUuYXBpLnNlcnZpY2Vjb250cm9sLnYxLkxvZ0VudHJ5U291cmNlTG9jYXRpb25SDnNvdXJjZUxvY2F0aW9uGjkKC0xhYmVsc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EhQKBXZhbHVlGAIgASgJUgV2YWx1ZToCOAFCCQoHcGF5bG9hZA==');
+@$core.Deprecated('Use logEntryOperationDescriptor instead')
+const LogEntryOperation$json = {
+  '1': 'LogEntryOperation',
+  '2': [
+    {'1': 'id', '3': 1, '4': 1, '5': 9, '10': 'id'},
+    {'1': 'producer', '3': 2, '4': 1, '5': 9, '10': 'producer'},
+    {'1': 'first', '3': 3, '4': 1, '5': 8, '10': 'first'},
+    {'1': 'last', '3': 4, '4': 1, '5': 8, '10': 'last'},
+  ],
+};
+
+/// Descriptor for `LogEntryOperation`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List logEntryOperationDescriptor = $convert.base64Decode(
+    'ChFMb2dFbnRyeU9wZXJhdGlvbhIOCgJpZBgBIAEoCVICaWQSGgoIcHJvZHVjZXIYAiABKAlSCHByb2R1Y2VyEhQKBWZpcnN0GAMgASgIUgVmaXJzdBISCgRsYXN0GAQgASgIUgRsYXN0');
+@$core.Deprecated('Use logEntrySourceLocationDescriptor instead')
+const LogEntrySourceLocation$json = {
+  '1': 'LogEntrySourceLocation',
+  '2': [
+    {'1': 'file', '3': 1, '4': 1, '5': 9, '10': 'file'},
+    {'1': 'line', '3': 2, '4': 1, '5': 3, '10': 'line'},
+    {'1': 'function', '3': 3, '4': 1, '5': 9, '10': 'function'},
+  ],
+};
+
+/// Descriptor for `LogEntrySourceLocation`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List logEntrySourceLocationDescriptor =
+    $convert.base64Decode(
+        'ChZMb2dFbnRyeVNvdXJjZUxvY2F0aW9uEhIKBGZpbGUYASABKAlSBGZpbGUSEgoEbGluZRgCIAEoA1IEbGluZRIaCghmdW5jdGlvbhgDIAEoCVIIZnVuY3Rpb24=');

@@ -2,8 +2,8 @@
 //  Generated code. Do not modify.
 //  source: google/appengine/v1/instance.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:core' as $core;
 
@@ -16,41 +16,184 @@ import 'instance.pbenum.dart';
 
 export 'instance.pbenum.dart';
 
-class Instance extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Instance',
-      package: const $pb.PackageName('google.appengine.v1'),
+class Instance_Liveness extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'Instance.Liveness',
+      package: const $pb.PackageName(
+          $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.appengine.v1'),
       createEmptyInstance: create)
-    ..aOS(1, 'name')
-    ..aOS(2, 'id')
-    ..aOS(3, 'appEngineRelease')
-    ..e<Instance_Availability>(4, 'availability', $pb.PbFieldType.OE,
+    ..hasRequiredFields = false;
+
+  Instance_Liveness._() : super();
+  factory Instance_Liveness() => create();
+  factory Instance_Liveness.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Instance_Liveness.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  Instance_Liveness clone() => Instance_Liveness()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  Instance_Liveness copyWith(void Function(Instance_Liveness) updates) =>
+      super.copyWith((message) => updates(message as Instance_Liveness))
+          as Instance_Liveness; // ignore: deprecated_member_use
+  $pb.BuilderInfo get info_ => _i;
+  @$core.pragma('dart2js:noInline')
+  static Instance_Liveness create() => Instance_Liveness._();
+  Instance_Liveness createEmptyInstance() => create();
+  static $pb.PbList<Instance_Liveness> createRepeated() =>
+      $pb.PbList<Instance_Liveness>();
+  @$core.pragma('dart2js:noInline')
+  static Instance_Liveness getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<Instance_Liveness>(create);
+  static Instance_Liveness? _defaultInstance;
+}
+
+class Instance extends $pb.GeneratedMessage {
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'Instance',
+      package: const $pb.PackageName($core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'google.appengine.v1'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'name')
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'id')
+    ..aOS(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'appEngineRelease')
+    ..e<Instance_Availability>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'availability',
+        $pb.PbFieldType.OE,
         defaultOrMaker: Instance_Availability.UNSPECIFIED,
         valueOf: Instance_Availability.valueOf,
         enumValues: Instance_Availability.values)
-    ..aOS(5, 'vmName')
-    ..aOS(6, 'vmZoneName')
-    ..aOS(7, 'vmId')
-    ..aOM<$0.Timestamp>(8, 'startTime', subBuilder: $0.Timestamp.create)
-    ..a<$core.int>(9, 'requests', $pb.PbFieldType.O3)
-    ..a<$core.int>(10, 'errors', $pb.PbFieldType.O3)
-    ..a<$core.double>(11, 'qps', $pb.PbFieldType.OF)
-    ..a<$core.int>(12, 'averageLatency', $pb.PbFieldType.O3)
-    ..aInt64(13, 'memoryUsage')
-    ..aOS(14, 'vmStatus')
-    ..aOB(15, 'vmDebugEnabled')
+    ..aOS(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'vmName')
+    ..aOS(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'vmZoneName')
+    ..aOS(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'vmId')
+    ..aOM<$0.Timestamp>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'startTime', subBuilder: $0.Timestamp.create)
+    ..a<$core.int>(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'requests', $pb.PbFieldType.O3)
+    ..a<$core.int>(10, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'errors', $pb.PbFieldType.O3)
+    ..a<$core.double>(11, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'qps', $pb.PbFieldType.OF)
+    ..a<$core.int>(12, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'averageLatency', $pb.PbFieldType.O3)
+    ..aInt64(13, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'memoryUsage')
+    ..aOS(14, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'vmStatus')
+    ..aOB(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'vmDebugEnabled')
+    ..aOS(16, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'vmIp')
+    ..e<Instance_Liveness_LivenessState>(17, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'vmLiveness', $pb.PbFieldType.OE, defaultOrMaker: Instance_Liveness_LivenessState.LIVENESS_STATE_UNSPECIFIED, valueOf: Instance_Liveness_LivenessState.valueOf, enumValues: Instance_Liveness_LivenessState.values)
     ..hasRequiredFields = false;
 
   Instance._() : super();
-  factory Instance() => create();
+  factory Instance({
+    $core.String? name,
+    $core.String? id,
+    $core.String? appEngineRelease,
+    Instance_Availability? availability,
+    $core.String? vmName,
+    $core.String? vmZoneName,
+    $core.String? vmId,
+    $0.Timestamp? startTime,
+    $core.int? requests,
+    $core.int? errors,
+    $core.double? qps,
+    $core.int? averageLatency,
+    $fixnum.Int64? memoryUsage,
+    $core.String? vmStatus,
+    $core.bool? vmDebugEnabled,
+    $core.String? vmIp,
+    Instance_Liveness_LivenessState? vmLiveness,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    if (id != null) {
+      _result.id = id;
+    }
+    if (appEngineRelease != null) {
+      _result.appEngineRelease = appEngineRelease;
+    }
+    if (availability != null) {
+      _result.availability = availability;
+    }
+    if (vmName != null) {
+      _result.vmName = vmName;
+    }
+    if (vmZoneName != null) {
+      _result.vmZoneName = vmZoneName;
+    }
+    if (vmId != null) {
+      _result.vmId = vmId;
+    }
+    if (startTime != null) {
+      _result.startTime = startTime;
+    }
+    if (requests != null) {
+      _result.requests = requests;
+    }
+    if (errors != null) {
+      _result.errors = errors;
+    }
+    if (qps != null) {
+      _result.qps = qps;
+    }
+    if (averageLatency != null) {
+      _result.averageLatency = averageLatency;
+    }
+    if (memoryUsage != null) {
+      _result.memoryUsage = memoryUsage;
+    }
+    if (vmStatus != null) {
+      _result.vmStatus = vmStatus;
+    }
+    if (vmDebugEnabled != null) {
+      _result.vmDebugEnabled = vmDebugEnabled;
+    }
+    if (vmIp != null) {
+      _result.vmIp = vmIp;
+    }
+    if (vmLiveness != null) {
+      _result.vmLiveness = vmLiveness;
+    }
+    return _result;
+  }
   factory Instance.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Instance.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   Instance clone() => Instance()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   Instance copyWith(void Function(Instance) updates) =>
-      super.copyWith((message) => updates(message as Instance));
+      super.copyWith((message) => updates(message as Instance))
+          as Instance; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static Instance create() => Instance._();
@@ -59,7 +202,7 @@ class Instance extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static Instance getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Instance>(create);
-  static Instance _defaultInstance;
+  static Instance? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
@@ -242,4 +385,28 @@ class Instance extends $pb.GeneratedMessage {
   $core.bool hasVmDebugEnabled() => $_has(14);
   @$pb.TagNumber(15)
   void clearVmDebugEnabled() => clearField(15);
+
+  @$pb.TagNumber(16)
+  $core.String get vmIp => $_getSZ(15);
+  @$pb.TagNumber(16)
+  set vmIp($core.String v) {
+    $_setString(15, v);
+  }
+
+  @$pb.TagNumber(16)
+  $core.bool hasVmIp() => $_has(15);
+  @$pb.TagNumber(16)
+  void clearVmIp() => clearField(16);
+
+  @$pb.TagNumber(17)
+  Instance_Liveness_LivenessState get vmLiveness => $_getN(16);
+  @$pb.TagNumber(17)
+  set vmLiveness(Instance_Liveness_LivenessState v) {
+    setField(17, v);
+  }
+
+  @$pb.TagNumber(17)
+  $core.bool hasVmLiveness() => $_has(16);
+  @$pb.TagNumber(17)
+  void clearVmLiveness() => clearField(17);
 }
