@@ -53,13 +53,13 @@ import 'package:gcloud/db.dart' as db;
 @db.Kind()
 class Person extends db.Model {
   @db.StringProperty()
-  String name;
+  String? name;
 
   @db.IntProperty()
-  int age;
+  int? age;
 
   @db.ModelKeyProperty(propertyName: 'mangledWife')
-  db.Key wife;
+  db.Key? wife;
 
   operator ==(Object other) => sameAs(other);
 
@@ -75,13 +75,14 @@ class Person extends db.Model {
   String toString() => 'Person(id: $id, name: $name, age: $age)';
 }
 
-bool areStringListsEqual(List<String> a, List<String> b) {
+bool areStringListsEqual(List<String>? a, List<String>? b) {
   if (a == null) {
     if (b == null) return true;
     return false;
   }
+  if (b == null) return false;
 
-  if (a.length != b?.length) return false;
+  if (a.length != b.length) return false;
 
   for (int i = 0; i < a.length; i++) {
     if (a[i] != b[i]) return false;
@@ -93,7 +94,7 @@ bool areStringListsEqual(List<String> a, List<String> b) {
 @db.Kind()
 class User extends Person {
   @db.StringProperty()
-  String nickname;
+  String? nickname;
 
   @db.StringListProperty(propertyName: 'language')
   List<String> languages = const [];
@@ -107,8 +108,8 @@ class User extends Person {
     }
 
     User user = other;
-    return areStringListsEqual(languages, user?.languages) &&
-        areStringListsEqual(hobbies, user?.hobbies);
+    return areStringListsEqual(languages, user.languages) &&
+        areStringListsEqual(hobbies, user.hobbies);
   }
 
   String toString() => 'User(${super.toString()}, '
@@ -120,10 +121,10 @@ class User extends Person {
 @db.Kind()
 class ExpandoPerson extends db.ExpandoModel {
   @db.StringProperty()
-  String name;
+  String? name;
 
   @db.StringProperty(propertyName: 'NN')
-  String nickname;
+  String? nickname;
 
   operator ==(Object other) {
     if (other is ExpandoPerson && id == other.id && name == other.name) {
@@ -146,7 +147,7 @@ Future sleep(Duration duration) => Future.delayed(duration);
 runTests(db.DatastoreDB store, String namespace) {
   var partition = store.newPartition(namespace);
 
-  void compareModels(List<db.Model> expectedModels, List<db.Model> models,
+  void compareModels(List<db.Model> expectedModels, List<db.Model?> models,
       {bool anyOrder = false}) {
     expect(models.length, equals(expectedModels.length));
     if (anyOrder) {
@@ -178,7 +179,7 @@ runTests(db.DatastoreDB store, String namespace) {
         return commitTransaction.commit();
       }).then((_) {
         return store.withTransaction((db.Transaction deleteTransaction) {
-          return deleteTransaction.lookup(keys).then((List<db.Model> models) {
+          return deleteTransaction.lookup(keys).then((List<db.Model?> models) {
             compareModels(objects, models);
             deleteTransaction.queueMutations(deletes: keys);
             return deleteTransaction.commit();
@@ -187,12 +188,12 @@ runTests(db.DatastoreDB store, String namespace) {
       });
     } else {
       return store.commit(inserts: objects).then(expectAsync1((_) {
-        return store.lookup(keys).then(expectAsync1((List<db.Model> models) {
+        return store.lookup(keys).then(expectAsync1((List<db.Model?> models) {
           compareModels(objects, models);
           return store.commit(deletes: keys).then(expectAsync1((_) {
             return store
                 .lookup(keys)
-                .then(expectAsync1((List<db.Model> models) {
+                .then(expectAsync1((List<db.Model?> models) {
               for (var i = 0; i < models.length; i++) {
                 expect(models[i], isNull);
               }
@@ -206,9 +207,7 @@ runTests(db.DatastoreDB store, String namespace) {
   group('key', () {
     test('equal_and_hashcode', () {
       var k1 = store.emptyKey.append(User, id: 10).append(Person, id: 12);
-      var k2 = store
-          .newPartition(null)
-          .emptyKey
+      var k2 = store.defaultPartition.emptyKey
           .append(User, id: 10)
           .append(Person, id: 12);
       expect(k1, equals(k2));
@@ -368,7 +367,7 @@ runTests(db.DatastoreDB store, String namespace) {
           // because an id doesn't need to be globally unique, only under
           // entities with the same parent.
 
-          return store.lookup(keys).then(expectAsync1((List<db.Model> models) {
+          return store.lookup(keys).then(expectAsync1((List<db.Model?> models) {
             // Since the id/parentKey fields are set after commit and a lookup
             // returns new model instances, we can do full model comparison
             // here.
@@ -425,26 +424,26 @@ runTests(db.DatastoreDB store, String namespace) {
 
       var usersSortedNameDescNicknameAsc = List<User>.from(users);
       usersSortedNameDescNicknameAsc.sort((User a, User b) {
-        var result = b.name.compareTo(a.name);
-        if (result == 0) return a.nickname.compareTo(b.nickname);
+        var result = b.name!.compareTo(a.name!);
+        if (result == 0) return a.nickname!.compareTo(b.nickname!);
         return result;
       });
 
       var usersSortedNameDescNicknameDesc = List<User>.from(users);
       usersSortedNameDescNicknameDesc.sort((User a, User b) {
-        var result = b.name.compareTo(a.name);
-        if (result == 0) return b.nickname.compareTo(a.nickname);
+        var result = b.name!.compareTo(a.name!);
+        if (result == 0) return b.nickname!.compareTo(a.nickname!);
         return result;
       });
 
       var usersSortedAndFilteredNameDescNicknameAsc =
           usersSortedNameDescNicknameAsc.where((User u) {
-        return LOWER_BOUND.compareTo(u.name) <= 0;
+        return LOWER_BOUND.compareTo(u.name!) <= 0;
       }).toList();
 
       var usersSortedAndFilteredNameDescNicknameDesc =
           usersSortedNameDescNicknameDesc.where((User u) {
-        return LOWER_BOUND.compareTo(u.name) <= 0;
+        return LOWER_BOUND.compareTo(u.name!) <= 0;
       }).toList();
 
       var fooUsers =
@@ -564,7 +563,7 @@ runTests(db.DatastoreDB store, String namespace) {
 
         // Filter equals
         () async {
-          var wifeKey = root.append(User, id: usersWithWife.first.wife.id);
+          var wifeKey = root.append(User, id: usersWithWife.first.wife!.id);
           var query = store.query<User>(partition: partition)
             ..filter('wife =', wifeKey)
             ..run();
@@ -630,14 +629,14 @@ runTests(db.DatastoreDB store, String namespace) {
             store, expandoPersonsKeys, partition),
 
         // Make sure queries don't return results
-        () => store.lookup(allKeys).then((List<db.Model> models) {
+        () => store.lookup(allKeys).then((List<db.Model?> models) {
               expect(models.length, equals(allKeys.length));
               for (var model in models) {
                 expect(model, isNull);
               }
             }),
       ];
-      return Future.forEach(tests, (f) => f());
+      return Future.forEach(tests, (dynamic f) => f());
     }, timeout: Timeout(Duration(minutes: 5)));
   });
 }
@@ -681,7 +680,7 @@ Future waitUntilEntitiesHelper<T extends db.Model>(db.DatastoreDB mdb,
     List<T> models = await mdb.query<T>(partition: partition).run().toList();
     for (var key in keys) {
       for (var model in models) {
-        if (key == model?.key) found = true;
+        if (key == model.key) found = true;
       }
     }
   } while ((positive && !found) || (!positive && found));

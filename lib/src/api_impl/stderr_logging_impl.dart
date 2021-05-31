@@ -16,14 +16,14 @@ class StderrRequestLoggingImpl extends LoggingImpl {
   final DateTime _startTimestamp = DateTime.now().toUtc();
   final List<_LogLine> _gaeLogLines = <_LogLine>[];
 
-  LogLevel _currentLogLevel;
+  LogLevel _currentLogLevel = LogLevel.DEBUG;
 
   StderrRequestLoggingImpl(this._httpMethod, this._httpResource) {
     _resetState();
   }
 
   @override
-  void log(LogLevel level, String message, {DateTime timestamp}) {
+  void log(LogLevel level, String message, {DateTime? timestamp}) {
     if (level.level > _currentLogLevel.level) {
       _currentLogLevel = level;
     }
@@ -46,7 +46,7 @@ class StderrRequestLoggingImpl extends LoggingImpl {
         responseSize: responseSize);
   }
 
-  void _enqueue({bool finish = false, int responseStatus, int responseSize}) {
+  void _enqueue({bool finish = false, int? responseStatus, int? responseSize}) {
     final now = DateTime.now().toUtc();
     final buffer = StringBuffer();
 
@@ -72,9 +72,9 @@ class StderrRequestLoggingImpl extends LoggingImpl {
   }
 }
 
-class StderrBackgroundLoggingImpl extends Logging {
+class StderrBackgroundLoggingImpl extends LoggingBase {
   @override
-  void log(LogLevel level, String message, {DateTime timestamp}) {
+  void log(LogLevel level, String message, {DateTime? timestamp}) {
     final logLine =
         _LogLine(level, message, timestamp ?? DateTime.now().toUtc());
     io.stderr.writeln(logLine.format(null));
@@ -91,7 +91,7 @@ class _LogLine {
 
   _LogLine(this.level, this.message, this.timestamp);
 
-  String format(DateTime start) {
+  String format(DateTime? start) {
     String time;
     if (start != null) {
       final ms = timestamp.difference(start).inMilliseconds.toString();

@@ -9,6 +9,8 @@ import 'dart:io';
 
 import 'package:googleapis_auth/auth_io.dart' as auth;
 import 'package:grpc/grpc.dart' as grpc;
+import 'package:appengine/src/grpc_api_impl/datastore_impl.dart'
+    as grpc_datastore_impl;
 
 // Environment variables for specifying the cloud project to use and the
 // location of the service account key for that project.
@@ -47,27 +49,36 @@ Future<dynamic> withServiceAccount(
 }
 
 Future<dynamic> withAuthenticator(
-    List<String> scopes,
-    Future callback(
-        String project, grpc.HttpBasedAuthenticator authenticator)) async {
+  List<String> scopes,
+  Future callback(String project, grpc.HttpBasedAuthenticator authenticator),
+) async {
   var project = Platform.environment[PROJECT_ENV];
   var serviceKeyLocation = Platform.environment[SERVICE_KEY_LOCATION_ENV];
 
-  if (!onBot() && (project == null || serviceKeyLocation == null)) {
+  if (!onBot() && project == null) {
     throw Exception(
         'Environment variables $PROJECT_ENV and $SERVICE_KEY_LOCATION_ENV '
         'required when not running on the package bot');
   }
 
+  // Use ADC
+  if (!onBot() && project != null && serviceKeyLocation == null) {
+    final authenticator = await grpc.applicationDefaultCredentialsAuthenticator(
+      grpc_datastore_impl.OAuth2Scopes,
+    );
+    return callback(project, authenticator);
+  }
+
   project ??= DEFAULT_PROJECT;
   serviceKeyLocation ??= DEFAULT_KEY_LOCATION;
 
-  final keyJson = await _serviceKeyJson(serviceKeyLocation);
+  final keyJson =
+      await (_serviceKeyJson(serviceKeyLocation) as FutureOr<String>);
   final authenticator = grpc.ServiceAccountAuthenticator(keyJson, scopes);
   return callback(project, authenticator);
 }
 
-Future<String> _serviceKeyJson(String serviceKeyLocation) async {
+Future<String?> _serviceKeyJson(String serviceKeyLocation) async {
   if (!serviceKeyLocation.startsWith('gs://')) {
     return File(serviceKeyLocation).readAsString();
   } else {

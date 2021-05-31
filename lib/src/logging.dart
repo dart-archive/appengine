@@ -25,25 +25,11 @@ class LogLevel {
 }
 
 abstract class Logging {
-  void critical(String string, {DateTime timestamp}) {
-    log(LogLevel.CRITICAL, string, timestamp: timestamp);
-  }
-
-  void error(String string, {DateTime timestamp}) {
-    log(LogLevel.ERROR, string, timestamp: timestamp);
-  }
-
-  void warning(String string, {DateTime timestamp}) {
-    log(LogLevel.WARNING, string, timestamp: timestamp);
-  }
-
-  void info(String string, {DateTime timestamp}) {
-    log(LogLevel.INFO, string, timestamp: timestamp);
-  }
-
-  void debug(String string, {DateTime timestamp}) {
-    log(LogLevel.DEBUG, string, timestamp: timestamp);
-  }
+  void critical(String string, {DateTime timestamp});
+  void error(String string, {DateTime timestamp});
+  void warning(String string, {DateTime timestamp});
+  void info(String string, {DateTime timestamp});
+  void debug(String string, {DateTime timestamp});
 
   /// Report an error, may print the error to log or report it to stackdriver
   /// error reporting if [stackTrace] is given and running on appengine, not
@@ -56,9 +42,7 @@ abstract class Logging {
     Object error,
     StackTrace stackTrace, {
     DateTime timestamp,
-  }) {
-    log(level, 'Error: $error\n$stackTrace', timestamp: timestamp);
-  }
+  });
 
   void log(
     LogLevel level,
@@ -83,4 +67,4 @@ void registerLoggingService(Logging service) {
 ///
 /// Request handlers will be run inside a service scope which contains the
 /// modules service.
-Logging get loggingService => ss.lookup(#appengine.logging);
+Logging get loggingService => ss.lookup(#appengine.logging) as Logging;

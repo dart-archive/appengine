@@ -26,7 +26,7 @@ class AppEngineHttpServer {
   final Completer _shutdownCompleter = Completer();
   int _pendingRequests = 0;
 
-  HttpServer _httpServer;
+  HttpServer? _httpServer;
 
   AppEngineHttpServer(this._contextRegistry,
       {String hostname = '0.0.0.0', int port = 8080, bool shared = false})
@@ -38,7 +38,7 @@ class AppEngineHttpServer {
 
   void run(
     applicationHandler(HttpRequest request, ClientContext context), {
-    void onAcceptingConnections(InternetAddress address, int port),
+    void onAcceptingConnections(InternetAddress address, int port)?,
   }) {
     final serviceHandlers = {
       '/_ah/start': _start,
@@ -55,7 +55,7 @@ class AppEngineHttpServer {
 
       server.listen((HttpRequest request) {
         // Default handling is sending the request to the application.
-        var handler = applicationHandler;
+        dynamic Function(HttpRequest, ClientContext)? handler = applicationHandler;
 
         // Check if the request path is one of the service handlers.
         final String path = request.uri.path;
@@ -80,7 +80,7 @@ class AppEngineHttpServer {
           _checkShutdown();
         });
 
-        handler(request, context);
+        handler!(request, context);
       });
     });
   }
@@ -100,7 +100,7 @@ class AppEngineHttpServer {
   void _stop(HttpRequest request, _) {
     request.drain().then((_) {
       if (_httpServer != null) {
-        _httpServer.close().then((_) {
+        _httpServer!.close().then((_) {
           _httpServer = null;
           _sendResponse(request.response, HttpStatus.ok, 'ok');
         });

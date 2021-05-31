@@ -22,7 +22,7 @@ abstract class LoggerFactory {
       String userAgent,
       String host,
       String ip,
-      String traceId,
+      String? traceId,
       String referrer);
   Logging newBackgroundLogger();
 }
@@ -43,7 +43,7 @@ class ContextRegistry {
   }
 
   ClientContext add(HttpRequest request) {
-    String traceId;
+    String? traceId;
     // See https://cloud.google.com/trace/docs/support
     final traceHeader = _headerOrEmptyString(
       request.headers,
@@ -66,7 +66,7 @@ class ContextRegistry {
     return context;
   }
 
-  ClientContext lookup(HttpRequest request) {
+  ClientContext? lookup(HttpRequest request) {
     return _request2context[request];
   }
 
@@ -77,12 +77,12 @@ class ContextRegistry {
 
   Services newBackgroundServices() => _getServices(null, null);
 
-  Services _getServices(HttpRequest request, String traceId) {
+  Services _getServices(HttpRequest? request, String? traceId) {
     Logging loggingService;
     if (request != null) {
       final uri = request.requestedUri;
       final resource = uri.hasQuery ? '${uri.path}?${uri.query}' : uri.path;
-      final List<String> forwardedFor = request.headers['x-forwarded-for'];
+      final List<String>? forwardedFor = request.headers['x-forwarded-for'];
 
       String ip;
       if (forwardedFor != null && forwardedFor.isNotEmpty) {
@@ -93,7 +93,7 @@ class ContextRegistry {
         // then use the first value.
         ip = forwardedFor.join(',').split(',').first.trim();
       } else {
-        ip = request.connectionInfo.remoteAddress.host;
+        ip = request.connectionInfo!.remoteAddress.host;
       }
 
       loggingService = _loggingFactory.newRequestSpecificLogger(
@@ -123,7 +123,7 @@ class _ClientContextImpl implements ClientContext {
   final AppEngineContext applicationContext;
 
   @override
-  final String traceId;
+  final String? traceId;
 
   @override
   bool get isDevelopmentEnvironment =>

@@ -29,7 +29,7 @@ abstract class ClientContext {
   /// be `null`.
   ///
   /// See https://cloud.google.com/trace/docs/support for details.
-  String get traceId;
+  String? get traceId;
 }
 
 class Services {

@@ -6,23 +6,29 @@ import 'dart:async';
 
 import 'package:test/test.dart';
 
+import 'package:appengine/src/logging_impl.dart' show LoggingBase;
 import 'package:appengine/appengine.dart';
 import 'package:gcloud/service_scope.dart';
 import 'package:logging/logging.dart';
 
-class LoggingMock extends Logging {
-  Function _logFunctionMock;
-  Function _reportErrorFunctionMock;
+class LoggingMock extends LoggingBase {
+  late Function _logFunctionMock;
+  late Function _reportErrorFunctionMock;
 
   LoggingMock();
 
-  void log(LogLevel level, String message, {DateTime timestamp}) {
+  void log(LogLevel level, String message, {DateTime? timestamp}) {
     _logFunctionMock(level, message, timestamp);
   }
 
   void reportError(LogLevel level, Object error, StackTrace stackTrace,
-      {DateTime timestamp}) {
-    _reportErrorFunctionMock(level, error, stackTrace, timestamp);
+      {DateTime? timestamp}) {
+    _reportErrorFunctionMock(
+      level,
+      error,
+      stackTrace,
+      timestamp ?? DateTime.now(),
+    );
   }
 
   void expectReportError(

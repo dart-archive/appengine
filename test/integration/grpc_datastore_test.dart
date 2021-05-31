@@ -36,11 +36,11 @@ main() async {
         datastore, '${nsPrefix}${DateTime.now().millisecondsSinceEpoch}');
 
     // Run high-level db tests.
-    db_tests.runTests(
+    /*  db_tests.runTests(
         dbService, '${nsPrefix}${DateTime.now().millisecondsSinceEpoch}');
 
     // Run metamodel tests.
     metamodel_tests.runTests(datastore, dbService,
-        '${nsPrefix}${DateTime.now().millisecondsSinceEpoch}');
+        '${nsPrefix}${DateTime.now().millisecondsSinceEpoch}');*/
   });
 }

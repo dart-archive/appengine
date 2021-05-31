@@ -73,24 +73,26 @@ class ServiceAccountTokenProvider implements AccessTokenProvider {
 /// callers.
 class LimitOutstandingRequests implements AccessTokenProvider {
   final AccessTokenProvider _provider;
-  Completer _completer;
+  Completer? _completer;
 
   LimitOutstandingRequests(this._provider);
 
   @override
   Future<auth.AccessToken> obtainAccessToken() {
-    if (_completer != null) return _completer.future;
+    if (_completer != null) {
+      return _completer!.future.then((value) => value as auth.AccessToken);
+    }
 
     _completer = Completer<auth.AccessToken>();
     _provider.obtainAccessToken().then((auth.AccessToken token) {
-      _completer.complete(token);
+      _completer!.complete(token);
       _completer = null;
     }, onError: (error, stack) {
-      _completer.completeError(error, stack);
+      _completer!.completeError(error, stack);
       _completer = null;
     });
 
-    return _completer.future;
+    return _completer!.future.then((value) => value as auth.AccessToken);
   }
 
   @override
