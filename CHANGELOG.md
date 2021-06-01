@@ -1,4 +1,9 @@
+## 0.13.1
+ * Fix dependency on `package:gcloud` to version `0.8.0`.
+
 ## 0.13.0
+**WARNING**: Version `0.13.0` is broken, use `0.13.1`.
+
  * Migrated to _null-safety_ and `package:gcloud` version `0.8.0`.
 
 ## 0.12.1
