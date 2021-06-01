@@ -22,7 +22,3 @@ dependencies:
 dev_dependencies:
   test: ^1.17.5
   pedantic: ^1.11.0
-
-dependency_overrides:
-  gcloud:
-    path: ../gcloud
