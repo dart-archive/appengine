@@ -2,9 +2,14 @@
 //  Generated code. Do not modify.
 //  source: google/api/expr/v1alpha1/eval.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
+import 'dart:core' as $core;
+import 'dart:convert' as $convert;
+import 'dart:typed_data' as $typed_data;
+
+@$core.Deprecated('Use evalStateDescriptor instead')
 const EvalState$json = {
   '1': 'EvalState',
   '2': [
@@ -28,6 +33,7 @@ const EvalState$json = {
   '3': [EvalState_Result$json],
 };
 
+@$core.Deprecated('Use evalStateDescriptor instead')
 const EvalState_Result$json = {
   '1': 'Result',
   '2': [
@@ -36,6 +42,10 @@ const EvalState_Result$json = {
   ],
 };
 
+/// Descriptor for `EvalState`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List evalStateDescriptor = $convert.base64Decode(
+    'CglFdmFsU3RhdGUSOwoGdmFsdWVzGAEgAygLMiMuZ29vZ2xlLmFwaS5leHByLnYxYWxwaGExLkV4cHJWYWx1ZVIGdmFsdWVzEkQKB3Jlc3VsdHMYAyADKAsyKi5nb29nbGUuYXBpLmV4cHIudjFhbHBoYTEuRXZhbFN0YXRlLlJlc3VsdFIHcmVzdWx0cxoyCgZSZXN1bHQSEgoEZXhwchgBIAEoA1IEZXhwchIUCgV2YWx1ZRgCIAEoA1IFdmFsdWU=');
+@$core.Deprecated('Use exprValueDescriptor instead')
 const ExprValue$json = {
   '1': 'ExprValue',
   '2': [
@@ -72,6 +82,10 @@ const ExprValue$json = {
   ],
 };
 
+/// Descriptor for `ExprValue`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List exprValueDescriptor = $convert.base64Decode(
+    'CglFeHByVmFsdWUSNwoFdmFsdWUYASABKAsyHy5nb29nbGUuYXBpLmV4cHIudjFhbHBoYTEuVmFsdWVIAFIFdmFsdWUSOgoFZXJyb3IYAiABKAsyIi5nb29nbGUuYXBpLmV4cHIudjFhbHBoYTEuRXJyb3JTZXRIAFIFZXJyb3ISQAoHdW5rbm93bhgDIAEoCzIkLmdvb2dsZS5hcGkuZXhwci52MWFscGhhMS5Vbmtub3duU2V0SABSB3Vua25vd25CBgoEa2luZA==');
+@$core.Deprecated('Use errorSetDescriptor instead')
 const ErrorSet$json = {
   '1': 'ErrorSet',
   '2': [
@@ -86,9 +100,17 @@ const ErrorSet$json = {
   ],
 };
 
+/// Descriptor for `ErrorSet`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List errorSetDescriptor = $convert.base64Decode(
+    'CghFcnJvclNldBIqCgZlcnJvcnMYASADKAsyEi5nb29nbGUucnBjLlN0YXR1c1IGZXJyb3Jz');
+@$core.Deprecated('Use unknownSetDescriptor instead')
 const UnknownSet$json = {
   '1': 'UnknownSet',
   '2': [
     {'1': 'exprs', '3': 1, '4': 3, '5': 3, '10': 'exprs'},
   ],
 };
+
+/// Descriptor for `UnknownSet`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List unknownSetDescriptor =
+    $convert.base64Decode('CgpVbmtub3duU2V0EhQKBWV4cHJzGAEgAygDUgVleHBycw==');

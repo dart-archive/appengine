@@ -10,7 +10,7 @@ class AppEngineContext {
   final String version;
   final String module;
   final String instance;
-  final String instanceId;
+  final String? instanceId;
   final bool isDevelopmentEnvironment;
 
   AppEngineContext(
@@ -20,7 +20,7 @@ class AppEngineContext {
       this.module,
       this.instance,
       this.instanceId,
-      Uri pubServeUrl)
+      Uri? pubServeUrl)
       : partition = '';
 
   String get fullQualifiedApplicationId => '$partition~$applicationID';

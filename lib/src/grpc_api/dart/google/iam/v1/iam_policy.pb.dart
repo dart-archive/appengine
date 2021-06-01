@@ -2,8 +2,8 @@
 //  Generated code. Do not modify.
 //  source: google/iam/v1/iam_policy.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:core' as $core;
 
@@ -13,24 +13,58 @@ import 'policy.pb.dart' as $1;
 import 'options.pb.dart' as $2;
 
 class SetIamPolicyRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('SetIamPolicyRequest',
-      package: const $pb.PackageName('google.iam.v1'),
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'SetIamPolicyRequest',
+      package: const $pb.PackageName(
+          $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.iam.v1'),
       createEmptyInstance: create)
-    ..aOS(1, 'resource')
-    ..aOM<$1.Policy>(2, 'policy', subBuilder: $1.Policy.create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'resource')
+    ..aOM<$1.Policy>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'policy',
+        subBuilder: $1.Policy.create)
     ..hasRequiredFields = false;
 
   SetIamPolicyRequest._() : super();
-  factory SetIamPolicyRequest() => create();
+  factory SetIamPolicyRequest({
+    $core.String? resource,
+    $1.Policy? policy,
+  }) {
+    final _result = create();
+    if (resource != null) {
+      _result.resource = resource;
+    }
+    if (policy != null) {
+      _result.policy = policy;
+    }
+    return _result;
+  }
   factory SetIamPolicyRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory SetIamPolicyRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   SetIamPolicyRequest clone() => SetIamPolicyRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   SetIamPolicyRequest copyWith(void Function(SetIamPolicyRequest) updates) =>
-      super.copyWith((message) => updates(message as SetIamPolicyRequest));
+      super.copyWith((message) => updates(message as SetIamPolicyRequest))
+          as SetIamPolicyRequest; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static SetIamPolicyRequest create() => SetIamPolicyRequest._();
@@ -40,7 +74,7 @@ class SetIamPolicyRequest extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static SetIamPolicyRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<SetIamPolicyRequest>(create);
-  static SetIamPolicyRequest _defaultInstance;
+  static SetIamPolicyRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get resource => $_getSZ(0);
@@ -70,25 +104,58 @@ class SetIamPolicyRequest extends $pb.GeneratedMessage {
 }
 
 class GetIamPolicyRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('GetIamPolicyRequest',
-      package: const $pb.PackageName('google.iam.v1'),
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'GetIamPolicyRequest',
+      package: const $pb.PackageName(
+          $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.iam.v1'),
       createEmptyInstance: create)
-    ..aOS(1, 'resource')
-    ..aOM<$2.GetPolicyOptions>(2, 'options',
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'resource')
+    ..aOM<$2.GetPolicyOptions>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'options',
         subBuilder: $2.GetPolicyOptions.create)
     ..hasRequiredFields = false;
 
   GetIamPolicyRequest._() : super();
-  factory GetIamPolicyRequest() => create();
+  factory GetIamPolicyRequest({
+    $core.String? resource,
+    $2.GetPolicyOptions? options,
+  }) {
+    final _result = create();
+    if (resource != null) {
+      _result.resource = resource;
+    }
+    if (options != null) {
+      _result.options = options;
+    }
+    return _result;
+  }
   factory GetIamPolicyRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetIamPolicyRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   GetIamPolicyRequest clone() => GetIamPolicyRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   GetIamPolicyRequest copyWith(void Function(GetIamPolicyRequest) updates) =>
-      super.copyWith((message) => updates(message as GetIamPolicyRequest));
+      super.copyWith((message) => updates(message as GetIamPolicyRequest))
+          as GetIamPolicyRequest; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static GetIamPolicyRequest create() => GetIamPolicyRequest._();
@@ -98,7 +165,7 @@ class GetIamPolicyRequest extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static GetIamPolicyRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<GetIamPolicyRequest>(create);
-  static GetIamPolicyRequest _defaultInstance;
+  static GetIamPolicyRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get resource => $_getSZ(0);
@@ -128,27 +195,59 @@ class GetIamPolicyRequest extends $pb.GeneratedMessage {
 }
 
 class TestIamPermissionsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('TestIamPermissionsRequest',
-      package: const $pb.PackageName('google.iam.v1'),
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'TestIamPermissionsRequest',
+      package: const $pb.PackageName(
+          $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.iam.v1'),
       createEmptyInstance: create)
-    ..aOS(1, 'resource')
-    ..pPS(2, 'permissions')
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'resource')
+    ..pPS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'permissions')
     ..hasRequiredFields = false;
 
   TestIamPermissionsRequest._() : super();
-  factory TestIamPermissionsRequest() => create();
+  factory TestIamPermissionsRequest({
+    $core.String? resource,
+    $core.Iterable<$core.String>? permissions,
+  }) {
+    final _result = create();
+    if (resource != null) {
+      _result.resource = resource;
+    }
+    if (permissions != null) {
+      _result.permissions.addAll(permissions);
+    }
+    return _result;
+  }
   factory TestIamPermissionsRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory TestIamPermissionsRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   TestIamPermissionsRequest clone() =>
       TestIamPermissionsRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   TestIamPermissionsRequest copyWith(
           void Function(TestIamPermissionsRequest) updates) =>
-      super
-          .copyWith((message) => updates(message as TestIamPermissionsRequest));
+      super.copyWith((message) => updates(message as TestIamPermissionsRequest))
+          as TestIamPermissionsRequest; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static TestIamPermissionsRequest create() => TestIamPermissionsRequest._();
@@ -158,7 +257,7 @@ class TestIamPermissionsRequest extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static TestIamPermissionsRequest getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<TestIamPermissionsRequest>(create);
-  static TestIamPermissionsRequest _defaultInstance;
+  static TestIamPermissionsRequest? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get resource => $_getSZ(0);
@@ -178,26 +277,50 @@ class TestIamPermissionsRequest extends $pb.GeneratedMessage {
 
 class TestIamPermissionsResponse extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      'TestIamPermissionsResponse',
-      package: const $pb.PackageName('google.iam.v1'),
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'TestIamPermissionsResponse',
+      package: const $pb.PackageName(
+          $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.iam.v1'),
       createEmptyInstance: create)
-    ..pPS(1, 'permissions')
+    ..pPS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'permissions')
     ..hasRequiredFields = false;
 
   TestIamPermissionsResponse._() : super();
-  factory TestIamPermissionsResponse() => create();
+  factory TestIamPermissionsResponse({
+    $core.Iterable<$core.String>? permissions,
+  }) {
+    final _result = create();
+    if (permissions != null) {
+      _result.permissions.addAll(permissions);
+    }
+    return _result;
+  }
   factory TestIamPermissionsResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory TestIamPermissionsResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   TestIamPermissionsResponse clone() =>
       TestIamPermissionsResponse()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   TestIamPermissionsResponse copyWith(
           void Function(TestIamPermissionsResponse) updates) =>
       super.copyWith(
-          (message) => updates(message as TestIamPermissionsResponse));
+              (message) => updates(message as TestIamPermissionsResponse))
+          as TestIamPermissionsResponse; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static TestIamPermissionsResponse create() => TestIamPermissionsResponse._();
@@ -207,7 +330,7 @@ class TestIamPermissionsResponse extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static TestIamPermissionsResponse getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<TestIamPermissionsResponse>(create);
-  static TestIamPermissionsResponse _defaultInstance;
+  static TestIamPermissionsResponse? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<$core.String> get permissions => $_getList(0);

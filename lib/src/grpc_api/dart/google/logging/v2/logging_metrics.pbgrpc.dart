@@ -2,8 +2,8 @@
 //  Generated code. Do not modify.
 //  source: google/logging/v2/logging_metrics.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:async' as $async;
 
@@ -43,52 +43,38 @@ class MetricsServiceV2Client extends $grpc.Client {
           ($core.List<$core.int> value) => $1.Empty.fromBuffer(value));
 
   MetricsServiceV2Client($grpc.ClientChannel channel,
-      {$grpc.CallOptions options})
-      : super(channel, options: options);
+      {$grpc.CallOptions? options,
+      $core.Iterable<$grpc.ClientInterceptor>? interceptors})
+      : super(channel, options: options, interceptors: interceptors);
 
   $grpc.ResponseFuture<$0.ListLogMetricsResponse> listLogMetrics(
       $0.ListLogMetricsRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$listLogMetrics, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listLogMetrics, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.LogMetric> getLogMetric(
       $0.GetLogMetricRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$getLogMetric, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$getLogMetric, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.LogMetric> createLogMetric(
       $0.CreateLogMetricRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$createLogMetric, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$createLogMetric, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.LogMetric> updateLogMetric(
       $0.UpdateLogMetricRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$updateLogMetric, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$updateLogMetric, request, options: options);
   }
 
   $grpc.ResponseFuture<$1.Empty> deleteLogMetric(
       $0.DeleteLogMetricRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$deleteLogMetric, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$deleteLogMetric, request, options: options);
   }
 }
 

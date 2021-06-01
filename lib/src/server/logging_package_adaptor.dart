@@ -8,7 +8,7 @@ import 'package:logging/logging.dart';
 
 import '../logging.dart';
 
-final Map<Level, LogLevel> _loggingLevel2AppengineLoggingLevel = {
+final Map<Level, LogLevel?> _loggingLevel2AppengineLoggingLevel = {
   Level.OFF: null,
   Level.ALL: LogLevel.DEBUG,
   Level.FINEST: LogLevel.DEBUG,
@@ -23,8 +23,8 @@ final Map<Level, LogLevel> _loggingLevel2AppengineLoggingLevel = {
 
 void setupAppEngineLogging() {
   Logger.root.onRecord.listen((LogRecord record) {
-    record.zone.run(() {
-      Logging logging;
+    record.zone!.run(() {
+      Logging? logging;
       try {
         logging = loggingService;
       } on StateError {
@@ -57,7 +57,7 @@ void setupAppEngineLogging() {
             timestamp: record.time,
           );
           if (record.error != null && record.stackTrace != null) {
-            logging.reportError(level, record.error, record.stackTrace);
+            logging.reportError(level, record.error!, record.stackTrace!);
           }
         }
       }

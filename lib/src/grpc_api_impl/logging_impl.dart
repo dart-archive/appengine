@@ -39,14 +39,14 @@ class GrpcRequestLoggingImpl extends LoggingImpl {
   final String _userAgent;
   final String _host;
   final String _ip;
-  final String _traceId;
+  final String? _traceId;
   final String _referrer;
   final int _startTimestamp;
   final List<gae_log.LogLine> _gaeLogLines = <gae_log.LogLine>[];
 
-  api.LogSeverity _currentSeverity;
-  int _estimatedSize;
-  bool _isFirst;
+  late api.LogSeverity _currentSeverity;
+  late int _estimatedSize;
+  late bool _isFirst;
 
   GrpcRequestLoggingImpl(
       this._sharedLoggingService,
@@ -66,7 +66,7 @@ class GrpcRequestLoggingImpl extends LoggingImpl {
   void log(
     LogLevel level,
     String message, {
-    DateTime timestamp,
+    DateTime? timestamp,
   }) {
     final api.LogSeverity severity = _severityFromLogLevel(level);
 
@@ -124,14 +124,13 @@ class GrpcRequestLoggingImpl extends LoggingImpl {
   }
 
   @override
-  void reportError(LogLevel level, Object error, StackTrace stackTrace,
-      {DateTime timestamp}) {
-    if (stackTrace == null) {
-      super.reportError(level, error, stackTrace, timestamp: timestamp);
-      return;
-    }
+  void reportError(
+    LogLevel level,
+    Object error,
+    StackTrace stackTrace, {
+    DateTime? timestamp,
+  }) {
     final api.LogSeverity severity = _severityFromLogLevel(level);
-    error ??= 'unknown error';
     timestamp ??= DateTime.now();
 
     final int now = timestamp.toUtc().millisecondsSinceEpoch;
@@ -151,7 +150,7 @@ class GrpcRequestLoggingImpl extends LoggingImpl {
       ..logName = _sharedLoggingService.backgroundLogName;
 
     if (_traceId != null) {
-      _addLabel(logEntry, 'appengine.googleapis.com/trace_id', _traceId);
+      _addLabel(logEntry, 'appengine.googleapis.com/trace_id', _traceId!);
     }
 
     _sharedLoggingService.enqueue(logEntry);
@@ -159,7 +158,7 @@ class GrpcRequestLoggingImpl extends LoggingImpl {
 
   /// Builds up the combined [api.LogEntry] and enqueues it in the underlying
   /// [SharedLoggingService].
-  void _enqueue({bool finish = false, int responseStatus, int responseSize}) {
+  void _enqueue({bool finish = false, int? responseStatus, int? responseSize}) {
     final api.Timestamp startTimestamp =
         _protobufTimestampFromMilliseconds(_startTimestamp);
 
@@ -186,22 +185,23 @@ class GrpcRequestLoggingImpl extends LoggingImpl {
       ..method = _httpMethod
       ..resource = _httpResource
       ..startTime = startTimestamp
-      ..userAgent = _userAgent ?? ''
+      ..userAgent = _userAgent
       ..host = _host
       ..ip = _ip
       ..line.addAll(_gaeLogLines)
       ..first = _isFirst
-      ..finished = finish
-      ..instanceId = _sharedLoggingService.instanceId;
+      ..finished = finish;
+
+    if (_sharedLoggingService.instanceId != null) {
+      appengineRequestLog.instanceId = _sharedLoggingService.instanceId!;
+    }
 
     if (_traceId != null) {
-      appengineRequestLog.traceId = _traceId;
-      _addLabel(logEntry, 'appengine.googleapis.com/trace_id', _traceId);
+      appengineRequestLog.traceId = _traceId!;
+      _addLabel(logEntry, 'appengine.googleapis.com/trace_id', _traceId!);
     }
 
-    if (_referrer != null) {
-      appengineRequestLog.referrer = _referrer;
-    }
+    appengineRequestLog.referrer = _referrer;
     _resetState();
 
     if (finish) {
@@ -213,7 +213,7 @@ class GrpcRequestLoggingImpl extends LoggingImpl {
       appengineRequestLog
         ..endTime = nowTimestamp
         ..latency = latency
-        ..status = responseStatus;
+        ..status = responseStatus!;
 
       if (responseSize != null) {
         appengineRequestLog.responseSize = api.Int64(responseSize);
@@ -239,13 +239,13 @@ class GrpcRequestLoggingImpl extends LoggingImpl {
 
 /// A [appengine.Logging] adapter which sends log entries off via the
 /// [SharedLoggingService].
-class GrpcBackgroundLoggingImpl extends Logging {
+class GrpcBackgroundLoggingImpl extends LoggingBase {
   final SharedLoggingService _sharedLoggingService;
 
   GrpcBackgroundLoggingImpl(this._sharedLoggingService);
 
   @override
-  void log(LogLevel level, String message, {DateTime timestamp}) {
+  void log(LogLevel level, String message, {DateTime? timestamp}) {
     final api.LogSeverity severity = _severityFromLogLevel(level);
 
     final int now = DateTime.now().toUtc().millisecondsSinceEpoch;
@@ -266,14 +266,13 @@ class GrpcBackgroundLoggingImpl extends Logging {
   }
 
   @override
-  void reportError(LogLevel level, Object error, StackTrace stackTrace,
-      {DateTime timestamp}) {
-    if (stackTrace == null) {
-      super.reportError(level, error, stackTrace, timestamp: timestamp);
-      return;
-    }
+  void reportError(
+    LogLevel level,
+    Object error,
+    StackTrace stackTrace, {
+    DateTime? timestamp,
+  }) {
     final api.LogSeverity severity = _severityFromLogLevel(level);
-    error ??= 'unknown error';
     timestamp ??= DateTime.now();
 
     final int now = timestamp.toUtc().millisecondsSinceEpoch;
@@ -309,16 +308,16 @@ class SharedLoggingService {
   final String projectId;
   final String serviceId;
   final String versionId;
-  final String instanceId;
+  final String? instanceId;
   final String _instanceName;
   final Map<String, String> resourceLabels;
   final String requestLogName;
   final String backgroundLogName;
 
   final List<api.LogEntry> _entries = <api.LogEntry>[];
-  Timer _timer;
+  Timer? _timer;
 
-  Completer _closeCompleter;
+  Completer? _closeCompleter;
   int _outstandingRequests = 0;
 
   SharedLoggingService(
@@ -359,7 +358,7 @@ class SharedLoggingService {
 
   void flush() {
     if (_timer != null) {
-      _timer.cancel();
+      _timer!.cancel();
       _timer = null;
     }
     if (_entries.isEmpty) {
@@ -394,14 +393,14 @@ class SharedLoggingService {
     flush();
     _maybeClose();
 
-    return _closeCompleter.future;
+    return _closeCompleter!.future;
   }
 
   void _maybeClose() {
     if (_outstandingRequests == 0 &&
         _closeCompleter != null &&
-        !_closeCompleter.isCompleted) {
-      _closeCompleter.complete(null);
+        !_closeCompleter!.isCompleted) {
+      _closeCompleter!.complete(null);
     }
   }
 }
@@ -450,7 +449,7 @@ String _formatStackTrace(Object error, StackTrace stackTrace) =>
     'Error: $error\n' +
     Trace.from(stackTrace).frames.map((f) {
       // Find member
-      String member = f.member;
+      String? member = f.member;
       if (member == '<fn>') {
         member = '<anonymous>';
       }
@@ -459,7 +458,7 @@ String _formatStackTrace(Object error, StackTrace stackTrace) =>
       String loc = 'unknown location';
       if (f.isCore) {
         loc = 'native';
-      } else if (f.line != null && f.uri != null) {
+      } else if (f.line != null) {
         loc = '${f.uri}:${f.line}:${f.column ?? 0}';
       }
 

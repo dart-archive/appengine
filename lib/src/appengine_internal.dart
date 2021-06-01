@@ -43,10 +43,10 @@ Future withAppEngineServices(Future callback()) =>
 /// AppEngine services available within that scope.
 Future runAppEngine(
   void handler(HttpRequest request, ClientContext context),
-  void onError(Object e, StackTrace s), {
+  void onError(Object e, StackTrace s)?, {
   int port = 8080,
   bool shared = false,
-  void onAcceptingConnections(InternetAddress address, int port),
+  void onAcceptingConnections(InternetAddress address, int port)?,
 }) {
   return _withAppEngineServicesInternal((ContextRegistry contextRegistry) {
     final appengineServer = AppEngineHttpServer(contextRegistry,
@@ -130,7 +130,7 @@ Future<ContextRegistry> _initializeAppEngine() async {
   zoneId ??= 'dev-machine';
   final bool isProdEnvironment = !isDevEnvironment;
 
-  String _findEnvironmentVariable(String name,
+  String? _findEnvironmentVariable(String name,
       {bool onlyInProd = false, bool onlyInDev = false, bool needed = true}) {
     if (onlyInProd && !isProdEnvironment) return null;
     if (onlyInDev && !isDevEnvironment) return null;
@@ -145,7 +145,7 @@ Future<ContextRegistry> _initializeAppEngine() async {
   final projectId = _findEnvironmentVariable(
     'GOOGLE_CLOUD_PROJECT',
     needed: true,
-  );
+  )!;
 
   // For local testing the gcloud sdk brings now a gRPC-ready datastore
   // emulator which will tell the user to use this environment variable.
@@ -162,8 +162,8 @@ Future<ContextRegistry> _initializeAppEngine() async {
           onlyInProd: true, needed: true) ??
       'dummy-instance';
 
-  final String pubServeUrlString = Platform.environment['DART_PUB_SERVE'];
-  final Uri pubServeUrl =
+  final String? pubServeUrlString = Platform.environment['DART_PUB_SERVE'];
+  final Uri? pubServeUrl =
       pubServeUrlString != null ? Uri.parse(pubServeUrlString) : null;
 
   final instanceId = await _getInstanceid();
@@ -212,7 +212,7 @@ Future<ContextRegistry> _initializeAppEngine() async {
 /// scope.
 Future<db.DatastoreDB> _obtainDatastoreService(
   String projectId,
-  String dbEmulatorHost,
+  String? dbEmulatorHost,
 ) async {
   String endpoint = 'https://datastore.googleapis.com';
   bool needAuthorization = true;
@@ -314,7 +314,7 @@ class _ClientChannelWithClientId implements grpc.ClientChannel {
   Future<ClientConnection> getConnection() => _clientChannel.getConnection();
 
   @override
-  String get host => _clientChannel.host;
+  String get host => _clientChannel.host as String;
 
   @override
   grpc.ChannelOptions get options => _clientChannel.options;
@@ -329,18 +329,21 @@ class _ClientChannelWithClientId implements grpc.ClientChannel {
   Future<void> terminate() => _clientChannel.terminate();
 }
 
-Future<String> _getZoneInProduction() => _getMetadataValue('zone');
+Future<String?> _getZoneInProduction() => _getMetadataValue('zone');
 
-Future<String> _getInstanceid() => _getMetadataValue('id');
+Future<String?> _getInstanceid() => _getMetadataValue('id');
 
-Future<String> _getMetadataValue(String path) async {
+Future<String?> _getMetadataValue(String path) async {
   final client = http.Client();
   try {
     final response = await client.get(
-        'http://metadata.google.internal/computeMetadata/v1/instance/$path',
-        headers: {'Metadata-Flavor': 'Google'});
+        Uri.parse(
+            'http://metadata.google.internal/computeMetadata/v1/instance/$path'),
+        headers: {
+          'Metadata-Flavor': 'Google',
+        });
     if (response.statusCode == HttpStatus.ok) {
-      if (response.headers[HttpHeaders.contentTypeHeader].contains('html') ||
+      if (response.headers[HttpHeaders.contentTypeHeader]!.contains('html') ||
           response.body.contains('<html>')) {
         // The response is not expected to be HTML. This likely means we're not
         // running on cloud, and the request was intercepted by an HTTP proxy.
@@ -381,7 +384,7 @@ class GrpcLoggerFactory implements LoggerFactory {
       String userAgent,
       String host,
       String ip,
-      String traceId,
+      String? traceId,
       String referrer) {
     return grpc_logging_impl.GrpcRequestLoggingImpl(
         _shared, method, resource, userAgent, host, ip, traceId, referrer);
@@ -404,7 +407,7 @@ class StderrLoggerFactory implements LoggerFactory {
       String userAgent,
       String host,
       String ip,
-      String traceId,
+      String? traceId,
       String referrer) {
     return stderr_logging_impl.StderrRequestLoggingImpl(method, resource);
   }

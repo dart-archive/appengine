@@ -2,8 +2,8 @@
 //  Generated code. Do not modify.
 //  source: google/api/servicecontrol/v1/metric_value.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:core' as $core;
 
@@ -32,36 +32,87 @@ class MetricValue extends $pb.GeneratedMessage {
     8: MetricValue_Value.distributionValue,
     0: MetricValue_Value.notSet
   };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('MetricValue',
-      package: const $pb.PackageName('google.api.servicecontrol.v1'),
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'MetricValue',
+      package: const $pb.PackageName($core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'google.api.servicecontrol.v1'),
       createEmptyInstance: create)
     ..oo(0, [4, 5, 6, 7, 8])
-    ..m<$core.String, $core.String>(1, 'labels',
+    ..m<$core.String, $core.String>(
+        1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'labels',
         entryClassName: 'MetricValue.LabelsEntry',
         keyFieldType: $pb.PbFieldType.OS,
         valueFieldType: $pb.PbFieldType.OS,
         packageName: const $pb.PackageName('google.api.servicecontrol.v1'))
-    ..aOM<$0.Timestamp>(2, 'startTime', subBuilder: $0.Timestamp.create)
-    ..aOM<$0.Timestamp>(3, 'endTime', subBuilder: $0.Timestamp.create)
-    ..aOB(4, 'boolValue')
-    ..aInt64(5, 'int64Value')
-    ..a<$core.double>(6, 'doubleValue', $pb.PbFieldType.OD)
-    ..aOS(7, 'stringValue')
-    ..aOM<$1.Distribution>(8, 'distributionValue',
-        subBuilder: $1.Distribution.create)
+    ..aOM<$0.Timestamp>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'startTime',
+        subBuilder: $0.Timestamp.create)
+    ..aOM<$0.Timestamp>(
+        3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'endTime',
+        subBuilder: $0.Timestamp.create)
+    ..aOB(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'boolValue')
+    ..aInt64(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'int64Value')
+    ..a<$core.double>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'doubleValue', $pb.PbFieldType.OD)
+    ..aOS(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'stringValue')
+    ..aOM<$1.Distribution>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'distributionValue', subBuilder: $1.Distribution.create)
     ..hasRequiredFields = false;
 
   MetricValue._() : super();
-  factory MetricValue() => create();
+  factory MetricValue({
+    $core.Map<$core.String, $core.String>? labels,
+    $0.Timestamp? startTime,
+    $0.Timestamp? endTime,
+    $core.bool? boolValue,
+    $fixnum.Int64? int64Value,
+    $core.double? doubleValue,
+    $core.String? stringValue,
+    $1.Distribution? distributionValue,
+  }) {
+    final _result = create();
+    if (labels != null) {
+      _result.labels.addAll(labels);
+    }
+    if (startTime != null) {
+      _result.startTime = startTime;
+    }
+    if (endTime != null) {
+      _result.endTime = endTime;
+    }
+    if (boolValue != null) {
+      _result.boolValue = boolValue;
+    }
+    if (int64Value != null) {
+      _result.int64Value = int64Value;
+    }
+    if (doubleValue != null) {
+      _result.doubleValue = doubleValue;
+    }
+    if (stringValue != null) {
+      _result.stringValue = stringValue;
+    }
+    if (distributionValue != null) {
+      _result.distributionValue = distributionValue;
+    }
+    return _result;
+  }
   factory MetricValue.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory MetricValue.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   MetricValue clone() => MetricValue()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   MetricValue copyWith(void Function(MetricValue) updates) =>
-      super.copyWith((message) => updates(message as MetricValue));
+      super.copyWith((message) => updates(message as MetricValue))
+          as MetricValue; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static MetricValue create() => MetricValue._();
@@ -70,9 +121,9 @@ class MetricValue extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static MetricValue getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<MetricValue>(create);
-  static MetricValue _defaultInstance;
+  static MetricValue? _defaultInstance;
 
-  MetricValue_Value whichValue() => _MetricValue_ValueByTag[$_whichOneof(0)];
+  MetricValue_Value whichValue() => _MetricValue_ValueByTag[$_whichOneof(0)]!;
   void clearValue() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
@@ -170,25 +221,59 @@ class MetricValue extends $pb.GeneratedMessage {
 }
 
 class MetricValueSet extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('MetricValueSet',
-      package: const $pb.PackageName('google.api.servicecontrol.v1'),
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'MetricValueSet',
+      package: const $pb.PackageName(
+          $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.api.servicecontrol.v1'),
       createEmptyInstance: create)
-    ..aOS(1, 'metricName')
-    ..pc<MetricValue>(2, 'metricValues', $pb.PbFieldType.PM,
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'metricName')
+    ..pc<MetricValue>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'metricValues',
+        $pb.PbFieldType.PM,
         subBuilder: MetricValue.create)
     ..hasRequiredFields = false;
 
   MetricValueSet._() : super();
-  factory MetricValueSet() => create();
+  factory MetricValueSet({
+    $core.String? metricName,
+    $core.Iterable<MetricValue>? metricValues,
+  }) {
+    final _result = create();
+    if (metricName != null) {
+      _result.metricName = metricName;
+    }
+    if (metricValues != null) {
+      _result.metricValues.addAll(metricValues);
+    }
+    return _result;
+  }
   factory MetricValueSet.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory MetricValueSet.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   MetricValueSet clone() => MetricValueSet()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   MetricValueSet copyWith(void Function(MetricValueSet) updates) =>
-      super.copyWith((message) => updates(message as MetricValueSet));
+      super.copyWith((message) => updates(message as MetricValueSet))
+          as MetricValueSet; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static MetricValueSet create() => MetricValueSet._();
@@ -198,7 +283,7 @@ class MetricValueSet extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static MetricValueSet getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<MetricValueSet>(create);
-  static MetricValueSet _defaultInstance;
+  static MetricValueSet? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get metricName => $_getSZ(0);

@@ -2,8 +2,8 @@
 //  Generated code. Do not modify.
 //  source: google/api/expr/v1beta1/decl.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:core' as $core;
 
@@ -19,28 +19,77 @@ class Decl extends $pb.GeneratedMessage {
     5: Decl_Kind.function,
     0: Decl_Kind.notSet
   };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Decl',
-      package: const $pb.PackageName('google.api.expr.v1beta1'),
-      createEmptyInstance: create)
-    ..oo(0, [4, 5])
-    ..a<$core.int>(1, 'id', $pb.PbFieldType.O3)
-    ..aOS(2, 'name')
-    ..aOS(3, 'doc')
-    ..aOM<IdentDecl>(4, 'ident', subBuilder: IdentDecl.create)
-    ..aOM<FunctionDecl>(5, 'function', subBuilder: FunctionDecl.create)
-    ..hasRequiredFields = false;
+  static final $pb.BuilderInfo _i =
+      $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Decl',
+          package: const $pb.PackageName(
+              $core.bool.fromEnvironment('protobuf.omit_message_names')
+                  ? ''
+                  : 'google.api.expr.v1beta1'),
+          createEmptyInstance: create)
+        ..oo(0, [4, 5])
+        ..a<$core.int>(
+            1,
+            const $core.bool.fromEnvironment('protobuf.omit_field_names')
+                ? ''
+                : 'id',
+            $pb.PbFieldType.O3)
+        ..aOS(
+            2,
+            const $core.bool.fromEnvironment('protobuf.omit_field_names')
+                ? ''
+                : 'name')
+        ..aOS(
+            3,
+            const $core.bool.fromEnvironment('protobuf.omit_field_names')
+                ? ''
+                : 'doc')
+        ..aOM<IdentDecl>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ident',
+            subBuilder: IdentDecl.create)
+        ..aOM<FunctionDecl>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'function', subBuilder: FunctionDecl.create)
+        ..hasRequiredFields = false;
 
   Decl._() : super();
-  factory Decl() => create();
+  factory Decl({
+    $core.int? id,
+    $core.String? name,
+    $core.String? doc,
+    IdentDecl? ident,
+    FunctionDecl? function,
+  }) {
+    final _result = create();
+    if (id != null) {
+      _result.id = id;
+    }
+    if (name != null) {
+      _result.name = name;
+    }
+    if (doc != null) {
+      _result.doc = doc;
+    }
+    if (ident != null) {
+      _result.ident = ident;
+    }
+    if (function != null) {
+      _result.function = function;
+    }
+    return _result;
+  }
   factory Decl.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Decl.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   Decl clone() => Decl()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   Decl copyWith(void Function(Decl) updates) =>
-      super.copyWith((message) => updates(message as Decl));
+      super.copyWith((message) => updates(message as Decl))
+          as Decl; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static Decl create() => Decl._();
@@ -49,9 +98,9 @@ class Decl extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static Decl getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Decl>(create);
-  static Decl _defaultInstance;
+  static Decl? _defaultInstance;
 
-  Decl_Kind whichKind() => _Decl_KindByTag[$_whichOneof(0)];
+  Decl_Kind whichKind() => _Decl_KindByTag[$_whichOneof(0)]!;
   void clearKind() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)
@@ -120,26 +169,67 @@ class Decl extends $pb.GeneratedMessage {
 }
 
 class DeclType extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('DeclType',
-      package: const $pb.PackageName('google.api.expr.v1beta1'),
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'DeclType',
+      package: const $pb.PackageName(
+          $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.api.expr.v1beta1'),
       createEmptyInstance: create)
-    ..a<$core.int>(1, 'id', $pb.PbFieldType.O3)
-    ..aOS(2, 'type')
-    ..pc<DeclType>(4, 'typeParams', $pb.PbFieldType.PM,
+    ..a<$core.int>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'id',
+        $pb.PbFieldType.O3)
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'type')
+    ..pc<DeclType>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'typeParams',
+        $pb.PbFieldType.PM,
         subBuilder: DeclType.create)
     ..hasRequiredFields = false;
 
   DeclType._() : super();
-  factory DeclType() => create();
+  factory DeclType({
+    $core.int? id,
+    $core.String? type,
+    $core.Iterable<DeclType>? typeParams,
+  }) {
+    final _result = create();
+    if (id != null) {
+      _result.id = id;
+    }
+    if (type != null) {
+      _result.type = type;
+    }
+    if (typeParams != null) {
+      _result.typeParams.addAll(typeParams);
+    }
+    return _result;
+  }
   factory DeclType.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DeclType.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   DeclType clone() => DeclType()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   DeclType copyWith(void Function(DeclType) updates) =>
-      super.copyWith((message) => updates(message as DeclType));
+      super.copyWith((message) => updates(message as DeclType))
+          as DeclType; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static DeclType create() => DeclType._();
@@ -148,7 +238,7 @@ class DeclType extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static DeclType getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<DeclType>(create);
-  static DeclType _defaultInstance;
+  static DeclType? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.int get id => $_getIZ(0);
@@ -179,24 +269,56 @@ class DeclType extends $pb.GeneratedMessage {
 }
 
 class IdentDecl extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('IdentDecl',
-      package: const $pb.PackageName('google.api.expr.v1beta1'),
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'IdentDecl',
+      package: const $pb.PackageName(
+          $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.api.expr.v1beta1'),
       createEmptyInstance: create)
-    ..aOM<DeclType>(3, 'type', subBuilder: DeclType.create)
-    ..aOM<$0.Expr>(4, 'value', subBuilder: $0.Expr.create)
+    ..aOM<DeclType>(
+        3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'type',
+        subBuilder: DeclType.create)
+    ..aOM<$0.Expr>(
+        4,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'value',
+        subBuilder: $0.Expr.create)
     ..hasRequiredFields = false;
 
   IdentDecl._() : super();
-  factory IdentDecl() => create();
+  factory IdentDecl({
+    DeclType? type,
+    $0.Expr? value,
+  }) {
+    final _result = create();
+    if (type != null) {
+      _result.type = type;
+    }
+    if (value != null) {
+      _result.value = value;
+    }
+    return _result;
+  }
   factory IdentDecl.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory IdentDecl.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   IdentDecl clone() => IdentDecl()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   IdentDecl copyWith(void Function(IdentDecl) updates) =>
-      super.copyWith((message) => updates(message as IdentDecl));
+      super.copyWith((message) => updates(message as IdentDecl))
+          as IdentDecl; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static IdentDecl create() => IdentDecl._();
@@ -205,7 +327,7 @@ class IdentDecl extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static IdentDecl getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<IdentDecl>(create);
-  static IdentDecl _defaultInstance;
+  static IdentDecl? _defaultInstance;
 
   @$pb.TagNumber(3)
   DeclType get type => $_getN(0);
@@ -237,25 +359,62 @@ class IdentDecl extends $pb.GeneratedMessage {
 }
 
 class FunctionDecl extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('FunctionDecl',
-      package: const $pb.PackageName('google.api.expr.v1beta1'),
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'FunctionDecl',
+      package: const $pb.PackageName(
+          $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.api.expr.v1beta1'),
       createEmptyInstance: create)
-    ..pc<IdentDecl>(1, 'args', $pb.PbFieldType.PM, subBuilder: IdentDecl.create)
-    ..aOM<DeclType>(2, 'returnType', subBuilder: DeclType.create)
-    ..aOB(3, 'receiverFunction')
+    ..pc<IdentDecl>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'args',
+        $pb.PbFieldType.PM,
+        subBuilder: IdentDecl.create)
+    ..aOM<DeclType>(
+        2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'returnType',
+        subBuilder: DeclType.create)
+    ..aOB(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'receiverFunction')
     ..hasRequiredFields = false;
 
   FunctionDecl._() : super();
-  factory FunctionDecl() => create();
+  factory FunctionDecl({
+    $core.Iterable<IdentDecl>? args,
+    DeclType? returnType,
+    $core.bool? receiverFunction,
+  }) {
+    final _result = create();
+    if (args != null) {
+      _result.args.addAll(args);
+    }
+    if (returnType != null) {
+      _result.returnType = returnType;
+    }
+    if (receiverFunction != null) {
+      _result.receiverFunction = receiverFunction;
+    }
+    return _result;
+  }
   factory FunctionDecl.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory FunctionDecl.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   FunctionDecl clone() => FunctionDecl()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   FunctionDecl copyWith(void Function(FunctionDecl) updates) =>
-      super.copyWith((message) => updates(message as FunctionDecl));
+      super.copyWith((message) => updates(message as FunctionDecl))
+          as FunctionDecl; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static FunctionDecl create() => FunctionDecl._();
@@ -265,7 +424,7 @@ class FunctionDecl extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static FunctionDecl getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<FunctionDecl>(create);
-  static FunctionDecl _defaultInstance;
+  static FunctionDecl? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<IdentDecl> get args => $_getList(0);

@@ -2,8 +2,8 @@
 //  Generated code. Do not modify.
 //  source: google/logging/v2/logging.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:async' as $async;
 
@@ -45,51 +45,52 @@ class LoggingServiceV2Client extends $grpc.Client {
           ($2.ListLogsRequest value) => value.writeToBuffer(),
           ($core.List<$core.int> value) =>
               $2.ListLogsResponse.fromBuffer(value));
+  static final _$tailLogEntries =
+      $grpc.ClientMethod<$2.TailLogEntriesRequest, $2.TailLogEntriesResponse>(
+          '/google.logging.v2.LoggingServiceV2/TailLogEntries',
+          ($2.TailLogEntriesRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) =>
+              $2.TailLogEntriesResponse.fromBuffer(value));
 
   LoggingServiceV2Client($grpc.ClientChannel channel,
-      {$grpc.CallOptions options})
-      : super(channel, options: options);
+      {$grpc.CallOptions? options,
+      $core.Iterable<$grpc.ClientInterceptor>? interceptors})
+      : super(channel, options: options, interceptors: interceptors);
 
   $grpc.ResponseFuture<$1.Empty> deleteLog($2.DeleteLogRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(_$deleteLog, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$deleteLog, request, options: options);
   }
 
   $grpc.ResponseFuture<$2.WriteLogEntriesResponse> writeLogEntries(
       $2.WriteLogEntriesRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$writeLogEntries, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$writeLogEntries, request, options: options);
   }
 
   $grpc.ResponseFuture<$2.ListLogEntriesResponse> listLogEntries(
       $2.ListLogEntriesRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$listLogEntries, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listLogEntries, request, options: options);
   }
 
   $grpc.ResponseFuture<$2.ListMonitoredResourceDescriptorsResponse>
       listMonitoredResourceDescriptors(
           $2.ListMonitoredResourceDescriptorsRequest request,
-          {$grpc.CallOptions options}) {
-    final call = $createCall(_$listMonitoredResourceDescriptors,
-        $async.Stream.fromIterable([request]),
+          {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listMonitoredResourceDescriptors, request,
         options: options);
-    return $grpc.ResponseFuture(call);
   }
 
   $grpc.ResponseFuture<$2.ListLogsResponse> listLogs($2.ListLogsRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(_$listLogs, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$listLogs, request, options: options);
+  }
+
+  $grpc.ResponseStream<$2.TailLogEntriesResponse> tailLogEntries(
+      $async.Stream<$2.TailLogEntriesRequest> request,
+      {$grpc.CallOptions? options}) {
+    return $createStreamingCall(_$tailLogEntries, request, options: options);
   }
 }
 
@@ -139,6 +140,15 @@ abstract class LoggingServiceV2ServiceBase extends $grpc.Service {
         false,
         ($core.List<$core.int> value) => $2.ListLogsRequest.fromBuffer(value),
         ($2.ListLogsResponse value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$2.TailLogEntriesRequest,
+            $2.TailLogEntriesResponse>(
+        'TailLogEntries',
+        tailLogEntries,
+        true,
+        true,
+        ($core.List<$core.int> value) =>
+            $2.TailLogEntriesRequest.fromBuffer(value),
+        ($2.TailLogEntriesResponse value) => value.writeToBuffer()));
   }
 
   $async.Future<$1.Empty> deleteLog_Pre($grpc.ServiceCall call,
@@ -182,4 +192,6 @@ abstract class LoggingServiceV2ServiceBase extends $grpc.Service {
           $2.ListMonitoredResourceDescriptorsRequest request);
   $async.Future<$2.ListLogsResponse> listLogs(
       $grpc.ServiceCall call, $2.ListLogsRequest request);
+  $async.Stream<$2.TailLogEntriesResponse> tailLogEntries(
+      $grpc.ServiceCall call, $async.Stream<$2.TailLogEntriesRequest> request);
 }

@@ -2,9 +2,14 @@
 //  Generated code. Do not modify.
 //  source: google/appengine/v1/location.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
+import 'dart:core' as $core;
+import 'dart:convert' as $convert;
+import 'dart:typed_data' as $typed_data;
+
+@$core.Deprecated('Use locationMetadataDescriptor instead')
 const LocationMetadata$json = {
   '1': 'LocationMetadata',
   '2': [
@@ -22,5 +27,17 @@ const LocationMetadata$json = {
       '5': 8,
       '10': 'flexibleEnvironmentAvailable'
     },
+    {
+      '1': 'search_api_available',
+      '3': 6,
+      '4': 1,
+      '5': 8,
+      '8': {},
+      '10': 'searchApiAvailable'
+    },
   ],
 };
+
+/// Descriptor for `LocationMetadata`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List locationMetadataDescriptor = $convert.base64Decode(
+    'ChBMb2NhdGlvbk1ldGFkYXRhEkQKHnN0YW5kYXJkX2Vudmlyb25tZW50X2F2YWlsYWJsZRgCIAEoCFIcc3RhbmRhcmRFbnZpcm9ubWVudEF2YWlsYWJsZRJECh5mbGV4aWJsZV9lbnZpcm9ubWVudF9hdmFpbGFibGUYBCABKAhSHGZsZXhpYmxlRW52aXJvbm1lbnRBdmFpbGFibGUSNQoUc2VhcmNoX2FwaV9hdmFpbGFibGUYBiABKAhCA+BBA1ISc2VhcmNoQXBpQXZhaWxhYmxl');

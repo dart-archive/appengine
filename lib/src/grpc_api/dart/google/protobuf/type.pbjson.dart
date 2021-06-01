@@ -2,9 +2,14 @@
 //  Generated code. Do not modify.
 //  source: google/protobuf/type.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
+import 'dart:core' as $core;
+import 'dart:convert' as $convert;
+import 'dart:typed_data' as $typed_data;
+
+@$core.Deprecated('Use syntaxDescriptor instead')
 const Syntax$json = {
   '1': 'Syntax',
   '2': [
@@ -13,6 +18,10 @@ const Syntax$json = {
   ],
 };
 
+/// Descriptor for `Syntax`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List syntaxDescriptor = $convert.base64Decode(
+    'CgZTeW50YXgSEQoNU1lOVEFYX1BST1RPMhAAEhEKDVNZTlRBWF9QUk9UTzMQAQ==');
+@$core.Deprecated('Use typeDescriptor instead')
 const Type$json = {
   '1': 'Type',
   '2': [
@@ -53,6 +62,10 @@ const Type$json = {
   ],
 };
 
+/// Descriptor for `Type`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List typeDescriptor = $convert.base64Decode(
+    'CgRUeXBlEhIKBG5hbWUYASABKAlSBG5hbWUSLgoGZmllbGRzGAIgAygLMhYuZ29vZ2xlLnByb3RvYnVmLkZpZWxkUgZmaWVsZHMSFgoGb25lb2ZzGAMgAygJUgZvbmVvZnMSMQoHb3B0aW9ucxgEIAMoCzIXLmdvb2dsZS5wcm90b2J1Zi5PcHRpb25SB29wdGlvbnMSRQoOc291cmNlX2NvbnRleHQYBSABKAsyHi5nb29nbGUucHJvdG9idWYuU291cmNlQ29udGV4dFINc291cmNlQ29udGV4dBIvCgZzeW50YXgYBiABKA4yFy5nb29nbGUucHJvdG9idWYuU3ludGF4UgZzeW50YXg=');
+@$core.Deprecated('Use fieldDescriptor instead')
 const Field$json = {
   '1': 'Field',
   '2': [
@@ -91,6 +104,7 @@ const Field$json = {
   '4': [Field_Kind$json, Field_Cardinality$json],
 };
 
+@$core.Deprecated('Use fieldDescriptor instead')
 const Field_Kind$json = {
   '1': 'Kind',
   '2': [
@@ -116,6 +130,7 @@ const Field_Kind$json = {
   ],
 };
 
+@$core.Deprecated('Use fieldDescriptor instead')
 const Field_Cardinality$json = {
   '1': 'Cardinality',
   '2': [
@@ -126,6 +141,10 @@ const Field_Cardinality$json = {
   ],
 };
 
+/// Descriptor for `Field`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List fieldDescriptor = $convert.base64Decode(
+    'CgVGaWVsZBIvCgRraW5kGAEgASgOMhsuZ29vZ2xlLnByb3RvYnVmLkZpZWxkLktpbmRSBGtpbmQSRAoLY2FyZGluYWxpdHkYAiABKA4yIi5nb29nbGUucHJvdG9idWYuRmllbGQuQ2FyZGluYWxpdHlSC2NhcmRpbmFsaXR5EhYKBm51bWJlchgDIAEoBVIGbnVtYmVyEhIKBG5hbWUYBCABKAlSBG5hbWUSGQoIdHlwZV91cmwYBiABKAlSB3R5cGVVcmwSHwoLb25lb2ZfaW5kZXgYByABKAVSCm9uZW9mSW5kZXgSFgoGcGFja2VkGAggASgIUgZwYWNrZWQSMQoHb3B0aW9ucxgJIAMoCzIXLmdvb2dsZS5wcm90b2J1Zi5PcHRpb25SB29wdGlvbnMSGwoJanNvbl9uYW1lGAogASgJUghqc29uTmFtZRIjCg1kZWZhdWx0X3ZhbHVlGAsgASgJUgxkZWZhdWx0VmFsdWUiyAIKBEtpbmQSEAoMVFlQRV9VTktOT1dOEAASDwoLVFlQRV9ET1VCTEUQARIOCgpUWVBFX0ZMT0FUEAISDgoKVFlQRV9JTlQ2NBADEg8KC1RZUEVfVUlOVDY0EAQSDgoKVFlQRV9JTlQzMhAFEhAKDFRZUEVfRklYRUQ2NBAGEhAKDFRZUEVfRklYRUQzMhAHEg0KCVRZUEVfQk9PTBAIEg8KC1RZUEVfU1RSSU5HEAkSDgoKVFlQRV9HUk9VUBAKEhAKDFRZUEVfTUVTU0FHRRALEg4KClRZUEVfQllURVMQDBIPCgtUWVBFX1VJTlQzMhANEg0KCVRZUEVfRU5VTRAOEhEKDVRZUEVfU0ZJWEVEMzIQDxIRCg1UWVBFX1NGSVhFRDY0EBASDwoLVFlQRV9TSU5UMzIQERIPCgtUWVBFX1NJTlQ2NBASInQKC0NhcmRpbmFsaXR5EhcKE0NBUkRJTkFMSVRZX1VOS05PV04QABIYChRDQVJESU5BTElUWV9PUFRJT05BTBABEhgKFENBUkRJTkFMSVRZX1JFUVVJUkVEEAISGAoUQ0FSRElOQUxJVFlfUkVQRUFURUQQAw==');
+@$core.Deprecated('Use enumDescriptor instead')
 const Enum$json = {
   '1': 'Enum',
   '2': [
@@ -165,6 +184,10 @@ const Enum$json = {
   ],
 };
 
+/// Descriptor for `Enum`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List enumDescriptor = $convert.base64Decode(
+    'CgRFbnVtEhIKBG5hbWUYASABKAlSBG5hbWUSOAoJZW51bXZhbHVlGAIgAygLMhouZ29vZ2xlLnByb3RvYnVmLkVudW1WYWx1ZVIJZW51bXZhbHVlEjEKB29wdGlvbnMYAyADKAsyFy5nb29nbGUucHJvdG9idWYuT3B0aW9uUgdvcHRpb25zEkUKDnNvdXJjZV9jb250ZXh0GAQgASgLMh4uZ29vZ2xlLnByb3RvYnVmLlNvdXJjZUNvbnRleHRSDXNvdXJjZUNvbnRleHQSLwoGc3ludGF4GAUgASgOMhcuZ29vZ2xlLnByb3RvYnVmLlN5bnRheFIGc3ludGF4');
+@$core.Deprecated('Use enumValueDescriptor instead')
 const EnumValue$json = {
   '1': 'EnumValue',
   '2': [
@@ -181,6 +204,10 @@ const EnumValue$json = {
   ],
 };
 
+/// Descriptor for `EnumValue`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List enumValueDescriptor = $convert.base64Decode(
+    'CglFbnVtVmFsdWUSEgoEbmFtZRgBIAEoCVIEbmFtZRIWCgZudW1iZXIYAiABKAVSBm51bWJlchIxCgdvcHRpb25zGAMgAygLMhcuZ29vZ2xlLnByb3RvYnVmLk9wdGlvblIHb3B0aW9ucw==');
+@$core.Deprecated('Use optionDescriptor instead')
 const Option$json = {
   '1': 'Option',
   '2': [
@@ -195,3 +222,7 @@ const Option$json = {
     },
   ],
 };
+
+/// Descriptor for `Option`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List optionDescriptor = $convert.base64Decode(
+    'CgZPcHRpb24SEgoEbmFtZRgBIAEoCVIEbmFtZRIqCgV2YWx1ZRgCIAEoCzIULmdvb2dsZS5wcm90b2J1Zi5BbnlSBXZhbHVl');

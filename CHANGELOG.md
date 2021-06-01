@@ -1,3 +1,6 @@
+## 0.13.0
+ * Migrated to _null-safety_ and `package:gcloud` version `0.8.0`.
+
 ## 0.12.1
  * Setup default `authClient` in `package:gcloud`, fixing regression from
    introduction of _Application Default Credentials_ in `0.12.0`.

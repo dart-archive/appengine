@@ -2,9 +2,14 @@
 //  Generated code. Do not modify.
 //  source: google/api/consumer.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
+import 'dart:core' as $core;
+import 'dart:convert' as $convert;
+import 'dart:typed_data' as $typed_data;
+
+@$core.Deprecated('Use projectPropertiesDescriptor instead')
 const ProjectProperties$json = {
   '1': 'ProjectProperties',
   '2': [
@@ -19,6 +24,10 @@ const ProjectProperties$json = {
   ],
 };
 
+/// Descriptor for `ProjectProperties`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List projectPropertiesDescriptor = $convert.base64Decode(
+    'ChFQcm9qZWN0UHJvcGVydGllcxI0Cgpwcm9wZXJ0aWVzGAEgAygLMhQuZ29vZ2xlLmFwaS5Qcm9wZXJ0eVIKcHJvcGVydGllcw==');
+@$core.Deprecated('Use propertyDescriptor instead')
 const Property$json = {
   '1': 'Property',
   '2': [
@@ -36,6 +45,7 @@ const Property$json = {
   '4': [Property_PropertyType$json],
 };
 
+@$core.Deprecated('Use propertyDescriptor instead')
 const Property_PropertyType$json = {
   '1': 'PropertyType',
   '2': [
@@ -46,3 +56,7 @@ const Property_PropertyType$json = {
     {'1': 'DOUBLE', '2': 4},
   ],
 };
+
+/// Descriptor for `Property`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List propertyDescriptor = $convert.base64Decode(
+    'CghQcm9wZXJ0eRISCgRuYW1lGAEgASgJUgRuYW1lEjUKBHR5cGUYAiABKA4yIS5nb29nbGUuYXBpLlByb3BlcnR5LlByb3BlcnR5VHlwZVIEdHlwZRIgCgtkZXNjcmlwdGlvbhgDIAEoCVILZGVzY3JpcHRpb24iTAoMUHJvcGVydHlUeXBlEg8KC1VOU1BFQ0lGSUVEEAASCQoFSU5UNjQQARIICgRCT09MEAISCgoGU1RSSU5HEAMSCgoGRE9VQkxFEAQ=');

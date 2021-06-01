@@ -18,9 +18,12 @@ const TEST_UNINDEXED_PROPERTY = 'unindexedProp';
 const TEST_BLOB_INDEXED_PROPERTY = 'blobPropertyIndexed';
 final TEST_BLOB_INDEXED_VALUE = BlobValue([0xaa, 0xaa, 0xff, 0xff]);
 
-buildKey(int i, {Function idFunction, String kind = TEST_KIND, Partition p}) {
+buildKey(int i, {Function? idFunction, String kind = TEST_KIND, Partition? p}) {
   var path = [KeyElement(kind, idFunction == null ? null : idFunction(i))];
-  return Key(path, partition: p);
+  if (p != null) {
+    return Key(path, partition: p);
+  }
+  return Key(path);
 }
 
 Map<String, Object> buildProperties(int i) {
@@ -39,20 +42,20 @@ Map<String, Object> buildProperties(int i) {
 }
 
 List<Key> buildKeys(int from, int to,
-    {Function idFunction, String kind = TEST_KIND, Partition partition}) {
+    {Function? idFunction, String kind = TEST_KIND, Partition? partition}) {
   var keys = <Key>[];
   for (var i = from; i < to; i++) {
-    keys.add(buildKey(i, idFunction: idFunction, kind: kind, p: partition));
+    keys.add(buildKey(i, idFunction: idFunction, kind: kind, p: partition!));
   }
   return keys;
 }
 
 List<Entity> buildEntities(int from, int to,
-    {Function idFunction, String kind = TEST_KIND, Partition partition}) {
+    {Function? idFunction, String kind = TEST_KIND, Partition? partition}) {
   var entities = <Entity>[];
   var unIndexedProperties = Set<String>();
   for (var i = from; i < to; i++) {
-    var key = buildKey(i, idFunction: idFunction, kind: kind, p: partition);
+    var key = buildKey(i, idFunction: idFunction, kind: kind, p: partition!);
     var properties = buildProperties(i);
     unIndexedProperties.add(TEST_UNINDEXED_PROPERTY);
     entities
@@ -62,11 +65,11 @@ List<Entity> buildEntities(int from, int to,
 }
 
 List<Entity> buildEntityWithAllProperties(int from, int to,
-    {String kind = TEST_KIND, Partition partition}) {
+    {String kind = TEST_KIND, Partition? partition}) {
   var us42 = const Duration(microseconds: 42);
   var unIndexed = Set<String>.from(['blobProperty']);
 
-  Map<String, Object> buildProperties(int i) {
+  Map<String, Object?> buildProperties(int i) {
     return {
       'nullValue': null,
       'boolProperty': true,
@@ -90,7 +93,7 @@ List<Entity> buildEntityWithAllProperties(int from, int to,
   var entities = <Entity>[];
   for (var i = from; i < to; i++) {
     var key =
-        buildKey(i, idFunction: (i) => 'allprop$i', kind: kind, p: partition);
+        buildKey(i, idFunction: (i) => 'allprop$i', kind: kind, p: partition!);
     var properties = buildProperties(i);
     entities.add(Entity(key, properties, unIndexedProperties: unIndexed));
   }

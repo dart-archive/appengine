@@ -57,10 +57,10 @@ const Symbol _APPENGINE_CONTEXT = #appengine.context;
 /// and is no longer serving requests.
 Future runAppEngine(
   void handler(HttpRequest request), {
-  Function onError,
+  Function? onError,
   int port = 8080,
   bool shared = false,
-  void onAcceptingConnections(InternetAddress address, int port),
+  void onAcceptingConnections(InternetAddress address, int port)?,
 }) {
   var errorHandler;
   if (onError != null) {
@@ -154,7 +154,7 @@ Future withAppEngineServices(Future callback()) {
 ///
 /// This getter can only be called inside a request handler which was passed to
 /// [runAppEngine].
-ClientContext get context => ss.lookup(_APPENGINE_CONTEXT);
+ClientContext get context => ss.lookup(_APPENGINE_CONTEXT) as ClientContext;
 
 /// Will register for log events produced by `package:logging` and forwards
 /// log records to the AppEngine logging service.

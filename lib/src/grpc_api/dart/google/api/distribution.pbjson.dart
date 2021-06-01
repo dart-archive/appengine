@@ -2,9 +2,14 @@
 //  Generated code. Do not modify.
 //  source: google/api/distribution.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
+import 'dart:core' as $core;
+import 'dart:convert' as $convert;
+import 'dart:typed_data' as $typed_data;
+
+@$core.Deprecated('Use distributionDescriptor instead')
 const Distribution$json = {
   '1': 'Distribution',
   '2': [
@@ -50,6 +55,7 @@ const Distribution$json = {
   ],
 };
 
+@$core.Deprecated('Use distributionDescriptor instead')
 const Distribution_Range$json = {
   '1': 'Range',
   '2': [
@@ -58,6 +64,7 @@ const Distribution_Range$json = {
   ],
 };
 
+@$core.Deprecated('Use distributionDescriptor instead')
 const Distribution_BucketOptions$json = {
   '1': 'BucketOptions',
   '2': [
@@ -99,6 +106,7 @@ const Distribution_BucketOptions$json = {
   ],
 };
 
+@$core.Deprecated('Use distributionDescriptor instead')
 const Distribution_BucketOptions_Linear$json = {
   '1': 'Linear',
   '2': [
@@ -114,6 +122,7 @@ const Distribution_BucketOptions_Linear$json = {
   ],
 };
 
+@$core.Deprecated('Use distributionDescriptor instead')
 const Distribution_BucketOptions_Exponential$json = {
   '1': 'Exponential',
   '2': [
@@ -129,6 +138,7 @@ const Distribution_BucketOptions_Exponential$json = {
   ],
 };
 
+@$core.Deprecated('Use distributionDescriptor instead')
 const Distribution_BucketOptions_Explicit$json = {
   '1': 'Explicit',
   '2': [
@@ -136,6 +146,7 @@ const Distribution_BucketOptions_Explicit$json = {
   ],
 };
 
+@$core.Deprecated('Use distributionDescriptor instead')
 const Distribution_Exemplar$json = {
   '1': 'Exemplar',
   '2': [
@@ -158,3 +169,7 @@ const Distribution_Exemplar$json = {
     },
   ],
 };
+
+/// Descriptor for `Distribution`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List distributionDescriptor = $convert.base64Decode(
+    'CgxEaXN0cmlidXRpb24SFAoFY291bnQYASABKANSBWNvdW50EhIKBG1lYW4YAiABKAFSBG1lYW4SNwoYc3VtX29mX3NxdWFyZWRfZGV2aWF0aW9uGAMgASgBUhVzdW1PZlNxdWFyZWREZXZpYXRpb24SNAoFcmFuZ2UYBCABKAsyHi5nb29nbGUuYXBpLkRpc3RyaWJ1dGlvbi5SYW5nZVIFcmFuZ2USTQoOYnVja2V0X29wdGlvbnMYBiABKAsyJi5nb29nbGUuYXBpLkRpc3RyaWJ1dGlvbi5CdWNrZXRPcHRpb25zUg1idWNrZXRPcHRpb25zEiMKDWJ1Y2tldF9jb3VudHMYByADKANSDGJ1Y2tldENvdW50cxI/CglleGVtcGxhcnMYCiADKAsyIS5nb29nbGUuYXBpLkRpc3RyaWJ1dGlvbi5FeGVtcGxhclIJZXhlbXBsYXJzGisKBVJhbmdlEhAKA21pbhgBIAEoAVIDbWluEhAKA21heBgCIAEoAVIDbWF4GrkECg1CdWNrZXRPcHRpb25zElYKDmxpbmVhcl9idWNrZXRzGAEgASgLMi0uZ29vZ2xlLmFwaS5EaXN0cmlidXRpb24uQnVja2V0T3B0aW9ucy5MaW5lYXJIAFINbGluZWFyQnVja2V0cxJlChNleHBvbmVudGlhbF9idWNrZXRzGAIgASgLMjIuZ29vZ2xlLmFwaS5EaXN0cmlidXRpb24uQnVja2V0T3B0aW9ucy5FeHBvbmVudGlhbEgAUhJleHBvbmVudGlhbEJ1Y2tldHMSXAoQZXhwbGljaXRfYnVja2V0cxgDIAEoCzIvLmdvb2dsZS5hcGkuRGlzdHJpYnV0aW9uLkJ1Y2tldE9wdGlvbnMuRXhwbGljaXRIAFIPZXhwbGljaXRCdWNrZXRzGmQKBkxpbmVhchIsChJudW1fZmluaXRlX2J1Y2tldHMYASABKAVSEG51bUZpbml0ZUJ1Y2tldHMSFAoFd2lkdGgYAiABKAFSBXdpZHRoEhYKBm9mZnNldBgDIAEoAVIGb2Zmc2V0GnYKC0V4cG9uZW50aWFsEiwKEm51bV9maW5pdGVfYnVja2V0cxgBIAEoBVIQbnVtRmluaXRlQnVja2V0cxIjCg1ncm93dGhfZmFjdG9yGAIgASgBUgxncm93dGhGYWN0b3ISFAoFc2NhbGUYAyABKAFSBXNjYWxlGiIKCEV4cGxpY2l0EhYKBmJvdW5kcxgBIAMoAVIGYm91bmRzQgkKB29wdGlvbnMakgEKCEV4ZW1wbGFyEhQKBXZhbHVlGAEgASgBUgV2YWx1ZRI4Cgl0aW1lc3RhbXAYAiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUgl0aW1lc3RhbXASNgoLYXR0YWNobWVudHMYAyADKAsyFC5nb29nbGUucHJvdG9idWYuQW55UgthdHRhY2htZW50cw==');

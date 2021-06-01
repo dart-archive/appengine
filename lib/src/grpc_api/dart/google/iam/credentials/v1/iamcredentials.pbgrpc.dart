@@ -2,8 +2,8 @@
 //  Generated code. Do not modify.
 //  source: google/iam/credentials/v1/iamcredentials.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:async' as $async;
 
@@ -39,39 +39,31 @@ class IAMCredentialsClient extends $grpc.Client {
           ($core.List<$core.int> value) =>
               $0.SignJwtResponse.fromBuffer(value));
 
-  IAMCredentialsClient($grpc.ClientChannel channel, {$grpc.CallOptions options})
-      : super(channel, options: options);
+  IAMCredentialsClient($grpc.ClientChannel channel,
+      {$grpc.CallOptions? options,
+      $core.Iterable<$grpc.ClientInterceptor>? interceptors})
+      : super(channel, options: options, interceptors: interceptors);
 
   $grpc.ResponseFuture<$0.GenerateAccessTokenResponse> generateAccessToken(
       $0.GenerateAccessTokenRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$generateAccessToken, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$generateAccessToken, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.GenerateIdTokenResponse> generateIdToken(
       $0.GenerateIdTokenRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(
-        _$generateIdToken, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$generateIdToken, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.SignBlobResponse> signBlob($0.SignBlobRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(_$signBlob, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$signBlob, request, options: options);
   }
 
   $grpc.ResponseFuture<$0.SignJwtResponse> signJwt($0.SignJwtRequest request,
-      {$grpc.CallOptions options}) {
-    final call = $createCall(_$signJwt, $async.Stream.fromIterable([request]),
-        options: options);
-    return $grpc.ResponseFuture(call);
+      {$grpc.CallOptions? options}) {
+    return $createUnaryCall(_$signJwt, request, options: options);
   }
 }
 

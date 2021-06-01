@@ -2,9 +2,14 @@
 //  Generated code. Do not modify.
 //  source: google/api/expr/v1alpha1/syntax.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
+import 'dart:core' as $core;
+import 'dart:convert' as $convert;
+import 'dart:typed_data' as $typed_data;
+
+@$core.Deprecated('Use parsedExprDescriptor instead')
 const ParsedExpr$json = {
   '1': 'ParsedExpr',
   '2': [
@@ -27,6 +32,10 @@ const ParsedExpr$json = {
   ],
 };
 
+/// Descriptor for `ParsedExpr`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List parsedExprDescriptor = $convert.base64Decode(
+    'CgpQYXJzZWRFeHByEjIKBGV4cHIYAiABKAsyHi5nb29nbGUuYXBpLmV4cHIudjFhbHBoYTEuRXhwclIEZXhwchJFCgtzb3VyY2VfaW5mbxgDIAEoCzIkLmdvb2dsZS5hcGkuZXhwci52MWFscGhhMS5Tb3VyY2VJbmZvUgpzb3VyY2VJbmZv');
+@$core.Deprecated('Use exprDescriptor instead')
 const Expr$json = {
   '1': 'Expr',
   '2': [
@@ -108,6 +117,7 @@ const Expr$json = {
   ],
 };
 
+@$core.Deprecated('Use exprDescriptor instead')
 const Expr_Ident$json = {
   '1': 'Ident',
   '2': [
@@ -115,6 +125,7 @@ const Expr_Ident$json = {
   ],
 };
 
+@$core.Deprecated('Use exprDescriptor instead')
 const Expr_Select$json = {
   '1': 'Select',
   '2': [
@@ -131,6 +142,7 @@ const Expr_Select$json = {
   ],
 };
 
+@$core.Deprecated('Use exprDescriptor instead')
 const Expr_Call$json = {
   '1': 'Call',
   '2': [
@@ -154,6 +166,7 @@ const Expr_Call$json = {
   ],
 };
 
+@$core.Deprecated('Use exprDescriptor instead')
 const Expr_CreateList$json = {
   '1': 'CreateList',
   '2': [
@@ -168,6 +181,7 @@ const Expr_CreateList$json = {
   ],
 };
 
+@$core.Deprecated('Use exprDescriptor instead')
 const Expr_CreateStruct$json = {
   '1': 'CreateStruct',
   '2': [
@@ -184,6 +198,7 @@ const Expr_CreateStruct$json = {
   '3': [Expr_CreateStruct_Entry$json],
 };
 
+@$core.Deprecated('Use exprDescriptor instead')
 const Expr_CreateStruct_Entry$json = {
   '1': 'Entry',
   '2': [
@@ -212,6 +227,7 @@ const Expr_CreateStruct_Entry$json = {
   ],
 };
 
+@$core.Deprecated('Use exprDescriptor instead')
 const Expr_Comprehension$json = {
   '1': 'Comprehension',
   '2': [
@@ -260,6 +276,10 @@ const Expr_Comprehension$json = {
   ],
 };
 
+/// Descriptor for `Expr`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List exprDescriptor = $convert.base64Decode(
+    'CgRFeHByEg4KAmlkGAIgASgDUgJpZBJDCgpjb25zdF9leHByGAMgASgLMiIuZ29vZ2xlLmFwaS5leHByLnYxYWxwaGExLkNvbnN0YW50SABSCWNvbnN0RXhwchJFCgppZGVudF9leHByGAQgASgLMiQuZ29vZ2xlLmFwaS5leHByLnYxYWxwaGExLkV4cHIuSWRlbnRIAFIJaWRlbnRFeHByEkgKC3NlbGVjdF9leHByGAUgASgLMiUuZ29vZ2xlLmFwaS5leHByLnYxYWxwaGExLkV4cHIuU2VsZWN0SABSCnNlbGVjdEV4cHISQgoJY2FsbF9leHByGAYgASgLMiMuZ29vZ2xlLmFwaS5leHByLnYxYWxwaGExLkV4cHIuQ2FsbEgAUghjYWxsRXhwchJICglsaXN0X2V4cHIYByABKAsyKS5nb29nbGUuYXBpLmV4cHIudjFhbHBoYTEuRXhwci5DcmVhdGVMaXN0SABSCGxpc3RFeHByEk4KC3N0cnVjdF9leHByGAggASgLMisuZ29vZ2xlLmFwaS5leHByLnYxYWxwaGExLkV4cHIuQ3JlYXRlU3RydWN0SABSCnN0cnVjdEV4cHISXQoSY29tcHJlaGVuc2lvbl9leHByGAkgASgLMiwuZ29vZ2xlLmFwaS5leHByLnYxYWxwaGExLkV4cHIuQ29tcHJlaGVuc2lvbkgAUhFjb21wcmVoZW5zaW9uRXhwchobCgVJZGVudBISCgRuYW1lGAEgASgJUgRuYW1lGnUKBlNlbGVjdBI4CgdvcGVyYW5kGAEgASgLMh4uZ29vZ2xlLmFwaS5leHByLnYxYWxwaGExLkV4cHJSB29wZXJhbmQSFAoFZmllbGQYAiABKAlSBWZpZWxkEhsKCXRlc3Rfb25seRgDIAEoCFIIdGVzdE9ubHkajgEKBENhbGwSNgoGdGFyZ2V0GAEgASgLMh4uZ29vZ2xlLmFwaS5leHByLnYxYWxwaGExLkV4cHJSBnRhcmdldBIaCghmdW5jdGlvbhgCIAEoCVIIZnVuY3Rpb24SMgoEYXJncxgDIAMoCzIeLmdvb2dsZS5hcGkuZXhwci52MWFscGhhMS5FeHByUgRhcmdzGkgKCkNyZWF0ZUxpc3QSOgoIZWxlbWVudHMYASADKAsyHi5nb29nbGUuYXBpLmV4cHIudjFhbHBoYTEuRXhwclIIZWxlbWVudHMatAIKDENyZWF0ZVN0cnVjdBIhCgxtZXNzYWdlX25hbWUYASABKAlSC21lc3NhZ2VOYW1lEksKB2VudHJpZXMYAiADKAsyMS5nb29nbGUuYXBpLmV4cHIudjFhbHBoYTEuRXhwci5DcmVhdGVTdHJ1Y3QuRW50cnlSB2VudHJpZXMaswEKBUVudHJ5Eg4KAmlkGAEgASgDUgJpZBIdCglmaWVsZF9rZXkYAiABKAlIAFIIZmllbGRLZXkSOQoHbWFwX2tleRgDIAEoCzIeLmdvb2dsZS5hcGkuZXhwci52MWFscGhhMS5FeHBySABSBm1hcEtleRI0CgV2YWx1ZRgEIAEoCzIeLmdvb2dsZS5hcGkuZXhwci52MWFscGhhMS5FeHByUgV2YWx1ZUIKCghrZXlfa2luZBr9AgoNQ29tcHJlaGVuc2lvbhIZCghpdGVyX3ZhchgBIAEoCVIHaXRlclZhchI9CgppdGVyX3JhbmdlGAIgASgLMh4uZ29vZ2xlLmFwaS5leHByLnYxYWxwaGExLkV4cHJSCWl0ZXJSYW5nZRIZCghhY2N1X3ZhchgDIAEoCVIHYWNjdVZhchI7CglhY2N1X2luaXQYBCABKAsyHi5nb29nbGUuYXBpLmV4cHIudjFhbHBoYTEuRXhwclIIYWNjdUluaXQSRQoObG9vcF9jb25kaXRpb24YBSABKAsyHi5nb29nbGUuYXBpLmV4cHIudjFhbHBoYTEuRXhwclINbG9vcENvbmRpdGlvbhI7Cglsb29wX3N0ZXAYBiABKAsyHi5nb29nbGUuYXBpLmV4cHIudjFhbHBoYTEuRXhwclIIbG9vcFN0ZXASNgoGcmVzdWx0GAcgASgLMh4uZ29vZ2xlLmFwaS5leHByLnYxYWxwaGExLkV4cHJSBnJlc3VsdEILCglleHByX2tpbmQ=');
+@$core.Deprecated('Use constantDescriptor instead')
 const Constant$json = {
   '1': 'Constant',
   '2': [
@@ -304,6 +324,10 @@ const Constant$json = {
   ],
 };
 
+/// Descriptor for `Constant`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List constantDescriptor = $convert.base64Decode(
+    'CghDb25zdGFudBI7CgpudWxsX3ZhbHVlGAEgASgOMhouZ29vZ2xlLnByb3RvYnVmLk51bGxWYWx1ZUgAUgludWxsVmFsdWUSHwoKYm9vbF92YWx1ZRgCIAEoCEgAUglib29sVmFsdWUSIQoLaW50NjRfdmFsdWUYAyABKANIAFIKaW50NjRWYWx1ZRIjCgx1aW50NjRfdmFsdWUYBCABKARIAFILdWludDY0VmFsdWUSIwoMZG91YmxlX3ZhbHVlGAUgASgBSABSC2RvdWJsZVZhbHVlEiMKDHN0cmluZ192YWx1ZRgGIAEoCUgAUgtzdHJpbmdWYWx1ZRIhCgtieXRlc192YWx1ZRgHIAEoDEgAUgpieXRlc1ZhbHVlEkYKDmR1cmF0aW9uX3ZhbHVlGAggASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uQgIYAUgAUg1kdXJhdGlvblZhbHVlEkkKD3RpbWVzdGFtcF92YWx1ZRgJIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCAhgBSABSDnRpbWVzdGFtcFZhbHVlQg8KDWNvbnN0YW50X2tpbmQ=');
+@$core.Deprecated('Use sourceInfoDescriptor instead')
 const SourceInfo$json = {
   '1': 'SourceInfo',
   '2': [
@@ -330,6 +354,7 @@ const SourceInfo$json = {
   '3': [SourceInfo_PositionsEntry$json, SourceInfo_MacroCallsEntry$json],
 };
 
+@$core.Deprecated('Use sourceInfoDescriptor instead')
 const SourceInfo_PositionsEntry$json = {
   '1': 'PositionsEntry',
   '2': [
@@ -339,6 +364,7 @@ const SourceInfo_PositionsEntry$json = {
   '7': {'7': true},
 };
 
+@$core.Deprecated('Use sourceInfoDescriptor instead')
 const SourceInfo_MacroCallsEntry$json = {
   '1': 'MacroCallsEntry',
   '2': [
@@ -355,6 +381,10 @@ const SourceInfo_MacroCallsEntry$json = {
   '7': {'7': true},
 };
 
+/// Descriptor for `SourceInfo`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List sourceInfoDescriptor = $convert.base64Decode(
+    'CgpTb3VyY2VJbmZvEiUKDnN5bnRheF92ZXJzaW9uGAEgASgJUg1zeW50YXhWZXJzaW9uEhoKCGxvY2F0aW9uGAIgASgJUghsb2NhdGlvbhIhCgxsaW5lX29mZnNldHMYAyADKAVSC2xpbmVPZmZzZXRzElEKCXBvc2l0aW9ucxgEIAMoCzIzLmdvb2dsZS5hcGkuZXhwci52MWFscGhhMS5Tb3VyY2VJbmZvLlBvc2l0aW9uc0VudHJ5Uglwb3NpdGlvbnMSVQoLbWFjcm9fY2FsbHMYBSADKAsyNC5nb29nbGUuYXBpLmV4cHIudjFhbHBoYTEuU291cmNlSW5mby5NYWNyb0NhbGxzRW50cnlSCm1hY3JvQ2FsbHMaPAoOUG9zaXRpb25zRW50cnkSEAoDa2V5GAEgASgDUgNrZXkSFAoFdmFsdWUYAiABKAVSBXZhbHVlOgI4ARpdCg9NYWNyb0NhbGxzRW50cnkSEAoDa2V5GAEgASgDUgNrZXkSNAoFdmFsdWUYAiABKAsyHi5nb29nbGUuYXBpLmV4cHIudjFhbHBoYTEuRXhwclIFdmFsdWU6AjgB');
+@$core.Deprecated('Use sourcePositionDescriptor instead')
 const SourcePosition$json = {
   '1': 'SourcePosition',
   '2': [
@@ -364,3 +394,7 @@ const SourcePosition$json = {
     {'1': 'column', '3': 4, '4': 1, '5': 5, '10': 'column'},
   ],
 };
+
+/// Descriptor for `SourcePosition`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List sourcePositionDescriptor = $convert.base64Decode(
+    'Cg5Tb3VyY2VQb3NpdGlvbhIaCghsb2NhdGlvbhgBIAEoCVIIbG9jYXRpb24SFgoGb2Zmc2V0GAIgASgFUgZvZmZzZXQSEgoEbGluZRgDIAEoBVIEbGluZRIWCgZjb2x1bW4YBCABKAVSBmNvbHVtbg==');

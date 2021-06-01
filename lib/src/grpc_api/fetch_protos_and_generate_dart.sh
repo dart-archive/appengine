@@ -29,7 +29,7 @@ function run {
 run rm -rf $PROTOBUF_DIR
 run git clone https://github.com/google/protobuf.git $PROTOBUF_DIR
 run rm -rf $GOOGLEAPIS_DIR
-run git clone https://github.com/google/googleapis.git $GOOGLEAPIS_DIR
+run git clone https://github.com/googleapis/googleapis.git $GOOGLEAPIS_DIR
 
 # Get rid of all old proto files & fetch new ones from protobuf/googleapis
 # repositories.

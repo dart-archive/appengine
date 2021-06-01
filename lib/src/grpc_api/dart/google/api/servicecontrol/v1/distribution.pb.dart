@@ -2,8 +2,8 @@
 //  Generated code. Do not modify.
 //  source: google/api/servicecontrol/v1/distribution.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:core' as $core;
 
@@ -12,28 +12,69 @@ import 'package:protobuf/protobuf.dart' as $pb;
 
 class Distribution_LinearBuckets extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      'Distribution.LinearBuckets',
-      package: const $pb.PackageName('google.api.servicecontrol.v1'),
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'Distribution.LinearBuckets',
+      package: const $pb.PackageName(
+          $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.api.servicecontrol.v1'),
       createEmptyInstance: create)
-    ..a<$core.int>(1, 'numFiniteBuckets', $pb.PbFieldType.O3)
-    ..a<$core.double>(2, 'width', $pb.PbFieldType.OD)
-    ..a<$core.double>(3, 'offset', $pb.PbFieldType.OD)
+    ..a<$core.int>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'numFiniteBuckets',
+        $pb.PbFieldType.O3)
+    ..a<$core.double>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'width',
+        $pb.PbFieldType.OD)
+    ..a<$core.double>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'offset',
+        $pb.PbFieldType.OD)
     ..hasRequiredFields = false;
 
   Distribution_LinearBuckets._() : super();
-  factory Distribution_LinearBuckets() => create();
+  factory Distribution_LinearBuckets({
+    $core.int? numFiniteBuckets,
+    $core.double? width,
+    $core.double? offset,
+  }) {
+    final _result = create();
+    if (numFiniteBuckets != null) {
+      _result.numFiniteBuckets = numFiniteBuckets;
+    }
+    if (width != null) {
+      _result.width = width;
+    }
+    if (offset != null) {
+      _result.offset = offset;
+    }
+    return _result;
+  }
   factory Distribution_LinearBuckets.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Distribution_LinearBuckets.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   Distribution_LinearBuckets clone() =>
       Distribution_LinearBuckets()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   Distribution_LinearBuckets copyWith(
           void Function(Distribution_LinearBuckets) updates) =>
       super.copyWith(
-          (message) => updates(message as Distribution_LinearBuckets));
+              (message) => updates(message as Distribution_LinearBuckets))
+          as Distribution_LinearBuckets; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static Distribution_LinearBuckets create() => Distribution_LinearBuckets._();
@@ -43,7 +84,7 @@ class Distribution_LinearBuckets extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static Distribution_LinearBuckets getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Distribution_LinearBuckets>(create);
-  static Distribution_LinearBuckets _defaultInstance;
+  static Distribution_LinearBuckets? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.int get numFiniteBuckets => $_getIZ(0);
@@ -84,28 +125,69 @@ class Distribution_LinearBuckets extends $pb.GeneratedMessage {
 
 class Distribution_ExponentialBuckets extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      'Distribution.ExponentialBuckets',
-      package: const $pb.PackageName('google.api.servicecontrol.v1'),
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'Distribution.ExponentialBuckets',
+      package: const $pb.PackageName(
+          $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.api.servicecontrol.v1'),
       createEmptyInstance: create)
-    ..a<$core.int>(1, 'numFiniteBuckets', $pb.PbFieldType.O3)
-    ..a<$core.double>(2, 'growthFactor', $pb.PbFieldType.OD)
-    ..a<$core.double>(3, 'scale', $pb.PbFieldType.OD)
+    ..a<$core.int>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'numFiniteBuckets',
+        $pb.PbFieldType.O3)
+    ..a<$core.double>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'growthFactor',
+        $pb.PbFieldType.OD)
+    ..a<$core.double>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'scale',
+        $pb.PbFieldType.OD)
     ..hasRequiredFields = false;
 
   Distribution_ExponentialBuckets._() : super();
-  factory Distribution_ExponentialBuckets() => create();
+  factory Distribution_ExponentialBuckets({
+    $core.int? numFiniteBuckets,
+    $core.double? growthFactor,
+    $core.double? scale,
+  }) {
+    final _result = create();
+    if (numFiniteBuckets != null) {
+      _result.numFiniteBuckets = numFiniteBuckets;
+    }
+    if (growthFactor != null) {
+      _result.growthFactor = growthFactor;
+    }
+    if (scale != null) {
+      _result.scale = scale;
+    }
+    return _result;
+  }
   factory Distribution_ExponentialBuckets.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Distribution_ExponentialBuckets.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   Distribution_ExponentialBuckets clone() =>
       Distribution_ExponentialBuckets()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   Distribution_ExponentialBuckets copyWith(
           void Function(Distribution_ExponentialBuckets) updates) =>
       super.copyWith(
-          (message) => updates(message as Distribution_ExponentialBuckets));
+              (message) => updates(message as Distribution_ExponentialBuckets))
+          as Distribution_ExponentialBuckets; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static Distribution_ExponentialBuckets create() =>
@@ -117,7 +199,7 @@ class Distribution_ExponentialBuckets extends $pb.GeneratedMessage {
   static Distribution_ExponentialBuckets getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Distribution_ExponentialBuckets>(
           create);
-  static Distribution_ExponentialBuckets _defaultInstance;
+  static Distribution_ExponentialBuckets? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.int get numFiniteBuckets => $_getIZ(0);
@@ -158,26 +240,51 @@ class Distribution_ExponentialBuckets extends $pb.GeneratedMessage {
 
 class Distribution_ExplicitBuckets extends $pb.GeneratedMessage {
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      'Distribution.ExplicitBuckets',
-      package: const $pb.PackageName('google.api.servicecontrol.v1'),
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'Distribution.ExplicitBuckets',
+      package: const $pb.PackageName(
+          $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.api.servicecontrol.v1'),
       createEmptyInstance: create)
-    ..p<$core.double>(1, 'bounds', $pb.PbFieldType.PD)
+    ..p<$core.double>(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'bounds',
+        $pb.PbFieldType.PD)
     ..hasRequiredFields = false;
 
   Distribution_ExplicitBuckets._() : super();
-  factory Distribution_ExplicitBuckets() => create();
+  factory Distribution_ExplicitBuckets({
+    $core.Iterable<$core.double>? bounds,
+  }) {
+    final _result = create();
+    if (bounds != null) {
+      _result.bounds.addAll(bounds);
+    }
+    return _result;
+  }
   factory Distribution_ExplicitBuckets.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Distribution_ExplicitBuckets.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   Distribution_ExplicitBuckets clone() =>
       Distribution_ExplicitBuckets()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   Distribution_ExplicitBuckets copyWith(
           void Function(Distribution_ExplicitBuckets) updates) =>
       super.copyWith(
-          (message) => updates(message as Distribution_ExplicitBuckets));
+              (message) => updates(message as Distribution_ExplicitBuckets))
+          as Distribution_ExplicitBuckets; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static Distribution_ExplicitBuckets create() =>
@@ -188,7 +295,7 @@ class Distribution_ExplicitBuckets extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static Distribution_ExplicitBuckets getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Distribution_ExplicitBuckets>(create);
-  static Distribution_ExplicitBuckets _defaultInstance;
+  static Distribution_ExplicitBuckets? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.List<$core.double> get bounds => $_getList(0);
@@ -209,35 +316,99 @@ class Distribution extends $pb.GeneratedMessage {
     9: Distribution_BucketOption.explicitBuckets,
     0: Distribution_BucketOption.notSet
   };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Distribution',
-      package: const $pb.PackageName('google.api.servicecontrol.v1'),
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      const $core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'Distribution',
+      package: const $pb.PackageName(
+          $core.bool.fromEnvironment('protobuf.omit_message_names')
+              ? ''
+              : 'google.api.servicecontrol.v1'),
       createEmptyInstance: create)
     ..oo(0, [7, 8, 9])
-    ..aInt64(1, 'count')
-    ..a<$core.double>(2, 'mean', $pb.PbFieldType.OD)
-    ..a<$core.double>(3, 'minimum', $pb.PbFieldType.OD)
-    ..a<$core.double>(4, 'maximum', $pb.PbFieldType.OD)
-    ..a<$core.double>(5, 'sumOfSquaredDeviation', $pb.PbFieldType.OD)
-    ..p<$fixnum.Int64>(6, 'bucketCounts', $pb.PbFieldType.P6)
-    ..aOM<Distribution_LinearBuckets>(7, 'linearBuckets',
-        subBuilder: Distribution_LinearBuckets.create)
-    ..aOM<Distribution_ExponentialBuckets>(8, 'exponentialBuckets',
-        subBuilder: Distribution_ExponentialBuckets.create)
-    ..aOM<Distribution_ExplicitBuckets>(9, 'explicitBuckets',
-        subBuilder: Distribution_ExplicitBuckets.create)
+    ..aInt64(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'count')
+    ..a<$core.double>(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'mean',
+        $pb.PbFieldType.OD)
+    ..a<$core.double>(
+        3,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'minimum',
+        $pb.PbFieldType.OD)
+    ..a<$core.double>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'maximum', $pb.PbFieldType.OD)
+    ..a<$core.double>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'sumOfSquaredDeviation', $pb.PbFieldType.OD)
+    ..p<$fixnum.Int64>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'bucketCounts', $pb.PbFieldType.P6)
+    ..aOM<Distribution_LinearBuckets>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'linearBuckets', subBuilder: Distribution_LinearBuckets.create)
+    ..aOM<Distribution_ExponentialBuckets>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'exponentialBuckets', subBuilder: Distribution_ExponentialBuckets.create)
+    ..aOM<Distribution_ExplicitBuckets>(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'explicitBuckets', subBuilder: Distribution_ExplicitBuckets.create)
     ..hasRequiredFields = false;
 
   Distribution._() : super();
-  factory Distribution() => create();
+  factory Distribution({
+    $fixnum.Int64? count,
+    $core.double? mean,
+    $core.double? minimum,
+    $core.double? maximum,
+    $core.double? sumOfSquaredDeviation,
+    $core.Iterable<$fixnum.Int64>? bucketCounts,
+    Distribution_LinearBuckets? linearBuckets,
+    Distribution_ExponentialBuckets? exponentialBuckets,
+    Distribution_ExplicitBuckets? explicitBuckets,
+  }) {
+    final _result = create();
+    if (count != null) {
+      _result.count = count;
+    }
+    if (mean != null) {
+      _result.mean = mean;
+    }
+    if (minimum != null) {
+      _result.minimum = minimum;
+    }
+    if (maximum != null) {
+      _result.maximum = maximum;
+    }
+    if (sumOfSquaredDeviation != null) {
+      _result.sumOfSquaredDeviation = sumOfSquaredDeviation;
+    }
+    if (bucketCounts != null) {
+      _result.bucketCounts.addAll(bucketCounts);
+    }
+    if (linearBuckets != null) {
+      _result.linearBuckets = linearBuckets;
+    }
+    if (exponentialBuckets != null) {
+      _result.exponentialBuckets = exponentialBuckets;
+    }
+    if (explicitBuckets != null) {
+      _result.explicitBuckets = explicitBuckets;
+    }
+    return _result;
+  }
   factory Distribution.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Distribution.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   Distribution clone() => Distribution()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   Distribution copyWith(void Function(Distribution) updates) =>
-      super.copyWith((message) => updates(message as Distribution));
+      super.copyWith((message) => updates(message as Distribution))
+          as Distribution; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static Distribution create() => Distribution._();
@@ -247,10 +418,10 @@ class Distribution extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static Distribution getDefault() => _defaultInstance ??=
       $pb.GeneratedMessage.$_defaultFor<Distribution>(create);
-  static Distribution _defaultInstance;
+  static Distribution? _defaultInstance;
 
   Distribution_BucketOption whichBucketOption() =>
-      _Distribution_BucketOptionByTag[$_whichOneof(0)];
+      _Distribution_BucketOptionByTag[$_whichOneof(0)]!;
   void clearBucketOption() => clearField($_whichOneof(0));
 
   @$pb.TagNumber(1)

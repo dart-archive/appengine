@@ -66,10 +66,10 @@ class GrpcDatastoreImpl implements raw.Datastore {
 
   @override
   Future<raw.CommitResult> commit(
-      {List<raw.Entity> inserts,
-      List<raw.Entity> autoIdInserts,
-      List<raw.Key> deletes,
-      raw.Transaction transaction}) async {
+      {List<raw.Entity>? inserts,
+      List<raw.Entity>? autoIdInserts,
+      List<raw.Key>? deletes,
+      raw.Transaction? transaction}) async {
     final request = CommitRequest()..projectId = _projectId;
 
     if (transaction != null) {
@@ -99,9 +99,9 @@ class GrpcDatastoreImpl implements raw.Datastore {
     try {
       final CommitResponse response = await _clientRPCStub.commit(request);
 
-      List<raw.Key> allocatedKeys;
+      var allocatedKeys = <raw.Key>[];
       if (autoIdInserts?.isNotEmpty ?? false) {
-        allocatedKeys = List<raw.Key>.generate(autoIdInserts.length, (i) {
+        allocatedKeys = List<raw.Key>.generate(autoIdInserts!.length, (i) {
           return _codec.decodeKey(response.mutationResults[i].key);
         });
       }
@@ -110,7 +110,7 @@ class GrpcDatastoreImpl implements raw.Datastore {
       if (error.code == grpc.StatusCode.aborted) {
         throw raw.TransactionAbortedError();
       } else if (error.code == grpc.StatusCode.invalidArgument) {
-        throw raw.ApplicationError(error.message);
+        throw raw.ApplicationError(error.message ?? 'Unknown error');
       } else {
         rethrow;
       }
@@ -131,8 +131,8 @@ class GrpcDatastoreImpl implements raw.Datastore {
   }
 
   @override
-  Future<List<raw.Entity>> lookup(List<raw.Key> keys,
-      {raw.Transaction transaction}) async {
+  Future<List<raw.Entity?>> lookup(List<raw.Key> keys,
+      {raw.Transaction? transaction}) async {
     final request = LookupRequest()
       ..projectId = _projectId
       ..readOptions =
@@ -147,25 +147,21 @@ class GrpcDatastoreImpl implements raw.Datastore {
 
     try {
       final LookupResponse response = await _clientRPCStub.lookup(request);
-      if (response.deferred != null && response.deferred.isNotEmpty) {
+      if (response.deferred.isNotEmpty) {
         throw raw.DatastoreError(
             'Could not successfully look up all keys due to resource '
             'constraints.');
       }
 
-      final Map<Key, raw.Entity> entityLookupResult = <Key, raw.Entity>{};
-      if (response.found != null) {
-        for (final result in response.found) {
-          entityLookupResult[result.entity.key] =
-              _codec.decodeEntity(result.entity);
-        }
+      final Map<Key, raw.Entity?> entityLookupResult = <Key, raw.Entity?>{};
+      for (final result in response.found) {
+        entityLookupResult[result.entity.key] =
+            _codec.decodeEntity(result.entity);
       }
-      if (response.missing != null) {
-        for (final result in response.missing) {
-          entityLookupResult[result.entity.key] = null;
-        }
+      for (final result in response.missing) {
+        entityLookupResult[result.entity.key] = null;
       }
-      final entities = List<raw.Entity>(request.keys.length);
+      final entities = List<raw.Entity?>.filled(request.keys.length, null);
       for (int i = 0; i < request.keys.length; i++) {
         final key = request.keys[i];
         // The key needs to be in the map, but it's value might be `null`.
@@ -185,7 +181,7 @@ class GrpcDatastoreImpl implements raw.Datastore {
 
   @override
   Future<Page<raw.Entity>> query(raw.Query query,
-      {raw.Partition partition, raw.Transaction transaction}) async {
+      {raw.Partition? partition, raw.Transaction? transaction}) async {
     final request = RunQueryRequest()..projectId = _projectId;
 
     if (transaction != null) {
@@ -197,22 +193,22 @@ class GrpcDatastoreImpl implements raw.Datastore {
     if (partition != null && partition.namespace != null) {
       request.partitionId = PartitionId()
         ..projectId = _projectId
-        ..namespaceId = partition.namespace;
+        ..namespaceId = partition.namespace!;
     }
 
     final pbQuery = Query();
     if (query.kind != null) {
-      pbQuery.kind.add(KindExpression()..name = query.kind);
+      pbQuery.kind.add(KindExpression()..name = query.kind!);
     }
-    if (query.offset != null) pbQuery.offset = query.offset;
-    if (query.limit != null) pbQuery.limit = Int32Value()..value = query.limit;
+    if (query.offset != null) pbQuery.offset = query.offset!;
+    if (query.limit != null) pbQuery.limit = Int32Value()..value = query.limit!;
 
     // Build a list of property and ancestor query filters. The entries in this
     // list will be combined with an AND filter.
     final List<Filter> filters = <Filter>[];
-    if (query.filters != null && query.filters.isNotEmpty) {
-      for (final filter in query.filters) {
-        final operation = _Codec.FILTER_RELATION_MAPPING[filter.relation];
+    if (query.filters != null && query.filters!.isNotEmpty) {
+      for (final filter in query.filters!) {
+        final operation = _Codec.FILTER_RELATION_MAPPING[filter.relation]!;
         final value = filter.value;
         final pbPropertyFilter = PropertyFilter()
           ..property = (PropertyReference()..name = filter.name)
@@ -223,7 +219,7 @@ class GrpcDatastoreImpl implements raw.Datastore {
       }
     }
     if (query.ancestorKey != null) {
-      final ancestorKey = _codec.encodeKey(query.ancestorKey, enforceId: true);
+      final ancestorKey = _codec.encodeKey(query.ancestorKey!, enforceId: true);
       final pbPropertyFilter = PropertyFilter()
         ..property = (PropertyReference()..name = '__key__')
         ..op = PropertyFilter_Operator.HAS_ANCESTOR
@@ -242,7 +238,7 @@ class GrpcDatastoreImpl implements raw.Datastore {
     }
 
     if (query.orders != null) {
-      for (final order in query.orders) {
+      for (final order in query.orders!) {
         final pbOrder = PropertyOrder()
           ..property = (PropertyReference()..name = order.propertyName)
           ..direction = order.direction == raw.OrderDirection.Ascending
@@ -275,7 +271,7 @@ class _QueryPageImpl implements Page<raw.Entity> {
   final bool _isLast;
 
   // This is `Query.offset` and will be carried across page walking.
-  final int _offset;
+  final int? _offset;
 
   // This is always non-`null` and contains the number of entities that were
   // skiped so far.
@@ -283,7 +279,7 @@ class _QueryPageImpl implements Page<raw.Entity> {
 
   // If not `null` this will hold the remaining number of entities we are
   // allowed to receive according to `Query.limit`.
-  final int _remainingNumberOfEntities;
+  final int? _remainingNumberOfEntities;
 
   _QueryPageImpl(
       this._request,
@@ -300,9 +296,9 @@ class _QueryPageImpl implements Page<raw.Entity> {
       RunQueryRequest request,
       DatastoreClient clientGRPCStub,
       _Codec codec,
-      int offset,
+      int? offset,
       int alreadySkipped,
-      int remainingNumberOfEntities,
+      int? remainingNumberOfEntities,
       QueryResultBatch batch) {
     // If we have an offset: Check that in total we haven't skipped too many.
     if (offset != null &&
@@ -326,7 +322,7 @@ class _QueryPageImpl implements Page<raw.Entity> {
     }
 
     // If we have a limit: Calculate the remaining limit.
-    int remainingEntities;
+    int? remainingEntities;
     if (remainingNumberOfEntities != null && remainingNumberOfEntities > 0) {
       remainingEntities =
           remainingNumberOfEntities - batch.entityResults.length;
@@ -375,7 +371,7 @@ class _QueryPageImpl implements Page<raw.Entity> {
   List<raw.Entity> get items => _entities;
 
   @override
-  Future<Page<raw.Entity>> next({int pageSize}) async {
+  Future<Page<raw.Entity>> next({int? pageSize}) async {
     if (isLast) {
       throw ArgumentError('Cannot call next() on last page.');
     }
@@ -384,13 +380,13 @@ class _QueryPageImpl implements Page<raw.Entity> {
     _request.query.startCursor = _cursor;
 
     // We modify the adjusted offset/limits.
-    if (_offset != null && (_offset - _alreadySkipped) > 0) {
-      _request.query.offset = _offset - _alreadySkipped;
+    if (_offset != null && (_offset! - _alreadySkipped) > 0) {
+      _request.query.offset = _offset! - _alreadySkipped;
     } else {
       _request.query.clearOffset();
     }
     if (_remainingNumberOfEntities != null) {
-      _request.query.limit = Int32Value()..value = _remainingNumberOfEntities;
+      _request.query.limit = Int32Value()..value = _remainingNumberOfEntities!;
     } else {
       _request.query.clearLimit();
     }
@@ -437,14 +433,14 @@ class _Codec {
   _Codec(this._projectId);
 
   raw.Entity decodeEntity(Entity pb) {
-    final properties = <String, Object>{};
+    final properties = <String, Object?>{};
     final unIndexedProperties = <String>{};
 
     for (final name in pb.properties.keys) {
-      final value = decodeValue(pb.properties[name]);
+      final value = decodeValue(pb.properties[name]!);
 
-      if (pb.properties[name].hasExcludeFromIndexes() &&
-          pb.properties[name].excludeFromIndexes) {
+      if (pb.properties[name]!.hasExcludeFromIndexes() &&
+          pb.properties[name]!.excludeFromIndexes) {
         unIndexedProperties.add(name);
       }
 
@@ -458,7 +454,7 @@ class _Codec {
       // to lists (no matter whether they are not present, a value or a list
       // from this `properties` here).
       if (!properties.containsKey(name)) {
-        properties[name] = decodeValue(pb.properties[name]);
+        properties[name] = decodeValue(pb.properties[name]!);
       } else {
         final oldValue = properties[name];
         if (oldValue is List) {
@@ -473,7 +469,7 @@ class _Codec {
         unIndexedProperties: unIndexedProperties);
   }
 
-  Object decodeValue(Value value) {
+  Object? decodeValue(Value value) {
     if (value.hasBooleanValue()) {
       return value.booleanValue;
     } else if (value.hasStringValue()) {
@@ -505,7 +501,7 @@ class _Codec {
   }
 
   raw.Key decodeKey(Key pb) {
-    final keyElements = List<raw.KeyElement>(pb.path.length);
+    final keyElements = List<raw.KeyElement?>.filled(pb.path.length, null);
     for (int i = 0; i < pb.path.length; i++) {
       final part = pb.path[i];
       var id;
@@ -526,16 +522,15 @@ class _Codec {
       }
     }
     partition ??= raw.Partition(null);
-    return raw.Key(keyElements, partition: partition);
+    return raw.Key(keyElements.cast(), partition: partition);
   }
 
   Entity encodeEntity(raw.Entity entity, {bool enforceId = true}) {
     final pb = Entity()..key = encodeKey(entity.key, enforceId: enforceId);
 
     final Set<String> unIndexedProperties = entity.unIndexedProperties;
-    entity.properties.forEach((String property, Object value) {
-      final bool indexProperty = unIndexedProperties == null ||
-          !unIndexedProperties.contains(property);
+    entity.properties.forEach((String property, Object? value) {
+      final bool indexProperty = !unIndexedProperties.contains(property);
 
       pb.properties[property] = encodeValue(value, !indexProperty);
     });
@@ -547,8 +542,8 @@ class _Codec {
     final pb = Key()..partitionId = pbPartitionId;
 
     final partition = key.partition;
-    if (partition != null && partition.namespace != null) {
-      pbPartitionId.namespaceId = partition.namespace;
+    if (partition.namespace != null) {
+      pbPartitionId.namespaceId = partition.namespace!;
     }
 
     for (final part in key.elements) {

@@ -2,9 +2,14 @@
 //  Generated code. Do not modify.
 //  source: google/type/postal_address.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
+import 'dart:core' as $core;
+import 'dart:convert' as $convert;
+import 'dart:typed_data' as $typed_data;
+
+@$core.Deprecated('Use postalAddressDescriptor instead')
 const PostalAddress$json = {
   '1': 'PostalAddress',
   '2': [
@@ -27,3 +32,7 @@ const PostalAddress$json = {
     {'1': 'organization', '3': 11, '4': 1, '5': 9, '10': 'organization'},
   ],
 };
+
+/// Descriptor for `PostalAddress`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List postalAddressDescriptor = $convert.base64Decode(
+    'Cg1Qb3N0YWxBZGRyZXNzEhoKCHJldmlzaW9uGAEgASgFUghyZXZpc2lvbhIfCgtyZWdpb25fY29kZRgCIAEoCVIKcmVnaW9uQ29kZRIjCg1sYW5ndWFnZV9jb2RlGAMgASgJUgxsYW5ndWFnZUNvZGUSHwoLcG9zdGFsX2NvZGUYBCABKAlSCnBvc3RhbENvZGUSIQoMc29ydGluZ19jb2RlGAUgASgJUgtzb3J0aW5nQ29kZRIvChNhZG1pbmlzdHJhdGl2ZV9hcmVhGAYgASgJUhJhZG1pbmlzdHJhdGl2ZUFyZWESGgoIbG9jYWxpdHkYByABKAlSCGxvY2FsaXR5EiAKC3N1YmxvY2FsaXR5GAggASgJUgtzdWJsb2NhbGl0eRIjCg1hZGRyZXNzX2xpbmVzGAkgAygJUgxhZGRyZXNzTGluZXMSHgoKcmVjaXBpZW50cxgKIAMoCVIKcmVjaXBpZW50cxIiCgxvcmdhbml6YXRpb24YCyABKAlSDG9yZ2FuaXphdGlvbg==');

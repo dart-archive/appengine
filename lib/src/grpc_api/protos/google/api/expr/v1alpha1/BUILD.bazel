@@ -7,22 +7,17 @@ package(default_visibility = ["//visibility:public"])
 # Common
 ##############################################################################
 load("@rules_proto//proto:defs.bzl", "proto_library")
-load("@com_google_googleapis_imports//:imports.bzl", "proto_library_with_info")
 
 proto_library(
     name = "expr_proto",
     srcs = [
-        "cel_service.proto",
         "checked.proto",
-        "conformance_service.proto",
         "eval.proto",
         "explain.proto",
         "syntax.proto",
         "value.proto",
     ],
     deps = [
-        "//google/api:client_proto",
-        "//google/api:field_behavior_proto",
         "//google/rpc:status_proto",
         "@com_google_protobuf//:any_proto",
         "@com_google_protobuf//:duration_proto",
@@ -32,19 +27,16 @@ proto_library(
     ],
 )
 
-proto_library_with_info(
-    name = "expr_proto_with_info",
-    deps = [
-        ":expr_proto",
-        "//google/cloud:common_resources_proto",
-    ],
-)
-
 proto_library(
-    name = "cel_service_proto",
-    srcs = ["cel_service.proto"],
+    name = "conformance_service_proto",
+    srcs = [
+        "conformance_service.proto",
+    ],
     deps = [
-        ":conformance_service_proto",
+        ":checked_proto",
+        ":eval_proto",
+        ":syntax_proto",
+        "//google/rpc:status_proto",
     ],
 )
 
@@ -55,19 +47,6 @@ proto_library(
         ":syntax_proto",
         "@com_google_protobuf//:empty_proto",
         "@com_google_protobuf//:struct_proto",
-    ],
-)
-
-proto_library(
-    name = "conformance_service_proto",
-    srcs = ["conformance_service.proto"],
-    deps = [
-        ":checked_proto",
-        ":eval_proto",
-        ":syntax_proto",
-        "//google/api:client_proto",
-        "//google/api:field_behavior_proto",
-        "//google/rpc:status_proto",
     ],
 )
 
@@ -112,9 +91,6 @@ proto_library(
 ##############################################################################
 load(
     "@com_google_googleapis_imports//:imports.bzl",
-    "java_gapic_assembly_gradle_pkg",
-    "java_gapic_library",
-    "java_gapic_test",
     "java_grpc_library",
     "java_proto_library",
 )
@@ -124,42 +100,15 @@ java_proto_library(
     deps = [":expr_proto"],
 )
 
+java_proto_library(
+    name = "conformance_service_java_proto",
+    deps = [":conformance_service_proto"],
+)
+
 java_grpc_library(
-    name = "expr_java_grpc",
-    srcs = [":expr_proto"],
-    deps = [":expr_java_proto"],
-)
-
-java_gapic_library(
-    name = "expr_java_gapic",
-    src = ":expr_proto_with_info",
-    gapic_yaml = "cel_gapic.yaml",
-    package = "google.api.expr.v1alpha1",
-    service_yaml = "//google/api/expr:cel.yaml",
-    test_deps = [":expr_java_grpc"],
-    deps = [
-        ":expr_java_proto",
-    ],
-)
-
-java_gapic_test(
-    name = "expr_java_gapic_test_suite",
-    test_classes = [
-        "com.google.cloud.api.expr.v1alpha1.CelServiceClientTest",
-        "com.google.cloud.api.expr.v1alpha1.ConformanceServiceClientTest",
-    ],
-    runtime_deps = [":expr_java_gapic_test"],
-)
-
-# Open Source Packages
-java_gapic_assembly_gradle_pkg(
-    name = "google-cloud-api-expr-v1alpha1-java",
-    deps = [
-        ":expr_java_gapic",
-        ":expr_java_grpc",
-        ":expr_java_proto",
-        ":expr_proto",
-    ],
+    name = "conformance_service_java_grpc",
+    srcs = [":conformance_service_proto"],
+    deps = [":conformance_service_java_proto"],
 )
 
 ##############################################################################
@@ -167,10 +116,7 @@ java_gapic_assembly_gradle_pkg(
 ##############################################################################
 load(
     "@com_google_googleapis_imports//:imports.bzl",
-    "go_gapic_assembly_pkg",
-    "go_gapic_library",
     "go_proto_library",
-    "go_test",
 )
 
 go_proto_library(
@@ -179,40 +125,21 @@ go_proto_library(
     importpath = "google.golang.org/genproto/googleapis/api/expr/v1alpha1",
     protos = [":expr_proto"],
     deps = [
-        "//google/api:annotations_go_proto",
         "//google/rpc:status_go_proto",
     ],
 )
 
-go_gapic_library(
-    name = "expr_go_gapic",
-    src = ":expr_proto_with_info",
-    gapic_yaml = "cel_gapic.yaml",
-    importpath = "cloud.google.com/go/expr/apiv1alpha1",
-    package = "google.api.expr.v1alpha1",
-    service_yaml = "//google/api/expr:cel.yaml",
+go_proto_library(
+    name = "conformance_service_go_proto",
+    compilers = ["@io_bazel_rules_go//proto:go_grpc"],
+    importpath = "google.golang.org/genproto/googleapis/api/expr/conformance/v1alpha1",
+    protos = [":conformance_service_proto"],
     deps = [
         ":expr_go_proto",
+        "//google/rpc:status_go_proto",
     ],
 )
 
-go_test(
-    name = "expr_go_gapic_test",
-    srcs = [":expr_go_gapic_srcjar_test"],
-    embed = [":expr_go_gapic"],
-    importpath = "cloud.google.com/go/expr/apiv1alpha1",
-)
-
-# Open Source Packages
-go_gapic_assembly_pkg(
-    name = "gapi-cloud-api-expr-v1alpha1-go",
-    deps = [
-        ":expr_go_gapic",
-        ":expr_go_gapic_srcjar-smoke-test.srcjar",
-        ":expr_go_gapic_srcjar-test.srcjar",
-        ":expr_go_proto",
-    ],
-)
 
 ##############################################################################
 # Python
@@ -220,8 +147,6 @@ go_gapic_assembly_pkg(
 load(
     "@com_google_googleapis_imports//:imports.bzl",
     "moved_proto_library",
-    "py_gapic_assembly_pkg",
-    "py_gapic_library",
     "py_grpc_library",
     "py_proto_library",
 )
@@ -230,8 +155,6 @@ moved_proto_library(
     name = "expr_moved_proto",
     srcs = [":expr_proto"],
     deps = [
-        "//google/api:client_proto",
-        "//google/api:field_behavior_proto",
         "//google/rpc:status_proto",
         "@com_google_protobuf//:any_proto",
         "@com_google_protobuf//:duration_proto",
@@ -241,74 +164,41 @@ moved_proto_library(
     ],
 )
 
+moved_proto_library(
+    name = "conformance_service_moved_proto",
+    srcs = [":conformance_service_proto"],
+    deps = [
+        ":expr_moved_proto",
+        "//google/rpc:status_proto",
+    ],
+)
+
 py_proto_library(
     name = "expr_py_proto",
     plugin = "@protoc_docs_plugin//:docs_plugin",
     deps = [":expr_moved_proto"],
 )
 
+py_proto_library(
+    name = "conformance_service_py_proto",
+    plugin = "@protoc_docs_plugin//:docs_plugin",
+    deps = [":conformance_service_moved_proto"],
+)
+
 py_grpc_library(
-    name = "expr_py_grpc",
-    srcs = [":expr_moved_proto"],
-    deps = [":expr_py_proto"],
-)
-
-py_gapic_library(
-    name = "expr_py_gapic",
-    src = ":expr_proto_with_info",
-    gapic_yaml = "cel_gapic.yaml",
-    package = "google.api.expr.v1alpha1",
-    service_yaml = "//google/api/expr:cel.yaml",
-    deps = [
-        ":expr_py_grpc",
-        ":expr_py_proto",
-    ],
-)
-
-# Open Source Packages
-py_gapic_assembly_pkg(
-    name = "api-expr-v1alpha1-py",
-    deps = [
-        ":expr_py_gapic",
-        ":expr_py_grpc",
-        ":expr_py_proto",
-    ],
-)
-
-py_proto_library(
-    name = "checked_py_proto",
-    deps = [":checked_proto"],
-)
-
-py_proto_library(
-    name = "eval_py_proto",
-    deps = [":eval_proto"],
-)
-
-py_proto_library(
-    name = "explain_py_proto",
-    deps = [":explain_proto"],
-)
-
-py_proto_library(
-    name = "syntax_py_proto",
-    deps = [":syntax_proto"],
-)
-
-py_proto_library(
-    name = "value_py_proto",
-    deps = [":value_proto"],
+    name = "conformance_service_py_grpc",
+    srcs = [":conformance_service_moved_proto"],
+    deps = [":conformance_service_py_proto"],
 )
 
 ##############################################################################
 # PHP
+# DO NOT OVERRIDE this PHP microgenerator section with autogenerated rules.
 ##############################################################################
 load(
     "@com_google_googleapis_imports//:imports.bzl",
-    "php_gapic_assembly_pkg",
-    "php_gapic_library",
-    "php_grpc_library",
-    "php_proto_library",
+    php_grpc_library = "php_grpc_library2",
+    php_proto_library = "php_proto_library2",
 )
 
 php_proto_library(
@@ -316,61 +206,15 @@ php_proto_library(
     deps = [":expr_proto"],
 )
 
+php_proto_library(
+    name = "conformance_service_php_proto",
+    deps = [":conformance_service_proto"],
+)
+
 php_grpc_library(
-    name = "expr_php_grpc",
-    srcs = [":expr_proto"],
-    deps = [":expr_php_proto"],
-)
-
-# To support PHP option (google.api.http) must be specified for all RPCs in
-# the service.
-
-#php_gapic_library(
-#    name = "expr_php_gapic",
-#    src = ":expr_proto_with_info",
-#    gapic_yaml = "cel_gapic.yaml",
-#    package = "google.api.expr.v1alpha1",
-#    service_yaml = "//google/api/expr:cel.yaml",
-#    deps = [
-#        ":expr_php_grpc",
-#        ":expr_php_proto",
-#    ],
-#)
-
-## Open Source Packages
-#php_gapic_assembly_pkg(
-#    name = "google-cloud-api-expr-v1alpha1-php",
-#    deps = [
-#        ":expr_php_gapic",
-#        ":expr_php_grpc",
-#        ":expr_php_proto",
-#    ],
-#)
-
-##############################################################################
-# Node.js
-##############################################################################
-load(
-    "@com_google_googleapis_imports//:imports.bzl",
-    "nodejs_gapic_assembly_pkg",
-    "nodejs_gapic_library",
-)
-
-nodejs_gapic_library(
-    name = "expr_nodejs_gapic",
-    src = ":expr_proto_with_info",
-    gapic_yaml = "cel_gapic.yaml",
-    package = "google.api.expr.v1alpha1",
-    service_yaml = "//google/api/expr:cel.yaml",
-    deps = [],
-)
-
-nodejs_gapic_assembly_pkg(
-    name = "api-expr-v1alpha1-nodejs",
-    deps = [
-        ":expr_nodejs_gapic",
-        ":expr_proto",
-    ],
+    name = "conformance_service_php_grpc",
+    srcs = [":conformance_service_proto"],
+    deps = [":conformance_service_php_proto"],
 )
 
 ##############################################################################
@@ -378,8 +222,6 @@ nodejs_gapic_assembly_pkg(
 ##############################################################################
 load(
     "@com_google_googleapis_imports//:imports.bzl",
-    "ruby_gapic_assembly_pkg",
-    "ruby_gapic_library",
     "ruby_grpc_library",
     "ruby_proto_library",
 )
@@ -389,32 +231,15 @@ ruby_proto_library(
     deps = [":expr_proto"],
 )
 
+ruby_proto_library(
+    name = "conformance_service_ruby_proto",
+    deps = [":conformance_service_proto"],
+)
+
 ruby_grpc_library(
-    name = "expr_ruby_grpc",
-    srcs = [":expr_proto"],
-    deps = [":expr_ruby_proto"],
-)
-
-ruby_gapic_library(
-    name = "expr_ruby_gapic",
-    src = ":expr_proto_with_info",
-    gapic_yaml = "cel_gapic.yaml",
-    package = "google.api.expr.v1alpha1",
-    service_yaml = "//google/api/expr:cel.yaml",
-    deps = [
-        ":expr_ruby_grpc",
-        ":expr_ruby_proto",
-    ],
-)
-
-# Open Source Packages
-ruby_gapic_assembly_pkg(
-    name = "google-cloud-api-expr-v1alpha1-ruby",
-    deps = [
-        ":expr_ruby_gapic",
-        ":expr_ruby_grpc",
-        ":expr_ruby_proto",
-    ],
+    name = "conformance_service_ruby_grpc",
+    srcs = [":conformance_service_proto"],
+    deps = [":conformance_service_ruby_proto"],
 )
 
 ##############################################################################
@@ -422,8 +247,6 @@ ruby_gapic_assembly_pkg(
 ##############################################################################
 load(
     "@com_google_googleapis_imports//:imports.bzl",
-    "csharp_gapic_assembly_pkg",
-    "csharp_gapic_library",
     "csharp_grpc_library",
     "csharp_proto_library",
 )
@@ -433,32 +256,15 @@ csharp_proto_library(
     deps = [":expr_proto"],
 )
 
+csharp_proto_library(
+    name = "conformance_service_csharp_proto",
+    deps = [":conformance_service_proto"],
+)
+
 csharp_grpc_library(
-    name = "expr_csharp_grpc",
-    srcs = [":expr_proto"],
-    deps = [":expr_csharp_proto"],
-)
-
-csharp_gapic_library(
-    name = "expr_csharp_gapic",
-    src = ":expr_proto_with_info",
-    gapic_yaml = "cel_gapic.yaml",
-    package = "google.api.expr.v1alpha1",
-    service_yaml = "//google/api/expr:cel.yaml",
-    deps = [
-        ":expr_csharp_grpc",
-        ":expr_csharp_proto",
-    ],
-)
-
-# Open Source Packages
-csharp_gapic_assembly_pkg(
-    name = "google-cloud-api-expr-v1alpha1-csharp",
-    deps = [
-        ":expr_csharp_gapic",
-        ":expr_csharp_grpc",
-        ":expr_csharp_proto",
-    ],
+    name = "conformance_service_csharp_grpc",
+    srcs = [":conformance_service_proto"],
+    deps = [":conformance_service_csharp_proto"],
 )
 
 ##############################################################################
@@ -468,19 +274,6 @@ load(
     "@com_google_googleapis_imports//:imports.bzl",
     "cc_grpc_library",
     "cc_proto_library",
-)
-
-cc_proto_library(
-    name = "cel_service_cc_proto",
-    deps = [":cel_service_proto"],
-)
-
-cc_grpc_library(
-    name = "cel_service_cc_grpc",
-    srcs = [":cel_service_proto"],
-    generate_mocks = True,
-    grpc_only = True,
-    deps = [":cel_service_cc_proto"],
 )
 
 cc_proto_library(

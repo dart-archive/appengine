@@ -2,9 +2,14 @@
 //  Generated code. Do not modify.
 //  source: google/api/expr/v1beta1/decl.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
+import 'dart:core' as $core;
+import 'dart:convert' as $convert;
+import 'dart:typed_data' as $typed_data;
+
+@$core.Deprecated('Use declDescriptor instead')
 const Decl$json = {
   '1': 'Decl',
   '2': [
@@ -35,6 +40,10 @@ const Decl$json = {
   ],
 };
 
+/// Descriptor for `Decl`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List declDescriptor = $convert.base64Decode(
+    'CgREZWNsEg4KAmlkGAEgASgFUgJpZBISCgRuYW1lGAIgASgJUgRuYW1lEhAKA2RvYxgDIAEoCVIDZG9jEjoKBWlkZW50GAQgASgLMiIuZ29vZ2xlLmFwaS5leHByLnYxYmV0YTEuSWRlbnREZWNsSABSBWlkZW50EkMKCGZ1bmN0aW9uGAUgASgLMiUuZ29vZ2xlLmFwaS5leHByLnYxYmV0YTEuRnVuY3Rpb25EZWNsSABSCGZ1bmN0aW9uQgYKBGtpbmQ=');
+@$core.Deprecated('Use declTypeDescriptor instead')
 const DeclType$json = {
   '1': 'DeclType',
   '2': [
@@ -51,6 +60,10 @@ const DeclType$json = {
   ],
 };
 
+/// Descriptor for `DeclType`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List declTypeDescriptor = $convert.base64Decode(
+    'CghEZWNsVHlwZRIOCgJpZBgBIAEoBVICaWQSEgoEdHlwZRgCIAEoCVIEdHlwZRJCCgt0eXBlX3BhcmFtcxgEIAMoCzIhLmdvb2dsZS5hcGkuZXhwci52MWJldGExLkRlY2xUeXBlUgp0eXBlUGFyYW1z');
+@$core.Deprecated('Use identDeclDescriptor instead')
 const IdentDecl$json = {
   '1': 'IdentDecl',
   '2': [
@@ -73,6 +86,10 @@ const IdentDecl$json = {
   ],
 };
 
+/// Descriptor for `IdentDecl`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List identDeclDescriptor = $convert.base64Decode(
+    'CglJZGVudERlY2wSNQoEdHlwZRgDIAEoCzIhLmdvb2dsZS5hcGkuZXhwci52MWJldGExLkRlY2xUeXBlUgR0eXBlEjMKBXZhbHVlGAQgASgLMh0uZ29vZ2xlLmFwaS5leHByLnYxYmV0YTEuRXhwclIFdmFsdWU=');
+@$core.Deprecated('Use functionDeclDescriptor instead')
 const FunctionDecl$json = {
   '1': 'FunctionDecl',
   '2': [
@@ -101,3 +118,7 @@ const FunctionDecl$json = {
     },
   ],
 };
+
+/// Descriptor for `FunctionDecl`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List functionDeclDescriptor = $convert.base64Decode(
+    'CgxGdW5jdGlvbkRlY2wSNgoEYXJncxgBIAMoCzIiLmdvb2dsZS5hcGkuZXhwci52MWJldGExLklkZW50RGVjbFIEYXJncxJCCgtyZXR1cm5fdHlwZRgCIAEoCzIhLmdvb2dsZS5hcGkuZXhwci52MWJldGExLkRlY2xUeXBlUgpyZXR1cm5UeXBlEisKEXJlY2VpdmVyX2Z1bmN0aW9uGAMgASgIUhByZWNlaXZlckZ1bmN0aW9u');

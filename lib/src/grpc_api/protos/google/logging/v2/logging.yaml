@@ -1,7 +1,7 @@
 type: google.api.Service
 config_version: 3
 name: logging.googleapis.com
-title: Stackdriver Logging API
+title: Cloud Logging API
 
 apis:
 - name: google.logging.v2.ConfigServiceV2
@@ -10,26 +10,24 @@ apis:
 
 documentation:
   summary: |-
-    Writes log entries and manages your Stackdriver Logging configuration. The
-    table entries below are presented in alphabetical order, not in order of
-    common use. For explanations of the concepts found in the table entries,
-    read the [Stackdriver Logging documentation](/logging/docs).
+    Writes log entries and manages your Cloud Logging configuration. The table
+    entries below are presented in alphabetical order, not in order of common
+    use. For explanations of the concepts found in the table entries, read the
+    documentation at https://cloud.google.com/logging/docs.
   overview: '# Introduction
 
-The Stackdriver Logging service.'
+The Cloud Logging service.'
 
 backend:
   rules:
   - selector: 'google.logging.v2.ConfigServiceV2.*'
     deadline: 60.0
-  - selector: google.logging.v2.ConfigServiceV2.CreateSink
-    deadline: 120.0
-  - selector: google.logging.v2.ConfigServiceV2.UpdateSink
-    deadline: 120.0
   - selector: 'google.logging.v2.LoggingServiceV2.*'
     deadline: 60.0
   - selector: google.logging.v2.LoggingServiceV2.ListLogEntries
     deadline: 10.0
+  - selector: google.logging.v2.LoggingServiceV2.TailLogEntries
+    deadline: 3600.0
   - selector: 'google.logging.v2.MetricsServiceV2.*'
     deadline: 60.0
 
@@ -40,6 +38,20 @@ authentication:
       canonical_scopes: |-
         https://www.googleapis.com/auth/cloud-platform,
         https://www.googleapis.com/auth/logging.admin
+  - selector: google.logging.v2.ConfigServiceV2.GetBucket
+    oauth:
+      canonical_scopes: |-
+        https://www.googleapis.com/auth/cloud-platform,
+        https://www.googleapis.com/auth/cloud-platform.read-only,
+        https://www.googleapis.com/auth/logging.admin,
+        https://www.googleapis.com/auth/logging.read
+  - selector: google.logging.v2.ConfigServiceV2.GetCmekSettings
+    oauth:
+      canonical_scopes: |-
+        https://www.googleapis.com/auth/cloud-platform,
+        https://www.googleapis.com/auth/cloud-platform.read-only,
+        https://www.googleapis.com/auth/logging.admin,
+        https://www.googleapis.com/auth/logging.read
   - selector: google.logging.v2.ConfigServiceV2.GetExclusion
     oauth:
       canonical_scopes: |-
@@ -54,6 +66,20 @@ authentication:
         https://www.googleapis.com/auth/cloud-platform.read-only,
         https://www.googleapis.com/auth/logging.admin,
         https://www.googleapis.com/auth/logging.read
+  - selector: google.logging.v2.ConfigServiceV2.GetView
+    oauth:
+      canonical_scopes: |-
+        https://www.googleapis.com/auth/cloud-platform,
+        https://www.googleapis.com/auth/cloud-platform.read-only,
+        https://www.googleapis.com/auth/logging.admin,
+        https://www.googleapis.com/auth/logging.read
+  - selector: google.logging.v2.ConfigServiceV2.ListBuckets
+    oauth:
+      canonical_scopes: |-
+        https://www.googleapis.com/auth/cloud-platform,
+        https://www.googleapis.com/auth/cloud-platform.read-only,
+        https://www.googleapis.com/auth/logging.admin,
+        https://www.googleapis.com/auth/logging.read
   - selector: google.logging.v2.ConfigServiceV2.ListExclusions
     oauth:
       canonical_scopes: |-
@@ -62,6 +88,13 @@ authentication:
         https://www.googleapis.com/auth/logging.admin,
         https://www.googleapis.com/auth/logging.read
   - selector: google.logging.v2.ConfigServiceV2.ListSinks
+    oauth:
+      canonical_scopes: |-
+        https://www.googleapis.com/auth/cloud-platform,
+        https://www.googleapis.com/auth/cloud-platform.read-only,
+        https://www.googleapis.com/auth/logging.admin,
+        https://www.googleapis.com/auth/logging.read
+  - selector: google.logging.v2.ConfigServiceV2.ListViews
     oauth:
       canonical_scopes: |-
         https://www.googleapis.com/auth/cloud-platform,

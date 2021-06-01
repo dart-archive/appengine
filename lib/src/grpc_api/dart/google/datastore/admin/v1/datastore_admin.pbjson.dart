@@ -2,9 +2,14 @@
 //  Generated code. Do not modify.
 //  source: google/datastore/admin/v1/datastore_admin.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
+import 'dart:core' as $core;
+import 'dart:convert' as $convert;
+import 'dart:typed_data' as $typed_data;
+
+@$core.Deprecated('Use operationTypeDescriptor instead')
 const OperationType$json = {
   '1': 'OperationType',
   '2': [
@@ -16,6 +21,10 @@ const OperationType$json = {
   ],
 };
 
+/// Descriptor for `OperationType`. Decode as a `google.protobuf.EnumDescriptorProto`.
+final $typed_data.Uint8List operationTypeDescriptor = $convert.base64Decode(
+    'Cg1PcGVyYXRpb25UeXBlEh4KGk9QRVJBVElPTl9UWVBFX1VOU1BFQ0lGSUVEEAASEwoPRVhQT1JUX0VOVElUSUVTEAESEwoPSU1QT1JUX0VOVElUSUVTEAISEAoMQ1JFQVRFX0lOREVYEAMSEAoMREVMRVRFX0lOREVYEAQ=');
+@$core.Deprecated('Use commonMetadataDescriptor instead')
 const CommonMetadata$json = {
   '1': 'CommonMetadata',
   '2': [
@@ -64,6 +73,7 @@ const CommonMetadata$json = {
   '4': [CommonMetadata_State$json],
 };
 
+@$core.Deprecated('Use commonMetadataDescriptor instead')
 const CommonMetadata_LabelsEntry$json = {
   '1': 'LabelsEntry',
   '2': [
@@ -73,6 +83,7 @@ const CommonMetadata_LabelsEntry$json = {
   '7': {'7': true},
 };
 
+@$core.Deprecated('Use commonMetadataDescriptor instead')
 const CommonMetadata_State$json = {
   '1': 'State',
   '2': [
@@ -87,6 +98,10 @@ const CommonMetadata_State$json = {
   ],
 };
 
+/// Descriptor for `CommonMetadata`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List commonMetadataDescriptor = $convert.base64Decode(
+    'Cg5Db21tb25NZXRhZGF0YRI5CgpzdGFydF90aW1lGAEgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIJc3RhcnRUaW1lEjUKCGVuZF90aW1lGAIgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIHZW5kVGltZRJPCg5vcGVyYXRpb25fdHlwZRgDIAEoDjIoLmdvb2dsZS5kYXRhc3RvcmUuYWRtaW4udjEuT3BlcmF0aW9uVHlwZVINb3BlcmF0aW9uVHlwZRJNCgZsYWJlbHMYBCADKAsyNS5nb29nbGUuZGF0YXN0b3JlLmFkbWluLnYxLkNvbW1vbk1ldGFkYXRhLkxhYmVsc0VudHJ5UgZsYWJlbHMSRQoFc3RhdGUYBSABKA4yLy5nb29nbGUuZGF0YXN0b3JlLmFkbWluLnYxLkNvbW1vbk1ldGFkYXRhLlN0YXRlUgVzdGF0ZRo5CgtMYWJlbHNFbnRyeRIQCgNrZXkYASABKAlSA2tleRIUCgV2YWx1ZRgCIAEoCVIFdmFsdWU6AjgBIosBCgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEhAKDElOSVRJQUxJWklORxABEg4KClBST0NFU1NJTkcQAhIOCgpDQU5DRUxMSU5HEAMSDgoKRklOQUxJWklORxAEEg4KClNVQ0NFU1NGVUwQBRIKCgZGQUlMRUQQBhINCglDQU5DRUxMRUQQBw==');
+@$core.Deprecated('Use progressDescriptor instead')
 const Progress$json = {
   '1': 'Progress',
   '2': [
@@ -95,6 +110,10 @@ const Progress$json = {
   ],
 };
 
+/// Descriptor for `Progress`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List progressDescriptor = $convert.base64Decode(
+    'CghQcm9ncmVzcxIlCg53b3JrX2NvbXBsZXRlZBgBIAEoA1INd29ya0NvbXBsZXRlZBIlCg53b3JrX2VzdGltYXRlZBgCIAEoA1INd29ya0VzdGltYXRlZA==');
+@$core.Deprecated('Use exportEntitiesRequestDescriptor instead')
 const ExportEntitiesRequest$json = {
   '1': 'ExportEntitiesRequest',
   '2': [
@@ -127,6 +146,7 @@ const ExportEntitiesRequest$json = {
   '3': [ExportEntitiesRequest_LabelsEntry$json],
 };
 
+@$core.Deprecated('Use exportEntitiesRequestDescriptor instead')
 const ExportEntitiesRequest_LabelsEntry$json = {
   '1': 'LabelsEntry',
   '2': [
@@ -136,6 +156,10 @@ const ExportEntitiesRequest_LabelsEntry$json = {
   '7': {'7': true},
 };
 
+/// Descriptor for `ExportEntitiesRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List exportEntitiesRequestDescriptor = $convert.base64Decode(
+    'ChVFeHBvcnRFbnRpdGllc1JlcXVlc3QSIgoKcHJvamVjdF9pZBgBIAEoCUID4EECUglwcm9qZWN0SWQSVAoGbGFiZWxzGAIgAygLMjwuZ29vZ2xlLmRhdGFzdG9yZS5hZG1pbi52MS5FeHBvcnRFbnRpdGllc1JlcXVlc3QuTGFiZWxzRW50cnlSBmxhYmVscxJMCg1lbnRpdHlfZmlsdGVyGAMgASgLMicuZ29vZ2xlLmRhdGFzdG9yZS5hZG1pbi52MS5FbnRpdHlGaWx0ZXJSDGVudGl0eUZpbHRlchIvChFvdXRwdXRfdXJsX3ByZWZpeBgEIAEoCUID4EECUg9vdXRwdXRVcmxQcmVmaXgaOQoLTGFiZWxzRW50cnkSEAoDa2V5GAEgASgJUgNrZXkSFAoFdmFsdWUYAiABKAlSBXZhbHVlOgI4AQ==');
+@$core.Deprecated('Use importEntitiesRequestDescriptor instead')
 const ImportEntitiesRequest$json = {
   '1': 'ImportEntitiesRequest',
   '2': [
@@ -161,6 +185,7 @@ const ImportEntitiesRequest$json = {
   '3': [ImportEntitiesRequest_LabelsEntry$json],
 };
 
+@$core.Deprecated('Use importEntitiesRequestDescriptor instead')
 const ImportEntitiesRequest_LabelsEntry$json = {
   '1': 'LabelsEntry',
   '2': [
@@ -170,6 +195,10 @@ const ImportEntitiesRequest_LabelsEntry$json = {
   '7': {'7': true},
 };
 
+/// Descriptor for `ImportEntitiesRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List importEntitiesRequestDescriptor = $convert.base64Decode(
+    'ChVJbXBvcnRFbnRpdGllc1JlcXVlc3QSIgoKcHJvamVjdF9pZBgBIAEoCUID4EECUglwcm9qZWN0SWQSVAoGbGFiZWxzGAIgAygLMjwuZ29vZ2xlLmRhdGFzdG9yZS5hZG1pbi52MS5JbXBvcnRFbnRpdGllc1JlcXVlc3QuTGFiZWxzRW50cnlSBmxhYmVscxIgCglpbnB1dF91cmwYAyABKAlCA+BBAlIIaW5wdXRVcmwSTAoNZW50aXR5X2ZpbHRlchgEIAEoCzInLmdvb2dsZS5kYXRhc3RvcmUuYWRtaW4udjEuRW50aXR5RmlsdGVyUgxlbnRpdHlGaWx0ZXIaOQoLTGFiZWxzRW50cnkSEAoDa2V5GAEgASgJUgNrZXkSFAoFdmFsdWUYAiABKAlSBXZhbHVlOgI4AQ==');
+@$core.Deprecated('Use exportEntitiesResponseDescriptor instead')
 const ExportEntitiesResponse$json = {
   '1': 'ExportEntitiesResponse',
   '2': [
@@ -177,6 +206,11 @@ const ExportEntitiesResponse$json = {
   ],
 };
 
+/// Descriptor for `ExportEntitiesResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List exportEntitiesResponseDescriptor =
+    $convert.base64Decode(
+        'ChZFeHBvcnRFbnRpdGllc1Jlc3BvbnNlEh0KCm91dHB1dF91cmwYASABKAlSCW91dHB1dFVybA==');
+@$core.Deprecated('Use exportEntitiesMetadataDescriptor instead')
 const ExportEntitiesMetadata$json = {
   '1': 'ExportEntitiesMetadata',
   '2': [
@@ -216,6 +250,11 @@ const ExportEntitiesMetadata$json = {
   ],
 };
 
+/// Descriptor for `ExportEntitiesMetadata`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List exportEntitiesMetadataDescriptor =
+    $convert.base64Decode(
+        'ChZFeHBvcnRFbnRpdGllc01ldGFkYXRhEkEKBmNvbW1vbhgBIAEoCzIpLmdvb2dsZS5kYXRhc3RvcmUuYWRtaW4udjEuQ29tbW9uTWV0YWRhdGFSBmNvbW1vbhJQChFwcm9ncmVzc19lbnRpdGllcxgCIAEoCzIjLmdvb2dsZS5kYXRhc3RvcmUuYWRtaW4udjEuUHJvZ3Jlc3NSEHByb2dyZXNzRW50aXRpZXMSSgoOcHJvZ3Jlc3NfYnl0ZXMYAyABKAsyIy5nb29nbGUuZGF0YXN0b3JlLmFkbWluLnYxLlByb2dyZXNzUg1wcm9ncmVzc0J5dGVzEkwKDWVudGl0eV9maWx0ZXIYBCABKAsyJy5nb29nbGUuZGF0YXN0b3JlLmFkbWluLnYxLkVudGl0eUZpbHRlclIMZW50aXR5RmlsdGVyEioKEW91dHB1dF91cmxfcHJlZml4GAUgASgJUg9vdXRwdXRVcmxQcmVmaXg=');
+@$core.Deprecated('Use importEntitiesMetadataDescriptor instead')
 const ImportEntitiesMetadata$json = {
   '1': 'ImportEntitiesMetadata',
   '2': [
@@ -255,6 +294,11 @@ const ImportEntitiesMetadata$json = {
   ],
 };
 
+/// Descriptor for `ImportEntitiesMetadata`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List importEntitiesMetadataDescriptor =
+    $convert.base64Decode(
+        'ChZJbXBvcnRFbnRpdGllc01ldGFkYXRhEkEKBmNvbW1vbhgBIAEoCzIpLmdvb2dsZS5kYXRhc3RvcmUuYWRtaW4udjEuQ29tbW9uTWV0YWRhdGFSBmNvbW1vbhJQChFwcm9ncmVzc19lbnRpdGllcxgCIAEoCzIjLmdvb2dsZS5kYXRhc3RvcmUuYWRtaW4udjEuUHJvZ3Jlc3NSEHByb2dyZXNzRW50aXRpZXMSSgoOcHJvZ3Jlc3NfYnl0ZXMYAyABKAsyIy5nb29nbGUuZGF0YXN0b3JlLmFkbWluLnYxLlByb2dyZXNzUg1wcm9ncmVzc0J5dGVzEkwKDWVudGl0eV9maWx0ZXIYBCABKAsyJy5nb29nbGUuZGF0YXN0b3JlLmFkbWluLnYxLkVudGl0eUZpbHRlclIMZW50aXR5RmlsdGVyEhsKCWlucHV0X3VybBgFIAEoCVIIaW5wdXRVcmw=');
+@$core.Deprecated('Use entityFilterDescriptor instead')
 const EntityFilter$json = {
   '1': 'EntityFilter',
   '2': [
@@ -263,6 +307,41 @@ const EntityFilter$json = {
   ],
 };
 
+/// Descriptor for `EntityFilter`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List entityFilterDescriptor = $convert.base64Decode(
+    'CgxFbnRpdHlGaWx0ZXISFAoFa2luZHMYASADKAlSBWtpbmRzEiMKDW5hbWVzcGFjZV9pZHMYAiADKAlSDG5hbWVzcGFjZUlkcw==');
+@$core.Deprecated('Use createIndexRequestDescriptor instead')
+const CreateIndexRequest$json = {
+  '1': 'CreateIndexRequest',
+  '2': [
+    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
+    {
+      '1': 'index',
+      '3': 3,
+      '4': 1,
+      '5': 11,
+      '6': '.google.datastore.admin.v1.Index',
+      '10': 'index'
+    },
+  ],
+};
+
+/// Descriptor for `CreateIndexRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List createIndexRequestDescriptor = $convert.base64Decode(
+    'ChJDcmVhdGVJbmRleFJlcXVlc3QSHQoKcHJvamVjdF9pZBgBIAEoCVIJcHJvamVjdElkEjYKBWluZGV4GAMgASgLMiAuZ29vZ2xlLmRhdGFzdG9yZS5hZG1pbi52MS5JbmRleFIFaW5kZXg=');
+@$core.Deprecated('Use deleteIndexRequestDescriptor instead')
+const DeleteIndexRequest$json = {
+  '1': 'DeleteIndexRequest',
+  '2': [
+    {'1': 'project_id', '3': 1, '4': 1, '5': 9, '10': 'projectId'},
+    {'1': 'index_id', '3': 3, '4': 1, '5': 9, '10': 'indexId'},
+  ],
+};
+
+/// Descriptor for `DeleteIndexRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List deleteIndexRequestDescriptor = $convert.base64Decode(
+    'ChJEZWxldGVJbmRleFJlcXVlc3QSHQoKcHJvamVjdF9pZBgBIAEoCVIJcHJvamVjdElkEhkKCGluZGV4X2lkGAMgASgJUgdpbmRleElk');
+@$core.Deprecated('Use getIndexRequestDescriptor instead')
 const GetIndexRequest$json = {
   '1': 'GetIndexRequest',
   '2': [
@@ -271,6 +350,10 @@ const GetIndexRequest$json = {
   ],
 };
 
+/// Descriptor for `GetIndexRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List getIndexRequestDescriptor = $convert.base64Decode(
+    'Cg9HZXRJbmRleFJlcXVlc3QSHQoKcHJvamVjdF9pZBgBIAEoCVIJcHJvamVjdElkEhkKCGluZGV4X2lkGAMgASgJUgdpbmRleElk');
+@$core.Deprecated('Use listIndexesRequestDescriptor instead')
 const ListIndexesRequest$json = {
   '1': 'ListIndexesRequest',
   '2': [
@@ -281,6 +364,10 @@ const ListIndexesRequest$json = {
   ],
 };
 
+/// Descriptor for `ListIndexesRequest`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listIndexesRequestDescriptor = $convert.base64Decode(
+    'ChJMaXN0SW5kZXhlc1JlcXVlc3QSHQoKcHJvamVjdF9pZBgBIAEoCVIJcHJvamVjdElkEhYKBmZpbHRlchgDIAEoCVIGZmlsdGVyEhsKCXBhZ2Vfc2l6ZRgEIAEoBVIIcGFnZVNpemUSHQoKcGFnZV90b2tlbhgFIAEoCVIJcGFnZVRva2Vu');
+@$core.Deprecated('Use listIndexesResponseDescriptor instead')
 const ListIndexesResponse$json = {
   '1': 'ListIndexesResponse',
   '2': [
@@ -296,6 +383,10 @@ const ListIndexesResponse$json = {
   ],
 };
 
+/// Descriptor for `ListIndexesResponse`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List listIndexesResponseDescriptor = $convert.base64Decode(
+    'ChNMaXN0SW5kZXhlc1Jlc3BvbnNlEjoKB2luZGV4ZXMYASADKAsyIC5nb29nbGUuZGF0YXN0b3JlLmFkbWluLnYxLkluZGV4UgdpbmRleGVzEiYKD25leHRfcGFnZV90b2tlbhgCIAEoCVINbmV4dFBhZ2VUb2tlbg==');
+@$core.Deprecated('Use indexOperationMetadataDescriptor instead')
 const IndexOperationMetadata$json = {
   '1': 'IndexOperationMetadata',
   '2': [
@@ -318,3 +409,8 @@ const IndexOperationMetadata$json = {
     {'1': 'index_id', '3': 3, '4': 1, '5': 9, '10': 'indexId'},
   ],
 };
+
+/// Descriptor for `IndexOperationMetadata`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List indexOperationMetadataDescriptor =
+    $convert.base64Decode(
+        'ChZJbmRleE9wZXJhdGlvbk1ldGFkYXRhEkEKBmNvbW1vbhgBIAEoCzIpLmdvb2dsZS5kYXRhc3RvcmUuYWRtaW4udjEuQ29tbW9uTWV0YWRhdGFSBmNvbW1vbhJQChFwcm9ncmVzc19lbnRpdGllcxgCIAEoCzIjLmdvb2dsZS5kYXRhc3RvcmUuYWRtaW4udjEuUHJvZ3Jlc3NSEHByb2dyZXNzRW50aXRpZXMSGQoIaW5kZXhfaWQYAyABKAlSB2luZGV4SWQ=');

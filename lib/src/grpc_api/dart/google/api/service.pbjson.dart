@@ -2,22 +2,18 @@
 //  Generated code. Do not modify.
 //  source: google/api/service.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
+import 'dart:core' as $core;
+import 'dart:convert' as $convert;
+import 'dart:typed_data' as $typed_data;
+
+@$core.Deprecated('Use serviceDescriptor instead')
 const Service$json = {
   '1': 'Service',
   '2': [
-    {
-      '1': 'config_version',
-      '3': 20,
-      '4': 1,
-      '5': 11,
-      '6': '.google.protobuf.UInt32Value',
-      '10': 'configVersion'
-    },
     {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
-    {'1': 'id', '3': 33, '4': 1, '5': 9, '10': 'id'},
     {'1': 'title', '3': 2, '4': 1, '5': 9, '10': 'title'},
     {
       '1': 'producer_project_id',
@@ -26,6 +22,7 @@ const Service$json = {
       '5': 9,
       '10': 'producerProjectId'
     },
+    {'1': 'id', '3': 33, '4': 1, '5': 9, '10': 'id'},
     {
       '1': 'apis',
       '3': 3,
@@ -186,5 +183,18 @@ const Service$json = {
       '6': '.google.api.SourceInfo',
       '10': 'sourceInfo'
     },
+    {
+      '1': 'config_version',
+      '3': 20,
+      '4': 1,
+      '5': 11,
+      '6': '.google.protobuf.UInt32Value',
+      '8': {'3': true},
+      '10': 'configVersion',
+    },
   ],
 };
+
+/// Descriptor for `Service`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List serviceDescriptor = $convert.base64Decode(
+    'CgdTZXJ2aWNlEhIKBG5hbWUYASABKAlSBG5hbWUSFAoFdGl0bGUYAiABKAlSBXRpdGxlEi4KE3Byb2R1Y2VyX3Byb2plY3RfaWQYFiABKAlSEXByb2R1Y2VyUHJvamVjdElkEg4KAmlkGCEgASgJUgJpZBIoCgRhcGlzGAMgAygLMhQuZ29vZ2xlLnByb3RvYnVmLkFwaVIEYXBpcxIrCgV0eXBlcxgEIAMoCzIVLmdvb2dsZS5wcm90b2J1Zi5UeXBlUgV0eXBlcxIrCgVlbnVtcxgFIAMoCzIVLmdvb2dsZS5wcm90b2J1Zi5FbnVtUgVlbnVtcxI/Cg1kb2N1bWVudGF0aW9uGAYgASgLMhkuZ29vZ2xlLmFwaS5Eb2N1bWVudGF0aW9uUg1kb2N1bWVudGF0aW9uEi0KB2JhY2tlbmQYCCABKAsyEy5nb29nbGUuYXBpLkJhY2tlbmRSB2JhY2tlbmQSJAoEaHR0cBgJIAEoCzIQLmdvb2dsZS5hcGkuSHR0cFIEaHR0cBInCgVxdW90YRgKIAEoCzIRLmdvb2dsZS5hcGkuUXVvdGFSBXF1b3RhEkIKDmF1dGhlbnRpY2F0aW9uGAsgASgLMhouZ29vZ2xlLmFwaS5BdXRoZW50aWNhdGlvblIOYXV0aGVudGljYXRpb24SLQoHY29udGV4dBgMIAEoCzITLmdvb2dsZS5hcGkuQ29udGV4dFIHY29udGV4dBInCgV1c2FnZRgPIAEoCzIRLmdvb2dsZS5hcGkuVXNhZ2VSBXVzYWdlEjIKCWVuZHBvaW50cxgSIAMoCzIULmdvb2dsZS5hcGkuRW5kcG9pbnRSCWVuZHBvaW50cxItCgdjb250cm9sGBUgASgLMhMuZ29vZ2xlLmFwaS5Db250cm9sUgdjb250cm9sEi0KBGxvZ3MYFyADKAsyGS5nb29nbGUuYXBpLkxvZ0Rlc2NyaXB0b3JSBGxvZ3MSNgoHbWV0cmljcxgYIAMoCzIcLmdvb2dsZS5hcGkuTWV0cmljRGVzY3JpcHRvclIHbWV0cmljcxJYChNtb25pdG9yZWRfcmVzb3VyY2VzGBkgAygLMicuZ29vZ2xlLmFwaS5Nb25pdG9yZWRSZXNvdXJjZURlc2NyaXB0b3JSEm1vbml0b3JlZFJlc291cmNlcxItCgdiaWxsaW5nGBogASgLMhMuZ29vZ2xlLmFwaS5CaWxsaW5nUgdiaWxsaW5nEi0KB2xvZ2dpbmcYGyABKAsyEy5nb29nbGUuYXBpLkxvZ2dpbmdSB2xvZ2dpbmcSNgoKbW9uaXRvcmluZxgcIAEoCzIWLmdvb2dsZS5hcGkuTW9uaXRvcmluZ1IKbW9uaXRvcmluZxJJChFzeXN0ZW1fcGFyYW1ldGVycxgdIAEoCzIcLmdvb2dsZS5hcGkuU3lzdGVtUGFyYW1ldGVyc1IQc3lzdGVtUGFyYW1ldGVycxI3Cgtzb3VyY2VfaW5mbxglIAEoCzIWLmdvb2dsZS5hcGkuU291cmNlSW5mb1IKc291cmNlSW5mbxJHCg5jb25maWdfdmVyc2lvbhgUIAEoCzIcLmdvb2dsZS5wcm90b2J1Zi5VSW50MzJWYWx1ZUICGAFSDWNvbmZpZ1ZlcnNpb24=');

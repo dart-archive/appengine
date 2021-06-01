@@ -2,8 +2,8 @@
 //  Generated code. Do not modify.
 //  source: google/api/service.proto
 //
-// @dart = 2.3
-// ignore_for_file: camel_case_types,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type
+// @dart = 2.12
+// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
 import 'dart:core' as $core;
 
@@ -31,55 +31,175 @@ import 'system_parameter.pb.dart' as $18;
 import 'source_info.pb.dart' as $19;
 
 class Service extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo('Service',
-      package: const $pb.PackageName('google.api'), createEmptyInstance: create)
-    ..aOS(1, 'name')
-    ..aOS(2, 'title')
-    ..pc<$0.Api>(3, 'apis', $pb.PbFieldType.PM, subBuilder: $0.Api.create)
-    ..pc<$1.Type>(4, 'types', $pb.PbFieldType.PM, subBuilder: $1.Type.create)
-    ..pc<$1.Enum>(5, 'enums', $pb.PbFieldType.PM, subBuilder: $1.Enum.create)
-    ..aOM<$2.Documentation>(6, 'documentation',
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Service',
+      package: const $pb.PackageName($core.bool.fromEnvironment('protobuf.omit_message_names')
+          ? ''
+          : 'google.api'),
+      createEmptyInstance: create)
+    ..aOS(
+        1,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'name')
+    ..aOS(
+        2,
+        const $core.bool.fromEnvironment('protobuf.omit_field_names')
+            ? ''
+            : 'title')
+    ..pc<$0.Api>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'apis', $pb.PbFieldType.PM,
+        subBuilder: $0.Api.create)
+    ..pc<$1.Type>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'types', $pb.PbFieldType.PM,
+        subBuilder: $1.Type.create)
+    ..pc<$1.Enum>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'enums', $pb.PbFieldType.PM,
+        subBuilder: $1.Enum.create)
+    ..aOM<$2.Documentation>(
+        6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'documentation',
         subBuilder: $2.Documentation.create)
-    ..aOM<$3.Backend>(8, 'backend', subBuilder: $3.Backend.create)
-    ..aOM<$4.Http>(9, 'http', subBuilder: $4.Http.create)
-    ..aOM<$5.Quota>(10, 'quota', subBuilder: $5.Quota.create)
-    ..aOM<$6.Authentication>(11, 'authentication',
-        subBuilder: $6.Authentication.create)
-    ..aOM<$7.Context>(12, 'context', subBuilder: $7.Context.create)
-    ..aOM<$8.Usage>(15, 'usage', subBuilder: $8.Usage.create)
-    ..pc<$9.Endpoint>(18, 'endpoints', $pb.PbFieldType.PM,
-        subBuilder: $9.Endpoint.create)
-    ..aOM<$10.UInt32Value>(20, 'configVersion',
-        subBuilder: $10.UInt32Value.create)
-    ..aOM<$11.Control>(21, 'control', subBuilder: $11.Control.create)
-    ..aOS(22, 'producerProjectId')
-    ..pc<$12.LogDescriptor>(23, 'logs', $pb.PbFieldType.PM,
-        subBuilder: $12.LogDescriptor.create)
-    ..pc<$13.MetricDescriptor>(24, 'metrics', $pb.PbFieldType.PM,
-        subBuilder: $13.MetricDescriptor.create)
-    ..pc<$14.MonitoredResourceDescriptor>(
-        25, 'monitoredResources', $pb.PbFieldType.PM,
-        subBuilder: $14.MonitoredResourceDescriptor.create)
-    ..aOM<$15.Billing>(26, 'billing', subBuilder: $15.Billing.create)
-    ..aOM<$16.Logging>(27, 'logging', subBuilder: $16.Logging.create)
-    ..aOM<$17.Monitoring>(28, 'monitoring', subBuilder: $17.Monitoring.create)
-    ..aOM<$18.SystemParameters>(29, 'systemParameters',
-        subBuilder: $18.SystemParameters.create)
-    ..aOS(33, 'id')
-    ..aOM<$19.SourceInfo>(37, 'sourceInfo', subBuilder: $19.SourceInfo.create)
+    ..aOM<$3.Backend>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'backend', subBuilder: $3.Backend.create)
+    ..aOM<$4.Http>(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'http', subBuilder: $4.Http.create)
+    ..aOM<$5.Quota>(10, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'quota', subBuilder: $5.Quota.create)
+    ..aOM<$6.Authentication>(11, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'authentication', subBuilder: $6.Authentication.create)
+    ..aOM<$7.Context>(12, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'context', subBuilder: $7.Context.create)
+    ..aOM<$8.Usage>(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'usage', subBuilder: $8.Usage.create)
+    ..pc<$9.Endpoint>(18, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'endpoints', $pb.PbFieldType.PM, subBuilder: $9.Endpoint.create)
+    ..aOM<$10.UInt32Value>(20, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'configVersion', subBuilder: $10.UInt32Value.create)
+    ..aOM<$11.Control>(21, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'control', subBuilder: $11.Control.create)
+    ..aOS(22, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'producerProjectId')
+    ..pc<$12.LogDescriptor>(23, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'logs', $pb.PbFieldType.PM, subBuilder: $12.LogDescriptor.create)
+    ..pc<$13.MetricDescriptor>(24, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'metrics', $pb.PbFieldType.PM, subBuilder: $13.MetricDescriptor.create)
+    ..pc<$14.MonitoredResourceDescriptor>(25, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'monitoredResources', $pb.PbFieldType.PM, subBuilder: $14.MonitoredResourceDescriptor.create)
+    ..aOM<$15.Billing>(26, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'billing', subBuilder: $15.Billing.create)
+    ..aOM<$16.Logging>(27, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'logging', subBuilder: $16.Logging.create)
+    ..aOM<$17.Monitoring>(28, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'monitoring', subBuilder: $17.Monitoring.create)
+    ..aOM<$18.SystemParameters>(29, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'systemParameters', subBuilder: $18.SystemParameters.create)
+    ..aOS(33, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
+    ..aOM<$19.SourceInfo>(37, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'sourceInfo', subBuilder: $19.SourceInfo.create)
     ..hasRequiredFields = false;
 
   Service._() : super();
-  factory Service() => create();
+  factory Service({
+    $core.String? name,
+    $core.String? title,
+    $core.Iterable<$0.Api>? apis,
+    $core.Iterable<$1.Type>? types,
+    $core.Iterable<$1.Enum>? enums,
+    $2.Documentation? documentation,
+    $3.Backend? backend,
+    $4.Http? http,
+    $5.Quota? quota,
+    $6.Authentication? authentication,
+    $7.Context? context,
+    $8.Usage? usage,
+    $core.Iterable<$9.Endpoint>? endpoints,
+    @$core.Deprecated('This field is deprecated.')
+        $10.UInt32Value? configVersion,
+    $11.Control? control,
+    $core.String? producerProjectId,
+    $core.Iterable<$12.LogDescriptor>? logs,
+    $core.Iterable<$13.MetricDescriptor>? metrics,
+    $core.Iterable<$14.MonitoredResourceDescriptor>? monitoredResources,
+    $15.Billing? billing,
+    $16.Logging? logging,
+    $17.Monitoring? monitoring,
+    $18.SystemParameters? systemParameters,
+    $core.String? id,
+    $19.SourceInfo? sourceInfo,
+  }) {
+    final _result = create();
+    if (name != null) {
+      _result.name = name;
+    }
+    if (title != null) {
+      _result.title = title;
+    }
+    if (apis != null) {
+      _result.apis.addAll(apis);
+    }
+    if (types != null) {
+      _result.types.addAll(types);
+    }
+    if (enums != null) {
+      _result.enums.addAll(enums);
+    }
+    if (documentation != null) {
+      _result.documentation = documentation;
+    }
+    if (backend != null) {
+      _result.backend = backend;
+    }
+    if (http != null) {
+      _result.http = http;
+    }
+    if (quota != null) {
+      _result.quota = quota;
+    }
+    if (authentication != null) {
+      _result.authentication = authentication;
+    }
+    if (context != null) {
+      _result.context = context;
+    }
+    if (usage != null) {
+      _result.usage = usage;
+    }
+    if (endpoints != null) {
+      _result.endpoints.addAll(endpoints);
+    }
+    if (configVersion != null) {
+      // ignore: deprecated_member_use_from_same_package
+      _result.configVersion = configVersion;
+    }
+    if (control != null) {
+      _result.control = control;
+    }
+    if (producerProjectId != null) {
+      _result.producerProjectId = producerProjectId;
+    }
+    if (logs != null) {
+      _result.logs.addAll(logs);
+    }
+    if (metrics != null) {
+      _result.metrics.addAll(metrics);
+    }
+    if (monitoredResources != null) {
+      _result.monitoredResources.addAll(monitoredResources);
+    }
+    if (billing != null) {
+      _result.billing = billing;
+    }
+    if (logging != null) {
+      _result.logging = logging;
+    }
+    if (monitoring != null) {
+      _result.monitoring = monitoring;
+    }
+    if (systemParameters != null) {
+      _result.systemParameters = systemParameters;
+    }
+    if (id != null) {
+      _result.id = id;
+    }
+    if (sourceInfo != null) {
+      _result.sourceInfo = sourceInfo;
+    }
+    return _result;
+  }
   factory Service.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Service.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
   Service clone() => Service()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
   Service copyWith(void Function(Service) updates) =>
-      super.copyWith((message) => updates(message as Service));
+      super.copyWith((message) => updates(message as Service))
+          as Service; // ignore: deprecated_member_use
   $pb.BuilderInfo get info_ => _i;
   @$core.pragma('dart2js:noInline')
   static Service create() => Service._();
@@ -88,7 +208,7 @@ class Service extends $pb.GeneratedMessage {
   @$core.pragma('dart2js:noInline')
   static Service getDefault() =>
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Service>(create);
-  static Service _defaultInstance;
+  static Service? _defaultInstance;
 
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
@@ -224,17 +344,22 @@ class Service extends $pb.GeneratedMessage {
   @$pb.TagNumber(18)
   $core.List<$9.Endpoint> get endpoints => $_getList(12);
 
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(20)
   $10.UInt32Value get configVersion => $_getN(13);
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(20)
   set configVersion($10.UInt32Value v) {
     setField(20, v);
   }
 
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(20)
   $core.bool hasConfigVersion() => $_has(13);
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(20)
   void clearConfigVersion() => clearField(20);
+  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(20)
   $10.UInt32Value ensureConfigVersion() => $_ensure(13);
 
