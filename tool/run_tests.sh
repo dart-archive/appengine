@@ -20,10 +20,10 @@ export PATH="$PATH:$DART_SDK/bin"
 export RETURN_VALUE=0
 
 start_phase "Analyzing"
-analyze_files $(find $REPO_ROOT/lib -name "*.dart")
+dart analyze lib
 RETURN_VALUE=$(expr $RETURN_VALUE + $?)
 
-analyze_files $(find $REPO_ROOT/test -name '*.dart')
+dart analyze test
 RETURN_VALUE=$(expr $RETURN_VALUE + $?)
 
 start_phase "Starting API server"
@@ -34,7 +34,7 @@ sleep 3
 
 
 start_phase "Testing"
-pub run test
+dart pub run test
 RETURN_VALUE=$(expr $RETURN_VALUE + $?)
 
 start_phase "Killing API server"
