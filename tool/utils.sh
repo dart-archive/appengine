@@ -25,17 +25,6 @@ function check_env_variable {
   fi
 }
 
-function analyze_files {
-  echo "Analyzing files '$1'."
-
-  "$DART_SDK/bin/dartanalyzer" --fatal-warnings "$@"
-  if [ $? -ne 0 ]; then
-    error "Analyzer failed on file '$1'."
-    return 1
-  fi
-  return 0
-}
-
 function test_file {
   echo "Testing file '$1'."
   "$DART_SDK/bin/dart" --checked "$1"
