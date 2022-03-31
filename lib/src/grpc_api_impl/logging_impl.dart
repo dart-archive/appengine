@@ -371,17 +371,21 @@ class SharedLoggingService {
       ..partialSuccess =
           false /* for now we want to get notified if something goes wrong */;
     _entries.clear();
-    _clientStub.writeLogEntries(request).catchError((error, stack) {
-      // In case the logging API failed, we'll write the error message to
-      // stderr.  The logging daemon on the VM will make another attempt at
-      // uploading stderr via the logging API.
-      stderr.writeln('An error occured while writing log entries:\n'
-          'Error:$error\n'
-          '$stack');
-    }).whenComplete(() {
-      _outstandingRequests--;
-      _maybeClose();
-    });
+    unawaited(() async {
+      try {
+        await _clientStub.writeLogEntries(request);
+      } catch (error, stack) {
+        // In case the logging API failed, we'll write the error message to
+        // stderr.  The logging daemon on the VM will make another attempt at
+        // uploading stderr via the logging API.
+        stderr.writeln('An error occured while writing log entries:\n'
+            'Error:$error\n'
+            '$stack');
+      } finally {
+        _outstandingRequests--;
+        _maybeClose();
+      }
+    }());
   }
 
   Future close() {

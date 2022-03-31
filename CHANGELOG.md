@@ -1,3 +1,6 @@
+## 0.13.2
+ * Gracefully handle cases where logging fails.
+
 ## 0.13.1
  * Fix dependency on `package:gcloud` to version `0.8.0`.
 
