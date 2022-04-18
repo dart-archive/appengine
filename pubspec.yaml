@@ -3,7 +3,7 @@ version: 0.13.2
 description: >-
   Support for using Dart as a custom runtime on
   Google App Engine Flexible Environment
-homepage: https://github.com/dart-lang/appengine
+repository: https://github.com/dart-lang/appengine
 
 environment:
   sdk: '>=2.14.0 <3.0.0'
