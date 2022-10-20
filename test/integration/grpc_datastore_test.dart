@@ -9,7 +9,7 @@ import 'package:gcloud/db.dart' as db;
 import 'package:grpc/grpc.dart' as grpc;
 import 'package:test/test.dart' as test;
 
-import 'common_e2e.dart' show withAuthenticator;
+import 'common_e2e.dart' show onBot, withAuthenticator;
 import 'raw_datastore_test_impl.dart' as datastore_tests;
 
 main() async {
@@ -17,28 +17,33 @@ main() async {
 
   final String nsPrefix = Platform.operatingSystem;
 
-  await withAuthenticator(OAuth2Scopes,
-      (String project, grpc.HttpBasedAuthenticator authenticator) async {
-    final clientChannel = grpc.ClientChannel(endpoint);
-    final datastore = GrpcDatastoreImpl(clientChannel, authenticator, project);
-    // ignore: unused_local_variable
-    final dbService = db.DatastoreDB(datastore);
+  test.group('grpc datastore', () async {
+    await withAuthenticator(OAuth2Scopes, (
+      String project,
+      grpc.HttpBasedAuthenticator authenticator,
+    ) async {
+      final clientChannel = grpc.ClientChannel(endpoint);
+      final datastore =
+          GrpcDatastoreImpl(clientChannel, authenticator, project);
+      // ignore: unused_local_variable
+      final dbService = db.DatastoreDB(datastore);
 
-    // Once all tests are done we'll close the resources.
-    test.tearDownAll(() async {
-      await clientChannel.shutdown();
-    });
+      // Once all tests are done we'll close the resources.
+      test.tearDownAll(() async {
+        await clientChannel.shutdown();
+      });
 
-    // Run low-level datastore tests.
-    datastore_tests.runTests(
-        datastore, '${nsPrefix}${DateTime.now().millisecondsSinceEpoch}');
+      // Run low-level datastore tests.
+      datastore_tests.runTests(
+          datastore, '${nsPrefix}${DateTime.now().millisecondsSinceEpoch}');
 
-    // Run high-level db tests.
-    /*  db_tests.runTests(
+      // Run high-level db tests.
+      /*  db_tests.runTests(
         dbService, '${nsPrefix}${DateTime.now().millisecondsSinceEpoch}');
 
     // Run metamodel tests.
     metamodel_tests.runTests(datastore, dbService,
         '${nsPrefix}${DateTime.now().millisecondsSinceEpoch}');*/
-  });
+    });
+  }, skip: onBot());
 }

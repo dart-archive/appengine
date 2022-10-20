@@ -83,9 +83,8 @@ Future<dynamic> withAuthenticator(
   project ??= DEFAULT_PROJECT;
   serviceKeyLocation ??= DEFAULT_KEY_LOCATION;
 
-  final keyJson =
-      await (_serviceKeyJson(serviceKeyLocation) as FutureOr<String>);
-  final authenticator = grpc.ServiceAccountAuthenticator(keyJson, scopes);
+  final keyJson = await (_serviceKeyJson(serviceKeyLocation));
+  final authenticator = grpc.ServiceAccountAuthenticator(keyJson!, scopes);
   return callback(project, authenticator);
 }
 
