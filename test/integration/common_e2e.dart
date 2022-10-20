@@ -24,6 +24,17 @@ const String DEFAULT_KEY_LOCATION =
     'gs://dart-archive-internal/keys/dart-gcloud-e2e.json';
 
 bool onBot() {
+  // Check for GitHub Actions.
+  if (Platform.environment['CI'] == 'true') {
+    return true;
+  }
+
+  // Redundent GitHub Actions check.
+  if (Platform.environment.containsKey('GITHUB_ACTION')) {
+    return true;
+  }
+
+  // Chromium LUCI check.
   final name = Platform.isWindows ? 'USERNAME' : 'USER';
   return Platform.environment[name] == 'chrome-bot';
 }
