@@ -4,15 +4,12 @@
 
 import 'dart:io';
 
-import 'package:test/test.dart' as test;
-
-import 'package:grpc/grpc.dart' as grpc;
 import 'package:appengine/src/grpc_api_impl/datastore_impl.dart';
 import 'package:gcloud/db.dart' as db;
+import 'package:grpc/grpc.dart' as grpc;
+import 'package:test/test.dart' as test;
 
 import 'common_e2e.dart' show withAuthenticator;
-import 'db/db_tests.dart' as db_tests;
-import 'db/metamodel_tests.dart' as metamodel_tests;
 import 'raw_datastore_test_impl.dart' as datastore_tests;
 
 main() async {
@@ -24,6 +21,7 @@ main() async {
       (String project, grpc.HttpBasedAuthenticator authenticator) async {
     final clientChannel = grpc.ClientChannel(endpoint);
     final datastore = GrpcDatastoreImpl(clientChannel, authenticator, project);
+    // ignore: unused_local_variable
     final dbService = db.DatastoreDB(datastore);
 
     // Once all tests are done we'll close the resources.

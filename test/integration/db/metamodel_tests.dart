@@ -56,31 +56,46 @@ runTests(datastore, db.DatastoreDB store, String uniquePostfix) {
 
       expect(namespaces.length, greaterThanOrEqualTo(3));
       expect(namespaces, contains(cond((dynamic ns) => ns.name == null)));
-      expect(namespaces, contains(cond((dynamic ns) => ns.name == 'FooNamespace')));
-      expect(namespaces, contains(cond((dynamic ns) => ns.name == 'BarNamespace')));
+      expect(namespaces,
+          contains(cond((dynamic ns) => ns.name == 'FooNamespace')));
+      expect(namespaces,
+          contains(cond((dynamic ns) => ns.name == 'BarNamespace')));
 
       try {
         for (final namespace in [null, 'FooNamespace', 'BarNamespace']) {
-          final partition = store.newPartition(namespace!);
+          // TODO: Partition.newPartition should be updated to accept null.
+          final partition = store.newPartition(namespace ?? '');
           final kindQuery = store.query<Kind>(partition: partition);
           final List<Kind> kinds = await kindQuery.run().cast<Kind>().toList();
 
           expect(kinds.length, greaterThanOrEqualTo(2));
           if (namespace == null) {
-            expect(kinds,
-                contains(cond((dynamic k) => k.name == 'NullKind$uniquePostfix')));
-            expect(kinds,
-                contains(cond((dynamic k) => k.name == 'NullKind2$uniquePostfix')));
+            expect(
+                kinds,
+                contains(
+                    cond((dynamic k) => k.name == 'NullKind$uniquePostfix')));
+            expect(
+                kinds,
+                contains(
+                    cond((dynamic k) => k.name == 'NullKind2$uniquePostfix')));
           } else if (namespace == 'FooNamespace') {
-            expect(kinds,
-                contains(cond((dynamic k) => k.name == 'FooKind$uniquePostfix')));
-            expect(kinds,
-                contains(cond((dynamic k) => k.name == 'FooKind2$uniquePostfix')));
+            expect(
+                kinds,
+                contains(
+                    cond((dynamic k) => k.name == 'FooKind$uniquePostfix')));
+            expect(
+                kinds,
+                contains(
+                    cond((dynamic k) => k.name == 'FooKind2$uniquePostfix')));
           } else if (namespace == 'BarNamespace') {
-            expect(kinds,
-                contains(cond((dynamic k) => k.name == 'BarKind$uniquePostfix')));
-            expect(kinds,
-                contains(cond((dynamic k) => k.name == 'BarKind2$uniquePostfix')));
+            expect(
+                kinds,
+                contains(
+                    cond((dynamic k) => k.name == 'BarKind$uniquePostfix')));
+            expect(
+                kinds,
+                contains(
+                    cond((dynamic k) => k.name == 'BarKind2$uniquePostfix')));
           }
         }
       } finally {
