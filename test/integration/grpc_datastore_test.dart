@@ -17,11 +17,9 @@ main() async {
 
   final String nsPrefix = Platform.operatingSystem;
 
-  test.group('grpc datastore', () async {
-    await withAuthenticator(OAuth2Scopes, (
-      String project,
-      grpc.HttpBasedAuthenticator authenticator,
-    ) async {
+  test.group('grpc datastore', () {
+    withAuthenticator(OAuth2Scopes,
+        (String project, grpc.HttpBasedAuthenticator authenticator) async {
       final clientChannel = grpc.ClientChannel(endpoint);
       final datastore =
           GrpcDatastoreImpl(clientChannel, authenticator, project);
