@@ -1,4 +1,4 @@
-[![Build Status](https://github.com/dart-lang/appengine/workflows/Dart/badge.svg)](https://github.com/dart-lang/appengine/actions)
+[![Build](https://github.com/dart-lang/appengine/actions/workflows/build.yaml/badge.svg)](https://github.com/dart-lang/appengine/actions/workflows/build.yaml)
 [![pub package](https://img.shields.io/pub/v/appengine.svg)](https://pub.dev/packages/appengine)
 [![package publisher](https://img.shields.io/pub/publisher/appengine.svg)](https://pub.dev/packages/appengine/publisher)
 
