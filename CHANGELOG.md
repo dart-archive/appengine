@@ -1,4 +1,7 @@
-## 0.13.3-dev
+## 0.13.3
+
+* Populate the pubspec `repository` field.
+* Update the readme to add experimental verbiage.
 
 ## 0.13.2
  * Gracefully handle cases where logging fails.

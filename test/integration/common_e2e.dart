@@ -24,6 +24,17 @@ const String DEFAULT_KEY_LOCATION =
     'gs://dart-archive-internal/keys/dart-gcloud-e2e.json';
 
 bool onBot() {
+  // Check for GitHub Actions.
+  if (Platform.environment['CI'] == 'true') {
+    return true;
+  }
+
+  // Redundent GitHub Actions check.
+  if (Platform.environment.containsKey('GITHUB_ACTION')) {
+    return true;
+  }
+
+  // Chromium LUCI check.
   final name = Platform.isWindows ? 'USERNAME' : 'USER';
   return Platform.environment[name] == 'chrome-bot';
 }
@@ -72,9 +83,8 @@ Future<dynamic> withAuthenticator(
   project ??= DEFAULT_PROJECT;
   serviceKeyLocation ??= DEFAULT_KEY_LOCATION;
 
-  final keyJson =
-      await (_serviceKeyJson(serviceKeyLocation) as FutureOr<String>);
-  final authenticator = grpc.ServiceAccountAuthenticator(keyJson, scopes);
+  final keyJson = await (_serviceKeyJson(serviceKeyLocation));
+  final authenticator = grpc.ServiceAccountAuthenticator(keyJson!, scopes);
   return callback(project, authenticator);
 }
 

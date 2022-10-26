@@ -1,4 +1,8 @@
-# Dart support for Google AppEngine
+[![Build Status](https://github.com/dart-lang/appengine/workflows/Dart/badge.svg)](https://github.com/dart-lang/appengine/actions)
+[![pub package](https://img.shields.io/pub/v/appengine.svg)](https://pub.dev/packages/appengine)
+[![package publisher](https://img.shields.io/pub/publisher/appengine.svg)](https://pub.dev/packages/appengine/publisher)
+
+## Dart support for Google AppEngine
 
 This package provides support for running server applications written in Dart on
 [Google App Engine](https://cloud.google.com/appengine/) using

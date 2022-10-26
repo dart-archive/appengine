@@ -37,7 +37,7 @@ void setupAppEngineLogging() {
         if (level != null) {
           var message = record.message;
 
-          if (record.loggerName != null && record.loggerName.isNotEmpty) {
+          if (record.loggerName.isNotEmpty) {
             message = '${record.loggerName}: $message';
           }
 
