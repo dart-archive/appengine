@@ -327,6 +327,9 @@ class _ClientChannelWithClientId implements grpc.ClientChannel {
 
   @override
   Future<void> terminate() => _clientChannel.terminate();
+
+  @override
+  Stream<ConnectionState> get onConnectionStateChanged => _clientChannel.onConnectionStateChanged;
 }
 
 Future<String?> _getZoneInProduction() => _getMetadataValue('zone');
