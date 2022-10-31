@@ -1,3 +1,7 @@
+## 0.13.4
+
+* Implement `onConnectionStateChanged` to sync `grpc: 3.1.0`
+
 ## 0.13.3
 
 * Populate the pubspec `repository` field.
