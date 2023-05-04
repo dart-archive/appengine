@@ -1,3 +1,6 @@
+## 0.13.5
+ * Added topics to `pubspec.yaml`.
+
 ## 0.13.4
 
 * Implement `onConnectionStateChanged` to sync `grpc: 3.1.0`
