@@ -1,15 +1,16 @@
 name: appengine
-version: 0.13.5
+version: 0.13.6-wip
 description: >
   Support for using Dart as a custom runtime on Google App Engine Flexible
   Environment
 repository: https://github.com/dart-lang/appengine
+
 topics:
- - cloud
- - gcp
+  - cloud
+  - gcp
 
 environment:
-  sdk: '>=2.14.0 <3.0.0'
+  sdk: '>=2.19.0 <3.0.0'
 
 dependencies:
   fixnum: ^1.0.0

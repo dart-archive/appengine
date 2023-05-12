@@ -1,5 +1,10 @@
+## 0.13.6-wip
+
+* Require Dart 2.19.
+
 ## 0.13.5
- * Added topics to `pubspec.yaml`.
+
+* Added topics to `pubspec.yaml`.
 
 ## 0.13.4
 
