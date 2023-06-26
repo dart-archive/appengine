@@ -166,4 +166,3 @@ This will perform a remote docker build in the cloud and deploy a new version.
 You can find the URL to the version that got deployed
 in the output of `gcloud app deploy` (as well as via the
 [Cloud Console](https://console.cloud.google.com) under `AppEngine > Versions`).
-
