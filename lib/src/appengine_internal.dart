@@ -41,14 +41,14 @@ Future withAppEngineServices(Future callback()) =>
 ///
 /// The given request [handler] is run inside a new service scope and has all
 /// AppEngine services available within that scope.
-Future runAppEngine(
+Future<AppEngineHttpServer> startAppEngineServer(
   void handler(HttpRequest request, ClientContext context),
   void onError(Object e, StackTrace s)?, {
   int port = 8080,
   bool shared = false,
   void onAcceptingConnections(InternetAddress address, int port)?,
-}) {
-  return _withAppEngineServicesInternal((ContextRegistry contextRegistry) {
+}) async {
+  return _withAppEngineServicesInternal((ContextRegistry contextRegistry) async {
     final appengineServer = AppEngineHttpServer(contextRegistry,
         port: port, shared: shared)
       ..run((request, context) {
@@ -92,12 +92,12 @@ Future runAppEngine(
           });
         });
       }, onAcceptingConnections: onAcceptingConnections);
-    return appengineServer.done;
+    return appengineServer;
   });
 }
 
-Future _withAppEngineServicesInternal(
-    Future callback(ContextRegistry contextRegistry)) {
+Future<R> _withAppEngineServicesInternal<R>(
+    Future<R> callback(ContextRegistry contextRegistry)) {
   return ss.fork(() async {
     final ContextRegistry contextRegistry = await _initializeAppEngine();
     final bgServices = contextRegistry.newBackgroundServices();
@@ -108,7 +108,7 @@ Future _withAppEngineServicesInternal(
     logging.registerLoggingService(bgServices.logging);
 
     return callback(contextRegistry);
-  });
+  }) as Future<R>;
 }
 
 /// Sets up a `package:logging` adaptor to use AppEngine logging service.

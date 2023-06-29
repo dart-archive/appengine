@@ -1,6 +1,7 @@
-## 0.13.6-wip
+## 0.13.6
 
 * Require Dart 2.19.
+* `runAppEngine` can be stopped with optional `stopSignal` parameter.
 
 ## 0.13.5
 

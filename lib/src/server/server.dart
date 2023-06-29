@@ -55,7 +55,8 @@ class AppEngineHttpServer {
 
       server.listen((HttpRequest request) {
         // Default handling is sending the request to the application.
-        dynamic Function(HttpRequest, ClientContext)? handler = applicationHandler;
+        dynamic Function(HttpRequest, ClientContext)? handler =
+            applicationHandler;
 
         // Check if the request path is one of the service handlers.
         final String path = request.uri.path;
@@ -100,14 +101,21 @@ class AppEngineHttpServer {
   void _stop(HttpRequest request, _) {
     request.drain().then((_) {
       if (_httpServer != null) {
-        _httpServer!.close().then((_) {
-          _httpServer = null;
+        stop().then((_) {
           _sendResponse(request.response, HttpStatus.ok, 'ok');
         });
       } else {
         _sendResponse(request.response, HttpStatus.conflict, 'fail');
       }
     });
+  }
+
+  // Stops serving request with the HTTP server.
+  Future<void> stop() async {
+    if (_httpServer != null) {
+      await _httpServer!.close();
+      _httpServer = null;
+    }
   }
 
   void _checkShutdown() {

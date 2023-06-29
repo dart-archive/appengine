@@ -61,7 +61,8 @@ Future runAppEngine(
   int port = 8080,
   bool shared = false,
   void onAcceptingConnections(InternetAddress address, int port)?,
-}) {
+  Future? stopSignal,
+}) async {
   var errorHandler;
   if (onError != null) {
     if (onError is ZoneUnaryCallback) {
@@ -74,14 +75,20 @@ Future runAppEngine(
     }
   }
 
-  return appengine_internal.runAppEngine(
-      (HttpRequest request, ClientContext context) {
-    ss.register(_APPENGINE_CONTEXT, context);
-    handler(request);
-  }, errorHandler,
-      port: port,
-      shared: shared,
-      onAcceptingConnections: onAcceptingConnections);
+  final server = await appengine_internal.startAppEngineServer(
+    (HttpRequest request, ClientContext context) {
+      ss.register(_APPENGINE_CONTEXT, context);
+      handler(request);
+    },
+    errorHandler,
+    port: port,
+    shared: shared,
+    onAcceptingConnections: onAcceptingConnections,
+  );
+  if (stopSignal != null) {
+    unawaited(stopSignal.then((_) => server.stop()));
+  }
+  await server.done;
 }
 
 /// Returns `true`, if the incoming request is an AppEngine cron job request.
