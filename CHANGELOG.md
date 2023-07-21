@@ -1,6 +1,7 @@
 ## 0.13.6-wip
 
 * Require Dart 2.19.
+* Setup `dbService` to do retries for failed requests.
 
 ## 0.13.5
 

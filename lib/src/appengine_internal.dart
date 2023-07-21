@@ -226,8 +226,13 @@ Future<db.DatastoreDB> _obtainDatastoreService(
     grpc_datastore_impl.OAuth2Scopes,
   );
   final grpcClient = _getGrpcClientChannel(endpoint, needAuthorization);
-  final rawDatastore = grpc_datastore_impl.GrpcDatastoreImpl(
-      grpcClient, authenticator, projectId);
+  final rawDatastore = datastore.Datastore.withRetry(
+    grpc_datastore_impl.GrpcDatastoreImpl(
+      grpcClient,
+      authenticator,
+      projectId,
+    ),
+  );
   return db.DatastoreDB(rawDatastore, modelDB: db.ModelDBImpl());
 }
 
@@ -329,7 +334,8 @@ class _ClientChannelWithClientId implements grpc.ClientChannel {
   Future<void> terminate() => _clientChannel.terminate();
 
   @override
-  Stream<ConnectionState> get onConnectionStateChanged => _clientChannel.onConnectionStateChanged;
+  Stream<ConnectionState> get onConnectionStateChanged =>
+      _clientChannel.onConnectionStateChanged;
 }
 
 Future<String?> _getZoneInProduction() => _getMetadataValue('zone');
