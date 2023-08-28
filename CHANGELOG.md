@@ -1,3 +1,6 @@
+## 0.13.7
+ * Widen dependency constraint on `package:http`.
+
 ## 0.13.6
 
 * Require Dart 2.19.
