@@ -1,5 +1,5 @@
 name: appengine
-version: 0.13.6
+version: 0.13.7
 description: >
   Support for using Dart as a custom runtime on Google App Engine Flexible
   Environment
@@ -17,7 +17,7 @@ dependencies:
   gcloud: ^0.8.10
   googleapis_auth: ^1.1.0
   grpc: ^3.1.0
-  http: ^0.13.3
+  http: '>=0.13.3 <2.0.0'
   logging: ^1.0.1
   path: ^1.8.0
   protobuf: ^2.0.0
