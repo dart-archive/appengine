@@ -1,12 +1,16 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/api/serviceusage/v1/serviceusage.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
-import 'dart:core' as $core;
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:convert' as $convert;
+import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
 @$core.Deprecated('Use enableServiceRequestDescriptor instead')
@@ -20,6 +24,7 @@ const EnableServiceRequest$json = {
 /// Descriptor for `EnableServiceRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List enableServiceRequestDescriptor = $convert
     .base64Decode('ChRFbmFibGVTZXJ2aWNlUmVxdWVzdBISCgRuYW1lGAEgASgJUgRuYW1l');
+
 @$core.Deprecated('Use enableServiceResponseDescriptor instead')
 const EnableServiceResponse$json = {
   '1': 'EnableServiceResponse',
@@ -37,7 +42,9 @@ const EnableServiceResponse$json = {
 
 /// Descriptor for `EnableServiceResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List enableServiceResponseDescriptor = $convert.base64Decode(
-    'ChVFbmFibGVTZXJ2aWNlUmVzcG9uc2USPQoHc2VydmljZRgBIAEoCzIjLmdvb2dsZS5hcGkuc2VydmljZXVzYWdlLnYxLlNlcnZpY2VSB3NlcnZpY2U=');
+    'ChVFbmFibGVTZXJ2aWNlUmVzcG9uc2USPQoHc2VydmljZRgBIAEoCzIjLmdvb2dsZS5hcGkuc2'
+    'VydmljZXVzYWdlLnYxLlNlcnZpY2VSB3NlcnZpY2U=');
+
 @$core.Deprecated('Use disableServiceRequestDescriptor instead')
 const DisableServiceRequest$json = {
   '1': 'DisableServiceRequest',
@@ -75,7 +82,13 @@ const DisableServiceRequest_CheckIfServiceHasUsage$json = {
 
 /// Descriptor for `DisableServiceRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List disableServiceRequestDescriptor = $convert.base64Decode(
-    'ChVEaXNhYmxlU2VydmljZVJlcXVlc3QSEgoEbmFtZRgBIAEoCVIEbmFtZRI8ChpkaXNhYmxlX2RlcGVuZGVudF9zZXJ2aWNlcxgCIAEoCFIYZGlzYWJsZURlcGVuZGVudFNlcnZpY2VzEoQBChpjaGVja19pZl9zZXJ2aWNlX2hhc191c2FnZRgDIAEoDjJILmdvb2dsZS5hcGkuc2VydmljZXVzYWdlLnYxLkRpc2FibGVTZXJ2aWNlUmVxdWVzdC5DaGVja0lmU2VydmljZUhhc1VzYWdlUhZjaGVja0lmU2VydmljZUhhc1VzYWdlIlkKFkNoZWNrSWZTZXJ2aWNlSGFzVXNhZ2USKgomQ0hFQ0tfSUZfU0VSVklDRV9IQVNfVVNBR0VfVU5TUEVDSUZJRUQQABIICgRTS0lQEAESCQoFQ0hFQ0sQAg==');
+    'ChVEaXNhYmxlU2VydmljZVJlcXVlc3QSEgoEbmFtZRgBIAEoCVIEbmFtZRI8ChpkaXNhYmxlX2'
+    'RlcGVuZGVudF9zZXJ2aWNlcxgCIAEoCFIYZGlzYWJsZURlcGVuZGVudFNlcnZpY2VzEoQBChpj'
+    'aGVja19pZl9zZXJ2aWNlX2hhc191c2FnZRgDIAEoDjJILmdvb2dsZS5hcGkuc2VydmljZXVzYW'
+    'dlLnYxLkRpc2FibGVTZXJ2aWNlUmVxdWVzdC5DaGVja0lmU2VydmljZUhhc1VzYWdlUhZjaGVj'
+    'a0lmU2VydmljZUhhc1VzYWdlIlkKFkNoZWNrSWZTZXJ2aWNlSGFzVXNhZ2USKgomQ0hFQ0tfSU'
+    'ZfU0VSVklDRV9IQVNfVVNBR0VfVU5TUEVDSUZJRUQQABIICgRTS0lQEAESCQoFQ0hFQ0sQAg==');
+
 @$core.Deprecated('Use disableServiceResponseDescriptor instead')
 const DisableServiceResponse$json = {
   '1': 'DisableServiceResponse',
@@ -94,7 +107,9 @@ const DisableServiceResponse$json = {
 /// Descriptor for `DisableServiceResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List disableServiceResponseDescriptor =
     $convert.base64Decode(
-        'ChZEaXNhYmxlU2VydmljZVJlc3BvbnNlEj0KB3NlcnZpY2UYASABKAsyIy5nb29nbGUuYXBpLnNlcnZpY2V1c2FnZS52MS5TZXJ2aWNlUgdzZXJ2aWNl');
+        'ChZEaXNhYmxlU2VydmljZVJlc3BvbnNlEj0KB3NlcnZpY2UYASABKAsyIy5nb29nbGUuYXBpLn'
+        'NlcnZpY2V1c2FnZS52MS5TZXJ2aWNlUgdzZXJ2aWNl');
+
 @$core.Deprecated('Use getServiceRequestDescriptor instead')
 const GetServiceRequest$json = {
   '1': 'GetServiceRequest',
@@ -106,6 +121,7 @@ const GetServiceRequest$json = {
 /// Descriptor for `GetServiceRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List getServiceRequestDescriptor = $convert
     .base64Decode('ChFHZXRTZXJ2aWNlUmVxdWVzdBISCgRuYW1lGAEgASgJUgRuYW1l');
+
 @$core.Deprecated('Use listServicesRequestDescriptor instead')
 const ListServicesRequest$json = {
   '1': 'ListServicesRequest',
@@ -119,7 +135,10 @@ const ListServicesRequest$json = {
 
 /// Descriptor for `ListServicesRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List listServicesRequestDescriptor = $convert.base64Decode(
-    'ChNMaXN0U2VydmljZXNSZXF1ZXN0EhYKBnBhcmVudBgBIAEoCVIGcGFyZW50EhsKCXBhZ2Vfc2l6ZRgCIAEoBVIIcGFnZVNpemUSHQoKcGFnZV90b2tlbhgDIAEoCVIJcGFnZVRva2VuEhYKBmZpbHRlchgEIAEoCVIGZmlsdGVy');
+    'ChNMaXN0U2VydmljZXNSZXF1ZXN0EhYKBnBhcmVudBgBIAEoCVIGcGFyZW50EhsKCXBhZ2Vfc2'
+    'l6ZRgCIAEoBVIIcGFnZVNpemUSHQoKcGFnZV90b2tlbhgDIAEoCVIJcGFnZVRva2VuEhYKBmZp'
+    'bHRlchgEIAEoCVIGZmlsdGVy');
+
 @$core.Deprecated('Use listServicesResponseDescriptor instead')
 const ListServicesResponse$json = {
   '1': 'ListServicesResponse',
@@ -138,7 +157,10 @@ const ListServicesResponse$json = {
 
 /// Descriptor for `ListServicesResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List listServicesResponseDescriptor = $convert.base64Decode(
-    'ChRMaXN0U2VydmljZXNSZXNwb25zZRI/CghzZXJ2aWNlcxgBIAMoCzIjLmdvb2dsZS5hcGkuc2VydmljZXVzYWdlLnYxLlNlcnZpY2VSCHNlcnZpY2VzEiYKD25leHRfcGFnZV90b2tlbhgCIAEoCVINbmV4dFBhZ2VUb2tlbg==');
+    'ChRMaXN0U2VydmljZXNSZXNwb25zZRI/CghzZXJ2aWNlcxgBIAMoCzIjLmdvb2dsZS5hcGkuc2'
+    'VydmljZXVzYWdlLnYxLlNlcnZpY2VSCHNlcnZpY2VzEiYKD25leHRfcGFnZV90b2tlbhgCIAEo'
+    'CVINbmV4dFBhZ2VUb2tlbg==');
+
 @$core.Deprecated('Use batchEnableServicesRequestDescriptor instead')
 const BatchEnableServicesRequest$json = {
   '1': 'BatchEnableServicesRequest',
@@ -151,7 +173,9 @@ const BatchEnableServicesRequest$json = {
 /// Descriptor for `BatchEnableServicesRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List batchEnableServicesRequestDescriptor =
     $convert.base64Decode(
-        'ChpCYXRjaEVuYWJsZVNlcnZpY2VzUmVxdWVzdBIWCgZwYXJlbnQYASABKAlSBnBhcmVudBIfCgtzZXJ2aWNlX2lkcxgCIAMoCVIKc2VydmljZUlkcw==');
+        'ChpCYXRjaEVuYWJsZVNlcnZpY2VzUmVxdWVzdBIWCgZwYXJlbnQYASABKAlSBnBhcmVudBIfCg'
+        'tzZXJ2aWNlX2lkcxgCIAMoCVIKc2VydmljZUlkcw==');
+
 @$core.Deprecated('Use batchEnableServicesResponseDescriptor instead')
 const BatchEnableServicesResponse$json = {
   '1': 'BatchEnableServicesResponse',
@@ -187,9 +211,14 @@ const BatchEnableServicesResponse_EnableFailure$json = {
 };
 
 /// Descriptor for `BatchEnableServicesResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List batchEnableServicesResponseDescriptor =
-    $convert.base64Decode(
-        'ChtCYXRjaEVuYWJsZVNlcnZpY2VzUmVzcG9uc2USPwoIc2VydmljZXMYASADKAsyIy5nb29nbGUuYXBpLnNlcnZpY2V1c2FnZS52MS5TZXJ2aWNlUghzZXJ2aWNlcxJhCghmYWlsdXJlcxgCIAMoCzJFLmdvb2dsZS5hcGkuc2VydmljZXVzYWdlLnYxLkJhdGNoRW5hYmxlU2VydmljZXNSZXNwb25zZS5FbmFibGVGYWlsdXJlUghmYWlsdXJlcxpTCg1FbmFibGVGYWlsdXJlEh0KCnNlcnZpY2VfaWQYASABKAlSCXNlcnZpY2VJZBIjCg1lcnJvcl9tZXNzYWdlGAIgASgJUgxlcnJvck1lc3NhZ2U=');
+final $typed_data.Uint8List batchEnableServicesResponseDescriptor = $convert.base64Decode(
+    'ChtCYXRjaEVuYWJsZVNlcnZpY2VzUmVzcG9uc2USPwoIc2VydmljZXMYASADKAsyIy5nb29nbG'
+    'UuYXBpLnNlcnZpY2V1c2FnZS52MS5TZXJ2aWNlUghzZXJ2aWNlcxJhCghmYWlsdXJlcxgCIAMo'
+    'CzJFLmdvb2dsZS5hcGkuc2VydmljZXVzYWdlLnYxLkJhdGNoRW5hYmxlU2VydmljZXNSZXNwb2'
+    '5zZS5FbmFibGVGYWlsdXJlUghmYWlsdXJlcxpTCg1FbmFibGVGYWlsdXJlEh0KCnNlcnZpY2Vf'
+    'aWQYASABKAlSCXNlcnZpY2VJZBIjCg1lcnJvcl9tZXNzYWdlGAIgASgJUgxlcnJvck1lc3NhZ2'
+    'U=');
+
 @$core.Deprecated('Use batchGetServicesRequestDescriptor instead')
 const BatchGetServicesRequest$json = {
   '1': 'BatchGetServicesRequest',
@@ -202,7 +231,9 @@ const BatchGetServicesRequest$json = {
 /// Descriptor for `BatchGetServicesRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List batchGetServicesRequestDescriptor =
     $convert.base64Decode(
-        'ChdCYXRjaEdldFNlcnZpY2VzUmVxdWVzdBIWCgZwYXJlbnQYASABKAlSBnBhcmVudBIUCgVuYW1lcxgCIAMoCVIFbmFtZXM=');
+        'ChdCYXRjaEdldFNlcnZpY2VzUmVxdWVzdBIWCgZwYXJlbnQYASABKAlSBnBhcmVudBIUCgVuYW'
+        '1lcxgCIAMoCVIFbmFtZXM=');
+
 @$core.Deprecated('Use batchGetServicesResponseDescriptor instead')
 const BatchGetServicesResponse$json = {
   '1': 'BatchGetServicesResponse',
@@ -221,4 +252,5 @@ const BatchGetServicesResponse$json = {
 /// Descriptor for `BatchGetServicesResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List batchGetServicesResponseDescriptor =
     $convert.base64Decode(
-        'ChhCYXRjaEdldFNlcnZpY2VzUmVzcG9uc2USPwoIc2VydmljZXMYASADKAsyIy5nb29nbGUuYXBpLnNlcnZpY2V1c2FnZS52MS5TZXJ2aWNlUghzZXJ2aWNlcw==');
+        'ChhCYXRjaEdldFNlcnZpY2VzUmVzcG9uc2USPwoIc2VydmljZXMYASADKAsyIy5nb29nbGUuYX'
+        'BpLnNlcnZpY2V1c2FnZS52MS5TZXJ2aWNlUghzZXJ2aWNlcw==');

@@ -1,12 +1,16 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/logging/v2/logging_metrics.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
-import 'dart:core' as $core;
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:convert' as $convert;
+import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
 @$core.Deprecated('Use logMetricDescriptor instead')
@@ -16,6 +20,8 @@ const LogMetric$json = {
     {'1': 'name', '3': 1, '4': 1, '5': 9, '8': {}, '10': 'name'},
     {'1': 'description', '3': 2, '4': 1, '5': 9, '8': {}, '10': 'description'},
     {'1': 'filter', '3': 3, '4': 1, '5': 9, '8': {}, '10': 'filter'},
+    {'1': 'bucket_name', '3': 13, '4': 1, '5': 9, '8': {}, '10': 'bucketName'},
+    {'1': 'disabled', '3': 12, '4': 1, '5': 8, '8': {}, '10': 'disabled'},
     {
       '1': 'metric_descriptor',
       '3': 5,
@@ -105,7 +111,23 @@ const LogMetric_ApiVersion$json = {
 
 /// Descriptor for `LogMetric`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List logMetricDescriptor = $convert.base64Decode(
-    'CglMb2dNZXRyaWMSFwoEbmFtZRgBIAEoCUID4EECUgRuYW1lEiUKC2Rlc2NyaXB0aW9uGAIgASgJQgPgQQFSC2Rlc2NyaXB0aW9uEhsKBmZpbHRlchgDIAEoCUID4EECUgZmaWx0ZXISTgoRbWV0cmljX2Rlc2NyaXB0b3IYBSABKAsyHC5nb29nbGUuYXBpLk1ldHJpY0Rlc2NyaXB0b3JCA+BBAVIQbWV0cmljRGVzY3JpcHRvchIsCg92YWx1ZV9leHRyYWN0b3IYBiABKAlCA+BBAVIOdmFsdWVFeHRyYWN0b3ISYQoQbGFiZWxfZXh0cmFjdG9ycxgHIAMoCzIxLmdvb2dsZS5sb2dnaW5nLnYyLkxvZ01ldHJpYy5MYWJlbEV4dHJhY3RvcnNFbnRyeUID4EEBUg9sYWJlbEV4dHJhY3RvcnMSUgoOYnVja2V0X29wdGlvbnMYCCABKAsyJi5nb29nbGUuYXBpLkRpc3RyaWJ1dGlvbi5CdWNrZXRPcHRpb25zQgPgQQFSDWJ1Y2tldE9wdGlvbnMSQAoLY3JlYXRlX3RpbWUYCSABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQNSCmNyZWF0ZVRpbWUSQAoLdXBkYXRlX3RpbWUYCiABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wQgPgQQNSCnVwZGF0ZVRpbWUSRQoHdmVyc2lvbhgEIAEoDjInLmdvb2dsZS5sb2dnaW5nLnYyLkxvZ01ldHJpYy5BcGlWZXJzaW9uQgIYAVIHdmVyc2lvbhpCChRMYWJlbEV4dHJhY3RvcnNFbnRyeRIQCgNrZXkYASABKAlSA2tleRIUCgV2YWx1ZRgCIAEoCVIFdmFsdWU6AjgBIhwKCkFwaVZlcnNpb24SBgoCVjIQABIGCgJWMRABOkrqQUcKIGxvZ2dpbmcuZ29vZ2xlYXBpcy5jb20vTG9nTWV0cmljEiNwcm9qZWN0cy97cHJvamVjdH0vbWV0cmljcy97bWV0cmljfQ==');
+    'CglMb2dNZXRyaWMSFwoEbmFtZRgBIAEoCUID4EECUgRuYW1lEiUKC2Rlc2NyaXB0aW9uGAIgAS'
+    'gJQgPgQQFSC2Rlc2NyaXB0aW9uEhsKBmZpbHRlchgDIAEoCUID4EECUgZmaWx0ZXISJAoLYnVj'
+    'a2V0X25hbWUYDSABKAlCA+BBAVIKYnVja2V0TmFtZRIfCghkaXNhYmxlZBgMIAEoCEID4EEBUg'
+    'hkaXNhYmxlZBJOChFtZXRyaWNfZGVzY3JpcHRvchgFIAEoCzIcLmdvb2dsZS5hcGkuTWV0cmlj'
+    'RGVzY3JpcHRvckID4EEBUhBtZXRyaWNEZXNjcmlwdG9yEiwKD3ZhbHVlX2V4dHJhY3RvchgGIA'
+    'EoCUID4EEBUg52YWx1ZUV4dHJhY3RvchJhChBsYWJlbF9leHRyYWN0b3JzGAcgAygLMjEuZ29v'
+    'Z2xlLmxvZ2dpbmcudjIuTG9nTWV0cmljLkxhYmVsRXh0cmFjdG9yc0VudHJ5QgPgQQFSD2xhYm'
+    'VsRXh0cmFjdG9ycxJSCg5idWNrZXRfb3B0aW9ucxgIIAEoCzImLmdvb2dsZS5hcGkuRGlzdHJp'
+    'YnV0aW9uLkJ1Y2tldE9wdGlvbnNCA+BBAVINYnVja2V0T3B0aW9ucxJACgtjcmVhdGVfdGltZR'
+    'gJIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBA1IKY3JlYXRlVGltZRJACgt1'
+    'cGRhdGVfdGltZRgKIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBA1IKdXBkYX'
+    'RlVGltZRJFCgd2ZXJzaW9uGAQgASgOMicuZ29vZ2xlLmxvZ2dpbmcudjIuTG9nTWV0cmljLkFw'
+    'aVZlcnNpb25CAhgBUgd2ZXJzaW9uGkIKFExhYmVsRXh0cmFjdG9yc0VudHJ5EhAKA2tleRgBIA'
+    'EoCVIDa2V5EhQKBXZhbHVlGAIgASgJUgV2YWx1ZToCOAEiHAoKQXBpVmVyc2lvbhIGCgJWMhAA'
+    'EgYKAlYxEAE6SupBRwogbG9nZ2luZy5nb29nbGVhcGlzLmNvbS9Mb2dNZXRyaWMSI3Byb2plY3'
+    'RzL3twcm9qZWN0fS9tZXRyaWNzL3ttZXRyaWN9');
+
 @$core.Deprecated('Use listLogMetricsRequestDescriptor instead')
 const ListLogMetricsRequest$json = {
   '1': 'ListLogMetricsRequest',
@@ -118,7 +140,11 @@ const ListLogMetricsRequest$json = {
 
 /// Descriptor for `ListLogMetricsRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List listLogMetricsRequestDescriptor = $convert.base64Decode(
-    'ChVMaXN0TG9nTWV0cmljc1JlcXVlc3QSSwoGcGFyZW50GAEgASgJQjPgQQL6QS0KK2Nsb3VkcmVzb3VyY2VtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL1Byb2plY3RSBnBhcmVudBIiCgpwYWdlX3Rva2VuGAIgASgJQgPgQQFSCXBhZ2VUb2tlbhIgCglwYWdlX3NpemUYAyABKAVCA+BBAVIIcGFnZVNpemU=');
+    'ChVMaXN0TG9nTWV0cmljc1JlcXVlc3QSSwoGcGFyZW50GAEgASgJQjPgQQL6QS0KK2Nsb3Vkcm'
+    'Vzb3VyY2VtYW5hZ2VyLmdvb2dsZWFwaXMuY29tL1Byb2plY3RSBnBhcmVudBIiCgpwYWdlX3Rv'
+    'a2VuGAIgASgJQgPgQQFSCXBhZ2VUb2tlbhIgCglwYWdlX3NpemUYAyABKAVCA+BBAVIIcGFnZV'
+    'NpemU=');
+
 @$core.Deprecated('Use listLogMetricsResponseDescriptor instead')
 const ListLogMetricsResponse$json = {
   '1': 'ListLogMetricsResponse',
@@ -136,9 +162,11 @@ const ListLogMetricsResponse$json = {
 };
 
 /// Descriptor for `ListLogMetricsResponse`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List listLogMetricsResponseDescriptor =
-    $convert.base64Decode(
-        'ChZMaXN0TG9nTWV0cmljc1Jlc3BvbnNlEjYKB21ldHJpY3MYASADKAsyHC5nb29nbGUubG9nZ2luZy52Mi5Mb2dNZXRyaWNSB21ldHJpY3MSJgoPbmV4dF9wYWdlX3Rva2VuGAIgASgJUg1uZXh0UGFnZVRva2Vu');
+final $typed_data.Uint8List listLogMetricsResponseDescriptor = $convert.base64Decode(
+    'ChZMaXN0TG9nTWV0cmljc1Jlc3BvbnNlEjYKB21ldHJpY3MYASADKAsyHC5nb29nbGUubG9nZ2'
+    'luZy52Mi5Mb2dNZXRyaWNSB21ldHJpY3MSJgoPbmV4dF9wYWdlX3Rva2VuGAIgASgJUg1uZXh0'
+    'UGFnZVRva2Vu');
+
 @$core.Deprecated('Use getLogMetricRequestDescriptor instead')
 const GetLogMetricRequest$json = {
   '1': 'GetLogMetricRequest',
@@ -149,7 +177,9 @@ const GetLogMetricRequest$json = {
 
 /// Descriptor for `GetLogMetricRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List getLogMetricRequestDescriptor = $convert.base64Decode(
-    'ChNHZXRMb2dNZXRyaWNSZXF1ZXN0EkkKC21ldHJpY19uYW1lGAEgASgJQijgQQL6QSIKIGxvZ2dpbmcuZ29vZ2xlYXBpcy5jb20vTG9nTWV0cmljUgptZXRyaWNOYW1l');
+    'ChNHZXRMb2dNZXRyaWNSZXF1ZXN0EkkKC21ldHJpY19uYW1lGAEgASgJQijgQQL6QSIKIGxvZ2'
+    'dpbmcuZ29vZ2xlYXBpcy5jb20vTG9nTWV0cmljUgptZXRyaWNOYW1l');
+
 @$core.Deprecated('Use createLogMetricRequestDescriptor instead')
 const CreateLogMetricRequest$json = {
   '1': 'CreateLogMetricRequest',
@@ -168,9 +198,11 @@ const CreateLogMetricRequest$json = {
 };
 
 /// Descriptor for `CreateLogMetricRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List createLogMetricRequestDescriptor =
-    $convert.base64Decode(
-        'ChZDcmVhdGVMb2dNZXRyaWNSZXF1ZXN0EkAKBnBhcmVudBgBIAEoCUIo4EEC+kEiEiBsb2dnaW5nLmdvb2dsZWFwaXMuY29tL0xvZ01ldHJpY1IGcGFyZW50EjkKBm1ldHJpYxgCIAEoCzIcLmdvb2dsZS5sb2dnaW5nLnYyLkxvZ01ldHJpY0ID4EECUgZtZXRyaWM=');
+final $typed_data.Uint8List createLogMetricRequestDescriptor = $convert.base64Decode(
+    'ChZDcmVhdGVMb2dNZXRyaWNSZXF1ZXN0EkAKBnBhcmVudBgBIAEoCUIo4EEC+kEiEiBsb2dnaW'
+    '5nLmdvb2dsZWFwaXMuY29tL0xvZ01ldHJpY1IGcGFyZW50EjkKBm1ldHJpYxgCIAEoCzIcLmdv'
+    'b2dsZS5sb2dnaW5nLnYyLkxvZ01ldHJpY0ID4EECUgZtZXRyaWM=');
+
 @$core.Deprecated('Use updateLogMetricRequestDescriptor instead')
 const UpdateLogMetricRequest$json = {
   '1': 'UpdateLogMetricRequest',
@@ -189,9 +221,11 @@ const UpdateLogMetricRequest$json = {
 };
 
 /// Descriptor for `UpdateLogMetricRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List updateLogMetricRequestDescriptor =
-    $convert.base64Decode(
-        'ChZVcGRhdGVMb2dNZXRyaWNSZXF1ZXN0EkkKC21ldHJpY19uYW1lGAEgASgJQijgQQL6QSIKIGxvZ2dpbmcuZ29vZ2xlYXBpcy5jb20vTG9nTWV0cmljUgptZXRyaWNOYW1lEjkKBm1ldHJpYxgCIAEoCzIcLmdvb2dsZS5sb2dnaW5nLnYyLkxvZ01ldHJpY0ID4EECUgZtZXRyaWM=');
+final $typed_data.Uint8List updateLogMetricRequestDescriptor = $convert.base64Decode(
+    'ChZVcGRhdGVMb2dNZXRyaWNSZXF1ZXN0EkkKC21ldHJpY19uYW1lGAEgASgJQijgQQL6QSIKIG'
+    'xvZ2dpbmcuZ29vZ2xlYXBpcy5jb20vTG9nTWV0cmljUgptZXRyaWNOYW1lEjkKBm1ldHJpYxgC'
+    'IAEoCzIcLmdvb2dsZS5sb2dnaW5nLnYyLkxvZ01ldHJpY0ID4EECUgZtZXRyaWM=');
+
 @$core.Deprecated('Use deleteLogMetricRequestDescriptor instead')
 const DeleteLogMetricRequest$json = {
   '1': 'DeleteLogMetricRequest',
@@ -203,4 +237,5 @@ const DeleteLogMetricRequest$json = {
 /// Descriptor for `DeleteLogMetricRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List deleteLogMetricRequestDescriptor =
     $convert.base64Decode(
-        'ChZEZWxldGVMb2dNZXRyaWNSZXF1ZXN0EkkKC21ldHJpY19uYW1lGAEgASgJQijgQQL6QSIKIGxvZ2dpbmcuZ29vZ2xlYXBpcy5jb20vTG9nTWV0cmljUgptZXRyaWNOYW1l');
+        'ChZEZWxldGVMb2dNZXRyaWNSZXF1ZXN0EkkKC21ldHJpY19uYW1lGAEgASgJQijgQQL6QSIKIG'
+        'xvZ2dpbmcuZ29vZ2xlYXBpcy5jb20vTG9nTWV0cmljUgptZXRyaWNOYW1l');

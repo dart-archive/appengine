@@ -1,102 +1,96 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/appengine/v1beta/certificate.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../protobuf/timestamp.pb.dart' as $0;
-
+import '../../protobuf/timestamp.pb.dart' as $50;
 import 'certificate.pbenum.dart';
 
 export 'certificate.pbenum.dart';
 
+/// An SSL certificate that a user has been authorized to administer. A user
+/// is authorized to administer any certificate that applies to one of their
+/// authorized domains.
 class AuthorizedCertificate extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'AuthorizedCertificate',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.appengine.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'id')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'displayName')
-    ..pPS(4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'domainNames')
-    ..aOM<$0.Timestamp>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'expireTime', subBuilder: $0.Timestamp.create)
-    ..aOM<CertificateRawData>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'certificateRawData', subBuilder: CertificateRawData.create)
-    ..aOM<ManagedCertificate>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'managedCertificate', subBuilder: ManagedCertificate.create)
-    ..pPS(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'visibleDomainMappings')
-    ..a<$core.int>(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'domainMappingsCount', $pb.PbFieldType.O3)
-    ..hasRequiredFields = false;
-
-  AuthorizedCertificate._() : super();
   factory AuthorizedCertificate({
     $core.String? name,
     $core.String? id,
     $core.String? displayName,
     $core.Iterable<$core.String>? domainNames,
-    $0.Timestamp? expireTime,
+    $50.Timestamp? expireTime,
     CertificateRawData? certificateRawData,
     ManagedCertificate? managedCertificate,
     $core.Iterable<$core.String>? visibleDomainMappings,
     $core.int? domainMappingsCount,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (id != null) {
-      _result.id = id;
+      $result.id = id;
     }
     if (displayName != null) {
-      _result.displayName = displayName;
+      $result.displayName = displayName;
     }
     if (domainNames != null) {
-      _result.domainNames.addAll(domainNames);
+      $result.domainNames.addAll(domainNames);
     }
     if (expireTime != null) {
-      _result.expireTime = expireTime;
+      $result.expireTime = expireTime;
     }
     if (certificateRawData != null) {
-      _result.certificateRawData = certificateRawData;
+      $result.certificateRawData = certificateRawData;
     }
     if (managedCertificate != null) {
-      _result.managedCertificate = managedCertificate;
+      $result.managedCertificate = managedCertificate;
     }
     if (visibleDomainMappings != null) {
-      _result.visibleDomainMappings.addAll(visibleDomainMappings);
+      $result.visibleDomainMappings.addAll(visibleDomainMappings);
     }
     if (domainMappingsCount != null) {
-      _result.domainMappingsCount = domainMappingsCount;
+      $result.domainMappingsCount = domainMappingsCount;
     }
-    return _result;
+    return $result;
   }
+  AuthorizedCertificate._() : super();
   factory AuthorizedCertificate.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory AuthorizedCertificate.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'AuthorizedCertificate',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.appengine.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOS(2, _omitFieldNames ? '' : 'id')
+    ..aOS(3, _omitFieldNames ? '' : 'displayName')
+    ..pPS(4, _omitFieldNames ? '' : 'domainNames')
+    ..aOM<$50.Timestamp>(5, _omitFieldNames ? '' : 'expireTime',
+        subBuilder: $50.Timestamp.create)
+    ..aOM<CertificateRawData>(6, _omitFieldNames ? '' : 'certificateRawData',
+        subBuilder: CertificateRawData.create)
+    ..aOM<ManagedCertificate>(7, _omitFieldNames ? '' : 'managedCertificate',
+        subBuilder: ManagedCertificate.create)
+    ..pPS(8, _omitFieldNames ? '' : 'visibleDomainMappings')
+    ..a<$core.int>(
+        9, _omitFieldNames ? '' : 'domainMappingsCount', $pb.PbFieldType.O3)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -108,8 +102,10 @@ class AuthorizedCertificate extends $pb.GeneratedMessage {
   AuthorizedCertificate copyWith(
           void Function(AuthorizedCertificate) updates) =>
       super.copyWith((message) => updates(message as AuthorizedCertificate))
-          as AuthorizedCertificate; // ignore: deprecated_member_use
+          as AuthorizedCertificate;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static AuthorizedCertificate create() => AuthorizedCertificate._();
   AuthorizedCertificate createEmptyInstance() => create();
@@ -120,6 +116,10 @@ class AuthorizedCertificate extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<AuthorizedCertificate>(create);
   static AuthorizedCertificate? _defaultInstance;
 
+  ///  Full path to the `AuthorizedCertificate` resource in the API. Example:
+  ///  `apps/myapp/authorizedCertificates/12345`.
+  ///
+  ///  @OutputOnly
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -132,6 +132,10 @@ class AuthorizedCertificate extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  ///  Relative name of the certificate. This is a unique value autogenerated
+  ///  on `AuthorizedCertificate` resource creation. Example: `12345`.
+  ///
+  ///  @OutputOnly
   @$pb.TagNumber(2)
   $core.String get id => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -144,6 +148,8 @@ class AuthorizedCertificate extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearId() => clearField(2);
 
+  /// The user-specified display name of the certificate. This is not
+  /// guaranteed to be unique. Example: `My Certificate`.
   @$pb.TagNumber(3)
   $core.String get displayName => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -156,13 +162,22 @@ class AuthorizedCertificate extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearDisplayName() => clearField(3);
 
+  ///  Topmost applicable domains of this certificate. This certificate
+  ///  applies to these domains and their subdomains. Example: `example.com`.
+  ///
+  ///  @OutputOnly
   @$pb.TagNumber(4)
   $core.List<$core.String> get domainNames => $_getList(3);
 
+  ///  The time when this certificate expires. To update the renewal time on this
+  ///  certificate, upload an SSL certificate with a different expiration time
+  ///  using [`AuthorizedCertificates.UpdateAuthorizedCertificate`]().
+  ///
+  ///  @OutputOnly
   @$pb.TagNumber(5)
-  $0.Timestamp get expireTime => $_getN(4);
+  $50.Timestamp get expireTime => $_getN(4);
   @$pb.TagNumber(5)
-  set expireTime($0.Timestamp v) {
+  set expireTime($50.Timestamp v) {
     setField(5, v);
   }
 
@@ -171,8 +186,10 @@ class AuthorizedCertificate extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearExpireTime() => clearField(5);
   @$pb.TagNumber(5)
-  $0.Timestamp ensureExpireTime() => $_ensure(4);
+  $50.Timestamp ensureExpireTime() => $_ensure(4);
 
+  /// The SSL certificate serving the `AuthorizedCertificate` resource. This
+  /// must be obtained independently from a certificate authority.
   @$pb.TagNumber(6)
   CertificateRawData get certificateRawData => $_getN(5);
   @$pb.TagNumber(6)
@@ -187,6 +204,12 @@ class AuthorizedCertificate extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   CertificateRawData ensureCertificateRawData() => $_ensure(5);
 
+  ///  Only applicable if this certificate is managed by App Engine. Managed
+  ///  certificates are tied to the lifecycle of a `DomainMapping` and cannot be
+  ///  updated or deleted via the `AuthorizedCertificates` API. If this
+  ///  certificate is manually administered by the user, this field will be empty.
+  ///
+  ///  @OutputOnly
   @$pb.TagNumber(7)
   ManagedCertificate get managedCertificate => $_getN(6);
   @$pb.TagNumber(7)
@@ -201,9 +224,28 @@ class AuthorizedCertificate extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   ManagedCertificate ensureManagedCertificate() => $_ensure(6);
 
+  ///  The full paths to user visible Domain Mapping resources that have this
+  ///  certificate mapped. Example: `apps/myapp/domainMappings/example.com`.
+  ///
+  ///  This may not represent the full list of mapped domain mappings if the user
+  ///  does not have `VIEWER` permissions on all of the applications that have
+  ///  this certificate mapped. See `domain_mappings_count` for a complete count.
+  ///
+  ///  Only returned by `GET` or `LIST` requests when specifically requested by
+  ///  the `view=FULL_CERTIFICATE` option.
+  ///
+  ///  @OutputOnly
   @$pb.TagNumber(8)
   $core.List<$core.String> get visibleDomainMappings => $_getList(7);
 
+  ///  Aggregate count of the domain mappings with this certificate mapped. This
+  ///  count includes domain mappings on applications for which the user does not
+  ///  have `VIEWER` permissions.
+  ///
+  ///  Only returned by `GET` or `LIST` requests when specifically requested by
+  ///  the `view=FULL_CERTIFICATE` option.
+  ///
+  ///  @OutputOnly
   @$pb.TagNumber(9)
   $core.int get domainMappingsCount => $_getIZ(8);
   @$pb.TagNumber(9)
@@ -217,48 +259,38 @@ class AuthorizedCertificate extends $pb.GeneratedMessage {
   void clearDomainMappingsCount() => clearField(9);
 }
 
+/// An SSL certificate obtained from a certificate authority.
 class CertificateRawData extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CertificateRawData',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.appengine.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'publicCertificate')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'privateKey')
-    ..hasRequiredFields = false;
-
-  CertificateRawData._() : super();
   factory CertificateRawData({
     $core.String? publicCertificate,
     $core.String? privateKey,
   }) {
-    final _result = create();
+    final $result = create();
     if (publicCertificate != null) {
-      _result.publicCertificate = publicCertificate;
+      $result.publicCertificate = publicCertificate;
     }
     if (privateKey != null) {
-      _result.privateKey = privateKey;
+      $result.privateKey = privateKey;
     }
-    return _result;
+    return $result;
   }
+  CertificateRawData._() : super();
   factory CertificateRawData.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CertificateRawData.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CertificateRawData',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.appengine.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'publicCertificate')
+    ..aOS(2, _omitFieldNames ? '' : 'privateKey')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -268,8 +300,10 @@ class CertificateRawData extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   CertificateRawData copyWith(void Function(CertificateRawData) updates) =>
       super.copyWith((message) => updates(message as CertificateRawData))
-          as CertificateRawData; // ignore: deprecated_member_use
+          as CertificateRawData;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CertificateRawData create() => CertificateRawData._();
   CertificateRawData createEmptyInstance() => create();
@@ -280,6 +314,13 @@ class CertificateRawData extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<CertificateRawData>(create);
   static CertificateRawData? _defaultInstance;
 
+  /// PEM encoded x.509 public key certificate. This field is set once on
+  /// certificate creation. Must include the header and footer. Example:
+  /// <pre>
+  /// -----BEGIN CERTIFICATE-----
+  /// <certificate_value>
+  /// -----END CERTIFICATE-----
+  /// </pre>
   @$pb.TagNumber(1)
   $core.String get publicCertificate => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -292,6 +333,15 @@ class CertificateRawData extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearPublicCertificate() => clearField(1);
 
+  /// Unencrypted PEM encoded RSA private key. This field is set once on
+  /// certificate creation and then encrypted. The key size must be 2048
+  /// bits or fewer. Must include the header and footer. Example:
+  /// <pre>
+  /// -----BEGIN RSA PRIVATE KEY-----
+  /// <unencrypted_key_value>
+  /// -----END RSA PRIVATE KEY-----
+  /// </pre>
+  /// @InputOnly
   @$pb.TagNumber(2)
   $core.String get privateKey => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -305,50 +355,43 @@ class CertificateRawData extends $pb.GeneratedMessage {
   void clearPrivateKey() => clearField(2);
 }
 
+/// A certificate managed by App Engine.
 class ManagedCertificate extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ManagedCertificate',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.appengine.v1beta'),
-      createEmptyInstance: create)
-    ..aOM<$0.Timestamp>(
-        1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'lastRenewalTime',
-        subBuilder: $0.Timestamp.create)
-    ..e<ManagementStatus>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'status',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: ManagementStatus.MANAGEMENT_STATUS_UNSPECIFIED,
-        valueOf: ManagementStatus.valueOf,
-        enumValues: ManagementStatus.values)
-    ..hasRequiredFields = false;
-
-  ManagedCertificate._() : super();
   factory ManagedCertificate({
-    $0.Timestamp? lastRenewalTime,
+    $50.Timestamp? lastRenewalTime,
     ManagementStatus? status,
   }) {
-    final _result = create();
+    final $result = create();
     if (lastRenewalTime != null) {
-      _result.lastRenewalTime = lastRenewalTime;
+      $result.lastRenewalTime = lastRenewalTime;
     }
     if (status != null) {
-      _result.status = status;
+      $result.status = status;
     }
-    return _result;
+    return $result;
   }
+  ManagedCertificate._() : super();
   factory ManagedCertificate.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ManagedCertificate.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ManagedCertificate',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.appengine.v1beta'),
+      createEmptyInstance: create)
+    ..aOM<$50.Timestamp>(1, _omitFieldNames ? '' : 'lastRenewalTime',
+        subBuilder: $50.Timestamp.create)
+    ..e<ManagementStatus>(
+        2, _omitFieldNames ? '' : 'status', $pb.PbFieldType.OE,
+        defaultOrMaker: ManagementStatus.MANAGEMENT_STATUS_UNSPECIFIED,
+        valueOf: ManagementStatus.valueOf,
+        enumValues: ManagementStatus.values)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -358,8 +401,10 @@ class ManagedCertificate extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ManagedCertificate copyWith(void Function(ManagedCertificate) updates) =>
       super.copyWith((message) => updates(message as ManagedCertificate))
-          as ManagedCertificate; // ignore: deprecated_member_use
+          as ManagedCertificate;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ManagedCertificate create() => ManagedCertificate._();
   ManagedCertificate createEmptyInstance() => create();
@@ -370,10 +415,15 @@ class ManagedCertificate extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ManagedCertificate>(create);
   static ManagedCertificate? _defaultInstance;
 
+  ///  Time at which the certificate was last renewed. The renewal process is
+  ///  fully managed. Certificate renewal will automatically occur before the
+  ///  certificate expires. Renewal errors can be tracked via `ManagementStatus`.
+  ///
+  ///  @OutputOnly
   @$pb.TagNumber(1)
-  $0.Timestamp get lastRenewalTime => $_getN(0);
+  $50.Timestamp get lastRenewalTime => $_getN(0);
   @$pb.TagNumber(1)
-  set lastRenewalTime($0.Timestamp v) {
+  set lastRenewalTime($50.Timestamp v) {
     setField(1, v);
   }
 
@@ -382,8 +432,12 @@ class ManagedCertificate extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearLastRenewalTime() => clearField(1);
   @$pb.TagNumber(1)
-  $0.Timestamp ensureLastRenewalTime() => $_ensure(0);
+  $50.Timestamp ensureLastRenewalTime() => $_ensure(0);
 
+  ///  Status of certificate management. Refers to the most recent certificate
+  ///  acquisition or renewal attempt.
+  ///
+  ///  @OutputOnly
   @$pb.TagNumber(2)
   ManagementStatus get status => $_getN(1);
   @$pb.TagNumber(2)
@@ -396,3 +450,7 @@ class ManagedCertificate extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearStatus() => clearField(2);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

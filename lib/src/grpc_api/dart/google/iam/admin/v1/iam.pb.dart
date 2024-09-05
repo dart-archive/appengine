@@ -1,60 +1,37 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/iam/admin/v1/iam.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/field_mask.pb.dart' as $4;
-import '../../../protobuf/timestamp.pb.dart' as $5;
-import '../../../type/expr.pb.dart' as $6;
-
+import '../../../protobuf/field_mask.pb.dart' as $58;
+import '../../../protobuf/timestamp.pb.dart' as $50;
+import '../../../type/expr.pb.dart' as $114;
 import 'iam.pbenum.dart';
 
 export 'iam.pbenum.dart';
 
+///  An IAM service account.
+///
+///  A service account is an account for an application or a virtual machine (VM)
+///  instance, not a person. You can use a service account to call Google APIs. To
+///  learn more, read the [overview of service
+///  accounts](https://cloud.google.com/iam/help/service-accounts/overview).
+///
+///  When you create a service account, you specify the project ID that owns the
+///  service account, as well as a name that must be unique within the project.
+///  IAM uses these values to create an email address that identifies the service
+///  account.
 class ServiceAccount extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ServiceAccount',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.iam.admin.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectId')
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'uniqueId')
-    ..aOS(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'email')
-    ..aOS(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'displayName')
-    ..a<$core.List<$core.int>>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'etag', $pb.PbFieldType.OY)
-    ..aOS(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'description')
-    ..aOS(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'oauth2ClientId')
-    ..aOB(11, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'disabled')
-    ..hasRequiredFields = false;
-
-  ServiceAccount._() : super();
   factory ServiceAccount({
     $core.String? name,
     $core.String? projectId,
@@ -66,43 +43,62 @@ class ServiceAccount extends $pb.GeneratedMessage {
     $core.String? oauth2ClientId,
     $core.bool? disabled,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (projectId != null) {
-      _result.projectId = projectId;
+      $result.projectId = projectId;
     }
     if (uniqueId != null) {
-      _result.uniqueId = uniqueId;
+      $result.uniqueId = uniqueId;
     }
     if (email != null) {
-      _result.email = email;
+      $result.email = email;
     }
     if (displayName != null) {
-      _result.displayName = displayName;
+      $result.displayName = displayName;
     }
     if (etag != null) {
       // ignore: deprecated_member_use_from_same_package
-      _result.etag = etag;
+      $result.etag = etag;
     }
     if (description != null) {
-      _result.description = description;
+      $result.description = description;
     }
     if (oauth2ClientId != null) {
-      _result.oauth2ClientId = oauth2ClientId;
+      $result.oauth2ClientId = oauth2ClientId;
     }
     if (disabled != null) {
-      _result.disabled = disabled;
+      $result.disabled = disabled;
     }
-    return _result;
+    return $result;
   }
+  ServiceAccount._() : super();
   factory ServiceAccount.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ServiceAccount.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ServiceAccount',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.iam.admin.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOS(2, _omitFieldNames ? '' : 'projectId')
+    ..aOS(4, _omitFieldNames ? '' : 'uniqueId')
+    ..aOS(5, _omitFieldNames ? '' : 'email')
+    ..aOS(6, _omitFieldNames ? '' : 'displayName')
+    ..a<$core.List<$core.int>>(
+        7, _omitFieldNames ? '' : 'etag', $pb.PbFieldType.OY)
+    ..aOS(8, _omitFieldNames ? '' : 'description')
+    ..aOS(9, _omitFieldNames ? '' : 'oauth2ClientId')
+    ..aOB(11, _omitFieldNames ? '' : 'disabled')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -112,8 +108,10 @@ class ServiceAccount extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ServiceAccount copyWith(void Function(ServiceAccount) updates) =>
       super.copyWith((message) => updates(message as ServiceAccount))
-          as ServiceAccount; // ignore: deprecated_member_use
+          as ServiceAccount;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ServiceAccount create() => ServiceAccount._();
   ServiceAccount createEmptyInstance() => create();
@@ -124,6 +122,25 @@ class ServiceAccount extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ServiceAccount>(create);
   static ServiceAccount? _defaultInstance;
 
+  ///  The resource name of the service account.
+  ///
+  ///  Use one of the following formats:
+  ///
+  ///  * `projects/{PROJECT_ID}/serviceAccounts/{EMAIL_ADDRESS}`
+  ///  * `projects/{PROJECT_ID}/serviceAccounts/{UNIQUE_ID}`
+  ///
+  ///  As an alternative, you can use the `-` wildcard character instead of the
+  ///  project ID:
+  ///
+  ///  * `projects/-/serviceAccounts/{EMAIL_ADDRESS}`
+  ///  * `projects/-/serviceAccounts/{UNIQUE_ID}`
+  ///
+  ///  When possible, avoid using the `-` wildcard character, because it can cause
+  ///  response messages to contain misleading error codes. For example, if you
+  ///  try to get the service account
+  ///  `projects/-/serviceAccounts/fake@example.com`, which does not exist, the
+  ///  response contains an HTTP `403 Forbidden` error instead of a `404 Not
+  ///  Found` error.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -136,6 +153,7 @@ class ServiceAccount extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// Output only. The ID of the project that owns the service account.
   @$pb.TagNumber(2)
   $core.String get projectId => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -148,6 +166,12 @@ class ServiceAccount extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearProjectId() => clearField(2);
 
+  ///  Output only. The unique, stable numeric ID for the service account.
+  ///
+  ///  Each service account retains its unique ID even if you delete the service
+  ///  account. For example, if you delete a service account, then create a new
+  ///  service account with the same name, the new service account has a different
+  ///  unique ID than the deleted service account.
   @$pb.TagNumber(4)
   $core.String get uniqueId => $_getSZ(2);
   @$pb.TagNumber(4)
@@ -160,6 +184,7 @@ class ServiceAccount extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearUniqueId() => clearField(4);
 
+  /// Output only. The email address of the service account.
   @$pb.TagNumber(5)
   $core.String get email => $_getSZ(3);
   @$pb.TagNumber(5)
@@ -172,6 +197,8 @@ class ServiceAccount extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearEmail() => clearField(5);
 
+  /// Optional. A user-specified, human-readable name for the service account. The maximum
+  /// length is 100 UTF-8 bytes.
   @$pb.TagNumber(6)
   $core.String get displayName => $_getSZ(4);
   @$pb.TagNumber(6)
@@ -184,6 +211,7 @@ class ServiceAccount extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearDisplayName() => clearField(6);
 
+  /// Deprecated. Do not use.
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(7)
   $core.List<$core.int> get etag => $_getN(5);
@@ -200,6 +228,8 @@ class ServiceAccount extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearEtag() => clearField(7);
 
+  /// Optional. A user-specified, human-readable description of the service account. The
+  /// maximum length is 256 UTF-8 bytes.
   @$pb.TagNumber(8)
   $core.String get description => $_getSZ(6);
   @$pb.TagNumber(8)
@@ -212,6 +242,7 @@ class ServiceAccount extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   void clearDescription() => clearField(8);
 
+  /// Output only. The OAuth 2.0 client ID for the service account.
   @$pb.TagNumber(9)
   $core.String get oauth2ClientId => $_getSZ(7);
   @$pb.TagNumber(9)
@@ -224,6 +255,7 @@ class ServiceAccount extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   void clearOauth2ClientId() => clearField(9);
 
+  /// Output only. Whether the service account is disabled.
   @$pb.TagNumber(11)
   $core.bool get disabled => $_getBF(8);
   @$pb.TagNumber(11)
@@ -237,58 +269,44 @@ class ServiceAccount extends $pb.GeneratedMessage {
   void clearDisabled() => clearField(11);
 }
 
+/// The service account create request.
 class CreateServiceAccountRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CreateServiceAccountRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.iam.admin.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'accountId')
-    ..aOM<ServiceAccount>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'serviceAccount',
-        subBuilder: ServiceAccount.create)
-    ..hasRequiredFields = false;
-
-  CreateServiceAccountRequest._() : super();
   factory CreateServiceAccountRequest({
     $core.String? name,
     $core.String? accountId,
     ServiceAccount? serviceAccount,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (accountId != null) {
-      _result.accountId = accountId;
+      $result.accountId = accountId;
     }
     if (serviceAccount != null) {
-      _result.serviceAccount = serviceAccount;
+      $result.serviceAccount = serviceAccount;
     }
-    return _result;
+    return $result;
   }
+  CreateServiceAccountRequest._() : super();
   factory CreateServiceAccountRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CreateServiceAccountRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CreateServiceAccountRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.iam.admin.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOS(2, _omitFieldNames ? '' : 'accountId')
+    ..aOM<ServiceAccount>(3, _omitFieldNames ? '' : 'serviceAccount',
+        subBuilder: ServiceAccount.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -301,8 +319,10 @@ class CreateServiceAccountRequest extends $pb.GeneratedMessage {
           void Function(CreateServiceAccountRequest) updates) =>
       super.copyWith(
               (message) => updates(message as CreateServiceAccountRequest))
-          as CreateServiceAccountRequest; // ignore: deprecated_member_use
+          as CreateServiceAccountRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CreateServiceAccountRequest create() =>
       CreateServiceAccountRequest._();
@@ -314,6 +334,8 @@ class CreateServiceAccountRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<CreateServiceAccountRequest>(create);
   static CreateServiceAccountRequest? _defaultInstance;
 
+  /// Required. The resource name of the project associated with the service
+  /// accounts, such as `projects/my-project-123`.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -326,6 +348,10 @@ class CreateServiceAccountRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// Required. The account id that is used to generate the service account
+  /// email address and a stable unique id. It is unique within a project,
+  /// must be 6-30 characters long, and match the regular expression
+  /// `[a-z]([-a-z0-9]*[a-z0-9])` to comply with RFC1035.
   @$pb.TagNumber(2)
   $core.String get accountId => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -338,6 +364,9 @@ class CreateServiceAccountRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearAccountId() => clearField(2);
 
+  /// The [ServiceAccount][google.iam.admin.v1.ServiceAccount] resource to
+  /// create. Currently, only the following values are user assignable:
+  /// `display_name` and `description`.
   @$pb.TagNumber(3)
   ServiceAccount get serviceAccount => $_getN(2);
   @$pb.TagNumber(3)
@@ -353,58 +382,43 @@ class CreateServiceAccountRequest extends $pb.GeneratedMessage {
   ServiceAccount ensureServiceAccount() => $_ensure(2);
 }
 
+/// The service account list request.
 class ListServiceAccountsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListServiceAccountsRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.iam.admin.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..a<$core.int>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageSize',
-        $pb.PbFieldType.O3)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageToken')
-    ..hasRequiredFields = false;
-
-  ListServiceAccountsRequest._() : super();
   factory ListServiceAccountsRequest({
     $core.String? name,
     $core.int? pageSize,
     $core.String? pageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (pageSize != null) {
-      _result.pageSize = pageSize;
+      $result.pageSize = pageSize;
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
-    return _result;
+    return $result;
   }
+  ListServiceAccountsRequest._() : super();
   factory ListServiceAccountsRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListServiceAccountsRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListServiceAccountsRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.iam.admin.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aOS(3, _omitFieldNames ? '' : 'pageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -417,8 +431,10 @@ class ListServiceAccountsRequest extends $pb.GeneratedMessage {
           void Function(ListServiceAccountsRequest) updates) =>
       super.copyWith(
               (message) => updates(message as ListServiceAccountsRequest))
-          as ListServiceAccountsRequest; // ignore: deprecated_member_use
+          as ListServiceAccountsRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListServiceAccountsRequest create() => ListServiceAccountsRequest._();
   ListServiceAccountsRequest createEmptyInstance() => create();
@@ -429,6 +445,8 @@ class ListServiceAccountsRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListServiceAccountsRequest>(create);
   static ListServiceAccountsRequest? _defaultInstance;
 
+  /// Required. The resource name of the project associated with the service
+  /// accounts, such as `projects/my-project-123`.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -441,6 +459,12 @@ class ListServiceAccountsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  ///  Optional limit on the number of service accounts to include in the
+  ///  response. Further accounts can subsequently be obtained by including the
+  ///  [ListServiceAccountsResponse.next_page_token][google.iam.admin.v1.ListServiceAccountsResponse.next_page_token]
+  ///  in a subsequent request.
+  ///
+  ///  The default is 20, and the maximum is 100.
   @$pb.TagNumber(2)
   $core.int get pageSize => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -453,6 +477,8 @@ class ListServiceAccountsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
+  /// Optional pagination token returned in an earlier
+  /// [ListServiceAccountsResponse.next_page_token][google.iam.admin.v1.ListServiceAccountsResponse.next_page_token].
   @$pb.TagNumber(3)
   $core.String get pageToken => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -466,47 +492,40 @@ class ListServiceAccountsRequest extends $pb.GeneratedMessage {
   void clearPageToken() => clearField(3);
 }
 
+/// The service account list response.
 class ListServiceAccountsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListServiceAccountsResponse',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.iam.admin.v1'),
-      createEmptyInstance: create)
-    ..pc<ServiceAccount>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'accounts',
-        $pb.PbFieldType.PM,
-        subBuilder: ServiceAccount.create)
-    ..aOS(2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'nextPageToken')
-    ..hasRequiredFields = false;
-
-  ListServiceAccountsResponse._() : super();
   factory ListServiceAccountsResponse({
     $core.Iterable<ServiceAccount>? accounts,
     $core.String? nextPageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (accounts != null) {
-      _result.accounts.addAll(accounts);
+      $result.accounts.addAll(accounts);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
-    return _result;
+    return $result;
   }
+  ListServiceAccountsResponse._() : super();
   factory ListServiceAccountsResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListServiceAccountsResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListServiceAccountsResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.iam.admin.v1'),
+      createEmptyInstance: create)
+    ..pc<ServiceAccount>(
+        1, _omitFieldNames ? '' : 'accounts', $pb.PbFieldType.PM,
+        subBuilder: ServiceAccount.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -519,8 +538,10 @@ class ListServiceAccountsResponse extends $pb.GeneratedMessage {
           void Function(ListServiceAccountsResponse) updates) =>
       super.copyWith(
               (message) => updates(message as ListServiceAccountsResponse))
-          as ListServiceAccountsResponse; // ignore: deprecated_member_use
+          as ListServiceAccountsResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListServiceAccountsResponse create() =>
       ListServiceAccountsResponse._();
@@ -532,9 +553,13 @@ class ListServiceAccountsResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListServiceAccountsResponse>(create);
   static ListServiceAccountsResponse? _defaultInstance;
 
+  /// The list of matching service accounts.
   @$pb.TagNumber(1)
   $core.List<ServiceAccount> get accounts => $_getList(0);
 
+  /// To retrieve the next page of results, set
+  /// [ListServiceAccountsRequest.page_token][google.iam.admin.v1.ListServiceAccountsRequest.page_token]
+  /// to this value.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -548,39 +573,33 @@ class ListServiceAccountsResponse extends $pb.GeneratedMessage {
   void clearNextPageToken() => clearField(2);
 }
 
+/// The service account get request.
 class GetServiceAccountRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetServiceAccountRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.iam.admin.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  GetServiceAccountRequest._() : super();
   factory GetServiceAccountRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  GetServiceAccountRequest._() : super();
   factory GetServiceAccountRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetServiceAccountRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetServiceAccountRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.iam.admin.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -592,8 +611,10 @@ class GetServiceAccountRequest extends $pb.GeneratedMessage {
   GetServiceAccountRequest copyWith(
           void Function(GetServiceAccountRequest) updates) =>
       super.copyWith((message) => updates(message as GetServiceAccountRequest))
-          as GetServiceAccountRequest; // ignore: deprecated_member_use
+          as GetServiceAccountRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetServiceAccountRequest create() => GetServiceAccountRequest._();
   GetServiceAccountRequest createEmptyInstance() => create();
@@ -604,6 +625,11 @@ class GetServiceAccountRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetServiceAccountRequest>(create);
   static GetServiceAccountRequest? _defaultInstance;
 
+  /// Required. The resource name of the service account in the following format:
+  /// `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`.
+  /// Using `-` as a wildcard for the `PROJECT_ID` will infer the project from
+  /// the account. The `ACCOUNT` value can be the `email` address or the
+  /// `unique_id` of the service account.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -617,39 +643,33 @@ class GetServiceAccountRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// The service account delete request.
 class DeleteServiceAccountRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DeleteServiceAccountRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.iam.admin.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  DeleteServiceAccountRequest._() : super();
   factory DeleteServiceAccountRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  DeleteServiceAccountRequest._() : super();
   factory DeleteServiceAccountRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DeleteServiceAccountRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DeleteServiceAccountRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.iam.admin.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -662,8 +682,10 @@ class DeleteServiceAccountRequest extends $pb.GeneratedMessage {
           void Function(DeleteServiceAccountRequest) updates) =>
       super.copyWith(
               (message) => updates(message as DeleteServiceAccountRequest))
-          as DeleteServiceAccountRequest; // ignore: deprecated_member_use
+          as DeleteServiceAccountRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DeleteServiceAccountRequest create() =>
       DeleteServiceAccountRequest._();
@@ -675,6 +697,11 @@ class DeleteServiceAccountRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DeleteServiceAccountRequest>(create);
   static DeleteServiceAccountRequest? _defaultInstance;
 
+  /// Required. The resource name of the service account in the following format:
+  /// `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`.
+  /// Using `-` as a wildcard for the `PROJECT_ID` will infer the project from
+  /// the account. The `ACCOUNT` value can be the `email` address or the
+  /// `unique_id` of the service account.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -688,47 +715,46 @@ class DeleteServiceAccountRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+///  The service account patch request.
+///
+///  You can patch only the `display_name` and `description` fields. You must use
+///  the `update_mask` field to specify which of these fields you want to patch.
+///
+///  Only the fields specified in the request are guaranteed to be returned in
+///  the response. Other fields may be empty in the response.
 class PatchServiceAccountRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'PatchServiceAccountRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.iam.admin.v1'),
-      createEmptyInstance: create)
-    ..aOM<ServiceAccount>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'serviceAccount',
-        subBuilder: ServiceAccount.create)
-    ..aOM<$4.FieldMask>(
-        2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'updateMask',
-        subBuilder: $4.FieldMask.create)
-    ..hasRequiredFields = false;
-
-  PatchServiceAccountRequest._() : super();
   factory PatchServiceAccountRequest({
     ServiceAccount? serviceAccount,
-    $4.FieldMask? updateMask,
+    $58.FieldMask? updateMask,
   }) {
-    final _result = create();
+    final $result = create();
     if (serviceAccount != null) {
-      _result.serviceAccount = serviceAccount;
+      $result.serviceAccount = serviceAccount;
     }
     if (updateMask != null) {
-      _result.updateMask = updateMask;
+      $result.updateMask = updateMask;
     }
-    return _result;
+    return $result;
   }
+  PatchServiceAccountRequest._() : super();
   factory PatchServiceAccountRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory PatchServiceAccountRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'PatchServiceAccountRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.iam.admin.v1'),
+      createEmptyInstance: create)
+    ..aOM<ServiceAccount>(1, _omitFieldNames ? '' : 'serviceAccount',
+        subBuilder: ServiceAccount.create)
+    ..aOM<$58.FieldMask>(2, _omitFieldNames ? '' : 'updateMask',
+        subBuilder: $58.FieldMask.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -741,8 +767,10 @@ class PatchServiceAccountRequest extends $pb.GeneratedMessage {
           void Function(PatchServiceAccountRequest) updates) =>
       super.copyWith(
               (message) => updates(message as PatchServiceAccountRequest))
-          as PatchServiceAccountRequest; // ignore: deprecated_member_use
+          as PatchServiceAccountRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static PatchServiceAccountRequest create() => PatchServiceAccountRequest._();
   PatchServiceAccountRequest createEmptyInstance() => create();
@@ -768,9 +796,9 @@ class PatchServiceAccountRequest extends $pb.GeneratedMessage {
   ServiceAccount ensureServiceAccount() => $_ensure(0);
 
   @$pb.TagNumber(2)
-  $4.FieldMask get updateMask => $_getN(1);
+  $58.FieldMask get updateMask => $_getN(1);
   @$pb.TagNumber(2)
-  set updateMask($4.FieldMask v) {
+  set updateMask($58.FieldMask v) {
     setField(2, v);
   }
 
@@ -779,42 +807,36 @@ class PatchServiceAccountRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearUpdateMask() => clearField(2);
   @$pb.TagNumber(2)
-  $4.FieldMask ensureUpdateMask() => $_ensure(1);
+  $58.FieldMask ensureUpdateMask() => $_ensure(1);
 }
 
+/// The service account undelete request.
 class UndeleteServiceAccountRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'UndeleteServiceAccountRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.iam.admin.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  UndeleteServiceAccountRequest._() : super();
   factory UndeleteServiceAccountRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  UndeleteServiceAccountRequest._() : super();
   factory UndeleteServiceAccountRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory UndeleteServiceAccountRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UndeleteServiceAccountRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.iam.admin.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -827,8 +849,10 @@ class UndeleteServiceAccountRequest extends $pb.GeneratedMessage {
           void Function(UndeleteServiceAccountRequest) updates) =>
       super.copyWith(
               (message) => updates(message as UndeleteServiceAccountRequest))
-          as UndeleteServiceAccountRequest; // ignore: deprecated_member_use
+          as UndeleteServiceAccountRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static UndeleteServiceAccountRequest create() =>
       UndeleteServiceAccountRequest._();
@@ -840,6 +864,10 @@ class UndeleteServiceAccountRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<UndeleteServiceAccountRequest>(create);
   static UndeleteServiceAccountRequest? _defaultInstance;
 
+  /// The resource name of the service account in the following format:
+  /// `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT_UNIQUE_ID}`.
+  /// Using `-` as a wildcard for the `PROJECT_ID` will infer the project from
+  /// the account.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -854,39 +882,32 @@ class UndeleteServiceAccountRequest extends $pb.GeneratedMessage {
 }
 
 class UndeleteServiceAccountResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'UndeleteServiceAccountResponse',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.iam.admin.v1'),
-      createEmptyInstance: create)
-    ..aOM<ServiceAccount>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'restoredAccount',
-        subBuilder: ServiceAccount.create)
-    ..hasRequiredFields = false;
-
-  UndeleteServiceAccountResponse._() : super();
   factory UndeleteServiceAccountResponse({
     ServiceAccount? restoredAccount,
   }) {
-    final _result = create();
+    final $result = create();
     if (restoredAccount != null) {
-      _result.restoredAccount = restoredAccount;
+      $result.restoredAccount = restoredAccount;
     }
-    return _result;
+    return $result;
   }
+  UndeleteServiceAccountResponse._() : super();
   factory UndeleteServiceAccountResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory UndeleteServiceAccountResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UndeleteServiceAccountResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.iam.admin.v1'),
+      createEmptyInstance: create)
+    ..aOM<ServiceAccount>(1, _omitFieldNames ? '' : 'restoredAccount',
+        subBuilder: ServiceAccount.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -899,8 +920,10 @@ class UndeleteServiceAccountResponse extends $pb.GeneratedMessage {
           void Function(UndeleteServiceAccountResponse) updates) =>
       super.copyWith(
               (message) => updates(message as UndeleteServiceAccountResponse))
-          as UndeleteServiceAccountResponse; // ignore: deprecated_member_use
+          as UndeleteServiceAccountResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static UndeleteServiceAccountResponse create() =>
       UndeleteServiceAccountResponse._();
@@ -912,6 +935,7 @@ class UndeleteServiceAccountResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<UndeleteServiceAccountResponse>(create);
   static UndeleteServiceAccountResponse? _defaultInstance;
 
+  /// Metadata for the restored service account.
   @$pb.TagNumber(1)
   ServiceAccount get restoredAccount => $_getN(0);
   @$pb.TagNumber(1)
@@ -927,39 +951,33 @@ class UndeleteServiceAccountResponse extends $pb.GeneratedMessage {
   ServiceAccount ensureRestoredAccount() => $_ensure(0);
 }
 
+/// The service account enable request.
 class EnableServiceAccountRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'EnableServiceAccountRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.iam.admin.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  EnableServiceAccountRequest._() : super();
   factory EnableServiceAccountRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  EnableServiceAccountRequest._() : super();
   factory EnableServiceAccountRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory EnableServiceAccountRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'EnableServiceAccountRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.iam.admin.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -972,8 +990,10 @@ class EnableServiceAccountRequest extends $pb.GeneratedMessage {
           void Function(EnableServiceAccountRequest) updates) =>
       super.copyWith(
               (message) => updates(message as EnableServiceAccountRequest))
-          as EnableServiceAccountRequest; // ignore: deprecated_member_use
+          as EnableServiceAccountRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static EnableServiceAccountRequest create() =>
       EnableServiceAccountRequest._();
@@ -985,6 +1005,11 @@ class EnableServiceAccountRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<EnableServiceAccountRequest>(create);
   static EnableServiceAccountRequest? _defaultInstance;
 
+  /// The resource name of the service account in the following format:
+  /// `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`.
+  /// Using `-` as a wildcard for the `PROJECT_ID` will infer the project from
+  /// the account. The `ACCOUNT` value can be the `email` address or the
+  /// `unique_id` of the service account.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -998,39 +1023,33 @@ class EnableServiceAccountRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// The service account disable request.
 class DisableServiceAccountRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DisableServiceAccountRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.iam.admin.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  DisableServiceAccountRequest._() : super();
   factory DisableServiceAccountRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  DisableServiceAccountRequest._() : super();
   factory DisableServiceAccountRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DisableServiceAccountRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DisableServiceAccountRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.iam.admin.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1043,8 +1062,10 @@ class DisableServiceAccountRequest extends $pb.GeneratedMessage {
           void Function(DisableServiceAccountRequest) updates) =>
       super.copyWith(
               (message) => updates(message as DisableServiceAccountRequest))
-          as DisableServiceAccountRequest; // ignore: deprecated_member_use
+          as DisableServiceAccountRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DisableServiceAccountRequest create() =>
       DisableServiceAccountRequest._();
@@ -1056,6 +1077,11 @@ class DisableServiceAccountRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DisableServiceAccountRequest>(create);
   static DisableServiceAccountRequest? _defaultInstance;
 
+  /// The resource name of the service account in the following format:
+  /// `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`.
+  /// Using `-` as a wildcard for the `PROJECT_ID` will infer the project from
+  /// the account. The `ACCOUNT` value can be the `email` address or the
+  /// `unique_id` of the service account.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1069,51 +1095,43 @@ class DisableServiceAccountRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// The service account keys list request.
 class ListServiceAccountKeysRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListServiceAccountKeysRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.iam.admin.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..pc<ListServiceAccountKeysRequest_KeyType>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'keyTypes',
-        $pb.PbFieldType.PE,
-        valueOf: ListServiceAccountKeysRequest_KeyType.valueOf,
-        enumValues: ListServiceAccountKeysRequest_KeyType.values)
-    ..hasRequiredFields = false;
-
-  ListServiceAccountKeysRequest._() : super();
   factory ListServiceAccountKeysRequest({
     $core.String? name,
     $core.Iterable<ListServiceAccountKeysRequest_KeyType>? keyTypes,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (keyTypes != null) {
-      _result.keyTypes.addAll(keyTypes);
+      $result.keyTypes.addAll(keyTypes);
     }
-    return _result;
+    return $result;
   }
+  ListServiceAccountKeysRequest._() : super();
   factory ListServiceAccountKeysRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListServiceAccountKeysRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListServiceAccountKeysRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.iam.admin.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..pc<ListServiceAccountKeysRequest_KeyType>(
+        2, _omitFieldNames ? '' : 'keyTypes', $pb.PbFieldType.KE,
+        valueOf: ListServiceAccountKeysRequest_KeyType.valueOf,
+        enumValues: ListServiceAccountKeysRequest_KeyType.values,
+        defaultEnumValue:
+            ListServiceAccountKeysRequest_KeyType.KEY_TYPE_UNSPECIFIED)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1126,8 +1144,10 @@ class ListServiceAccountKeysRequest extends $pb.GeneratedMessage {
           void Function(ListServiceAccountKeysRequest) updates) =>
       super.copyWith(
               (message) => updates(message as ListServiceAccountKeysRequest))
-          as ListServiceAccountKeysRequest; // ignore: deprecated_member_use
+          as ListServiceAccountKeysRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListServiceAccountKeysRequest create() =>
       ListServiceAccountKeysRequest._();
@@ -1139,6 +1159,12 @@ class ListServiceAccountKeysRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListServiceAccountKeysRequest>(create);
   static ListServiceAccountKeysRequest? _defaultInstance;
 
+  ///  Required. The resource name of the service account in the following format:
+  ///  `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`.
+  ///
+  ///  Using `-` as a wildcard for the `PROJECT_ID`, will infer the project from
+  ///  the account. The `ACCOUNT` value can be the `email` address or the
+  ///  `unique_id` of the service account.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1151,46 +1177,43 @@ class ListServiceAccountKeysRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// Filters the types of keys the user wants to include in the list
+  /// response. Duplicate key types are not allowed. If no key type
+  /// is provided, all keys are returned.
   @$pb.TagNumber(2)
   $core.List<ListServiceAccountKeysRequest_KeyType> get keyTypes =>
       $_getList(1);
 }
 
+/// The service account keys list response.
 class ListServiceAccountKeysResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListServiceAccountKeysResponse',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.iam.admin.v1'),
-      createEmptyInstance: create)
-    ..pc<ServiceAccountKey>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'keys',
-        $pb.PbFieldType.PM,
-        subBuilder: ServiceAccountKey.create)
-    ..hasRequiredFields = false;
-
-  ListServiceAccountKeysResponse._() : super();
   factory ListServiceAccountKeysResponse({
     $core.Iterable<ServiceAccountKey>? keys,
   }) {
-    final _result = create();
+    final $result = create();
     if (keys != null) {
-      _result.keys.addAll(keys);
+      $result.keys.addAll(keys);
     }
-    return _result;
+    return $result;
   }
+  ListServiceAccountKeysResponse._() : super();
   factory ListServiceAccountKeysResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListServiceAccountKeysResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListServiceAccountKeysResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.iam.admin.v1'),
+      createEmptyInstance: create)
+    ..pc<ServiceAccountKey>(
+        1, _omitFieldNames ? '' : 'keys', $pb.PbFieldType.PM,
+        subBuilder: ServiceAccountKey.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1203,8 +1226,10 @@ class ListServiceAccountKeysResponse extends $pb.GeneratedMessage {
           void Function(ListServiceAccountKeysResponse) updates) =>
       super.copyWith(
               (message) => updates(message as ListServiceAccountKeysResponse))
-          as ListServiceAccountKeysResponse; // ignore: deprecated_member_use
+          as ListServiceAccountKeysResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListServiceAccountKeysResponse create() =>
       ListServiceAccountKeysResponse._();
@@ -1216,56 +1241,47 @@ class ListServiceAccountKeysResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListServiceAccountKeysResponse>(create);
   static ListServiceAccountKeysResponse? _defaultInstance;
 
+  /// The public keys for the service account.
   @$pb.TagNumber(1)
   $core.List<ServiceAccountKey> get keys => $_getList(0);
 }
 
+/// The service account key get by id request.
 class GetServiceAccountKeyRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetServiceAccountKeyRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.iam.admin.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..e<ServiceAccountPublicKeyType>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'publicKeyType',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: ServiceAccountPublicKeyType.TYPE_NONE,
-        valueOf: ServiceAccountPublicKeyType.valueOf,
-        enumValues: ServiceAccountPublicKeyType.values)
-    ..hasRequiredFields = false;
-
-  GetServiceAccountKeyRequest._() : super();
   factory GetServiceAccountKeyRequest({
     $core.String? name,
     ServiceAccountPublicKeyType? publicKeyType,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (publicKeyType != null) {
-      _result.publicKeyType = publicKeyType;
+      $result.publicKeyType = publicKeyType;
     }
-    return _result;
+    return $result;
   }
+  GetServiceAccountKeyRequest._() : super();
   factory GetServiceAccountKeyRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetServiceAccountKeyRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetServiceAccountKeyRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.iam.admin.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..e<ServiceAccountPublicKeyType>(
+        2, _omitFieldNames ? '' : 'publicKeyType', $pb.PbFieldType.OE,
+        defaultOrMaker: ServiceAccountPublicKeyType.TYPE_NONE,
+        valueOf: ServiceAccountPublicKeyType.valueOf,
+        enumValues: ServiceAccountPublicKeyType.values)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1278,8 +1294,10 @@ class GetServiceAccountKeyRequest extends $pb.GeneratedMessage {
           void Function(GetServiceAccountKeyRequest) updates) =>
       super.copyWith(
               (message) => updates(message as GetServiceAccountKeyRequest))
-          as GetServiceAccountKeyRequest; // ignore: deprecated_member_use
+          as GetServiceAccountKeyRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetServiceAccountKeyRequest create() =>
       GetServiceAccountKeyRequest._();
@@ -1291,6 +1309,12 @@ class GetServiceAccountKeyRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetServiceAccountKeyRequest>(create);
   static GetServiceAccountKeyRequest? _defaultInstance;
 
+  ///  Required. The resource name of the service account key in the following format:
+  ///  `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`.
+  ///
+  ///  Using `-` as a wildcard for the `PROJECT_ID` will infer the project from
+  ///  the account. The `ACCOUNT` value can be the `email` address or the
+  ///  `unique_id` of the service account.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1303,6 +1327,8 @@ class GetServiceAccountKeyRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// Optional. The output format of the public key. The default is `TYPE_NONE`, which
+  /// means that the public key is not returned.
   @$pb.TagNumber(2)
   ServiceAccountPublicKeyType get publicKeyType => $_getN(1);
   @$pb.TagNumber(2)
@@ -1316,88 +1342,122 @@ class GetServiceAccountKeyRequest extends $pb.GeneratedMessage {
   void clearPublicKeyType() => clearField(2);
 }
 
+///  Represents a service account key.
+///
+///  A service account has two sets of key-pairs: user-managed, and
+///  system-managed.
+///
+///  User-managed key-pairs can be created and deleted by users.  Users are
+///  responsible for rotating these keys periodically to ensure security of
+///  their service accounts.  Users retain the private key of these key-pairs,
+///  and Google retains ONLY the public key.
+///
+///  System-managed keys are automatically rotated by Google, and are used for
+///  signing for a maximum of two weeks. The rotation process is probabilistic,
+///  and usage of the new key will gradually ramp up and down over the key's
+///  lifetime.
+///
+///  If you cache the public key set for a service account, we recommend that you
+///  update the cache every 15 minutes. User-managed keys can be added and removed
+///  at any time, so it is important to update the cache frequently. For
+///  Google-managed keys, Google will publish a key at least 6 hours before it is
+///  first used for signing and will keep publishing it for at least 6 hours after
+///  it was last used for signing.
+///
+///  Public keys for all service accounts are also published at the OAuth2
+///  Service Account API.
 class ServiceAccountKey extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ServiceAccountKey',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.iam.admin.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..e<ServiceAccountPrivateKeyType>(
-        2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'privateKeyType', $pb.PbFieldType.OE,
-        defaultOrMaker: ServiceAccountPrivateKeyType.TYPE_UNSPECIFIED,
-        valueOf: ServiceAccountPrivateKeyType.valueOf,
-        enumValues: ServiceAccountPrivateKeyType.values)
-    ..a<$core.List<$core.int>>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'privateKeyData',
-        $pb.PbFieldType.OY)
-    ..aOM<$5.Timestamp>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'validAfterTime', subBuilder: $5.Timestamp.create)
-    ..aOM<$5.Timestamp>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'validBeforeTime', subBuilder: $5.Timestamp.create)
-    ..a<$core.List<$core.int>>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'publicKeyData', $pb.PbFieldType.OY)
-    ..e<ServiceAccountKeyAlgorithm>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'keyAlgorithm', $pb.PbFieldType.OE, defaultOrMaker: ServiceAccountKeyAlgorithm.KEY_ALG_UNSPECIFIED, valueOf: ServiceAccountKeyAlgorithm.valueOf, enumValues: ServiceAccountKeyAlgorithm.values)
-    ..e<ServiceAccountKeyOrigin>(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'keyOrigin', $pb.PbFieldType.OE, defaultOrMaker: ServiceAccountKeyOrigin.ORIGIN_UNSPECIFIED, valueOf: ServiceAccountKeyOrigin.valueOf, enumValues: ServiceAccountKeyOrigin.values)
-    ..e<ListServiceAccountKeysRequest_KeyType>(10, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'keyType', $pb.PbFieldType.OE, defaultOrMaker: ListServiceAccountKeysRequest_KeyType.KEY_TYPE_UNSPECIFIED, valueOf: ListServiceAccountKeysRequest_KeyType.valueOf, enumValues: ListServiceAccountKeysRequest_KeyType.values)
-    ..hasRequiredFields = false;
-
-  ServiceAccountKey._() : super();
   factory ServiceAccountKey({
     $core.String? name,
     ServiceAccountPrivateKeyType? privateKeyType,
     $core.List<$core.int>? privateKeyData,
-    $5.Timestamp? validAfterTime,
-    $5.Timestamp? validBeforeTime,
+    $50.Timestamp? validAfterTime,
+    $50.Timestamp? validBeforeTime,
     $core.List<$core.int>? publicKeyData,
     ServiceAccountKeyAlgorithm? keyAlgorithm,
     ServiceAccountKeyOrigin? keyOrigin,
     ListServiceAccountKeysRequest_KeyType? keyType,
+    $core.bool? disabled,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (privateKeyType != null) {
-      _result.privateKeyType = privateKeyType;
+      $result.privateKeyType = privateKeyType;
     }
     if (privateKeyData != null) {
-      _result.privateKeyData = privateKeyData;
+      $result.privateKeyData = privateKeyData;
     }
     if (validAfterTime != null) {
-      _result.validAfterTime = validAfterTime;
+      $result.validAfterTime = validAfterTime;
     }
     if (validBeforeTime != null) {
-      _result.validBeforeTime = validBeforeTime;
+      $result.validBeforeTime = validBeforeTime;
     }
     if (publicKeyData != null) {
-      _result.publicKeyData = publicKeyData;
+      $result.publicKeyData = publicKeyData;
     }
     if (keyAlgorithm != null) {
-      _result.keyAlgorithm = keyAlgorithm;
+      $result.keyAlgorithm = keyAlgorithm;
     }
     if (keyOrigin != null) {
-      _result.keyOrigin = keyOrigin;
+      $result.keyOrigin = keyOrigin;
     }
     if (keyType != null) {
-      _result.keyType = keyType;
+      $result.keyType = keyType;
     }
-    return _result;
+    if (disabled != null) {
+      $result.disabled = disabled;
+    }
+    return $result;
   }
+  ServiceAccountKey._() : super();
   factory ServiceAccountKey.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ServiceAccountKey.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ServiceAccountKey',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.iam.admin.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..e<ServiceAccountPrivateKeyType>(
+        2, _omitFieldNames ? '' : 'privateKeyType', $pb.PbFieldType.OE,
+        defaultOrMaker: ServiceAccountPrivateKeyType.TYPE_UNSPECIFIED,
+        valueOf: ServiceAccountPrivateKeyType.valueOf,
+        enumValues: ServiceAccountPrivateKeyType.values)
+    ..a<$core.List<$core.int>>(
+        3, _omitFieldNames ? '' : 'privateKeyData', $pb.PbFieldType.OY)
+    ..aOM<$50.Timestamp>(4, _omitFieldNames ? '' : 'validAfterTime',
+        subBuilder: $50.Timestamp.create)
+    ..aOM<$50.Timestamp>(5, _omitFieldNames ? '' : 'validBeforeTime',
+        subBuilder: $50.Timestamp.create)
+    ..a<$core.List<$core.int>>(
+        7, _omitFieldNames ? '' : 'publicKeyData', $pb.PbFieldType.OY)
+    ..e<ServiceAccountKeyAlgorithm>(
+        8, _omitFieldNames ? '' : 'keyAlgorithm', $pb.PbFieldType.OE,
+        defaultOrMaker: ServiceAccountKeyAlgorithm.KEY_ALG_UNSPECIFIED,
+        valueOf: ServiceAccountKeyAlgorithm.valueOf,
+        enumValues: ServiceAccountKeyAlgorithm.values)
+    ..e<ServiceAccountKeyOrigin>(
+        9, _omitFieldNames ? '' : 'keyOrigin', $pb.PbFieldType.OE,
+        defaultOrMaker: ServiceAccountKeyOrigin.ORIGIN_UNSPECIFIED,
+        valueOf: ServiceAccountKeyOrigin.valueOf,
+        enumValues: ServiceAccountKeyOrigin.values)
+    ..e<ListServiceAccountKeysRequest_KeyType>(
+        10, _omitFieldNames ? '' : 'keyType', $pb.PbFieldType.OE,
+        defaultOrMaker:
+            ListServiceAccountKeysRequest_KeyType.KEY_TYPE_UNSPECIFIED,
+        valueOf: ListServiceAccountKeysRequest_KeyType.valueOf,
+        enumValues: ListServiceAccountKeysRequest_KeyType.values)
+    ..aOB(11, _omitFieldNames ? '' : 'disabled')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1407,8 +1467,10 @@ class ServiceAccountKey extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ServiceAccountKey copyWith(void Function(ServiceAccountKey) updates) =>
       super.copyWith((message) => updates(message as ServiceAccountKey))
-          as ServiceAccountKey; // ignore: deprecated_member_use
+          as ServiceAccountKey;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ServiceAccountKey create() => ServiceAccountKey._();
   ServiceAccountKey createEmptyInstance() => create();
@@ -1419,6 +1481,8 @@ class ServiceAccountKey extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ServiceAccountKey>(create);
   static ServiceAccountKey? _defaultInstance;
 
+  /// The resource name of the service account key in the following format
+  /// `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1431,6 +1495,12 @@ class ServiceAccountKey extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  ///  The output format for the private key.
+  ///  Only provided in `CreateServiceAccountKey` responses, not
+  ///  in `GetServiceAccountKey` or `ListServiceAccountKey` responses.
+  ///
+  ///  Google never exposes system-managed private keys, and never retains
+  ///  user-managed private keys.
   @$pb.TagNumber(2)
   ServiceAccountPrivateKeyType get privateKeyType => $_getN(1);
   @$pb.TagNumber(2)
@@ -1443,6 +1513,13 @@ class ServiceAccountKey extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearPrivateKeyType() => clearField(2);
 
+  /// The private key data. Only provided in `CreateServiceAccountKey`
+  /// responses. Make sure to keep the private key data secure because it
+  /// allows for the assertion of the service account identity.
+  /// When base64 decoded, the private key data can be used to authenticate with
+  /// Google API client libraries and with
+  /// <a href="/sdk/gcloud/reference/auth/activate-service-account">gcloud
+  /// auth activate-service-account</a>.
   @$pb.TagNumber(3)
   $core.List<$core.int> get privateKeyData => $_getN(2);
   @$pb.TagNumber(3)
@@ -1455,10 +1532,11 @@ class ServiceAccountKey extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearPrivateKeyData() => clearField(3);
 
+  /// The key can be used after this timestamp.
   @$pb.TagNumber(4)
-  $5.Timestamp get validAfterTime => $_getN(3);
+  $50.Timestamp get validAfterTime => $_getN(3);
   @$pb.TagNumber(4)
-  set validAfterTime($5.Timestamp v) {
+  set validAfterTime($50.Timestamp v) {
     setField(4, v);
   }
 
@@ -1467,12 +1545,16 @@ class ServiceAccountKey extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearValidAfterTime() => clearField(4);
   @$pb.TagNumber(4)
-  $5.Timestamp ensureValidAfterTime() => $_ensure(3);
+  $50.Timestamp ensureValidAfterTime() => $_ensure(3);
 
+  /// The key can be used before this timestamp.
+  /// For system-managed key pairs, this timestamp is the end time for the
+  /// private key signing operation. The public key could still be used
+  /// for verification for a few hours after this time.
   @$pb.TagNumber(5)
-  $5.Timestamp get validBeforeTime => $_getN(4);
+  $50.Timestamp get validBeforeTime => $_getN(4);
   @$pb.TagNumber(5)
-  set validBeforeTime($5.Timestamp v) {
+  set validBeforeTime($50.Timestamp v) {
     setField(5, v);
   }
 
@@ -1481,8 +1563,9 @@ class ServiceAccountKey extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearValidBeforeTime() => clearField(5);
   @$pb.TagNumber(5)
-  $5.Timestamp ensureValidBeforeTime() => $_ensure(4);
+  $50.Timestamp ensureValidBeforeTime() => $_ensure(4);
 
+  /// The public key data. Only provided in `GetServiceAccountKey` responses.
   @$pb.TagNumber(7)
   $core.List<$core.int> get publicKeyData => $_getN(5);
   @$pb.TagNumber(7)
@@ -1495,6 +1578,7 @@ class ServiceAccountKey extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearPublicKeyData() => clearField(7);
 
+  /// Specifies the algorithm (and possibly key size) for the key.
   @$pb.TagNumber(8)
   ServiceAccountKeyAlgorithm get keyAlgorithm => $_getN(6);
   @$pb.TagNumber(8)
@@ -1507,6 +1591,7 @@ class ServiceAccountKey extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   void clearKeyAlgorithm() => clearField(8);
 
+  /// The key origin.
   @$pb.TagNumber(9)
   ServiceAccountKeyOrigin get keyOrigin => $_getN(7);
   @$pb.TagNumber(9)
@@ -1519,6 +1604,7 @@ class ServiceAccountKey extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   void clearKeyOrigin() => clearField(9);
 
+  /// The key type.
   @$pb.TagNumber(10)
   ListServiceAccountKeysRequest_KeyType get keyType => $_getN(8);
   @$pb.TagNumber(10)
@@ -1530,61 +1616,66 @@ class ServiceAccountKey extends $pb.GeneratedMessage {
   $core.bool hasKeyType() => $_has(8);
   @$pb.TagNumber(10)
   void clearKeyType() => clearField(10);
+
+  /// The key status.
+  @$pb.TagNumber(11)
+  $core.bool get disabled => $_getBF(9);
+  @$pb.TagNumber(11)
+  set disabled($core.bool v) {
+    $_setBool(9, v);
+  }
+
+  @$pb.TagNumber(11)
+  $core.bool hasDisabled() => $_has(9);
+  @$pb.TagNumber(11)
+  void clearDisabled() => clearField(11);
 }
 
+/// The service account key create request.
 class CreateServiceAccountKeyRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CreateServiceAccountKeyRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.iam.admin.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..e<ServiceAccountPrivateKeyType>(
-        2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'privateKeyType', $pb.PbFieldType.OE,
-        defaultOrMaker: ServiceAccountPrivateKeyType.TYPE_UNSPECIFIED,
-        valueOf: ServiceAccountPrivateKeyType.valueOf,
-        enumValues: ServiceAccountPrivateKeyType.values)
-    ..e<ServiceAccountKeyAlgorithm>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'keyAlgorithm',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: ServiceAccountKeyAlgorithm.KEY_ALG_UNSPECIFIED,
-        valueOf: ServiceAccountKeyAlgorithm.valueOf,
-        enumValues: ServiceAccountKeyAlgorithm.values)
-    ..hasRequiredFields = false;
-
-  CreateServiceAccountKeyRequest._() : super();
   factory CreateServiceAccountKeyRequest({
     $core.String? name,
     ServiceAccountPrivateKeyType? privateKeyType,
     ServiceAccountKeyAlgorithm? keyAlgorithm,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (privateKeyType != null) {
-      _result.privateKeyType = privateKeyType;
+      $result.privateKeyType = privateKeyType;
     }
     if (keyAlgorithm != null) {
-      _result.keyAlgorithm = keyAlgorithm;
+      $result.keyAlgorithm = keyAlgorithm;
     }
-    return _result;
+    return $result;
   }
+  CreateServiceAccountKeyRequest._() : super();
   factory CreateServiceAccountKeyRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CreateServiceAccountKeyRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CreateServiceAccountKeyRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.iam.admin.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..e<ServiceAccountPrivateKeyType>(
+        2, _omitFieldNames ? '' : 'privateKeyType', $pb.PbFieldType.OE,
+        defaultOrMaker: ServiceAccountPrivateKeyType.TYPE_UNSPECIFIED,
+        valueOf: ServiceAccountPrivateKeyType.valueOf,
+        enumValues: ServiceAccountPrivateKeyType.values)
+    ..e<ServiceAccountKeyAlgorithm>(
+        3, _omitFieldNames ? '' : 'keyAlgorithm', $pb.PbFieldType.OE,
+        defaultOrMaker: ServiceAccountKeyAlgorithm.KEY_ALG_UNSPECIFIED,
+        valueOf: ServiceAccountKeyAlgorithm.valueOf,
+        enumValues: ServiceAccountKeyAlgorithm.values)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1597,8 +1688,10 @@ class CreateServiceAccountKeyRequest extends $pb.GeneratedMessage {
           void Function(CreateServiceAccountKeyRequest) updates) =>
       super.copyWith(
               (message) => updates(message as CreateServiceAccountKeyRequest))
-          as CreateServiceAccountKeyRequest; // ignore: deprecated_member_use
+          as CreateServiceAccountKeyRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CreateServiceAccountKeyRequest create() =>
       CreateServiceAccountKeyRequest._();
@@ -1610,6 +1703,11 @@ class CreateServiceAccountKeyRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<CreateServiceAccountKeyRequest>(create);
   static CreateServiceAccountKeyRequest? _defaultInstance;
 
+  /// Required. The resource name of the service account in the following format:
+  /// `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`.
+  /// Using `-` as a wildcard for the `PROJECT_ID` will infer the project from
+  /// the account. The `ACCOUNT` value can be the `email` address or the
+  /// `unique_id` of the service account.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1622,6 +1720,9 @@ class CreateServiceAccountKeyRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// The output format of the private key. The default value is
+  /// `TYPE_GOOGLE_CREDENTIALS_FILE`, which is the Google Credentials File
+  /// format.
   @$pb.TagNumber(2)
   ServiceAccountPrivateKeyType get privateKeyType => $_getN(1);
   @$pb.TagNumber(2)
@@ -1634,6 +1735,9 @@ class CreateServiceAccountKeyRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearPrivateKeyType() => clearField(2);
 
+  /// Which type of key and algorithm to use for the key.
+  /// The default is currently a 2K RSA key.  However this may change in the
+  /// future.
   @$pb.TagNumber(3)
   ServiceAccountKeyAlgorithm get keyAlgorithm => $_getN(2);
   @$pb.TagNumber(3)
@@ -1647,49 +1751,39 @@ class CreateServiceAccountKeyRequest extends $pb.GeneratedMessage {
   void clearKeyAlgorithm() => clearField(3);
 }
 
+/// The service account key upload request.
 class UploadServiceAccountKeyRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'UploadServiceAccountKeyRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.iam.admin.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..a<$core.List<$core.int>>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'publicKeyData',
-        $pb.PbFieldType.OY)
-    ..hasRequiredFields = false;
-
-  UploadServiceAccountKeyRequest._() : super();
   factory UploadServiceAccountKeyRequest({
     $core.String? name,
     $core.List<$core.int>? publicKeyData,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (publicKeyData != null) {
-      _result.publicKeyData = publicKeyData;
+      $result.publicKeyData = publicKeyData;
     }
-    return _result;
+    return $result;
   }
+  UploadServiceAccountKeyRequest._() : super();
   factory UploadServiceAccountKeyRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory UploadServiceAccountKeyRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UploadServiceAccountKeyRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.iam.admin.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..a<$core.List<$core.int>>(
+        2, _omitFieldNames ? '' : 'publicKeyData', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1702,8 +1796,10 @@ class UploadServiceAccountKeyRequest extends $pb.GeneratedMessage {
           void Function(UploadServiceAccountKeyRequest) updates) =>
       super.copyWith(
               (message) => updates(message as UploadServiceAccountKeyRequest))
-          as UploadServiceAccountKeyRequest; // ignore: deprecated_member_use
+          as UploadServiceAccountKeyRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static UploadServiceAccountKeyRequest create() =>
       UploadServiceAccountKeyRequest._();
@@ -1715,6 +1811,11 @@ class UploadServiceAccountKeyRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<UploadServiceAccountKeyRequest>(create);
   static UploadServiceAccountKeyRequest? _defaultInstance;
 
+  /// The resource name of the service account in the following format:
+  /// `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`.
+  /// Using `-` as a wildcard for the `PROJECT_ID` will infer the project from
+  /// the account. The `ACCOUNT` value can be the `email` address or the
+  /// `unique_id` of the service account.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1727,6 +1828,10 @@ class UploadServiceAccountKeyRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// The public key to associate with the service account. Must be an RSA public
+  /// key that is wrapped in an X.509 v3 certificate. Include the first line,
+  /// `-----BEGIN CERTIFICATE-----`, and the last line,
+  /// `-----END CERTIFICATE-----`.
   @$pb.TagNumber(2)
   $core.List<$core.int> get publicKeyData => $_getN(1);
   @$pb.TagNumber(2)
@@ -1740,39 +1845,33 @@ class UploadServiceAccountKeyRequest extends $pb.GeneratedMessage {
   void clearPublicKeyData() => clearField(2);
 }
 
+/// The service account key delete request.
 class DeleteServiceAccountKeyRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DeleteServiceAccountKeyRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.iam.admin.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  DeleteServiceAccountKeyRequest._() : super();
   factory DeleteServiceAccountKeyRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  DeleteServiceAccountKeyRequest._() : super();
   factory DeleteServiceAccountKeyRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DeleteServiceAccountKeyRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DeleteServiceAccountKeyRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.iam.admin.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1785,8 +1884,10 @@ class DeleteServiceAccountKeyRequest extends $pb.GeneratedMessage {
           void Function(DeleteServiceAccountKeyRequest) updates) =>
       super.copyWith(
               (message) => updates(message as DeleteServiceAccountKeyRequest))
-          as DeleteServiceAccountKeyRequest; // ignore: deprecated_member_use
+          as DeleteServiceAccountKeyRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DeleteServiceAccountKeyRequest create() =>
       DeleteServiceAccountKeyRequest._();
@@ -1798,6 +1899,11 @@ class DeleteServiceAccountKeyRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DeleteServiceAccountKeyRequest>(create);
   static DeleteServiceAccountKeyRequest? _defaultInstance;
 
+  /// Required. The resource name of the service account key in the following format:
+  /// `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`.
+  /// Using `-` as a wildcard for the `PROJECT_ID` will infer the project from
+  /// the account. The `ACCOUNT` value can be the `email` address or the
+  /// `unique_id` of the service account.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1811,52 +1917,192 @@ class DeleteServiceAccountKeyRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
-class SignBlobRequest extends $pb.GeneratedMessage {
+/// The service account key disable request.
+class DisableServiceAccountKeyRequest extends $pb.GeneratedMessage {
+  factory DisableServiceAccountKeyRequest({
+    $core.String? name,
+  }) {
+    final $result = create();
+    if (name != null) {
+      $result.name = name;
+    }
+    return $result;
+  }
+  DisableServiceAccountKeyRequest._() : super();
+  factory DisableServiceAccountKeyRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory DisableServiceAccountKeyRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'SignBlobRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.iam.admin.v1'),
+      _omitMessageNames ? '' : 'DisableServiceAccountKeyRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.iam.admin.v1'),
       createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..a<$core.List<$core.int>>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'bytesToSign',
-        $pb.PbFieldType.OY)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
     ..hasRequiredFields = false;
 
-  SignBlobRequest._() : super();
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  DisableServiceAccountKeyRequest clone() =>
+      DisableServiceAccountKeyRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  DisableServiceAccountKeyRequest copyWith(
+          void Function(DisableServiceAccountKeyRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as DisableServiceAccountKeyRequest))
+          as DisableServiceAccountKeyRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static DisableServiceAccountKeyRequest create() =>
+      DisableServiceAccountKeyRequest._();
+  DisableServiceAccountKeyRequest createEmptyInstance() => create();
+  static $pb.PbList<DisableServiceAccountKeyRequest> createRepeated() =>
+      $pb.PbList<DisableServiceAccountKeyRequest>();
+  @$core.pragma('dart2js:noInline')
+  static DisableServiceAccountKeyRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<DisableServiceAccountKeyRequest>(
+          create);
+  static DisableServiceAccountKeyRequest? _defaultInstance;
+
+  ///  Required. The resource name of the service account key in the following format:
+  ///  `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`.
+  ///
+  ///  Using `-` as a wildcard for the `PROJECT_ID` will infer the project from
+  ///  the account. The `ACCOUNT` value can be the `email` address or the
+  ///  `unique_id` of the service account.
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearName() => clearField(1);
+}
+
+/// The service account key enable request.
+class EnableServiceAccountKeyRequest extends $pb.GeneratedMessage {
+  factory EnableServiceAccountKeyRequest({
+    $core.String? name,
+  }) {
+    final $result = create();
+    if (name != null) {
+      $result.name = name;
+    }
+    return $result;
+  }
+  EnableServiceAccountKeyRequest._() : super();
+  factory EnableServiceAccountKeyRequest.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory EnableServiceAccountKeyRequest.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'EnableServiceAccountKeyRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.iam.admin.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  EnableServiceAccountKeyRequest clone() =>
+      EnableServiceAccountKeyRequest()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  EnableServiceAccountKeyRequest copyWith(
+          void Function(EnableServiceAccountKeyRequest) updates) =>
+      super.copyWith(
+              (message) => updates(message as EnableServiceAccountKeyRequest))
+          as EnableServiceAccountKeyRequest;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static EnableServiceAccountKeyRequest create() =>
+      EnableServiceAccountKeyRequest._();
+  EnableServiceAccountKeyRequest createEmptyInstance() => create();
+  static $pb.PbList<EnableServiceAccountKeyRequest> createRepeated() =>
+      $pb.PbList<EnableServiceAccountKeyRequest>();
+  @$core.pragma('dart2js:noInline')
+  static EnableServiceAccountKeyRequest getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<EnableServiceAccountKeyRequest>(create);
+  static EnableServiceAccountKeyRequest? _defaultInstance;
+
+  ///  Required. The resource name of the service account key in the following format:
+  ///  `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}/keys/{key}`.
+  ///
+  ///  Using `-` as a wildcard for the `PROJECT_ID` will infer the project from
+  ///  the account. The `ACCOUNT` value can be the `email` address or the
+  ///  `unique_id` of the service account.
+  @$pb.TagNumber(1)
+  $core.String get name => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set name($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasName() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearName() => clearField(1);
+}
+
+///  Deprecated. [Migrate to Service Account Credentials
+///  API](https://cloud.google.com/iam/help/credentials/migrate-api).
+///
+///  The service account sign blob request.
+class SignBlobRequest extends $pb.GeneratedMessage {
   factory SignBlobRequest({
     @$core.Deprecated('This field is deprecated.') $core.String? name,
     @$core.Deprecated('This field is deprecated.')
-        $core.List<$core.int>? bytesToSign,
+    $core.List<$core.int>? bytesToSign,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
       // ignore: deprecated_member_use_from_same_package
-      _result.name = name;
+      $result.name = name;
     }
     if (bytesToSign != null) {
       // ignore: deprecated_member_use_from_same_package
-      _result.bytesToSign = bytesToSign;
+      $result.bytesToSign = bytesToSign;
     }
-    return _result;
+    return $result;
   }
+  SignBlobRequest._() : super();
   factory SignBlobRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory SignBlobRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SignBlobRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.iam.admin.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..a<$core.List<$core.int>>(
+        2, _omitFieldNames ? '' : 'bytesToSign', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1866,8 +2112,10 @@ class SignBlobRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   SignBlobRequest copyWith(void Function(SignBlobRequest) updates) =>
       super.copyWith((message) => updates(message as SignBlobRequest))
-          as SignBlobRequest; // ignore: deprecated_member_use
+          as SignBlobRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SignBlobRequest create() => SignBlobRequest._();
   SignBlobRequest createEmptyInstance() => create();
@@ -1878,6 +2126,14 @@ class SignBlobRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<SignBlobRequest>(create);
   static SignBlobRequest? _defaultInstance;
 
+  ///  Required. Deprecated. [Migrate to Service Account Credentials
+  ///  API](https://cloud.google.com/iam/help/credentials/migrate-api).
+  ///
+  ///  The resource name of the service account in the following format:
+  ///  `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`.
+  ///  Using `-` as a wildcard for the `PROJECT_ID` will infer the project from
+  ///  the account. The `ACCOUNT` value can be the `email` address or the
+  ///  `unique_id` of the service account.
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
@@ -1894,6 +2150,10 @@ class SignBlobRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  ///  Required. Deprecated. [Migrate to Service Account Credentials
+  ///  API](https://cloud.google.com/iam/help/credentials/migrate-api).
+  ///
+  ///  The bytes to sign.
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(2)
   $core.List<$core.int> get bytesToSign => $_getN(1);
@@ -1911,52 +2171,45 @@ class SignBlobRequest extends $pb.GeneratedMessage {
   void clearBytesToSign() => clearField(2);
 }
 
+///  Deprecated. [Migrate to Service Account Credentials
+///  API](https://cloud.google.com/iam/help/credentials/migrate-api).
+///
+///  The service account sign blob response.
 class SignBlobResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'SignBlobResponse',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.iam.admin.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'keyId')
-    ..a<$core.List<$core.int>>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'signature',
-        $pb.PbFieldType.OY)
-    ..hasRequiredFields = false;
-
-  SignBlobResponse._() : super();
   factory SignBlobResponse({
     @$core.Deprecated('This field is deprecated.') $core.String? keyId,
     @$core.Deprecated('This field is deprecated.')
-        $core.List<$core.int>? signature,
+    $core.List<$core.int>? signature,
   }) {
-    final _result = create();
+    final $result = create();
     if (keyId != null) {
       // ignore: deprecated_member_use_from_same_package
-      _result.keyId = keyId;
+      $result.keyId = keyId;
     }
     if (signature != null) {
       // ignore: deprecated_member_use_from_same_package
-      _result.signature = signature;
+      $result.signature = signature;
     }
-    return _result;
+    return $result;
   }
+  SignBlobResponse._() : super();
   factory SignBlobResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory SignBlobResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SignBlobResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.iam.admin.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'keyId')
+    ..a<$core.List<$core.int>>(
+        2, _omitFieldNames ? '' : 'signature', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1966,8 +2219,10 @@ class SignBlobResponse extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   SignBlobResponse copyWith(void Function(SignBlobResponse) updates) =>
       super.copyWith((message) => updates(message as SignBlobResponse))
-          as SignBlobResponse; // ignore: deprecated_member_use
+          as SignBlobResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SignBlobResponse create() => SignBlobResponse._();
   SignBlobResponse createEmptyInstance() => create();
@@ -1978,6 +2233,10 @@ class SignBlobResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<SignBlobResponse>(create);
   static SignBlobResponse? _defaultInstance;
 
+  ///  Deprecated. [Migrate to Service Account Credentials
+  ///  API](https://cloud.google.com/iam/help/credentials/migrate-api).
+  ///
+  ///  The id of the key used to sign the blob.
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(1)
   $core.String get keyId => $_getSZ(0);
@@ -1994,6 +2253,10 @@ class SignBlobResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearKeyId() => clearField(1);
 
+  ///  Deprecated. [Migrate to Service Account Credentials
+  ///  API](https://cloud.google.com/iam/help/credentials/migrate-api).
+  ///
+  ///  The signed blob.
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(2)
   $core.List<$core.int> get signature => $_getN(1);
@@ -2011,50 +2274,43 @@ class SignBlobResponse extends $pb.GeneratedMessage {
   void clearSignature() => clearField(2);
 }
 
+///  Deprecated. [Migrate to Service Account Credentials
+///  API](https://cloud.google.com/iam/help/credentials/migrate-api).
+///
+///  The service account sign JWT request.
 class SignJwtRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'SignJwtRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.iam.admin.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'payload')
-    ..hasRequiredFields = false;
-
-  SignJwtRequest._() : super();
   factory SignJwtRequest({
     @$core.Deprecated('This field is deprecated.') $core.String? name,
     @$core.Deprecated('This field is deprecated.') $core.String? payload,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
       // ignore: deprecated_member_use_from_same_package
-      _result.name = name;
+      $result.name = name;
     }
     if (payload != null) {
       // ignore: deprecated_member_use_from_same_package
-      _result.payload = payload;
+      $result.payload = payload;
     }
-    return _result;
+    return $result;
   }
+  SignJwtRequest._() : super();
   factory SignJwtRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory SignJwtRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SignJwtRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.iam.admin.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOS(2, _omitFieldNames ? '' : 'payload')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2064,8 +2320,10 @@ class SignJwtRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   SignJwtRequest copyWith(void Function(SignJwtRequest) updates) =>
       super.copyWith((message) => updates(message as SignJwtRequest))
-          as SignJwtRequest; // ignore: deprecated_member_use
+          as SignJwtRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SignJwtRequest create() => SignJwtRequest._();
   SignJwtRequest createEmptyInstance() => create();
@@ -2076,6 +2334,14 @@ class SignJwtRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<SignJwtRequest>(create);
   static SignJwtRequest? _defaultInstance;
 
+  ///  Required. Deprecated. [Migrate to Service Account Credentials
+  ///  API](https://cloud.google.com/iam/help/credentials/migrate-api).
+  ///
+  ///  The resource name of the service account in the following format:
+  ///  `projects/{PROJECT_ID}/serviceAccounts/{ACCOUNT}`.
+  ///  Using `-` as a wildcard for the `PROJECT_ID` will infer the project from
+  ///  the account. The `ACCOUNT` value can be the `email` address or the
+  ///  `unique_id` of the service account.
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
@@ -2092,6 +2358,19 @@ class SignJwtRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  ///  Required. Deprecated. [Migrate to Service Account Credentials
+  ///  API](https://cloud.google.com/iam/help/credentials/migrate-api).
+  ///
+  ///  The JWT payload to sign. Must be a serialized JSON object that contains a
+  ///  JWT Claims Set. For example: `{"sub": "user@example.com", "iat": 313435}`
+  ///
+  ///  If the JWT Claims Set contains an expiration time (`exp`) claim, it must be
+  ///  an integer timestamp that is not in the past and no more than 12 hours in
+  ///  the future.
+  ///
+  ///  If the JWT Claims Set does not contain an expiration time (`exp`) claim,
+  ///  this claim is added automatically, with a timestamp that is 1 hour in the
+  ///  future.
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(2)
   $core.String get payload => $_getSZ(1);
@@ -2109,50 +2388,43 @@ class SignJwtRequest extends $pb.GeneratedMessage {
   void clearPayload() => clearField(2);
 }
 
+///  Deprecated. [Migrate to Service Account Credentials
+///  API](https://cloud.google.com/iam/help/credentials/migrate-api).
+///
+///  The service account sign JWT response.
 class SignJwtResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'SignJwtResponse',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.iam.admin.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'keyId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'signedJwt')
-    ..hasRequiredFields = false;
-
-  SignJwtResponse._() : super();
   factory SignJwtResponse({
     @$core.Deprecated('This field is deprecated.') $core.String? keyId,
     @$core.Deprecated('This field is deprecated.') $core.String? signedJwt,
   }) {
-    final _result = create();
+    final $result = create();
     if (keyId != null) {
       // ignore: deprecated_member_use_from_same_package
-      _result.keyId = keyId;
+      $result.keyId = keyId;
     }
     if (signedJwt != null) {
       // ignore: deprecated_member_use_from_same_package
-      _result.signedJwt = signedJwt;
+      $result.signedJwt = signedJwt;
     }
-    return _result;
+    return $result;
   }
+  SignJwtResponse._() : super();
   factory SignJwtResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory SignJwtResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SignJwtResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.iam.admin.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'keyId')
+    ..aOS(2, _omitFieldNames ? '' : 'signedJwt')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2162,8 +2434,10 @@ class SignJwtResponse extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   SignJwtResponse copyWith(void Function(SignJwtResponse) updates) =>
       super.copyWith((message) => updates(message as SignJwtResponse))
-          as SignJwtResponse; // ignore: deprecated_member_use
+          as SignJwtResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SignJwtResponse create() => SignJwtResponse._();
   SignJwtResponse createEmptyInstance() => create();
@@ -2174,6 +2448,10 @@ class SignJwtResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<SignJwtResponse>(create);
   static SignJwtResponse? _defaultInstance;
 
+  ///  Deprecated. [Migrate to Service Account Credentials
+  ///  API](https://cloud.google.com/iam/help/credentials/migrate-api).
+  ///
+  ///  The id of the key used to sign the JWT.
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(1)
   $core.String get keyId => $_getSZ(0);
@@ -2190,6 +2468,10 @@ class SignJwtResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearKeyId() => clearField(1);
 
+  ///  Deprecated. [Migrate to Service Account Credentials
+  ///  API](https://cloud.google.com/iam/help/credentials/migrate-api).
+  ///
+  ///  The signed JWT.
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(2)
   $core.String get signedJwt => $_getSZ(1);
@@ -2207,43 +2489,8 @@ class SignJwtResponse extends $pb.GeneratedMessage {
   void clearSignedJwt() => clearField(2);
 }
 
+/// A role in the Identity and Access Management API.
 class Role extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Role',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.iam.admin.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'title')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'description')
-    ..pPS(
-        7,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'includedPermissions')
-    ..e<Role_RoleLaunchStage>(
-        8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'stage', $pb.PbFieldType.OE,
-        defaultOrMaker: Role_RoleLaunchStage.ALPHA,
-        valueOf: Role_RoleLaunchStage.valueOf,
-        enumValues: Role_RoleLaunchStage.values)
-    ..a<$core.List<$core.int>>(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'etag', $pb.PbFieldType.OY)
-    ..aOB(11, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'deleted')
-    ..hasRequiredFields = false;
-
-  Role._() : super();
   factory Role({
     $core.String? name,
     $core.String? title,
@@ -2253,36 +2500,57 @@ class Role extends $pb.GeneratedMessage {
     $core.List<$core.int>? etag,
     $core.bool? deleted,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (title != null) {
-      _result.title = title;
+      $result.title = title;
     }
     if (description != null) {
-      _result.description = description;
+      $result.description = description;
     }
     if (includedPermissions != null) {
-      _result.includedPermissions.addAll(includedPermissions);
+      $result.includedPermissions.addAll(includedPermissions);
     }
     if (stage != null) {
-      _result.stage = stage;
+      $result.stage = stage;
     }
     if (etag != null) {
-      _result.etag = etag;
+      $result.etag = etag;
     }
     if (deleted != null) {
-      _result.deleted = deleted;
+      $result.deleted = deleted;
     }
-    return _result;
+    return $result;
   }
+  Role._() : super();
   factory Role.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Role.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Role',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.iam.admin.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOS(2, _omitFieldNames ? '' : 'title')
+    ..aOS(3, _omitFieldNames ? '' : 'description')
+    ..pPS(7, _omitFieldNames ? '' : 'includedPermissions')
+    ..e<Role_RoleLaunchStage>(
+        8, _omitFieldNames ? '' : 'stage', $pb.PbFieldType.OE,
+        defaultOrMaker: Role_RoleLaunchStage.ALPHA,
+        valueOf: Role_RoleLaunchStage.valueOf,
+        enumValues: Role_RoleLaunchStage.values)
+    ..a<$core.List<$core.int>>(
+        9, _omitFieldNames ? '' : 'etag', $pb.PbFieldType.OY)
+    ..aOB(11, _omitFieldNames ? '' : 'deleted')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2291,9 +2559,10 @@ class Role extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Role copyWith(void Function(Role) updates) =>
-      super.copyWith((message) => updates(message as Role))
-          as Role; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Role)) as Role;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Role create() => Role._();
   Role createEmptyInstance() => create();
@@ -2303,6 +2572,13 @@ class Role extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Role>(create);
   static Role? _defaultInstance;
 
+  ///  The name of the role.
+  ///
+  ///  When Role is used in CreateRole, the role name must not be set.
+  ///
+  ///  When Role is used in output and other input such as UpdateRole, the role
+  ///  name is the complete path, e.g., roles/logging.viewer for predefined roles
+  ///  and organizations/{ORGANIZATION_ID}/roles/logging.viewer for custom roles.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2315,6 +2591,8 @@ class Role extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// Optional. A human-readable title for the role.  Typically this
+  /// is limited to 100 UTF-8 bytes.
   @$pb.TagNumber(2)
   $core.String get title => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -2327,6 +2605,7 @@ class Role extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearTitle() => clearField(2);
 
+  /// Optional. A human-readable description for the role.
   @$pb.TagNumber(3)
   $core.String get description => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -2339,9 +2618,13 @@ class Role extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearDescription() => clearField(3);
 
+  /// The names of the permissions this role grants when bound in an IAM policy.
   @$pb.TagNumber(7)
   $core.List<$core.String> get includedPermissions => $_getList(3);
 
+  /// The current launch stage of the role. If the `ALPHA` launch stage has been
+  /// selected for a role, the `stage` field will not be included in the
+  /// returned definition for the role.
   @$pb.TagNumber(8)
   Role_RoleLaunchStage get stage => $_getN(4);
   @$pb.TagNumber(8)
@@ -2354,6 +2637,7 @@ class Role extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   void clearStage() => clearField(8);
 
+  /// Used to perform a consistent read-modify-write.
   @$pb.TagNumber(9)
   $core.List<$core.int> get etag => $_getN(5);
   @$pb.TagNumber(9)
@@ -2366,6 +2650,8 @@ class Role extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   void clearEtag() => clearField(9);
 
+  /// The current deleted state of the role. This field is read only.
+  /// It will be ignored in calls to CreateRole and UpdateRole.
   @$pb.TagNumber(11)
   $core.bool get deleted => $_getBF(6);
   @$pb.TagNumber(11)
@@ -2379,61 +2665,51 @@ class Role extends $pb.GeneratedMessage {
   void clearDeleted() => clearField(11);
 }
 
+/// The grantable role query request.
 class QueryGrantableRolesRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'QueryGrantableRolesRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.iam.admin.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'fullResourceName')
-    ..e<RoleView>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'view',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: RoleView.BASIC,
-        valueOf: RoleView.valueOf,
-        enumValues: RoleView.values)
-    ..a<$core.int>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'pageSize',
-        $pb.PbFieldType.O3)
-    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'pageToken')
-    ..hasRequiredFields = false;
-
-  QueryGrantableRolesRequest._() : super();
   factory QueryGrantableRolesRequest({
     $core.String? fullResourceName,
     RoleView? view,
     $core.int? pageSize,
     $core.String? pageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (fullResourceName != null) {
-      _result.fullResourceName = fullResourceName;
+      $result.fullResourceName = fullResourceName;
     }
     if (view != null) {
-      _result.view = view;
+      $result.view = view;
     }
     if (pageSize != null) {
-      _result.pageSize = pageSize;
+      $result.pageSize = pageSize;
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
-    return _result;
+    return $result;
   }
+  QueryGrantableRolesRequest._() : super();
   factory QueryGrantableRolesRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory QueryGrantableRolesRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'QueryGrantableRolesRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.iam.admin.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'fullResourceName')
+    ..e<RoleView>(2, _omitFieldNames ? '' : 'view', $pb.PbFieldType.OE,
+        defaultOrMaker: RoleView.BASIC,
+        valueOf: RoleView.valueOf,
+        enumValues: RoleView.values)
+    ..a<$core.int>(3, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aOS(4, _omitFieldNames ? '' : 'pageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2446,8 +2722,10 @@ class QueryGrantableRolesRequest extends $pb.GeneratedMessage {
           void Function(QueryGrantableRolesRequest) updates) =>
       super.copyWith(
               (message) => updates(message as QueryGrantableRolesRequest))
-          as QueryGrantableRolesRequest; // ignore: deprecated_member_use
+          as QueryGrantableRolesRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static QueryGrantableRolesRequest create() => QueryGrantableRolesRequest._();
   QueryGrantableRolesRequest createEmptyInstance() => create();
@@ -2458,6 +2736,11 @@ class QueryGrantableRolesRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<QueryGrantableRolesRequest>(create);
   static QueryGrantableRolesRequest? _defaultInstance;
 
+  ///  Required. The full resource name to query from the list of grantable roles.
+  ///
+  ///  The name follows the Google Cloud Platform resource format.
+  ///  For example, a Cloud Platform project with id `my-project` will be named
+  ///  `//cloudresourcemanager.googleapis.com/projects/my-project`.
   @$pb.TagNumber(1)
   $core.String get fullResourceName => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2482,6 +2765,9 @@ class QueryGrantableRolesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearView() => clearField(2);
 
+  ///  Optional limit on the number of roles to include in the response.
+  ///
+  ///  The default is 300, and the maximum is 1,000.
   @$pb.TagNumber(3)
   $core.int get pageSize => $_getIZ(2);
   @$pb.TagNumber(3)
@@ -2494,6 +2780,8 @@ class QueryGrantableRolesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearPageSize() => clearField(3);
 
+  /// Optional pagination token returned in an earlier
+  /// QueryGrantableRolesResponse.
   @$pb.TagNumber(4)
   $core.String get pageToken => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -2507,47 +2795,39 @@ class QueryGrantableRolesRequest extends $pb.GeneratedMessage {
   void clearPageToken() => clearField(4);
 }
 
+/// The grantable role query response.
 class QueryGrantableRolesResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'QueryGrantableRolesResponse',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.iam.admin.v1'),
-      createEmptyInstance: create)
-    ..pc<Role>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'roles',
-        $pb.PbFieldType.PM,
-        subBuilder: Role.create)
-    ..aOS(2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'nextPageToken')
-    ..hasRequiredFields = false;
-
-  QueryGrantableRolesResponse._() : super();
   factory QueryGrantableRolesResponse({
     $core.Iterable<Role>? roles,
     $core.String? nextPageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (roles != null) {
-      _result.roles.addAll(roles);
+      $result.roles.addAll(roles);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
-    return _result;
+    return $result;
   }
+  QueryGrantableRolesResponse._() : super();
   factory QueryGrantableRolesResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory QueryGrantableRolesResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'QueryGrantableRolesResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.iam.admin.v1'),
+      createEmptyInstance: create)
+    ..pc<Role>(1, _omitFieldNames ? '' : 'roles', $pb.PbFieldType.PM,
+        subBuilder: Role.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2560,8 +2840,10 @@ class QueryGrantableRolesResponse extends $pb.GeneratedMessage {
           void Function(QueryGrantableRolesResponse) updates) =>
       super.copyWith(
               (message) => updates(message as QueryGrantableRolesResponse))
-          as QueryGrantableRolesResponse; // ignore: deprecated_member_use
+          as QueryGrantableRolesResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static QueryGrantableRolesResponse create() =>
       QueryGrantableRolesResponse._();
@@ -2573,9 +2855,12 @@ class QueryGrantableRolesResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<QueryGrantableRolesResponse>(create);
   static QueryGrantableRolesResponse? _defaultInstance;
 
+  /// The list of matching roles.
   @$pb.TagNumber(1)
   $core.List<Role> get roles => $_getList(0);
 
+  /// To retrieve the next page of results, set
+  /// `QueryGrantableRolesRequest.page_token` to this value.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -2589,39 +2874,8 @@ class QueryGrantableRolesResponse extends $pb.GeneratedMessage {
   void clearNextPageToken() => clearField(2);
 }
 
+/// The request to get all roles defined under a resource.
 class ListRolesRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListRolesRequest',
-      package: const $pb.PackageName($core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'google.iam.admin.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..a<$core.int>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageSize',
-        $pb.PbFieldType.O3)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageToken')
-    ..e<RoleView>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'view', $pb.PbFieldType.OE,
-        defaultOrMaker: RoleView.BASIC,
-        valueOf: RoleView.valueOf,
-        enumValues: RoleView.values)
-    ..aOB(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'showDeleted')
-    ..hasRequiredFields = false;
-
-  ListRolesRequest._() : super();
   factory ListRolesRequest({
     $core.String? parent,
     $core.int? pageSize,
@@ -2629,30 +2883,47 @@ class ListRolesRequest extends $pb.GeneratedMessage {
     RoleView? view,
     $core.bool? showDeleted,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (pageSize != null) {
-      _result.pageSize = pageSize;
+      $result.pageSize = pageSize;
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
     if (view != null) {
-      _result.view = view;
+      $result.view = view;
     }
     if (showDeleted != null) {
-      _result.showDeleted = showDeleted;
+      $result.showDeleted = showDeleted;
     }
-    return _result;
+    return $result;
   }
+  ListRolesRequest._() : super();
   factory ListRolesRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListRolesRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListRolesRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.iam.admin.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aOS(3, _omitFieldNames ? '' : 'pageToken')
+    ..e<RoleView>(4, _omitFieldNames ? '' : 'view', $pb.PbFieldType.OE,
+        defaultOrMaker: RoleView.BASIC,
+        valueOf: RoleView.valueOf,
+        enumValues: RoleView.values)
+    ..aOB(6, _omitFieldNames ? '' : 'showDeleted')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2662,8 +2933,10 @@ class ListRolesRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ListRolesRequest copyWith(void Function(ListRolesRequest) updates) =>
       super.copyWith((message) => updates(message as ListRolesRequest))
-          as ListRolesRequest; // ignore: deprecated_member_use
+          as ListRolesRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListRolesRequest create() => ListRolesRequest._();
   ListRolesRequest createEmptyInstance() => create();
@@ -2674,6 +2947,36 @@ class ListRolesRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListRolesRequest>(create);
   static ListRolesRequest? _defaultInstance;
 
+  ///  The `parent` parameter's value depends on the target resource for the
+  ///  request, namely
+  ///  [`roles`](https://cloud.google.com/iam/reference/rest/v1/roles),
+  ///  [`projects`](https://cloud.google.com/iam/reference/rest/v1/projects.roles),
+  ///  or
+  ///  [`organizations`](https://cloud.google.com/iam/reference/rest/v1/organizations.roles).
+  ///  Each resource type's `parent` value format is described below:
+  ///
+  ///  * [`roles.list()`](https://cloud.google.com/iam/reference/rest/v1/roles/list): An empty string.
+  ///    This method doesn't require a resource; it simply returns all
+  ///    [predefined
+  ///    roles](https://cloud.google.com/iam/docs/understanding-roles#predefined_roles)
+  ///    in Cloud IAM. Example request URL: `https://iam.googleapis.com/v1/roles`
+  ///
+  ///  * [`projects.roles.list()`](https://cloud.google.com/iam/reference/rest/v1/projects.roles/list):
+  ///    `projects/{PROJECT_ID}`. This method lists all project-level
+  ///    [custom
+  ///    roles](https://cloud.google.com/iam/docs/understanding-custom-roles).
+  ///    Example request URL:
+  ///    `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles`
+  ///
+  ///  * [`organizations.roles.list()`](https://cloud.google.com/iam/reference/rest/v1/organizations.roles/list):
+  ///    `organizations/{ORGANIZATION_ID}`. This method lists all
+  ///    organization-level [custom
+  ///    roles](https://cloud.google.com/iam/docs/understanding-custom-roles).
+  ///    Example request URL:
+  ///    `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles`
+  ///
+  ///  Note: Wildcard (*) values are invalid; you must specify a complete project
+  ///  ID or organization ID.
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2686,6 +2989,9 @@ class ListRolesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  ///  Optional limit on the number of roles to include in the response.
+  ///
+  ///  The default is 300, and the maximum is 1,000.
   @$pb.TagNumber(2)
   $core.int get pageSize => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -2698,6 +3004,7 @@ class ListRolesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
+  /// Optional pagination token returned in an earlier ListRolesResponse.
   @$pb.TagNumber(3)
   $core.String get pageToken => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -2710,6 +3017,10 @@ class ListRolesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
 
+  /// Optional view for the returned Role objects. When `FULL` is specified,
+  /// the `includedPermissions` field is returned, which includes a list of all
+  /// permissions in the role. The default value is `BASIC`, which does not
+  /// return the `includedPermissions` field.
   @$pb.TagNumber(4)
   RoleView get view => $_getN(3);
   @$pb.TagNumber(4)
@@ -2722,6 +3033,7 @@ class ListRolesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearView() => clearField(4);
 
+  /// Include Roles that have been deleted.
   @$pb.TagNumber(6)
   $core.bool get showDeleted => $_getBF(4);
   @$pb.TagNumber(6)
@@ -2735,47 +3047,39 @@ class ListRolesRequest extends $pb.GeneratedMessage {
   void clearShowDeleted() => clearField(6);
 }
 
+/// The response containing the roles defined under a resource.
 class ListRolesResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListRolesResponse',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.iam.admin.v1'),
-      createEmptyInstance: create)
-    ..pc<Role>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'roles',
-        $pb.PbFieldType.PM,
-        subBuilder: Role.create)
-    ..aOS(2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'nextPageToken')
-    ..hasRequiredFields = false;
-
-  ListRolesResponse._() : super();
   factory ListRolesResponse({
     $core.Iterable<Role>? roles,
     $core.String? nextPageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (roles != null) {
-      _result.roles.addAll(roles);
+      $result.roles.addAll(roles);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
-    return _result;
+    return $result;
   }
+  ListRolesResponse._() : super();
   factory ListRolesResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListRolesResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListRolesResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.iam.admin.v1'),
+      createEmptyInstance: create)
+    ..pc<Role>(1, _omitFieldNames ? '' : 'roles', $pb.PbFieldType.PM,
+        subBuilder: Role.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2785,8 +3089,10 @@ class ListRolesResponse extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ListRolesResponse copyWith(void Function(ListRolesResponse) updates) =>
       super.copyWith((message) => updates(message as ListRolesResponse))
-          as ListRolesResponse; // ignore: deprecated_member_use
+          as ListRolesResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListRolesResponse create() => ListRolesResponse._();
   ListRolesResponse createEmptyInstance() => create();
@@ -2797,9 +3103,12 @@ class ListRolesResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListRolesResponse>(create);
   static ListRolesResponse? _defaultInstance;
 
+  /// The Roles defined on this resource.
   @$pb.TagNumber(1)
   $core.List<Role> get roles => $_getList(0);
 
+  /// To retrieve the next page of results, set
+  /// `ListRolesRequest.page_token` to this value.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -2813,39 +3122,33 @@ class ListRolesResponse extends $pb.GeneratedMessage {
   void clearNextPageToken() => clearField(2);
 }
 
+/// The request to get the definition of an existing role.
 class GetRoleRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetRoleRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.iam.admin.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  GetRoleRequest._() : super();
   factory GetRoleRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  GetRoleRequest._() : super();
   factory GetRoleRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetRoleRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetRoleRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.iam.admin.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2855,8 +3158,10 @@ class GetRoleRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   GetRoleRequest copyWith(void Function(GetRoleRequest) updates) =>
       super.copyWith((message) => updates(message as GetRoleRequest))
-          as GetRoleRequest; // ignore: deprecated_member_use
+          as GetRoleRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetRoleRequest create() => GetRoleRequest._();
   GetRoleRequest createEmptyInstance() => create();
@@ -2867,6 +3172,37 @@ class GetRoleRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetRoleRequest>(create);
   static GetRoleRequest? _defaultInstance;
 
+  ///  The `name` parameter's value depends on the target resource for the
+  ///  request, namely
+  ///  [`roles`](https://cloud.google.com/iam/reference/rest/v1/roles),
+  ///  [`projects`](https://cloud.google.com/iam/reference/rest/v1/projects.roles),
+  ///  or
+  ///  [`organizations`](https://cloud.google.com/iam/reference/rest/v1/organizations.roles).
+  ///  Each resource type's `name` value format is described below:
+  ///
+  ///  * [`roles.get()`](https://cloud.google.com/iam/reference/rest/v1/roles/get): `roles/{ROLE_NAME}`.
+  ///    This method returns results from all
+  ///    [predefined
+  ///    roles](https://cloud.google.com/iam/docs/understanding-roles#predefined_roles)
+  ///    in Cloud IAM. Example request URL:
+  ///    `https://iam.googleapis.com/v1/roles/{ROLE_NAME}`
+  ///
+  ///  * [`projects.roles.get()`](https://cloud.google.com/iam/reference/rest/v1/projects.roles/get):
+  ///    `projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`. This method returns only
+  ///    [custom
+  ///    roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that
+  ///    have been created at the project level. Example request URL:
+  ///    `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`
+  ///
+  ///  * [`organizations.roles.get()`](https://cloud.google.com/iam/reference/rest/v1/organizations.roles/get):
+  ///    `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method
+  ///    returns only [custom
+  ///    roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that
+  ///    have been created at the organization level. Example request URL:
+  ///    `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`
+  ///
+  ///  Note: Wildcard (*) values are invalid; you must specify a complete project
+  ///  ID or organization ID.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2880,58 +3216,43 @@ class GetRoleRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// The request to create a new role.
 class CreateRoleRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CreateRoleRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.iam.admin.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'roleId')
-    ..aOM<Role>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'role',
-        subBuilder: Role.create)
-    ..hasRequiredFields = false;
-
-  CreateRoleRequest._() : super();
   factory CreateRoleRequest({
     $core.String? parent,
     $core.String? roleId,
     Role? role,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (roleId != null) {
-      _result.roleId = roleId;
+      $result.roleId = roleId;
     }
     if (role != null) {
-      _result.role = role;
+      $result.role = role;
     }
-    return _result;
+    return $result;
   }
+  CreateRoleRequest._() : super();
   factory CreateRoleRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CreateRoleRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CreateRoleRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.iam.admin.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..aOS(2, _omitFieldNames ? '' : 'roleId')
+    ..aOM<Role>(3, _omitFieldNames ? '' : 'role', subBuilder: Role.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2941,8 +3262,10 @@ class CreateRoleRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   CreateRoleRequest copyWith(void Function(CreateRoleRequest) updates) =>
       super.copyWith((message) => updates(message as CreateRoleRequest))
-          as CreateRoleRequest; // ignore: deprecated_member_use
+          as CreateRoleRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CreateRoleRequest create() => CreateRoleRequest._();
   CreateRoleRequest createEmptyInstance() => create();
@@ -2953,6 +3276,29 @@ class CreateRoleRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<CreateRoleRequest>(create);
   static CreateRoleRequest? _defaultInstance;
 
+  ///  The `parent` parameter's value depends on the target resource for the
+  ///  request, namely
+  ///  [`projects`](https://cloud.google.com/iam/reference/rest/v1/projects.roles)
+  ///  or
+  ///  [`organizations`](https://cloud.google.com/iam/reference/rest/v1/organizations.roles).
+  ///  Each resource type's `parent` value format is described below:
+  ///
+  ///  * [`projects.roles.create()`](https://cloud.google.com/iam/reference/rest/v1/projects.roles/create):
+  ///    `projects/{PROJECT_ID}`. This method creates project-level
+  ///    [custom
+  ///    roles](https://cloud.google.com/iam/docs/understanding-custom-roles).
+  ///    Example request URL:
+  ///    `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles`
+  ///
+  ///  * [`organizations.roles.create()`](https://cloud.google.com/iam/reference/rest/v1/organizations.roles/create):
+  ///    `organizations/{ORGANIZATION_ID}`. This method creates organization-level
+  ///    [custom
+  ///    roles](https://cloud.google.com/iam/docs/understanding-custom-roles).
+  ///    Example request URL:
+  ///    `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles`
+  ///
+  ///  Note: Wildcard (*) values are invalid; you must specify a complete project
+  ///  ID or organization ID.
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2965,6 +3311,11 @@ class CreateRoleRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  ///  The role ID to use for this role.
+  ///
+  ///  A role ID may contain alphanumeric characters, underscores (`_`), and
+  ///  periods (`.`). It must contain a minimum of 3 characters and a maximum of
+  ///  64 characters.
   @$pb.TagNumber(2)
   $core.String get roleId => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -2977,6 +3328,7 @@ class CreateRoleRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearRoleId() => clearField(2);
 
+  /// The Role resource to create.
   @$pb.TagNumber(3)
   Role get role => $_getN(2);
   @$pb.TagNumber(3)
@@ -2992,55 +3344,44 @@ class CreateRoleRequest extends $pb.GeneratedMessage {
   Role ensureRole() => $_ensure(2);
 }
 
+/// The request to update a role.
 class UpdateRoleRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'UpdateRoleRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.iam.admin.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOM<Role>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'role',
-        subBuilder: Role.create)
-    ..aOM<$4.FieldMask>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'updateMask',
-        subBuilder: $4.FieldMask.create)
-    ..hasRequiredFields = false;
-
-  UpdateRoleRequest._() : super();
   factory UpdateRoleRequest({
     $core.String? name,
     Role? role,
-    $4.FieldMask? updateMask,
+    $58.FieldMask? updateMask,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (role != null) {
-      _result.role = role;
+      $result.role = role;
     }
     if (updateMask != null) {
-      _result.updateMask = updateMask;
+      $result.updateMask = updateMask;
     }
-    return _result;
+    return $result;
   }
+  UpdateRoleRequest._() : super();
   factory UpdateRoleRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory UpdateRoleRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UpdateRoleRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.iam.admin.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOM<Role>(2, _omitFieldNames ? '' : 'role', subBuilder: Role.create)
+    ..aOM<$58.FieldMask>(3, _omitFieldNames ? '' : 'updateMask',
+        subBuilder: $58.FieldMask.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3050,8 +3391,10 @@ class UpdateRoleRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   UpdateRoleRequest copyWith(void Function(UpdateRoleRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateRoleRequest))
-          as UpdateRoleRequest; // ignore: deprecated_member_use
+          as UpdateRoleRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static UpdateRoleRequest create() => UpdateRoleRequest._();
   UpdateRoleRequest createEmptyInstance() => create();
@@ -3062,6 +3405,29 @@ class UpdateRoleRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<UpdateRoleRequest>(create);
   static UpdateRoleRequest? _defaultInstance;
 
+  ///  The `name` parameter's value depends on the target resource for the
+  ///  request, namely
+  ///  [`projects`](https://cloud.google.com/iam/reference/rest/v1/projects.roles)
+  ///  or
+  ///  [`organizations`](https://cloud.google.com/iam/reference/rest/v1/organizations.roles).
+  ///  Each resource type's `name` value format is described below:
+  ///
+  ///  * [`projects.roles.patch()`](https://cloud.google.com/iam/reference/rest/v1/projects.roles/patch):
+  ///    `projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`. This method updates only
+  ///    [custom
+  ///    roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that
+  ///    have been created at the project level. Example request URL:
+  ///    `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`
+  ///
+  ///  * [`organizations.roles.patch()`](https://cloud.google.com/iam/reference/rest/v1/organizations.roles/patch):
+  ///    `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method
+  ///    updates only [custom
+  ///    roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that
+  ///    have been created at the organization level. Example request URL:
+  ///    `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`
+  ///
+  ///  Note: Wildcard (*) values are invalid; you must specify a complete project
+  ///  ID or organization ID.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -3074,6 +3440,7 @@ class UpdateRoleRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// The updated role.
   @$pb.TagNumber(2)
   Role get role => $_getN(1);
   @$pb.TagNumber(2)
@@ -3088,10 +3455,11 @@ class UpdateRoleRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   Role ensureRole() => $_ensure(1);
 
+  /// A mask describing which fields in the Role have changed.
   @$pb.TagNumber(3)
-  $4.FieldMask get updateMask => $_getN(2);
+  $58.FieldMask get updateMask => $_getN(2);
   @$pb.TagNumber(3)
-  set updateMask($4.FieldMask v) {
+  set updateMask($58.FieldMask v) {
     setField(3, v);
   }
 
@@ -3100,52 +3468,42 @@ class UpdateRoleRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearUpdateMask() => clearField(3);
   @$pb.TagNumber(3)
-  $4.FieldMask ensureUpdateMask() => $_ensure(2);
+  $58.FieldMask ensureUpdateMask() => $_ensure(2);
 }
 
+/// The request to delete an existing role.
 class DeleteRoleRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DeleteRoleRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.iam.admin.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..a<$core.List<$core.int>>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'etag',
-        $pb.PbFieldType.OY)
-    ..hasRequiredFields = false;
-
-  DeleteRoleRequest._() : super();
   factory DeleteRoleRequest({
     $core.String? name,
     $core.List<$core.int>? etag,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (etag != null) {
-      _result.etag = etag;
+      $result.etag = etag;
     }
-    return _result;
+    return $result;
   }
+  DeleteRoleRequest._() : super();
   factory DeleteRoleRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DeleteRoleRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DeleteRoleRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.iam.admin.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..a<$core.List<$core.int>>(
+        2, _omitFieldNames ? '' : 'etag', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3155,8 +3513,10 @@ class DeleteRoleRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   DeleteRoleRequest copyWith(void Function(DeleteRoleRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteRoleRequest))
-          as DeleteRoleRequest; // ignore: deprecated_member_use
+          as DeleteRoleRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DeleteRoleRequest create() => DeleteRoleRequest._();
   DeleteRoleRequest createEmptyInstance() => create();
@@ -3167,6 +3527,29 @@ class DeleteRoleRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DeleteRoleRequest>(create);
   static DeleteRoleRequest? _defaultInstance;
 
+  ///  The `name` parameter's value depends on the target resource for the
+  ///  request, namely
+  ///  [`projects`](https://cloud.google.com/iam/reference/rest/v1/projects.roles)
+  ///  or
+  ///  [`organizations`](https://cloud.google.com/iam/reference/rest/v1/organizations.roles).
+  ///  Each resource type's `name` value format is described below:
+  ///
+  ///  * [`projects.roles.delete()`](https://cloud.google.com/iam/reference/rest/v1/projects.roles/delete):
+  ///    `projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`. This method deletes only
+  ///    [custom
+  ///    roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that
+  ///    have been created at the project level. Example request URL:
+  ///    `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`
+  ///
+  ///  * [`organizations.roles.delete()`](https://cloud.google.com/iam/reference/rest/v1/organizations.roles/delete):
+  ///    `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method
+  ///    deletes only [custom
+  ///    roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that
+  ///    have been created at the organization level. Example request URL:
+  ///    `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`
+  ///
+  ///  Note: Wildcard (*) values are invalid; you must specify a complete project
+  ///  ID or organization ID.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -3179,6 +3562,7 @@ class DeleteRoleRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// Used to perform a consistent read-modify-write.
   @$pb.TagNumber(2)
   $core.List<$core.int> get etag => $_getN(1);
   @$pb.TagNumber(2)
@@ -3192,49 +3576,39 @@ class DeleteRoleRequest extends $pb.GeneratedMessage {
   void clearEtag() => clearField(2);
 }
 
+/// The request to undelete an existing role.
 class UndeleteRoleRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'UndeleteRoleRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.iam.admin.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..a<$core.List<$core.int>>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'etag',
-        $pb.PbFieldType.OY)
-    ..hasRequiredFields = false;
-
-  UndeleteRoleRequest._() : super();
   factory UndeleteRoleRequest({
     $core.String? name,
     $core.List<$core.int>? etag,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (etag != null) {
-      _result.etag = etag;
+      $result.etag = etag;
     }
-    return _result;
+    return $result;
   }
+  UndeleteRoleRequest._() : super();
   factory UndeleteRoleRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory UndeleteRoleRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UndeleteRoleRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.iam.admin.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..a<$core.List<$core.int>>(
+        2, _omitFieldNames ? '' : 'etag', $pb.PbFieldType.OY)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3244,8 +3618,10 @@ class UndeleteRoleRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   UndeleteRoleRequest copyWith(void Function(UndeleteRoleRequest) updates) =>
       super.copyWith((message) => updates(message as UndeleteRoleRequest))
-          as UndeleteRoleRequest; // ignore: deprecated_member_use
+          as UndeleteRoleRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static UndeleteRoleRequest create() => UndeleteRoleRequest._();
   UndeleteRoleRequest createEmptyInstance() => create();
@@ -3256,6 +3632,29 @@ class UndeleteRoleRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<UndeleteRoleRequest>(create);
   static UndeleteRoleRequest? _defaultInstance;
 
+  ///  The `name` parameter's value depends on the target resource for the
+  ///  request, namely
+  ///  [`projects`](https://cloud.google.com/iam/reference/rest/v1/projects.roles)
+  ///  or
+  ///  [`organizations`](https://cloud.google.com/iam/reference/rest/v1/organizations.roles).
+  ///  Each resource type's `name` value format is described below:
+  ///
+  ///  * [`projects.roles.undelete()`](https://cloud.google.com/iam/reference/rest/v1/projects.roles/undelete):
+  ///    `projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`. This method undeletes
+  ///    only [custom
+  ///    roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that
+  ///    have been created at the project level. Example request URL:
+  ///    `https://iam.googleapis.com/v1/projects/{PROJECT_ID}/roles/{CUSTOM_ROLE_ID}`
+  ///
+  ///  * [`organizations.roles.undelete()`](https://cloud.google.com/iam/reference/rest/v1/organizations.roles/undelete):
+  ///    `organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`. This method
+  ///    undeletes only [custom
+  ///    roles](https://cloud.google.com/iam/docs/understanding-custom-roles) that
+  ///    have been created at the organization level. Example request URL:
+  ///    `https://iam.googleapis.com/v1/organizations/{ORGANIZATION_ID}/roles/{CUSTOM_ROLE_ID}`
+  ///
+  ///  Note: Wildcard (*) values are invalid; you must specify a complete project
+  ///  ID or organization ID.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -3268,6 +3667,7 @@ class UndeleteRoleRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// Used to perform a consistent read-modify-write.
   @$pb.TagNumber(2)
   $core.List<$core.int> get etag => $_getN(1);
   @$pb.TagNumber(2)
@@ -3281,89 +3681,78 @@ class UndeleteRoleRequest extends $pb.GeneratedMessage {
   void clearEtag() => clearField(2);
 }
 
+/// A permission which can be included by a role.
 class Permission extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Permission',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.iam.admin.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'title')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'description')
-    ..aOB(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'onlyInPredefinedRoles')
-    ..e<Permission_PermissionLaunchStage>(
-        5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'stage', $pb.PbFieldType.OE,
-        defaultOrMaker: Permission_PermissionLaunchStage.ALPHA,
-        valueOf: Permission_PermissionLaunchStage.valueOf,
-        enumValues: Permission_PermissionLaunchStage.values)
-    ..e<Permission_CustomRolesSupportLevel>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'customRolesSupportLevel', $pb.PbFieldType.OE, defaultOrMaker: Permission_CustomRolesSupportLevel.SUPPORTED, valueOf: Permission_CustomRolesSupportLevel.valueOf, enumValues: Permission_CustomRolesSupportLevel.values)
-    ..aOB(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'apiDisabled')
-    ..aOS(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'primaryPermission')
-    ..hasRequiredFields = false;
-
-  Permission._() : super();
   factory Permission({
     $core.String? name,
     $core.String? title,
     $core.String? description,
     @$core.Deprecated('This field is deprecated.')
-        $core.bool? onlyInPredefinedRoles,
+    $core.bool? onlyInPredefinedRoles,
     Permission_PermissionLaunchStage? stage,
     Permission_CustomRolesSupportLevel? customRolesSupportLevel,
     $core.bool? apiDisabled,
     $core.String? primaryPermission,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (title != null) {
-      _result.title = title;
+      $result.title = title;
     }
     if (description != null) {
-      _result.description = description;
+      $result.description = description;
     }
     if (onlyInPredefinedRoles != null) {
       // ignore: deprecated_member_use_from_same_package
-      _result.onlyInPredefinedRoles = onlyInPredefinedRoles;
+      $result.onlyInPredefinedRoles = onlyInPredefinedRoles;
     }
     if (stage != null) {
-      _result.stage = stage;
+      $result.stage = stage;
     }
     if (customRolesSupportLevel != null) {
-      _result.customRolesSupportLevel = customRolesSupportLevel;
+      $result.customRolesSupportLevel = customRolesSupportLevel;
     }
     if (apiDisabled != null) {
-      _result.apiDisabled = apiDisabled;
+      $result.apiDisabled = apiDisabled;
     }
     if (primaryPermission != null) {
-      _result.primaryPermission = primaryPermission;
+      $result.primaryPermission = primaryPermission;
     }
-    return _result;
+    return $result;
   }
+  Permission._() : super();
   factory Permission.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Permission.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Permission',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.iam.admin.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOS(2, _omitFieldNames ? '' : 'title')
+    ..aOS(3, _omitFieldNames ? '' : 'description')
+    ..aOB(4, _omitFieldNames ? '' : 'onlyInPredefinedRoles')
+    ..e<Permission_PermissionLaunchStage>(
+        5, _omitFieldNames ? '' : 'stage', $pb.PbFieldType.OE,
+        defaultOrMaker: Permission_PermissionLaunchStage.ALPHA,
+        valueOf: Permission_PermissionLaunchStage.valueOf,
+        enumValues: Permission_PermissionLaunchStage.values)
+    ..e<Permission_CustomRolesSupportLevel>(
+        6, _omitFieldNames ? '' : 'customRolesSupportLevel', $pb.PbFieldType.OE,
+        defaultOrMaker: Permission_CustomRolesSupportLevel.SUPPORTED,
+        valueOf: Permission_CustomRolesSupportLevel.valueOf,
+        enumValues: Permission_CustomRolesSupportLevel.values)
+    ..aOB(7, _omitFieldNames ? '' : 'apiDisabled')
+    ..aOS(8, _omitFieldNames ? '' : 'primaryPermission')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3372,9 +3761,10 @@ class Permission extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Permission copyWith(void Function(Permission) updates) =>
-      super.copyWith((message) => updates(message as Permission))
-          as Permission; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Permission)) as Permission;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Permission create() => Permission._();
   Permission createEmptyInstance() => create();
@@ -3384,6 +3774,7 @@ class Permission extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<Permission>(create);
   static Permission? _defaultInstance;
 
+  /// The name of this Permission.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -3396,6 +3787,7 @@ class Permission extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// The title of this Permission.
   @$pb.TagNumber(2)
   $core.String get title => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -3408,6 +3800,8 @@ class Permission extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearTitle() => clearField(2);
 
+  /// A brief description of what this Permission is used for.
+  /// This permission can ONLY be used in predefined roles.
   @$pb.TagNumber(3)
   $core.String get description => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -3436,6 +3830,7 @@ class Permission extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearOnlyInPredefinedRoles() => clearField(4);
 
+  /// The current launch stage of the permission.
   @$pb.TagNumber(5)
   Permission_PermissionLaunchStage get stage => $_getN(4);
   @$pb.TagNumber(5)
@@ -3448,6 +3843,7 @@ class Permission extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearStage() => clearField(5);
 
+  /// The current custom role support level.
   @$pb.TagNumber(6)
   Permission_CustomRolesSupportLevel get customRolesSupportLevel => $_getN(5);
   @$pb.TagNumber(6)
@@ -3460,6 +3856,7 @@ class Permission extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearCustomRolesSupportLevel() => clearField(6);
 
+  /// The service API associated with the permission is not enabled.
   @$pb.TagNumber(7)
   $core.bool get apiDisabled => $_getBF(6);
   @$pb.TagNumber(7)
@@ -3472,6 +3869,8 @@ class Permission extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearApiDisabled() => clearField(7);
 
+  /// The preferred name for this permission. If present, then this permission is
+  /// an alias of, and equivalent to, the listed primary_permission.
   @$pb.TagNumber(8)
   $core.String get primaryPermission => $_getSZ(7);
   @$pb.TagNumber(8)
@@ -3485,58 +3884,43 @@ class Permission extends $pb.GeneratedMessage {
   void clearPrimaryPermission() => clearField(8);
 }
 
+/// A request to get permissions which can be tested on a resource.
 class QueryTestablePermissionsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'QueryTestablePermissionsRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.iam.admin.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'fullResourceName')
-    ..a<$core.int>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageSize',
-        $pb.PbFieldType.O3)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageToken')
-    ..hasRequiredFields = false;
-
-  QueryTestablePermissionsRequest._() : super();
   factory QueryTestablePermissionsRequest({
     $core.String? fullResourceName,
     $core.int? pageSize,
     $core.String? pageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (fullResourceName != null) {
-      _result.fullResourceName = fullResourceName;
+      $result.fullResourceName = fullResourceName;
     }
     if (pageSize != null) {
-      _result.pageSize = pageSize;
+      $result.pageSize = pageSize;
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
-    return _result;
+    return $result;
   }
+  QueryTestablePermissionsRequest._() : super();
   factory QueryTestablePermissionsRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory QueryTestablePermissionsRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'QueryTestablePermissionsRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.iam.admin.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'fullResourceName')
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aOS(3, _omitFieldNames ? '' : 'pageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3549,8 +3933,10 @@ class QueryTestablePermissionsRequest extends $pb.GeneratedMessage {
           void Function(QueryTestablePermissionsRequest) updates) =>
       super.copyWith(
               (message) => updates(message as QueryTestablePermissionsRequest))
-          as QueryTestablePermissionsRequest; // ignore: deprecated_member_use
+          as QueryTestablePermissionsRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static QueryTestablePermissionsRequest create() =>
       QueryTestablePermissionsRequest._();
@@ -3563,6 +3949,12 @@ class QueryTestablePermissionsRequest extends $pb.GeneratedMessage {
           create);
   static QueryTestablePermissionsRequest? _defaultInstance;
 
+  ///  Required. The full resource name to query from the list of testable
+  ///  permissions.
+  ///
+  ///  The name follows the Google Cloud Platform resource format.
+  ///  For example, a Cloud Platform project with id `my-project` will be named
+  ///  `//cloudresourcemanager.googleapis.com/projects/my-project`.
   @$pb.TagNumber(1)
   $core.String get fullResourceName => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -3575,6 +3967,9 @@ class QueryTestablePermissionsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearFullResourceName() => clearField(1);
 
+  ///  Optional limit on the number of permissions to include in the response.
+  ///
+  ///  The default is 100, and the maximum is 1,000.
   @$pb.TagNumber(2)
   $core.int get pageSize => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -3587,6 +3982,8 @@ class QueryTestablePermissionsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
+  /// Optional pagination token returned in an earlier
+  /// QueryTestablePermissionsRequest.
   @$pb.TagNumber(3)
   $core.String get pageToken => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -3600,47 +3997,40 @@ class QueryTestablePermissionsRequest extends $pb.GeneratedMessage {
   void clearPageToken() => clearField(3);
 }
 
+/// The response containing permissions which can be tested on a resource.
 class QueryTestablePermissionsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'QueryTestablePermissionsResponse',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.iam.admin.v1'),
-      createEmptyInstance: create)
-    ..pc<Permission>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'permissions',
-        $pb.PbFieldType.PM,
-        subBuilder: Permission.create)
-    ..aOS(2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'nextPageToken')
-    ..hasRequiredFields = false;
-
-  QueryTestablePermissionsResponse._() : super();
   factory QueryTestablePermissionsResponse({
     $core.Iterable<Permission>? permissions,
     $core.String? nextPageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (permissions != null) {
-      _result.permissions.addAll(permissions);
+      $result.permissions.addAll(permissions);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
-    return _result;
+    return $result;
   }
+  QueryTestablePermissionsResponse._() : super();
   factory QueryTestablePermissionsResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory QueryTestablePermissionsResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'QueryTestablePermissionsResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.iam.admin.v1'),
+      createEmptyInstance: create)
+    ..pc<Permission>(
+        1, _omitFieldNames ? '' : 'permissions', $pb.PbFieldType.PM,
+        subBuilder: Permission.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3653,8 +4043,10 @@ class QueryTestablePermissionsResponse extends $pb.GeneratedMessage {
           void Function(QueryTestablePermissionsResponse) updates) =>
       super.copyWith(
               (message) => updates(message as QueryTestablePermissionsResponse))
-          as QueryTestablePermissionsResponse; // ignore: deprecated_member_use
+          as QueryTestablePermissionsResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static QueryTestablePermissionsResponse create() =>
       QueryTestablePermissionsResponse._();
@@ -3667,9 +4059,12 @@ class QueryTestablePermissionsResponse extends $pb.GeneratedMessage {
           create);
   static QueryTestablePermissionsResponse? _defaultInstance;
 
+  /// The Permissions testable on the requested resource.
   @$pb.TagNumber(1)
   $core.List<Permission> get permissions => $_getList(0);
 
+  /// To retrieve the next page of results, set
+  /// `QueryTestableRolesRequest.page_token` to this value.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -3683,39 +4078,33 @@ class QueryTestablePermissionsResponse extends $pb.GeneratedMessage {
   void clearNextPageToken() => clearField(2);
 }
 
+/// A request to get the list of auditable services for a resource.
 class QueryAuditableServicesRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'QueryAuditableServicesRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.iam.admin.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'fullResourceName')
-    ..hasRequiredFields = false;
-
-  QueryAuditableServicesRequest._() : super();
   factory QueryAuditableServicesRequest({
     $core.String? fullResourceName,
   }) {
-    final _result = create();
+    final $result = create();
     if (fullResourceName != null) {
-      _result.fullResourceName = fullResourceName;
+      $result.fullResourceName = fullResourceName;
     }
-    return _result;
+    return $result;
   }
+  QueryAuditableServicesRequest._() : super();
   factory QueryAuditableServicesRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory QueryAuditableServicesRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'QueryAuditableServicesRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.iam.admin.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'fullResourceName')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3728,8 +4117,10 @@ class QueryAuditableServicesRequest extends $pb.GeneratedMessage {
           void Function(QueryAuditableServicesRequest) updates) =>
       super.copyWith(
               (message) => updates(message as QueryAuditableServicesRequest))
-          as QueryAuditableServicesRequest; // ignore: deprecated_member_use
+          as QueryAuditableServicesRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static QueryAuditableServicesRequest create() =>
       QueryAuditableServicesRequest._();
@@ -3741,6 +4132,12 @@ class QueryAuditableServicesRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<QueryAuditableServicesRequest>(create);
   static QueryAuditableServicesRequest? _defaultInstance;
 
+  ///  Required. The full resource name to query from the list of auditable
+  ///  services.
+  ///
+  ///  The name follows the Google Cloud Platform resource format.
+  ///  For example, a Cloud Platform project with id `my-project` will be named
+  ///  `//cloudresourcemanager.googleapis.com/projects/my-project`.
   @$pb.TagNumber(1)
   $core.String get fullResourceName => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -3754,34 +4151,19 @@ class QueryAuditableServicesRequest extends $pb.GeneratedMessage {
   void clearFullResourceName() => clearField(1);
 }
 
+/// Contains information about an auditable service.
 class QueryAuditableServicesResponse_AuditableService
     extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'QueryAuditableServicesResponse.AuditableService',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.iam.admin.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  QueryAuditableServicesResponse_AuditableService._() : super();
   factory QueryAuditableServicesResponse_AuditableService({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  QueryAuditableServicesResponse_AuditableService._() : super();
   factory QueryAuditableServicesResponse_AuditableService.fromBuffer(
           $core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
@@ -3790,6 +4172,17 @@ class QueryAuditableServicesResponse_AuditableService
           $core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames
+          ? ''
+          : 'QueryAuditableServicesResponse.AuditableService',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.iam.admin.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3803,8 +4196,10 @@ class QueryAuditableServicesResponse_AuditableService
               updates) =>
       super.copyWith((message) => updates(
               message as QueryAuditableServicesResponse_AuditableService))
-          as QueryAuditableServicesResponse_AuditableService; // ignore: deprecated_member_use
+          as QueryAuditableServicesResponse_AuditableService;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static QueryAuditableServicesResponse_AuditableService create() =>
       QueryAuditableServicesResponse_AuditableService._();
@@ -3819,6 +4214,8 @@ class QueryAuditableServicesResponse_AuditableService
           QueryAuditableServicesResponse_AuditableService>(create);
   static QueryAuditableServicesResponse_AuditableService? _defaultInstance;
 
+  /// Public name of the service.
+  /// For example, the service name for Cloud IAM is 'iam.googleapis.com'.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -3832,41 +4229,35 @@ class QueryAuditableServicesResponse_AuditableService
   void clearName() => clearField(1);
 }
 
+/// A response containing a list of auditable services for a resource.
 class QueryAuditableServicesResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'QueryAuditableServicesResponse',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.iam.admin.v1'),
-      createEmptyInstance: create)
-    ..pc<QueryAuditableServicesResponse_AuditableService>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'services',
-        $pb.PbFieldType.PM,
-        subBuilder: QueryAuditableServicesResponse_AuditableService.create)
-    ..hasRequiredFields = false;
-
-  QueryAuditableServicesResponse._() : super();
   factory QueryAuditableServicesResponse({
     $core.Iterable<QueryAuditableServicesResponse_AuditableService>? services,
   }) {
-    final _result = create();
+    final $result = create();
     if (services != null) {
-      _result.services.addAll(services);
+      $result.services.addAll(services);
     }
-    return _result;
+    return $result;
   }
+  QueryAuditableServicesResponse._() : super();
   factory QueryAuditableServicesResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory QueryAuditableServicesResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'QueryAuditableServicesResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.iam.admin.v1'),
+      createEmptyInstance: create)
+    ..pc<QueryAuditableServicesResponse_AuditableService>(
+        1, _omitFieldNames ? '' : 'services', $pb.PbFieldType.PM,
+        subBuilder: QueryAuditableServicesResponse_AuditableService.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3879,8 +4270,10 @@ class QueryAuditableServicesResponse extends $pb.GeneratedMessage {
           void Function(QueryAuditableServicesResponse) updates) =>
       super.copyWith(
               (message) => updates(message as QueryAuditableServicesResponse))
-          as QueryAuditableServicesResponse; // ignore: deprecated_member_use
+          as QueryAuditableServicesResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static QueryAuditableServicesResponse create() =>
       QueryAuditableServicesResponse._();
@@ -3892,6 +4285,7 @@ class QueryAuditableServicesResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<QueryAuditableServicesResponse>(create);
   static QueryAuditableServicesResponse? _defaultInstance;
 
+  /// The auditable services for a resource.
   @$pb.TagNumber(1)
   $core.List<QueryAuditableServicesResponse_AuditableService> get services =>
       $_getList(0);
@@ -3899,55 +4293,45 @@ class QueryAuditableServicesResponse extends $pb.GeneratedMessage {
 
 enum LintPolicyRequest_LintObject { condition, notSet }
 
+/// The request to lint a Cloud IAM policy object.
 class LintPolicyRequest extends $pb.GeneratedMessage {
-  static const $core.Map<$core.int, LintPolicyRequest_LintObject>
-      _LintPolicyRequest_LintObjectByTag = {
-    5: LintPolicyRequest_LintObject.condition,
-    0: LintPolicyRequest_LintObject.notSet
-  };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'LintPolicyRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.iam.admin.v1'),
-      createEmptyInstance: create)
-    ..oo(0, [5])
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'fullResourceName')
-    ..aOM<$6.Expr>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'condition',
-        subBuilder: $6.Expr.create)
-    ..hasRequiredFields = false;
-
-  LintPolicyRequest._() : super();
   factory LintPolicyRequest({
     $core.String? fullResourceName,
-    $6.Expr? condition,
+    $114.Expr? condition,
   }) {
-    final _result = create();
+    final $result = create();
     if (fullResourceName != null) {
-      _result.fullResourceName = fullResourceName;
+      $result.fullResourceName = fullResourceName;
     }
     if (condition != null) {
-      _result.condition = condition;
+      $result.condition = condition;
     }
-    return _result;
+    return $result;
   }
+  LintPolicyRequest._() : super();
   factory LintPolicyRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory LintPolicyRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static const $core.Map<$core.int, LintPolicyRequest_LintObject>
+      _LintPolicyRequest_LintObjectByTag = {
+    5: LintPolicyRequest_LintObject.condition,
+    0: LintPolicyRequest_LintObject.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'LintPolicyRequest',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.iam.admin.v1'),
+      createEmptyInstance: create)
+    ..oo(0, [5])
+    ..aOS(1, _omitFieldNames ? '' : 'fullResourceName')
+    ..aOM<$114.Expr>(5, _omitFieldNames ? '' : 'condition',
+        subBuilder: $114.Expr.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3957,8 +4341,10 @@ class LintPolicyRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   LintPolicyRequest copyWith(void Function(LintPolicyRequest) updates) =>
       super.copyWith((message) => updates(message as LintPolicyRequest))
-          as LintPolicyRequest; // ignore: deprecated_member_use
+          as LintPolicyRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static LintPolicyRequest create() => LintPolicyRequest._();
   LintPolicyRequest createEmptyInstance() => create();
@@ -3973,6 +4359,15 @@ class LintPolicyRequest extends $pb.GeneratedMessage {
       _LintPolicyRequest_LintObjectByTag[$_whichOneof(0)]!;
   void clearLintObject() => clearField($_whichOneof(0));
 
+  ///  The full resource name of the policy this lint request is about.
+  ///
+  ///  The name follows the Google Cloud Platform (GCP) resource format.
+  ///  For example, a GCP project with ID `my-project` will be named
+  ///  `//cloudresourcemanager.googleapis.com/projects/my-project`.
+  ///
+  ///  The resource name is not used to read the policy instance from the Cloud
+  ///  IAM database. The candidate policy for lint has to be provided in the same
+  ///  request object.
   @$pb.TagNumber(1)
   $core.String get fullResourceName => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -3985,10 +4380,11 @@ class LintPolicyRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearFullResourceName() => clearField(1);
 
+  /// [google.iam.v1.Binding.condition] [google.iam.v1.Binding.condition] object to be linted.
   @$pb.TagNumber(5)
-  $6.Expr get condition => $_getN(1);
+  $114.Expr get condition => $_getN(1);
   @$pb.TagNumber(5)
-  set condition($6.Expr v) {
+  set condition($114.Expr v) {
     setField(5, v);
   }
 
@@ -3997,38 +4393,11 @@ class LintPolicyRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearCondition() => clearField(5);
   @$pb.TagNumber(5)
-  $6.Expr ensureCondition() => $_ensure(1);
+  $114.Expr ensureCondition() => $_ensure(1);
 }
 
+/// Structured response of a single validation unit.
 class LintResult extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'LintResult',
-      package: const $pb.PackageName($core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'google.iam.admin.v1'),
-      createEmptyInstance: create)
-    ..e<LintResult_Level>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'level', $pb.PbFieldType.OE,
-        defaultOrMaker: LintResult_Level.LEVEL_UNSPECIFIED,
-        valueOf: LintResult_Level.valueOf,
-        enumValues: LintResult_Level.values)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'validationUnitName')
-    ..e<LintResult_Severity>(
-        3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'severity', $pb.PbFieldType.OE,
-        defaultOrMaker: LintResult_Severity.SEVERITY_UNSPECIFIED,
-        valueOf: LintResult_Severity.valueOf,
-        enumValues: LintResult_Severity.values)
-    ..aOS(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'fieldName')
-    ..a<$core.int>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'locationOffset', $pb.PbFieldType.O3)
-    ..aOS(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'debugMessage')
-    ..hasRequiredFields = false;
-
-  LintResult._() : super();
   factory LintResult({
     LintResult_Level? level,
     $core.String? validationUnitName,
@@ -4037,33 +4406,56 @@ class LintResult extends $pb.GeneratedMessage {
     $core.int? locationOffset,
     $core.String? debugMessage,
   }) {
-    final _result = create();
+    final $result = create();
     if (level != null) {
-      _result.level = level;
+      $result.level = level;
     }
     if (validationUnitName != null) {
-      _result.validationUnitName = validationUnitName;
+      $result.validationUnitName = validationUnitName;
     }
     if (severity != null) {
-      _result.severity = severity;
+      $result.severity = severity;
     }
     if (fieldName != null) {
-      _result.fieldName = fieldName;
+      $result.fieldName = fieldName;
     }
     if (locationOffset != null) {
-      _result.locationOffset = locationOffset;
+      $result.locationOffset = locationOffset;
     }
     if (debugMessage != null) {
-      _result.debugMessage = debugMessage;
+      $result.debugMessage = debugMessage;
     }
-    return _result;
+    return $result;
   }
+  LintResult._() : super();
   factory LintResult.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory LintResult.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'LintResult',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.iam.admin.v1'),
+      createEmptyInstance: create)
+    ..e<LintResult_Level>(1, _omitFieldNames ? '' : 'level', $pb.PbFieldType.OE,
+        defaultOrMaker: LintResult_Level.LEVEL_UNSPECIFIED,
+        valueOf: LintResult_Level.valueOf,
+        enumValues: LintResult_Level.values)
+    ..aOS(2, _omitFieldNames ? '' : 'validationUnitName')
+    ..e<LintResult_Severity>(
+        3, _omitFieldNames ? '' : 'severity', $pb.PbFieldType.OE,
+        defaultOrMaker: LintResult_Severity.SEVERITY_UNSPECIFIED,
+        valueOf: LintResult_Severity.valueOf,
+        enumValues: LintResult_Severity.values)
+    ..aOS(5, _omitFieldNames ? '' : 'fieldName')
+    ..a<$core.int>(
+        6, _omitFieldNames ? '' : 'locationOffset', $pb.PbFieldType.O3)
+    ..aOS(7, _omitFieldNames ? '' : 'debugMessage')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -4072,9 +4464,10 @@ class LintResult extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   LintResult copyWith(void Function(LintResult) updates) =>
-      super.copyWith((message) => updates(message as LintResult))
-          as LintResult; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as LintResult)) as LintResult;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static LintResult create() => LintResult._();
   LintResult createEmptyInstance() => create();
@@ -4084,6 +4477,7 @@ class LintResult extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<LintResult>(create);
   static LintResult? _defaultInstance;
 
+  /// The validation unit level.
   @$pb.TagNumber(1)
   LintResult_Level get level => $_getN(0);
   @$pb.TagNumber(1)
@@ -4096,6 +4490,8 @@ class LintResult extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearLevel() => clearField(1);
 
+  /// The validation unit name, for instance
+  /// "lintValidationUnits/ConditionComplexityCheck".
   @$pb.TagNumber(2)
   $core.String get validationUnitName => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -4108,6 +4504,7 @@ class LintResult extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearValidationUnitName() => clearField(2);
 
+  /// The validation unit severity.
   @$pb.TagNumber(3)
   LintResult_Severity get severity => $_getN(2);
   @$pb.TagNumber(3)
@@ -4120,6 +4517,13 @@ class LintResult extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearSeverity() => clearField(3);
 
+  ///  The name of the field for which this lint result is about.
+  ///
+  ///  For nested messages `field_name` consists of names of the embedded fields
+  ///  separated by period character. The top-level qualifier is the input object
+  ///  to lint in the request. For example, the `field_name` value
+  ///  `condition.expression` identifies a lint result for the `expression` field
+  ///  of the provided condition.
   @$pb.TagNumber(5)
   $core.String get fieldName => $_getSZ(3);
   @$pb.TagNumber(5)
@@ -4132,6 +4536,9 @@ class LintResult extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearFieldName() => clearField(5);
 
+  /// 0-based character position of problematic construct within the object
+  /// identified by `field_name`. Currently, this is populated only for condition
+  /// expression.
   @$pb.TagNumber(6)
   $core.int get locationOffset => $_getIZ(4);
   @$pb.TagNumber(6)
@@ -4144,6 +4551,7 @@ class LintResult extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearLocationOffset() => clearField(6);
 
+  /// Human readable debug message associated with the issue.
   @$pb.TagNumber(7)
   $core.String get debugMessage => $_getSZ(5);
   @$pb.TagNumber(7)
@@ -4157,41 +4565,36 @@ class LintResult extends $pb.GeneratedMessage {
   void clearDebugMessage() => clearField(7);
 }
 
+/// The response of a lint operation. An empty response indicates
+/// the operation was able to fully execute and no lint issue was found.
 class LintPolicyResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'LintPolicyResponse',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.iam.admin.v1'),
-      createEmptyInstance: create)
-    ..pc<LintResult>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'lintResults',
-        $pb.PbFieldType.PM,
-        subBuilder: LintResult.create)
-    ..hasRequiredFields = false;
-
-  LintPolicyResponse._() : super();
   factory LintPolicyResponse({
     $core.Iterable<LintResult>? lintResults,
   }) {
-    final _result = create();
+    final $result = create();
     if (lintResults != null) {
-      _result.lintResults.addAll(lintResults);
+      $result.lintResults.addAll(lintResults);
     }
-    return _result;
+    return $result;
   }
+  LintPolicyResponse._() : super();
   factory LintPolicyResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory LintPolicyResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'LintPolicyResponse',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.iam.admin.v1'),
+      createEmptyInstance: create)
+    ..pc<LintResult>(
+        1, _omitFieldNames ? '' : 'lintResults', $pb.PbFieldType.PM,
+        subBuilder: LintResult.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -4201,8 +4604,10 @@ class LintPolicyResponse extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   LintPolicyResponse copyWith(void Function(LintPolicyResponse) updates) =>
       super.copyWith((message) => updates(message as LintPolicyResponse))
-          as LintPolicyResponse; // ignore: deprecated_member_use
+          as LintPolicyResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static LintPolicyResponse create() => LintPolicyResponse._();
   LintPolicyResponse createEmptyInstance() => create();
@@ -4213,6 +4618,11 @@ class LintPolicyResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<LintPolicyResponse>(create);
   static LintPolicyResponse? _defaultInstance;
 
+  /// List of lint results sorted by `severity` in descending order.
   @$pb.TagNumber(1)
   $core.List<LintResult> get lintResults => $_getList(0);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

@@ -1,12 +1,16 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/api/servicecontrol/v1/check_error.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
-import 'dart:core' as $core;
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:convert' as $convert;
+import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
 @$core.Deprecated('Use checkErrorDescriptor instead')
@@ -65,4 +69,16 @@ const CheckError_Code$json = {
 
 /// Descriptor for `CheckError`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List checkErrorDescriptor = $convert.base64Decode(
-    'CgpDaGVja0Vycm9yEkEKBGNvZGUYASABKA4yLS5nb29nbGUuYXBpLnNlcnZpY2Vjb250cm9sLnYxLkNoZWNrRXJyb3IuQ29kZVIEY29kZRIYCgdzdWJqZWN0GAQgASgJUgdzdWJqZWN0EhYKBmRldGFpbBgCIAEoCVIGZGV0YWlsEioKBnN0YXR1cxgDIAEoCzISLmdvb2dsZS5ycGMuU3RhdHVzUgZzdGF0dXMinQQKBENvZGUSGgoWRVJST1JfQ09ERV9VTlNQRUNJRklFRBAAEg0KCU5PVF9GT1VORBAFEhUKEVBFUk1JU1NJT05fREVOSUVEEAcSFgoSUkVTT1VSQ0VfRVhIQVVTVEVEEAgSGQoVU0VSVklDRV9OT1RfQUNUSVZBVEVEEGgSFAoQQklMTElOR19ESVNBQkxFRBBrEhMKD1BST0pFQ1RfREVMRVRFRBBsEhMKD1BST0pFQ1RfSU5WQUxJRBByEhQKEENPTlNVTUVSX0lOVkFMSUQQfRIWChJJUF9BRERSRVNTX0JMT0NLRUQQbRITCg9SRUZFUkVSX0JMT0NLRUQQbhIWChJDTElFTlRfQVBQX0JMT0NLRUQQbxIWChJBUElfVEFSR0VUX0JMT0NLRUQQehITCg9BUElfS0VZX0lOVkFMSUQQaRITCg9BUElfS0VZX0VYUElSRUQQcBIVChFBUElfS0VZX05PVF9GT1VORBBxEhYKEklOVkFMSURfQ1JFREVOVElBTBB7EiEKHE5BTUVTUEFDRV9MT09LVVBfVU5BVkFJTEFCTEUQrAISHwoaU0VSVklDRV9TVEFUVVNfVU5BVkFJTEFCTEUQrQISHwoaQklMTElOR19TVEFUVVNfVU5BVkFJTEFCTEUQrgISLwoqQ0xPVURfUkVTT1VSQ0VfTUFOQUdFUl9CQUNLRU5EX1VOQVZBSUxBQkxFELEC');
+    'CgpDaGVja0Vycm9yEkEKBGNvZGUYASABKA4yLS5nb29nbGUuYXBpLnNlcnZpY2Vjb250cm9sLn'
+    'YxLkNoZWNrRXJyb3IuQ29kZVIEY29kZRIYCgdzdWJqZWN0GAQgASgJUgdzdWJqZWN0EhYKBmRl'
+    'dGFpbBgCIAEoCVIGZGV0YWlsEioKBnN0YXR1cxgDIAEoCzISLmdvb2dsZS5ycGMuU3RhdHVzUg'
+    'ZzdGF0dXMinQQKBENvZGUSGgoWRVJST1JfQ09ERV9VTlNQRUNJRklFRBAAEg0KCU5PVF9GT1VO'
+    'RBAFEhUKEVBFUk1JU1NJT05fREVOSUVEEAcSFgoSUkVTT1VSQ0VfRVhIQVVTVEVEEAgSGQoVU0'
+    'VSVklDRV9OT1RfQUNUSVZBVEVEEGgSFAoQQklMTElOR19ESVNBQkxFRBBrEhMKD1BST0pFQ1Rf'
+    'REVMRVRFRBBsEhMKD1BST0pFQ1RfSU5WQUxJRBByEhQKEENPTlNVTUVSX0lOVkFMSUQQfRIWCh'
+    'JJUF9BRERSRVNTX0JMT0NLRUQQbRITCg9SRUZFUkVSX0JMT0NLRUQQbhIWChJDTElFTlRfQVBQ'
+    'X0JMT0NLRUQQbxIWChJBUElfVEFSR0VUX0JMT0NLRUQQehITCg9BUElfS0VZX0lOVkFMSUQQaR'
+    'ITCg9BUElfS0VZX0VYUElSRUQQcBIVChFBUElfS0VZX05PVF9GT1VORBBxEhYKEklOVkFMSURf'
+    'Q1JFREVOVElBTBB7EiEKHE5BTUVTUEFDRV9MT09LVVBfVU5BVkFJTEFCTEUQrAISHwoaU0VSVk'
+    'lDRV9TVEFUVVNfVU5BVkFJTEFCTEUQrQISHwoaQklMTElOR19TVEFUVVNfVU5BVkFJTEFCTEUQ'
+    'rgISLwoqQ0xPVURfUkVTT1VSQ0VfTUFOQUdFUl9CQUNLRU5EX1VOQVZBSUxBQkxFELEC');

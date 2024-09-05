@@ -1,12 +1,16 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/appengine/v1/instance.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
-import 'dart:core' as $core;
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:convert' as $convert;
+import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
 @$core.Deprecated('Use instanceDescriptor instead')
@@ -119,4 +123,22 @@ const Instance_Availability$json = {
 
 /// Descriptor for `Instance`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List instanceDescriptor = $convert.base64Decode(
-    'CghJbnN0YW5jZRIXCgRuYW1lGAEgASgJQgPgQQNSBG5hbWUSEwoCaWQYAiABKAlCA+BBA1ICaWQSMQoSYXBwX2VuZ2luZV9yZWxlYXNlGAMgASgJQgPgQQNSEGFwcEVuZ2luZVJlbGVhc2USUwoMYXZhaWxhYmlsaXR5GAQgASgOMiouZ29vZ2xlLmFwcGVuZ2luZS52MS5JbnN0YW5jZS5BdmFpbGFiaWxpdHlCA+BBA1IMYXZhaWxhYmlsaXR5EhwKB3ZtX25hbWUYBSABKAlCA+BBA1IGdm1OYW1lEiUKDHZtX3pvbmVfbmFtZRgGIAEoCUID4EEDUgp2bVpvbmVOYW1lEhgKBXZtX2lkGAcgASgJQgPgQQNSBHZtSWQSPgoKc3RhcnRfdGltZRgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBCA+BBA1IJc3RhcnRUaW1lEh8KCHJlcXVlc3RzGAkgASgFQgPgQQNSCHJlcXVlc3RzEhsKBmVycm9ycxgKIAEoBUID4EEDUgZlcnJvcnMSFQoDcXBzGAsgASgCQgPgQQNSA3FwcxIsCg9hdmVyYWdlX2xhdGVuY3kYDCABKAVCA+BBA1IOYXZlcmFnZUxhdGVuY3kSJgoMbWVtb3J5X3VzYWdlGA0gASgDQgPgQQNSC21lbW9yeVVzYWdlEiAKCXZtX3N0YXR1cxgOIAEoCUID4EEDUgh2bVN0YXR1cxItChB2bV9kZWJ1Z19lbmFibGVkGA8gASgIQgPgQQNSDnZtRGVidWdFbmFibGVkEhgKBXZtX2lwGBAgASgJQgPgQQNSBHZtSXASWgoLdm1fbGl2ZW5lc3MYESABKA4yNC5nb29nbGUuYXBwZW5naW5lLnYxLkluc3RhbmNlLkxpdmVuZXNzLkxpdmVuZXNzU3RhdGVCA+BBA1IKdm1MaXZlbmVzcxp/CghMaXZlbmVzcyJzCg1MaXZlbmVzc1N0YXRlEh4KGkxJVkVORVNTX1NUQVRFX1VOU1BFQ0lGSUVEEAASCwoHVU5LTk9XThABEgsKB0hFQUxUSFkQAhINCglVTkhFQUxUSFkQAxIMCghEUkFJTklORxAEEgsKB1RJTUVPVVQQBSI6CgxBdmFpbGFiaWxpdHkSDwoLVU5TUEVDSUZJRUQQABIMCghSRVNJREVOVBABEgsKB0RZTkFNSUMQAjpt6kFqCiFhcHBlbmdpbmUuZ29vZ2xlYXBpcy5jb20vSW5zdGFuY2USRWFwcHMve2FwcH0vc2VydmljZXMve3NlcnZpY2V9L3ZlcnNpb25zL3t2ZXJzaW9ufS9pbnN0YW5jZXMve2luc3RhbmNlfQ==');
+    'CghJbnN0YW5jZRIXCgRuYW1lGAEgASgJQgPgQQNSBG5hbWUSEwoCaWQYAiABKAlCA+BBA1ICaW'
+    'QSMQoSYXBwX2VuZ2luZV9yZWxlYXNlGAMgASgJQgPgQQNSEGFwcEVuZ2luZVJlbGVhc2USUwoM'
+    'YXZhaWxhYmlsaXR5GAQgASgOMiouZ29vZ2xlLmFwcGVuZ2luZS52MS5JbnN0YW5jZS5BdmFpbG'
+    'FiaWxpdHlCA+BBA1IMYXZhaWxhYmlsaXR5EhwKB3ZtX25hbWUYBSABKAlCA+BBA1IGdm1OYW1l'
+    'EiUKDHZtX3pvbmVfbmFtZRgGIAEoCUID4EEDUgp2bVpvbmVOYW1lEhgKBXZtX2lkGAcgASgJQg'
+    'PgQQNSBHZtSWQSPgoKc3RhcnRfdGltZRgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh'
+    'bXBCA+BBA1IJc3RhcnRUaW1lEh8KCHJlcXVlc3RzGAkgASgFQgPgQQNSCHJlcXVlc3RzEhsKBm'
+    'Vycm9ycxgKIAEoBUID4EEDUgZlcnJvcnMSFQoDcXBzGAsgASgCQgPgQQNSA3FwcxIsCg9hdmVy'
+    'YWdlX2xhdGVuY3kYDCABKAVCA+BBA1IOYXZlcmFnZUxhdGVuY3kSJgoMbWVtb3J5X3VzYWdlGA'
+    '0gASgDQgPgQQNSC21lbW9yeVVzYWdlEiAKCXZtX3N0YXR1cxgOIAEoCUID4EEDUgh2bVN0YXR1'
+    'cxItChB2bV9kZWJ1Z19lbmFibGVkGA8gASgIQgPgQQNSDnZtRGVidWdFbmFibGVkEhgKBXZtX2'
+    'lwGBAgASgJQgPgQQNSBHZtSXASWgoLdm1fbGl2ZW5lc3MYESABKA4yNC5nb29nbGUuYXBwZW5n'
+    'aW5lLnYxLkluc3RhbmNlLkxpdmVuZXNzLkxpdmVuZXNzU3RhdGVCA+BBA1IKdm1MaXZlbmVzcx'
+    'p/CghMaXZlbmVzcyJzCg1MaXZlbmVzc1N0YXRlEh4KGkxJVkVORVNTX1NUQVRFX1VOU1BFQ0lG'
+    'SUVEEAASCwoHVU5LTk9XThABEgsKB0hFQUxUSFkQAhINCglVTkhFQUxUSFkQAxIMCghEUkFJTk'
+    'lORxAEEgsKB1RJTUVPVVQQBSI6CgxBdmFpbGFiaWxpdHkSDwoLVU5TUEVDSUZJRUQQABIMCghS'
+    'RVNJREVOVBABEgsKB0RZTkFNSUMQAjpt6kFqCiFhcHBlbmdpbmUuZ29vZ2xlYXBpcy5jb20vSW'
+    '5zdGFuY2USRWFwcHMve2FwcH0vc2VydmljZXMve3NlcnZpY2V9L3ZlcnNpb25zL3t2ZXJzaW9u'
+    'fS9pbnN0YW5jZXMve2luc3RhbmNlfQ==');

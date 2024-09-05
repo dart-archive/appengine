@@ -1,48 +1,26 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/appengine/v1/app_yaml.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../protobuf/duration.pb.dart' as $0;
-
+import '../../protobuf/duration.pb.dart' as $51;
 import 'app_yaml.pbenum.dart';
 
 export 'app_yaml.pbenum.dart';
 
+/// [Google Cloud Endpoints](https://cloud.google.com/appengine/docs/python/endpoints/)
+/// configuration for API handlers.
 class ApiConfigHandler extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'ApiConfigHandler',
-      package: const $pb.PackageName($core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'google.appengine.v1'),
-      createEmptyInstance: create)
-    ..e<AuthFailAction>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'authFailAction', $pb.PbFieldType.OE,
-        defaultOrMaker: AuthFailAction.AUTH_FAIL_ACTION_UNSPECIFIED,
-        valueOf: AuthFailAction.valueOf,
-        enumValues: AuthFailAction.values)
-    ..e<LoginRequirement>(
-        2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'login', $pb.PbFieldType.OE,
-        defaultOrMaker: LoginRequirement.LOGIN_UNSPECIFIED,
-        valueOf: LoginRequirement.valueOf,
-        enumValues: LoginRequirement.values)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'script')
-    ..e<SecurityLevel>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'securityLevel', $pb.PbFieldType.OE,
-        defaultOrMaker: SecurityLevel.SECURE_UNSPECIFIED,
-        valueOf: SecurityLevel.valueOf,
-        enumValues: SecurityLevel.values)
-    ..aOS(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'url')
-    ..hasRequiredFields = false;
-
-  ApiConfigHandler._() : super();
   factory ApiConfigHandler({
     AuthFailAction? authFailAction,
     LoginRequirement? login,
@@ -50,30 +28,55 @@ class ApiConfigHandler extends $pb.GeneratedMessage {
     SecurityLevel? securityLevel,
     $core.String? url,
   }) {
-    final _result = create();
+    final $result = create();
     if (authFailAction != null) {
-      _result.authFailAction = authFailAction;
+      $result.authFailAction = authFailAction;
     }
     if (login != null) {
-      _result.login = login;
+      $result.login = login;
     }
     if (script != null) {
-      _result.script = script;
+      $result.script = script;
     }
     if (securityLevel != null) {
-      _result.securityLevel = securityLevel;
+      $result.securityLevel = securityLevel;
     }
     if (url != null) {
-      _result.url = url;
+      $result.url = url;
     }
-    return _result;
+    return $result;
   }
+  ApiConfigHandler._() : super();
   factory ApiConfigHandler.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ApiConfigHandler.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ApiConfigHandler',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.appengine.v1'),
+      createEmptyInstance: create)
+    ..e<AuthFailAction>(
+        1, _omitFieldNames ? '' : 'authFailAction', $pb.PbFieldType.OE,
+        defaultOrMaker: AuthFailAction.AUTH_FAIL_ACTION_UNSPECIFIED,
+        valueOf: AuthFailAction.valueOf,
+        enumValues: AuthFailAction.values)
+    ..e<LoginRequirement>(2, _omitFieldNames ? '' : 'login', $pb.PbFieldType.OE,
+        defaultOrMaker: LoginRequirement.LOGIN_UNSPECIFIED,
+        valueOf: LoginRequirement.valueOf,
+        enumValues: LoginRequirement.values)
+    ..aOS(3, _omitFieldNames ? '' : 'script')
+    ..e<SecurityLevel>(
+        4, _omitFieldNames ? '' : 'securityLevel', $pb.PbFieldType.OE,
+        defaultOrMaker: SecurityLevel.SECURE_UNSPECIFIED,
+        valueOf: SecurityLevel.valueOf,
+        enumValues: SecurityLevel.values)
+    ..aOS(5, _omitFieldNames ? '' : 'url')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -83,8 +86,10 @@ class ApiConfigHandler extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ApiConfigHandler copyWith(void Function(ApiConfigHandler) updates) =>
       super.copyWith((message) => updates(message as ApiConfigHandler))
-          as ApiConfigHandler; // ignore: deprecated_member_use
+          as ApiConfigHandler;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ApiConfigHandler create() => ApiConfigHandler._();
   ApiConfigHandler createEmptyInstance() => create();
@@ -95,6 +100,8 @@ class ApiConfigHandler extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ApiConfigHandler>(create);
   static ApiConfigHandler? _defaultInstance;
 
+  /// Action to take when users access resources that require
+  /// authentication. Defaults to `redirect`.
   @$pb.TagNumber(1)
   AuthFailAction get authFailAction => $_getN(0);
   @$pb.TagNumber(1)
@@ -107,6 +114,8 @@ class ApiConfigHandler extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearAuthFailAction() => clearField(1);
 
+  /// Level of login required to access this resource. Defaults to
+  /// `optional`.
   @$pb.TagNumber(2)
   LoginRequirement get login => $_getN(1);
   @$pb.TagNumber(2)
@@ -119,6 +128,7 @@ class ApiConfigHandler extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearLogin() => clearField(2);
 
+  /// Path to the script from the application root directory.
   @$pb.TagNumber(3)
   $core.String get script => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -131,6 +141,7 @@ class ApiConfigHandler extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearScript() => clearField(3);
 
+  /// Security (HTTPS) enforcement for this URL.
   @$pb.TagNumber(4)
   SecurityLevel get securityLevel => $_getN(3);
   @$pb.TagNumber(4)
@@ -143,6 +154,7 @@ class ApiConfigHandler extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearSecurityLevel() => clearField(4);
 
+  /// URL to serve the endpoint at.
   @$pb.TagNumber(5)
   $core.String get url => $_getSZ(4);
   @$pb.TagNumber(5)
@@ -156,54 +168,47 @@ class ApiConfigHandler extends $pb.GeneratedMessage {
   void clearUrl() => clearField(5);
 }
 
+/// Custom static error page to be served when an error occurs.
 class ErrorHandler extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ErrorHandler',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.appengine.v1'),
-      createEmptyInstance: create)
-    ..e<ErrorHandler_ErrorCode>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'errorCode',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: ErrorHandler_ErrorCode.ERROR_CODE_UNSPECIFIED,
-        valueOf: ErrorHandler_ErrorCode.valueOf,
-        enumValues: ErrorHandler_ErrorCode.values)
-    ..aOS(2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'staticFile')
-    ..aOS(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'mimeType')
-    ..hasRequiredFields = false;
-
-  ErrorHandler._() : super();
   factory ErrorHandler({
     ErrorHandler_ErrorCode? errorCode,
     $core.String? staticFile,
     $core.String? mimeType,
   }) {
-    final _result = create();
+    final $result = create();
     if (errorCode != null) {
-      _result.errorCode = errorCode;
+      $result.errorCode = errorCode;
     }
     if (staticFile != null) {
-      _result.staticFile = staticFile;
+      $result.staticFile = staticFile;
     }
     if (mimeType != null) {
-      _result.mimeType = mimeType;
+      $result.mimeType = mimeType;
     }
-    return _result;
+    return $result;
   }
+  ErrorHandler._() : super();
   factory ErrorHandler.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ErrorHandler.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ErrorHandler',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.appengine.v1'),
+      createEmptyInstance: create)
+    ..e<ErrorHandler_ErrorCode>(
+        1, _omitFieldNames ? '' : 'errorCode', $pb.PbFieldType.OE,
+        defaultOrMaker: ErrorHandler_ErrorCode.ERROR_CODE_UNSPECIFIED,
+        valueOf: ErrorHandler_ErrorCode.valueOf,
+        enumValues: ErrorHandler_ErrorCode.values)
+    ..aOS(2, _omitFieldNames ? '' : 'staticFile')
+    ..aOS(3, _omitFieldNames ? '' : 'mimeType')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -213,8 +218,10 @@ class ErrorHandler extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ErrorHandler copyWith(void Function(ErrorHandler) updates) =>
       super.copyWith((message) => updates(message as ErrorHandler))
-          as ErrorHandler; // ignore: deprecated_member_use
+          as ErrorHandler;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ErrorHandler create() => ErrorHandler._();
   ErrorHandler createEmptyInstance() => create();
@@ -225,6 +232,7 @@ class ErrorHandler extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ErrorHandler>(create);
   static ErrorHandler? _defaultInstance;
 
+  /// Error condition this handler applies to.
   @$pb.TagNumber(1)
   ErrorHandler_ErrorCode get errorCode => $_getN(0);
   @$pb.TagNumber(1)
@@ -237,6 +245,7 @@ class ErrorHandler extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearErrorCode() => clearField(1);
 
+  /// Static file content to be served for this error.
   @$pb.TagNumber(2)
   $core.String get staticFile => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -249,6 +258,7 @@ class ErrorHandler extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearStaticFile() => clearField(2);
 
+  /// MIME type of file. Defaults to `text/html`.
   @$pb.TagNumber(3)
   $core.String get mimeType => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -264,45 +274,10 @@ class ErrorHandler extends $pb.GeneratedMessage {
 
 enum UrlMap_HandlerType { staticFiles, script, apiEndpoint, notSet }
 
+/// URL pattern and description of how the URL should be handled. App Engine can
+/// handle URLs by executing application code or by serving static files
+/// uploaded with the version, such as images, CSS, or JavaScript.
 class UrlMap extends $pb.GeneratedMessage {
-  static const $core.Map<$core.int, UrlMap_HandlerType>
-      _UrlMap_HandlerTypeByTag = {
-    2: UrlMap_HandlerType.staticFiles,
-    3: UrlMap_HandlerType.script,
-    4: UrlMap_HandlerType.apiEndpoint,
-    0: UrlMap_HandlerType.notSet
-  };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'UrlMap',
-      package: const $pb.PackageName($core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'google.appengine.v1'),
-      createEmptyInstance: create)
-    ..oo(0, [2, 3, 4])
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'urlRegex')
-    ..aOM<StaticFilesHandler>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'staticFiles',
-        subBuilder: StaticFilesHandler.create)
-    ..aOM<ScriptHandler>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'script',
-        subBuilder: ScriptHandler.create)
-    ..aOM<ApiEndpointHandler>(
-        4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'apiEndpoint',
-        subBuilder: ApiEndpointHandler.create)
-    ..e<SecurityLevel>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'securityLevel', $pb.PbFieldType.OE,
-        defaultOrMaker: SecurityLevel.SECURE_UNSPECIFIED,
-        valueOf: SecurityLevel.valueOf,
-        enumValues: SecurityLevel.values)
-    ..e<LoginRequirement>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'login', $pb.PbFieldType.OE,
-        defaultOrMaker: LoginRequirement.LOGIN_UNSPECIFIED,
-        valueOf: LoginRequirement.valueOf,
-        enumValues: LoginRequirement.values)
-    ..e<AuthFailAction>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'authFailAction', $pb.PbFieldType.OE, defaultOrMaker: AuthFailAction.AUTH_FAIL_ACTION_UNSPECIFIED, valueOf: AuthFailAction.valueOf, enumValues: AuthFailAction.values)
-    ..e<UrlMap_RedirectHttpResponseCode>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'redirectHttpResponseCode', $pb.PbFieldType.OE, defaultOrMaker: UrlMap_RedirectHttpResponseCode.REDIRECT_HTTP_RESPONSE_CODE_UNSPECIFIED, valueOf: UrlMap_RedirectHttpResponseCode.valueOf, enumValues: UrlMap_RedirectHttpResponseCode.values)
-    ..hasRequiredFields = false;
-
-  UrlMap._() : super();
   factory UrlMap({
     $core.String? urlRegex,
     StaticFilesHandler? staticFiles,
@@ -313,39 +288,83 @@ class UrlMap extends $pb.GeneratedMessage {
     AuthFailAction? authFailAction,
     UrlMap_RedirectHttpResponseCode? redirectHttpResponseCode,
   }) {
-    final _result = create();
+    final $result = create();
     if (urlRegex != null) {
-      _result.urlRegex = urlRegex;
+      $result.urlRegex = urlRegex;
     }
     if (staticFiles != null) {
-      _result.staticFiles = staticFiles;
+      $result.staticFiles = staticFiles;
     }
     if (script != null) {
-      _result.script = script;
+      $result.script = script;
     }
     if (apiEndpoint != null) {
-      _result.apiEndpoint = apiEndpoint;
+      $result.apiEndpoint = apiEndpoint;
     }
     if (securityLevel != null) {
-      _result.securityLevel = securityLevel;
+      $result.securityLevel = securityLevel;
     }
     if (login != null) {
-      _result.login = login;
+      $result.login = login;
     }
     if (authFailAction != null) {
-      _result.authFailAction = authFailAction;
+      $result.authFailAction = authFailAction;
     }
     if (redirectHttpResponseCode != null) {
-      _result.redirectHttpResponseCode = redirectHttpResponseCode;
+      $result.redirectHttpResponseCode = redirectHttpResponseCode;
     }
-    return _result;
+    return $result;
   }
+  UrlMap._() : super();
   factory UrlMap.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory UrlMap.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static const $core.Map<$core.int, UrlMap_HandlerType>
+      _UrlMap_HandlerTypeByTag = {
+    2: UrlMap_HandlerType.staticFiles,
+    3: UrlMap_HandlerType.script,
+    4: UrlMap_HandlerType.apiEndpoint,
+    0: UrlMap_HandlerType.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UrlMap',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.appengine.v1'),
+      createEmptyInstance: create)
+    ..oo(0, [2, 3, 4])
+    ..aOS(1, _omitFieldNames ? '' : 'urlRegex')
+    ..aOM<StaticFilesHandler>(2, _omitFieldNames ? '' : 'staticFiles',
+        subBuilder: StaticFilesHandler.create)
+    ..aOM<ScriptHandler>(3, _omitFieldNames ? '' : 'script',
+        subBuilder: ScriptHandler.create)
+    ..aOM<ApiEndpointHandler>(4, _omitFieldNames ? '' : 'apiEndpoint',
+        subBuilder: ApiEndpointHandler.create)
+    ..e<SecurityLevel>(
+        5, _omitFieldNames ? '' : 'securityLevel', $pb.PbFieldType.OE,
+        defaultOrMaker: SecurityLevel.SECURE_UNSPECIFIED,
+        valueOf: SecurityLevel.valueOf,
+        enumValues: SecurityLevel.values)
+    ..e<LoginRequirement>(6, _omitFieldNames ? '' : 'login', $pb.PbFieldType.OE,
+        defaultOrMaker: LoginRequirement.LOGIN_UNSPECIFIED,
+        valueOf: LoginRequirement.valueOf,
+        enumValues: LoginRequirement.values)
+    ..e<AuthFailAction>(
+        7, _omitFieldNames ? '' : 'authFailAction', $pb.PbFieldType.OE,
+        defaultOrMaker: AuthFailAction.AUTH_FAIL_ACTION_UNSPECIFIED,
+        valueOf: AuthFailAction.valueOf,
+        enumValues: AuthFailAction.values)
+    ..e<UrlMap_RedirectHttpResponseCode>(8,
+        _omitFieldNames ? '' : 'redirectHttpResponseCode', $pb.PbFieldType.OE,
+        defaultOrMaker: UrlMap_RedirectHttpResponseCode
+            .REDIRECT_HTTP_RESPONSE_CODE_UNSPECIFIED,
+        valueOf: UrlMap_RedirectHttpResponseCode.valueOf,
+        enumValues: UrlMap_RedirectHttpResponseCode.values)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -354,9 +373,10 @@ class UrlMap extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   UrlMap copyWith(void Function(UrlMap) updates) =>
-      super.copyWith((message) => updates(message as UrlMap))
-          as UrlMap; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as UrlMap)) as UrlMap;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static UrlMap create() => UrlMap._();
   UrlMap createEmptyInstance() => create();
@@ -370,6 +390,10 @@ class UrlMap extends $pb.GeneratedMessage {
       _UrlMap_HandlerTypeByTag[$_whichOneof(0)]!;
   void clearHandlerType() => clearField($_whichOneof(0));
 
+  /// URL prefix. Uses regular expression syntax, which means regexp
+  /// special characters must be escaped, but should not contain groupings.
+  /// All URLs that begin with this prefix are handled by this handler, using the
+  /// portion of the URL after the prefix as part of the file path.
   @$pb.TagNumber(1)
   $core.String get urlRegex => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -382,6 +406,7 @@ class UrlMap extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearUrlRegex() => clearField(1);
 
+  /// Returns the contents of a file, such as an image, as the response.
   @$pb.TagNumber(2)
   StaticFilesHandler get staticFiles => $_getN(1);
   @$pb.TagNumber(2)
@@ -396,6 +421,9 @@ class UrlMap extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   StaticFilesHandler ensureStaticFiles() => $_ensure(1);
 
+  /// Executes a script to handle the requests that match this URL
+  /// pattern. Only the `auto` value is supported for Node.js in the
+  /// App Engine standard environment, for example `"script": "auto"`.
   @$pb.TagNumber(3)
   ScriptHandler get script => $_getN(2);
   @$pb.TagNumber(3)
@@ -410,6 +438,7 @@ class UrlMap extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   ScriptHandler ensureScript() => $_ensure(2);
 
+  /// Uses API Endpoints to handle requests.
   @$pb.TagNumber(4)
   ApiEndpointHandler get apiEndpoint => $_getN(3);
   @$pb.TagNumber(4)
@@ -424,6 +453,7 @@ class UrlMap extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   ApiEndpointHandler ensureApiEndpoint() => $_ensure(3);
 
+  /// Security (HTTPS) enforcement for this URL.
   @$pb.TagNumber(5)
   SecurityLevel get securityLevel => $_getN(4);
   @$pb.TagNumber(5)
@@ -436,6 +466,8 @@ class UrlMap extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearSecurityLevel() => clearField(5);
 
+  /// Level of login required to access this resource. Not supported for Node.js
+  /// in the App Engine standard environment.
   @$pb.TagNumber(6)
   LoginRequirement get login => $_getN(5);
   @$pb.TagNumber(6)
@@ -448,6 +480,8 @@ class UrlMap extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearLogin() => clearField(6);
 
+  /// Action to take when users access resources that require
+  /// authentication. Defaults to `redirect`.
   @$pb.TagNumber(7)
   AuthFailAction get authFailAction => $_getN(6);
   @$pb.TagNumber(7)
@@ -460,6 +494,8 @@ class UrlMap extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearAuthFailAction() => clearField(7);
 
+  /// `30x` code to use when performing redirects for the `secure` field.
+  /// Defaults to `302`.
   @$pb.TagNumber(8)
   UrlMap_RedirectHttpResponseCode get redirectHttpResponseCode => $_getN(7);
   @$pb.TagNumber(8)
@@ -473,81 +509,71 @@ class UrlMap extends $pb.GeneratedMessage {
   void clearRedirectHttpResponseCode() => clearField(8);
 }
 
+/// Files served directly to the user for a given URL, such as images, CSS
+/// stylesheets, or JavaScript source files. Static file handlers describe which
+/// files in the application directory are static files, and which URLs serve
+/// them.
 class StaticFilesHandler extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'StaticFilesHandler',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.appengine.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'path')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'uploadPathRegex')
-    ..m<$core.String, $core.String>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'httpHeaders',
-        entryClassName: 'StaticFilesHandler.HttpHeadersEntry',
-        keyFieldType: $pb.PbFieldType.OS,
-        valueFieldType: $pb.PbFieldType.OS,
-        packageName: const $pb.PackageName('google.appengine.v1'))
-    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'mimeType')
-    ..aOM<$0.Duration>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'expiration', subBuilder: $0.Duration.create)
-    ..aOB(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'requireMatchingFile')
-    ..aOB(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'applicationReadable')
-    ..hasRequiredFields = false;
-
-  StaticFilesHandler._() : super();
   factory StaticFilesHandler({
     $core.String? path,
     $core.String? uploadPathRegex,
     $core.Map<$core.String, $core.String>? httpHeaders,
     $core.String? mimeType,
-    $0.Duration? expiration,
+    $51.Duration? expiration,
     $core.bool? requireMatchingFile,
     $core.bool? applicationReadable,
   }) {
-    final _result = create();
+    final $result = create();
     if (path != null) {
-      _result.path = path;
+      $result.path = path;
     }
     if (uploadPathRegex != null) {
-      _result.uploadPathRegex = uploadPathRegex;
+      $result.uploadPathRegex = uploadPathRegex;
     }
     if (httpHeaders != null) {
-      _result.httpHeaders.addAll(httpHeaders);
+      $result.httpHeaders.addAll(httpHeaders);
     }
     if (mimeType != null) {
-      _result.mimeType = mimeType;
+      $result.mimeType = mimeType;
     }
     if (expiration != null) {
-      _result.expiration = expiration;
+      $result.expiration = expiration;
     }
     if (requireMatchingFile != null) {
-      _result.requireMatchingFile = requireMatchingFile;
+      $result.requireMatchingFile = requireMatchingFile;
     }
     if (applicationReadable != null) {
-      _result.applicationReadable = applicationReadable;
+      $result.applicationReadable = applicationReadable;
     }
-    return _result;
+    return $result;
   }
+  StaticFilesHandler._() : super();
   factory StaticFilesHandler.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory StaticFilesHandler.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'StaticFilesHandler',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.appengine.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'path')
+    ..aOS(2, _omitFieldNames ? '' : 'uploadPathRegex')
+    ..m<$core.String, $core.String>(3, _omitFieldNames ? '' : 'httpHeaders',
+        entryClassName: 'StaticFilesHandler.HttpHeadersEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
+        packageName: const $pb.PackageName('google.appengine.v1'))
+    ..aOS(4, _omitFieldNames ? '' : 'mimeType')
+    ..aOM<$51.Duration>(5, _omitFieldNames ? '' : 'expiration',
+        subBuilder: $51.Duration.create)
+    ..aOB(6, _omitFieldNames ? '' : 'requireMatchingFile')
+    ..aOB(7, _omitFieldNames ? '' : 'applicationReadable')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -557,8 +583,10 @@ class StaticFilesHandler extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   StaticFilesHandler copyWith(void Function(StaticFilesHandler) updates) =>
       super.copyWith((message) => updates(message as StaticFilesHandler))
-          as StaticFilesHandler; // ignore: deprecated_member_use
+          as StaticFilesHandler;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static StaticFilesHandler create() => StaticFilesHandler._();
   StaticFilesHandler createEmptyInstance() => create();
@@ -569,6 +597,9 @@ class StaticFilesHandler extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<StaticFilesHandler>(create);
   static StaticFilesHandler? _defaultInstance;
 
+  /// Path to the static files matched by the URL pattern, from the
+  /// application root directory. The path can refer to text matched in groupings
+  /// in the URL pattern.
   @$pb.TagNumber(1)
   $core.String get path => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -581,6 +612,8 @@ class StaticFilesHandler extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearPath() => clearField(1);
 
+  /// Regular expression that matches the file paths for all files that should be
+  /// referenced by this handler.
   @$pb.TagNumber(2)
   $core.String get uploadPathRegex => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -593,9 +626,14 @@ class StaticFilesHandler extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearUploadPathRegex() => clearField(2);
 
+  /// HTTP headers to use for all responses from these URLs.
   @$pb.TagNumber(3)
   $core.Map<$core.String, $core.String> get httpHeaders => $_getMap(2);
 
+  ///  MIME type used to serve all files served by this handler.
+  ///
+  ///  Defaults to file-specific MIME types, which are derived from each file's
+  ///  filename extension.
   @$pb.TagNumber(4)
   $core.String get mimeType => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -608,10 +646,12 @@ class StaticFilesHandler extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearMimeType() => clearField(4);
 
+  /// Time a static file served by this handler should be cached
+  /// by web proxies and browsers.
   @$pb.TagNumber(5)
-  $0.Duration get expiration => $_getN(4);
+  $51.Duration get expiration => $_getN(4);
   @$pb.TagNumber(5)
-  set expiration($0.Duration v) {
+  set expiration($51.Duration v) {
     setField(5, v);
   }
 
@@ -620,8 +660,10 @@ class StaticFilesHandler extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearExpiration() => clearField(5);
   @$pb.TagNumber(5)
-  $0.Duration ensureExpiration() => $_ensure(4);
+  $51.Duration ensureExpiration() => $_ensure(4);
 
+  /// Whether this handler should match the request if the file
+  /// referenced by the handler does not exist.
   @$pb.TagNumber(6)
   $core.bool get requireMatchingFile => $_getBF(5);
   @$pb.TagNumber(6)
@@ -634,6 +676,11 @@ class StaticFilesHandler extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearRequireMatchingFile() => clearField(6);
 
+  /// Whether files should also be uploaded as code data. By default, files
+  /// declared in static file handlers are uploaded as static
+  /// data and are only served to end users; they cannot be read by the
+  /// application. If enabled, uploads are charged against both your code and
+  /// static data storage resource quotas.
   @$pb.TagNumber(7)
   $core.bool get applicationReadable => $_getBF(6);
   @$pb.TagNumber(7)
@@ -647,39 +694,33 @@ class StaticFilesHandler extends $pb.GeneratedMessage {
   void clearApplicationReadable() => clearField(7);
 }
 
+/// Executes a script to handle the request that matches the URL pattern.
 class ScriptHandler extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ScriptHandler',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.appengine.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'scriptPath')
-    ..hasRequiredFields = false;
-
-  ScriptHandler._() : super();
   factory ScriptHandler({
     $core.String? scriptPath,
   }) {
-    final _result = create();
+    final $result = create();
     if (scriptPath != null) {
-      _result.scriptPath = scriptPath;
+      $result.scriptPath = scriptPath;
     }
-    return _result;
+    return $result;
   }
+  ScriptHandler._() : super();
   factory ScriptHandler.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ScriptHandler.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ScriptHandler',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.appengine.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'scriptPath')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -689,8 +730,10 @@ class ScriptHandler extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ScriptHandler copyWith(void Function(ScriptHandler) updates) =>
       super.copyWith((message) => updates(message as ScriptHandler))
-          as ScriptHandler; // ignore: deprecated_member_use
+          as ScriptHandler;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ScriptHandler create() => ScriptHandler._();
   ScriptHandler createEmptyInstance() => create();
@@ -701,6 +744,7 @@ class ScriptHandler extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ScriptHandler>(create);
   static ScriptHandler? _defaultInstance;
 
+  /// Path to the script from the application root directory.
   @$pb.TagNumber(1)
   $core.String get scriptPath => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -714,39 +758,33 @@ class ScriptHandler extends $pb.GeneratedMessage {
   void clearScriptPath() => clearField(1);
 }
 
+/// Uses Google Cloud Endpoints to handle requests.
 class ApiEndpointHandler extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ApiEndpointHandler',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.appengine.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'scriptPath')
-    ..hasRequiredFields = false;
-
-  ApiEndpointHandler._() : super();
   factory ApiEndpointHandler({
     $core.String? scriptPath,
   }) {
-    final _result = create();
+    final $result = create();
     if (scriptPath != null) {
-      _result.scriptPath = scriptPath;
+      $result.scriptPath = scriptPath;
     }
-    return _result;
+    return $result;
   }
+  ApiEndpointHandler._() : super();
   factory ApiEndpointHandler.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ApiEndpointHandler.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ApiEndpointHandler',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.appengine.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'scriptPath')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -756,8 +794,10 @@ class ApiEndpointHandler extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ApiEndpointHandler copyWith(void Function(ApiEndpointHandler) updates) =>
       super.copyWith((message) => updates(message as ApiEndpointHandler))
-          as ApiEndpointHandler; // ignore: deprecated_member_use
+          as ApiEndpointHandler;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ApiEndpointHandler create() => ApiEndpointHandler._();
   ApiEndpointHandler createEmptyInstance() => create();
@@ -768,6 +808,7 @@ class ApiEndpointHandler extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ApiEndpointHandler>(create);
   static ApiEndpointHandler? _defaultInstance;
 
+  /// Path to the script from the application root directory.
   @$pb.TagNumber(1)
   $core.String get scriptPath => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -781,81 +822,70 @@ class ApiEndpointHandler extends $pb.GeneratedMessage {
   void clearScriptPath() => clearField(1);
 }
 
+/// Health checking configuration for VM instances. Unhealthy instances
+/// are killed and replaced with new instances. Only applicable for
+/// instances in App Engine flexible environment.
 class HealthCheck extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'HealthCheck',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.appengine.v1'),
-      createEmptyInstance: create)
-    ..aOB(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'disableHealthCheck')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'host')
-    ..a<$core.int>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'healthyThreshold',
-        $pb.PbFieldType.OU3)
-    ..a<$core.int>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'unhealthyThreshold',
-        $pb.PbFieldType.OU3)
-    ..a<$core.int>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'restartThreshold', $pb.PbFieldType.OU3)
-    ..aOM<$0.Duration>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'checkInterval', subBuilder: $0.Duration.create)
-    ..aOM<$0.Duration>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'timeout', subBuilder: $0.Duration.create)
-    ..hasRequiredFields = false;
-
-  HealthCheck._() : super();
   factory HealthCheck({
     $core.bool? disableHealthCheck,
     $core.String? host,
     $core.int? healthyThreshold,
     $core.int? unhealthyThreshold,
     $core.int? restartThreshold,
-    $0.Duration? checkInterval,
-    $0.Duration? timeout,
+    $51.Duration? checkInterval,
+    $51.Duration? timeout,
   }) {
-    final _result = create();
+    final $result = create();
     if (disableHealthCheck != null) {
-      _result.disableHealthCheck = disableHealthCheck;
+      $result.disableHealthCheck = disableHealthCheck;
     }
     if (host != null) {
-      _result.host = host;
+      $result.host = host;
     }
     if (healthyThreshold != null) {
-      _result.healthyThreshold = healthyThreshold;
+      $result.healthyThreshold = healthyThreshold;
     }
     if (unhealthyThreshold != null) {
-      _result.unhealthyThreshold = unhealthyThreshold;
+      $result.unhealthyThreshold = unhealthyThreshold;
     }
     if (restartThreshold != null) {
-      _result.restartThreshold = restartThreshold;
+      $result.restartThreshold = restartThreshold;
     }
     if (checkInterval != null) {
-      _result.checkInterval = checkInterval;
+      $result.checkInterval = checkInterval;
     }
     if (timeout != null) {
-      _result.timeout = timeout;
+      $result.timeout = timeout;
     }
-    return _result;
+    return $result;
   }
+  HealthCheck._() : super();
   factory HealthCheck.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory HealthCheck.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'HealthCheck',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.appengine.v1'),
+      createEmptyInstance: create)
+    ..aOB(1, _omitFieldNames ? '' : 'disableHealthCheck')
+    ..aOS(2, _omitFieldNames ? '' : 'host')
+    ..a<$core.int>(
+        3, _omitFieldNames ? '' : 'healthyThreshold', $pb.PbFieldType.OU3)
+    ..a<$core.int>(
+        4, _omitFieldNames ? '' : 'unhealthyThreshold', $pb.PbFieldType.OU3)
+    ..a<$core.int>(
+        5, _omitFieldNames ? '' : 'restartThreshold', $pb.PbFieldType.OU3)
+    ..aOM<$51.Duration>(6, _omitFieldNames ? '' : 'checkInterval',
+        subBuilder: $51.Duration.create)
+    ..aOM<$51.Duration>(7, _omitFieldNames ? '' : 'timeout',
+        subBuilder: $51.Duration.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -865,8 +895,10 @@ class HealthCheck extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   HealthCheck copyWith(void Function(HealthCheck) updates) =>
       super.copyWith((message) => updates(message as HealthCheck))
-          as HealthCheck; // ignore: deprecated_member_use
+          as HealthCheck;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static HealthCheck create() => HealthCheck._();
   HealthCheck createEmptyInstance() => create();
@@ -876,6 +908,7 @@ class HealthCheck extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<HealthCheck>(create);
   static HealthCheck? _defaultInstance;
 
+  /// Whether to explicitly disable health checks for this instance.
   @$pb.TagNumber(1)
   $core.bool get disableHealthCheck => $_getBF(0);
   @$pb.TagNumber(1)
@@ -888,6 +921,8 @@ class HealthCheck extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearDisableHealthCheck() => clearField(1);
 
+  /// Host header to send when performing an HTTP health check.
+  /// Example: "myapp.appspot.com"
   @$pb.TagNumber(2)
   $core.String get host => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -900,6 +935,8 @@ class HealthCheck extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearHost() => clearField(2);
 
+  /// Number of consecutive successful health checks required before receiving
+  /// traffic.
   @$pb.TagNumber(3)
   $core.int get healthyThreshold => $_getIZ(2);
   @$pb.TagNumber(3)
@@ -912,6 +949,8 @@ class HealthCheck extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearHealthyThreshold() => clearField(3);
 
+  /// Number of consecutive failed health checks required before removing
+  /// traffic.
   @$pb.TagNumber(4)
   $core.int get unhealthyThreshold => $_getIZ(3);
   @$pb.TagNumber(4)
@@ -924,6 +963,8 @@ class HealthCheck extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearUnhealthyThreshold() => clearField(4);
 
+  /// Number of consecutive failed health checks required before an instance is
+  /// restarted.
   @$pb.TagNumber(5)
   $core.int get restartThreshold => $_getIZ(4);
   @$pb.TagNumber(5)
@@ -936,10 +977,11 @@ class HealthCheck extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearRestartThreshold() => clearField(5);
 
+  /// Interval between health checks.
   @$pb.TagNumber(6)
-  $0.Duration get checkInterval => $_getN(5);
+  $51.Duration get checkInterval => $_getN(5);
   @$pb.TagNumber(6)
-  set checkInterval($0.Duration v) {
+  set checkInterval($51.Duration v) {
     setField(6, v);
   }
 
@@ -948,12 +990,13 @@ class HealthCheck extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearCheckInterval() => clearField(6);
   @$pb.TagNumber(6)
-  $0.Duration ensureCheckInterval() => $_ensure(5);
+  $51.Duration ensureCheckInterval() => $_ensure(5);
 
+  /// Time before the health check is considered failed.
   @$pb.TagNumber(7)
-  $0.Duration get timeout => $_getN(6);
+  $51.Duration get timeout => $_getN(6);
   @$pb.TagNumber(7)
-  set timeout($0.Duration v) {
+  set timeout($51.Duration v) {
     setField(7, v);
   }
 
@@ -962,84 +1005,72 @@ class HealthCheck extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearTimeout() => clearField(7);
   @$pb.TagNumber(7)
-  $0.Duration ensureTimeout() => $_ensure(6);
+  $51.Duration ensureTimeout() => $_ensure(6);
 }
 
+/// Readiness checking configuration for VM instances. Unhealthy instances
+/// are removed from traffic rotation.
 class ReadinessCheck extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ReadinessCheck',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.appengine.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'path')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'host')
-    ..a<$core.int>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'failureThreshold',
-        $pb.PbFieldType.OU3)
-    ..a<$core.int>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'successThreshold',
-        $pb.PbFieldType.OU3)
-    ..aOM<$0.Duration>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'checkInterval', subBuilder: $0.Duration.create)
-    ..aOM<$0.Duration>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'timeout', subBuilder: $0.Duration.create)
-    ..aOM<$0.Duration>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'appStartTimeout', subBuilder: $0.Duration.create)
-    ..hasRequiredFields = false;
-
-  ReadinessCheck._() : super();
   factory ReadinessCheck({
     $core.String? path,
     $core.String? host,
     $core.int? failureThreshold,
     $core.int? successThreshold,
-    $0.Duration? checkInterval,
-    $0.Duration? timeout,
-    $0.Duration? appStartTimeout,
+    $51.Duration? checkInterval,
+    $51.Duration? timeout,
+    $51.Duration? appStartTimeout,
   }) {
-    final _result = create();
+    final $result = create();
     if (path != null) {
-      _result.path = path;
+      $result.path = path;
     }
     if (host != null) {
-      _result.host = host;
+      $result.host = host;
     }
     if (failureThreshold != null) {
-      _result.failureThreshold = failureThreshold;
+      $result.failureThreshold = failureThreshold;
     }
     if (successThreshold != null) {
-      _result.successThreshold = successThreshold;
+      $result.successThreshold = successThreshold;
     }
     if (checkInterval != null) {
-      _result.checkInterval = checkInterval;
+      $result.checkInterval = checkInterval;
     }
     if (timeout != null) {
-      _result.timeout = timeout;
+      $result.timeout = timeout;
     }
     if (appStartTimeout != null) {
-      _result.appStartTimeout = appStartTimeout;
+      $result.appStartTimeout = appStartTimeout;
     }
-    return _result;
+    return $result;
   }
+  ReadinessCheck._() : super();
   factory ReadinessCheck.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ReadinessCheck.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ReadinessCheck',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.appengine.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'path')
+    ..aOS(2, _omitFieldNames ? '' : 'host')
+    ..a<$core.int>(
+        3, _omitFieldNames ? '' : 'failureThreshold', $pb.PbFieldType.OU3)
+    ..a<$core.int>(
+        4, _omitFieldNames ? '' : 'successThreshold', $pb.PbFieldType.OU3)
+    ..aOM<$51.Duration>(5, _omitFieldNames ? '' : 'checkInterval',
+        subBuilder: $51.Duration.create)
+    ..aOM<$51.Duration>(6, _omitFieldNames ? '' : 'timeout',
+        subBuilder: $51.Duration.create)
+    ..aOM<$51.Duration>(7, _omitFieldNames ? '' : 'appStartTimeout',
+        subBuilder: $51.Duration.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1049,8 +1080,10 @@ class ReadinessCheck extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ReadinessCheck copyWith(void Function(ReadinessCheck) updates) =>
       super.copyWith((message) => updates(message as ReadinessCheck))
-          as ReadinessCheck; // ignore: deprecated_member_use
+          as ReadinessCheck;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ReadinessCheck create() => ReadinessCheck._();
   ReadinessCheck createEmptyInstance() => create();
@@ -1061,6 +1094,7 @@ class ReadinessCheck extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ReadinessCheck>(create);
   static ReadinessCheck? _defaultInstance;
 
+  /// The request path.
   @$pb.TagNumber(1)
   $core.String get path => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1073,6 +1107,8 @@ class ReadinessCheck extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearPath() => clearField(1);
 
+  /// Host header to send when performing a HTTP Readiness check.
+  /// Example: "myapp.appspot.com"
   @$pb.TagNumber(2)
   $core.String get host => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -1085,6 +1121,8 @@ class ReadinessCheck extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearHost() => clearField(2);
 
+  /// Number of consecutive failed checks required before removing
+  /// traffic.
   @$pb.TagNumber(3)
   $core.int get failureThreshold => $_getIZ(2);
   @$pb.TagNumber(3)
@@ -1097,6 +1135,8 @@ class ReadinessCheck extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearFailureThreshold() => clearField(3);
 
+  /// Number of consecutive successful checks required before receiving
+  /// traffic.
   @$pb.TagNumber(4)
   $core.int get successThreshold => $_getIZ(3);
   @$pb.TagNumber(4)
@@ -1109,10 +1149,11 @@ class ReadinessCheck extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearSuccessThreshold() => clearField(4);
 
+  /// Interval between health checks.
   @$pb.TagNumber(5)
-  $0.Duration get checkInterval => $_getN(4);
+  $51.Duration get checkInterval => $_getN(4);
   @$pb.TagNumber(5)
-  set checkInterval($0.Duration v) {
+  set checkInterval($51.Duration v) {
     setField(5, v);
   }
 
@@ -1121,12 +1162,13 @@ class ReadinessCheck extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearCheckInterval() => clearField(5);
   @$pb.TagNumber(5)
-  $0.Duration ensureCheckInterval() => $_ensure(4);
+  $51.Duration ensureCheckInterval() => $_ensure(4);
 
+  /// Time before the check is considered failed.
   @$pb.TagNumber(6)
-  $0.Duration get timeout => $_getN(5);
+  $51.Duration get timeout => $_getN(5);
   @$pb.TagNumber(6)
-  set timeout($0.Duration v) {
+  set timeout($51.Duration v) {
     setField(6, v);
   }
 
@@ -1135,12 +1177,15 @@ class ReadinessCheck extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearTimeout() => clearField(6);
   @$pb.TagNumber(6)
-  $0.Duration ensureTimeout() => $_ensure(5);
+  $51.Duration ensureTimeout() => $_ensure(5);
 
+  /// A maximum time limit on application initialization, measured from moment
+  /// the application successfully replies to a healthcheck until it is ready to
+  /// serve traffic.
   @$pb.TagNumber(7)
-  $0.Duration get appStartTimeout => $_getN(6);
+  $51.Duration get appStartTimeout => $_getN(6);
   @$pb.TagNumber(7)
-  set appStartTimeout($0.Duration v) {
+  set appStartTimeout($51.Duration v) {
     setField(7, v);
   }
 
@@ -1149,83 +1194,72 @@ class ReadinessCheck extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearAppStartTimeout() => clearField(7);
   @$pb.TagNumber(7)
-  $0.Duration ensureAppStartTimeout() => $_ensure(6);
+  $51.Duration ensureAppStartTimeout() => $_ensure(6);
 }
 
+/// Health checking configuration for VM instances. Unhealthy instances
+/// are killed and replaced with new instances.
 class LivenessCheck extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'LivenessCheck',
-      package: const $pb.PackageName($core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'google.appengine.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'path')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'host')
-    ..a<$core.int>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'failureThreshold',
-        $pb.PbFieldType.OU3)
-    ..a<$core.int>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'successThreshold',
-        $pb.PbFieldType.OU3)
-    ..aOM<$0.Duration>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'checkInterval', subBuilder: $0.Duration.create)
-    ..aOM<$0.Duration>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'timeout', subBuilder: $0.Duration.create)
-    ..aOM<$0.Duration>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'initialDelay', subBuilder: $0.Duration.create)
-    ..hasRequiredFields = false;
-
-  LivenessCheck._() : super();
   factory LivenessCheck({
     $core.String? path,
     $core.String? host,
     $core.int? failureThreshold,
     $core.int? successThreshold,
-    $0.Duration? checkInterval,
-    $0.Duration? timeout,
-    $0.Duration? initialDelay,
+    $51.Duration? checkInterval,
+    $51.Duration? timeout,
+    $51.Duration? initialDelay,
   }) {
-    final _result = create();
+    final $result = create();
     if (path != null) {
-      _result.path = path;
+      $result.path = path;
     }
     if (host != null) {
-      _result.host = host;
+      $result.host = host;
     }
     if (failureThreshold != null) {
-      _result.failureThreshold = failureThreshold;
+      $result.failureThreshold = failureThreshold;
     }
     if (successThreshold != null) {
-      _result.successThreshold = successThreshold;
+      $result.successThreshold = successThreshold;
     }
     if (checkInterval != null) {
-      _result.checkInterval = checkInterval;
+      $result.checkInterval = checkInterval;
     }
     if (timeout != null) {
-      _result.timeout = timeout;
+      $result.timeout = timeout;
     }
     if (initialDelay != null) {
-      _result.initialDelay = initialDelay;
+      $result.initialDelay = initialDelay;
     }
-    return _result;
+    return $result;
   }
+  LivenessCheck._() : super();
   factory LivenessCheck.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory LivenessCheck.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'LivenessCheck',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.appengine.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'path')
+    ..aOS(2, _omitFieldNames ? '' : 'host')
+    ..a<$core.int>(
+        3, _omitFieldNames ? '' : 'failureThreshold', $pb.PbFieldType.OU3)
+    ..a<$core.int>(
+        4, _omitFieldNames ? '' : 'successThreshold', $pb.PbFieldType.OU3)
+    ..aOM<$51.Duration>(5, _omitFieldNames ? '' : 'checkInterval',
+        subBuilder: $51.Duration.create)
+    ..aOM<$51.Duration>(6, _omitFieldNames ? '' : 'timeout',
+        subBuilder: $51.Duration.create)
+    ..aOM<$51.Duration>(7, _omitFieldNames ? '' : 'initialDelay',
+        subBuilder: $51.Duration.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1235,8 +1269,10 @@ class LivenessCheck extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   LivenessCheck copyWith(void Function(LivenessCheck) updates) =>
       super.copyWith((message) => updates(message as LivenessCheck))
-          as LivenessCheck; // ignore: deprecated_member_use
+          as LivenessCheck;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static LivenessCheck create() => LivenessCheck._();
   LivenessCheck createEmptyInstance() => create();
@@ -1247,6 +1283,7 @@ class LivenessCheck extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<LivenessCheck>(create);
   static LivenessCheck? _defaultInstance;
 
+  /// The request path.
   @$pb.TagNumber(1)
   $core.String get path => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1259,6 +1296,8 @@ class LivenessCheck extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearPath() => clearField(1);
 
+  /// Host header to send when performing a HTTP Liveness check.
+  /// Example: "myapp.appspot.com"
   @$pb.TagNumber(2)
   $core.String get host => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -1271,6 +1310,8 @@ class LivenessCheck extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearHost() => clearField(2);
 
+  /// Number of consecutive failed checks required before considering the
+  /// VM unhealthy.
   @$pb.TagNumber(3)
   $core.int get failureThreshold => $_getIZ(2);
   @$pb.TagNumber(3)
@@ -1283,6 +1324,8 @@ class LivenessCheck extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearFailureThreshold() => clearField(3);
 
+  /// Number of consecutive successful checks required before considering
+  /// the VM healthy.
   @$pb.TagNumber(4)
   $core.int get successThreshold => $_getIZ(3);
   @$pb.TagNumber(4)
@@ -1295,10 +1338,11 @@ class LivenessCheck extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearSuccessThreshold() => clearField(4);
 
+  /// Interval between health checks.
   @$pb.TagNumber(5)
-  $0.Duration get checkInterval => $_getN(4);
+  $51.Duration get checkInterval => $_getN(4);
   @$pb.TagNumber(5)
-  set checkInterval($0.Duration v) {
+  set checkInterval($51.Duration v) {
     setField(5, v);
   }
 
@@ -1307,12 +1351,13 @@ class LivenessCheck extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearCheckInterval() => clearField(5);
   @$pb.TagNumber(5)
-  $0.Duration ensureCheckInterval() => $_ensure(4);
+  $51.Duration ensureCheckInterval() => $_ensure(4);
 
+  /// Time before the check is considered failed.
   @$pb.TagNumber(6)
-  $0.Duration get timeout => $_getN(5);
+  $51.Duration get timeout => $_getN(5);
   @$pb.TagNumber(6)
-  set timeout($0.Duration v) {
+  set timeout($51.Duration v) {
     setField(6, v);
   }
 
@@ -1321,12 +1366,13 @@ class LivenessCheck extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearTimeout() => clearField(6);
   @$pb.TagNumber(6)
-  $0.Duration ensureTimeout() => $_ensure(5);
+  $51.Duration ensureTimeout() => $_ensure(5);
 
+  /// The initial delay before starting to execute the checks.
   @$pb.TagNumber(7)
-  $0.Duration get initialDelay => $_getN(6);
+  $51.Duration get initialDelay => $_getN(6);
   @$pb.TagNumber(7)
-  set initialDelay($0.Duration v) {
+  set initialDelay($51.Duration v) {
     setField(7, v);
   }
 
@@ -1335,51 +1381,41 @@ class LivenessCheck extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearInitialDelay() => clearField(7);
   @$pb.TagNumber(7)
-  $0.Duration ensureInitialDelay() => $_ensure(6);
+  $51.Duration ensureInitialDelay() => $_ensure(6);
 }
 
+/// Third-party Python runtime library that is required by the application.
 class Library extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Library',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.appengine.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'version')
-    ..hasRequiredFields = false;
-
-  Library._() : super();
   factory Library({
     $core.String? name,
     $core.String? version,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (version != null) {
-      _result.version = version;
+      $result.version = version;
     }
-    return _result;
+    return $result;
   }
+  Library._() : super();
   factory Library.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Library.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Library',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.appengine.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOS(2, _omitFieldNames ? '' : 'version')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1388,9 +1424,10 @@ class Library extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Library copyWith(void Function(Library) updates) =>
-      super.copyWith((message) => updates(message as Library))
-          as Library; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Library)) as Library;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Library create() => Library._();
   Library createEmptyInstance() => create();
@@ -1400,6 +1437,7 @@ class Library extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Library>(create);
   static Library? _defaultInstance;
 
+  /// Name of the library. Example: "django".
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1412,6 +1450,7 @@ class Library extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// Version of the library to select, or "latest".
   @$pb.TagNumber(2)
   $core.String get version => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -1424,3 +1463,7 @@ class Library extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearVersion() => clearField(2);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

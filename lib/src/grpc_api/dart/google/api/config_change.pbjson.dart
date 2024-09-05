@@ -1,12 +1,16 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/api/config_change.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
-import 'dart:core' as $core;
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:convert' as $convert;
+import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
 @$core.Deprecated('Use changeTypeDescriptor instead')
@@ -22,7 +26,9 @@ const ChangeType$json = {
 
 /// Descriptor for `ChangeType`. Decode as a `google.protobuf.EnumDescriptorProto`.
 final $typed_data.Uint8List changeTypeDescriptor = $convert.base64Decode(
-    'CgpDaGFuZ2VUeXBlEhsKF0NIQU5HRV9UWVBFX1VOU1BFQ0lGSUVEEAASCQoFQURERUQQARILCgdSRU1PVkVEEAISDAoITU9ESUZJRUQQAw==');
+    'CgpDaGFuZ2VUeXBlEhsKF0NIQU5HRV9UWVBFX1VOU1BFQ0lGSUVEEAASCQoFQURERUQQARILCg'
+    'dSRU1PVkVEEAISDAoITU9ESUZJRUQQAw==');
+
 @$core.Deprecated('Use configChangeDescriptor instead')
 const ConfigChange$json = {
   '1': 'ConfigChange',
@@ -51,7 +57,11 @@ const ConfigChange$json = {
 
 /// Descriptor for `ConfigChange`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List configChangeDescriptor = $convert.base64Decode(
-    'CgxDb25maWdDaGFuZ2USGAoHZWxlbWVudBgBIAEoCVIHZWxlbWVudBIbCglvbGRfdmFsdWUYAiABKAlSCG9sZFZhbHVlEhsKCW5ld192YWx1ZRgDIAEoCVIIbmV3VmFsdWUSNwoLY2hhbmdlX3R5cGUYBCABKA4yFi5nb29nbGUuYXBpLkNoYW5nZVR5cGVSCmNoYW5nZVR5cGUSLAoHYWR2aWNlcxgFIAMoCzISLmdvb2dsZS5hcGkuQWR2aWNlUgdhZHZpY2Vz');
+    'CgxDb25maWdDaGFuZ2USGAoHZWxlbWVudBgBIAEoCVIHZWxlbWVudBIbCglvbGRfdmFsdWUYAi'
+    'ABKAlSCG9sZFZhbHVlEhsKCW5ld192YWx1ZRgDIAEoCVIIbmV3VmFsdWUSNwoLY2hhbmdlX3R5'
+    'cGUYBCABKA4yFi5nb29nbGUuYXBpLkNoYW5nZVR5cGVSCmNoYW5nZVR5cGUSLAoHYWR2aWNlcx'
+    'gFIAMoCzISLmdvb2dsZS5hcGkuQWR2aWNlUgdhZHZpY2Vz');
+
 @$core.Deprecated('Use adviceDescriptor instead')
 const Advice$json = {
   '1': 'Advice',

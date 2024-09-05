@@ -1,18 +1,21 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/api/expr/v1alpha1/value.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/any.pb.dart' as $0;
-
-import '../../../protobuf/struct.pbenum.dart' as $1;
+import '../../../protobuf/any.pb.dart' as $49;
+import '../../../protobuf/struct.pbenum.dart' as $48;
 
 enum Value_Kind {
   nullValue,
@@ -30,7 +33,72 @@ enum Value_Kind {
   notSet
 }
 
+///  Represents a CEL value.
+///
+///  This is similar to `google.protobuf.Value`, but can represent CEL's full
+///  range of values.
 class Value extends $pb.GeneratedMessage {
+  factory Value({
+    $48.NullValue? nullValue,
+    $core.bool? boolValue,
+    $fixnum.Int64? int64Value,
+    $fixnum.Int64? uint64Value,
+    $core.double? doubleValue,
+    $core.String? stringValue,
+    $core.List<$core.int>? bytesValue,
+    EnumValue? enumValue,
+    $49.Any? objectValue,
+    MapValue? mapValue,
+    ListValue? listValue,
+    $core.String? typeValue,
+  }) {
+    final $result = create();
+    if (nullValue != null) {
+      $result.nullValue = nullValue;
+    }
+    if (boolValue != null) {
+      $result.boolValue = boolValue;
+    }
+    if (int64Value != null) {
+      $result.int64Value = int64Value;
+    }
+    if (uint64Value != null) {
+      $result.uint64Value = uint64Value;
+    }
+    if (doubleValue != null) {
+      $result.doubleValue = doubleValue;
+    }
+    if (stringValue != null) {
+      $result.stringValue = stringValue;
+    }
+    if (bytesValue != null) {
+      $result.bytesValue = bytesValue;
+    }
+    if (enumValue != null) {
+      $result.enumValue = enumValue;
+    }
+    if (objectValue != null) {
+      $result.objectValue = objectValue;
+    }
+    if (mapValue != null) {
+      $result.mapValue = mapValue;
+    }
+    if (listValue != null) {
+      $result.listValue = listValue;
+    }
+    if (typeValue != null) {
+      $result.typeValue = typeValue;
+    }
+    return $result;
+  }
+  Value._() : super();
+  factory Value.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Value.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+
   static const $core.Map<$core.int, Value_Kind> _Value_KindByTag = {
     1: Value_Kind.nullValue,
     2: Value_Kind.boolValue,
@@ -47,98 +115,37 @@ class Value extends $pb.GeneratedMessage {
     0: Value_Kind.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Value',
+      _omitMessageNames ? '' : 'Value',
       package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.expr.v1alpha1'),
+          _omitMessageNames ? '' : 'google.api.expr.v1alpha1'),
       createEmptyInstance: create)
     ..oo(0, [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 15])
-    ..e<$1.NullValue>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nullValue',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: $1.NullValue.NULL_VALUE,
-        valueOf: $1.NullValue.valueOf,
-        enumValues: $1.NullValue.values)
-    ..aOB(2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'boolValue')
-    ..aInt64(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'int64Value')
-    ..a<$fixnum.Int64>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'uint64Value', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$core.double>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'doubleValue', $pb.PbFieldType.OD)
-    ..aOS(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'stringValue')
-    ..a<$core.List<$core.int>>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'bytesValue', $pb.PbFieldType.OY)
-    ..aOM<EnumValue>(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'enumValue', subBuilder: EnumValue.create)
-    ..aOM<$0.Any>(10, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'objectValue', subBuilder: $0.Any.create)
-    ..aOM<MapValue>(11, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'mapValue', subBuilder: MapValue.create)
-    ..aOM<ListValue>(12, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'listValue', subBuilder: ListValue.create)
-    ..aOS(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'typeValue')
+    ..e<$48.NullValue>(
+        1, _omitFieldNames ? '' : 'nullValue', $pb.PbFieldType.OE,
+        defaultOrMaker: $48.NullValue.NULL_VALUE,
+        valueOf: $48.NullValue.valueOf,
+        enumValues: $48.NullValue.values)
+    ..aOB(2, _omitFieldNames ? '' : 'boolValue')
+    ..aInt64(3, _omitFieldNames ? '' : 'int64Value')
+    ..a<$fixnum.Int64>(
+        4, _omitFieldNames ? '' : 'uint64Value', $pb.PbFieldType.OU6,
+        defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$core.double>(
+        5, _omitFieldNames ? '' : 'doubleValue', $pb.PbFieldType.OD)
+    ..aOS(6, _omitFieldNames ? '' : 'stringValue')
+    ..a<$core.List<$core.int>>(
+        7, _omitFieldNames ? '' : 'bytesValue', $pb.PbFieldType.OY)
+    ..aOM<EnumValue>(9, _omitFieldNames ? '' : 'enumValue',
+        subBuilder: EnumValue.create)
+    ..aOM<$49.Any>(10, _omitFieldNames ? '' : 'objectValue',
+        subBuilder: $49.Any.create)
+    ..aOM<MapValue>(11, _omitFieldNames ? '' : 'mapValue',
+        subBuilder: MapValue.create)
+    ..aOM<ListValue>(12, _omitFieldNames ? '' : 'listValue',
+        subBuilder: ListValue.create)
+    ..aOS(15, _omitFieldNames ? '' : 'typeValue')
     ..hasRequiredFields = false;
 
-  Value._() : super();
-  factory Value({
-    $1.NullValue? nullValue,
-    $core.bool? boolValue,
-    $fixnum.Int64? int64Value,
-    $fixnum.Int64? uint64Value,
-    $core.double? doubleValue,
-    $core.String? stringValue,
-    $core.List<$core.int>? bytesValue,
-    EnumValue? enumValue,
-    $0.Any? objectValue,
-    MapValue? mapValue,
-    ListValue? listValue,
-    $core.String? typeValue,
-  }) {
-    final _result = create();
-    if (nullValue != null) {
-      _result.nullValue = nullValue;
-    }
-    if (boolValue != null) {
-      _result.boolValue = boolValue;
-    }
-    if (int64Value != null) {
-      _result.int64Value = int64Value;
-    }
-    if (uint64Value != null) {
-      _result.uint64Value = uint64Value;
-    }
-    if (doubleValue != null) {
-      _result.doubleValue = doubleValue;
-    }
-    if (stringValue != null) {
-      _result.stringValue = stringValue;
-    }
-    if (bytesValue != null) {
-      _result.bytesValue = bytesValue;
-    }
-    if (enumValue != null) {
-      _result.enumValue = enumValue;
-    }
-    if (objectValue != null) {
-      _result.objectValue = objectValue;
-    }
-    if (mapValue != null) {
-      _result.mapValue = mapValue;
-    }
-    if (listValue != null) {
-      _result.listValue = listValue;
-    }
-    if (typeValue != null) {
-      _result.typeValue = typeValue;
-    }
-    return _result;
-  }
-  factory Value.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Value.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -147,9 +154,10 @@ class Value extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Value copyWith(void Function(Value) updates) =>
-      super.copyWith((message) => updates(message as Value))
-          as Value; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Value)) as Value;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Value create() => Value._();
   Value createEmptyInstance() => create();
@@ -162,10 +170,11 @@ class Value extends $pb.GeneratedMessage {
   Value_Kind whichKind() => _Value_KindByTag[$_whichOneof(0)]!;
   void clearKind() => clearField($_whichOneof(0));
 
+  /// Null value.
   @$pb.TagNumber(1)
-  $1.NullValue get nullValue => $_getN(0);
+  $48.NullValue get nullValue => $_getN(0);
   @$pb.TagNumber(1)
-  set nullValue($1.NullValue v) {
+  set nullValue($48.NullValue v) {
     setField(1, v);
   }
 
@@ -174,6 +183,7 @@ class Value extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearNullValue() => clearField(1);
 
+  /// Boolean value.
   @$pb.TagNumber(2)
   $core.bool get boolValue => $_getBF(1);
   @$pb.TagNumber(2)
@@ -186,6 +196,7 @@ class Value extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearBoolValue() => clearField(2);
 
+  /// Signed integer value.
   @$pb.TagNumber(3)
   $fixnum.Int64 get int64Value => $_getI64(2);
   @$pb.TagNumber(3)
@@ -198,6 +209,7 @@ class Value extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearInt64Value() => clearField(3);
 
+  /// Unsigned integer value.
   @$pb.TagNumber(4)
   $fixnum.Int64 get uint64Value => $_getI64(3);
   @$pb.TagNumber(4)
@@ -210,6 +222,7 @@ class Value extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearUint64Value() => clearField(4);
 
+  /// Floating point value.
   @$pb.TagNumber(5)
   $core.double get doubleValue => $_getN(4);
   @$pb.TagNumber(5)
@@ -222,6 +235,7 @@ class Value extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearDoubleValue() => clearField(5);
 
+  /// UTF-8 string value.
   @$pb.TagNumber(6)
   $core.String get stringValue => $_getSZ(5);
   @$pb.TagNumber(6)
@@ -234,6 +248,7 @@ class Value extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearStringValue() => clearField(6);
 
+  /// Byte string value.
   @$pb.TagNumber(7)
   $core.List<$core.int> get bytesValue => $_getN(6);
   @$pb.TagNumber(7)
@@ -246,6 +261,7 @@ class Value extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearBytesValue() => clearField(7);
 
+  /// An enum value.
   @$pb.TagNumber(9)
   EnumValue get enumValue => $_getN(7);
   @$pb.TagNumber(9)
@@ -260,10 +276,11 @@ class Value extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   EnumValue ensureEnumValue() => $_ensure(7);
 
+  /// The proto message backing an object value.
   @$pb.TagNumber(10)
-  $0.Any get objectValue => $_getN(8);
+  $49.Any get objectValue => $_getN(8);
   @$pb.TagNumber(10)
-  set objectValue($0.Any v) {
+  set objectValue($49.Any v) {
     setField(10, v);
   }
 
@@ -272,8 +289,9 @@ class Value extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   void clearObjectValue() => clearField(10);
   @$pb.TagNumber(10)
-  $0.Any ensureObjectValue() => $_ensure(8);
+  $49.Any ensureObjectValue() => $_ensure(8);
 
+  /// Map value.
   @$pb.TagNumber(11)
   MapValue get mapValue => $_getN(9);
   @$pb.TagNumber(11)
@@ -288,6 +306,7 @@ class Value extends $pb.GeneratedMessage {
   @$pb.TagNumber(11)
   MapValue ensureMapValue() => $_ensure(9);
 
+  /// List value.
   @$pb.TagNumber(12)
   ListValue get listValue => $_getN(10);
   @$pb.TagNumber(12)
@@ -302,6 +321,7 @@ class Value extends $pb.GeneratedMessage {
   @$pb.TagNumber(12)
   ListValue ensureListValue() => $_ensure(10);
 
+  /// Type value.
   @$pb.TagNumber(15)
   $core.String get typeValue => $_getSZ(11);
   @$pb.TagNumber(15)
@@ -315,49 +335,38 @@ class Value extends $pb.GeneratedMessage {
   void clearTypeValue() => clearField(15);
 }
 
+/// An enum value.
 class EnumValue extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'EnumValue',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.expr.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'type')
-    ..a<$core.int>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'value',
-        $pb.PbFieldType.O3)
-    ..hasRequiredFields = false;
-
-  EnumValue._() : super();
   factory EnumValue({
     $core.String? type,
     $core.int? value,
   }) {
-    final _result = create();
+    final $result = create();
     if (type != null) {
-      _result.type = type;
+      $result.type = type;
     }
     if (value != null) {
-      _result.value = value;
+      $result.value = value;
     }
-    return _result;
+    return $result;
   }
+  EnumValue._() : super();
   factory EnumValue.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory EnumValue.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'EnumValue',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.expr.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'type')
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'value', $pb.PbFieldType.O3)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -366,9 +375,10 @@ class EnumValue extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   EnumValue copyWith(void Function(EnumValue) updates) =>
-      super.copyWith((message) => updates(message as EnumValue))
-          as EnumValue; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as EnumValue)) as EnumValue;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static EnumValue create() => EnumValue._();
   EnumValue createEmptyInstance() => create();
@@ -378,6 +388,7 @@ class EnumValue extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<EnumValue>(create);
   static EnumValue? _defaultInstance;
 
+  /// The fully qualified name of the enum type.
   @$pb.TagNumber(1)
   $core.String get type => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -390,6 +401,7 @@ class EnumValue extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearType() => clearField(1);
 
+  /// The value of the enum.
   @$pb.TagNumber(2)
   $core.int get value => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -403,41 +415,37 @@ class EnumValue extends $pb.GeneratedMessage {
   void clearValue() => clearField(2);
 }
 
+///  A list.
+///
+///  Wrapped in a message so 'not set' and empty can be differentiated, which is
+///  required for use in a 'oneof'.
 class ListValue extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListValue',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.expr.v1alpha1'),
-      createEmptyInstance: create)
-    ..pc<Value>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'values',
-        $pb.PbFieldType.PM,
-        subBuilder: Value.create)
-    ..hasRequiredFields = false;
-
-  ListValue._() : super();
   factory ListValue({
     $core.Iterable<Value>? values,
   }) {
-    final _result = create();
+    final $result = create();
     if (values != null) {
-      _result.values.addAll(values);
+      $result.values.addAll(values);
     }
-    return _result;
+    return $result;
   }
+  ListValue._() : super();
   factory ListValue.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListValue.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListValue',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.expr.v1alpha1'),
+      createEmptyInstance: create)
+    ..pc<Value>(1, _omitFieldNames ? '' : 'values', $pb.PbFieldType.PM,
+        subBuilder: Value.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -446,9 +454,10 @@ class ListValue extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   ListValue copyWith(void Function(ListValue) updates) =>
-      super.copyWith((message) => updates(message as ListValue))
-          as ListValue; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as ListValue)) as ListValue;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListValue create() => ListValue._();
   ListValue createEmptyInstance() => create();
@@ -458,51 +467,43 @@ class ListValue extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ListValue>(create);
   static ListValue? _defaultInstance;
 
+  /// The ordered values in the list.
   @$pb.TagNumber(1)
   $core.List<Value> get values => $_getList(0);
 }
 
+/// An entry in the map.
 class MapValue_Entry extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'MapValue.Entry',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.expr.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOM<Value>(
-        1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'key',
-        subBuilder: Value.create)
-    ..aOM<Value>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'value',
-        subBuilder: Value.create)
-    ..hasRequiredFields = false;
-
-  MapValue_Entry._() : super();
   factory MapValue_Entry({
     Value? key,
     Value? value,
   }) {
-    final _result = create();
+    final $result = create();
     if (key != null) {
-      _result.key = key;
+      $result.key = key;
     }
     if (value != null) {
-      _result.value = value;
+      $result.value = value;
     }
-    return _result;
+    return $result;
   }
+  MapValue_Entry._() : super();
   factory MapValue_Entry.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory MapValue_Entry.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'MapValue.Entry',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.expr.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOM<Value>(1, _omitFieldNames ? '' : 'key', subBuilder: Value.create)
+    ..aOM<Value>(2, _omitFieldNames ? '' : 'value', subBuilder: Value.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -512,8 +513,10 @@ class MapValue_Entry extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   MapValue_Entry copyWith(void Function(MapValue_Entry) updates) =>
       super.copyWith((message) => updates(message as MapValue_Entry))
-          as MapValue_Entry; // ignore: deprecated_member_use
+          as MapValue_Entry;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static MapValue_Entry create() => MapValue_Entry._();
   MapValue_Entry createEmptyInstance() => create();
@@ -524,6 +527,10 @@ class MapValue_Entry extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<MapValue_Entry>(create);
   static MapValue_Entry? _defaultInstance;
 
+  ///  The key.
+  ///
+  ///  Must be unique with in the map.
+  ///  Currently only boolean, int, uint, and string values can be keys.
   @$pb.TagNumber(1)
   Value get key => $_getN(0);
   @$pb.TagNumber(1)
@@ -538,6 +545,7 @@ class MapValue_Entry extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   Value ensureKey() => $_ensure(0);
 
+  /// The value.
   @$pb.TagNumber(2)
   Value get value => $_getN(1);
   @$pb.TagNumber(2)
@@ -553,41 +561,38 @@ class MapValue_Entry extends $pb.GeneratedMessage {
   Value ensureValue() => $_ensure(1);
 }
 
+///  A map.
+///
+///  Wrapped in a message so 'not set' and empty can be differentiated, which is
+///  required for use in a 'oneof'.
 class MapValue extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'MapValue',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.expr.v1alpha1'),
-      createEmptyInstance: create)
-    ..pc<MapValue_Entry>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'entries',
-        $pb.PbFieldType.PM,
-        subBuilder: MapValue_Entry.create)
-    ..hasRequiredFields = false;
-
-  MapValue._() : super();
   factory MapValue({
     $core.Iterable<MapValue_Entry>? entries,
   }) {
-    final _result = create();
+    final $result = create();
     if (entries != null) {
-      _result.entries.addAll(entries);
+      $result.entries.addAll(entries);
     }
-    return _result;
+    return $result;
   }
+  MapValue._() : super();
   factory MapValue.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory MapValue.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'MapValue',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.expr.v1alpha1'),
+      createEmptyInstance: create)
+    ..pc<MapValue_Entry>(
+        1, _omitFieldNames ? '' : 'entries', $pb.PbFieldType.PM,
+        subBuilder: MapValue_Entry.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -596,9 +601,10 @@ class MapValue extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   MapValue copyWith(void Function(MapValue) updates) =>
-      super.copyWith((message) => updates(message as MapValue))
-          as MapValue; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as MapValue)) as MapValue;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static MapValue create() => MapValue._();
   MapValue createEmptyInstance() => create();
@@ -608,6 +614,14 @@ class MapValue extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<MapValue>(create);
   static MapValue? _defaultInstance;
 
+  ///  The set of map entries.
+  ///
+  ///  CEL has fewer restrictions on keys, so a protobuf map represenation
+  ///  cannot be used.
   @$pb.TagNumber(1)
   $core.List<MapValue_Entry> get entries => $_getList(0);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

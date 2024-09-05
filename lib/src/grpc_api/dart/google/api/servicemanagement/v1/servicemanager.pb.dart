@@ -1,80 +1,68 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/api/servicemanagement/v1/servicemanager.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'resources.pb.dart' as $3;
-import '../../service.pb.dart' as $4;
-import '../../../protobuf/any.pb.dart' as $5;
-
+import '../../../protobuf/any.pb.dart' as $49;
+import '../../service.pb.dart' as $28;
+import 'resources.pb.dart' as $27;
 import 'servicemanager.pbenum.dart';
 
 export 'servicemanager.pbenum.dart';
 
+/// Request message for `ListServices` method.
 class ListServicesRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListServicesRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.servicemanagement.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'producerProjectId')
-    ..a<$core.int>(
-        5,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageSize',
-        $pb.PbFieldType.O3)
-    ..aOS(
-        6,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageToken')
-    ..aOS(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'consumerId')
-    ..hasRequiredFields = false;
-
-  ListServicesRequest._() : super();
   factory ListServicesRequest({
     $core.String? producerProjectId,
     $core.int? pageSize,
     $core.String? pageToken,
     @$core.Deprecated('This field is deprecated.') $core.String? consumerId,
   }) {
-    final _result = create();
+    final $result = create();
     if (producerProjectId != null) {
-      _result.producerProjectId = producerProjectId;
+      $result.producerProjectId = producerProjectId;
     }
     if (pageSize != null) {
-      _result.pageSize = pageSize;
+      $result.pageSize = pageSize;
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
     if (consumerId != null) {
       // ignore: deprecated_member_use_from_same_package
-      _result.consumerId = consumerId;
+      $result.consumerId = consumerId;
     }
-    return _result;
+    return $result;
   }
+  ListServicesRequest._() : super();
   factory ListServicesRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListServicesRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListServicesRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.servicemanagement.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'producerProjectId')
+    ..a<$core.int>(5, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aOS(6, _omitFieldNames ? '' : 'pageToken')
+    ..aOS(7, _omitFieldNames ? '' : 'consumerId')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -84,8 +72,10 @@ class ListServicesRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ListServicesRequest copyWith(void Function(ListServicesRequest) updates) =>
       super.copyWith((message) => updates(message as ListServicesRequest))
-          as ListServicesRequest; // ignore: deprecated_member_use
+          as ListServicesRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListServicesRequest create() => ListServicesRequest._();
   ListServicesRequest createEmptyInstance() => create();
@@ -96,6 +86,7 @@ class ListServicesRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListServicesRequest>(create);
   static ListServicesRequest? _defaultInstance;
 
+  /// Include services produced by the specified project.
   @$pb.TagNumber(1)
   $core.String get producerProjectId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -108,6 +99,8 @@ class ListServicesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProducerProjectId() => clearField(1);
 
+  /// The max number of items to include in the response list. Page size is 50
+  /// if not specified. Maximum value is 500.
   @$pb.TagNumber(5)
   $core.int get pageSize => $_getIZ(1);
   @$pb.TagNumber(5)
@@ -120,6 +113,8 @@ class ListServicesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearPageSize() => clearField(5);
 
+  /// Token identifying which result to start with; returned by a previous list
+  /// call.
   @$pb.TagNumber(6)
   $core.String get pageToken => $_getSZ(2);
   @$pb.TagNumber(6)
@@ -132,6 +127,11 @@ class ListServicesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearPageToken() => clearField(6);
 
+  ///  Include services consumed by the specified consumer.
+  ///
+  ///  The Google Service Management implementation accepts the following
+  ///  forms:
+  ///  - project:<project_id>
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(7)
   $core.String get consumerId => $_getSZ(3);
@@ -149,47 +149,40 @@ class ListServicesRequest extends $pb.GeneratedMessage {
   void clearConsumerId() => clearField(7);
 }
 
+/// Response message for `ListServices` method.
 class ListServicesResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListServicesResponse',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.servicemanagement.v1'),
-      createEmptyInstance: create)
-    ..pc<$3.ManagedService>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'services',
-        $pb.PbFieldType.PM,
-        subBuilder: $3.ManagedService.create)
-    ..aOS(2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'nextPageToken')
-    ..hasRequiredFields = false;
-
-  ListServicesResponse._() : super();
   factory ListServicesResponse({
-    $core.Iterable<$3.ManagedService>? services,
+    $core.Iterable<$27.ManagedService>? services,
     $core.String? nextPageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (services != null) {
-      _result.services.addAll(services);
+      $result.services.addAll(services);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
-    return _result;
+    return $result;
   }
+  ListServicesResponse._() : super();
   factory ListServicesResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListServicesResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListServicesResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.servicemanagement.v1'),
+      createEmptyInstance: create)
+    ..pc<$27.ManagedService>(
+        1, _omitFieldNames ? '' : 'services', $pb.PbFieldType.PM,
+        subBuilder: $27.ManagedService.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -200,8 +193,10 @@ class ListServicesResponse extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ListServicesResponse copyWith(void Function(ListServicesResponse) updates) =>
       super.copyWith((message) => updates(message as ListServicesResponse))
-          as ListServicesResponse; // ignore: deprecated_member_use
+          as ListServicesResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListServicesResponse create() => ListServicesResponse._();
   ListServicesResponse createEmptyInstance() => create();
@@ -212,9 +207,11 @@ class ListServicesResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListServicesResponse>(create);
   static ListServicesResponse? _defaultInstance;
 
+  /// The returned services will only have the name field set.
   @$pb.TagNumber(1)
-  $core.List<$3.ManagedService> get services => $_getList(0);
+  $core.List<$27.ManagedService> get services => $_getList(0);
 
+  /// Token that can be passed to `ListServices` to resume a paginated query.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -228,39 +225,33 @@ class ListServicesResponse extends $pb.GeneratedMessage {
   void clearNextPageToken() => clearField(2);
 }
 
+/// Request message for `GetService` method.
 class GetServiceRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetServiceRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.servicemanagement.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'serviceName')
-    ..hasRequiredFields = false;
-
-  GetServiceRequest._() : super();
   factory GetServiceRequest({
     $core.String? serviceName,
   }) {
-    final _result = create();
+    final $result = create();
     if (serviceName != null) {
-      _result.serviceName = serviceName;
+      $result.serviceName = serviceName;
     }
-    return _result;
+    return $result;
   }
+  GetServiceRequest._() : super();
   factory GetServiceRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetServiceRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetServiceRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.servicemanagement.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'serviceName')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -270,8 +261,10 @@ class GetServiceRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   GetServiceRequest copyWith(void Function(GetServiceRequest) updates) =>
       super.copyWith((message) => updates(message as GetServiceRequest))
-          as GetServiceRequest; // ignore: deprecated_member_use
+          as GetServiceRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetServiceRequest create() => GetServiceRequest._();
   GetServiceRequest createEmptyInstance() => create();
@@ -282,6 +275,8 @@ class GetServiceRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetServiceRequest>(create);
   static GetServiceRequest? _defaultInstance;
 
+  /// Required. The name of the service.  See the `ServiceManager` overview for
+  /// naming requirements.  For example: `example.googleapis.com`.
   @$pb.TagNumber(1)
   $core.String get serviceName => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -295,40 +290,34 @@ class GetServiceRequest extends $pb.GeneratedMessage {
   void clearServiceName() => clearField(1);
 }
 
+/// Request message for CreateService method.
 class CreateServiceRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CreateServiceRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.servicemanagement.v1'),
-      createEmptyInstance: create)
-    ..aOM<$3.ManagedService>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'service',
-        subBuilder: $3.ManagedService.create)
-    ..hasRequiredFields = false;
-
-  CreateServiceRequest._() : super();
   factory CreateServiceRequest({
-    $3.ManagedService? service,
+    $27.ManagedService? service,
   }) {
-    final _result = create();
+    final $result = create();
     if (service != null) {
-      _result.service = service;
+      $result.service = service;
     }
-    return _result;
+    return $result;
   }
+  CreateServiceRequest._() : super();
   factory CreateServiceRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CreateServiceRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CreateServiceRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.servicemanagement.v1'),
+      createEmptyInstance: create)
+    ..aOM<$27.ManagedService>(1, _omitFieldNames ? '' : 'service',
+        subBuilder: $27.ManagedService.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -339,8 +328,10 @@ class CreateServiceRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   CreateServiceRequest copyWith(void Function(CreateServiceRequest) updates) =>
       super.copyWith((message) => updates(message as CreateServiceRequest))
-          as CreateServiceRequest; // ignore: deprecated_member_use
+          as CreateServiceRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CreateServiceRequest create() => CreateServiceRequest._();
   CreateServiceRequest createEmptyInstance() => create();
@@ -351,10 +342,11 @@ class CreateServiceRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<CreateServiceRequest>(create);
   static CreateServiceRequest? _defaultInstance;
 
+  /// Required. Initial values for the service resource.
   @$pb.TagNumber(1)
-  $3.ManagedService get service => $_getN(0);
+  $27.ManagedService get service => $_getN(0);
   @$pb.TagNumber(1)
-  set service($3.ManagedService v) {
+  set service($27.ManagedService v) {
     setField(1, v);
   }
 
@@ -363,42 +355,36 @@ class CreateServiceRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearService() => clearField(1);
   @$pb.TagNumber(1)
-  $3.ManagedService ensureService() => $_ensure(0);
+  $27.ManagedService ensureService() => $_ensure(0);
 }
 
+/// Request message for DeleteService method.
 class DeleteServiceRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DeleteServiceRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.servicemanagement.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'serviceName')
-    ..hasRequiredFields = false;
-
-  DeleteServiceRequest._() : super();
   factory DeleteServiceRequest({
     $core.String? serviceName,
   }) {
-    final _result = create();
+    final $result = create();
     if (serviceName != null) {
-      _result.serviceName = serviceName;
+      $result.serviceName = serviceName;
     }
-    return _result;
+    return $result;
   }
+  DeleteServiceRequest._() : super();
   factory DeleteServiceRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DeleteServiceRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DeleteServiceRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.servicemanagement.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'serviceName')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -409,8 +395,10 @@ class DeleteServiceRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   DeleteServiceRequest copyWith(void Function(DeleteServiceRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteServiceRequest))
-          as DeleteServiceRequest; // ignore: deprecated_member_use
+          as DeleteServiceRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DeleteServiceRequest create() => DeleteServiceRequest._();
   DeleteServiceRequest createEmptyInstance() => create();
@@ -421,6 +409,9 @@ class DeleteServiceRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DeleteServiceRequest>(create);
   static DeleteServiceRequest? _defaultInstance;
 
+  /// Required. The name of the service.  See the
+  /// [overview](https://cloud.google.com/service-management/overview) for naming
+  /// requirements.  For example: `example.googleapis.com`.
   @$pb.TagNumber(1)
   $core.String get serviceName => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -434,39 +425,33 @@ class DeleteServiceRequest extends $pb.GeneratedMessage {
   void clearServiceName() => clearField(1);
 }
 
+/// Request message for UndeleteService method.
 class UndeleteServiceRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'UndeleteServiceRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.servicemanagement.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'serviceName')
-    ..hasRequiredFields = false;
-
-  UndeleteServiceRequest._() : super();
   factory UndeleteServiceRequest({
     $core.String? serviceName,
   }) {
-    final _result = create();
+    final $result = create();
     if (serviceName != null) {
-      _result.serviceName = serviceName;
+      $result.serviceName = serviceName;
     }
-    return _result;
+    return $result;
   }
+  UndeleteServiceRequest._() : super();
   factory UndeleteServiceRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory UndeleteServiceRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UndeleteServiceRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.servicemanagement.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'serviceName')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -478,8 +463,10 @@ class UndeleteServiceRequest extends $pb.GeneratedMessage {
   UndeleteServiceRequest copyWith(
           void Function(UndeleteServiceRequest) updates) =>
       super.copyWith((message) => updates(message as UndeleteServiceRequest))
-          as UndeleteServiceRequest; // ignore: deprecated_member_use
+          as UndeleteServiceRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static UndeleteServiceRequest create() => UndeleteServiceRequest._();
   UndeleteServiceRequest createEmptyInstance() => create();
@@ -490,6 +477,9 @@ class UndeleteServiceRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<UndeleteServiceRequest>(create);
   static UndeleteServiceRequest? _defaultInstance;
 
+  /// Required. The name of the service. See the
+  /// [overview](https://cloud.google.com/service-management/overview) for naming
+  /// requirements. For example: `example.googleapis.com`.
   @$pb.TagNumber(1)
   $core.String get serviceName => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -503,40 +493,34 @@ class UndeleteServiceRequest extends $pb.GeneratedMessage {
   void clearServiceName() => clearField(1);
 }
 
+/// Response message for UndeleteService method.
 class UndeleteServiceResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'UndeleteServiceResponse',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.servicemanagement.v1'),
-      createEmptyInstance: create)
-    ..aOM<$3.ManagedService>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'service',
-        subBuilder: $3.ManagedService.create)
-    ..hasRequiredFields = false;
-
-  UndeleteServiceResponse._() : super();
   factory UndeleteServiceResponse({
-    $3.ManagedService? service,
+    $27.ManagedService? service,
   }) {
-    final _result = create();
+    final $result = create();
     if (service != null) {
-      _result.service = service;
+      $result.service = service;
     }
-    return _result;
+    return $result;
   }
+  UndeleteServiceResponse._() : super();
   factory UndeleteServiceResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory UndeleteServiceResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UndeleteServiceResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.servicemanagement.v1'),
+      createEmptyInstance: create)
+    ..aOM<$27.ManagedService>(1, _omitFieldNames ? '' : 'service',
+        subBuilder: $27.ManagedService.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -548,8 +532,10 @@ class UndeleteServiceResponse extends $pb.GeneratedMessage {
   UndeleteServiceResponse copyWith(
           void Function(UndeleteServiceResponse) updates) =>
       super.copyWith((message) => updates(message as UndeleteServiceResponse))
-          as UndeleteServiceResponse; // ignore: deprecated_member_use
+          as UndeleteServiceResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static UndeleteServiceResponse create() => UndeleteServiceResponse._();
   UndeleteServiceResponse createEmptyInstance() => create();
@@ -560,10 +546,11 @@ class UndeleteServiceResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<UndeleteServiceResponse>(create);
   static UndeleteServiceResponse? _defaultInstance;
 
+  /// Revived service resource.
   @$pb.TagNumber(1)
-  $3.ManagedService get service => $_getN(0);
+  $27.ManagedService get service => $_getN(0);
   @$pb.TagNumber(1)
-  set service($3.ManagedService v) {
+  set service($27.ManagedService v) {
     setField(1, v);
   }
 
@@ -572,64 +559,50 @@ class UndeleteServiceResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearService() => clearField(1);
   @$pb.TagNumber(1)
-  $3.ManagedService ensureService() => $_ensure(0);
+  $27.ManagedService ensureService() => $_ensure(0);
 }
 
+/// Request message for GetServiceConfig method.
 class GetServiceConfigRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetServiceConfigRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.servicemanagement.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'serviceName')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'configId')
-    ..e<GetServiceConfigRequest_ConfigView>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'view',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: GetServiceConfigRequest_ConfigView.BASIC,
-        valueOf: GetServiceConfigRequest_ConfigView.valueOf,
-        enumValues: GetServiceConfigRequest_ConfigView.values)
-    ..hasRequiredFields = false;
-
-  GetServiceConfigRequest._() : super();
   factory GetServiceConfigRequest({
     $core.String? serviceName,
     $core.String? configId,
     GetServiceConfigRequest_ConfigView? view,
   }) {
-    final _result = create();
+    final $result = create();
     if (serviceName != null) {
-      _result.serviceName = serviceName;
+      $result.serviceName = serviceName;
     }
     if (configId != null) {
-      _result.configId = configId;
+      $result.configId = configId;
     }
     if (view != null) {
-      _result.view = view;
+      $result.view = view;
     }
-    return _result;
+    return $result;
   }
+  GetServiceConfigRequest._() : super();
   factory GetServiceConfigRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetServiceConfigRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetServiceConfigRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.servicemanagement.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'serviceName')
+    ..aOS(2, _omitFieldNames ? '' : 'configId')
+    ..e<GetServiceConfigRequest_ConfigView>(
+        3, _omitFieldNames ? '' : 'view', $pb.PbFieldType.OE,
+        defaultOrMaker: GetServiceConfigRequest_ConfigView.BASIC,
+        valueOf: GetServiceConfigRequest_ConfigView.valueOf,
+        enumValues: GetServiceConfigRequest_ConfigView.values)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -641,8 +614,10 @@ class GetServiceConfigRequest extends $pb.GeneratedMessage {
   GetServiceConfigRequest copyWith(
           void Function(GetServiceConfigRequest) updates) =>
       super.copyWith((message) => updates(message as GetServiceConfigRequest))
-          as GetServiceConfigRequest; // ignore: deprecated_member_use
+          as GetServiceConfigRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetServiceConfigRequest create() => GetServiceConfigRequest._();
   GetServiceConfigRequest createEmptyInstance() => create();
@@ -653,6 +628,9 @@ class GetServiceConfigRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetServiceConfigRequest>(create);
   static GetServiceConfigRequest? _defaultInstance;
 
+  /// Required. The name of the service.  See the
+  /// [overview](https://cloud.google.com/service-management/overview) for naming
+  /// requirements.  For example: `example.googleapis.com`.
   @$pb.TagNumber(1)
   $core.String get serviceName => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -665,6 +643,10 @@ class GetServiceConfigRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearServiceName() => clearField(1);
 
+  ///  Required. The id of the service configuration resource.
+  ///
+  ///  This field must be specified for the server to return all fields, including
+  ///  `SourceInfo`.
   @$pb.TagNumber(2)
   $core.String get configId => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -677,6 +659,8 @@ class GetServiceConfigRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearConfigId() => clearField(2);
 
+  /// Specifies which parts of the Service Config should be returned in the
+  /// response.
   @$pb.TagNumber(3)
   GetServiceConfigRequest_ConfigView get view => $_getN(2);
   @$pb.TagNumber(3)
@@ -690,58 +674,43 @@ class GetServiceConfigRequest extends $pb.GeneratedMessage {
   void clearView() => clearField(3);
 }
 
+/// Request message for ListServiceConfigs method.
 class ListServiceConfigsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListServiceConfigsRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.servicemanagement.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'serviceName')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageToken')
-    ..a<$core.int>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageSize',
-        $pb.PbFieldType.O3)
-    ..hasRequiredFields = false;
-
-  ListServiceConfigsRequest._() : super();
   factory ListServiceConfigsRequest({
     $core.String? serviceName,
     $core.String? pageToken,
     $core.int? pageSize,
   }) {
-    final _result = create();
+    final $result = create();
     if (serviceName != null) {
-      _result.serviceName = serviceName;
+      $result.serviceName = serviceName;
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
     if (pageSize != null) {
-      _result.pageSize = pageSize;
+      $result.pageSize = pageSize;
     }
-    return _result;
+    return $result;
   }
+  ListServiceConfigsRequest._() : super();
   factory ListServiceConfigsRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListServiceConfigsRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListServiceConfigsRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.servicemanagement.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'serviceName')
+    ..aOS(2, _omitFieldNames ? '' : 'pageToken')
+    ..a<$core.int>(3, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -753,8 +722,10 @@ class ListServiceConfigsRequest extends $pb.GeneratedMessage {
   ListServiceConfigsRequest copyWith(
           void Function(ListServiceConfigsRequest) updates) =>
       super.copyWith((message) => updates(message as ListServiceConfigsRequest))
-          as ListServiceConfigsRequest; // ignore: deprecated_member_use
+          as ListServiceConfigsRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListServiceConfigsRequest create() => ListServiceConfigsRequest._();
   ListServiceConfigsRequest createEmptyInstance() => create();
@@ -765,6 +736,9 @@ class ListServiceConfigsRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListServiceConfigsRequest>(create);
   static ListServiceConfigsRequest? _defaultInstance;
 
+  /// Required. The name of the service.  See the
+  /// [overview](https://cloud.google.com/service-management/overview) for naming
+  /// requirements.  For example: `example.googleapis.com`.
   @$pb.TagNumber(1)
   $core.String get serviceName => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -777,6 +751,7 @@ class ListServiceConfigsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearServiceName() => clearField(1);
 
+  /// The token of the page to retrieve.
   @$pb.TagNumber(2)
   $core.String get pageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -789,6 +764,8 @@ class ListServiceConfigsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearPageToken() => clearField(2);
 
+  /// The max number of items to include in the response list. Page size is 50
+  /// if not specified. Maximum value is 100.
   @$pb.TagNumber(3)
   $core.int get pageSize => $_getIZ(2);
   @$pb.TagNumber(3)
@@ -802,47 +779,40 @@ class ListServiceConfigsRequest extends $pb.GeneratedMessage {
   void clearPageSize() => clearField(3);
 }
 
+/// Response message for ListServiceConfigs method.
 class ListServiceConfigsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListServiceConfigsResponse',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.servicemanagement.v1'),
-      createEmptyInstance: create)
-    ..pc<$4.Service>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'serviceConfigs',
-        $pb.PbFieldType.PM,
-        subBuilder: $4.Service.create)
-    ..aOS(2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'nextPageToken')
-    ..hasRequiredFields = false;
-
-  ListServiceConfigsResponse._() : super();
   factory ListServiceConfigsResponse({
-    $core.Iterable<$4.Service>? serviceConfigs,
+    $core.Iterable<$28.Service>? serviceConfigs,
     $core.String? nextPageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (serviceConfigs != null) {
-      _result.serviceConfigs.addAll(serviceConfigs);
+      $result.serviceConfigs.addAll(serviceConfigs);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
-    return _result;
+    return $result;
   }
+  ListServiceConfigsResponse._() : super();
   factory ListServiceConfigsResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListServiceConfigsResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListServiceConfigsResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.servicemanagement.v1'),
+      createEmptyInstance: create)
+    ..pc<$28.Service>(
+        1, _omitFieldNames ? '' : 'serviceConfigs', $pb.PbFieldType.PM,
+        subBuilder: $28.Service.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -855,8 +825,10 @@ class ListServiceConfigsResponse extends $pb.GeneratedMessage {
           void Function(ListServiceConfigsResponse) updates) =>
       super.copyWith(
               (message) => updates(message as ListServiceConfigsResponse))
-          as ListServiceConfigsResponse; // ignore: deprecated_member_use
+          as ListServiceConfigsResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListServiceConfigsResponse create() => ListServiceConfigsResponse._();
   ListServiceConfigsResponse createEmptyInstance() => create();
@@ -867,9 +839,11 @@ class ListServiceConfigsResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListServiceConfigsResponse>(create);
   static ListServiceConfigsResponse? _defaultInstance;
 
+  /// The list of service configuration resources.
   @$pb.TagNumber(1)
-  $core.List<$4.Service> get serviceConfigs => $_getList(0);
+  $core.List<$28.Service> get serviceConfigs => $_getList(0);
 
+  /// The token of the next page of results.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -883,49 +857,39 @@ class ListServiceConfigsResponse extends $pb.GeneratedMessage {
   void clearNextPageToken() => clearField(2);
 }
 
+/// Request message for CreateServiceConfig method.
 class CreateServiceConfigRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CreateServiceConfigRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.servicemanagement.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'serviceName')
-    ..aOM<$4.Service>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'serviceConfig',
-        subBuilder: $4.Service.create)
-    ..hasRequiredFields = false;
-
-  CreateServiceConfigRequest._() : super();
   factory CreateServiceConfigRequest({
     $core.String? serviceName,
-    $4.Service? serviceConfig,
+    $28.Service? serviceConfig,
   }) {
-    final _result = create();
+    final $result = create();
     if (serviceName != null) {
-      _result.serviceName = serviceName;
+      $result.serviceName = serviceName;
     }
     if (serviceConfig != null) {
-      _result.serviceConfig = serviceConfig;
+      $result.serviceConfig = serviceConfig;
     }
-    return _result;
+    return $result;
   }
+  CreateServiceConfigRequest._() : super();
   factory CreateServiceConfigRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CreateServiceConfigRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CreateServiceConfigRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.servicemanagement.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'serviceName')
+    ..aOM<$28.Service>(2, _omitFieldNames ? '' : 'serviceConfig',
+        subBuilder: $28.Service.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -938,8 +902,10 @@ class CreateServiceConfigRequest extends $pb.GeneratedMessage {
           void Function(CreateServiceConfigRequest) updates) =>
       super.copyWith(
               (message) => updates(message as CreateServiceConfigRequest))
-          as CreateServiceConfigRequest; // ignore: deprecated_member_use
+          as CreateServiceConfigRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CreateServiceConfigRequest create() => CreateServiceConfigRequest._();
   CreateServiceConfigRequest createEmptyInstance() => create();
@@ -950,6 +916,9 @@ class CreateServiceConfigRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<CreateServiceConfigRequest>(create);
   static CreateServiceConfigRequest? _defaultInstance;
 
+  /// Required. The name of the service.  See the
+  /// [overview](https://cloud.google.com/service-management/overview) for naming
+  /// requirements.  For example: `example.googleapis.com`.
   @$pb.TagNumber(1)
   $core.String get serviceName => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -962,10 +931,11 @@ class CreateServiceConfigRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearServiceName() => clearField(1);
 
+  /// Required. The service configuration resource.
   @$pb.TagNumber(2)
-  $4.Service get serviceConfig => $_getN(1);
+  $28.Service get serviceConfig => $_getN(1);
   @$pb.TagNumber(2)
-  set serviceConfig($4.Service v) {
+  set serviceConfig($28.Service v) {
     setField(2, v);
   }
 
@@ -974,58 +944,47 @@ class CreateServiceConfigRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearServiceConfig() => clearField(2);
   @$pb.TagNumber(2)
-  $4.Service ensureServiceConfig() => $_ensure(1);
+  $28.Service ensureServiceConfig() => $_ensure(1);
 }
 
+/// Request message for SubmitConfigSource method.
 class SubmitConfigSourceRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'SubmitConfigSourceRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.servicemanagement.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'serviceName')
-    ..aOM<$3.ConfigSource>(
-        2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'configSource',
-        subBuilder: $3.ConfigSource.create)
-    ..aOB(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'validateOnly')
-    ..hasRequiredFields = false;
-
-  SubmitConfigSourceRequest._() : super();
   factory SubmitConfigSourceRequest({
     $core.String? serviceName,
-    $3.ConfigSource? configSource,
+    $27.ConfigSource? configSource,
     $core.bool? validateOnly,
   }) {
-    final _result = create();
+    final $result = create();
     if (serviceName != null) {
-      _result.serviceName = serviceName;
+      $result.serviceName = serviceName;
     }
     if (configSource != null) {
-      _result.configSource = configSource;
+      $result.configSource = configSource;
     }
     if (validateOnly != null) {
-      _result.validateOnly = validateOnly;
+      $result.validateOnly = validateOnly;
     }
-    return _result;
+    return $result;
   }
+  SubmitConfigSourceRequest._() : super();
   factory SubmitConfigSourceRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory SubmitConfigSourceRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SubmitConfigSourceRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.servicemanagement.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'serviceName')
+    ..aOM<$27.ConfigSource>(2, _omitFieldNames ? '' : 'configSource',
+        subBuilder: $27.ConfigSource.create)
+    ..aOB(3, _omitFieldNames ? '' : 'validateOnly')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1037,8 +996,10 @@ class SubmitConfigSourceRequest extends $pb.GeneratedMessage {
   SubmitConfigSourceRequest copyWith(
           void Function(SubmitConfigSourceRequest) updates) =>
       super.copyWith((message) => updates(message as SubmitConfigSourceRequest))
-          as SubmitConfigSourceRequest; // ignore: deprecated_member_use
+          as SubmitConfigSourceRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SubmitConfigSourceRequest create() => SubmitConfigSourceRequest._();
   SubmitConfigSourceRequest createEmptyInstance() => create();
@@ -1049,6 +1010,9 @@ class SubmitConfigSourceRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<SubmitConfigSourceRequest>(create);
   static SubmitConfigSourceRequest? _defaultInstance;
 
+  /// Required. The name of the service.  See the
+  /// [overview](https://cloud.google.com/service-management/overview) for naming
+  /// requirements.  For example: `example.googleapis.com`.
   @$pb.TagNumber(1)
   $core.String get serviceName => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1061,10 +1025,11 @@ class SubmitConfigSourceRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearServiceName() => clearField(1);
 
+  /// Required. The source configuration for the service.
   @$pb.TagNumber(2)
-  $3.ConfigSource get configSource => $_getN(1);
+  $27.ConfigSource get configSource => $_getN(1);
   @$pb.TagNumber(2)
-  set configSource($3.ConfigSource v) {
+  set configSource($27.ConfigSource v) {
     setField(2, v);
   }
 
@@ -1073,8 +1038,11 @@ class SubmitConfigSourceRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearConfigSource() => clearField(2);
   @$pb.TagNumber(2)
-  $3.ConfigSource ensureConfigSource() => $_ensure(1);
+  $27.ConfigSource ensureConfigSource() => $_ensure(1);
 
+  /// Optional. If set, this will result in the generation of a
+  /// `google.api.Service` configuration based on the `ConfigSource` provided,
+  /// but the generated config and the sources will NOT be persisted.
   @$pb.TagNumber(3)
   $core.bool get validateOnly => $_getBF(2);
   @$pb.TagNumber(3)
@@ -1088,40 +1056,34 @@ class SubmitConfigSourceRequest extends $pb.GeneratedMessage {
   void clearValidateOnly() => clearField(3);
 }
 
+/// Response message for SubmitConfigSource method.
 class SubmitConfigSourceResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'SubmitConfigSourceResponse',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.servicemanagement.v1'),
-      createEmptyInstance: create)
-    ..aOM<$4.Service>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'serviceConfig',
-        subBuilder: $4.Service.create)
-    ..hasRequiredFields = false;
-
-  SubmitConfigSourceResponse._() : super();
   factory SubmitConfigSourceResponse({
-    $4.Service? serviceConfig,
+    $28.Service? serviceConfig,
   }) {
-    final _result = create();
+    final $result = create();
     if (serviceConfig != null) {
-      _result.serviceConfig = serviceConfig;
+      $result.serviceConfig = serviceConfig;
     }
-    return _result;
+    return $result;
   }
+  SubmitConfigSourceResponse._() : super();
   factory SubmitConfigSourceResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory SubmitConfigSourceResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SubmitConfigSourceResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.servicemanagement.v1'),
+      createEmptyInstance: create)
+    ..aOM<$28.Service>(1, _omitFieldNames ? '' : 'serviceConfig',
+        subBuilder: $28.Service.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1134,8 +1096,10 @@ class SubmitConfigSourceResponse extends $pb.GeneratedMessage {
           void Function(SubmitConfigSourceResponse) updates) =>
       super.copyWith(
               (message) => updates(message as SubmitConfigSourceResponse))
-          as SubmitConfigSourceResponse; // ignore: deprecated_member_use
+          as SubmitConfigSourceResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SubmitConfigSourceResponse create() => SubmitConfigSourceResponse._();
   SubmitConfigSourceResponse createEmptyInstance() => create();
@@ -1146,10 +1110,11 @@ class SubmitConfigSourceResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<SubmitConfigSourceResponse>(create);
   static SubmitConfigSourceResponse? _defaultInstance;
 
+  /// The generated service configuration.
   @$pb.TagNumber(1)
-  $4.Service get serviceConfig => $_getN(0);
+  $28.Service get serviceConfig => $_getN(0);
   @$pb.TagNumber(1)
-  set serviceConfig($4.Service v) {
+  set serviceConfig($28.Service v) {
     setField(1, v);
   }
 
@@ -1158,52 +1123,43 @@ class SubmitConfigSourceResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearServiceConfig() => clearField(1);
   @$pb.TagNumber(1)
-  $4.Service ensureServiceConfig() => $_ensure(0);
+  $28.Service ensureServiceConfig() => $_ensure(0);
 }
 
+///
+///  Request message for 'CreateServiceRollout'
 class CreateServiceRolloutRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CreateServiceRolloutRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.servicemanagement.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'serviceName')
-    ..aOM<$3.Rollout>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'rollout',
-        subBuilder: $3.Rollout.create)
-    ..hasRequiredFields = false;
-
-  CreateServiceRolloutRequest._() : super();
   factory CreateServiceRolloutRequest({
     $core.String? serviceName,
-    $3.Rollout? rollout,
+    $27.Rollout? rollout,
   }) {
-    final _result = create();
+    final $result = create();
     if (serviceName != null) {
-      _result.serviceName = serviceName;
+      $result.serviceName = serviceName;
     }
     if (rollout != null) {
-      _result.rollout = rollout;
+      $result.rollout = rollout;
     }
-    return _result;
+    return $result;
   }
+  CreateServiceRolloutRequest._() : super();
   factory CreateServiceRolloutRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CreateServiceRolloutRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CreateServiceRolloutRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.servicemanagement.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'serviceName')
+    ..aOM<$27.Rollout>(2, _omitFieldNames ? '' : 'rollout',
+        subBuilder: $27.Rollout.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1216,8 +1172,10 @@ class CreateServiceRolloutRequest extends $pb.GeneratedMessage {
           void Function(CreateServiceRolloutRequest) updates) =>
       super.copyWith(
               (message) => updates(message as CreateServiceRolloutRequest))
-          as CreateServiceRolloutRequest; // ignore: deprecated_member_use
+          as CreateServiceRolloutRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CreateServiceRolloutRequest create() =>
       CreateServiceRolloutRequest._();
@@ -1229,6 +1187,9 @@ class CreateServiceRolloutRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<CreateServiceRolloutRequest>(create);
   static CreateServiceRolloutRequest? _defaultInstance;
 
+  /// Required. The name of the service.  See the
+  /// [overview](https://cloud.google.com/service-management/overview) for naming
+  /// requirements.  For example: `example.googleapis.com`.
   @$pb.TagNumber(1)
   $core.String get serviceName => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1241,10 +1202,11 @@ class CreateServiceRolloutRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearServiceName() => clearField(1);
 
+  /// Required. The rollout resource. The `service_name` field is output only.
   @$pb.TagNumber(2)
-  $3.Rollout get rollout => $_getN(1);
+  $27.Rollout get rollout => $_getN(1);
   @$pb.TagNumber(2)
-  set rollout($3.Rollout v) {
+  set rollout($27.Rollout v) {
     setField(2, v);
   }
 
@@ -1253,67 +1215,51 @@ class CreateServiceRolloutRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearRollout() => clearField(2);
   @$pb.TagNumber(2)
-  $3.Rollout ensureRollout() => $_ensure(1);
+  $27.Rollout ensureRollout() => $_ensure(1);
 }
 
+/// Request message for 'ListServiceRollouts'
 class ListServiceRolloutsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListServiceRolloutsRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.servicemanagement.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'serviceName')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageToken')
-    ..a<$core.int>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageSize',
-        $pb.PbFieldType.O3)
-    ..aOS(4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'filter')
-    ..hasRequiredFields = false;
-
-  ListServiceRolloutsRequest._() : super();
   factory ListServiceRolloutsRequest({
     $core.String? serviceName,
     $core.String? pageToken,
     $core.int? pageSize,
     $core.String? filter,
   }) {
-    final _result = create();
+    final $result = create();
     if (serviceName != null) {
-      _result.serviceName = serviceName;
+      $result.serviceName = serviceName;
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
     if (pageSize != null) {
-      _result.pageSize = pageSize;
+      $result.pageSize = pageSize;
     }
     if (filter != null) {
-      _result.filter = filter;
+      $result.filter = filter;
     }
-    return _result;
+    return $result;
   }
+  ListServiceRolloutsRequest._() : super();
   factory ListServiceRolloutsRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListServiceRolloutsRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListServiceRolloutsRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.servicemanagement.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'serviceName')
+    ..aOS(2, _omitFieldNames ? '' : 'pageToken')
+    ..a<$core.int>(3, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aOS(4, _omitFieldNames ? '' : 'filter')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1326,8 +1272,10 @@ class ListServiceRolloutsRequest extends $pb.GeneratedMessage {
           void Function(ListServiceRolloutsRequest) updates) =>
       super.copyWith(
               (message) => updates(message as ListServiceRolloutsRequest))
-          as ListServiceRolloutsRequest; // ignore: deprecated_member_use
+          as ListServiceRolloutsRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListServiceRolloutsRequest create() => ListServiceRolloutsRequest._();
   ListServiceRolloutsRequest createEmptyInstance() => create();
@@ -1338,6 +1286,9 @@ class ListServiceRolloutsRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListServiceRolloutsRequest>(create);
   static ListServiceRolloutsRequest? _defaultInstance;
 
+  /// Required. The name of the service.  See the
+  /// [overview](https://cloud.google.com/service-management/overview) for naming
+  /// requirements.  For example: `example.googleapis.com`.
   @$pb.TagNumber(1)
   $core.String get serviceName => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1350,6 +1301,7 @@ class ListServiceRolloutsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearServiceName() => clearField(1);
 
+  /// The token of the page to retrieve.
   @$pb.TagNumber(2)
   $core.String get pageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -1362,6 +1314,8 @@ class ListServiceRolloutsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearPageToken() => clearField(2);
 
+  /// The max number of items to include in the response list. Page size is 50
+  /// if not specified. Maximum value is 100.
   @$pb.TagNumber(3)
   $core.int get pageSize => $_getIZ(2);
   @$pb.TagNumber(3)
@@ -1374,6 +1328,16 @@ class ListServiceRolloutsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearPageSize() => clearField(3);
 
+  ///  Required. Use `filter` to return subset of rollouts.
+  ///  The following filters are supported:
+  ///
+  ///   -- By [status]
+  ///   [google.api.servicemanagement.v1.Rollout.RolloutStatus]. For example,
+  ///   `filter='status=SUCCESS'`
+  ///
+  ///   -- By [strategy]
+  ///   [google.api.servicemanagement.v1.Rollout.strategy]. For example,
+  ///   `filter='strategy=TrafficPercentStrategy'`
   @$pb.TagNumber(4)
   $core.String get filter => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -1387,47 +1351,39 @@ class ListServiceRolloutsRequest extends $pb.GeneratedMessage {
   void clearFilter() => clearField(4);
 }
 
+/// Response message for ListServiceRollouts method.
 class ListServiceRolloutsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListServiceRolloutsResponse',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.servicemanagement.v1'),
-      createEmptyInstance: create)
-    ..pc<$3.Rollout>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'rollouts',
-        $pb.PbFieldType.PM,
-        subBuilder: $3.Rollout.create)
-    ..aOS(2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'nextPageToken')
-    ..hasRequiredFields = false;
-
-  ListServiceRolloutsResponse._() : super();
   factory ListServiceRolloutsResponse({
-    $core.Iterable<$3.Rollout>? rollouts,
+    $core.Iterable<$27.Rollout>? rollouts,
     $core.String? nextPageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (rollouts != null) {
-      _result.rollouts.addAll(rollouts);
+      $result.rollouts.addAll(rollouts);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
-    return _result;
+    return $result;
   }
+  ListServiceRolloutsResponse._() : super();
   factory ListServiceRolloutsResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListServiceRolloutsResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListServiceRolloutsResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.servicemanagement.v1'),
+      createEmptyInstance: create)
+    ..pc<$27.Rollout>(1, _omitFieldNames ? '' : 'rollouts', $pb.PbFieldType.PM,
+        subBuilder: $27.Rollout.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1440,8 +1396,10 @@ class ListServiceRolloutsResponse extends $pb.GeneratedMessage {
           void Function(ListServiceRolloutsResponse) updates) =>
       super.copyWith(
               (message) => updates(message as ListServiceRolloutsResponse))
-          as ListServiceRolloutsResponse; // ignore: deprecated_member_use
+          as ListServiceRolloutsResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListServiceRolloutsResponse create() =>
       ListServiceRolloutsResponse._();
@@ -1453,9 +1411,11 @@ class ListServiceRolloutsResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListServiceRolloutsResponse>(create);
   static ListServiceRolloutsResponse? _defaultInstance;
 
+  /// The list of rollout resources.
   @$pb.TagNumber(1)
-  $core.List<$3.Rollout> get rollouts => $_getList(0);
+  $core.List<$27.Rollout> get rollouts => $_getList(0);
 
+  /// The token of the next page of results.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -1469,48 +1429,38 @@ class ListServiceRolloutsResponse extends $pb.GeneratedMessage {
   void clearNextPageToken() => clearField(2);
 }
 
+/// Request message for GetServiceRollout method.
 class GetServiceRolloutRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetServiceRolloutRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.servicemanagement.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'serviceName')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'rolloutId')
-    ..hasRequiredFields = false;
-
-  GetServiceRolloutRequest._() : super();
   factory GetServiceRolloutRequest({
     $core.String? serviceName,
     $core.String? rolloutId,
   }) {
-    final _result = create();
+    final $result = create();
     if (serviceName != null) {
-      _result.serviceName = serviceName;
+      $result.serviceName = serviceName;
     }
     if (rolloutId != null) {
-      _result.rolloutId = rolloutId;
+      $result.rolloutId = rolloutId;
     }
-    return _result;
+    return $result;
   }
+  GetServiceRolloutRequest._() : super();
   factory GetServiceRolloutRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetServiceRolloutRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetServiceRolloutRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.servicemanagement.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'serviceName')
+    ..aOS(2, _omitFieldNames ? '' : 'rolloutId')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1522,8 +1472,10 @@ class GetServiceRolloutRequest extends $pb.GeneratedMessage {
   GetServiceRolloutRequest copyWith(
           void Function(GetServiceRolloutRequest) updates) =>
       super.copyWith((message) => updates(message as GetServiceRolloutRequest))
-          as GetServiceRolloutRequest; // ignore: deprecated_member_use
+          as GetServiceRolloutRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetServiceRolloutRequest create() => GetServiceRolloutRequest._();
   GetServiceRolloutRequest createEmptyInstance() => create();
@@ -1534,6 +1486,9 @@ class GetServiceRolloutRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetServiceRolloutRequest>(create);
   static GetServiceRolloutRequest? _defaultInstance;
 
+  /// Required. The name of the service.  See the
+  /// [overview](https://cloud.google.com/service-management/overview) for naming
+  /// requirements.  For example: `example.googleapis.com`.
   @$pb.TagNumber(1)
   $core.String get serviceName => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1546,6 +1501,7 @@ class GetServiceRolloutRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearServiceName() => clearField(1);
 
+  /// Required. The id of the rollout resource.
   @$pb.TagNumber(2)
   $core.String get rolloutId => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -1559,115 +1515,24 @@ class GetServiceRolloutRequest extends $pb.GeneratedMessage {
   void clearRolloutId() => clearField(2);
 }
 
-class EnableServiceRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'EnableServiceRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.servicemanagement.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'serviceName')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'consumerId')
-    ..hasRequiredFields = false;
-
-  EnableServiceRequest._() : super();
-  factory EnableServiceRequest({
-    $core.String? serviceName,
-    $core.String? consumerId,
-  }) {
-    final _result = create();
-    if (serviceName != null) {
-      _result.serviceName = serviceName;
-    }
-    if (consumerId != null) {
-      _result.consumerId = consumerId;
-    }
-    return _result;
-  }
-  factory EnableServiceRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory EnableServiceRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  EnableServiceRequest clone() =>
-      EnableServiceRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
-  EnableServiceRequest copyWith(void Function(EnableServiceRequest) updates) =>
-      super.copyWith((message) => updates(message as EnableServiceRequest))
-          as EnableServiceRequest; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static EnableServiceRequest create() => EnableServiceRequest._();
-  EnableServiceRequest createEmptyInstance() => create();
-  static $pb.PbList<EnableServiceRequest> createRepeated() =>
-      $pb.PbList<EnableServiceRequest>();
-  @$core.pragma('dart2js:noInline')
-  static EnableServiceRequest getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<EnableServiceRequest>(create);
-  static EnableServiceRequest? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $core.String get serviceName => $_getSZ(0);
-  @$pb.TagNumber(1)
-  set serviceName($core.String v) {
-    $_setString(0, v);
-  }
-
-  @$pb.TagNumber(1)
-  $core.bool hasServiceName() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearServiceName() => clearField(1);
-
-  @$pb.TagNumber(2)
-  $core.String get consumerId => $_getSZ(1);
-  @$pb.TagNumber(2)
-  set consumerId($core.String v) {
-    $_setString(1, v);
-  }
-
-  @$pb.TagNumber(2)
-  $core.bool hasConsumerId() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearConsumerId() => clearField(2);
-}
-
+/// Operation payload for EnableService method.
 class EnableServiceResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'EnableServiceResponse',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.servicemanagement.v1'),
-      createEmptyInstance: create)
-    ..hasRequiredFields = false;
-
-  EnableServiceResponse._() : super();
   factory EnableServiceResponse() => create();
+  EnableServiceResponse._() : super();
   factory EnableServiceResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory EnableServiceResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'EnableServiceResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.servicemanagement.v1'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1679,8 +1544,10 @@ class EnableServiceResponse extends $pb.GeneratedMessage {
   EnableServiceResponse copyWith(
           void Function(EnableServiceResponse) updates) =>
       super.copyWith((message) => updates(message as EnableServiceResponse))
-          as EnableServiceResponse; // ignore: deprecated_member_use
+          as EnableServiceResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static EnableServiceResponse create() => EnableServiceResponse._();
   EnableServiceResponse createEmptyInstance() => create();
@@ -1692,181 +1559,40 @@ class EnableServiceResponse extends $pb.GeneratedMessage {
   static EnableServiceResponse? _defaultInstance;
 }
 
-class DisableServiceRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DisableServiceRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.servicemanagement.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'serviceName')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'consumerId')
-    ..hasRequiredFields = false;
-
-  DisableServiceRequest._() : super();
-  factory DisableServiceRequest({
-    $core.String? serviceName,
-    $core.String? consumerId,
-  }) {
-    final _result = create();
-    if (serviceName != null) {
-      _result.serviceName = serviceName;
-    }
-    if (consumerId != null) {
-      _result.consumerId = consumerId;
-    }
-    return _result;
-  }
-  factory DisableServiceRequest.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DisableServiceRequest.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DisableServiceRequest clone() =>
-      DisableServiceRequest()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
-  DisableServiceRequest copyWith(
-          void Function(DisableServiceRequest) updates) =>
-      super.copyWith((message) => updates(message as DisableServiceRequest))
-          as DisableServiceRequest; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static DisableServiceRequest create() => DisableServiceRequest._();
-  DisableServiceRequest createEmptyInstance() => create();
-  static $pb.PbList<DisableServiceRequest> createRepeated() =>
-      $pb.PbList<DisableServiceRequest>();
-  @$core.pragma('dart2js:noInline')
-  static DisableServiceRequest getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<DisableServiceRequest>(create);
-  static DisableServiceRequest? _defaultInstance;
-
-  @$pb.TagNumber(1)
-  $core.String get serviceName => $_getSZ(0);
-  @$pb.TagNumber(1)
-  set serviceName($core.String v) {
-    $_setString(0, v);
-  }
-
-  @$pb.TagNumber(1)
-  $core.bool hasServiceName() => $_has(0);
-  @$pb.TagNumber(1)
-  void clearServiceName() => clearField(1);
-
-  @$pb.TagNumber(2)
-  $core.String get consumerId => $_getSZ(1);
-  @$pb.TagNumber(2)
-  set consumerId($core.String v) {
-    $_setString(1, v);
-  }
-
-  @$pb.TagNumber(2)
-  $core.bool hasConsumerId() => $_has(1);
-  @$pb.TagNumber(2)
-  void clearConsumerId() => clearField(2);
-}
-
-class DisableServiceResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DisableServiceResponse',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.servicemanagement.v1'),
-      createEmptyInstance: create)
-    ..hasRequiredFields = false;
-
-  DisableServiceResponse._() : super();
-  factory DisableServiceResponse() => create();
-  factory DisableServiceResponse.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory DisableServiceResponse.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
-      'Will be removed in next major version')
-  DisableServiceResponse clone() =>
-      DisableServiceResponse()..mergeFromMessage(this);
-  @$core.Deprecated('Using this can add significant overhead to your binary. '
-      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
-      'Will be removed in next major version')
-  DisableServiceResponse copyWith(
-          void Function(DisableServiceResponse) updates) =>
-      super.copyWith((message) => updates(message as DisableServiceResponse))
-          as DisableServiceResponse; // ignore: deprecated_member_use
-  $pb.BuilderInfo get info_ => _i;
-  @$core.pragma('dart2js:noInline')
-  static DisableServiceResponse create() => DisableServiceResponse._();
-  DisableServiceResponse createEmptyInstance() => create();
-  static $pb.PbList<DisableServiceResponse> createRepeated() =>
-      $pb.PbList<DisableServiceResponse>();
-  @$core.pragma('dart2js:noInline')
-  static DisableServiceResponse getDefault() => _defaultInstance ??=
-      $pb.GeneratedMessage.$_defaultFor<DisableServiceResponse>(create);
-  static DisableServiceResponse? _defaultInstance;
-}
-
+/// Request message for GenerateConfigReport method.
 class GenerateConfigReportRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GenerateConfigReportRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.servicemanagement.v1'),
-      createEmptyInstance: create)
-    ..aOM<$5.Any>(
-        1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'newConfig',
-        subBuilder: $5.Any.create)
-    ..aOM<$5.Any>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'oldConfig',
-        subBuilder: $5.Any.create)
-    ..hasRequiredFields = false;
-
-  GenerateConfigReportRequest._() : super();
   factory GenerateConfigReportRequest({
-    $5.Any? newConfig,
-    $5.Any? oldConfig,
+    $49.Any? newConfig,
+    $49.Any? oldConfig,
   }) {
-    final _result = create();
+    final $result = create();
     if (newConfig != null) {
-      _result.newConfig = newConfig;
+      $result.newConfig = newConfig;
     }
     if (oldConfig != null) {
-      _result.oldConfig = oldConfig;
+      $result.oldConfig = oldConfig;
     }
-    return _result;
+    return $result;
   }
+  GenerateConfigReportRequest._() : super();
   factory GenerateConfigReportRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GenerateConfigReportRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GenerateConfigReportRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.servicemanagement.v1'),
+      createEmptyInstance: create)
+    ..aOM<$49.Any>(1, _omitFieldNames ? '' : 'newConfig',
+        subBuilder: $49.Any.create)
+    ..aOM<$49.Any>(2, _omitFieldNames ? '' : 'oldConfig',
+        subBuilder: $49.Any.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1879,8 +1605,10 @@ class GenerateConfigReportRequest extends $pb.GeneratedMessage {
           void Function(GenerateConfigReportRequest) updates) =>
       super.copyWith(
               (message) => updates(message as GenerateConfigReportRequest))
-          as GenerateConfigReportRequest; // ignore: deprecated_member_use
+          as GenerateConfigReportRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GenerateConfigReportRequest create() =>
       GenerateConfigReportRequest._();
@@ -1892,10 +1620,15 @@ class GenerateConfigReportRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GenerateConfigReportRequest>(create);
   static GenerateConfigReportRequest? _defaultInstance;
 
+  /// Required. Service configuration for which we want to generate the report.
+  /// For this version of API, the supported types are
+  /// [google.api.servicemanagement.v1.ConfigRef][google.api.servicemanagement.v1.ConfigRef],
+  /// [google.api.servicemanagement.v1.ConfigSource][google.api.servicemanagement.v1.ConfigSource],
+  /// and [google.api.Service][google.api.Service]
   @$pb.TagNumber(1)
-  $5.Any get newConfig => $_getN(0);
+  $49.Any get newConfig => $_getN(0);
   @$pb.TagNumber(1)
-  set newConfig($5.Any v) {
+  set newConfig($49.Any v) {
     setField(1, v);
   }
 
@@ -1904,12 +1637,17 @@ class GenerateConfigReportRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearNewConfig() => clearField(1);
   @$pb.TagNumber(1)
-  $5.Any ensureNewConfig() => $_ensure(0);
+  $49.Any ensureNewConfig() => $_ensure(0);
 
+  /// Optional. Service configuration against which the comparison will be done.
+  /// For this version of API, the supported types are
+  /// [google.api.servicemanagement.v1.ConfigRef][google.api.servicemanagement.v1.ConfigRef],
+  /// [google.api.servicemanagement.v1.ConfigSource][google.api.servicemanagement.v1.ConfigSource],
+  /// and [google.api.Service][google.api.Service]
   @$pb.TagNumber(2)
-  $5.Any get oldConfig => $_getN(1);
+  $49.Any get oldConfig => $_getN(1);
   @$pb.TagNumber(2)
-  set oldConfig($5.Any v) {
+  set oldConfig($49.Any v) {
     setField(2, v);
   }
 
@@ -1918,65 +1656,55 @@ class GenerateConfigReportRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearOldConfig() => clearField(2);
   @$pb.TagNumber(2)
-  $5.Any ensureOldConfig() => $_ensure(1);
+  $49.Any ensureOldConfig() => $_ensure(1);
 }
 
+/// Response message for GenerateConfigReport method.
 class GenerateConfigReportResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GenerateConfigReportResponse',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.servicemanagement.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'serviceName')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'id')
-    ..pc<$3.ChangeReport>(
-        3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'changeReports', $pb.PbFieldType.PM,
-        subBuilder: $3.ChangeReport.create)
-    ..pc<$3.Diagnostic>(
-        4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'diagnostics', $pb.PbFieldType.PM,
-        subBuilder: $3.Diagnostic.create)
-    ..hasRequiredFields = false;
-
-  GenerateConfigReportResponse._() : super();
   factory GenerateConfigReportResponse({
     $core.String? serviceName,
     $core.String? id,
-    $core.Iterable<$3.ChangeReport>? changeReports,
-    $core.Iterable<$3.Diagnostic>? diagnostics,
+    $core.Iterable<$27.ChangeReport>? changeReports,
+    $core.Iterable<$27.Diagnostic>? diagnostics,
   }) {
-    final _result = create();
+    final $result = create();
     if (serviceName != null) {
-      _result.serviceName = serviceName;
+      $result.serviceName = serviceName;
     }
     if (id != null) {
-      _result.id = id;
+      $result.id = id;
     }
     if (changeReports != null) {
-      _result.changeReports.addAll(changeReports);
+      $result.changeReports.addAll(changeReports);
     }
     if (diagnostics != null) {
-      _result.diagnostics.addAll(diagnostics);
+      $result.diagnostics.addAll(diagnostics);
     }
-    return _result;
+    return $result;
   }
+  GenerateConfigReportResponse._() : super();
   factory GenerateConfigReportResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GenerateConfigReportResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GenerateConfigReportResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.servicemanagement.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'serviceName')
+    ..aOS(2, _omitFieldNames ? '' : 'id')
+    ..pc<$27.ChangeReport>(
+        3, _omitFieldNames ? '' : 'changeReports', $pb.PbFieldType.PM,
+        subBuilder: $27.ChangeReport.create)
+    ..pc<$27.Diagnostic>(
+        4, _omitFieldNames ? '' : 'diagnostics', $pb.PbFieldType.PM,
+        subBuilder: $27.Diagnostic.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1989,8 +1717,10 @@ class GenerateConfigReportResponse extends $pb.GeneratedMessage {
           void Function(GenerateConfigReportResponse) updates) =>
       super.copyWith(
               (message) => updates(message as GenerateConfigReportResponse))
-          as GenerateConfigReportResponse; // ignore: deprecated_member_use
+          as GenerateConfigReportResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GenerateConfigReportResponse create() =>
       GenerateConfigReportResponse._();
@@ -2002,6 +1732,7 @@ class GenerateConfigReportResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GenerateConfigReportResponse>(create);
   static GenerateConfigReportResponse? _defaultInstance;
 
+  /// Name of the service this report belongs to.
   @$pb.TagNumber(1)
   $core.String get serviceName => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2014,6 +1745,7 @@ class GenerateConfigReportResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearServiceName() => clearField(1);
 
+  /// ID of the service configuration this report belongs to.
   @$pb.TagNumber(2)
   $core.String get id => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -2026,9 +1758,18 @@ class GenerateConfigReportResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearId() => clearField(2);
 
+  /// list of ChangeReport, each corresponding to comparison between two
+  /// service configurations.
   @$pb.TagNumber(3)
-  $core.List<$3.ChangeReport> get changeReports => $_getList(2);
+  $core.List<$27.ChangeReport> get changeReports => $_getList(2);
 
+  /// Errors / Linter warnings associated with the service definition this
+  /// report
+  /// belongs to.
   @$pb.TagNumber(4)
-  $core.List<$3.Diagnostic> get diagnostics => $_getList(3);
+  $core.List<$27.Diagnostic> get diagnostics => $_getList(3);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

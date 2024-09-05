@@ -1,12 +1,16 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/type/datetime.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
-import 'dart:core' as $core;
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:convert' as $convert;
+import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
 @$core.Deprecated('Use dateTimeDescriptor instead')
@@ -46,7 +50,13 @@ const DateTime$json = {
 
 /// Descriptor for `DateTime`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List dateTimeDescriptor = $convert.base64Decode(
-    'CghEYXRlVGltZRISCgR5ZWFyGAEgASgFUgR5ZWFyEhQKBW1vbnRoGAIgASgFUgVtb250aBIQCgNkYXkYAyABKAVSA2RheRIUCgVob3VycxgEIAEoBVIFaG91cnMSGAoHbWludXRlcxgFIAEoBVIHbWludXRlcxIYCgdzZWNvbmRzGAYgASgFUgdzZWNvbmRzEhQKBW5hbm9zGAcgASgFUgVuYW5vcxI6Cgp1dGNfb2Zmc2V0GAggASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uSABSCXV0Y09mZnNldBI0Cgl0aW1lX3pvbmUYCSABKAsyFS5nb29nbGUudHlwZS5UaW1lWm9uZUgAUgh0aW1lWm9uZUINCgt0aW1lX29mZnNldA==');
+    'CghEYXRlVGltZRISCgR5ZWFyGAEgASgFUgR5ZWFyEhQKBW1vbnRoGAIgASgFUgVtb250aBIQCg'
+    'NkYXkYAyABKAVSA2RheRIUCgVob3VycxgEIAEoBVIFaG91cnMSGAoHbWludXRlcxgFIAEoBVIH'
+    'bWludXRlcxIYCgdzZWNvbmRzGAYgASgFUgdzZWNvbmRzEhQKBW5hbm9zGAcgASgFUgVuYW5vcx'
+    'I6Cgp1dGNfb2Zmc2V0GAggASgLMhkuZ29vZ2xlLnByb3RvYnVmLkR1cmF0aW9uSABSCXV0Y09m'
+    'ZnNldBI0Cgl0aW1lX3pvbmUYCSABKAsyFS5nb29nbGUudHlwZS5UaW1lWm9uZUgAUgh0aW1lWm'
+    '9uZUINCgt0aW1lX29mZnNldA==');
+
 @$core.Deprecated('Use timeZoneDescriptor instead')
 const TimeZone$json = {
   '1': 'TimeZone',

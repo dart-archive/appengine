@@ -1,12 +1,16 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/protobuf/struct.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
-import 'dart:core' as $core;
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:convert' as $convert;
+import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
 @$core.Deprecated('Use nullValueDescriptor instead')
@@ -20,6 +24,7 @@ const NullValue$json = {
 /// Descriptor for `NullValue`. Decode as a `google.protobuf.EnumDescriptorProto`.
 final $typed_data.Uint8List nullValueDescriptor =
     $convert.base64Decode('CglOdWxsVmFsdWUSDgoKTlVMTF9WQUxVRRAA');
+
 @$core.Deprecated('Use structDescriptor instead')
 const Struct$json = {
   '1': 'Struct',
@@ -55,7 +60,10 @@ const Struct_FieldsEntry$json = {
 
 /// Descriptor for `Struct`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List structDescriptor = $convert.base64Decode(
-    'CgZTdHJ1Y3QSOwoGZmllbGRzGAEgAygLMiMuZ29vZ2xlLnByb3RvYnVmLlN0cnVjdC5GaWVsZHNFbnRyeVIGZmllbGRzGlEKC0ZpZWxkc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EiwKBXZhbHVlGAIgASgLMhYuZ29vZ2xlLnByb3RvYnVmLlZhbHVlUgV2YWx1ZToCOAE=');
+    'CgZTdHJ1Y3QSOwoGZmllbGRzGAEgAygLMiMuZ29vZ2xlLnByb3RvYnVmLlN0cnVjdC5GaWVsZH'
+    'NFbnRyeVIGZmllbGRzGlEKC0ZpZWxkc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EiwKBXZhbHVl'
+    'GAIgASgLMhYuZ29vZ2xlLnByb3RvYnVmLlZhbHVlUgV2YWx1ZToCOAE=');
+
 @$core.Deprecated('Use valueDescriptor instead')
 const Value$json = {
   '1': 'Value',
@@ -98,7 +106,13 @@ const Value$json = {
 
 /// Descriptor for `Value`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List valueDescriptor = $convert.base64Decode(
-    'CgVWYWx1ZRI7CgpudWxsX3ZhbHVlGAEgASgOMhouZ29vZ2xlLnByb3RvYnVmLk51bGxWYWx1ZUgAUgludWxsVmFsdWUSIwoMbnVtYmVyX3ZhbHVlGAIgASgBSABSC251bWJlclZhbHVlEiMKDHN0cmluZ192YWx1ZRgDIAEoCUgAUgtzdHJpbmdWYWx1ZRIfCgpib29sX3ZhbHVlGAQgASgISABSCWJvb2xWYWx1ZRI8CgxzdHJ1Y3RfdmFsdWUYBSABKAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0SABSC3N0cnVjdFZhbHVlEjsKCmxpc3RfdmFsdWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYuTGlzdFZhbHVlSABSCWxpc3RWYWx1ZUIGCgRraW5k');
+    'CgVWYWx1ZRI7CgpudWxsX3ZhbHVlGAEgASgOMhouZ29vZ2xlLnByb3RvYnVmLk51bGxWYWx1ZU'
+    'gAUgludWxsVmFsdWUSIwoMbnVtYmVyX3ZhbHVlGAIgASgBSABSC251bWJlclZhbHVlEiMKDHN0'
+    'cmluZ192YWx1ZRgDIAEoCUgAUgtzdHJpbmdWYWx1ZRIfCgpib29sX3ZhbHVlGAQgASgISABSCW'
+    'Jvb2xWYWx1ZRI8CgxzdHJ1Y3RfdmFsdWUYBSABKAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0'
+    'SABSC3N0cnVjdFZhbHVlEjsKCmxpc3RfdmFsdWUYBiABKAsyGi5nb29nbGUucHJvdG9idWYuTG'
+    'lzdFZhbHVlSABSCWxpc3RWYWx1ZUIGCgRraW5k');
+
 @$core.Deprecated('Use listValueDescriptor instead')
 const ListValue$json = {
   '1': 'ListValue',
@@ -116,4 +130,5 @@ const ListValue$json = {
 
 /// Descriptor for `ListValue`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List listValueDescriptor = $convert.base64Decode(
-    'CglMaXN0VmFsdWUSLgoGdmFsdWVzGAEgAygLMhYuZ29vZ2xlLnByb3RvYnVmLlZhbHVlUgZ2YWx1ZXM=');
+    'CglMaXN0VmFsdWUSLgoGdmFsdWVzGAEgAygLMhYuZ29vZ2xlLnByb3RvYnVmLlZhbHVlUgZ2YW'
+    'x1ZXM=');

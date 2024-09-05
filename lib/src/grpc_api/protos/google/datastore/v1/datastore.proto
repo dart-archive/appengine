@@ -1,4 +1,4 @@
-// Copyright 2019 Google LLC.
+// Copyright 2024 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -19,11 +19,15 @@ package google.datastore.v1;
 import "google/api/annotations.proto";
 import "google/api/client.proto";
 import "google/api/field_behavior.proto";
+import "google/api/routing.proto";
+import "google/datastore/v1/aggregation_result.proto";
 import "google/datastore/v1/entity.proto";
 import "google/datastore/v1/query.proto";
+import "google/datastore/v1/query_profile.proto";
+import "google/protobuf/timestamp.proto";
 
 option csharp_namespace = "Google.Cloud.Datastore.V1";
-option go_package = "google.golang.org/genproto/googleapis/datastore/v1;datastore";
+option go_package = "cloud.google.com/go/datastore/apiv1/datastorepb;datastorepb";
 option java_multiple_files = true;
 option java_outer_classname = "DatastoreProto";
 option java_package = "com.google.datastore.v1";
@@ -49,6 +53,10 @@ service Datastore {
       post: "/v1/projects/{project_id}:lookup"
       body: "*"
     };
+    option (google.api.routing) = {
+      routing_parameters { field: "project_id" }
+      routing_parameters { field: "database_id" }
+    };
     option (google.api.method_signature) = "project_id,read_options,keys";
   }
 
@@ -58,13 +66,35 @@ service Datastore {
       post: "/v1/projects/{project_id}:runQuery"
       body: "*"
     };
+    option (google.api.routing) = {
+      routing_parameters { field: "project_id" }
+      routing_parameters { field: "database_id" }
+    };
+  }
+
+  // Runs an aggregation query.
+  rpc RunAggregationQuery(RunAggregationQueryRequest)
+      returns (RunAggregationQueryResponse) {
+    option (google.api.http) = {
+      post: "/v1/projects/{project_id}:runAggregationQuery"
+      body: "*"
+    };
+    option (google.api.routing) = {
+      routing_parameters { field: "project_id" }
+      routing_parameters { field: "database_id" }
+    };
   }
 
   // Begins a new transaction.
-  rpc BeginTransaction(BeginTransactionRequest) returns (BeginTransactionResponse) {
+  rpc BeginTransaction(BeginTransactionRequest)
+      returns (BeginTransactionResponse) {
     option (google.api.http) = {
       post: "/v1/projects/{project_id}:beginTransaction"
       body: "*"
+    };
+    option (google.api.routing) = {
+      routing_parameters { field: "project_id" }
+      routing_parameters { field: "database_id" }
     };
     option (google.api.method_signature) = "project_id";
   }
@@ -76,7 +106,12 @@ service Datastore {
       post: "/v1/projects/{project_id}:commit"
       body: "*"
     };
-    option (google.api.method_signature) = "project_id,mode,transaction,mutations";
+    option (google.api.routing) = {
+      routing_parameters { field: "project_id" }
+      routing_parameters { field: "database_id" }
+    };
+    option (google.api.method_signature) =
+        "project_id,mode,transaction,mutations";
     option (google.api.method_signature) = "project_id,mode,mutations";
   }
 
@@ -85,6 +120,10 @@ service Datastore {
     option (google.api.http) = {
       post: "/v1/projects/{project_id}:rollback"
       body: "*"
+    };
+    option (google.api.routing) = {
+      routing_parameters { field: "project_id" }
+      routing_parameters { field: "database_id" }
     };
     option (google.api.method_signature) = "project_id,transaction";
   }
@@ -96,6 +135,10 @@ service Datastore {
       post: "/v1/projects/{project_id}:allocateIds"
       body: "*"
     };
+    option (google.api.routing) = {
+      routing_parameters { field: "project_id" }
+      routing_parameters { field: "database_id" }
+    };
     option (google.api.method_signature) = "project_id,keys";
   }
 
@@ -106,6 +149,10 @@ service Datastore {
       post: "/v1/projects/{project_id}:reserveIds"
       body: "*"
     };
+    option (google.api.routing) = {
+      routing_parameters { field: "project_id" }
+      routing_parameters { field: "database_id" }
+    };
     option (google.api.method_signature) = "project_id,keys";
   }
 }
@@ -115,11 +162,25 @@ message LookupRequest {
   // Required. The ID of the project against which to make the request.
   string project_id = 8 [(google.api.field_behavior) = REQUIRED];
 
+  // The ID of the database against which to make the request.
+  //
+  // '(default)' is not allowed; please use empty string '' to refer the default
+  // database.
+  string database_id = 9;
+
   // The options for this lookup request.
   ReadOptions read_options = 1;
 
   // Required. Keys of entities to look up.
   repeated Key keys = 3 [(google.api.field_behavior) = REQUIRED];
+
+  // The properties to return. Defaults to returning all properties.
+  //
+  // If this field is set and an entity has a property not referenced in the
+  // mask, it will be absent from [LookupResponse.found.entity.properties][].
+  //
+  // The entity's key is always returned.
+  PropertyMask property_mask = 5;
 }
 
 // The response for [Datastore.Lookup][google.datastore.v1.Datastore.Lookup].
@@ -138,12 +199,30 @@ message LookupResponse {
   // order of results in this field is undefined and has no relation to the
   // order of the keys in the input.
   repeated Key deferred = 3;
+
+  // The identifier of the transaction that was started as part of this Lookup
+  // request.
+  //
+  // Set only when
+  // [ReadOptions.new_transaction][google.datastore.v1.ReadOptions.new_transaction]
+  // was set in
+  // [LookupRequest.read_options][google.datastore.v1.LookupRequest.read_options].
+  bytes transaction = 5;
+
+  // The time at which these entities were read or found missing.
+  google.protobuf.Timestamp read_time = 7;
 }
 
 // The request for [Datastore.RunQuery][google.datastore.v1.Datastore.RunQuery].
 message RunQueryRequest {
   // Required. The ID of the project against which to make the request.
   string project_id = 8 [(google.api.field_behavior) = REQUIRED];
+
+  // The ID of the database against which to make the request.
+  //
+  // '(default)' is not allowed; please use empty string '' to refer the default
+  // database.
+  string database_id = 9;
 
   // Entities are partitioned into subsets, identified by a partition ID.
   // Queries are scoped to a single partition.
@@ -159,30 +238,123 @@ message RunQueryRequest {
     // The query to run.
     Query query = 3;
 
-    // The GQL query to run.
+    // The GQL query to run. This query must be a non-aggregation query.
     GqlQuery gql_query = 7;
   }
+
+  // The properties to return.
+  // This field must not be set for a projection query.
+  //
+  // See
+  // [LookupRequest.property_mask][google.datastore.v1.LookupRequest.property_mask].
+  PropertyMask property_mask = 10;
+
+  // Optional. Explain options for the query. If set, additional query
+  // statistics will be returned. If not, only query results will be returned.
+  ExplainOptions explain_options = 12 [(google.api.field_behavior) = OPTIONAL];
 }
 
-// The response for [Datastore.RunQuery][google.datastore.v1.Datastore.RunQuery].
+// The response for
+// [Datastore.RunQuery][google.datastore.v1.Datastore.RunQuery].
 message RunQueryResponse {
   // A batch of query results (always present).
   QueryResultBatch batch = 1;
 
   // The parsed form of the `GqlQuery` from the request, if it was set.
   Query query = 2;
+
+  // The identifier of the transaction that was started as part of this
+  // RunQuery request.
+  //
+  // Set only when
+  // [ReadOptions.new_transaction][google.datastore.v1.ReadOptions.new_transaction]
+  // was set in
+  // [RunQueryRequest.read_options][google.datastore.v1.RunQueryRequest.read_options].
+  bytes transaction = 5;
+
+  // Query explain metrics. This is only present when the
+  // [RunQueryRequest.explain_options][google.datastore.v1.RunQueryRequest.explain_options]
+  // is provided, and it is sent only once with the last response in the stream.
+  ExplainMetrics explain_metrics = 9;
 }
 
-// The request for [Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].
+// The request for
+// [Datastore.RunAggregationQuery][google.datastore.v1.Datastore.RunAggregationQuery].
+message RunAggregationQueryRequest {
+  // Required. The ID of the project against which to make the request.
+  string project_id = 8 [(google.api.field_behavior) = REQUIRED];
+
+  // The ID of the database against which to make the request.
+  //
+  // '(default)' is not allowed; please use empty string '' to refer the default
+  // database.
+  string database_id = 9;
+
+  // Entities are partitioned into subsets, identified by a partition ID.
+  // Queries are scoped to a single partition.
+  // This partition ID is normalized with the standard default context
+  // partition ID.
+  PartitionId partition_id = 2;
+
+  // The options for this query.
+  ReadOptions read_options = 1;
+
+  // The type of query.
+  oneof query_type {
+    // The query to run.
+    AggregationQuery aggregation_query = 3;
+
+    // The GQL query to run. This query must be an aggregation query.
+    GqlQuery gql_query = 7;
+  }
+
+  // Optional. Explain options for the query. If set, additional query
+  // statistics will be returned. If not, only query results will be returned.
+  ExplainOptions explain_options = 11 [(google.api.field_behavior) = OPTIONAL];
+}
+
+// The response for
+// [Datastore.RunAggregationQuery][google.datastore.v1.Datastore.RunAggregationQuery].
+message RunAggregationQueryResponse {
+  // A batch of aggregation results. Always present.
+  AggregationResultBatch batch = 1;
+
+  // The parsed form of the `GqlQuery` from the request, if it was set.
+  AggregationQuery query = 2;
+
+  // The identifier of the transaction that was started as part of this
+  // RunAggregationQuery request.
+  //
+  // Set only when
+  // [ReadOptions.new_transaction][google.datastore.v1.ReadOptions.new_transaction]
+  // was set in
+  // [RunAggregationQueryRequest.read_options][google.datastore.v1.RunAggregationQueryRequest.read_options].
+  bytes transaction = 5;
+
+  // Query explain metrics. This is only present when the
+  // [RunAggregationQueryRequest.explain_options][google.datastore.v1.RunAggregationQueryRequest.explain_options]
+  // is provided, and it is sent only once with the last response in the stream.
+  ExplainMetrics explain_metrics = 9;
+}
+
+// The request for
+// [Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].
 message BeginTransactionRequest {
   // Required. The ID of the project against which to make the request.
   string project_id = 8 [(google.api.field_behavior) = REQUIRED];
+
+  // The ID of the database against which to make the request.
+  //
+  // '(default)' is not allowed; please use empty string '' to refer the default
+  // database.
+  string database_id = 9;
 
   // Options for a new transaction.
   TransactionOptions transaction_options = 10;
 }
 
-// The response for [Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].
+// The response for
+// [Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].
 message BeginTransactionResponse {
   // The transaction identifier (always present).
   bytes transaction = 1;
@@ -193,16 +365,21 @@ message RollbackRequest {
   // Required. The ID of the project against which to make the request.
   string project_id = 8 [(google.api.field_behavior) = REQUIRED];
 
+  // The ID of the database against which to make the request.
+  //
+  // '(default)' is not allowed; please use empty string '' to refer the default
+  // database.
+  string database_id = 9;
+
   // Required. The transaction identifier, returned by a call to
   // [Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].
   bytes transaction = 1 [(google.api.field_behavior) = REQUIRED];
 }
 
-// The response for [Datastore.Rollback][google.datastore.v1.Datastore.Rollback].
-// (an empty message).
-message RollbackResponse {
-
-}
+// The response for
+// [Datastore.Rollback][google.datastore.v1.Datastore.Rollback]. (an empty
+// message).
+message RollbackResponse {}
 
 // The request for [Datastore.Commit][google.datastore.v1.Datastore.Commit].
 message CommitRequest {
@@ -223,6 +400,12 @@ message CommitRequest {
   // Required. The ID of the project against which to make the request.
   string project_id = 8 [(google.api.field_behavior) = REQUIRED];
 
+  // The ID of the database against which to make the request.
+  //
+  // '(default)' is not allowed; please use empty string '' to refer the default
+  // database.
+  string database_id = 9;
+
   // The type of commit to perform. Defaults to `TRANSACTIONAL`.
   Mode mode = 5;
 
@@ -232,6 +415,12 @@ message CommitRequest {
     // transaction identifier is returned by a call to
     // [Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].
     bytes transaction = 1;
+
+    // Options for beginning a new transaction for this request.
+    // The transaction is committed when the request completes. If specified,
+    // [TransactionOptions.mode][google.datastore.v1.TransactionOptions] must be
+    // [TransactionOptions.ReadWrite][google.datastore.v1.TransactionOptions.ReadWrite].
+    TransactionOptions single_use_transaction = 10;
   }
 
   // The mutations to perform.
@@ -259,42 +448,56 @@ message CommitResponse {
   // The number of index entries updated during the commit, or zero if none were
   // updated.
   int32 index_updates = 4;
+
+  // The transaction commit timestamp. Not set for non-transactional commits.
+  google.protobuf.Timestamp commit_time = 8;
 }
 
-// The request for [Datastore.AllocateIds][google.datastore.v1.Datastore.AllocateIds].
+// The request for
+// [Datastore.AllocateIds][google.datastore.v1.Datastore.AllocateIds].
 message AllocateIdsRequest {
   // Required. The ID of the project against which to make the request.
   string project_id = 8 [(google.api.field_behavior) = REQUIRED];
 
-  // Required. A list of keys with incomplete key paths for which to allocate IDs.
-  // No key may be reserved/read-only.
+  // The ID of the database against which to make the request.
+  //
+  // '(default)' is not allowed; please use empty string '' to refer the default
+  // database.
+  string database_id = 9;
+
+  // Required. A list of keys with incomplete key paths for which to allocate
+  // IDs. No key may be reserved/read-only.
   repeated Key keys = 1 [(google.api.field_behavior) = REQUIRED];
 }
 
-// The response for [Datastore.AllocateIds][google.datastore.v1.Datastore.AllocateIds].
+// The response for
+// [Datastore.AllocateIds][google.datastore.v1.Datastore.AllocateIds].
 message AllocateIdsResponse {
   // The keys specified in the request (in the same order), each with
   // its key path completed with a newly allocated ID.
   repeated Key keys = 1;
 }
 
-// The request for [Datastore.ReserveIds][google.datastore.v1.Datastore.ReserveIds].
+// The request for
+// [Datastore.ReserveIds][google.datastore.v1.Datastore.ReserveIds].
 message ReserveIdsRequest {
   // Required. The ID of the project against which to make the request.
   string project_id = 8 [(google.api.field_behavior) = REQUIRED];
 
-  // If not empty, the ID of the database against which to make the request.
+  // The ID of the database against which to make the request.
+  //
+  // '(default)' is not allowed; please use empty string '' to refer the default
+  // database.
   string database_id = 9;
 
-  // Required. A list of keys with complete key paths whose numeric IDs should not be
-  // auto-allocated.
+  // Required. A list of keys with complete key paths whose numeric IDs should
+  // not be auto-allocated.
   repeated Key keys = 1 [(google.api.field_behavior) = REQUIRED];
 }
 
-// The response for [Datastore.ReserveIds][google.datastore.v1.Datastore.ReserveIds].
-message ReserveIdsResponse {
-
-}
+// The response for
+// [Datastore.ReserveIds][google.datastore.v1.Datastore.ReserveIds].
+message ReserveIdsResponse {}
 
 // A mutation to apply to an entity.
 message Mutation {
@@ -328,10 +531,26 @@ message Mutation {
   // with the current version of the entity on the server. Conflicting mutations
   // are not applied, and are marked as such in MutationResult.
   oneof conflict_detection_strategy {
-    // The version of the entity that this mutation is being applied to. If this
-    // does not match the current version on the server, the mutation conflicts.
+    // The version of the entity that this mutation is being applied
+    // to. If this does not match the current version on the server, the
+    // mutation conflicts.
     int64 base_version = 8;
+
+    // The update time of the entity that this mutation is being applied
+    // to. If this does not match the current update time on the server, the
+    // mutation conflicts.
+    google.protobuf.Timestamp update_time = 11;
   }
+
+  // The properties to write in this mutation.
+  // None of the properties in the mask may have a reserved name, except for
+  // `__key__`.
+  // This field is ignored for `delete`.
+  //
+  // If the entity already exists, only properties referenced in the mask are
+  // updated, others are left untouched.
+  // Properties referenced in the mask but not in the entity are deleted.
+  PropertyMask property_mask = 9;
 }
 
 // The result of applying a mutation.
@@ -347,9 +566,35 @@ message MutationResult {
   // than the version of any possible future entity.
   int64 version = 4;
 
+  // The create time of the entity. This field will not be set after a 'delete'.
+  google.protobuf.Timestamp create_time = 7;
+
+  // The update time of the entity on the server after processing the mutation.
+  // If the mutation doesn't change anything on the server, then the timestamp
+  // will be the update timestamp of the current entity. This field will not be
+  // set after a 'delete'.
+  google.protobuf.Timestamp update_time = 6;
+
   // Whether a conflict was detected for this mutation. Always false when a
   // conflict detection strategy field is not set in the mutation.
   bool conflict_detected = 5;
+}
+
+// The set of arbitrarily nested property paths used to restrict an operation to
+// only a subset of properties in an entity.
+message PropertyMask {
+  // The paths to the properties covered by this mask.
+  //
+  // A path is a list of property names separated by dots (`.`), for example
+  // `foo.bar` means the property `bar` inside the entity property `foo` inside
+  // the entity associated with this path.
+  //
+  // If a property name contains a dot `.` or a backslash `\`, then that
+  // name must be escaped.
+  //
+  // A path must not be empty, and may not reference a value inside an
+  // [array value][google.datastore.v1.Value.array_value].
+  repeated string paths = 1;
 }
 
 // The options shared by read requests.
@@ -366,26 +611,51 @@ message ReadOptions {
     EVENTUAL = 2;
   }
 
-  // If not specified, lookups and ancestor queries default to
-  // `read_consistency`=`STRONG`, global queries default to
-  // `read_consistency`=`EVENTUAL`.
+  // For Cloud Datastore, if read_consistency is not specified, then lookups and
+  // ancestor queries default to `read_consistency`=`STRONG`, global queries
+  // default to `read_consistency`=`EVENTUAL`.
+  //
+  // For Cloud Firestore in Datastore mode, if read_consistency is not specified
+  // then lookups and all queries default to `read_consistency`=`STRONG`.
+  //
+  // Explicitly setting `read_consistency`=`EVENTUAL` will result in eventually
+  // consistent lookups & queries in both Cloud Datastore & Cloud Firestore in
+  // Datastore mode.
   oneof consistency_type {
     // The non-transactional read consistency to use.
-    // Cannot be set to `STRONG` for global queries.
     ReadConsistency read_consistency = 1;
 
     // The identifier of the transaction in which to read. A
     // transaction identifier is returned by a call to
     // [Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction].
     bytes transaction = 2;
+
+    // Options for beginning a new transaction for this request.
+    //
+    // The new transaction identifier will be returned in the corresponding
+    // response as either
+    // [LookupResponse.transaction][google.datastore.v1.LookupResponse.transaction]
+    // or
+    // [RunQueryResponse.transaction][google.datastore.v1.RunQueryResponse.transaction].
+    TransactionOptions new_transaction = 3;
+
+    // Reads entities as they were at the given time. This value is only
+    // supported for Cloud Firestore in Datastore mode.
+    //
+    // This must be a microsecond precision timestamp within the past one hour,
+    // or if Point-in-Time Recovery is enabled, can additionally be a whole
+    // minute timestamp within the past 7 days.
+    google.protobuf.Timestamp read_time = 4;
   }
 }
 
 // Options for beginning a new transaction.
 //
 // Transactions can be created explicitly with calls to
-// [Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction] or implicitly by setting
-// [ReadOptions.new_transaction][google.datastore.v1.ReadOptions.new_transaction] in read requests.
+// [Datastore.BeginTransaction][google.datastore.v1.Datastore.BeginTransaction]
+// or implicitly by setting
+// [ReadOptions.new_transaction][google.datastore.v1.ReadOptions.new_transaction]
+// in read requests.
 message TransactionOptions {
   // Options specific to read / write transactions.
   message ReadWrite {
@@ -395,7 +665,12 @@ message TransactionOptions {
 
   // Options specific to read-only transactions.
   message ReadOnly {
-
+    // Reads entities at the given time.
+    //
+    // This must be a microsecond precision timestamp within the past one hour,
+    // or if Point-in-Time Recovery is enabled, can additionally be a whole
+    // minute timestamp within the past 7 days.
+    google.protobuf.Timestamp read_time = 1;
   }
 
   // The `mode` of the transaction, indicating whether write operations are

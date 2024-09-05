@@ -1,12 +1,16 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/type/phone_number.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
-import 'dart:core' as $core;
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:convert' as $convert;
+import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
 @$core.Deprecated('Use phoneNumberDescriptor instead')
@@ -42,4 +46,8 @@ const PhoneNumber_ShortCode$json = {
 
 /// Descriptor for `PhoneNumber`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List phoneNumberDescriptor = $convert.base64Decode(
-    'CgtQaG9uZU51bWJlchIhCgtlMTY0X251bWJlchgBIAEoCUgAUgplMTY0TnVtYmVyEkMKCnNob3J0X2NvZGUYAiABKAsyIi5nb29nbGUudHlwZS5QaG9uZU51bWJlci5TaG9ydENvZGVIAFIJc2hvcnRDb2RlEhwKCWV4dGVuc2lvbhgDIAEoCVIJZXh0ZW5zaW9uGkQKCVNob3J0Q29kZRIfCgtyZWdpb25fY29kZRgBIAEoCVIKcmVnaW9uQ29kZRIWCgZudW1iZXIYAiABKAlSBm51bWJlckIGCgRraW5k');
+    'CgtQaG9uZU51bWJlchIhCgtlMTY0X251bWJlchgBIAEoCUgAUgplMTY0TnVtYmVyEkMKCnNob3'
+    'J0X2NvZGUYAiABKAsyIi5nb29nbGUudHlwZS5QaG9uZU51bWJlci5TaG9ydENvZGVIAFIJc2hv'
+    'cnRDb2RlEhwKCWV4dGVuc2lvbhgDIAEoCVIJZXh0ZW5zaW9uGkQKCVNob3J0Q29kZRIfCgtyZW'
+    'dpb25fY29kZRgBIAEoCVIKcmVnaW9uQ29kZRIWCgZudW1iZXIYAiABKAlSBm51bWJlckIGCgRr'
+    'aW5k');

@@ -1,195 +1,249 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/api/service.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../protobuf/api.pb.dart' as $0;
-import '../protobuf/type.pb.dart' as $1;
-import 'documentation.pb.dart' as $2;
-import 'backend.pb.dart' as $3;
-import 'http.pb.dart' as $4;
-import 'quota.pb.dart' as $5;
-import 'auth.pb.dart' as $6;
-import 'context.pb.dart' as $7;
-import 'usage.pb.dart' as $8;
-import 'endpoint.pb.dart' as $9;
-import '../protobuf/wrappers.pb.dart' as $10;
-import 'control.pb.dart' as $11;
-import 'log.pb.dart' as $12;
-import 'metric.pb.dart' as $13;
-import 'monitored_resource.pb.dart' as $14;
-import 'billing.pb.dart' as $15;
-import 'logging.pb.dart' as $16;
-import 'monitoring.pb.dart' as $17;
-import 'system_parameter.pb.dart' as $18;
-import 'source_info.pb.dart' as $19;
+import '../protobuf/api.pb.dart' as $84;
+import '../protobuf/type.pb.dart' as $83;
+import '../protobuf/wrappers.pb.dart' as $73;
+import 'auth.pb.dart' as $88;
+import 'backend.pb.dart' as $86;
+import 'billing.pb.dart' as $94;
+import 'client.pb.dart' as $99;
+import 'context.pb.dart' as $89;
+import 'control.pb.dart' as $92;
+import 'documentation.pb.dart' as $85;
+import 'endpoint.pb.dart' as $91;
+import 'http.pb.dart' as $55;
+import 'log.pb.dart' as $93;
+import 'logging.pb.dart' as $95;
+import 'metric.pb.dart' as $69;
+import 'monitored_resource.pb.dart' as $67;
+import 'monitoring.pb.dart' as $96;
+import 'quota.pb.dart' as $87;
+import 'source_info.pb.dart' as $98;
+import 'system_parameter.pb.dart' as $97;
+import 'usage.pb.dart' as $90;
 
+///  `Service` is the root object of Google API service configuration (service
+///  config). It describes the basic information about a logical service,
+///  such as the service name and the user-facing title, and delegates other
+///  aspects to sub-sections. Each sub-section is either a proto message or a
+///  repeated proto message that configures a specific aspect, such as auth.
+///  For more information, see each proto message definition.
+///
+///  Example:
+///
+///      type: google.api.Service
+///      name: calendar.googleapis.com
+///      title: Google Calendar API
+///      apis:
+///      - name: google.calendar.v3.Calendar
+///
+///      visibility:
+///        rules:
+///        - selector: "google.calendar.v3.*"
+///          restriction: PREVIEW
+///      backend:
+///        rules:
+///        - selector: "google.calendar.v3.*"
+///          address: calendar.example.com
+///
+///      authentication:
+///        providers:
+///        - id: google_calendar_auth
+///          jwks_uri: https://www.googleapis.com/oauth2/v1/certs
+///          issuer: https://securetoken.google.com
+///        rules:
+///        - selector: "*"
+///          requirements:
+///            provider_id: google_calendar_auth
 class Service extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Service',
-      package: const $pb.PackageName($core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'google.api'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'title')
-    ..pc<$0.Api>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'apis', $pb.PbFieldType.PM,
-        subBuilder: $0.Api.create)
-    ..pc<$1.Type>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'types', $pb.PbFieldType.PM,
-        subBuilder: $1.Type.create)
-    ..pc<$1.Enum>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'enums', $pb.PbFieldType.PM,
-        subBuilder: $1.Enum.create)
-    ..aOM<$2.Documentation>(
-        6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'documentation',
-        subBuilder: $2.Documentation.create)
-    ..aOM<$3.Backend>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'backend', subBuilder: $3.Backend.create)
-    ..aOM<$4.Http>(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'http', subBuilder: $4.Http.create)
-    ..aOM<$5.Quota>(10, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'quota', subBuilder: $5.Quota.create)
-    ..aOM<$6.Authentication>(11, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'authentication', subBuilder: $6.Authentication.create)
-    ..aOM<$7.Context>(12, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'context', subBuilder: $7.Context.create)
-    ..aOM<$8.Usage>(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'usage', subBuilder: $8.Usage.create)
-    ..pc<$9.Endpoint>(18, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'endpoints', $pb.PbFieldType.PM, subBuilder: $9.Endpoint.create)
-    ..aOM<$10.UInt32Value>(20, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'configVersion', subBuilder: $10.UInt32Value.create)
-    ..aOM<$11.Control>(21, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'control', subBuilder: $11.Control.create)
-    ..aOS(22, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'producerProjectId')
-    ..pc<$12.LogDescriptor>(23, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'logs', $pb.PbFieldType.PM, subBuilder: $12.LogDescriptor.create)
-    ..pc<$13.MetricDescriptor>(24, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'metrics', $pb.PbFieldType.PM, subBuilder: $13.MetricDescriptor.create)
-    ..pc<$14.MonitoredResourceDescriptor>(25, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'monitoredResources', $pb.PbFieldType.PM, subBuilder: $14.MonitoredResourceDescriptor.create)
-    ..aOM<$15.Billing>(26, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'billing', subBuilder: $15.Billing.create)
-    ..aOM<$16.Logging>(27, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'logging', subBuilder: $16.Logging.create)
-    ..aOM<$17.Monitoring>(28, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'monitoring', subBuilder: $17.Monitoring.create)
-    ..aOM<$18.SystemParameters>(29, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'systemParameters', subBuilder: $18.SystemParameters.create)
-    ..aOS(33, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'id')
-    ..aOM<$19.SourceInfo>(37, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'sourceInfo', subBuilder: $19.SourceInfo.create)
-    ..hasRequiredFields = false;
-
-  Service._() : super();
   factory Service({
     $core.String? name,
     $core.String? title,
-    $core.Iterable<$0.Api>? apis,
-    $core.Iterable<$1.Type>? types,
-    $core.Iterable<$1.Enum>? enums,
-    $2.Documentation? documentation,
-    $3.Backend? backend,
-    $4.Http? http,
-    $5.Quota? quota,
-    $6.Authentication? authentication,
-    $7.Context? context,
-    $8.Usage? usage,
-    $core.Iterable<$9.Endpoint>? endpoints,
-    @$core.Deprecated('This field is deprecated.')
-        $10.UInt32Value? configVersion,
-    $11.Control? control,
+    $core.Iterable<$84.Api>? apis,
+    $core.Iterable<$83.Type>? types,
+    $core.Iterable<$83.Enum>? enums,
+    $85.Documentation? documentation,
+    $86.Backend? backend,
+    $55.Http? http,
+    $87.Quota? quota,
+    $88.Authentication? authentication,
+    $89.Context? context,
+    $90.Usage? usage,
+    $core.Iterable<$91.Endpoint>? endpoints,
+    $73.UInt32Value? configVersion,
+    $92.Control? control,
     $core.String? producerProjectId,
-    $core.Iterable<$12.LogDescriptor>? logs,
-    $core.Iterable<$13.MetricDescriptor>? metrics,
-    $core.Iterable<$14.MonitoredResourceDescriptor>? monitoredResources,
-    $15.Billing? billing,
-    $16.Logging? logging,
-    $17.Monitoring? monitoring,
-    $18.SystemParameters? systemParameters,
+    $core.Iterable<$93.LogDescriptor>? logs,
+    $core.Iterable<$69.MetricDescriptor>? metrics,
+    $core.Iterable<$67.MonitoredResourceDescriptor>? monitoredResources,
+    $94.Billing? billing,
+    $95.Logging? logging,
+    $96.Monitoring? monitoring,
+    $97.SystemParameters? systemParameters,
     $core.String? id,
-    $19.SourceInfo? sourceInfo,
+    $98.SourceInfo? sourceInfo,
+    $99.Publishing? publishing,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (title != null) {
-      _result.title = title;
+      $result.title = title;
     }
     if (apis != null) {
-      _result.apis.addAll(apis);
+      $result.apis.addAll(apis);
     }
     if (types != null) {
-      _result.types.addAll(types);
+      $result.types.addAll(types);
     }
     if (enums != null) {
-      _result.enums.addAll(enums);
+      $result.enums.addAll(enums);
     }
     if (documentation != null) {
-      _result.documentation = documentation;
+      $result.documentation = documentation;
     }
     if (backend != null) {
-      _result.backend = backend;
+      $result.backend = backend;
     }
     if (http != null) {
-      _result.http = http;
+      $result.http = http;
     }
     if (quota != null) {
-      _result.quota = quota;
+      $result.quota = quota;
     }
     if (authentication != null) {
-      _result.authentication = authentication;
+      $result.authentication = authentication;
     }
     if (context != null) {
-      _result.context = context;
+      $result.context = context;
     }
     if (usage != null) {
-      _result.usage = usage;
+      $result.usage = usage;
     }
     if (endpoints != null) {
-      _result.endpoints.addAll(endpoints);
+      $result.endpoints.addAll(endpoints);
     }
     if (configVersion != null) {
-      // ignore: deprecated_member_use_from_same_package
-      _result.configVersion = configVersion;
+      $result.configVersion = configVersion;
     }
     if (control != null) {
-      _result.control = control;
+      $result.control = control;
     }
     if (producerProjectId != null) {
-      _result.producerProjectId = producerProjectId;
+      $result.producerProjectId = producerProjectId;
     }
     if (logs != null) {
-      _result.logs.addAll(logs);
+      $result.logs.addAll(logs);
     }
     if (metrics != null) {
-      _result.metrics.addAll(metrics);
+      $result.metrics.addAll(metrics);
     }
     if (monitoredResources != null) {
-      _result.monitoredResources.addAll(monitoredResources);
+      $result.monitoredResources.addAll(monitoredResources);
     }
     if (billing != null) {
-      _result.billing = billing;
+      $result.billing = billing;
     }
     if (logging != null) {
-      _result.logging = logging;
+      $result.logging = logging;
     }
     if (monitoring != null) {
-      _result.monitoring = monitoring;
+      $result.monitoring = monitoring;
     }
     if (systemParameters != null) {
-      _result.systemParameters = systemParameters;
+      $result.systemParameters = systemParameters;
     }
     if (id != null) {
-      _result.id = id;
+      $result.id = id;
     }
     if (sourceInfo != null) {
-      _result.sourceInfo = sourceInfo;
+      $result.sourceInfo = sourceInfo;
     }
-    return _result;
+    if (publishing != null) {
+      $result.publishing = publishing;
+    }
+    return $result;
   }
+  Service._() : super();
   factory Service.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Service.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Service',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'google.api'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOS(2, _omitFieldNames ? '' : 'title')
+    ..pc<$84.Api>(3, _omitFieldNames ? '' : 'apis', $pb.PbFieldType.PM,
+        subBuilder: $84.Api.create)
+    ..pc<$83.Type>(4, _omitFieldNames ? '' : 'types', $pb.PbFieldType.PM,
+        subBuilder: $83.Type.create)
+    ..pc<$83.Enum>(5, _omitFieldNames ? '' : 'enums', $pb.PbFieldType.PM,
+        subBuilder: $83.Enum.create)
+    ..aOM<$85.Documentation>(6, _omitFieldNames ? '' : 'documentation',
+        subBuilder: $85.Documentation.create)
+    ..aOM<$86.Backend>(8, _omitFieldNames ? '' : 'backend',
+        subBuilder: $86.Backend.create)
+    ..aOM<$55.Http>(9, _omitFieldNames ? '' : 'http',
+        subBuilder: $55.Http.create)
+    ..aOM<$87.Quota>(10, _omitFieldNames ? '' : 'quota',
+        subBuilder: $87.Quota.create)
+    ..aOM<$88.Authentication>(11, _omitFieldNames ? '' : 'authentication',
+        subBuilder: $88.Authentication.create)
+    ..aOM<$89.Context>(12, _omitFieldNames ? '' : 'context',
+        subBuilder: $89.Context.create)
+    ..aOM<$90.Usage>(15, _omitFieldNames ? '' : 'usage',
+        subBuilder: $90.Usage.create)
+    ..pc<$91.Endpoint>(
+        18, _omitFieldNames ? '' : 'endpoints', $pb.PbFieldType.PM,
+        subBuilder: $91.Endpoint.create)
+    ..aOM<$73.UInt32Value>(20, _omitFieldNames ? '' : 'configVersion',
+        subBuilder: $73.UInt32Value.create)
+    ..aOM<$92.Control>(21, _omitFieldNames ? '' : 'control',
+        subBuilder: $92.Control.create)
+    ..aOS(22, _omitFieldNames ? '' : 'producerProjectId')
+    ..pc<$93.LogDescriptor>(
+        23, _omitFieldNames ? '' : 'logs', $pb.PbFieldType.PM,
+        subBuilder: $93.LogDescriptor.create)
+    ..pc<$69.MetricDescriptor>(
+        24, _omitFieldNames ? '' : 'metrics', $pb.PbFieldType.PM,
+        subBuilder: $69.MetricDescriptor.create)
+    ..pc<$67.MonitoredResourceDescriptor>(
+        25, _omitFieldNames ? '' : 'monitoredResources', $pb.PbFieldType.PM,
+        subBuilder: $67.MonitoredResourceDescriptor.create)
+    ..aOM<$94.Billing>(26, _omitFieldNames ? '' : 'billing',
+        subBuilder: $94.Billing.create)
+    ..aOM<$95.Logging>(27, _omitFieldNames ? '' : 'logging',
+        subBuilder: $95.Logging.create)
+    ..aOM<$96.Monitoring>(28, _omitFieldNames ? '' : 'monitoring',
+        subBuilder: $96.Monitoring.create)
+    ..aOM<$97.SystemParameters>(29, _omitFieldNames ? '' : 'systemParameters',
+        subBuilder: $97.SystemParameters.create)
+    ..aOS(33, _omitFieldNames ? '' : 'id')
+    ..aOM<$98.SourceInfo>(37, _omitFieldNames ? '' : 'sourceInfo',
+        subBuilder: $98.SourceInfo.create)
+    ..aOM<$99.Publishing>(45, _omitFieldNames ? '' : 'publishing',
+        subBuilder: $99.Publishing.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -198,9 +252,10 @@ class Service extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Service copyWith(void Function(Service) updates) =>
-      super.copyWith((message) => updates(message as Service))
-          as Service; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Service)) as Service;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Service create() => Service._();
   Service createEmptyInstance() => create();
@@ -210,6 +265,10 @@ class Service extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Service>(create);
   static Service? _defaultInstance;
 
+  /// The service name, which is a DNS-like logical identifier for the
+  /// service, such as `calendar.googleapis.com`. The service name
+  /// typically goes through DNS verification to make sure the owner
+  /// of the service also owns the DNS name.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -222,6 +281,8 @@ class Service extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// The product title for this service, it is the name displayed in Google
+  /// Cloud Console.
   @$pb.TagNumber(2)
   $core.String get title => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -234,19 +295,40 @@ class Service extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearTitle() => clearField(2);
 
+  /// A list of API interfaces exported by this service. Only the `name` field
+  /// of the [google.protobuf.Api][google.protobuf.Api] needs to be provided by
+  /// the configuration author, as the remaining fields will be derived from the
+  /// IDL during the normalization process. It is an error to specify an API
+  /// interface here which cannot be resolved against the associated IDL files.
   @$pb.TagNumber(3)
-  $core.List<$0.Api> get apis => $_getList(2);
+  $core.List<$84.Api> get apis => $_getList(2);
 
+  ///  A list of all proto message types included in this API service.
+  ///  Types referenced directly or indirectly by the `apis` are automatically
+  ///  included.  Messages which are not referenced but shall be included, such as
+  ///  types used by the `google.protobuf.Any` type, should be listed here by
+  ///  name by the configuration author. Example:
+  ///
+  ///      types:
+  ///      - name: google.protobuf.Int32
   @$pb.TagNumber(4)
-  $core.List<$1.Type> get types => $_getList(3);
+  $core.List<$83.Type> get types => $_getList(3);
 
+  ///  A list of all enum types included in this API service.  Enums referenced
+  ///  directly or indirectly by the `apis` are automatically included.  Enums
+  ///  which are not referenced but shall be included should be listed here by
+  ///  name by the configuration author. Example:
+  ///
+  ///      enums:
+  ///      - name: google.someapi.v1.SomeEnum
   @$pb.TagNumber(5)
-  $core.List<$1.Enum> get enums => $_getList(4);
+  $core.List<$83.Enum> get enums => $_getList(4);
 
+  /// Additional API documentation.
   @$pb.TagNumber(6)
-  $2.Documentation get documentation => $_getN(5);
+  $85.Documentation get documentation => $_getN(5);
   @$pb.TagNumber(6)
-  set documentation($2.Documentation v) {
+  set documentation($85.Documentation v) {
     setField(6, v);
   }
 
@@ -255,12 +337,13 @@ class Service extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearDocumentation() => clearField(6);
   @$pb.TagNumber(6)
-  $2.Documentation ensureDocumentation() => $_ensure(5);
+  $85.Documentation ensureDocumentation() => $_ensure(5);
 
+  /// API backend configuration.
   @$pb.TagNumber(8)
-  $3.Backend get backend => $_getN(6);
+  $86.Backend get backend => $_getN(6);
   @$pb.TagNumber(8)
-  set backend($3.Backend v) {
+  set backend($86.Backend v) {
     setField(8, v);
   }
 
@@ -269,12 +352,13 @@ class Service extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   void clearBackend() => clearField(8);
   @$pb.TagNumber(8)
-  $3.Backend ensureBackend() => $_ensure(6);
+  $86.Backend ensureBackend() => $_ensure(6);
 
+  /// HTTP configuration.
   @$pb.TagNumber(9)
-  $4.Http get http => $_getN(7);
+  $55.Http get http => $_getN(7);
   @$pb.TagNumber(9)
-  set http($4.Http v) {
+  set http($55.Http v) {
     setField(9, v);
   }
 
@@ -283,12 +367,13 @@ class Service extends $pb.GeneratedMessage {
   @$pb.TagNumber(9)
   void clearHttp() => clearField(9);
   @$pb.TagNumber(9)
-  $4.Http ensureHttp() => $_ensure(7);
+  $55.Http ensureHttp() => $_ensure(7);
 
+  /// Quota configuration.
   @$pb.TagNumber(10)
-  $5.Quota get quota => $_getN(8);
+  $87.Quota get quota => $_getN(8);
   @$pb.TagNumber(10)
-  set quota($5.Quota v) {
+  set quota($87.Quota v) {
     setField(10, v);
   }
 
@@ -297,12 +382,13 @@ class Service extends $pb.GeneratedMessage {
   @$pb.TagNumber(10)
   void clearQuota() => clearField(10);
   @$pb.TagNumber(10)
-  $5.Quota ensureQuota() => $_ensure(8);
+  $87.Quota ensureQuota() => $_ensure(8);
 
+  /// Auth configuration.
   @$pb.TagNumber(11)
-  $6.Authentication get authentication => $_getN(9);
+  $88.Authentication get authentication => $_getN(9);
   @$pb.TagNumber(11)
-  set authentication($6.Authentication v) {
+  set authentication($88.Authentication v) {
     setField(11, v);
   }
 
@@ -311,12 +397,13 @@ class Service extends $pb.GeneratedMessage {
   @$pb.TagNumber(11)
   void clearAuthentication() => clearField(11);
   @$pb.TagNumber(11)
-  $6.Authentication ensureAuthentication() => $_ensure(9);
+  $88.Authentication ensureAuthentication() => $_ensure(9);
 
+  /// Context configuration.
   @$pb.TagNumber(12)
-  $7.Context get context => $_getN(10);
+  $89.Context get context => $_getN(10);
   @$pb.TagNumber(12)
-  set context($7.Context v) {
+  set context($89.Context v) {
     setField(12, v);
   }
 
@@ -325,12 +412,13 @@ class Service extends $pb.GeneratedMessage {
   @$pb.TagNumber(12)
   void clearContext() => clearField(12);
   @$pb.TagNumber(12)
-  $7.Context ensureContext() => $_ensure(10);
+  $89.Context ensureContext() => $_ensure(10);
 
+  /// Configuration controlling usage of this service.
   @$pb.TagNumber(15)
-  $8.Usage get usage => $_getN(11);
+  $90.Usage get usage => $_getN(11);
   @$pb.TagNumber(15)
-  set usage($8.Usage v) {
+  set usage($90.Usage v) {
     setField(15, v);
   }
 
@@ -339,34 +427,37 @@ class Service extends $pb.GeneratedMessage {
   @$pb.TagNumber(15)
   void clearUsage() => clearField(15);
   @$pb.TagNumber(15)
-  $8.Usage ensureUsage() => $_ensure(11);
+  $90.Usage ensureUsage() => $_ensure(11);
 
+  /// Configuration for network endpoints.  If this is empty, then an endpoint
+  /// with the same name as the service is automatically generated to service all
+  /// defined APIs.
   @$pb.TagNumber(18)
-  $core.List<$9.Endpoint> get endpoints => $_getList(12);
+  $core.List<$91.Endpoint> get endpoints => $_getList(12);
 
-  @$core.Deprecated('This field is deprecated.')
+  ///  Obsolete. Do not use.
+  ///
+  ///  This field has no semantic meaning. The service config compiler always
+  ///  sets this field to `3`.
   @$pb.TagNumber(20)
-  $10.UInt32Value get configVersion => $_getN(13);
-  @$core.Deprecated('This field is deprecated.')
+  $73.UInt32Value get configVersion => $_getN(13);
   @$pb.TagNumber(20)
-  set configVersion($10.UInt32Value v) {
+  set configVersion($73.UInt32Value v) {
     setField(20, v);
   }
 
-  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(20)
   $core.bool hasConfigVersion() => $_has(13);
-  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(20)
   void clearConfigVersion() => clearField(20);
-  @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(20)
-  $10.UInt32Value ensureConfigVersion() => $_ensure(13);
+  $73.UInt32Value ensureConfigVersion() => $_ensure(13);
 
+  /// Configuration for the service control plane.
   @$pb.TagNumber(21)
-  $11.Control get control => $_getN(14);
+  $92.Control get control => $_getN(14);
   @$pb.TagNumber(21)
-  set control($11.Control v) {
+  set control($92.Control v) {
     setField(21, v);
   }
 
@@ -375,8 +466,9 @@ class Service extends $pb.GeneratedMessage {
   @$pb.TagNumber(21)
   void clearControl() => clearField(21);
   @$pb.TagNumber(21)
-  $11.Control ensureControl() => $_ensure(14);
+  $92.Control ensureControl() => $_ensure(14);
 
+  /// The Google project that owns this service.
   @$pb.TagNumber(22)
   $core.String get producerProjectId => $_getSZ(15);
   @$pb.TagNumber(22)
@@ -389,20 +481,26 @@ class Service extends $pb.GeneratedMessage {
   @$pb.TagNumber(22)
   void clearProducerProjectId() => clearField(22);
 
+  /// Defines the logs used by this service.
   @$pb.TagNumber(23)
-  $core.List<$12.LogDescriptor> get logs => $_getList(16);
+  $core.List<$93.LogDescriptor> get logs => $_getList(16);
 
+  /// Defines the metrics used by this service.
   @$pb.TagNumber(24)
-  $core.List<$13.MetricDescriptor> get metrics => $_getList(17);
+  $core.List<$69.MetricDescriptor> get metrics => $_getList(17);
 
+  /// Defines the monitored resources used by this service. This is required
+  /// by the [Service.monitoring][google.api.Service.monitoring] and
+  /// [Service.logging][google.api.Service.logging] configurations.
   @$pb.TagNumber(25)
-  $core.List<$14.MonitoredResourceDescriptor> get monitoredResources =>
+  $core.List<$67.MonitoredResourceDescriptor> get monitoredResources =>
       $_getList(18);
 
+  /// Billing configuration.
   @$pb.TagNumber(26)
-  $15.Billing get billing => $_getN(19);
+  $94.Billing get billing => $_getN(19);
   @$pb.TagNumber(26)
-  set billing($15.Billing v) {
+  set billing($94.Billing v) {
     setField(26, v);
   }
 
@@ -411,12 +509,13 @@ class Service extends $pb.GeneratedMessage {
   @$pb.TagNumber(26)
   void clearBilling() => clearField(26);
   @$pb.TagNumber(26)
-  $15.Billing ensureBilling() => $_ensure(19);
+  $94.Billing ensureBilling() => $_ensure(19);
 
+  /// Logging configuration.
   @$pb.TagNumber(27)
-  $16.Logging get logging => $_getN(20);
+  $95.Logging get logging => $_getN(20);
   @$pb.TagNumber(27)
-  set logging($16.Logging v) {
+  set logging($95.Logging v) {
     setField(27, v);
   }
 
@@ -425,12 +524,13 @@ class Service extends $pb.GeneratedMessage {
   @$pb.TagNumber(27)
   void clearLogging() => clearField(27);
   @$pb.TagNumber(27)
-  $16.Logging ensureLogging() => $_ensure(20);
+  $95.Logging ensureLogging() => $_ensure(20);
 
+  /// Monitoring configuration.
   @$pb.TagNumber(28)
-  $17.Monitoring get monitoring => $_getN(21);
+  $96.Monitoring get monitoring => $_getN(21);
   @$pb.TagNumber(28)
-  set monitoring($17.Monitoring v) {
+  set monitoring($96.Monitoring v) {
     setField(28, v);
   }
 
@@ -439,12 +539,13 @@ class Service extends $pb.GeneratedMessage {
   @$pb.TagNumber(28)
   void clearMonitoring() => clearField(28);
   @$pb.TagNumber(28)
-  $17.Monitoring ensureMonitoring() => $_ensure(21);
+  $96.Monitoring ensureMonitoring() => $_ensure(21);
 
+  /// System parameter configuration.
   @$pb.TagNumber(29)
-  $18.SystemParameters get systemParameters => $_getN(22);
+  $97.SystemParameters get systemParameters => $_getN(22);
   @$pb.TagNumber(29)
-  set systemParameters($18.SystemParameters v) {
+  set systemParameters($97.SystemParameters v) {
     setField(29, v);
   }
 
@@ -453,8 +554,12 @@ class Service extends $pb.GeneratedMessage {
   @$pb.TagNumber(29)
   void clearSystemParameters() => clearField(29);
   @$pb.TagNumber(29)
-  $18.SystemParameters ensureSystemParameters() => $_ensure(22);
+  $97.SystemParameters ensureSystemParameters() => $_ensure(22);
 
+  /// A unique ID for a specific instance of this message, typically assigned
+  /// by the client for tracking purpose. Must be no longer than 63 characters
+  /// and only lower case letters, digits, '.', '_' and '-' are allowed. If
+  /// empty, the server may choose to generate one instead.
   @$pb.TagNumber(33)
   $core.String get id => $_getSZ(23);
   @$pb.TagNumber(33)
@@ -467,10 +572,11 @@ class Service extends $pb.GeneratedMessage {
   @$pb.TagNumber(33)
   void clearId() => clearField(33);
 
+  /// Output only. The source information for this configuration if available.
   @$pb.TagNumber(37)
-  $19.SourceInfo get sourceInfo => $_getN(24);
+  $98.SourceInfo get sourceInfo => $_getN(24);
   @$pb.TagNumber(37)
-  set sourceInfo($19.SourceInfo v) {
+  set sourceInfo($98.SourceInfo v) {
     setField(37, v);
   }
 
@@ -479,5 +585,26 @@ class Service extends $pb.GeneratedMessage {
   @$pb.TagNumber(37)
   void clearSourceInfo() => clearField(37);
   @$pb.TagNumber(37)
-  $19.SourceInfo ensureSourceInfo() => $_ensure(24);
+  $98.SourceInfo ensureSourceInfo() => $_ensure(24);
+
+  /// Settings for [Google Cloud Client
+  /// libraries](https://cloud.google.com/apis/docs/cloud-client-libraries)
+  /// generated from APIs defined as protocol buffers.
+  @$pb.TagNumber(45)
+  $99.Publishing get publishing => $_getN(25);
+  @$pb.TagNumber(45)
+  set publishing($99.Publishing v) {
+    setField(45, v);
+  }
+
+  @$pb.TagNumber(45)
+  $core.bool hasPublishing() => $_has(25);
+  @$pb.TagNumber(45)
+  void clearPublishing() => clearField(45);
+  @$pb.TagNumber(45)
+  $99.Publishing ensurePublishing() => $_ensure(25);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

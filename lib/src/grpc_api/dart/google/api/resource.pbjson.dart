@@ -1,12 +1,16 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/api/resource.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
-import 'dart:core' as $core;
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:convert' as $convert;
+import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
 @$core.Deprecated('Use resourceDescriptorDescriptor instead')
@@ -59,7 +63,15 @@ const ResourceDescriptor_Style$json = {
 
 /// Descriptor for `ResourceDescriptor`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List resourceDescriptorDescriptor = $convert.base64Decode(
-    'ChJSZXNvdXJjZURlc2NyaXB0b3ISEgoEdHlwZRgBIAEoCVIEdHlwZRIYCgdwYXR0ZXJuGAIgAygJUgdwYXR0ZXJuEh0KCm5hbWVfZmllbGQYAyABKAlSCW5hbWVGaWVsZBJACgdoaXN0b3J5GAQgASgOMiYuZ29vZ2xlLmFwaS5SZXNvdXJjZURlc2NyaXB0b3IuSGlzdG9yeVIHaGlzdG9yeRIWCgZwbHVyYWwYBSABKAlSBnBsdXJhbBIaCghzaW5ndWxhchgGIAEoCVIIc2luZ3VsYXISOgoFc3R5bGUYCiADKA4yJC5nb29nbGUuYXBpLlJlc291cmNlRGVzY3JpcHRvci5TdHlsZVIFc3R5bGUiWwoHSGlzdG9yeRIXChNISVNUT1JZX1VOU1BFQ0lGSUVEEAASHQoZT1JJR0lOQUxMWV9TSU5HTEVfUEFUVEVSThABEhgKFEZVVFVSRV9NVUxUSV9QQVRURVJOEAIiOAoFU3R5bGUSFQoRU1RZTEVfVU5TUEVDSUZJRUQQABIYChRERUNMQVJBVElWRV9GUklFTkRMWRAB');
+    'ChJSZXNvdXJjZURlc2NyaXB0b3ISEgoEdHlwZRgBIAEoCVIEdHlwZRIYCgdwYXR0ZXJuGAIgAy'
+    'gJUgdwYXR0ZXJuEh0KCm5hbWVfZmllbGQYAyABKAlSCW5hbWVGaWVsZBJACgdoaXN0b3J5GAQg'
+    'ASgOMiYuZ29vZ2xlLmFwaS5SZXNvdXJjZURlc2NyaXB0b3IuSGlzdG9yeVIHaGlzdG9yeRIWCg'
+    'ZwbHVyYWwYBSABKAlSBnBsdXJhbBIaCghzaW5ndWxhchgGIAEoCVIIc2luZ3VsYXISOgoFc3R5'
+    'bGUYCiADKA4yJC5nb29nbGUuYXBpLlJlc291cmNlRGVzY3JpcHRvci5TdHlsZVIFc3R5bGUiWw'
+    'oHSGlzdG9yeRIXChNISVNUT1JZX1VOU1BFQ0lGSUVEEAASHQoZT1JJR0lOQUxMWV9TSU5HTEVf'
+    'UEFUVEVSThABEhgKFEZVVFVSRV9NVUxUSV9QQVRURVJOEAIiOAoFU3R5bGUSFQoRU1RZTEVfVU'
+    '5TUEVDSUZJRUQQABIYChRERUNMQVJBVElWRV9GUklFTkRMWRAB');
+
 @$core.Deprecated('Use resourceReferenceDescriptor instead')
 const ResourceReference$json = {
   '1': 'ResourceReference',
@@ -71,4 +83,5 @@ const ResourceReference$json = {
 
 /// Descriptor for `ResourceReference`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List resourceReferenceDescriptor = $convert.base64Decode(
-    'ChFSZXNvdXJjZVJlZmVyZW5jZRISCgR0eXBlGAEgASgJUgR0eXBlEh0KCmNoaWxkX3R5cGUYAiABKAlSCWNoaWxkVHlwZQ==');
+    'ChFSZXNvdXJjZVJlZmVyZW5jZRISCgR0eXBlGAEgASgJUgR0eXBlEh0KCmNoaWxkX3R5cGUYAi'
+    'ABKAlSCWNoaWxkVHlwZQ==');

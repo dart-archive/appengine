@@ -1,12 +1,16 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/appengine/v1beta/audit_data.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
-import 'dart:core' as $core;
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:convert' as $convert;
+import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
 @$core.Deprecated('Use auditDataDescriptor instead')
@@ -39,7 +43,11 @@ const AuditData$json = {
 
 /// Descriptor for `AuditData`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List auditDataDescriptor = $convert.base64Decode(
-    'CglBdWRpdERhdGESVQoOdXBkYXRlX3NlcnZpY2UYASABKAsyLC5nb29nbGUuYXBwZW5naW5lLnYxYmV0YS5VcGRhdGVTZXJ2aWNlTWV0aG9kSABSDXVwZGF0ZVNlcnZpY2USVQoOY3JlYXRlX3ZlcnNpb24YAiABKAsyLC5nb29nbGUuYXBwZW5naW5lLnYxYmV0YS5DcmVhdGVWZXJzaW9uTWV0aG9kSABSDWNyZWF0ZVZlcnNpb25CCAoGbWV0aG9k');
+    'CglBdWRpdERhdGESVQoOdXBkYXRlX3NlcnZpY2UYASABKAsyLC5nb29nbGUuYXBwZW5naW5lLn'
+    'YxYmV0YS5VcGRhdGVTZXJ2aWNlTWV0aG9kSABSDXVwZGF0ZVNlcnZpY2USVQoOY3JlYXRlX3Zl'
+    'cnNpb24YAiABKAsyLC5nb29nbGUuYXBwZW5naW5lLnYxYmV0YS5DcmVhdGVWZXJzaW9uTWV0aG'
+    '9kSABSDWNyZWF0ZVZlcnNpb25CCAoGbWV0aG9k');
+
 @$core.Deprecated('Use updateServiceMethodDescriptor instead')
 const UpdateServiceMethod$json = {
   '1': 'UpdateServiceMethod',
@@ -57,7 +65,9 @@ const UpdateServiceMethod$json = {
 
 /// Descriptor for `UpdateServiceMethod`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List updateServiceMethodDescriptor = $convert.base64Decode(
-    'ChNVcGRhdGVTZXJ2aWNlTWV0aG9kEkcKB3JlcXVlc3QYASABKAsyLS5nb29nbGUuYXBwZW5naW5lLnYxYmV0YS5VcGRhdGVTZXJ2aWNlUmVxdWVzdFIHcmVxdWVzdA==');
+    'ChNVcGRhdGVTZXJ2aWNlTWV0aG9kEkcKB3JlcXVlc3QYASABKAsyLS5nb29nbGUuYXBwZW5naW'
+    '5lLnYxYmV0YS5VcGRhdGVTZXJ2aWNlUmVxdWVzdFIHcmVxdWVzdA==');
+
 @$core.Deprecated('Use createVersionMethodDescriptor instead')
 const CreateVersionMethod$json = {
   '1': 'CreateVersionMethod',
@@ -75,4 +85,5 @@ const CreateVersionMethod$json = {
 
 /// Descriptor for `CreateVersionMethod`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List createVersionMethodDescriptor = $convert.base64Decode(
-    'ChNDcmVhdGVWZXJzaW9uTWV0aG9kEkcKB3JlcXVlc3QYASABKAsyLS5nb29nbGUuYXBwZW5naW5lLnYxYmV0YS5DcmVhdGVWZXJzaW9uUmVxdWVzdFIHcmVxdWVzdA==');
+    'ChNDcmVhdGVWZXJzaW9uTWV0aG9kEkcKB3JlcXVlc3QYASABKAsyLS5nb29nbGUuYXBwZW5naW'
+    '5lLnYxYmV0YS5DcmVhdGVWZXJzaW9uUmVxdWVzdFIHcmVxdWVzdA==');

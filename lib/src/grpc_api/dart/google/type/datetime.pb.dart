@@ -1,60 +1,47 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/type/datetime.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../protobuf/duration.pb.dart' as $0;
+import '../protobuf/duration.pb.dart' as $51;
 
 enum DateTime_TimeOffset { utcOffset, timeZone, notSet }
 
+///  Represents civil time (or occasionally physical time).
+///
+///  This type can represent a civil time in one of a few possible ways:
+///
+///   * When utc_offset is set and time_zone is unset: a civil time on a calendar
+///     day with a particular offset from UTC.
+///   * When time_zone is set and utc_offset is unset: a civil time on a calendar
+///     day in a particular time zone.
+///   * When neither time_zone nor utc_offset is set: a civil time on a calendar
+///     day in local time.
+///
+///  The date is relative to the Proleptic Gregorian Calendar.
+///
+///  If year is 0, the DateTime is considered not to have a specific year. month
+///  and day must have valid, non-zero values.
+///
+///  This type may also be used to represent a physical time if all the date and
+///  time fields are set and either case of the `time_offset` oneof is set.
+///  Consider using `Timestamp` message for physical time instead. If your use
+///  case also would like to store the user's timezone, that can be done in
+///  another field.
+///
+///  This type is more flexible than some applications may want. Make sure to
+///  document and validate your application's limitations.
 class DateTime extends $pb.GeneratedMessage {
-  static const $core.Map<$core.int, DateTime_TimeOffset>
-      _DateTime_TimeOffsetByTag = {
-    8: DateTime_TimeOffset.utcOffset,
-    9: DateTime_TimeOffset.timeZone,
-    0: DateTime_TimeOffset.notSet
-  };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DateTime',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.type'),
-      createEmptyInstance: create)
-    ..oo(0, [8, 9])
-    ..a<$core.int>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'year',
-        $pb.PbFieldType.O3)
-    ..a<$core.int>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'month',
-        $pb.PbFieldType.O3)
-    ..a<$core.int>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'day',
-        $pb.PbFieldType.O3)
-    ..a<$core.int>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'hours', $pb.PbFieldType.O3)
-    ..a<$core.int>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'minutes', $pb.PbFieldType.O3)
-    ..a<$core.int>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'seconds', $pb.PbFieldType.O3)
-    ..a<$core.int>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'nanos', $pb.PbFieldType.O3)
-    ..aOM<$0.Duration>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'utcOffset', subBuilder: $0.Duration.create)
-    ..aOM<TimeZone>(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'timeZone', subBuilder: TimeZone.create)
-    ..hasRequiredFields = false;
-
-  DateTime._() : super();
   factory DateTime({
     $core.int? year,
     $core.int? month,
@@ -63,45 +50,71 @@ class DateTime extends $pb.GeneratedMessage {
     $core.int? minutes,
     $core.int? seconds,
     $core.int? nanos,
-    $0.Duration? utcOffset,
+    $51.Duration? utcOffset,
     TimeZone? timeZone,
   }) {
-    final _result = create();
+    final $result = create();
     if (year != null) {
-      _result.year = year;
+      $result.year = year;
     }
     if (month != null) {
-      _result.month = month;
+      $result.month = month;
     }
     if (day != null) {
-      _result.day = day;
+      $result.day = day;
     }
     if (hours != null) {
-      _result.hours = hours;
+      $result.hours = hours;
     }
     if (minutes != null) {
-      _result.minutes = minutes;
+      $result.minutes = minutes;
     }
     if (seconds != null) {
-      _result.seconds = seconds;
+      $result.seconds = seconds;
     }
     if (nanos != null) {
-      _result.nanos = nanos;
+      $result.nanos = nanos;
     }
     if (utcOffset != null) {
-      _result.utcOffset = utcOffset;
+      $result.utcOffset = utcOffset;
     }
     if (timeZone != null) {
-      _result.timeZone = timeZone;
+      $result.timeZone = timeZone;
     }
-    return _result;
+    return $result;
   }
+  DateTime._() : super();
   factory DateTime.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DateTime.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static const $core.Map<$core.int, DateTime_TimeOffset>
+      _DateTime_TimeOffsetByTag = {
+    8: DateTime_TimeOffset.utcOffset,
+    9: DateTime_TimeOffset.timeZone,
+    0: DateTime_TimeOffset.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DateTime',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'google.type'),
+      createEmptyInstance: create)
+    ..oo(0, [8, 9])
+    ..a<$core.int>(1, _omitFieldNames ? '' : 'year', $pb.PbFieldType.O3)
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'month', $pb.PbFieldType.O3)
+    ..a<$core.int>(3, _omitFieldNames ? '' : 'day', $pb.PbFieldType.O3)
+    ..a<$core.int>(4, _omitFieldNames ? '' : 'hours', $pb.PbFieldType.O3)
+    ..a<$core.int>(5, _omitFieldNames ? '' : 'minutes', $pb.PbFieldType.O3)
+    ..a<$core.int>(6, _omitFieldNames ? '' : 'seconds', $pb.PbFieldType.O3)
+    ..a<$core.int>(7, _omitFieldNames ? '' : 'nanos', $pb.PbFieldType.O3)
+    ..aOM<$51.Duration>(8, _omitFieldNames ? '' : 'utcOffset',
+        subBuilder: $51.Duration.create)
+    ..aOM<TimeZone>(9, _omitFieldNames ? '' : 'timeZone',
+        subBuilder: TimeZone.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -110,9 +123,10 @@ class DateTime extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   DateTime copyWith(void Function(DateTime) updates) =>
-      super.copyWith((message) => updates(message as DateTime))
-          as DateTime; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as DateTime)) as DateTime;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DateTime create() => DateTime._();
   DateTime createEmptyInstance() => create();
@@ -126,6 +140,8 @@ class DateTime extends $pb.GeneratedMessage {
       _DateTime_TimeOffsetByTag[$_whichOneof(0)]!;
   void clearTimeOffset() => clearField($_whichOneof(0));
 
+  /// Optional. Year of date. Must be from 1 to 9999, or 0 if specifying a
+  /// datetime without a year.
   @$pb.TagNumber(1)
   $core.int get year => $_getIZ(0);
   @$pb.TagNumber(1)
@@ -138,6 +154,7 @@ class DateTime extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearYear() => clearField(1);
 
+  /// Required. Month of year. Must be from 1 to 12.
   @$pb.TagNumber(2)
   $core.int get month => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -150,6 +167,8 @@ class DateTime extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearMonth() => clearField(2);
 
+  /// Required. Day of month. Must be from 1 to 31 and valid for the year and
+  /// month.
   @$pb.TagNumber(3)
   $core.int get day => $_getIZ(2);
   @$pb.TagNumber(3)
@@ -162,6 +181,9 @@ class DateTime extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearDay() => clearField(3);
 
+  /// Required. Hours of day in 24 hour format. Should be from 0 to 23. An API
+  /// may choose to allow the value "24:00:00" for scenarios like business
+  /// closing time.
   @$pb.TagNumber(4)
   $core.int get hours => $_getIZ(3);
   @$pb.TagNumber(4)
@@ -174,6 +196,7 @@ class DateTime extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearHours() => clearField(4);
 
+  /// Required. Minutes of hour of day. Must be from 0 to 59.
   @$pb.TagNumber(5)
   $core.int get minutes => $_getIZ(4);
   @$pb.TagNumber(5)
@@ -186,6 +209,8 @@ class DateTime extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearMinutes() => clearField(5);
 
+  /// Required. Seconds of minutes of the time. Must normally be from 0 to 59. An
+  /// API may allow the value 60 if it allows leap-seconds.
   @$pb.TagNumber(6)
   $core.int get seconds => $_getIZ(5);
   @$pb.TagNumber(6)
@@ -198,6 +223,8 @@ class DateTime extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearSeconds() => clearField(6);
 
+  /// Required. Fractions of seconds in nanoseconds. Must be from 0 to
+  /// 999,999,999.
   @$pb.TagNumber(7)
   $core.int get nanos => $_getIZ(6);
   @$pb.TagNumber(7)
@@ -210,10 +237,13 @@ class DateTime extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearNanos() => clearField(7);
 
+  /// UTC offset. Must be whole seconds, between -18 hours and +18 hours.
+  /// For example, a UTC offset of -4:00 would be represented as
+  /// { seconds: -14400 }.
   @$pb.TagNumber(8)
-  $0.Duration get utcOffset => $_getN(7);
+  $51.Duration get utcOffset => $_getN(7);
   @$pb.TagNumber(8)
-  set utcOffset($0.Duration v) {
+  set utcOffset($51.Duration v) {
     setField(8, v);
   }
 
@@ -222,8 +252,9 @@ class DateTime extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   void clearUtcOffset() => clearField(8);
   @$pb.TagNumber(8)
-  $0.Duration ensureUtcOffset() => $_ensure(7);
+  $51.Duration ensureUtcOffset() => $_ensure(7);
 
+  /// Time zone.
   @$pb.TagNumber(9)
   TimeZone get timeZone => $_getN(8);
   @$pb.TagNumber(9)
@@ -239,48 +270,38 @@ class DateTime extends $pb.GeneratedMessage {
   TimeZone ensureTimeZone() => $_ensure(8);
 }
 
+/// Represents a time zone from the
+/// [IANA Time Zone Database](https://www.iana.org/time-zones).
 class TimeZone extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'TimeZone',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.type'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'id')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'version')
-    ..hasRequiredFields = false;
-
-  TimeZone._() : super();
   factory TimeZone({
     $core.String? id,
     $core.String? version,
   }) {
-    final _result = create();
+    final $result = create();
     if (id != null) {
-      _result.id = id;
+      $result.id = id;
     }
     if (version != null) {
-      _result.version = version;
+      $result.version = version;
     }
-    return _result;
+    return $result;
   }
+  TimeZone._() : super();
   factory TimeZone.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory TimeZone.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'TimeZone',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'google.type'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'id')
+    ..aOS(2, _omitFieldNames ? '' : 'version')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -289,9 +310,10 @@ class TimeZone extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   TimeZone copyWith(void Function(TimeZone) updates) =>
-      super.copyWith((message) => updates(message as TimeZone))
-          as TimeZone; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as TimeZone)) as TimeZone;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static TimeZone create() => TimeZone._();
   TimeZone createEmptyInstance() => create();
@@ -301,6 +323,7 @@ class TimeZone extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<TimeZone>(create);
   static TimeZone? _defaultInstance;
 
+  /// IANA Time Zone Database time zone, e.g. "America/New_York".
   @$pb.TagNumber(1)
   $core.String get id => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -313,6 +336,7 @@ class TimeZone extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearId() => clearField(1);
 
+  /// Optional. IANA Time Zone Database version number, e.g. "2019a".
   @$pb.TagNumber(2)
   $core.String get version => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -325,3 +349,7 @@ class TimeZone extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearVersion() => clearField(2);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

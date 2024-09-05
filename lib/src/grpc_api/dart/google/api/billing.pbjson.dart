@@ -1,12 +1,16 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/api/billing.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
-import 'dart:core' as $core;
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:convert' as $convert;
+import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
 @$core.Deprecated('Use billingDescriptor instead')
@@ -42,4 +46,7 @@ const Billing_BillingDestination$json = {
 
 /// Descriptor for `Billing`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List billingDescriptor = $convert.base64Decode(
-    'CgdCaWxsaW5nElsKFWNvbnN1bWVyX2Rlc3RpbmF0aW9ucxgIIAMoCzImLmdvb2dsZS5hcGkuQmlsbGluZy5CaWxsaW5nRGVzdGluYXRpb25SFGNvbnN1bWVyRGVzdGluYXRpb25zGl0KEkJpbGxpbmdEZXN0aW5hdGlvbhItChJtb25pdG9yZWRfcmVzb3VyY2UYASABKAlSEW1vbml0b3JlZFJlc291cmNlEhgKB21ldHJpY3MYAiADKAlSB21ldHJpY3M=');
+    'CgdCaWxsaW5nElsKFWNvbnN1bWVyX2Rlc3RpbmF0aW9ucxgIIAMoCzImLmdvb2dsZS5hcGkuQm'
+    'lsbGluZy5CaWxsaW5nRGVzdGluYXRpb25SFGNvbnN1bWVyRGVzdGluYXRpb25zGl0KEkJpbGxp'
+    'bmdEZXN0aW5hdGlvbhItChJtb25pdG9yZWRfcmVzb3VyY2UYASABKAlSEW1vbml0b3JlZFJlc2'
+    '91cmNlEhgKB21ldHJpY3MYAiADKAlSB21ldHJpY3M=');

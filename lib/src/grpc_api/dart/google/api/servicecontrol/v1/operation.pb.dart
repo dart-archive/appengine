@@ -1,113 +1,113 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/api/servicecontrol/v1/operation.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/timestamp.pb.dart' as $0;
-import 'metric_value.pb.dart' as $1;
-import 'log_entry.pb.dart' as $2;
-import '../../../protobuf/any.pb.dart' as $3;
-
+import '../../../protobuf/any.pb.dart' as $49;
+import '../../../protobuf/timestamp.pb.dart' as $50;
+import 'log_entry.pb.dart' as $110;
+import 'metric_value.pb.dart' as $109;
 import 'operation.pbenum.dart';
 
 export 'operation.pbenum.dart';
 
+/// Represents information regarding an operation.
 class Operation extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Operation',
-      package: const $pb.PackageName($core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'google.api.servicecontrol.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'operationId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'operationName')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'consumerId')
-    ..aOM<$0.Timestamp>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'startTime',
-        subBuilder: $0.Timestamp.create)
-    ..aOM<$0.Timestamp>(
-        5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'endTime',
-        subBuilder: $0.Timestamp.create)
-    ..m<$core.String, $core.String>(
-        6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'labels',
-        entryClassName: 'Operation.LabelsEntry',
-        keyFieldType: $pb.PbFieldType.OS,
-        valueFieldType: $pb.PbFieldType.OS,
-        packageName: const $pb.PackageName('google.api.servicecontrol.v1'))
-    ..pc<$1.MetricValueSet>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'metricValueSets', $pb.PbFieldType.PM, subBuilder: $1.MetricValueSet.create)
-    ..pc<$2.LogEntry>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'logEntries', $pb.PbFieldType.PM, subBuilder: $2.LogEntry.create)
-    ..e<Operation_Importance>(11, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'importance', $pb.PbFieldType.OE, defaultOrMaker: Operation_Importance.LOW, valueOf: Operation_Importance.valueOf, enumValues: Operation_Importance.values)
-    ..pc<$3.Any>(16, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'extensions', $pb.PbFieldType.PM, subBuilder: $3.Any.create)
-    ..hasRequiredFields = false;
-
-  Operation._() : super();
   factory Operation({
     $core.String? operationId,
     $core.String? operationName,
     $core.String? consumerId,
-    $0.Timestamp? startTime,
-    $0.Timestamp? endTime,
+    $50.Timestamp? startTime,
+    $50.Timestamp? endTime,
     $core.Map<$core.String, $core.String>? labels,
-    $core.Iterable<$1.MetricValueSet>? metricValueSets,
-    $core.Iterable<$2.LogEntry>? logEntries,
+    $core.Iterable<$109.MetricValueSet>? metricValueSets,
+    $core.Iterable<$110.LogEntry>? logEntries,
     Operation_Importance? importance,
-    $core.Iterable<$3.Any>? extensions,
+    $core.Iterable<$49.Any>? extensions,
   }) {
-    final _result = create();
+    final $result = create();
     if (operationId != null) {
-      _result.operationId = operationId;
+      $result.operationId = operationId;
     }
     if (operationName != null) {
-      _result.operationName = operationName;
+      $result.operationName = operationName;
     }
     if (consumerId != null) {
-      _result.consumerId = consumerId;
+      $result.consumerId = consumerId;
     }
     if (startTime != null) {
-      _result.startTime = startTime;
+      $result.startTime = startTime;
     }
     if (endTime != null) {
-      _result.endTime = endTime;
+      $result.endTime = endTime;
     }
     if (labels != null) {
-      _result.labels.addAll(labels);
+      $result.labels.addAll(labels);
     }
     if (metricValueSets != null) {
-      _result.metricValueSets.addAll(metricValueSets);
+      $result.metricValueSets.addAll(metricValueSets);
     }
     if (logEntries != null) {
-      _result.logEntries.addAll(logEntries);
+      $result.logEntries.addAll(logEntries);
     }
     if (importance != null) {
-      _result.importance = importance;
+      $result.importance = importance;
     }
     if (extensions != null) {
-      _result.extensions.addAll(extensions);
+      $result.extensions.addAll(extensions);
     }
-    return _result;
+    return $result;
   }
+  Operation._() : super();
   factory Operation.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Operation.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Operation',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.servicecontrol.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'operationId')
+    ..aOS(2, _omitFieldNames ? '' : 'operationName')
+    ..aOS(3, _omitFieldNames ? '' : 'consumerId')
+    ..aOM<$50.Timestamp>(4, _omitFieldNames ? '' : 'startTime',
+        subBuilder: $50.Timestamp.create)
+    ..aOM<$50.Timestamp>(5, _omitFieldNames ? '' : 'endTime',
+        subBuilder: $50.Timestamp.create)
+    ..m<$core.String, $core.String>(6, _omitFieldNames ? '' : 'labels',
+        entryClassName: 'Operation.LabelsEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
+        packageName: const $pb.PackageName('google.api.servicecontrol.v1'))
+    ..pc<$109.MetricValueSet>(
+        7, _omitFieldNames ? '' : 'metricValueSets', $pb.PbFieldType.PM,
+        subBuilder: $109.MetricValueSet.create)
+    ..pc<$110.LogEntry>(
+        8, _omitFieldNames ? '' : 'logEntries', $pb.PbFieldType.PM,
+        subBuilder: $110.LogEntry.create)
+    ..e<Operation_Importance>(
+        11, _omitFieldNames ? '' : 'importance', $pb.PbFieldType.OE,
+        defaultOrMaker: Operation_Importance.LOW,
+        valueOf: Operation_Importance.valueOf,
+        enumValues: Operation_Importance.values)
+    ..pc<$49.Any>(16, _omitFieldNames ? '' : 'extensions', $pb.PbFieldType.PM,
+        subBuilder: $49.Any.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -116,9 +116,10 @@ class Operation extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Operation copyWith(void Function(Operation) updates) =>
-      super.copyWith((message) => updates(message as Operation))
-          as Operation; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Operation)) as Operation;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Operation create() => Operation._();
   Operation createEmptyInstance() => create();
@@ -128,6 +129,15 @@ class Operation extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Operation>(create);
   static Operation? _defaultInstance;
 
+  ///  Identity of the operation. This must be unique within the scope of the
+  ///  service that generated the operation. If the service calls
+  ///  Check() and Report() on the same operation, the two calls should carry
+  ///  the same id.
+  ///
+  ///  UUID version 4 is recommended, though not required.
+  ///  In scenarios where an operation is computed from existing information
+  ///  and an idempotent id is desirable for deduplication purpose, UUID version 5
+  ///  is recommended. See RFC 4122 for details.
   @$pb.TagNumber(1)
   $core.String get operationId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -140,6 +150,7 @@ class Operation extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearOperationId() => clearField(1);
 
+  /// Fully qualified name of the operation. Reserved for future use.
   @$pb.TagNumber(2)
   $core.String get operationName => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -152,6 +163,18 @@ class Operation extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearOperationName() => clearField(2);
 
+  ///  Identity of the consumer who is using the service.
+  ///  This field should be filled in for the operations initiated by a
+  ///  consumer, but not for service-initiated operations that are
+  ///  not related to a specific consumer.
+  ///
+  ///  - This can be in one of the following formats:
+  ///      - project:PROJECT_ID,
+  ///      - project`_`number:PROJECT_NUMBER,
+  ///      - projects/PROJECT_ID or PROJECT_NUMBER,
+  ///      - folders/FOLDER_NUMBER,
+  ///      - organizations/ORGANIZATION_NUMBER,
+  ///      - api`_`key:API_KEY.
   @$pb.TagNumber(3)
   $core.String get consumerId => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -164,10 +187,11 @@ class Operation extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearConsumerId() => clearField(3);
 
+  /// Required. Start time of the operation.
   @$pb.TagNumber(4)
-  $0.Timestamp get startTime => $_getN(3);
+  $50.Timestamp get startTime => $_getN(3);
   @$pb.TagNumber(4)
-  set startTime($0.Timestamp v) {
+  set startTime($50.Timestamp v) {
     setField(4, v);
   }
 
@@ -176,12 +200,17 @@ class Operation extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearStartTime() => clearField(4);
   @$pb.TagNumber(4)
-  $0.Timestamp ensureStartTime() => $_ensure(3);
+  $50.Timestamp ensureStartTime() => $_ensure(3);
 
+  /// End time of the operation.
+  /// Required when the operation is used in
+  /// [ServiceController.Report][google.api.servicecontrol.v1.ServiceController.Report],
+  /// but optional when the operation is used in
+  /// [ServiceController.Check][google.api.servicecontrol.v1.ServiceController.Check].
   @$pb.TagNumber(5)
-  $0.Timestamp get endTime => $_getN(4);
+  $50.Timestamp get endTime => $_getN(4);
   @$pb.TagNumber(5)
-  set endTime($0.Timestamp v) {
+  set endTime($50.Timestamp v) {
     setField(5, v);
   }
 
@@ -190,17 +219,45 @@ class Operation extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearEndTime() => clearField(5);
   @$pb.TagNumber(5)
-  $0.Timestamp ensureEndTime() => $_ensure(4);
+  $50.Timestamp ensureEndTime() => $_ensure(4);
 
+  ///  Labels describing the operation. Only the following labels are allowed:
+  ///
+  ///  - Labels describing monitored resources as defined in
+  ///    the service configuration.
+  ///  - Default labels of metric values. When specified, labels defined in the
+  ///    metric value override these default.
+  ///  - The following labels defined by Google Cloud Platform:
+  ///      - `cloud.googleapis.com/location` describing the location where the
+  ///         operation happened,
+  ///      - `servicecontrol.googleapis.com/user_agent` describing the user agent
+  ///         of the API request,
+  ///      - `servicecontrol.googleapis.com/service_agent` describing the service
+  ///         used to handle the API request (e.g. ESP),
+  ///      - `servicecontrol.googleapis.com/platform` describing the platform
+  ///         where the API is served, such as App Engine, Compute Engine, or
+  ///         Kubernetes Engine.
   @$pb.TagNumber(6)
   $core.Map<$core.String, $core.String> get labels => $_getMap(5);
 
+  ///  Represents information about this operation. Each MetricValueSet
+  ///  corresponds to a metric defined in the service configuration.
+  ///  The data type used in the MetricValueSet must agree with
+  ///  the data type specified in the metric definition.
+  ///
+  ///  Within a single operation, it is not allowed to have more than one
+  ///  MetricValue instances that have the same metric names and identical
+  ///  label value combinations. If a request has such duplicated MetricValue
+  ///  instances, the entire request is rejected with
+  ///  an invalid argument error.
   @$pb.TagNumber(7)
-  $core.List<$1.MetricValueSet> get metricValueSets => $_getList(6);
+  $core.List<$109.MetricValueSet> get metricValueSets => $_getList(6);
 
+  /// Represents information to be logged.
   @$pb.TagNumber(8)
-  $core.List<$2.LogEntry> get logEntries => $_getList(7);
+  $core.List<$110.LogEntry> get logEntries => $_getList(7);
 
+  /// DO NOT USE. This is an experimental field.
   @$pb.TagNumber(11)
   Operation_Importance get importance => $_getN(8);
   @$pb.TagNumber(11)
@@ -213,6 +270,11 @@ class Operation extends $pb.GeneratedMessage {
   @$pb.TagNumber(11)
   void clearImportance() => clearField(11);
 
+  /// Unimplemented.
   @$pb.TagNumber(16)
-  $core.List<$3.Any> get extensions => $_getList(9);
+  $core.List<$49.Any> get extensions => $_getList(9);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

@@ -1,4 +1,4 @@
-// Copyright 2018 Google Inc.
+// Copyright 2024 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -22,7 +22,7 @@ import "google/protobuf/wrappers.proto";
 import "google/type/latlng.proto";
 
 option csharp_namespace = "Google.Cloud.Datastore.V1Beta3";
-option go_package = "google.golang.org/genproto/googleapis/datastore/v1beta3;datastore";
+option go_package = "cloud.google.com/go/datastore/apiv1beta3/datastorepb;datastorepb";
 option java_multiple_files = true;
 option java_outer_classname = "QueryProto";
 option java_package = "com.google.datastore.v1beta3";

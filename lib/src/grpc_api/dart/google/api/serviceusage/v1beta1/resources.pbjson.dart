@@ -1,12 +1,16 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/api/serviceusage/v1beta1/resources.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
-import 'dart:core' as $core;
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:convert' as $convert;
+import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
 @$core.Deprecated('Use stateDescriptor instead')
@@ -21,7 +25,9 @@ const State$json = {
 
 /// Descriptor for `State`. Decode as a `google.protobuf.EnumDescriptorProto`.
 final $typed_data.Uint8List stateDescriptor = $convert.base64Decode(
-    'CgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgwKCERJU0FCTEVEEAESCwoHRU5BQkxFRBAC');
+    'CgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgwKCERJU0FCTEVEEAESCwoHRU5BQkxFRB'
+    'AC');
+
 @$core.Deprecated('Use quotaViewDescriptor instead')
 const QuotaView$json = {
   '1': 'QuotaView',
@@ -34,7 +40,9 @@ const QuotaView$json = {
 
 /// Descriptor for `QuotaView`. Decode as a `google.protobuf.EnumDescriptorProto`.
 final $typed_data.Uint8List quotaViewDescriptor = $convert.base64Decode(
-    'CglRdW90YVZpZXcSGgoWUVVPVEFfVklFV19VTlNQRUNJRklFRBAAEgkKBUJBU0lDEAESCAoERlVMTBAC');
+    'CglRdW90YVZpZXcSGgoWUVVPVEFfVklFV19VTlNQRUNJRklFRBAAEgkKBUJBU0lDEAESCAoERl'
+    'VMTBAC');
+
 @$core.Deprecated('Use quotaSafetyCheckDescriptor instead')
 const QuotaSafetyCheck$json = {
   '1': 'QuotaSafetyCheck',
@@ -47,7 +55,10 @@ const QuotaSafetyCheck$json = {
 
 /// Descriptor for `QuotaSafetyCheck`. Decode as a `google.protobuf.EnumDescriptorProto`.
 final $typed_data.Uint8List quotaSafetyCheckDescriptor = $convert.base64Decode(
-    'ChBRdW90YVNhZmV0eUNoZWNrEiIKHlFVT1RBX1NBRkVUWV9DSEVDS19VTlNQRUNJRklFRBAAEh4KGkxJTUlUX0RFQ1JFQVNFX0JFTE9XX1VTQUdFEAESJgoiTElNSVRfREVDUkVBU0VfUEVSQ0VOVEFHRV9UT09fSElHSBAC');
+    'ChBRdW90YVNhZmV0eUNoZWNrEiIKHlFVT1RBX1NBRkVUWV9DSEVDS19VTlNQRUNJRklFRBAAEh'
+    '4KGkxJTUlUX0RFQ1JFQVNFX0JFTE9XX1VTQUdFEAESJgoiTElNSVRfREVDUkVBU0VfUEVSQ0VO'
+    'VEFHRV9UT09fSElHSBAC');
+
 @$core.Deprecated('Use serviceDescriptor instead')
 const Service$json = {
   '1': 'Service',
@@ -75,7 +86,11 @@ const Service$json = {
 
 /// Descriptor for `Service`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List serviceDescriptor = $convert.base64Decode(
-    'CgdTZXJ2aWNlEhIKBG5hbWUYASABKAlSBG5hbWUSFgoGcGFyZW50GAUgASgJUgZwYXJlbnQSRgoGY29uZmlnGAIgASgLMi4uZ29vZ2xlLmFwaS5zZXJ2aWNldXNhZ2UudjFiZXRhMS5TZXJ2aWNlQ29uZmlnUgZjb25maWcSPAoFc3RhdGUYBCABKA4yJi5nb29nbGUuYXBpLnNlcnZpY2V1c2FnZS52MWJldGExLlN0YXRlUgVzdGF0ZQ==');
+    'CgdTZXJ2aWNlEhIKBG5hbWUYASABKAlSBG5hbWUSFgoGcGFyZW50GAUgASgJUgZwYXJlbnQSRg'
+    'oGY29uZmlnGAIgASgLMi4uZ29vZ2xlLmFwaS5zZXJ2aWNldXNhZ2UudjFiZXRhMS5TZXJ2aWNl'
+    'Q29uZmlnUgZjb25maWcSPAoFc3RhdGUYBCABKA4yJi5nb29nbGUuYXBpLnNlcnZpY2V1c2FnZS'
+    '52MWJldGExLlN0YXRlUgVzdGF0ZQ==');
+
 @$core.Deprecated('Use serviceConfigDescriptor instead')
 const ServiceConfig$json = {
   '1': 'ServiceConfig',
@@ -151,7 +166,17 @@ const ServiceConfig$json = {
 
 /// Descriptor for `ServiceConfig`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List serviceConfigDescriptor = $convert.base64Decode(
-    'Cg1TZXJ2aWNlQ29uZmlnEhIKBG5hbWUYASABKAlSBG5hbWUSFAoFdGl0bGUYAiABKAlSBXRpdGxlEigKBGFwaXMYAyADKAsyFC5nb29nbGUucHJvdG9idWYuQXBpUgRhcGlzEj8KDWRvY3VtZW50YXRpb24YBiABKAsyGS5nb29nbGUuYXBpLkRvY3VtZW50YXRpb25SDWRvY3VtZW50YXRpb24SJwoFcXVvdGEYCiABKAsyES5nb29nbGUuYXBpLlF1b3RhUgVxdW90YRJCCg5hdXRoZW50aWNhdGlvbhgLIAEoCzIaLmdvb2dsZS5hcGkuQXV0aGVudGljYXRpb25SDmF1dGhlbnRpY2F0aW9uEicKBXVzYWdlGA8gASgLMhEuZ29vZ2xlLmFwaS5Vc2FnZVIFdXNhZ2USMgoJZW5kcG9pbnRzGBIgAygLMhQuZ29vZ2xlLmFwaS5FbmRwb2ludFIJZW5kcG9pbnRzElgKE21vbml0b3JlZF9yZXNvdXJjZXMYGSADKAsyJy5nb29nbGUuYXBpLk1vbml0b3JlZFJlc291cmNlRGVzY3JpcHRvclISbW9uaXRvcmVkUmVzb3VyY2VzEjYKCm1vbml0b3JpbmcYHCABKAsyFi5nb29nbGUuYXBpLk1vbml0b3JpbmdSCm1vbml0b3Jpbmc=');
+    'Cg1TZXJ2aWNlQ29uZmlnEhIKBG5hbWUYASABKAlSBG5hbWUSFAoFdGl0bGUYAiABKAlSBXRpdG'
+    'xlEigKBGFwaXMYAyADKAsyFC5nb29nbGUucHJvdG9idWYuQXBpUgRhcGlzEj8KDWRvY3VtZW50'
+    'YXRpb24YBiABKAsyGS5nb29nbGUuYXBpLkRvY3VtZW50YXRpb25SDWRvY3VtZW50YXRpb24SJw'
+    'oFcXVvdGEYCiABKAsyES5nb29nbGUuYXBpLlF1b3RhUgVxdW90YRJCCg5hdXRoZW50aWNhdGlv'
+    'bhgLIAEoCzIaLmdvb2dsZS5hcGkuQXV0aGVudGljYXRpb25SDmF1dGhlbnRpY2F0aW9uEicKBX'
+    'VzYWdlGA8gASgLMhEuZ29vZ2xlLmFwaS5Vc2FnZVIFdXNhZ2USMgoJZW5kcG9pbnRzGBIgAygL'
+    'MhQuZ29vZ2xlLmFwaS5FbmRwb2ludFIJZW5kcG9pbnRzElgKE21vbml0b3JlZF9yZXNvdXJjZX'
+    'MYGSADKAsyJy5nb29nbGUuYXBpLk1vbml0b3JlZFJlc291cmNlRGVzY3JpcHRvclISbW9uaXRv'
+    'cmVkUmVzb3VyY2VzEjYKCm1vbml0b3JpbmcYHCABKAsyFi5nb29nbGUuYXBpLk1vbml0b3Jpbm'
+    'dSCm1vbml0b3Jpbmc=');
+
 @$core.Deprecated('Use operationMetadataDescriptor instead')
 const OperationMetadata$json = {
   '1': 'OperationMetadata',
@@ -162,7 +187,9 @@ const OperationMetadata$json = {
 
 /// Descriptor for `OperationMetadata`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List operationMetadataDescriptor = $convert.base64Decode(
-    'ChFPcGVyYXRpb25NZXRhZGF0YRIlCg5yZXNvdXJjZV9uYW1lcxgCIAMoCVINcmVzb3VyY2VOYW1lcw==');
+    'ChFPcGVyYXRpb25NZXRhZGF0YRIlCg5yZXNvdXJjZV9uYW1lcxgCIAMoCVINcmVzb3VyY2VOYW'
+    '1lcw==');
+
 @$core.Deprecated('Use consumerQuotaMetricDescriptor instead')
 const ConsumerQuotaMetric$json = {
   '1': 'ConsumerQuotaMetric',
@@ -192,7 +219,14 @@ const ConsumerQuotaMetric$json = {
 
 /// Descriptor for `ConsumerQuotaMetric`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List consumerQuotaMetricDescriptor = $convert.base64Decode(
-    'ChNDb25zdW1lclF1b3RhTWV0cmljEhIKBG5hbWUYASABKAlSBG5hbWUSFgoGbWV0cmljGAQgASgJUgZtZXRyaWMSIQoMZGlzcGxheV9uYW1lGAIgASgJUgtkaXNwbGF5TmFtZRJnChVjb25zdW1lcl9xdW90YV9saW1pdHMYAyADKAsyMy5nb29nbGUuYXBpLnNlcnZpY2V1c2FnZS52MWJldGExLkNvbnN1bWVyUXVvdGFMaW1pdFITY29uc3VtZXJRdW90YUxpbWl0cxJ8CiBkZXNjZW5kYW50X2NvbnN1bWVyX3F1b3RhX2xpbWl0cxgGIAMoCzIzLmdvb2dsZS5hcGkuc2VydmljZXVzYWdlLnYxYmV0YTEuQ29uc3VtZXJRdW90YUxpbWl0Uh1kZXNjZW5kYW50Q29uc3VtZXJRdW90YUxpbWl0cxISCgR1bml0GAUgASgJUgR1bml0');
+    'ChNDb25zdW1lclF1b3RhTWV0cmljEhIKBG5hbWUYASABKAlSBG5hbWUSFgoGbWV0cmljGAQgAS'
+    'gJUgZtZXRyaWMSIQoMZGlzcGxheV9uYW1lGAIgASgJUgtkaXNwbGF5TmFtZRJnChVjb25zdW1l'
+    'cl9xdW90YV9saW1pdHMYAyADKAsyMy5nb29nbGUuYXBpLnNlcnZpY2V1c2FnZS52MWJldGExLk'
+    'NvbnN1bWVyUXVvdGFMaW1pdFITY29uc3VtZXJRdW90YUxpbWl0cxJ8CiBkZXNjZW5kYW50X2Nv'
+    'bnN1bWVyX3F1b3RhX2xpbWl0cxgGIAMoCzIzLmdvb2dsZS5hcGkuc2VydmljZXVzYWdlLnYxYm'
+    'V0YTEuQ29uc3VtZXJRdW90YUxpbWl0Uh1kZXNjZW5kYW50Q29uc3VtZXJRdW90YUxpbWl0cxIS'
+    'CgR1bml0GAUgASgJUgR1bml0');
+
 @$core.Deprecated('Use consumerQuotaLimitDescriptor instead')
 const ConsumerQuotaLimit$json = {
   '1': 'ConsumerQuotaLimit',
@@ -216,12 +250,25 @@ const ConsumerQuotaLimit$json = {
       '6': '.google.api.serviceusage.v1beta1.QuotaBucket',
       '10': 'quotaBuckets'
     },
+    {
+      '1': 'supported_locations',
+      '3': 11,
+      '4': 3,
+      '5': 9,
+      '10': 'supportedLocations'
+    },
   ],
 };
 
 /// Descriptor for `ConsumerQuotaLimit`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List consumerQuotaLimitDescriptor = $convert.base64Decode(
-    'ChJDb25zdW1lclF1b3RhTGltaXQSEgoEbmFtZRgBIAEoCVIEbmFtZRIWCgZtZXRyaWMYCCABKAlSBm1ldHJpYxISCgR1bml0GAIgASgJUgR1bml0Eh0KCmlzX3ByZWNpc2UYAyABKAhSCWlzUHJlY2lzZRI0ChZhbGxvd3NfYWRtaW5fb3ZlcnJpZGVzGAcgASgIUhRhbGxvd3NBZG1pbk92ZXJyaWRlcxJRCg1xdW90YV9idWNrZXRzGAkgAygLMiwuZ29vZ2xlLmFwaS5zZXJ2aWNldXNhZ2UudjFiZXRhMS5RdW90YUJ1Y2tldFIMcXVvdGFCdWNrZXRz');
+    'ChJDb25zdW1lclF1b3RhTGltaXQSEgoEbmFtZRgBIAEoCVIEbmFtZRIWCgZtZXRyaWMYCCABKA'
+    'lSBm1ldHJpYxISCgR1bml0GAIgASgJUgR1bml0Eh0KCmlzX3ByZWNpc2UYAyABKAhSCWlzUHJl'
+    'Y2lzZRI0ChZhbGxvd3NfYWRtaW5fb3ZlcnJpZGVzGAcgASgIUhRhbGxvd3NBZG1pbk92ZXJyaW'
+    'RlcxJRCg1xdW90YV9idWNrZXRzGAkgAygLMiwuZ29vZ2xlLmFwaS5zZXJ2aWNldXNhZ2UudjFi'
+    'ZXRhMS5RdW90YUJ1Y2tldFIMcXVvdGFCdWNrZXRzEi8KE3N1cHBvcnRlZF9sb2NhdGlvbnMYCy'
+    'ADKAlSEnN1cHBvcnRlZExvY2F0aW9ucw==');
+
 @$core.Deprecated('Use quotaBucketDescriptor instead')
 const QuotaBucket$json = {
   '1': 'QuotaBucket',
@@ -253,6 +300,14 @@ const QuotaBucket$json = {
       '10': 'adminOverride'
     },
     {
+      '1': 'producer_quota_policy',
+      '3': 7,
+      '4': 1,
+      '5': 11,
+      '6': '.google.api.serviceusage.v1beta1.ProducerQuotaPolicy',
+      '10': 'producerQuotaPolicy'
+    },
+    {
       '1': 'dimensions',
       '3': 6,
       '4': 3,
@@ -276,7 +331,19 @@ const QuotaBucket_DimensionsEntry$json = {
 
 /// Descriptor for `QuotaBucket`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List quotaBucketDescriptor = $convert.base64Decode(
-    'CgtRdW90YUJ1Y2tldBInCg9lZmZlY3RpdmVfbGltaXQYASABKANSDmVmZmVjdGl2ZUxpbWl0EiMKDWRlZmF1bHRfbGltaXQYAiABKANSDGRlZmF1bHRMaW1pdBJbChFwcm9kdWNlcl9vdmVycmlkZRgDIAEoCzIuLmdvb2dsZS5hcGkuc2VydmljZXVzYWdlLnYxYmV0YTEuUXVvdGFPdmVycmlkZVIQcHJvZHVjZXJPdmVycmlkZRJbChFjb25zdW1lcl9vdmVycmlkZRgEIAEoCzIuLmdvb2dsZS5hcGkuc2VydmljZXVzYWdlLnYxYmV0YTEuUXVvdGFPdmVycmlkZVIQY29uc3VtZXJPdmVycmlkZRJVCg5hZG1pbl9vdmVycmlkZRgFIAEoCzIuLmdvb2dsZS5hcGkuc2VydmljZXVzYWdlLnYxYmV0YTEuUXVvdGFPdmVycmlkZVINYWRtaW5PdmVycmlkZRJcCgpkaW1lbnNpb25zGAYgAygLMjwuZ29vZ2xlLmFwaS5zZXJ2aWNldXNhZ2UudjFiZXRhMS5RdW90YUJ1Y2tldC5EaW1lbnNpb25zRW50cnlSCmRpbWVuc2lvbnMaPQoPRGltZW5zaW9uc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EhQKBXZhbHVlGAIgASgJUgV2YWx1ZToCOAE=');
+    'CgtRdW90YUJ1Y2tldBInCg9lZmZlY3RpdmVfbGltaXQYASABKANSDmVmZmVjdGl2ZUxpbWl0Ei'
+    'MKDWRlZmF1bHRfbGltaXQYAiABKANSDGRlZmF1bHRMaW1pdBJbChFwcm9kdWNlcl9vdmVycmlk'
+    'ZRgDIAEoCzIuLmdvb2dsZS5hcGkuc2VydmljZXVzYWdlLnYxYmV0YTEuUXVvdGFPdmVycmlkZV'
+    'IQcHJvZHVjZXJPdmVycmlkZRJbChFjb25zdW1lcl9vdmVycmlkZRgEIAEoCzIuLmdvb2dsZS5h'
+    'cGkuc2VydmljZXVzYWdlLnYxYmV0YTEuUXVvdGFPdmVycmlkZVIQY29uc3VtZXJPdmVycmlkZR'
+    'JVCg5hZG1pbl9vdmVycmlkZRgFIAEoCzIuLmdvb2dsZS5hcGkuc2VydmljZXVzYWdlLnYxYmV0'
+    'YTEuUXVvdGFPdmVycmlkZVINYWRtaW5PdmVycmlkZRJoChVwcm9kdWNlcl9xdW90YV9wb2xpY3'
+    'kYByABKAsyNC5nb29nbGUuYXBpLnNlcnZpY2V1c2FnZS52MWJldGExLlByb2R1Y2VyUXVvdGFQ'
+    'b2xpY3lSE3Byb2R1Y2VyUXVvdGFQb2xpY3kSXAoKZGltZW5zaW9ucxgGIAMoCzI8Lmdvb2dsZS'
+    '5hcGkuc2VydmljZXVzYWdlLnYxYmV0YTEuUXVvdGFCdWNrZXQuRGltZW5zaW9uc0VudHJ5Ugpk'
+    'aW1lbnNpb25zGj0KD0RpbWVuc2lvbnNFbnRyeRIQCgNrZXkYASABKAlSA2tleRIUCgV2YWx1ZR'
+    'gCIAEoCVIFdmFsdWU6AjgB');
+
 @$core.Deprecated('Use quotaOverrideDescriptor instead')
 const QuotaOverride$json = {
   '1': 'QuotaOverride',
@@ -316,7 +383,13 @@ const QuotaOverride_DimensionsEntry$json = {
 
 /// Descriptor for `QuotaOverride`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List quotaOverrideDescriptor = $convert.base64Decode(
-    'Cg1RdW90YU92ZXJyaWRlEhIKBG5hbWUYASABKAlSBG5hbWUSJQoOb3ZlcnJpZGVfdmFsdWUYAiABKANSDW92ZXJyaWRlVmFsdWUSXgoKZGltZW5zaW9ucxgDIAMoCzI+Lmdvb2dsZS5hcGkuc2VydmljZXVzYWdlLnYxYmV0YTEuUXVvdGFPdmVycmlkZS5EaW1lbnNpb25zRW50cnlSCmRpbWVuc2lvbnMSFgoGbWV0cmljGAQgASgJUgZtZXRyaWMSEgoEdW5pdBgFIAEoCVIEdW5pdBI2ChdhZG1pbl9vdmVycmlkZV9hbmNlc3RvchgGIAEoCVIVYWRtaW5PdmVycmlkZUFuY2VzdG9yGj0KD0RpbWVuc2lvbnNFbnRyeRIQCgNrZXkYASABKAlSA2tleRIUCgV2YWx1ZRgCIAEoCVIFdmFsdWU6AjgB');
+    'Cg1RdW90YU92ZXJyaWRlEhIKBG5hbWUYASABKAlSBG5hbWUSJQoOb3ZlcnJpZGVfdmFsdWUYAi'
+    'ABKANSDW92ZXJyaWRlVmFsdWUSXgoKZGltZW5zaW9ucxgDIAMoCzI+Lmdvb2dsZS5hcGkuc2Vy'
+    'dmljZXVzYWdlLnYxYmV0YTEuUXVvdGFPdmVycmlkZS5EaW1lbnNpb25zRW50cnlSCmRpbWVuc2'
+    'lvbnMSFgoGbWV0cmljGAQgASgJUgZtZXRyaWMSEgoEdW5pdBgFIAEoCVIEdW5pdBI2ChdhZG1p'
+    'bl9vdmVycmlkZV9hbmNlc3RvchgGIAEoCVIVYWRtaW5PdmVycmlkZUFuY2VzdG9yGj0KD0RpbW'
+    'Vuc2lvbnNFbnRyeRIQCgNrZXkYASABKAlSA2tleRIUCgV2YWx1ZRgCIAEoCVIFdmFsdWU6AjgB');
+
 @$core.Deprecated('Use overrideInlineSourceDescriptor instead')
 const OverrideInlineSource$json = {
   '1': 'OverrideInlineSource',
@@ -334,7 +407,50 @@ const OverrideInlineSource$json = {
 
 /// Descriptor for `OverrideInlineSource`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List overrideInlineSourceDescriptor = $convert.base64Decode(
-    'ChRPdmVycmlkZUlubGluZVNvdXJjZRJMCglvdmVycmlkZXMYASADKAsyLi5nb29nbGUuYXBpLnNlcnZpY2V1c2FnZS52MWJldGExLlF1b3RhT3ZlcnJpZGVSCW92ZXJyaWRlcw==');
+    'ChRPdmVycmlkZUlubGluZVNvdXJjZRJMCglvdmVycmlkZXMYASADKAsyLi5nb29nbGUuYXBpLn'
+    'NlcnZpY2V1c2FnZS52MWJldGExLlF1b3RhT3ZlcnJpZGVSCW92ZXJyaWRlcw==');
+
+@$core.Deprecated('Use producerQuotaPolicyDescriptor instead')
+const ProducerQuotaPolicy$json = {
+  '1': 'ProducerQuotaPolicy',
+  '2': [
+    {'1': 'name', '3': 1, '4': 1, '5': 9, '10': 'name'},
+    {'1': 'policy_value', '3': 2, '4': 1, '5': 3, '10': 'policyValue'},
+    {
+      '1': 'dimensions',
+      '3': 3,
+      '4': 3,
+      '5': 11,
+      '6':
+          '.google.api.serviceusage.v1beta1.ProducerQuotaPolicy.DimensionsEntry',
+      '10': 'dimensions'
+    },
+    {'1': 'metric', '3': 4, '4': 1, '5': 9, '10': 'metric'},
+    {'1': 'unit', '3': 5, '4': 1, '5': 9, '10': 'unit'},
+    {'1': 'container', '3': 6, '4': 1, '5': 9, '10': 'container'},
+  ],
+  '3': [ProducerQuotaPolicy_DimensionsEntry$json],
+};
+
+@$core.Deprecated('Use producerQuotaPolicyDescriptor instead')
+const ProducerQuotaPolicy_DimensionsEntry$json = {
+  '1': 'DimensionsEntry',
+  '2': [
+    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
+  ],
+  '7': {'7': true},
+};
+
+/// Descriptor for `ProducerQuotaPolicy`. Decode as a `google.protobuf.DescriptorProto`.
+final $typed_data.Uint8List producerQuotaPolicyDescriptor = $convert.base64Decode(
+    'ChNQcm9kdWNlclF1b3RhUG9saWN5EhIKBG5hbWUYASABKAlSBG5hbWUSIQoMcG9saWN5X3ZhbH'
+    'VlGAIgASgDUgtwb2xpY3lWYWx1ZRJkCgpkaW1lbnNpb25zGAMgAygLMkQuZ29vZ2xlLmFwaS5z'
+    'ZXJ2aWNldXNhZ2UudjFiZXRhMS5Qcm9kdWNlclF1b3RhUG9saWN5LkRpbWVuc2lvbnNFbnRyeV'
+    'IKZGltZW5zaW9ucxIWCgZtZXRyaWMYBCABKAlSBm1ldHJpYxISCgR1bml0GAUgASgJUgR1bml0'
+    'EhwKCWNvbnRhaW5lchgGIAEoCVIJY29udGFpbmVyGj0KD0RpbWVuc2lvbnNFbnRyeRIQCgNrZX'
+    'kYASABKAlSA2tleRIUCgV2YWx1ZRgCIAEoCVIFdmFsdWU6AjgB');
+
 @$core.Deprecated('Use adminQuotaPolicyDescriptor instead')
 const AdminQuotaPolicy$json = {
   '1': 'AdminQuotaPolicy',
@@ -368,7 +484,13 @@ const AdminQuotaPolicy_DimensionsEntry$json = {
 
 /// Descriptor for `AdminQuotaPolicy`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List adminQuotaPolicyDescriptor = $convert.base64Decode(
-    'ChBBZG1pblF1b3RhUG9saWN5EhIKBG5hbWUYASABKAlSBG5hbWUSIQoMcG9saWN5X3ZhbHVlGAIgASgDUgtwb2xpY3lWYWx1ZRJhCgpkaW1lbnNpb25zGAMgAygLMkEuZ29vZ2xlLmFwaS5zZXJ2aWNldXNhZ2UudjFiZXRhMS5BZG1pblF1b3RhUG9saWN5LkRpbWVuc2lvbnNFbnRyeVIKZGltZW5zaW9ucxIWCgZtZXRyaWMYBCABKAlSBm1ldHJpYxISCgR1bml0GAUgASgJUgR1bml0EhwKCWNvbnRhaW5lchgGIAEoCVIJY29udGFpbmVyGj0KD0RpbWVuc2lvbnNFbnRyeRIQCgNrZXkYASABKAlSA2tleRIUCgV2YWx1ZRgCIAEoCVIFdmFsdWU6AjgB');
+    'ChBBZG1pblF1b3RhUG9saWN5EhIKBG5hbWUYASABKAlSBG5hbWUSIQoMcG9saWN5X3ZhbHVlGA'
+    'IgASgDUgtwb2xpY3lWYWx1ZRJhCgpkaW1lbnNpb25zGAMgAygLMkEuZ29vZ2xlLmFwaS5zZXJ2'
+    'aWNldXNhZ2UudjFiZXRhMS5BZG1pblF1b3RhUG9saWN5LkRpbWVuc2lvbnNFbnRyeVIKZGltZW'
+    '5zaW9ucxIWCgZtZXRyaWMYBCABKAlSBm1ldHJpYxISCgR1bml0GAUgASgJUgR1bml0EhwKCWNv'
+    'bnRhaW5lchgGIAEoCVIJY29udGFpbmVyGj0KD0RpbWVuc2lvbnNFbnRyeRIQCgNrZXkYASABKA'
+    'lSA2tleRIUCgV2YWx1ZRgCIAEoCVIFdmFsdWU6AjgB');
+
 @$core.Deprecated('Use serviceIdentityDescriptor instead')
 const ServiceIdentity$json = {
   '1': 'ServiceIdentity',
@@ -380,4 +502,5 @@ const ServiceIdentity$json = {
 
 /// Descriptor for `ServiceIdentity`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List serviceIdentityDescriptor = $convert.base64Decode(
-    'Cg9TZXJ2aWNlSWRlbnRpdHkSFAoFZW1haWwYASABKAlSBWVtYWlsEhsKCXVuaXF1ZV9pZBgCIAEoCVIIdW5pcXVlSWQ=');
+    'Cg9TZXJ2aWNlSWRlbnRpdHkSFAoFZW1haWwYASABKAlSBWVtYWlsEhsKCXVuaXF1ZV9pZBgCIA'
+    'EoCVIIdW5pcXVlSWQ=');

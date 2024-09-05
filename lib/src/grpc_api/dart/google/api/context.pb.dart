@@ -1,49 +1,80 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/api/context.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
+///  `Context` defines which contexts an API requests.
+///
+///  Example:
+///
+///      context:
+///        rules:
+///        - selector: "*"
+///          requested:
+///          - google.rpc.context.ProjectContext
+///          - google.rpc.context.OriginContext
+///
+///  The above specifies that all methods in the API request
+///  `google.rpc.context.ProjectContext` and
+///  `google.rpc.context.OriginContext`.
+///
+///  Available context types are defined in package
+///  `google.rpc.context`.
+///
+///  This also provides mechanism to allowlist any protobuf message extension that
+///  can be sent in grpc metadata using “x-goog-ext-<extension_id>-bin” and
+///  “x-goog-ext-<extension_id>-jspb” format. For example, list any service
+///  specific protobuf types that can appear in grpc metadata as follows in your
+///  yaml file:
+///
+///  Example:
+///
+///      context:
+///        rules:
+///         - selector: "google.example.library.v1.LibraryService.CreateBook"
+///           allowed_request_extensions:
+///           - google.foo.v1.NewExtension
+///           allowed_response_extensions:
+///           - google.foo.v1.NewExtension
+///
+///  You can also specify extension ID instead of fully qualified extension name
+///  here.
 class Context extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Context',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api'),
-      createEmptyInstance: create)
-    ..pc<ContextRule>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'rules',
-        $pb.PbFieldType.PM,
-        subBuilder: ContextRule.create)
-    ..hasRequiredFields = false;
-
-  Context._() : super();
   factory Context({
     $core.Iterable<ContextRule>? rules,
   }) {
-    final _result = create();
+    final $result = create();
     if (rules != null) {
-      _result.rules.addAll(rules);
+      $result.rules.addAll(rules);
     }
-    return _result;
+    return $result;
   }
+  Context._() : super();
   factory Context.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Context.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Context',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'google.api'),
+      createEmptyInstance: create)
+    ..pc<ContextRule>(1, _omitFieldNames ? '' : 'rules', $pb.PbFieldType.PM,
+        subBuilder: ContextRule.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -52,9 +83,10 @@ class Context extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Context copyWith(void Function(Context) updates) =>
-      super.copyWith((message) => updates(message as Context))
-          as Context; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Context)) as Context;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Context create() => Context._();
   Context createEmptyInstance() => create();
@@ -64,44 +96,16 @@ class Context extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Context>(create);
   static Context? _defaultInstance;
 
+  ///  A list of RPC context rules that apply to individual API methods.
+  ///
+  ///  **NOTE:** All service configuration rules follow "last one wins" order.
   @$pb.TagNumber(1)
   $core.List<ContextRule> get rules => $_getList(0);
 }
 
+/// A context rule provides information about the context for an individual API
+/// element.
 class ContextRule extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ContextRule',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'selector')
-    ..pPS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'requested')
-    ..pPS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'provided')
-    ..pPS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'allowedRequestExtensions')
-    ..pPS(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'allowedResponseExtensions')
-    ..hasRequiredFields = false;
-
-  ContextRule._() : super();
   factory ContextRule({
     $core.String? selector,
     $core.Iterable<$core.String>? requested,
@@ -109,30 +113,43 @@ class ContextRule extends $pb.GeneratedMessage {
     $core.Iterable<$core.String>? allowedRequestExtensions,
     $core.Iterable<$core.String>? allowedResponseExtensions,
   }) {
-    final _result = create();
+    final $result = create();
     if (selector != null) {
-      _result.selector = selector;
+      $result.selector = selector;
     }
     if (requested != null) {
-      _result.requested.addAll(requested);
+      $result.requested.addAll(requested);
     }
     if (provided != null) {
-      _result.provided.addAll(provided);
+      $result.provided.addAll(provided);
     }
     if (allowedRequestExtensions != null) {
-      _result.allowedRequestExtensions.addAll(allowedRequestExtensions);
+      $result.allowedRequestExtensions.addAll(allowedRequestExtensions);
     }
     if (allowedResponseExtensions != null) {
-      _result.allowedResponseExtensions.addAll(allowedResponseExtensions);
+      $result.allowedResponseExtensions.addAll(allowedResponseExtensions);
     }
-    return _result;
+    return $result;
   }
+  ContextRule._() : super();
   factory ContextRule.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ContextRule.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ContextRule',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'google.api'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'selector')
+    ..pPS(2, _omitFieldNames ? '' : 'requested')
+    ..pPS(3, _omitFieldNames ? '' : 'provided')
+    ..pPS(4, _omitFieldNames ? '' : 'allowedRequestExtensions')
+    ..pPS(5, _omitFieldNames ? '' : 'allowedResponseExtensions')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -142,8 +159,10 @@ class ContextRule extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ContextRule copyWith(void Function(ContextRule) updates) =>
       super.copyWith((message) => updates(message as ContextRule))
-          as ContextRule; // ignore: deprecated_member_use
+          as ContextRule;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ContextRule create() => ContextRule._();
   ContextRule createEmptyInstance() => create();
@@ -153,6 +172,10 @@ class ContextRule extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ContextRule>(create);
   static ContextRule? _defaultInstance;
 
+  ///  Selects the methods to which this rule applies.
+  ///
+  ///  Refer to [selector][google.api.DocumentationRule.selector] for syntax
+  ///  details.
   @$pb.TagNumber(1)
   $core.String get selector => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -165,15 +188,27 @@ class ContextRule extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearSelector() => clearField(1);
 
+  /// A list of full type names of requested contexts, only the requested context
+  /// will be made available to the backend.
   @$pb.TagNumber(2)
   $core.List<$core.String> get requested => $_getList(1);
 
+  /// A list of full type names of provided contexts. It is used to support
+  /// propagating HTTP headers and ETags from the response extension.
   @$pb.TagNumber(3)
   $core.List<$core.String> get provided => $_getList(2);
 
+  /// A list of full type names or extension IDs of extensions allowed in grpc
+  /// side channel from client to backend.
   @$pb.TagNumber(4)
   $core.List<$core.String> get allowedRequestExtensions => $_getList(3);
 
+  /// A list of full type names or extension IDs of extensions allowed in grpc
+  /// side channel from backend to client.
   @$pb.TagNumber(5)
   $core.List<$core.String> get allowedResponseExtensions => $_getList(4);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

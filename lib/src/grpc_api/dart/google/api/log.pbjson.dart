@@ -1,12 +1,16 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/api/log.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
-import 'dart:core' as $core;
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:convert' as $convert;
+import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
 @$core.Deprecated('Use logDescriptorDescriptor instead')
@@ -29,4 +33,6 @@ const LogDescriptor$json = {
 
 /// Descriptor for `LogDescriptor`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List logDescriptorDescriptor = $convert.base64Decode(
-    'Cg1Mb2dEZXNjcmlwdG9yEhIKBG5hbWUYASABKAlSBG5hbWUSMwoGbGFiZWxzGAIgAygLMhsuZ29vZ2xlLmFwaS5MYWJlbERlc2NyaXB0b3JSBmxhYmVscxIgCgtkZXNjcmlwdGlvbhgDIAEoCVILZGVzY3JpcHRpb24SIQoMZGlzcGxheV9uYW1lGAQgASgJUgtkaXNwbGF5TmFtZQ==');
+    'Cg1Mb2dEZXNjcmlwdG9yEhIKBG5hbWUYASABKAlSBG5hbWUSMwoGbGFiZWxzGAIgAygLMhsuZ2'
+    '9vZ2xlLmFwaS5MYWJlbERlc2NyaXB0b3JSBmxhYmVscxIgCgtkZXNjcmlwdGlvbhgDIAEoCVIL'
+    'ZGVzY3JpcHRpb24SIQoMZGlzcGxheV9uYW1lGAQgASgJUgtkaXNwbGF5TmFtZQ==');

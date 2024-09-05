@@ -1,53 +1,50 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/api/serviceusage/v1/serviceusage.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'resources.pb.dart' as $3;
-
+import 'resources.pb.dart' as $38;
 import 'serviceusage.pbenum.dart';
 
 export 'serviceusage.pbenum.dart';
 
+/// Request message for the `EnableService` method.
 class EnableServiceRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'EnableServiceRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.serviceusage.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  EnableServiceRequest._() : super();
   factory EnableServiceRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  EnableServiceRequest._() : super();
   factory EnableServiceRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory EnableServiceRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'EnableServiceRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.serviceusage.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -58,8 +55,10 @@ class EnableServiceRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   EnableServiceRequest copyWith(void Function(EnableServiceRequest) updates) =>
       super.copyWith((message) => updates(message as EnableServiceRequest))
-          as EnableServiceRequest; // ignore: deprecated_member_use
+          as EnableServiceRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static EnableServiceRequest create() => EnableServiceRequest._();
   EnableServiceRequest createEmptyInstance() => create();
@@ -70,6 +69,17 @@ class EnableServiceRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<EnableServiceRequest>(create);
   static EnableServiceRequest? _defaultInstance;
 
+  ///  Name of the consumer and service to enable the service on.
+  ///
+  ///  The `EnableService` and `DisableService` methods currently only support
+  ///  projects.
+  ///
+  ///  Enabling a service requires that the service is public or is shared with
+  ///  the user enabling the service.
+  ///
+  ///  An example name would be:
+  ///  `projects/123/services/serviceusage.googleapis.com` where `123` is the
+  ///  project number.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -83,40 +93,36 @@ class EnableServiceRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// Response message for the `EnableService` method.
+/// This response message is assigned to the `response` field of the returned
+/// Operation when that operation is done.
 class EnableServiceResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'EnableServiceResponse',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.serviceusage.v1'),
-      createEmptyInstance: create)
-    ..aOM<$3.Service>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'service',
-        subBuilder: $3.Service.create)
-    ..hasRequiredFields = false;
-
-  EnableServiceResponse._() : super();
   factory EnableServiceResponse({
-    $3.Service? service,
+    $38.Service? service,
   }) {
-    final _result = create();
+    final $result = create();
     if (service != null) {
-      _result.service = service;
+      $result.service = service;
     }
-    return _result;
+    return $result;
   }
+  EnableServiceResponse._() : super();
   factory EnableServiceResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory EnableServiceResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'EnableServiceResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.serviceusage.v1'),
+      createEmptyInstance: create)
+    ..aOM<$38.Service>(1, _omitFieldNames ? '' : 'service',
+        subBuilder: $38.Service.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -128,8 +134,10 @@ class EnableServiceResponse extends $pb.GeneratedMessage {
   EnableServiceResponse copyWith(
           void Function(EnableServiceResponse) updates) =>
       super.copyWith((message) => updates(message as EnableServiceResponse))
-          as EnableServiceResponse; // ignore: deprecated_member_use
+          as EnableServiceResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static EnableServiceResponse create() => EnableServiceResponse._();
   EnableServiceResponse createEmptyInstance() => create();
@@ -140,10 +148,11 @@ class EnableServiceResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<EnableServiceResponse>(create);
   static EnableServiceResponse? _defaultInstance;
 
+  /// The new state of the service after enabling.
   @$pb.TagNumber(1)
-  $3.Service get service => $_getN(0);
+  $38.Service get service => $_getN(0);
   @$pb.TagNumber(1)
-  set service($3.Service v) {
+  set service($38.Service v) {
     setField(1, v);
   }
 
@@ -152,64 +161,51 @@ class EnableServiceResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearService() => clearField(1);
   @$pb.TagNumber(1)
-  $3.Service ensureService() => $_ensure(0);
+  $38.Service ensureService() => $_ensure(0);
 }
 
+/// Request message for the `DisableService` method.
 class DisableServiceRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DisableServiceRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.serviceusage.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOB(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'disableDependentServices')
-    ..e<DisableServiceRequest_CheckIfServiceHasUsage>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'checkIfServiceHasUsage',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: DisableServiceRequest_CheckIfServiceHasUsage.CHECK_IF_SERVICE_HAS_USAGE_UNSPECIFIED,
-        valueOf: DisableServiceRequest_CheckIfServiceHasUsage.valueOf,
-        enumValues: DisableServiceRequest_CheckIfServiceHasUsage.values)
-    ..hasRequiredFields = false;
-
-  DisableServiceRequest._() : super();
   factory DisableServiceRequest({
     $core.String? name,
     $core.bool? disableDependentServices,
     DisableServiceRequest_CheckIfServiceHasUsage? checkIfServiceHasUsage,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (disableDependentServices != null) {
-      _result.disableDependentServices = disableDependentServices;
+      $result.disableDependentServices = disableDependentServices;
     }
     if (checkIfServiceHasUsage != null) {
-      _result.checkIfServiceHasUsage = checkIfServiceHasUsage;
+      $result.checkIfServiceHasUsage = checkIfServiceHasUsage;
     }
-    return _result;
+    return $result;
   }
+  DisableServiceRequest._() : super();
   factory DisableServiceRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DisableServiceRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DisableServiceRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.serviceusage.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOB(2, _omitFieldNames ? '' : 'disableDependentServices')
+    ..e<DisableServiceRequest_CheckIfServiceHasUsage>(
+        3, _omitFieldNames ? '' : 'checkIfServiceHasUsage', $pb.PbFieldType.OE,
+        defaultOrMaker: DisableServiceRequest_CheckIfServiceHasUsage
+            .CHECK_IF_SERVICE_HAS_USAGE_UNSPECIFIED,
+        valueOf: DisableServiceRequest_CheckIfServiceHasUsage.valueOf,
+        enumValues: DisableServiceRequest_CheckIfServiceHasUsage.values)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -221,8 +217,10 @@ class DisableServiceRequest extends $pb.GeneratedMessage {
   DisableServiceRequest copyWith(
           void Function(DisableServiceRequest) updates) =>
       super.copyWith((message) => updates(message as DisableServiceRequest))
-          as DisableServiceRequest; // ignore: deprecated_member_use
+          as DisableServiceRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DisableServiceRequest create() => DisableServiceRequest._();
   DisableServiceRequest createEmptyInstance() => create();
@@ -233,6 +231,13 @@ class DisableServiceRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DisableServiceRequest>(create);
   static DisableServiceRequest? _defaultInstance;
 
+  ///  Name of the consumer and service to disable the service on.
+  ///
+  ///  The enable and disable methods currently only support projects.
+  ///
+  ///  An example name would be:
+  ///  `projects/123/services/serviceusage.googleapis.com` where `123` is the
+  ///  project number.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -245,6 +250,11 @@ class DisableServiceRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// Indicates if services that are enabled and which depend on this service
+  /// should also be disabled. If not set, an error will be generated if any
+  /// enabled services depend on the service to be disabled. When set, the
+  /// service, and any enabled services that depend on it, will be disabled
+  /// together.
   @$pb.TagNumber(2)
   $core.bool get disableDependentServices => $_getBF(1);
   @$pb.TagNumber(2)
@@ -257,6 +267,7 @@ class DisableServiceRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearDisableDependentServices() => clearField(2);
 
+  /// Defines the behavior for checking service usage when disabling a service.
   @$pb.TagNumber(3)
   DisableServiceRequest_CheckIfServiceHasUsage get checkIfServiceHasUsage =>
       $_getN(2);
@@ -271,40 +282,36 @@ class DisableServiceRequest extends $pb.GeneratedMessage {
   void clearCheckIfServiceHasUsage() => clearField(3);
 }
 
+/// Response message for the `DisableService` method.
+/// This response message is assigned to the `response` field of the returned
+/// Operation when that operation is done.
 class DisableServiceResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DisableServiceResponse',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.serviceusage.v1'),
-      createEmptyInstance: create)
-    ..aOM<$3.Service>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'service',
-        subBuilder: $3.Service.create)
-    ..hasRequiredFields = false;
-
-  DisableServiceResponse._() : super();
   factory DisableServiceResponse({
-    $3.Service? service,
+    $38.Service? service,
   }) {
-    final _result = create();
+    final $result = create();
     if (service != null) {
-      _result.service = service;
+      $result.service = service;
     }
-    return _result;
+    return $result;
   }
+  DisableServiceResponse._() : super();
   factory DisableServiceResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DisableServiceResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DisableServiceResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.serviceusage.v1'),
+      createEmptyInstance: create)
+    ..aOM<$38.Service>(1, _omitFieldNames ? '' : 'service',
+        subBuilder: $38.Service.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -316,8 +323,10 @@ class DisableServiceResponse extends $pb.GeneratedMessage {
   DisableServiceResponse copyWith(
           void Function(DisableServiceResponse) updates) =>
       super.copyWith((message) => updates(message as DisableServiceResponse))
-          as DisableServiceResponse; // ignore: deprecated_member_use
+          as DisableServiceResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DisableServiceResponse create() => DisableServiceResponse._();
   DisableServiceResponse createEmptyInstance() => create();
@@ -328,10 +337,11 @@ class DisableServiceResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DisableServiceResponse>(create);
   static DisableServiceResponse? _defaultInstance;
 
+  /// The new state of the service after disabling.
   @$pb.TagNumber(1)
-  $3.Service get service => $_getN(0);
+  $38.Service get service => $_getN(0);
   @$pb.TagNumber(1)
-  set service($3.Service v) {
+  set service($38.Service v) {
     setField(1, v);
   }
 
@@ -340,42 +350,36 @@ class DisableServiceResponse extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearService() => clearField(1);
   @$pb.TagNumber(1)
-  $3.Service ensureService() => $_ensure(0);
+  $38.Service ensureService() => $_ensure(0);
 }
 
+/// Request message for the `GetService` method.
 class GetServiceRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetServiceRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.serviceusage.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  GetServiceRequest._() : super();
   factory GetServiceRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  GetServiceRequest._() : super();
   factory GetServiceRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetServiceRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetServiceRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.serviceusage.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -385,8 +389,10 @@ class GetServiceRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   GetServiceRequest copyWith(void Function(GetServiceRequest) updates) =>
       super.copyWith((message) => updates(message as GetServiceRequest))
-          as GetServiceRequest; // ignore: deprecated_member_use
+          as GetServiceRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetServiceRequest create() => GetServiceRequest._();
   GetServiceRequest createEmptyInstance() => create();
@@ -397,6 +403,11 @@ class GetServiceRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetServiceRequest>(create);
   static GetServiceRequest? _defaultInstance;
 
+  ///  Name of the consumer and service to get the `ConsumerState` for.
+  ///
+  ///  An example name would be:
+  ///  `projects/123/services/serviceusage.googleapis.com` where `123` is the
+  ///  project number.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -410,63 +421,48 @@ class GetServiceRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// Request message for the `ListServices` method.
 class ListServicesRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListServicesRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.serviceusage.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..a<$core.int>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageSize',
-        $pb.PbFieldType.O3)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageToken')
-    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'filter')
-    ..hasRequiredFields = false;
-
-  ListServicesRequest._() : super();
   factory ListServicesRequest({
     $core.String? parent,
     $core.int? pageSize,
     $core.String? pageToken,
     $core.String? filter,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (pageSize != null) {
-      _result.pageSize = pageSize;
+      $result.pageSize = pageSize;
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
     if (filter != null) {
-      _result.filter = filter;
+      $result.filter = filter;
     }
-    return _result;
+    return $result;
   }
+  ListServicesRequest._() : super();
   factory ListServicesRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListServicesRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListServicesRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.serviceusage.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aOS(3, _omitFieldNames ? '' : 'pageToken')
+    ..aOS(4, _omitFieldNames ? '' : 'filter')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -476,8 +472,10 @@ class ListServicesRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ListServicesRequest copyWith(void Function(ListServicesRequest) updates) =>
       super.copyWith((message) => updates(message as ListServicesRequest))
-          as ListServicesRequest; // ignore: deprecated_member_use
+          as ListServicesRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListServicesRequest create() => ListServicesRequest._();
   ListServicesRequest createEmptyInstance() => create();
@@ -488,6 +486,10 @@ class ListServicesRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListServicesRequest>(create);
   static ListServicesRequest? _defaultInstance;
 
+  ///  Parent to search for services on.
+  ///
+  ///  An example name would be:
+  ///  `projects/123` where `123` is the project number.
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -500,6 +502,9 @@ class ListServicesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// Requested size of the next page of data.
+  /// Requested page size cannot exceed 200.
+  /// If not set, the default page size is 50.
   @$pb.TagNumber(2)
   $core.int get pageSize => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -512,6 +517,8 @@ class ListServicesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
+  /// Token identifying which result to start with, which is returned by a
+  /// previous list call.
   @$pb.TagNumber(3)
   $core.String get pageToken => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -524,6 +531,8 @@ class ListServicesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
 
+  /// Only list services that conform to the given filter.
+  /// The allowed filter strings are `state:ENABLED` and `state:DISABLED`.
   @$pb.TagNumber(4)
   $core.String get filter => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -537,47 +546,39 @@ class ListServicesRequest extends $pb.GeneratedMessage {
   void clearFilter() => clearField(4);
 }
 
+/// Response message for the `ListServices` method.
 class ListServicesResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListServicesResponse',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.serviceusage.v1'),
-      createEmptyInstance: create)
-    ..pc<$3.Service>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'services',
-        $pb.PbFieldType.PM,
-        subBuilder: $3.Service.create)
-    ..aOS(2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'nextPageToken')
-    ..hasRequiredFields = false;
-
-  ListServicesResponse._() : super();
   factory ListServicesResponse({
-    $core.Iterable<$3.Service>? services,
+    $core.Iterable<$38.Service>? services,
     $core.String? nextPageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (services != null) {
-      _result.services.addAll(services);
+      $result.services.addAll(services);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
-    return _result;
+    return $result;
   }
+  ListServicesResponse._() : super();
   factory ListServicesResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListServicesResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListServicesResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.serviceusage.v1'),
+      createEmptyInstance: create)
+    ..pc<$38.Service>(1, _omitFieldNames ? '' : 'services', $pb.PbFieldType.PM,
+        subBuilder: $38.Service.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -588,8 +589,10 @@ class ListServicesResponse extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ListServicesResponse copyWith(void Function(ListServicesResponse) updates) =>
       super.copyWith((message) => updates(message as ListServicesResponse))
-          as ListServicesResponse; // ignore: deprecated_member_use
+          as ListServicesResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListServicesResponse create() => ListServicesResponse._();
   ListServicesResponse createEmptyInstance() => create();
@@ -600,9 +603,12 @@ class ListServicesResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListServicesResponse>(create);
   static ListServicesResponse? _defaultInstance;
 
+  /// The available services for the requested project.
   @$pb.TagNumber(1)
-  $core.List<$3.Service> get services => $_getList(0);
+  $core.List<$38.Service> get services => $_getList(0);
 
+  /// Token that can be passed to `ListServices` to resume a paginated
+  /// query.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -616,48 +622,38 @@ class ListServicesResponse extends $pb.GeneratedMessage {
   void clearNextPageToken() => clearField(2);
 }
 
+/// Request message for the `BatchEnableServices` method.
 class BatchEnableServicesRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'BatchEnableServicesRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.serviceusage.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..pPS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'serviceIds')
-    ..hasRequiredFields = false;
-
-  BatchEnableServicesRequest._() : super();
   factory BatchEnableServicesRequest({
     $core.String? parent,
     $core.Iterable<$core.String>? serviceIds,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (serviceIds != null) {
-      _result.serviceIds.addAll(serviceIds);
+      $result.serviceIds.addAll(serviceIds);
     }
-    return _result;
+    return $result;
   }
+  BatchEnableServicesRequest._() : super();
   factory BatchEnableServicesRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory BatchEnableServicesRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BatchEnableServicesRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.serviceusage.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..pPS(2, _omitFieldNames ? '' : 'serviceIds')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -670,8 +666,10 @@ class BatchEnableServicesRequest extends $pb.GeneratedMessage {
           void Function(BatchEnableServicesRequest) updates) =>
       super.copyWith(
               (message) => updates(message as BatchEnableServicesRequest))
-          as BatchEnableServicesRequest; // ignore: deprecated_member_use
+          as BatchEnableServicesRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static BatchEnableServicesRequest create() => BatchEnableServicesRequest._();
   BatchEnableServicesRequest createEmptyInstance() => create();
@@ -682,6 +680,12 @@ class BatchEnableServicesRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<BatchEnableServicesRequest>(create);
   static BatchEnableServicesRequest? _defaultInstance;
 
+  ///  Parent to enable services on.
+  ///
+  ///  An example name would be:
+  ///  `projects/123` where `123` is the project number.
+  ///
+  ///  The `BatchEnableServices` method currently only supports projects.
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -694,46 +698,37 @@ class BatchEnableServicesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  ///  The identifiers of the services to enable on the project.
+  ///
+  ///  A valid identifier would be:
+  ///  serviceusage.googleapis.com
+  ///
+  ///  Enabling services requires that each service is public or is shared with
+  ///  the user enabling the service.
+  ///
+  ///  A single request can enable a maximum of 20 services at a time. If more
+  ///  than 20 services are specified, the request will fail, and no state changes
+  ///  will occur.
   @$pb.TagNumber(2)
   $core.List<$core.String> get serviceIds => $_getList(1);
 }
 
+/// Provides error messages for the failing services.
 class BatchEnableServicesResponse_EnableFailure extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'BatchEnableServicesResponse.EnableFailure',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.serviceusage.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'serviceId')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'errorMessage')
-    ..hasRequiredFields = false;
-
-  BatchEnableServicesResponse_EnableFailure._() : super();
   factory BatchEnableServicesResponse_EnableFailure({
     $core.String? serviceId,
     $core.String? errorMessage,
   }) {
-    final _result = create();
+    final $result = create();
     if (serviceId != null) {
-      _result.serviceId = serviceId;
+      $result.serviceId = serviceId;
     }
     if (errorMessage != null) {
-      _result.errorMessage = errorMessage;
+      $result.errorMessage = errorMessage;
     }
-    return _result;
+    return $result;
   }
+  BatchEnableServicesResponse_EnableFailure._() : super();
   factory BatchEnableServicesResponse_EnableFailure.fromBuffer(
           $core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
@@ -741,6 +736,16 @@ class BatchEnableServicesResponse_EnableFailure extends $pb.GeneratedMessage {
   factory BatchEnableServicesResponse_EnableFailure.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BatchEnableServicesResponse.EnableFailure',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.serviceusage.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'serviceId')
+    ..aOS(2, _omitFieldNames ? '' : 'errorMessage')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -753,8 +758,10 @@ class BatchEnableServicesResponse_EnableFailure extends $pb.GeneratedMessage {
           void Function(BatchEnableServicesResponse_EnableFailure) updates) =>
       super.copyWith((message) =>
               updates(message as BatchEnableServicesResponse_EnableFailure))
-          as BatchEnableServicesResponse_EnableFailure; // ignore: deprecated_member_use
+          as BatchEnableServicesResponse_EnableFailure;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static BatchEnableServicesResponse_EnableFailure create() =>
       BatchEnableServicesResponse_EnableFailure._();
@@ -768,6 +775,7 @@ class BatchEnableServicesResponse_EnableFailure extends $pb.GeneratedMessage {
           BatchEnableServicesResponse_EnableFailure>(create);
   static BatchEnableServicesResponse_EnableFailure? _defaultInstance;
 
+  /// The service id of a service that could not be enabled.
   @$pb.TagNumber(1)
   $core.String get serviceId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -780,6 +788,7 @@ class BatchEnableServicesResponse_EnableFailure extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearServiceId() => clearField(1);
 
+  /// An error message describing why the service could not be enabled.
   @$pb.TagNumber(2)
   $core.String get errorMessage => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -793,46 +802,43 @@ class BatchEnableServicesResponse_EnableFailure extends $pb.GeneratedMessage {
   void clearErrorMessage() => clearField(2);
 }
 
+/// Response message for the `BatchEnableServices` method.
+/// This response message is assigned to the `response` field of the returned
+/// Operation when that operation is done.
 class BatchEnableServicesResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'BatchEnableServicesResponse',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.serviceusage.v1'),
-      createEmptyInstance: create)
-    ..pc<$3.Service>(
-        1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'services', $pb.PbFieldType.PM,
-        subBuilder: $3.Service.create)
-    ..pc<BatchEnableServicesResponse_EnableFailure>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'failures',
-        $pb.PbFieldType.PM,
-        subBuilder: BatchEnableServicesResponse_EnableFailure.create)
-    ..hasRequiredFields = false;
-
-  BatchEnableServicesResponse._() : super();
   factory BatchEnableServicesResponse({
-    $core.Iterable<$3.Service>? services,
+    $core.Iterable<$38.Service>? services,
     $core.Iterable<BatchEnableServicesResponse_EnableFailure>? failures,
   }) {
-    final _result = create();
+    final $result = create();
     if (services != null) {
-      _result.services.addAll(services);
+      $result.services.addAll(services);
     }
     if (failures != null) {
-      _result.failures.addAll(failures);
+      $result.failures.addAll(failures);
     }
-    return _result;
+    return $result;
   }
+  BatchEnableServicesResponse._() : super();
   factory BatchEnableServicesResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory BatchEnableServicesResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BatchEnableServicesResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.serviceusage.v1'),
+      createEmptyInstance: create)
+    ..pc<$38.Service>(1, _omitFieldNames ? '' : 'services', $pb.PbFieldType.PM,
+        subBuilder: $38.Service.create)
+    ..pc<BatchEnableServicesResponse_EnableFailure>(
+        2, _omitFieldNames ? '' : 'failures', $pb.PbFieldType.PM,
+        subBuilder: BatchEnableServicesResponse_EnableFailure.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -845,8 +851,10 @@ class BatchEnableServicesResponse extends $pb.GeneratedMessage {
           void Function(BatchEnableServicesResponse) updates) =>
       super.copyWith(
               (message) => updates(message as BatchEnableServicesResponse))
-          as BatchEnableServicesResponse; // ignore: deprecated_member_use
+          as BatchEnableServicesResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static BatchEnableServicesResponse create() =>
       BatchEnableServicesResponse._();
@@ -858,56 +866,49 @@ class BatchEnableServicesResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<BatchEnableServicesResponse>(create);
   static BatchEnableServicesResponse? _defaultInstance;
 
+  /// The new state of the services after enabling.
   @$pb.TagNumber(1)
-  $core.List<$3.Service> get services => $_getList(0);
+  $core.List<$38.Service> get services => $_getList(0);
 
+  /// If allow_partial_success is true, and one or more services could not be
+  /// enabled, this field contains the details about each failure.
   @$pb.TagNumber(2)
   $core.List<BatchEnableServicesResponse_EnableFailure> get failures =>
       $_getList(1);
 }
 
+/// Request message for the `BatchGetServices` method.
 class BatchGetServicesRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'BatchGetServicesRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.serviceusage.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..pPS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'names')
-    ..hasRequiredFields = false;
-
-  BatchGetServicesRequest._() : super();
   factory BatchGetServicesRequest({
     $core.String? parent,
     $core.Iterable<$core.String>? names,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (names != null) {
-      _result.names.addAll(names);
+      $result.names.addAll(names);
     }
-    return _result;
+    return $result;
   }
+  BatchGetServicesRequest._() : super();
   factory BatchGetServicesRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory BatchGetServicesRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BatchGetServicesRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.serviceusage.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..pPS(2, _omitFieldNames ? '' : 'names')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -919,8 +920,10 @@ class BatchGetServicesRequest extends $pb.GeneratedMessage {
   BatchGetServicesRequest copyWith(
           void Function(BatchGetServicesRequest) updates) =>
       super.copyWith((message) => updates(message as BatchGetServicesRequest))
-          as BatchGetServicesRequest; // ignore: deprecated_member_use
+          as BatchGetServicesRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static BatchGetServicesRequest create() => BatchGetServicesRequest._();
   BatchGetServicesRequest createEmptyInstance() => create();
@@ -931,6 +934,11 @@ class BatchGetServicesRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<BatchGetServicesRequest>(create);
   static BatchGetServicesRequest? _defaultInstance;
 
+  /// Parent to retrieve services from.
+  /// If this is set, the parent of all of the services specified in `names` must
+  /// match this field. An example name would be: `projects/123` where `123` is
+  /// the project number. The `BatchGetServices` method currently only supports
+  /// projects.
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -943,45 +951,44 @@ class BatchGetServicesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  ///  Names of the services to retrieve.
+  ///
+  ///  An example name would be:
+  ///  `projects/123/services/serviceusage.googleapis.com` where `123` is the
+  ///  project number.
+  ///  A single request can get a maximum of 30 services at a time.
   @$pb.TagNumber(2)
   $core.List<$core.String> get names => $_getList(1);
 }
 
+/// Response message for the `BatchGetServices` method.
 class BatchGetServicesResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'BatchGetServicesResponse',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.serviceusage.v1'),
-      createEmptyInstance: create)
-    ..pc<$3.Service>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'services',
-        $pb.PbFieldType.PM,
-        subBuilder: $3.Service.create)
-    ..hasRequiredFields = false;
-
-  BatchGetServicesResponse._() : super();
   factory BatchGetServicesResponse({
-    $core.Iterable<$3.Service>? services,
+    $core.Iterable<$38.Service>? services,
   }) {
-    final _result = create();
+    final $result = create();
     if (services != null) {
-      _result.services.addAll(services);
+      $result.services.addAll(services);
     }
-    return _result;
+    return $result;
   }
+  BatchGetServicesResponse._() : super();
   factory BatchGetServicesResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory BatchGetServicesResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BatchGetServicesResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.serviceusage.v1'),
+      createEmptyInstance: create)
+    ..pc<$38.Service>(1, _omitFieldNames ? '' : 'services', $pb.PbFieldType.PM,
+        subBuilder: $38.Service.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -993,8 +1000,10 @@ class BatchGetServicesResponse extends $pb.GeneratedMessage {
   BatchGetServicesResponse copyWith(
           void Function(BatchGetServicesResponse) updates) =>
       super.copyWith((message) => updates(message as BatchGetServicesResponse))
-          as BatchGetServicesResponse; // ignore: deprecated_member_use
+          as BatchGetServicesResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static BatchGetServicesResponse create() => BatchGetServicesResponse._();
   BatchGetServicesResponse createEmptyInstance() => create();
@@ -1005,6 +1014,11 @@ class BatchGetServicesResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<BatchGetServicesResponse>(create);
   static BatchGetServicesResponse? _defaultInstance;
 
+  /// The requested Service states.
   @$pb.TagNumber(1)
-  $core.List<$3.Service> get services => $_getList(0);
+  $core.List<$38.Service> get services => $_getList(0);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

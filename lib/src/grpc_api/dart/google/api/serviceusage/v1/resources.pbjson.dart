@@ -1,12 +1,16 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/api/serviceusage/v1/resources.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
-import 'dart:core' as $core;
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:convert' as $convert;
+import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
 @$core.Deprecated('Use stateDescriptor instead')
@@ -21,7 +25,9 @@ const State$json = {
 
 /// Descriptor for `State`. Decode as a `google.protobuf.EnumDescriptorProto`.
 final $typed_data.Uint8List stateDescriptor = $convert.base64Decode(
-    'CgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgwKCERJU0FCTEVEEAESCwoHRU5BQkxFRBAC');
+    'CgVTdGF0ZRIVChFTVEFURV9VTlNQRUNJRklFRBAAEgwKCERJU0FCTEVEEAESCwoHRU5BQkxFRB'
+    'AC');
+
 @$core.Deprecated('Use serviceDescriptor instead')
 const Service$json = {
   '1': 'Service',
@@ -45,11 +51,19 @@ const Service$json = {
       '10': 'state'
     },
   ],
+  '7': {},
 };
 
 /// Descriptor for `Service`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List serviceDescriptor = $convert.base64Decode(
-    'CgdTZXJ2aWNlEhIKBG5hbWUYASABKAlSBG5hbWUSFgoGcGFyZW50GAUgASgJUgZwYXJlbnQSQQoGY29uZmlnGAIgASgLMikuZ29vZ2xlLmFwaS5zZXJ2aWNldXNhZ2UudjEuU2VydmljZUNvbmZpZ1IGY29uZmlnEjcKBXN0YXRlGAQgASgOMiEuZ29vZ2xlLmFwaS5zZXJ2aWNldXNhZ2UudjEuU3RhdGVSBXN0YXRl');
+    'CgdTZXJ2aWNlEhIKBG5hbWUYASABKAlSBG5hbWUSFgoGcGFyZW50GAUgASgJUgZwYXJlbnQSQQ'
+    'oGY29uZmlnGAIgASgLMikuZ29vZ2xlLmFwaS5zZXJ2aWNldXNhZ2UudjEuU2VydmljZUNvbmZp'
+    'Z1IGY29uZmlnEjcKBXN0YXRlGAQgASgOMiEuZ29vZ2xlLmFwaS5zZXJ2aWNldXNhZ2UudjEuU3'
+    'RhdGVSBXN0YXRlOqYB6kGiAQojc2VydmljZXVzYWdlLmdvb2dsZWFwaXMuY29tL1NlcnZpY2US'
+    'JXByb2plY3RzL3twcm9qZWN0fS9zZXJ2aWNlcy97c2VydmljZX0SI2ZvbGRlcnMve2ZvbGRlcn'
+    '0vc2VydmljZXMve3NlcnZpY2V9Ei9vcmdhbml6YXRpb25zL3tvcmdhbml6YXRpb259L3NlcnZp'
+    'Y2VzL3tzZXJ2aWNlfQ==');
+
 @$core.Deprecated('Use serviceConfigDescriptor instead')
 const ServiceConfig$json = {
   '1': 'ServiceConfig',
@@ -125,7 +139,17 @@ const ServiceConfig$json = {
 
 /// Descriptor for `ServiceConfig`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List serviceConfigDescriptor = $convert.base64Decode(
-    'Cg1TZXJ2aWNlQ29uZmlnEhIKBG5hbWUYASABKAlSBG5hbWUSFAoFdGl0bGUYAiABKAlSBXRpdGxlEigKBGFwaXMYAyADKAsyFC5nb29nbGUucHJvdG9idWYuQXBpUgRhcGlzEj8KDWRvY3VtZW50YXRpb24YBiABKAsyGS5nb29nbGUuYXBpLkRvY3VtZW50YXRpb25SDWRvY3VtZW50YXRpb24SJwoFcXVvdGEYCiABKAsyES5nb29nbGUuYXBpLlF1b3RhUgVxdW90YRJCCg5hdXRoZW50aWNhdGlvbhgLIAEoCzIaLmdvb2dsZS5hcGkuQXV0aGVudGljYXRpb25SDmF1dGhlbnRpY2F0aW9uEicKBXVzYWdlGA8gASgLMhEuZ29vZ2xlLmFwaS5Vc2FnZVIFdXNhZ2USMgoJZW5kcG9pbnRzGBIgAygLMhQuZ29vZ2xlLmFwaS5FbmRwb2ludFIJZW5kcG9pbnRzElgKE21vbml0b3JlZF9yZXNvdXJjZXMYGSADKAsyJy5nb29nbGUuYXBpLk1vbml0b3JlZFJlc291cmNlRGVzY3JpcHRvclISbW9uaXRvcmVkUmVzb3VyY2VzEjYKCm1vbml0b3JpbmcYHCABKAsyFi5nb29nbGUuYXBpLk1vbml0b3JpbmdSCm1vbml0b3Jpbmc=');
+    'Cg1TZXJ2aWNlQ29uZmlnEhIKBG5hbWUYASABKAlSBG5hbWUSFAoFdGl0bGUYAiABKAlSBXRpdG'
+    'xlEigKBGFwaXMYAyADKAsyFC5nb29nbGUucHJvdG9idWYuQXBpUgRhcGlzEj8KDWRvY3VtZW50'
+    'YXRpb24YBiABKAsyGS5nb29nbGUuYXBpLkRvY3VtZW50YXRpb25SDWRvY3VtZW50YXRpb24SJw'
+    'oFcXVvdGEYCiABKAsyES5nb29nbGUuYXBpLlF1b3RhUgVxdW90YRJCCg5hdXRoZW50aWNhdGlv'
+    'bhgLIAEoCzIaLmdvb2dsZS5hcGkuQXV0aGVudGljYXRpb25SDmF1dGhlbnRpY2F0aW9uEicKBX'
+    'VzYWdlGA8gASgLMhEuZ29vZ2xlLmFwaS5Vc2FnZVIFdXNhZ2USMgoJZW5kcG9pbnRzGBIgAygL'
+    'MhQuZ29vZ2xlLmFwaS5FbmRwb2ludFIJZW5kcG9pbnRzElgKE21vbml0b3JlZF9yZXNvdXJjZX'
+    'MYGSADKAsyJy5nb29nbGUuYXBpLk1vbml0b3JlZFJlc291cmNlRGVzY3JpcHRvclISbW9uaXRv'
+    'cmVkUmVzb3VyY2VzEjYKCm1vbml0b3JpbmcYHCABKAsyFi5nb29nbGUuYXBpLk1vbml0b3Jpbm'
+    'dSCm1vbml0b3Jpbmc=');
+
 @$core.Deprecated('Use operationMetadataDescriptor instead')
 const OperationMetadata$json = {
   '1': 'OperationMetadata',
@@ -136,4 +160,5 @@ const OperationMetadata$json = {
 
 /// Descriptor for `OperationMetadata`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List operationMetadataDescriptor = $convert.base64Decode(
-    'ChFPcGVyYXRpb25NZXRhZGF0YRIlCg5yZXNvdXJjZV9uYW1lcxgCIAMoCVINcmVzb3VyY2VOYW1lcw==');
+    'ChFPcGVyYXRpb25NZXRhZGF0YRIlCg5yZXNvdXJjZV9uYW1lcxgCIAMoCVINcmVzb3VyY2VOYW'
+    '1lcw==');
