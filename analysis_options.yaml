@@ -4,3 +4,6 @@ analyzer:
   errors:
     # This is triggered in generated code.
     unnecessary_import: ignore
+
+  exclude:
+    - tmp/**

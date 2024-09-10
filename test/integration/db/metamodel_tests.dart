@@ -64,7 +64,7 @@ runTests(datastore, db.DatastoreDB store, String uniquePostfix) {
       try {
         for (final namespace in [null, 'FooNamespace', 'BarNamespace']) {
           // TODO: Partition.newPartition should be updated to accept null.
-          final partition = store.newPartition(namespace ?? '');
+          final partition = db.Partition(namespace);
           final kindQuery = store.query<Kind>(partition: partition);
           final List<Kind> kinds = await kindQuery.run().cast<Kind>().toList();
 

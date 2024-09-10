@@ -8,6 +8,8 @@ import 'package:appengine/src/grpc_api_impl/datastore_impl.dart';
 import 'package:gcloud/db.dart' as db;
 import 'package:grpc/grpc.dart' as grpc;
 import 'package:test/test.dart' as test;
+import 'db/db_tests.dart' as db_tests;
+import 'db/metamodel_tests.dart' as metamodel_tests;
 
 import 'common_e2e.dart' show onBot, withAuthenticator;
 import 'raw_datastore_test_impl.dart' as datastore_tests;
@@ -16,10 +18,9 @@ main() async {
   final endpoint = 'datastore.googleapis.com';
 
   final String nsPrefix = Platform.operatingSystem;
-
-  test.group('grpc datastore', () {
-    withAuthenticator(OAuth2Scopes,
-        (String project, grpc.HttpBasedAuthenticator authenticator) async {
+  await withAuthenticator(OAuth2Scopes,
+      (String project, grpc.HttpBasedAuthenticator authenticator) async {
+    test.group('grpc datastore', () {
       final clientChannel = grpc.ClientChannel(endpoint);
       final datastore =
           GrpcDatastoreImpl(clientChannel, authenticator, project);
@@ -36,12 +37,12 @@ main() async {
           datastore, '${nsPrefix}${DateTime.now().millisecondsSinceEpoch}');
 
       // Run high-level db tests.
-      /*  db_tests.runTests(
-        dbService, '${nsPrefix}${DateTime.now().millisecondsSinceEpoch}');
+      db_tests.runTests(
+          dbService, '${nsPrefix}${DateTime.now().millisecondsSinceEpoch}');
 
-    // Run metamodel tests.
-    metamodel_tests.runTests(datastore, dbService,
-        '${nsPrefix}${DateTime.now().millisecondsSinceEpoch}');*/
-    });
-  }, skip: onBot());
+      // Run metamodel tests.
+      metamodel_tests.runTests(datastore, dbService,
+          '${nsPrefix}${DateTime.now().millisecondsSinceEpoch}');
+    }, skip: onBot());
+  });
 }
