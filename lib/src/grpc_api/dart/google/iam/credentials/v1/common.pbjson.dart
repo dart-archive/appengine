@@ -1,12 +1,16 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/iam/credentials/v1/common.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
-import 'dart:core' as $core;
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:convert' as $convert;
+import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
 @$core.Deprecated('Use generateAccessTokenRequestDescriptor instead')
@@ -28,9 +32,12 @@ const GenerateAccessTokenRequest$json = {
 };
 
 /// Descriptor for `GenerateAccessTokenRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List generateAccessTokenRequestDescriptor =
-    $convert.base64Decode(
-        'ChpHZW5lcmF0ZUFjY2Vzc1Rva2VuUmVxdWVzdBI9CgRuYW1lGAEgASgJQingQQL6QSMKIWlhbS5nb29nbGVhcGlzLmNvbS9TZXJ2aWNlQWNjb3VudFIEbmFtZRIcCglkZWxlZ2F0ZXMYAiADKAlSCWRlbGVnYXRlcxIZCgVzY29wZRgEIAMoCUID4EECUgVzY29wZRI1CghsaWZldGltZRgHIAEoCzIZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvblIIbGlmZXRpbWU=');
+final $typed_data.Uint8List generateAccessTokenRequestDescriptor = $convert.base64Decode(
+    'ChpHZW5lcmF0ZUFjY2Vzc1Rva2VuUmVxdWVzdBI9CgRuYW1lGAEgASgJQingQQL6QSMKIWlhbS'
+    '5nb29nbGVhcGlzLmNvbS9TZXJ2aWNlQWNjb3VudFIEbmFtZRIcCglkZWxlZ2F0ZXMYAiADKAlS'
+    'CWRlbGVnYXRlcxIZCgVzY29wZRgEIAMoCUID4EECUgVzY29wZRI1CghsaWZldGltZRgHIAEoCz'
+    'IZLmdvb2dsZS5wcm90b2J1Zi5EdXJhdGlvblIIbGlmZXRpbWU=');
+
 @$core.Deprecated('Use generateAccessTokenResponseDescriptor instead')
 const GenerateAccessTokenResponse$json = {
   '1': 'GenerateAccessTokenResponse',
@@ -50,7 +57,10 @@ const GenerateAccessTokenResponse$json = {
 /// Descriptor for `GenerateAccessTokenResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List generateAccessTokenResponseDescriptor =
     $convert.base64Decode(
-        'ChtHZW5lcmF0ZUFjY2Vzc1Rva2VuUmVzcG9uc2USIQoMYWNjZXNzX3Rva2VuGAEgASgJUgthY2Nlc3NUb2tlbhI7CgtleHBpcmVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSCmV4cGlyZVRpbWU=');
+        'ChtHZW5lcmF0ZUFjY2Vzc1Rva2VuUmVzcG9uc2USIQoMYWNjZXNzX3Rva2VuGAEgASgJUgthY2'
+        'Nlc3NUb2tlbhI7CgtleHBpcmVfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh'
+        'bXBSCmV4cGlyZVRpbWU=');
+
 @$core.Deprecated('Use signBlobRequestDescriptor instead')
 const SignBlobRequest$json = {
   '1': 'SignBlobRequest',
@@ -63,7 +73,10 @@ const SignBlobRequest$json = {
 
 /// Descriptor for `SignBlobRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List signBlobRequestDescriptor = $convert.base64Decode(
-    'Cg9TaWduQmxvYlJlcXVlc3QSPQoEbmFtZRgBIAEoCUIp4EEC+kEjCiFpYW0uZ29vZ2xlYXBpcy5jb20vU2VydmljZUFjY291bnRSBG5hbWUSHAoJZGVsZWdhdGVzGAMgAygJUglkZWxlZ2F0ZXMSHQoHcGF5bG9hZBgFIAEoDEID4EECUgdwYXlsb2Fk');
+    'Cg9TaWduQmxvYlJlcXVlc3QSPQoEbmFtZRgBIAEoCUIp4EEC+kEjCiFpYW0uZ29vZ2xlYXBpcy'
+    '5jb20vU2VydmljZUFjY291bnRSBG5hbWUSHAoJZGVsZWdhdGVzGAMgAygJUglkZWxlZ2F0ZXMS'
+    'HQoHcGF5bG9hZBgFIAEoDEID4EECUgdwYXlsb2Fk');
+
 @$core.Deprecated('Use signBlobResponseDescriptor instead')
 const SignBlobResponse$json = {
   '1': 'SignBlobResponse',
@@ -75,7 +88,9 @@ const SignBlobResponse$json = {
 
 /// Descriptor for `SignBlobResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List signBlobResponseDescriptor = $convert.base64Decode(
-    'ChBTaWduQmxvYlJlc3BvbnNlEhUKBmtleV9pZBgBIAEoCVIFa2V5SWQSHwoLc2lnbmVkX2Jsb2IYBCABKAxSCnNpZ25lZEJsb2I=');
+    'ChBTaWduQmxvYlJlc3BvbnNlEhUKBmtleV9pZBgBIAEoCVIFa2V5SWQSHwoLc2lnbmVkX2Jsb2'
+    'IYBCABKAxSCnNpZ25lZEJsb2I=');
+
 @$core.Deprecated('Use signJwtRequestDescriptor instead')
 const SignJwtRequest$json = {
   '1': 'SignJwtRequest',
@@ -88,7 +103,10 @@ const SignJwtRequest$json = {
 
 /// Descriptor for `SignJwtRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List signJwtRequestDescriptor = $convert.base64Decode(
-    'Cg5TaWduSnd0UmVxdWVzdBI9CgRuYW1lGAEgASgJQingQQL6QSMKIWlhbS5nb29nbGVhcGlzLmNvbS9TZXJ2aWNlQWNjb3VudFIEbmFtZRIcCglkZWxlZ2F0ZXMYAyADKAlSCWRlbGVnYXRlcxIdCgdwYXlsb2FkGAUgASgJQgPgQQJSB3BheWxvYWQ=');
+    'Cg5TaWduSnd0UmVxdWVzdBI9CgRuYW1lGAEgASgJQingQQL6QSMKIWlhbS5nb29nbGVhcGlzLm'
+    'NvbS9TZXJ2aWNlQWNjb3VudFIEbmFtZRIcCglkZWxlZ2F0ZXMYAyADKAlSCWRlbGVnYXRlcxId'
+    'CgdwYXlsb2FkGAUgASgJQgPgQQJSB3BheWxvYWQ=');
+
 @$core.Deprecated('Use signJwtResponseDescriptor instead')
 const SignJwtResponse$json = {
   '1': 'SignJwtResponse',
@@ -100,7 +118,9 @@ const SignJwtResponse$json = {
 
 /// Descriptor for `SignJwtResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List signJwtResponseDescriptor = $convert.base64Decode(
-    'Cg9TaWduSnd0UmVzcG9uc2USFQoGa2V5X2lkGAEgASgJUgVrZXlJZBIdCgpzaWduZWRfand0GAIgASgJUglzaWduZWRKd3Q=');
+    'Cg9TaWduSnd0UmVzcG9uc2USFQoGa2V5X2lkGAEgASgJUgVrZXlJZBIdCgpzaWduZWRfand0GA'
+    'IgASgJUglzaWduZWRKd3Q=');
+
 @$core.Deprecated('Use generateIdTokenRequestDescriptor instead')
 const GenerateIdTokenRequest$json = {
   '1': 'GenerateIdTokenRequest',
@@ -113,9 +133,12 @@ const GenerateIdTokenRequest$json = {
 };
 
 /// Descriptor for `GenerateIdTokenRequest`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List generateIdTokenRequestDescriptor =
-    $convert.base64Decode(
-        'ChZHZW5lcmF0ZUlkVG9rZW5SZXF1ZXN0Ej0KBG5hbWUYASABKAlCKeBBAvpBIwohaWFtLmdvb2dsZWFwaXMuY29tL1NlcnZpY2VBY2NvdW50UgRuYW1lEhwKCWRlbGVnYXRlcxgCIAMoCVIJZGVsZWdhdGVzEh8KCGF1ZGllbmNlGAMgASgJQgPgQQJSCGF1ZGllbmNlEiMKDWluY2x1ZGVfZW1haWwYBCABKAhSDGluY2x1ZGVFbWFpbA==');
+final $typed_data.Uint8List generateIdTokenRequestDescriptor = $convert.base64Decode(
+    'ChZHZW5lcmF0ZUlkVG9rZW5SZXF1ZXN0Ej0KBG5hbWUYASABKAlCKeBBAvpBIwohaWFtLmdvb2'
+    'dsZWFwaXMuY29tL1NlcnZpY2VBY2NvdW50UgRuYW1lEhwKCWRlbGVnYXRlcxgCIAMoCVIJZGVs'
+    'ZWdhdGVzEh8KCGF1ZGllbmNlGAMgASgJQgPgQQJSCGF1ZGllbmNlEiMKDWluY2x1ZGVfZW1haW'
+    'wYBCABKAhSDGluY2x1ZGVFbWFpbA==');
+
 @$core.Deprecated('Use generateIdTokenResponseDescriptor instead')
 const GenerateIdTokenResponse$json = {
   '1': 'GenerateIdTokenResponse',

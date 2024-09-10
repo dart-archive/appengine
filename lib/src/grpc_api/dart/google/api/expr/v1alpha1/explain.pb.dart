@@ -1,60 +1,53 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/api/expr/v1alpha1/explain.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'value.pb.dart' as $0;
+import 'value.pb.dart' as $101;
 
+/// ID and value index of one step.
 class Explain_ExprStep extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Explain.ExprStep',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.expr.v1alpha1'),
-      createEmptyInstance: create)
-    ..aInt64(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'id')
-    ..a<$core.int>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'valueIndex',
-        $pb.PbFieldType.O3)
-    ..hasRequiredFields = false;
-
-  Explain_ExprStep._() : super();
   factory Explain_ExprStep({
     $fixnum.Int64? id,
     $core.int? valueIndex,
   }) {
-    final _result = create();
+    final $result = create();
     if (id != null) {
-      _result.id = id;
+      $result.id = id;
     }
     if (valueIndex != null) {
-      _result.valueIndex = valueIndex;
+      $result.valueIndex = valueIndex;
     }
-    return _result;
+    return $result;
   }
+  Explain_ExprStep._() : super();
   factory Explain_ExprStep.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Explain_ExprStep.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Explain.ExprStep',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.expr.v1alpha1'),
+      createEmptyInstance: create)
+    ..aInt64(1, _omitFieldNames ? '' : 'id')
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'valueIndex', $pb.PbFieldType.O3)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -64,8 +57,10 @@ class Explain_ExprStep extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   Explain_ExprStep copyWith(void Function(Explain_ExprStep) updates) =>
       super.copyWith((message) => updates(message as Explain_ExprStep))
-          as Explain_ExprStep; // ignore: deprecated_member_use
+          as Explain_ExprStep;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Explain_ExprStep create() => Explain_ExprStep._();
   Explain_ExprStep createEmptyInstance() => create();
@@ -76,6 +71,7 @@ class Explain_ExprStep extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<Explain_ExprStep>(create);
   static Explain_ExprStep? _defaultInstance;
 
+  /// ID of corresponding Expr node.
   @$pb.TagNumber(1)
   $fixnum.Int64 get id => $_getI64(0);
   @$pb.TagNumber(1)
@@ -88,6 +84,7 @@ class Explain_ExprStep extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearId() => clearField(1);
 
+  /// Index of the value in the values list.
   @$pb.TagNumber(2)
   $core.int get valueIndex => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -101,48 +98,42 @@ class Explain_ExprStep extends $pb.GeneratedMessage {
   void clearValueIndex() => clearField(2);
 }
 
+/// Values of intermediate expressions produced when evaluating expression.
+/// Deprecated, use `EvalState` instead.
 class Explain extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Explain',
-          package: const $pb.PackageName(
-              $core.bool.fromEnvironment('protobuf.omit_message_names')
-                  ? ''
-                  : 'google.api.expr.v1alpha1'),
-          createEmptyInstance: create)
-        ..pc<$0.Value>(
-            1,
-            const $core.bool.fromEnvironment('protobuf.omit_field_names')
-                ? ''
-                : 'values',
-            $pb.PbFieldType.PM,
-            subBuilder: $0.Value.create)
-        ..pc<Explain_ExprStep>(
-            2,
-            const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'exprSteps',
-            $pb.PbFieldType.PM,
-            subBuilder: Explain_ExprStep.create)
-        ..hasRequiredFields = false;
-
-  Explain._() : super();
   factory Explain({
-    $core.Iterable<$0.Value>? values,
+    $core.Iterable<$101.Value>? values,
     $core.Iterable<Explain_ExprStep>? exprSteps,
   }) {
-    final _result = create();
+    final $result = create();
     if (values != null) {
-      _result.values.addAll(values);
+      $result.values.addAll(values);
     }
     if (exprSteps != null) {
-      _result.exprSteps.addAll(exprSteps);
+      $result.exprSteps.addAll(exprSteps);
     }
-    return _result;
+    return $result;
   }
+  Explain._() : super();
   factory Explain.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Explain.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Explain',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.expr.v1alpha1'),
+      createEmptyInstance: create)
+    ..pc<$101.Value>(1, _omitFieldNames ? '' : 'values', $pb.PbFieldType.PM,
+        subBuilder: $101.Value.create)
+    ..pc<Explain_ExprStep>(
+        2, _omitFieldNames ? '' : 'exprSteps', $pb.PbFieldType.PM,
+        subBuilder: Explain_ExprStep.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -151,9 +142,10 @@ class Explain extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Explain copyWith(void Function(Explain) updates) =>
-      super.copyWith((message) => updates(message as Explain))
-          as Explain; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Explain)) as Explain;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Explain create() => Explain._();
   Explain createEmptyInstance() => create();
@@ -163,9 +155,22 @@ class Explain extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Explain>(create);
   static Explain? _defaultInstance;
 
+  ///  All of the observed values.
+  ///
+  ///  The field value_index is an index in the values list.
+  ///  Separating values from steps is needed to remove redundant values.
   @$pb.TagNumber(1)
-  $core.List<$0.Value> get values => $_getList(0);
+  $core.List<$101.Value> get values => $_getList(0);
 
+  ///  List of steps.
+  ///
+  ///  Repeated evaluations of the same expression generate new ExprStep
+  ///  instances. The order of such ExprStep instances matches the order of
+  ///  elements returned by Comprehension.iter_range.
   @$pb.TagNumber(2)
   $core.List<Explain_ExprStep> get exprSteps => $_getList(1);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

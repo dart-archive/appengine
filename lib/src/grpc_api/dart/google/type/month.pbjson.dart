@@ -1,12 +1,16 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/type/month.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
-import 'dart:core' as $core;
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:convert' as $convert;
+import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
 @$core.Deprecated('Use monthDescriptor instead')
@@ -31,4 +35,7 @@ const Month$json = {
 
 /// Descriptor for `Month`. Decode as a `google.protobuf.EnumDescriptorProto`.
 final $typed_data.Uint8List monthDescriptor = $convert.base64Decode(
-    'CgVNb250aBIVChFNT05USF9VTlNQRUNJRklFRBAAEgsKB0pBTlVBUlkQARIMCghGRUJSVUFSWRACEgkKBU1BUkNIEAMSCQoFQVBSSUwQBBIHCgNNQVkQBRIICgRKVU5FEAYSCAoESlVMWRAHEgoKBkFVR1VTVBAIEg0KCVNFUFRFTUJFUhAJEgsKB09DVE9CRVIQChIMCghOT1ZFTUJFUhALEgwKCERFQ0VNQkVSEAw=');
+    'CgVNb250aBIVChFNT05USF9VTlNQRUNJRklFRBAAEgsKB0pBTlVBUlkQARIMCghGRUJSVUFSWR'
+    'ACEgkKBU1BUkNIEAMSCQoFQVBSSUwQBBIHCgNNQVkQBRIICgRKVU5FEAYSCAoESlVMWRAHEgoK'
+    'BkFVR1VTVBAIEg0KCVNFUFRFTUJFUhAJEgsKB09DVE9CRVIQChIMCghOT1ZFTUJFUhALEgwKCE'
+    'RFQ0VNQkVSEAw=');

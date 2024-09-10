@@ -1,60 +1,54 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/api/expr/v1alpha1/eval.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'value.pb.dart' as $0;
-import '../../../rpc/status.pb.dart' as $1;
+import '../../../rpc/status.pb.dart' as $57;
+import 'value.pb.dart' as $101;
 
+/// A single evalution result.
 class EvalState_Result extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'EvalState.Result',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.expr.v1alpha1'),
-      createEmptyInstance: create)
-    ..aInt64(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'expr')
-    ..aInt64(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'value')
-    ..hasRequiredFields = false;
-
-  EvalState_Result._() : super();
   factory EvalState_Result({
     $fixnum.Int64? expr,
     $fixnum.Int64? value,
   }) {
-    final _result = create();
+    final $result = create();
     if (expr != null) {
-      _result.expr = expr;
+      $result.expr = expr;
     }
     if (value != null) {
-      _result.value = value;
+      $result.value = value;
     }
-    return _result;
+    return $result;
   }
+  EvalState_Result._() : super();
   factory EvalState_Result.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory EvalState_Result.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'EvalState.Result',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.expr.v1alpha1'),
+      createEmptyInstance: create)
+    ..aInt64(1, _omitFieldNames ? '' : 'expr')
+    ..aInt64(2, _omitFieldNames ? '' : 'value')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -64,8 +58,10 @@ class EvalState_Result extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   EvalState_Result copyWith(void Function(EvalState_Result) updates) =>
       super.copyWith((message) => updates(message as EvalState_Result))
-          as EvalState_Result; // ignore: deprecated_member_use
+          as EvalState_Result;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static EvalState_Result create() => EvalState_Result._();
   EvalState_Result createEmptyInstance() => create();
@@ -76,6 +72,7 @@ class EvalState_Result extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<EvalState_Result>(create);
   static EvalState_Result? _defaultInstance;
 
+  /// The id of the expression this result if for.
   @$pb.TagNumber(1)
   $fixnum.Int64 get expr => $_getI64(0);
   @$pb.TagNumber(1)
@@ -88,6 +85,7 @@ class EvalState_Result extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearExpr() => clearField(1);
 
+  /// The index in `values` of the resulting value.
   @$pb.TagNumber(2)
   $fixnum.Int64 get value => $_getI64(1);
   @$pb.TagNumber(2)
@@ -101,46 +99,43 @@ class EvalState_Result extends $pb.GeneratedMessage {
   void clearValue() => clearField(2);
 }
 
+///  The state of an evaluation.
+///
+///  Can represent an inital, partial, or completed state of evaluation.
 class EvalState extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'EvalState',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.expr.v1alpha1'),
-      createEmptyInstance: create)
-    ..pc<ExprValue>(
-        1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'values', $pb.PbFieldType.PM,
-        subBuilder: ExprValue.create)
-    ..pc<EvalState_Result>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'results',
-        $pb.PbFieldType.PM,
-        subBuilder: EvalState_Result.create)
-    ..hasRequiredFields = false;
-
-  EvalState._() : super();
   factory EvalState({
     $core.Iterable<ExprValue>? values,
     $core.Iterable<EvalState_Result>? results,
   }) {
-    final _result = create();
+    final $result = create();
     if (values != null) {
-      _result.values.addAll(values);
+      $result.values.addAll(values);
     }
     if (results != null) {
-      _result.results.addAll(results);
+      $result.results.addAll(results);
     }
-    return _result;
+    return $result;
   }
+  EvalState._() : super();
   factory EvalState.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory EvalState.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'EvalState',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.expr.v1alpha1'),
+      createEmptyInstance: create)
+    ..pc<ExprValue>(1, _omitFieldNames ? '' : 'values', $pb.PbFieldType.PM,
+        subBuilder: ExprValue.create)
+    ..pc<EvalState_Result>(
+        3, _omitFieldNames ? '' : 'results', $pb.PbFieldType.PM,
+        subBuilder: EvalState_Result.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -149,9 +144,10 @@ class EvalState extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   EvalState copyWith(void Function(EvalState) updates) =>
-      super.copyWith((message) => updates(message as EvalState))
-          as EvalState; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as EvalState)) as EvalState;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static EvalState create() => EvalState._();
   EvalState createEmptyInstance() => create();
@@ -161,16 +157,47 @@ class EvalState extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<EvalState>(create);
   static EvalState? _defaultInstance;
 
+  /// The unique values referenced in this message.
   @$pb.TagNumber(1)
   $core.List<ExprValue> get values => $_getList(0);
 
+  ///  An ordered list of results.
+  ///
+  ///  Tracks the flow of evaluation through the expression.
+  ///  May be sparse.
   @$pb.TagNumber(3)
   $core.List<EvalState_Result> get results => $_getList(1);
 }
 
 enum ExprValue_Kind { value, error, unknown, notSet }
 
+/// The value of an evaluated expression.
 class ExprValue extends $pb.GeneratedMessage {
+  factory ExprValue({
+    $101.Value? value,
+    ErrorSet? error,
+    UnknownSet? unknown,
+  }) {
+    final $result = create();
+    if (value != null) {
+      $result.value = value;
+    }
+    if (error != null) {
+      $result.error = error;
+    }
+    if (unknown != null) {
+      $result.unknown = unknown;
+    }
+    return $result;
+  }
+  ExprValue._() : super();
+  factory ExprValue.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory ExprValue.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+
   static const $core.Map<$core.int, ExprValue_Kind> _ExprValue_KindByTag = {
     1: ExprValue_Kind.value,
     2: ExprValue_Kind.error,
@@ -178,50 +205,19 @@ class ExprValue extends $pb.GeneratedMessage {
     0: ExprValue_Kind.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ExprValue',
+      _omitMessageNames ? '' : 'ExprValue',
       package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.expr.v1alpha1'),
+          _omitMessageNames ? '' : 'google.api.expr.v1alpha1'),
       createEmptyInstance: create)
     ..oo(0, [1, 2, 3])
-    ..aOM<$0.Value>(
-        1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'value',
-        subBuilder: $0.Value.create)
-    ..aOM<ErrorSet>(
-        2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'error',
+    ..aOM<$101.Value>(1, _omitFieldNames ? '' : 'value',
+        subBuilder: $101.Value.create)
+    ..aOM<ErrorSet>(2, _omitFieldNames ? '' : 'error',
         subBuilder: ErrorSet.create)
-    ..aOM<UnknownSet>(
-        3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'unknown',
+    ..aOM<UnknownSet>(3, _omitFieldNames ? '' : 'unknown',
         subBuilder: UnknownSet.create)
     ..hasRequiredFields = false;
 
-  ExprValue._() : super();
-  factory ExprValue({
-    $0.Value? value,
-    ErrorSet? error,
-    UnknownSet? unknown,
-  }) {
-    final _result = create();
-    if (value != null) {
-      _result.value = value;
-    }
-    if (error != null) {
-      _result.error = error;
-    }
-    if (unknown != null) {
-      _result.unknown = unknown;
-    }
-    return _result;
-  }
-  factory ExprValue.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory ExprValue.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -230,9 +226,10 @@ class ExprValue extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   ExprValue copyWith(void Function(ExprValue) updates) =>
-      super.copyWith((message) => updates(message as ExprValue))
-          as ExprValue; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as ExprValue)) as ExprValue;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ExprValue create() => ExprValue._();
   ExprValue createEmptyInstance() => create();
@@ -245,10 +242,11 @@ class ExprValue extends $pb.GeneratedMessage {
   ExprValue_Kind whichKind() => _ExprValue_KindByTag[$_whichOneof(0)]!;
   void clearKind() => clearField($_whichOneof(0));
 
+  /// A concrete value.
   @$pb.TagNumber(1)
-  $0.Value get value => $_getN(0);
+  $101.Value get value => $_getN(0);
   @$pb.TagNumber(1)
-  set value($0.Value v) {
+  set value($101.Value v) {
     setField(1, v);
   }
 
@@ -257,8 +255,24 @@ class ExprValue extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearValue() => clearField(1);
   @$pb.TagNumber(1)
-  $0.Value ensureValue() => $_ensure(0);
+  $101.Value ensureValue() => $_ensure(0);
 
+  ///  The set of errors in the critical path of evalution.
+  ///
+  ///  Only errors in the critical path are included. For example,
+  ///  `(<error1> || true) && <error2>` will only result in `<error2>`,
+  ///  while `<error1> || <error2>` will result in both `<error1>` and
+  ///  `<error2>`.
+  ///
+  ///  Errors cause by the presence of other errors are not included in the
+  ///  set. For example `<error1>.foo`, `foo(<error1>)`, and `<error1> + 1` will
+  ///  only result in `<error1>`.
+  ///
+  ///  Multiple errors *might* be included when evaluation could result
+  ///  in different errors. For example `<error1> + <error2>` and
+  ///  `foo(<error1>, <error2>)` may result in `<error1>`, `<error2>` or both.
+  ///  The exact subset of errors included for this case is unspecified and
+  ///  depends on the implementation details of the evaluator.
   @$pb.TagNumber(2)
   ErrorSet get error => $_getN(1);
   @$pb.TagNumber(2)
@@ -273,6 +287,30 @@ class ExprValue extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   ErrorSet ensureError() => $_ensure(1);
 
+  ///  The set of unknowns in the critical path of evaluation.
+  ///
+  ///  Unknown behaves identically to Error with regards to propagation.
+  ///  Specifically, only unknowns in the critical path are included, unknowns
+  ///  caused by the presence of other unknowns are not included, and multiple
+  ///  unknowns *might* be included included when evaluation could result in
+  ///  different unknowns. For example:
+  ///
+  ///      (<unknown[1]> || true) && <unknown[2]> -> <unknown[2]>
+  ///      <unknown[1]> || <unknown[2]> -> <unknown[1,2]>
+  ///      <unknown[1]>.foo -> <unknown[1]>
+  ///      foo(<unknown[1]>) -> <unknown[1]>
+  ///      <unknown[1]> + <unknown[2]> -> <unknown[1]> or <unknown[2[>
+  ///
+  ///  Unknown takes precidence over Error in cases where a `Value` can short
+  ///  circuit the result:
+  ///
+  ///      <error> || <unknown> -> <unknown>
+  ///      <error> && <unknown> -> <unknown>
+  ///
+  ///  Errors take precidence in all other cases:
+  ///
+  ///      <unknown> + <error> -> <error>
+  ///      foo(<unknown>, <error>) -> <error>
   @$pb.TagNumber(3)
   UnknownSet get unknown => $_getN(2);
   @$pb.TagNumber(3)
@@ -288,41 +326,36 @@ class ExprValue extends $pb.GeneratedMessage {
   UnknownSet ensureUnknown() => $_ensure(2);
 }
 
+///  A set of errors.
+///
+///  The errors included depend on the context. See `ExprValue.error`.
 class ErrorSet extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ErrorSet',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.expr.v1alpha1'),
-      createEmptyInstance: create)
-    ..pc<$1.Status>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'errors',
-        $pb.PbFieldType.PM,
-        subBuilder: $1.Status.create)
-    ..hasRequiredFields = false;
-
-  ErrorSet._() : super();
   factory ErrorSet({
-    $core.Iterable<$1.Status>? errors,
+    $core.Iterable<$57.Status>? errors,
   }) {
-    final _result = create();
+    final $result = create();
     if (errors != null) {
-      _result.errors.addAll(errors);
+      $result.errors.addAll(errors);
     }
-    return _result;
+    return $result;
   }
+  ErrorSet._() : super();
   factory ErrorSet.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ErrorSet.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ErrorSet',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.expr.v1alpha1'),
+      createEmptyInstance: create)
+    ..pc<$57.Status>(1, _omitFieldNames ? '' : 'errors', $pb.PbFieldType.PM,
+        subBuilder: $57.Status.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -331,9 +364,10 @@ class ErrorSet extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   ErrorSet copyWith(void Function(ErrorSet) updates) =>
-      super.copyWith((message) => updates(message as ErrorSet))
-          as ErrorSet; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as ErrorSet)) as ErrorSet;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ErrorSet create() => ErrorSet._();
   ErrorSet createEmptyInstance() => create();
@@ -343,44 +377,40 @@ class ErrorSet extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ErrorSet>(create);
   static ErrorSet? _defaultInstance;
 
+  /// The errors in the set.
   @$pb.TagNumber(1)
-  $core.List<$1.Status> get errors => $_getList(0);
+  $core.List<$57.Status> get errors => $_getList(0);
 }
 
+///  A set of expressions for which the value is unknown.
+///
+///  The unknowns included depend on the context. See `ExprValue.unknown`.
 class UnknownSet extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'UnknownSet',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.expr.v1alpha1'),
-      createEmptyInstance: create)
-    ..p<$fixnum.Int64>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'exprs',
-        $pb.PbFieldType.P6)
-    ..hasRequiredFields = false;
-
-  UnknownSet._() : super();
   factory UnknownSet({
     $core.Iterable<$fixnum.Int64>? exprs,
   }) {
-    final _result = create();
+    final $result = create();
     if (exprs != null) {
-      _result.exprs.addAll(exprs);
+      $result.exprs.addAll(exprs);
     }
-    return _result;
+    return $result;
   }
+  UnknownSet._() : super();
   factory UnknownSet.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory UnknownSet.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UnknownSet',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.expr.v1alpha1'),
+      createEmptyInstance: create)
+    ..p<$fixnum.Int64>(1, _omitFieldNames ? '' : 'exprs', $pb.PbFieldType.K6)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -389,9 +419,10 @@ class UnknownSet extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   UnknownSet copyWith(void Function(UnknownSet) updates) =>
-      super.copyWith((message) => updates(message as UnknownSet))
-          as UnknownSet; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as UnknownSet)) as UnknownSet;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static UnknownSet create() => UnknownSet._();
   UnknownSet createEmptyInstance() => create();
@@ -401,6 +432,11 @@ class UnknownSet extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<UnknownSet>(create);
   static UnknownSet? _defaultInstance;
 
+  /// The ids of the expressions with unknown values.
   @$pb.TagNumber(1)
   $core.List<$fixnum.Int64> get exprs => $_getList(0);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

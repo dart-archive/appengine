@@ -1,12 +1,16 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/appengine/v1/service.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
-import 'dart:core' as $core;
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:convert' as $convert;
+import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
 @$core.Deprecated('Use serviceDescriptor instead')
@@ -24,6 +28,14 @@ const Service$json = {
       '10': 'split'
     },
     {
+      '1': 'labels',
+      '3': 4,
+      '4': 3,
+      '5': 11,
+      '6': '.google.appengine.v1.Service.LabelsEntry',
+      '10': 'labels'
+    },
+    {
       '1': 'network_settings',
       '3': 6,
       '4': 1,
@@ -32,11 +44,28 @@ const Service$json = {
       '10': 'networkSettings'
     },
   ],
+  '3': [Service_LabelsEntry$json],
+};
+
+@$core.Deprecated('Use serviceDescriptor instead')
+const Service_LabelsEntry$json = {
+  '1': 'LabelsEntry',
+  '2': [
+    {'1': 'key', '3': 1, '4': 1, '5': 9, '10': 'key'},
+    {'1': 'value', '3': 2, '4': 1, '5': 9, '10': 'value'},
+  ],
+  '7': {'7': true},
 };
 
 /// Descriptor for `Service`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List serviceDescriptor = $convert.base64Decode(
-    'CgdTZXJ2aWNlEhIKBG5hbWUYASABKAlSBG5hbWUSDgoCaWQYAiABKAlSAmlkEjcKBXNwbGl0GAMgASgLMiEuZ29vZ2xlLmFwcGVuZ2luZS52MS5UcmFmZmljU3BsaXRSBXNwbGl0Ek8KEG5ldHdvcmtfc2V0dGluZ3MYBiABKAsyJC5nb29nbGUuYXBwZW5naW5lLnYxLk5ldHdvcmtTZXR0aW5nc1IPbmV0d29ya1NldHRpbmdz');
+    'CgdTZXJ2aWNlEhIKBG5hbWUYASABKAlSBG5hbWUSDgoCaWQYAiABKAlSAmlkEjcKBXNwbGl0GA'
+    'MgASgLMiEuZ29vZ2xlLmFwcGVuZ2luZS52MS5UcmFmZmljU3BsaXRSBXNwbGl0EkAKBmxhYmVs'
+    'cxgEIAMoCzIoLmdvb2dsZS5hcHBlbmdpbmUudjEuU2VydmljZS5MYWJlbHNFbnRyeVIGbGFiZW'
+    'xzEk8KEG5ldHdvcmtfc2V0dGluZ3MYBiABKAsyJC5nb29nbGUuYXBwZW5naW5lLnYxLk5ldHdv'
+    'cmtTZXR0aW5nc1IPbmV0d29ya1NldHRpbmdzGjkKC0xhYmVsc0VudHJ5EhAKA2tleRgBIAEoCV'
+    'IDa2V5EhQKBXZhbHVlGAIgASgJUgV2YWx1ZToCOAE=');
+
 @$core.Deprecated('Use trafficSplitDescriptor instead')
 const TrafficSplit$json = {
   '1': 'TrafficSplit',
@@ -85,4 +114,9 @@ const TrafficSplit_ShardBy$json = {
 
 /// Descriptor for `TrafficSplit`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List trafficSplitDescriptor = $convert.base64Decode(
-    'CgxUcmFmZmljU3BsaXQSRAoIc2hhcmRfYnkYASABKA4yKS5nb29nbGUuYXBwZW5naW5lLnYxLlRyYWZmaWNTcGxpdC5TaGFyZEJ5UgdzaGFyZEJ5ElQKC2FsbG9jYXRpb25zGAIgAygLMjIuZ29vZ2xlLmFwcGVuZ2luZS52MS5UcmFmZmljU3BsaXQuQWxsb2NhdGlvbnNFbnRyeVILYWxsb2NhdGlvbnMaPgoQQWxsb2NhdGlvbnNFbnRyeRIQCgNrZXkYASABKAlSA2tleRIUCgV2YWx1ZRgCIAEoAVIFdmFsdWU6AjgBIjoKB1NoYXJkQnkSDwoLVU5TUEVDSUZJRUQQABIKCgZDT09LSUUQARIGCgJJUBACEgoKBlJBTkRPTRAD');
+    'CgxUcmFmZmljU3BsaXQSRAoIc2hhcmRfYnkYASABKA4yKS5nb29nbGUuYXBwZW5naW5lLnYxLl'
+    'RyYWZmaWNTcGxpdC5TaGFyZEJ5UgdzaGFyZEJ5ElQKC2FsbG9jYXRpb25zGAIgAygLMjIuZ29v'
+    'Z2xlLmFwcGVuZ2luZS52MS5UcmFmZmljU3BsaXQuQWxsb2NhdGlvbnNFbnRyeVILYWxsb2NhdG'
+    'lvbnMaPgoQQWxsb2NhdGlvbnNFbnRyeRIQCgNrZXkYASABKAlSA2tleRIUCgV2YWx1ZRgCIAEo'
+    'AVIFdmFsdWU6AjgBIjoKB1NoYXJkQnkSDwoLVU5TUEVDSUZJRUQQABIKCgZDT09LSUUQARIGCg'
+    'JJUBACEgoKBlJBTkRPTRAD');

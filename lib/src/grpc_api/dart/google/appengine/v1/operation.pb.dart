@@ -1,96 +1,94 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/appengine/v1/operation.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../protobuf/timestamp.pb.dart' as $0;
+import '../../protobuf/timestamp.pb.dart' as $50;
 
 enum OperationMetadataV1_MethodMetadata { createVersionMetadata, notSet }
 
+/// Metadata for the given [google.longrunning.Operation][google.longrunning.Operation].
 class OperationMetadataV1 extends $pb.GeneratedMessage {
-  static const $core.Map<$core.int, OperationMetadataV1_MethodMetadata>
-      _OperationMetadataV1_MethodMetadataByTag = {
-    8: OperationMetadataV1_MethodMetadata.createVersionMetadata,
-    0: OperationMetadataV1_MethodMetadata.notSet
-  };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'OperationMetadataV1',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.appengine.v1'),
-      createEmptyInstance: create)
-    ..oo(0, [8])
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'method')
-    ..aOM<$0.Timestamp>(
-        2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'insertTime',
-        subBuilder: $0.Timestamp.create)
-    ..aOM<$0.Timestamp>(3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'endTime',
-        subBuilder: $0.Timestamp.create)
-    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'user')
-    ..aOS(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'target')
-    ..aOS(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ephemeralMessage')
-    ..pPS(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'warning')
-    ..aOM<CreateVersionMetadataV1>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'createVersionMetadata', subBuilder: CreateVersionMetadataV1.create)
-    ..hasRequiredFields = false;
-
-  OperationMetadataV1._() : super();
   factory OperationMetadataV1({
     $core.String? method,
-    $0.Timestamp? insertTime,
-    $0.Timestamp? endTime,
+    $50.Timestamp? insertTime,
+    $50.Timestamp? endTime,
     $core.String? user,
     $core.String? target,
     $core.String? ephemeralMessage,
     $core.Iterable<$core.String>? warning,
     CreateVersionMetadataV1? createVersionMetadata,
   }) {
-    final _result = create();
+    final $result = create();
     if (method != null) {
-      _result.method = method;
+      $result.method = method;
     }
     if (insertTime != null) {
-      _result.insertTime = insertTime;
+      $result.insertTime = insertTime;
     }
     if (endTime != null) {
-      _result.endTime = endTime;
+      $result.endTime = endTime;
     }
     if (user != null) {
-      _result.user = user;
+      $result.user = user;
     }
     if (target != null) {
-      _result.target = target;
+      $result.target = target;
     }
     if (ephemeralMessage != null) {
-      _result.ephemeralMessage = ephemeralMessage;
+      $result.ephemeralMessage = ephemeralMessage;
     }
     if (warning != null) {
-      _result.warning.addAll(warning);
+      $result.warning.addAll(warning);
     }
     if (createVersionMetadata != null) {
-      _result.createVersionMetadata = createVersionMetadata;
+      $result.createVersionMetadata = createVersionMetadata;
     }
-    return _result;
+    return $result;
   }
+  OperationMetadataV1._() : super();
   factory OperationMetadataV1.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory OperationMetadataV1.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static const $core.Map<$core.int, OperationMetadataV1_MethodMetadata>
+      _OperationMetadataV1_MethodMetadataByTag = {
+    8: OperationMetadataV1_MethodMetadata.createVersionMetadata,
+    0: OperationMetadataV1_MethodMetadata.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'OperationMetadataV1',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.appengine.v1'),
+      createEmptyInstance: create)
+    ..oo(0, [8])
+    ..aOS(1, _omitFieldNames ? '' : 'method')
+    ..aOM<$50.Timestamp>(2, _omitFieldNames ? '' : 'insertTime',
+        subBuilder: $50.Timestamp.create)
+    ..aOM<$50.Timestamp>(3, _omitFieldNames ? '' : 'endTime',
+        subBuilder: $50.Timestamp.create)
+    ..aOS(4, _omitFieldNames ? '' : 'user')
+    ..aOS(5, _omitFieldNames ? '' : 'target')
+    ..aOS(6, _omitFieldNames ? '' : 'ephemeralMessage')
+    ..pPS(7, _omitFieldNames ? '' : 'warning')
+    ..aOM<CreateVersionMetadataV1>(
+        8, _omitFieldNames ? '' : 'createVersionMetadata',
+        subBuilder: CreateVersionMetadataV1.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -100,8 +98,10 @@ class OperationMetadataV1 extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   OperationMetadataV1 copyWith(void Function(OperationMetadataV1) updates) =>
       super.copyWith((message) => updates(message as OperationMetadataV1))
-          as OperationMetadataV1; // ignore: deprecated_member_use
+          as OperationMetadataV1;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static OperationMetadataV1 create() => OperationMetadataV1._();
   OperationMetadataV1 createEmptyInstance() => create();
@@ -116,6 +116,10 @@ class OperationMetadataV1 extends $pb.GeneratedMessage {
       _OperationMetadataV1_MethodMetadataByTag[$_whichOneof(0)]!;
   void clearMethodMetadata() => clearField($_whichOneof(0));
 
+  ///  API method that initiated this operation. Example:
+  ///  `google.appengine.v1.Versions.CreateVersion`.
+  ///
+  ///  @OutputOnly
   @$pb.TagNumber(1)
   $core.String get method => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -128,10 +132,13 @@ class OperationMetadataV1 extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearMethod() => clearField(1);
 
+  ///  Time that this operation was created.
+  ///
+  ///  @OutputOnly
   @$pb.TagNumber(2)
-  $0.Timestamp get insertTime => $_getN(1);
+  $50.Timestamp get insertTime => $_getN(1);
   @$pb.TagNumber(2)
-  set insertTime($0.Timestamp v) {
+  set insertTime($50.Timestamp v) {
     setField(2, v);
   }
 
@@ -140,12 +147,15 @@ class OperationMetadataV1 extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearInsertTime() => clearField(2);
   @$pb.TagNumber(2)
-  $0.Timestamp ensureInsertTime() => $_ensure(1);
+  $50.Timestamp ensureInsertTime() => $_ensure(1);
 
+  ///  Time that this operation completed.
+  ///
+  ///  @OutputOnly
   @$pb.TagNumber(3)
-  $0.Timestamp get endTime => $_getN(2);
+  $50.Timestamp get endTime => $_getN(2);
   @$pb.TagNumber(3)
-  set endTime($0.Timestamp v) {
+  set endTime($50.Timestamp v) {
     setField(3, v);
   }
 
@@ -154,8 +164,11 @@ class OperationMetadataV1 extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearEndTime() => clearField(3);
   @$pb.TagNumber(3)
-  $0.Timestamp ensureEndTime() => $_ensure(2);
+  $50.Timestamp ensureEndTime() => $_ensure(2);
 
+  ///  User who requested this operation.
+  ///
+  ///  @OutputOnly
   @$pb.TagNumber(4)
   $core.String get user => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -168,6 +181,10 @@ class OperationMetadataV1 extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearUser() => clearField(4);
 
+  ///  Name of the resource that this operation is acting on. Example:
+  ///  `apps/myapp/services/default`.
+  ///
+  ///  @OutputOnly
   @$pb.TagNumber(5)
   $core.String get target => $_getSZ(4);
   @$pb.TagNumber(5)
@@ -180,6 +197,8 @@ class OperationMetadataV1 extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearTarget() => clearField(5);
 
+  /// Ephemeral message that may change every time the operation is polled.
+  /// @OutputOnly
   @$pb.TagNumber(6)
   $core.String get ephemeralMessage => $_getSZ(5);
   @$pb.TagNumber(6)
@@ -192,6 +211,8 @@ class OperationMetadataV1 extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearEphemeralMessage() => clearField(6);
 
+  /// Durable messages that persist on every operation poll.
+  /// @OutputOnly
   @$pb.TagNumber(7)
   $core.List<$core.String> get warning => $_getList(6);
 
@@ -210,39 +231,34 @@ class OperationMetadataV1 extends $pb.GeneratedMessage {
   CreateVersionMetadataV1 ensureCreateVersionMetadata() => $_ensure(7);
 }
 
+/// Metadata for the given [google.longrunning.Operation][google.longrunning.Operation] during a
+/// [google.appengine.v1.CreateVersionRequest][google.appengine.v1.CreateVersionRequest].
 class CreateVersionMetadataV1 extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CreateVersionMetadataV1',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.appengine.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'cloudBuildId')
-    ..hasRequiredFields = false;
-
-  CreateVersionMetadataV1._() : super();
   factory CreateVersionMetadataV1({
     $core.String? cloudBuildId,
   }) {
-    final _result = create();
+    final $result = create();
     if (cloudBuildId != null) {
-      _result.cloudBuildId = cloudBuildId;
+      $result.cloudBuildId = cloudBuildId;
     }
-    return _result;
+    return $result;
   }
+  CreateVersionMetadataV1._() : super();
   factory CreateVersionMetadataV1.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CreateVersionMetadataV1.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CreateVersionMetadataV1',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.appengine.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'cloudBuildId')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -254,8 +270,10 @@ class CreateVersionMetadataV1 extends $pb.GeneratedMessage {
   CreateVersionMetadataV1 copyWith(
           void Function(CreateVersionMetadataV1) updates) =>
       super.copyWith((message) => updates(message as CreateVersionMetadataV1))
-          as CreateVersionMetadataV1; // ignore: deprecated_member_use
+          as CreateVersionMetadataV1;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CreateVersionMetadataV1 create() => CreateVersionMetadataV1._();
   CreateVersionMetadataV1 createEmptyInstance() => create();
@@ -266,6 +284,8 @@ class CreateVersionMetadataV1 extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<CreateVersionMetadataV1>(create);
   static CreateVersionMetadataV1? _defaultInstance;
 
+  /// The Cloud Build ID if one was created as part of the version create.
+  /// @OutputOnly
   @$pb.TagNumber(1)
   $core.String get cloudBuildId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -278,3 +298,7 @@ class CreateVersionMetadataV1 extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearCloudBuildId() => clearField(1);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

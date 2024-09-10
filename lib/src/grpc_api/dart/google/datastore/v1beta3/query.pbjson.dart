@@ -1,12 +1,16 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/datastore/v1beta3/query.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
-import 'dart:core' as $core;
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:convert' as $convert;
+import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
 @$core.Deprecated('Use entityResultDescriptor instead')
@@ -40,7 +44,11 @@ const EntityResult_ResultType$json = {
 
 /// Descriptor for `EntityResult`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List entityResultDescriptor = $convert.base64Decode(
-    'CgxFbnRpdHlSZXN1bHQSOAoGZW50aXR5GAEgASgLMiAuZ29vZ2xlLmRhdGFzdG9yZS52MWJldGEzLkVudGl0eVIGZW50aXR5EhgKB3ZlcnNpb24YBCABKANSB3ZlcnNpb24SFgoGY3Vyc29yGAMgASgMUgZjdXJzb3IiUQoKUmVzdWx0VHlwZRIbChdSRVNVTFRfVFlQRV9VTlNQRUNJRklFRBAAEggKBEZVTEwQARIOCgpQUk9KRUNUSU9OEAISDAoIS0VZX09OTFkQAw==');
+    'CgxFbnRpdHlSZXN1bHQSOAoGZW50aXR5GAEgASgLMiAuZ29vZ2xlLmRhdGFzdG9yZS52MWJldG'
+    'EzLkVudGl0eVIGZW50aXR5EhgKB3ZlcnNpb24YBCABKANSB3ZlcnNpb24SFgoGY3Vyc29yGAMg'
+    'ASgMUgZjdXJzb3IiUQoKUmVzdWx0VHlwZRIbChdSRVNVTFRfVFlQRV9VTlNQRUNJRklFRBAAEg'
+    'gKBEZVTEwQARIOCgpQUk9KRUNUSU9OEAISDAoIS0VZX09OTFkQAw==');
+
 @$core.Deprecated('Use queryDescriptor instead')
 const Query$json = {
   '1': 'Query',
@@ -101,7 +109,16 @@ const Query$json = {
 
 /// Descriptor for `Query`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List queryDescriptor = $convert.base64Decode(
-    'CgVRdWVyeRJECgpwcm9qZWN0aW9uGAIgAygLMiQuZ29vZ2xlLmRhdGFzdG9yZS52MWJldGEzLlByb2plY3Rpb25SCnByb2plY3Rpb24SPAoEa2luZBgDIAMoCzIoLmdvb2dsZS5kYXRhc3RvcmUudjFiZXRhMy5LaW5kRXhwcmVzc2lvblIEa2luZBI4CgZmaWx0ZXIYBCABKAsyIC5nb29nbGUuZGF0YXN0b3JlLnYxYmV0YTMuRmlsdGVyUgZmaWx0ZXISPQoFb3JkZXIYBSADKAsyJy5nb29nbGUuZGF0YXN0b3JlLnYxYmV0YTMuUHJvcGVydHlPcmRlclIFb3JkZXISTAoLZGlzdGluY3Rfb24YBiADKAsyKy5nb29nbGUuZGF0YXN0b3JlLnYxYmV0YTMuUHJvcGVydHlSZWZlcmVuY2VSCmRpc3RpbmN0T24SIQoMc3RhcnRfY3Vyc29yGAcgASgMUgtzdGFydEN1cnNvchIdCgplbmRfY3Vyc29yGAggASgMUgllbmRDdXJzb3ISFgoGb2Zmc2V0GAogASgFUgZvZmZzZXQSMQoFbGltaXQYDCABKAsyGy5nb29nbGUucHJvdG9idWYuSW50MzJWYWx1ZVIFbGltaXQ=');
+    'CgVRdWVyeRJECgpwcm9qZWN0aW9uGAIgAygLMiQuZ29vZ2xlLmRhdGFzdG9yZS52MWJldGEzLl'
+    'Byb2plY3Rpb25SCnByb2plY3Rpb24SPAoEa2luZBgDIAMoCzIoLmdvb2dsZS5kYXRhc3RvcmUu'
+    'djFiZXRhMy5LaW5kRXhwcmVzc2lvblIEa2luZBI4CgZmaWx0ZXIYBCABKAsyIC5nb29nbGUuZG'
+    'F0YXN0b3JlLnYxYmV0YTMuRmlsdGVyUgZmaWx0ZXISPQoFb3JkZXIYBSADKAsyJy5nb29nbGUu'
+    'ZGF0YXN0b3JlLnYxYmV0YTMuUHJvcGVydHlPcmRlclIFb3JkZXISTAoLZGlzdGluY3Rfb24YBi'
+    'ADKAsyKy5nb29nbGUuZGF0YXN0b3JlLnYxYmV0YTMuUHJvcGVydHlSZWZlcmVuY2VSCmRpc3Rp'
+    'bmN0T24SIQoMc3RhcnRfY3Vyc29yGAcgASgMUgtzdGFydEN1cnNvchIdCgplbmRfY3Vyc29yGA'
+    'ggASgMUgllbmRDdXJzb3ISFgoGb2Zmc2V0GAogASgFUgZvZmZzZXQSMQoFbGltaXQYDCABKAsy'
+    'Gy5nb29nbGUucHJvdG9idWYuSW50MzJWYWx1ZVIFbGltaXQ=');
+
 @$core.Deprecated('Use kindExpressionDescriptor instead')
 const KindExpression$json = {
   '1': 'KindExpression',
@@ -113,6 +130,7 @@ const KindExpression$json = {
 /// Descriptor for `KindExpression`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List kindExpressionDescriptor =
     $convert.base64Decode('Cg5LaW5kRXhwcmVzc2lvbhISCgRuYW1lGAEgASgJUgRuYW1l');
+
 @$core.Deprecated('Use propertyReferenceDescriptor instead')
 const PropertyReference$json = {
   '1': 'PropertyReference',
@@ -124,6 +142,7 @@ const PropertyReference$json = {
 /// Descriptor for `PropertyReference`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List propertyReferenceDescriptor = $convert
     .base64Decode('ChFQcm9wZXJ0eVJlZmVyZW5jZRISCgRuYW1lGAIgASgJUgRuYW1l');
+
 @$core.Deprecated('Use projectionDescriptor instead')
 const Projection$json = {
   '1': 'Projection',
@@ -141,7 +160,9 @@ const Projection$json = {
 
 /// Descriptor for `Projection`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List projectionDescriptor = $convert.base64Decode(
-    'CgpQcm9qZWN0aW9uEkcKCHByb3BlcnR5GAEgASgLMisuZ29vZ2xlLmRhdGFzdG9yZS52MWJldGEzLlByb3BlcnR5UmVmZXJlbmNlUghwcm9wZXJ0eQ==');
+    'CgpQcm9qZWN0aW9uEkcKCHByb3BlcnR5GAEgASgLMisuZ29vZ2xlLmRhdGFzdG9yZS52MWJldG'
+    'EzLlByb3BlcnR5UmVmZXJlbmNlUghwcm9wZXJ0eQ==');
+
 @$core.Deprecated('Use propertyOrderDescriptor instead')
 const PropertyOrder$json = {
   '1': 'PropertyOrder',
@@ -178,7 +199,12 @@ const PropertyOrder_Direction$json = {
 
 /// Descriptor for `PropertyOrder`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List propertyOrderDescriptor = $convert.base64Decode(
-    'Cg1Qcm9wZXJ0eU9yZGVyEkcKCHByb3BlcnR5GAEgASgLMisuZ29vZ2xlLmRhdGFzdG9yZS52MWJldGEzLlByb3BlcnR5UmVmZXJlbmNlUghwcm9wZXJ0eRJPCglkaXJlY3Rpb24YAiABKA4yMS5nb29nbGUuZGF0YXN0b3JlLnYxYmV0YTMuUHJvcGVydHlPcmRlci5EaXJlY3Rpb25SCWRpcmVjdGlvbiJFCglEaXJlY3Rpb24SGQoVRElSRUNUSU9OX1VOU1BFQ0lGSUVEEAASDQoJQVNDRU5ESU5HEAESDgoKREVTQ0VORElORxAC');
+    'Cg1Qcm9wZXJ0eU9yZGVyEkcKCHByb3BlcnR5GAEgASgLMisuZ29vZ2xlLmRhdGFzdG9yZS52MW'
+    'JldGEzLlByb3BlcnR5UmVmZXJlbmNlUghwcm9wZXJ0eRJPCglkaXJlY3Rpb24YAiABKA4yMS5n'
+    'b29nbGUuZGF0YXN0b3JlLnYxYmV0YTMuUHJvcGVydHlPcmRlci5EaXJlY3Rpb25SCWRpcmVjdG'
+    'lvbiJFCglEaXJlY3Rpb24SGQoVRElSRUNUSU9OX1VOU1BFQ0lGSUVEEAASDQoJQVNDRU5ESU5H'
+    'EAESDgoKREVTQ0VORElORxAC');
+
 @$core.Deprecated('Use filterDescriptor instead')
 const Filter$json = {
   '1': 'Filter',
@@ -209,7 +235,11 @@ const Filter$json = {
 
 /// Descriptor for `Filter`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List filterDescriptor = $convert.base64Decode(
-    'CgZGaWx0ZXISVgoQY29tcG9zaXRlX2ZpbHRlchgBIAEoCzIpLmdvb2dsZS5kYXRhc3RvcmUudjFiZXRhMy5Db21wb3NpdGVGaWx0ZXJIAFIPY29tcG9zaXRlRmlsdGVyElMKD3Byb3BlcnR5X2ZpbHRlchgCIAEoCzIoLmdvb2dsZS5kYXRhc3RvcmUudjFiZXRhMy5Qcm9wZXJ0eUZpbHRlckgAUg5wcm9wZXJ0eUZpbHRlckINCgtmaWx0ZXJfdHlwZQ==');
+    'CgZGaWx0ZXISVgoQY29tcG9zaXRlX2ZpbHRlchgBIAEoCzIpLmdvb2dsZS5kYXRhc3RvcmUudj'
+    'FiZXRhMy5Db21wb3NpdGVGaWx0ZXJIAFIPY29tcG9zaXRlRmlsdGVyElMKD3Byb3BlcnR5X2Zp'
+    'bHRlchgCIAEoCzIoLmdvb2dsZS5kYXRhc3RvcmUudjFiZXRhMy5Qcm9wZXJ0eUZpbHRlckgAUg'
+    '5wcm9wZXJ0eUZpbHRlckINCgtmaWx0ZXJfdHlwZQ==');
+
 @$core.Deprecated('Use compositeFilterDescriptor instead')
 const CompositeFilter$json = {
   '1': 'CompositeFilter',
@@ -245,7 +275,11 @@ const CompositeFilter_Operator$json = {
 
 /// Descriptor for `CompositeFilter`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List compositeFilterDescriptor = $convert.base64Decode(
-    'Cg9Db21wb3NpdGVGaWx0ZXISQgoCb3AYASABKA4yMi5nb29nbGUuZGF0YXN0b3JlLnYxYmV0YTMuQ29tcG9zaXRlRmlsdGVyLk9wZXJhdG9yUgJvcBI6CgdmaWx0ZXJzGAIgAygLMiAuZ29vZ2xlLmRhdGFzdG9yZS52MWJldGEzLkZpbHRlclIHZmlsdGVycyItCghPcGVyYXRvchIYChRPUEVSQVRPUl9VTlNQRUNJRklFRBAAEgcKA0FORBAB');
+    'Cg9Db21wb3NpdGVGaWx0ZXISQgoCb3AYASABKA4yMi5nb29nbGUuZGF0YXN0b3JlLnYxYmV0YT'
+    'MuQ29tcG9zaXRlRmlsdGVyLk9wZXJhdG9yUgJvcBI6CgdmaWx0ZXJzGAIgAygLMiAuZ29vZ2xl'
+    'LmRhdGFzdG9yZS52MWJldGEzLkZpbHRlclIHZmlsdGVycyItCghPcGVyYXRvchIYChRPUEVSQV'
+    'RPUl9VTlNQRUNJRklFRBAAEgcKA0FORBAB');
+
 @$core.Deprecated('Use propertyFilterDescriptor instead')
 const PropertyFilter$json = {
   '1': 'PropertyFilter',
@@ -294,7 +328,14 @@ const PropertyFilter_Operator$json = {
 
 /// Descriptor for `PropertyFilter`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List propertyFilterDescriptor = $convert.base64Decode(
-    'Cg5Qcm9wZXJ0eUZpbHRlchJHCghwcm9wZXJ0eRgBIAEoCzIrLmdvb2dsZS5kYXRhc3RvcmUudjFiZXRhMy5Qcm9wZXJ0eVJlZmVyZW5jZVIIcHJvcGVydHkSQQoCb3AYAiABKA4yMS5nb29nbGUuZGF0YXN0b3JlLnYxYmV0YTMuUHJvcGVydHlGaWx0ZXIuT3BlcmF0b3JSAm9wEjUKBXZhbHVlGAMgASgLMh8uZ29vZ2xlLmRhdGFzdG9yZS52MWJldGEzLlZhbHVlUgV2YWx1ZSKVAQoIT3BlcmF0b3ISGAoUT1BFUkFUT1JfVU5TUEVDSUZJRUQQABINCglMRVNTX1RIQU4QARIWChJMRVNTX1RIQU5fT1JfRVFVQUwQAhIQCgxHUkVBVEVSX1RIQU4QAxIZChVHUkVBVEVSX1RIQU5fT1JfRVFVQUwQBBIJCgVFUVVBTBAFEhAKDEhBU19BTkNFU1RPUhAL');
+    'Cg5Qcm9wZXJ0eUZpbHRlchJHCghwcm9wZXJ0eRgBIAEoCzIrLmdvb2dsZS5kYXRhc3RvcmUudj'
+    'FiZXRhMy5Qcm9wZXJ0eVJlZmVyZW5jZVIIcHJvcGVydHkSQQoCb3AYAiABKA4yMS5nb29nbGUu'
+    'ZGF0YXN0b3JlLnYxYmV0YTMuUHJvcGVydHlGaWx0ZXIuT3BlcmF0b3JSAm9wEjUKBXZhbHVlGA'
+    'MgASgLMh8uZ29vZ2xlLmRhdGFzdG9yZS52MWJldGEzLlZhbHVlUgV2YWx1ZSKVAQoIT3BlcmF0'
+    'b3ISGAoUT1BFUkFUT1JfVU5TUEVDSUZJRUQQABINCglMRVNTX1RIQU4QARIWChJMRVNTX1RIQU'
+    '5fT1JfRVFVQUwQAhIQCgxHUkVBVEVSX1RIQU4QAxIZChVHUkVBVEVSX1RIQU5fT1JfRVFVQUwQ'
+    'BBIJCgVFUVVBTBAFEhAKDEhBU19BTkNFU1RPUhAL');
+
 @$core.Deprecated('Use gqlQueryDescriptor instead')
 const GqlQuery$json = {
   '1': 'GqlQuery',
@@ -340,7 +381,14 @@ const GqlQuery_NamedBindingsEntry$json = {
 
 /// Descriptor for `GqlQuery`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List gqlQueryDescriptor = $convert.base64Decode(
-    'CghHcWxRdWVyeRIhCgxxdWVyeV9zdHJpbmcYASABKAlSC3F1ZXJ5U3RyaW5nEiUKDmFsbG93X2xpdGVyYWxzGAIgASgIUg1hbGxvd0xpdGVyYWxzElwKDm5hbWVkX2JpbmRpbmdzGAUgAygLMjUuZ29vZ2xlLmRhdGFzdG9yZS52MWJldGEzLkdxbFF1ZXJ5Lk5hbWVkQmluZGluZ3NFbnRyeVINbmFtZWRCaW5kaW5ncxJcChNwb3NpdGlvbmFsX2JpbmRpbmdzGAQgAygLMisuZ29vZ2xlLmRhdGFzdG9yZS52MWJldGEzLkdxbFF1ZXJ5UGFyYW1ldGVyUhJwb3NpdGlvbmFsQmluZGluZ3MabQoSTmFtZWRCaW5kaW5nc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EkEKBXZhbHVlGAIgASgLMisuZ29vZ2xlLmRhdGFzdG9yZS52MWJldGEzLkdxbFF1ZXJ5UGFyYW1ldGVyUgV2YWx1ZToCOAE=');
+    'CghHcWxRdWVyeRIhCgxxdWVyeV9zdHJpbmcYASABKAlSC3F1ZXJ5U3RyaW5nEiUKDmFsbG93X2'
+    'xpdGVyYWxzGAIgASgIUg1hbGxvd0xpdGVyYWxzElwKDm5hbWVkX2JpbmRpbmdzGAUgAygLMjUu'
+    'Z29vZ2xlLmRhdGFzdG9yZS52MWJldGEzLkdxbFF1ZXJ5Lk5hbWVkQmluZGluZ3NFbnRyeVINbm'
+    'FtZWRCaW5kaW5ncxJcChNwb3NpdGlvbmFsX2JpbmRpbmdzGAQgAygLMisuZ29vZ2xlLmRhdGFz'
+    'dG9yZS52MWJldGEzLkdxbFF1ZXJ5UGFyYW1ldGVyUhJwb3NpdGlvbmFsQmluZGluZ3MabQoSTm'
+    'FtZWRCaW5kaW5nc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EkEKBXZhbHVlGAIgASgLMisuZ29v'
+    'Z2xlLmRhdGFzdG9yZS52MWJldGEzLkdxbFF1ZXJ5UGFyYW1ldGVyUgV2YWx1ZToCOAE=');
+
 @$core.Deprecated('Use gqlQueryParameterDescriptor instead')
 const GqlQueryParameter$json = {
   '1': 'GqlQueryParameter',
@@ -363,7 +411,10 @@ const GqlQueryParameter$json = {
 
 /// Descriptor for `GqlQueryParameter`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List gqlQueryParameterDescriptor = $convert.base64Decode(
-    'ChFHcWxRdWVyeVBhcmFtZXRlchI3CgV2YWx1ZRgCIAEoCzIfLmdvb2dsZS5kYXRhc3RvcmUudjFiZXRhMy5WYWx1ZUgAUgV2YWx1ZRIYCgZjdXJzb3IYAyABKAxIAFIGY3Vyc29yQhAKDnBhcmFtZXRlcl90eXBl');
+    'ChFHcWxRdWVyeVBhcmFtZXRlchI3CgV2YWx1ZRgCIAEoCzIfLmdvb2dsZS5kYXRhc3RvcmUudj'
+    'FiZXRhMy5WYWx1ZUgAUgV2YWx1ZRIYCgZjdXJzb3IYAyABKAxIAFIGY3Vyc29yQhAKDnBhcmFt'
+    'ZXRlcl90eXBl');
+
 @$core.Deprecated('Use queryResultBatchDescriptor instead')
 const QueryResultBatch$json = {
   '1': 'QueryResultBatch',
@@ -414,4 +465,14 @@ const QueryResultBatch_MoreResultsType$json = {
 
 /// Descriptor for `QueryResultBatch`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List queryResultBatchDescriptor = $convert.base64Decode(
-    'ChBRdWVyeVJlc3VsdEJhdGNoEicKD3NraXBwZWRfcmVzdWx0cxgGIAEoBVIOc2tpcHBlZFJlc3VsdHMSJQoOc2tpcHBlZF9jdXJzb3IYAyABKAxSDXNraXBwZWRDdXJzb3ISXwoSZW50aXR5X3Jlc3VsdF90eXBlGAEgASgOMjEuZ29vZ2xlLmRhdGFzdG9yZS52MWJldGEzLkVudGl0eVJlc3VsdC5SZXN1bHRUeXBlUhBlbnRpdHlSZXN1bHRUeXBlEk0KDmVudGl0eV9yZXN1bHRzGAIgAygLMiYuZ29vZ2xlLmRhdGFzdG9yZS52MWJldGEzLkVudGl0eVJlc3VsdFINZW50aXR5UmVzdWx0cxIdCgplbmRfY3Vyc29yGAQgASgMUgllbmRDdXJzb3ISXQoMbW9yZV9yZXN1bHRzGAUgASgOMjouZ29vZ2xlLmRhdGFzdG9yZS52MWJldGEzLlF1ZXJ5UmVzdWx0QmF0Y2guTW9yZVJlc3VsdHNUeXBlUgttb3JlUmVzdWx0cxIpChBzbmFwc2hvdF92ZXJzaW9uGAcgASgDUg9zbmFwc2hvdFZlcnNpb24imAEKD01vcmVSZXN1bHRzVHlwZRIhCh1NT1JFX1JFU1VMVFNfVFlQRV9VTlNQRUNJRklFRBAAEhAKDE5PVF9GSU5JU0hFRBABEhwKGE1PUkVfUkVTVUxUU19BRlRFUl9MSU1JVBACEh0KGU1PUkVfUkVTVUxUU19BRlRFUl9DVVJTT1IQBBITCg9OT19NT1JFX1JFU1VMVFMQAw==');
+    'ChBRdWVyeVJlc3VsdEJhdGNoEicKD3NraXBwZWRfcmVzdWx0cxgGIAEoBVIOc2tpcHBlZFJlc3'
+    'VsdHMSJQoOc2tpcHBlZF9jdXJzb3IYAyABKAxSDXNraXBwZWRDdXJzb3ISXwoSZW50aXR5X3Jl'
+    'c3VsdF90eXBlGAEgASgOMjEuZ29vZ2xlLmRhdGFzdG9yZS52MWJldGEzLkVudGl0eVJlc3VsdC'
+    '5SZXN1bHRUeXBlUhBlbnRpdHlSZXN1bHRUeXBlEk0KDmVudGl0eV9yZXN1bHRzGAIgAygLMiYu'
+    'Z29vZ2xlLmRhdGFzdG9yZS52MWJldGEzLkVudGl0eVJlc3VsdFINZW50aXR5UmVzdWx0cxIdCg'
+    'plbmRfY3Vyc29yGAQgASgMUgllbmRDdXJzb3ISXQoMbW9yZV9yZXN1bHRzGAUgASgOMjouZ29v'
+    'Z2xlLmRhdGFzdG9yZS52MWJldGEzLlF1ZXJ5UmVzdWx0QmF0Y2guTW9yZVJlc3VsdHNUeXBlUg'
+    'ttb3JlUmVzdWx0cxIpChBzbmFwc2hvdF92ZXJzaW9uGAcgASgDUg9zbmFwc2hvdFZlcnNpb24i'
+    'mAEKD01vcmVSZXN1bHRzVHlwZRIhCh1NT1JFX1JFU1VMVFNfVFlQRV9VTlNQRUNJRklFRBAAEh'
+    'AKDE5PVF9GSU5JU0hFRBABEhwKGE1PUkVfUkVTVUxUU19BRlRFUl9MSU1JVBACEh0KGU1PUkVf'
+    'UkVTVUxUU19BRlRFUl9DVVJTT1IQBBITCg9OT19NT1JFX1JFU1VMVFMQAw==');

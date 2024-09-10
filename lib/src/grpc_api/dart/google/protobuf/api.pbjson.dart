@@ -1,12 +1,16 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/protobuf/api.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
-import 'dart:core' as $core;
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:convert' as $convert;
+import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
 @$core.Deprecated('Use apiDescriptor instead')
@@ -60,7 +64,13 @@ const Api$json = {
 
 /// Descriptor for `Api`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List apiDescriptor = $convert.base64Decode(
-    'CgNBcGkSEgoEbmFtZRgBIAEoCVIEbmFtZRIxCgdtZXRob2RzGAIgAygLMhcuZ29vZ2xlLnByb3RvYnVmLk1ldGhvZFIHbWV0aG9kcxIxCgdvcHRpb25zGAMgAygLMhcuZ29vZ2xlLnByb3RvYnVmLk9wdGlvblIHb3B0aW9ucxIYCgd2ZXJzaW9uGAQgASgJUgd2ZXJzaW9uEkUKDnNvdXJjZV9jb250ZXh0GAUgASgLMh4uZ29vZ2xlLnByb3RvYnVmLlNvdXJjZUNvbnRleHRSDXNvdXJjZUNvbnRleHQSLgoGbWl4aW5zGAYgAygLMhYuZ29vZ2xlLnByb3RvYnVmLk1peGluUgZtaXhpbnMSLwoGc3ludGF4GAcgASgOMhcuZ29vZ2xlLnByb3RvYnVmLlN5bnRheFIGc3ludGF4');
+    'CgNBcGkSEgoEbmFtZRgBIAEoCVIEbmFtZRIxCgdtZXRob2RzGAIgAygLMhcuZ29vZ2xlLnByb3'
+    'RvYnVmLk1ldGhvZFIHbWV0aG9kcxIxCgdvcHRpb25zGAMgAygLMhcuZ29vZ2xlLnByb3RvYnVm'
+    'Lk9wdGlvblIHb3B0aW9ucxIYCgd2ZXJzaW9uGAQgASgJUgd2ZXJzaW9uEkUKDnNvdXJjZV9jb2'
+    '50ZXh0GAUgASgLMh4uZ29vZ2xlLnByb3RvYnVmLlNvdXJjZUNvbnRleHRSDXNvdXJjZUNvbnRl'
+    'eHQSLgoGbWl4aW5zGAYgAygLMhYuZ29vZ2xlLnByb3RvYnVmLk1peGluUgZtaXhpbnMSLwoGc3'
+    'ludGF4GAcgASgOMhcuZ29vZ2xlLnByb3RvYnVmLlN5bnRheFIGc3ludGF4');
+
 @$core.Deprecated('Use methodDescriptor instead')
 const Method$json = {
   '1': 'Method',
@@ -103,7 +113,13 @@ const Method$json = {
 
 /// Descriptor for `Method`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List methodDescriptor = $convert.base64Decode(
-    'CgZNZXRob2QSEgoEbmFtZRgBIAEoCVIEbmFtZRIoChByZXF1ZXN0X3R5cGVfdXJsGAIgASgJUg5yZXF1ZXN0VHlwZVVybBIrChFyZXF1ZXN0X3N0cmVhbWluZxgDIAEoCFIQcmVxdWVzdFN0cmVhbWluZxIqChFyZXNwb25zZV90eXBlX3VybBgEIAEoCVIPcmVzcG9uc2VUeXBlVXJsEi0KEnJlc3BvbnNlX3N0cmVhbWluZxgFIAEoCFIRcmVzcG9uc2VTdHJlYW1pbmcSMQoHb3B0aW9ucxgGIAMoCzIXLmdvb2dsZS5wcm90b2J1Zi5PcHRpb25SB29wdGlvbnMSLwoGc3ludGF4GAcgASgOMhcuZ29vZ2xlLnByb3RvYnVmLlN5bnRheFIGc3ludGF4');
+    'CgZNZXRob2QSEgoEbmFtZRgBIAEoCVIEbmFtZRIoChByZXF1ZXN0X3R5cGVfdXJsGAIgASgJUg'
+    '5yZXF1ZXN0VHlwZVVybBIrChFyZXF1ZXN0X3N0cmVhbWluZxgDIAEoCFIQcmVxdWVzdFN0cmVh'
+    'bWluZxIqChFyZXNwb25zZV90eXBlX3VybBgEIAEoCVIPcmVzcG9uc2VUeXBlVXJsEi0KEnJlc3'
+    'BvbnNlX3N0cmVhbWluZxgFIAEoCFIRcmVzcG9uc2VTdHJlYW1pbmcSMQoHb3B0aW9ucxgGIAMo'
+    'CzIXLmdvb2dsZS5wcm90b2J1Zi5PcHRpb25SB29wdGlvbnMSLwoGc3ludGF4GAcgASgOMhcuZ2'
+    '9vZ2xlLnByb3RvYnVmLlN5bnRheFIGc3ludGF4');
+
 @$core.Deprecated('Use mixinDescriptor instead')
 const Mixin$json = {
   '1': 'Mixin',

@@ -1,71 +1,62 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/protobuf/test_messages_proto3.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import 'wrappers.pb.dart' as $0;
-import 'duration.pb.dart' as $1;
-import 'timestamp.pb.dart' as $2;
-import 'field_mask.pb.dart' as $3;
-import 'struct.pb.dart' as $4;
-import 'any.pb.dart' as $5;
-
+import 'any.pb.dart' as $49;
+import 'duration.pb.dart' as $51;
+import 'field_mask.pb.dart' as $58;
+import 'struct.pb.dart' as $48;
+import 'struct.pbenum.dart' as $48;
 import 'test_messages_proto3.pbenum.dart';
-import 'struct.pbenum.dart' as $4;
+import 'timestamp.pb.dart' as $50;
+import 'wrappers.pb.dart' as $73;
 
 export 'test_messages_proto3.pbenum.dart';
 
 class TestAllTypesProto3_NestedMessage extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'TestAllTypesProto3.NestedMessage',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'protobuf_test_messages.proto3'),
-      createEmptyInstance: create)
-    ..a<$core.int>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'a',
-        $pb.PbFieldType.O3)
-    ..aOM<TestAllTypesProto3>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'corecursive',
-        subBuilder: TestAllTypesProto3.create)
-    ..hasRequiredFields = false;
-
-  TestAllTypesProto3_NestedMessage._() : super();
   factory TestAllTypesProto3_NestedMessage({
     $core.int? a,
     TestAllTypesProto3? corecursive,
   }) {
-    final _result = create();
+    final $result = create();
     if (a != null) {
-      _result.a = a;
+      $result.a = a;
     }
     if (corecursive != null) {
-      _result.corecursive = corecursive;
+      $result.corecursive = corecursive;
     }
-    return _result;
+    return $result;
   }
+  TestAllTypesProto3_NestedMessage._() : super();
   factory TestAllTypesProto3_NestedMessage.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory TestAllTypesProto3_NestedMessage.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'TestAllTypesProto3.NestedMessage',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'protobuf_test_messages.proto3'),
+      createEmptyInstance: create)
+    ..a<$core.int>(1, _omitFieldNames ? '' : 'a', $pb.PbFieldType.O3)
+    ..aOM<TestAllTypesProto3>(2, _omitFieldNames ? '' : 'corecursive',
+        subBuilder: TestAllTypesProto3.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -78,8 +69,10 @@ class TestAllTypesProto3_NestedMessage extends $pb.GeneratedMessage {
           void Function(TestAllTypesProto3_NestedMessage) updates) =>
       super.copyWith(
               (message) => updates(message as TestAllTypesProto3_NestedMessage))
-          as TestAllTypesProto3_NestedMessage; // ignore: deprecated_member_use
+          as TestAllTypesProto3_NestedMessage;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static TestAllTypesProto3_NestedMessage create() =>
       TestAllTypesProto3_NestedMessage._();
@@ -133,198 +126,14 @@ enum TestAllTypesProto3_OneofField {
   notSet
 }
 
+///  This proto includes every type of field in both singular and repeated
+///  forms.
+///
+///  Also, crucially, all messages and enums in this file are eventually
+///  submessages of this message.  So for example, a fuzz test of TestAllTypes
+///  could trigger bugs that occur in any message type in this file.  We verify
+///  this stays true in a unit test.
 class TestAllTypesProto3 extends $pb.GeneratedMessage {
-  static const $core.Map<$core.int, TestAllTypesProto3_OneofField>
-      _TestAllTypesProto3_OneofFieldByTag = {
-    111: TestAllTypesProto3_OneofField.oneofUint32,
-    112: TestAllTypesProto3_OneofField.oneofNestedMessage,
-    113: TestAllTypesProto3_OneofField.oneofString,
-    114: TestAllTypesProto3_OneofField.oneofBytes,
-    115: TestAllTypesProto3_OneofField.oneofBool,
-    116: TestAllTypesProto3_OneofField.oneofUint64,
-    117: TestAllTypesProto3_OneofField.oneofFloat,
-    118: TestAllTypesProto3_OneofField.oneofDouble,
-    119: TestAllTypesProto3_OneofField.oneofEnum,
-    120: TestAllTypesProto3_OneofField.oneofNullValue,
-    0: TestAllTypesProto3_OneofField.notSet
-  };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'TestAllTypesProto3',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'protobuf_test_messages.proto3'),
-      createEmptyInstance: create)
-    ..oo(0, [111, 112, 113, 114, 115, 116, 117, 118, 119, 120])
-    ..a<$core.int>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'optionalInt32',
-        $pb.PbFieldType.O3)
-    ..aInt64(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'optionalInt64')
-    ..a<$core.int>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'optionalUint32',
-        $pb.PbFieldType.OU3)
-    ..a<$fixnum.Int64>(
-        4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'optionalUint64', $pb.PbFieldType.OU6,
-        defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$core.int>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'optionalSint32', $pb.PbFieldType.OS3)
-    ..a<$fixnum.Int64>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'optionalSint64', $pb.PbFieldType.OS6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$core.int>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'optionalFixed32', $pb.PbFieldType.OF3)
-    ..a<$fixnum.Int64>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'optionalFixed64', $pb.PbFieldType.OF6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$core.int>(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'optionalSfixed32', $pb.PbFieldType.OSF3)
-    ..a<$fixnum.Int64>(10, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'optionalSfixed64', $pb.PbFieldType.OSF6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$core.double>(11, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'optionalFloat', $pb.PbFieldType.OF)
-    ..a<$core.double>(12, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'optionalDouble', $pb.PbFieldType.OD)
-    ..aOB(13, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'optionalBool')
-    ..aOS(14, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'optionalString')
-    ..a<$core.List<$core.int>>(15, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'optionalBytes', $pb.PbFieldType.OY)
-    ..aOM<TestAllTypesProto3_NestedMessage>(18, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'optionalNestedMessage', subBuilder: TestAllTypesProto3_NestedMessage.create)
-    ..aOM<ForeignMessage>(19, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'optionalForeignMessage', subBuilder: ForeignMessage.create)
-    ..e<TestAllTypesProto3_NestedEnum>(21, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'optionalNestedEnum', $pb.PbFieldType.OE, defaultOrMaker: TestAllTypesProto3_NestedEnum.FOO, valueOf: TestAllTypesProto3_NestedEnum.valueOf, enumValues: TestAllTypesProto3_NestedEnum.values)
-    ..e<ForeignEnum>(22, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'optionalForeignEnum', $pb.PbFieldType.OE, defaultOrMaker: ForeignEnum.FOREIGN_FOO, valueOf: ForeignEnum.valueOf, enumValues: ForeignEnum.values)
-    ..e<TestAllTypesProto3_AliasedEnum>(23, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'optionalAliasedEnum', $pb.PbFieldType.OE, defaultOrMaker: TestAllTypesProto3_AliasedEnum.ALIAS_FOO, valueOf: TestAllTypesProto3_AliasedEnum.valueOf, enumValues: TestAllTypesProto3_AliasedEnum.values)
-    ..aOS(24, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'optionalStringPiece')
-    ..aOS(25, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'optionalCord')
-    ..aOM<TestAllTypesProto3>(27, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'recursiveMessage', subBuilder: TestAllTypesProto3.create)
-    ..p<$core.int>(31, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'repeatedInt32', $pb.PbFieldType.P3)
-    ..p<$fixnum.Int64>(32, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'repeatedInt64', $pb.PbFieldType.P6)
-    ..p<$core.int>(33, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'repeatedUint32', $pb.PbFieldType.PU3)
-    ..p<$fixnum.Int64>(34, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'repeatedUint64', $pb.PbFieldType.PU6)
-    ..p<$core.int>(35, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'repeatedSint32', $pb.PbFieldType.PS3)
-    ..p<$fixnum.Int64>(36, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'repeatedSint64', $pb.PbFieldType.PS6)
-    ..p<$core.int>(37, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'repeatedFixed32', $pb.PbFieldType.PF3)
-    ..p<$fixnum.Int64>(38, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'repeatedFixed64', $pb.PbFieldType.PF6)
-    ..p<$core.int>(39, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'repeatedSfixed32', $pb.PbFieldType.PSF3)
-    ..p<$fixnum.Int64>(40, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'repeatedSfixed64', $pb.PbFieldType.PSF6)
-    ..p<$core.double>(41, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'repeatedFloat', $pb.PbFieldType.PF)
-    ..p<$core.double>(42, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'repeatedDouble', $pb.PbFieldType.PD)
-    ..p<$core.bool>(43, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'repeatedBool', $pb.PbFieldType.PB)
-    ..pPS(44, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'repeatedString')
-    ..p<$core.List<$core.int>>(45, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'repeatedBytes', $pb.PbFieldType.PY)
-    ..pc<TestAllTypesProto3_NestedMessage>(48, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'repeatedNestedMessage', $pb.PbFieldType.PM, subBuilder: TestAllTypesProto3_NestedMessage.create)
-    ..pc<ForeignMessage>(49, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'repeatedForeignMessage', $pb.PbFieldType.PM, subBuilder: ForeignMessage.create)
-    ..pc<TestAllTypesProto3_NestedEnum>(51, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'repeatedNestedEnum', $pb.PbFieldType.PE, valueOf: TestAllTypesProto3_NestedEnum.valueOf, enumValues: TestAllTypesProto3_NestedEnum.values)
-    ..pc<ForeignEnum>(52, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'repeatedForeignEnum', $pb.PbFieldType.PE, valueOf: ForeignEnum.valueOf, enumValues: ForeignEnum.values)
-    ..pPS(54, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'repeatedStringPiece')
-    ..pPS(55, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'repeatedCord')
-    ..m<$core.int, $core.int>(56, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'mapInt32Int32', entryClassName: 'TestAllTypesProto3.MapInt32Int32Entry', keyFieldType: $pb.PbFieldType.O3, valueFieldType: $pb.PbFieldType.O3, packageName: const $pb.PackageName('protobuf_test_messages.proto3'))
-    ..m<$fixnum.Int64, $fixnum.Int64>(57, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'mapInt64Int64', entryClassName: 'TestAllTypesProto3.MapInt64Int64Entry', keyFieldType: $pb.PbFieldType.O6, valueFieldType: $pb.PbFieldType.O6, packageName: const $pb.PackageName('protobuf_test_messages.proto3'))
-    ..m<$core.int, $core.int>(58, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'mapUint32Uint32', entryClassName: 'TestAllTypesProto3.MapUint32Uint32Entry', keyFieldType: $pb.PbFieldType.OU3, valueFieldType: $pb.PbFieldType.OU3, packageName: const $pb.PackageName('protobuf_test_messages.proto3'))
-    ..m<$fixnum.Int64, $fixnum.Int64>(59, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'mapUint64Uint64', entryClassName: 'TestAllTypesProto3.MapUint64Uint64Entry', keyFieldType: $pb.PbFieldType.OU6, valueFieldType: $pb.PbFieldType.OU6, packageName: const $pb.PackageName('protobuf_test_messages.proto3'))
-    ..m<$core.int, $core.int>(60, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'mapSint32Sint32', entryClassName: 'TestAllTypesProto3.MapSint32Sint32Entry', keyFieldType: $pb.PbFieldType.OS3, valueFieldType: $pb.PbFieldType.OS3, packageName: const $pb.PackageName('protobuf_test_messages.proto3'))
-    ..m<$fixnum.Int64, $fixnum.Int64>(61, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'mapSint64Sint64', entryClassName: 'TestAllTypesProto3.MapSint64Sint64Entry', keyFieldType: $pb.PbFieldType.OS6, valueFieldType: $pb.PbFieldType.OS6, packageName: const $pb.PackageName('protobuf_test_messages.proto3'))
-    ..m<$core.int, $core.int>(62, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'mapFixed32Fixed32', entryClassName: 'TestAllTypesProto3.MapFixed32Fixed32Entry', keyFieldType: $pb.PbFieldType.OF3, valueFieldType: $pb.PbFieldType.OF3, packageName: const $pb.PackageName('protobuf_test_messages.proto3'))
-    ..m<$fixnum.Int64, $fixnum.Int64>(63, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'mapFixed64Fixed64', entryClassName: 'TestAllTypesProto3.MapFixed64Fixed64Entry', keyFieldType: $pb.PbFieldType.OF6, valueFieldType: $pb.PbFieldType.OF6, packageName: const $pb.PackageName('protobuf_test_messages.proto3'))
-    ..m<$core.int, $core.int>(64, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'mapSfixed32Sfixed32', entryClassName: 'TestAllTypesProto3.MapSfixed32Sfixed32Entry', keyFieldType: $pb.PbFieldType.OSF3, valueFieldType: $pb.PbFieldType.OSF3, packageName: const $pb.PackageName('protobuf_test_messages.proto3'))
-    ..m<$fixnum.Int64, $fixnum.Int64>(65, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'mapSfixed64Sfixed64', entryClassName: 'TestAllTypesProto3.MapSfixed64Sfixed64Entry', keyFieldType: $pb.PbFieldType.OSF6, valueFieldType: $pb.PbFieldType.OSF6, packageName: const $pb.PackageName('protobuf_test_messages.proto3'))
-    ..m<$core.int, $core.double>(66, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'mapInt32Float', entryClassName: 'TestAllTypesProto3.MapInt32FloatEntry', keyFieldType: $pb.PbFieldType.O3, valueFieldType: $pb.PbFieldType.OF, packageName: const $pb.PackageName('protobuf_test_messages.proto3'))
-    ..m<$core.int, $core.double>(67, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'mapInt32Double', entryClassName: 'TestAllTypesProto3.MapInt32DoubleEntry', keyFieldType: $pb.PbFieldType.O3, valueFieldType: $pb.PbFieldType.OD, packageName: const $pb.PackageName('protobuf_test_messages.proto3'))
-    ..m<$core.bool, $core.bool>(68, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'mapBoolBool', entryClassName: 'TestAllTypesProto3.MapBoolBoolEntry', keyFieldType: $pb.PbFieldType.OB, valueFieldType: $pb.PbFieldType.OB, packageName: const $pb.PackageName('protobuf_test_messages.proto3'))
-    ..m<$core.String, $core.String>(69, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'mapStringString', entryClassName: 'TestAllTypesProto3.MapStringStringEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OS, packageName: const $pb.PackageName('protobuf_test_messages.proto3'))
-    ..m<$core.String, $core.List<$core.int>>(70, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'mapStringBytes', entryClassName: 'TestAllTypesProto3.MapStringBytesEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OY, packageName: const $pb.PackageName('protobuf_test_messages.proto3'))
-    ..m<$core.String, TestAllTypesProto3_NestedMessage>(71, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'mapStringNestedMessage', entryClassName: 'TestAllTypesProto3.MapStringNestedMessageEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OM, valueCreator: TestAllTypesProto3_NestedMessage.create, packageName: const $pb.PackageName('protobuf_test_messages.proto3'))
-    ..m<$core.String, ForeignMessage>(72, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'mapStringForeignMessage', entryClassName: 'TestAllTypesProto3.MapStringForeignMessageEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OM, valueCreator: ForeignMessage.create, packageName: const $pb.PackageName('protobuf_test_messages.proto3'))
-    ..m<$core.String, TestAllTypesProto3_NestedEnum>(73, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'mapStringNestedEnum', entryClassName: 'TestAllTypesProto3.MapStringNestedEnumEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OE, valueOf: TestAllTypesProto3_NestedEnum.valueOf, enumValues: TestAllTypesProto3_NestedEnum.values, packageName: const $pb.PackageName('protobuf_test_messages.proto3'))
-    ..m<$core.String, ForeignEnum>(74, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'mapStringForeignEnum', entryClassName: 'TestAllTypesProto3.MapStringForeignEnumEntry', keyFieldType: $pb.PbFieldType.OS, valueFieldType: $pb.PbFieldType.OE, valueOf: ForeignEnum.valueOf, enumValues: ForeignEnum.values, packageName: const $pb.PackageName('protobuf_test_messages.proto3'))
-    ..p<$core.int>(75, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'packedInt32', $pb.PbFieldType.K3)
-    ..p<$fixnum.Int64>(76, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'packedInt64', $pb.PbFieldType.K6)
-    ..p<$core.int>(77, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'packedUint32', $pb.PbFieldType.KU3)
-    ..p<$fixnum.Int64>(78, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'packedUint64', $pb.PbFieldType.KU6)
-    ..p<$core.int>(79, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'packedSint32', $pb.PbFieldType.KS3)
-    ..p<$fixnum.Int64>(80, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'packedSint64', $pb.PbFieldType.KS6)
-    ..p<$core.int>(81, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'packedFixed32', $pb.PbFieldType.KF3)
-    ..p<$fixnum.Int64>(82, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'packedFixed64', $pb.PbFieldType.KF6)
-    ..p<$core.int>(83, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'packedSfixed32', $pb.PbFieldType.KSF3)
-    ..p<$fixnum.Int64>(84, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'packedSfixed64', $pb.PbFieldType.KSF6)
-    ..p<$core.double>(85, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'packedFloat', $pb.PbFieldType.KF)
-    ..p<$core.double>(86, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'packedDouble', $pb.PbFieldType.KD)
-    ..p<$core.bool>(87, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'packedBool', $pb.PbFieldType.KB)
-    ..pc<TestAllTypesProto3_NestedEnum>(88, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'packedNestedEnum', $pb.PbFieldType.KE, valueOf: TestAllTypesProto3_NestedEnum.valueOf, enumValues: TestAllTypesProto3_NestedEnum.values)
-    ..p<$core.int>(89, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'unpackedInt32', $pb.PbFieldType.P3)
-    ..p<$fixnum.Int64>(90, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'unpackedInt64', $pb.PbFieldType.P6)
-    ..p<$core.int>(91, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'unpackedUint32', $pb.PbFieldType.PU3)
-    ..p<$fixnum.Int64>(92, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'unpackedUint64', $pb.PbFieldType.PU6)
-    ..p<$core.int>(93, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'unpackedSint32', $pb.PbFieldType.PS3)
-    ..p<$fixnum.Int64>(94, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'unpackedSint64', $pb.PbFieldType.PS6)
-    ..p<$core.int>(95, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'unpackedFixed32', $pb.PbFieldType.PF3)
-    ..p<$fixnum.Int64>(96, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'unpackedFixed64', $pb.PbFieldType.PF6)
-    ..p<$core.int>(97, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'unpackedSfixed32', $pb.PbFieldType.PSF3)
-    ..p<$fixnum.Int64>(98, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'unpackedSfixed64', $pb.PbFieldType.PSF6)
-    ..p<$core.double>(99, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'unpackedFloat', $pb.PbFieldType.PF)
-    ..p<$core.double>(100, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'unpackedDouble', $pb.PbFieldType.PD)
-    ..p<$core.bool>(101, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'unpackedBool', $pb.PbFieldType.PB)
-    ..pc<TestAllTypesProto3_NestedEnum>(102, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'unpackedNestedEnum', $pb.PbFieldType.PE, valueOf: TestAllTypesProto3_NestedEnum.valueOf, enumValues: TestAllTypesProto3_NestedEnum.values)
-    ..a<$core.int>(111, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'oneofUint32', $pb.PbFieldType.OU3)
-    ..aOM<TestAllTypesProto3_NestedMessage>(112, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'oneofNestedMessage', subBuilder: TestAllTypesProto3_NestedMessage.create)
-    ..aOS(113, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'oneofString')
-    ..a<$core.List<$core.int>>(114, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'oneofBytes', $pb.PbFieldType.OY)
-    ..aOB(115, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'oneofBool')
-    ..a<$fixnum.Int64>(116, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'oneofUint64', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$core.double>(117, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'oneofFloat', $pb.PbFieldType.OF)
-    ..a<$core.double>(118, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'oneofDouble', $pb.PbFieldType.OD)
-    ..e<TestAllTypesProto3_NestedEnum>(119, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'oneofEnum', $pb.PbFieldType.OE, defaultOrMaker: TestAllTypesProto3_NestedEnum.FOO, valueOf: TestAllTypesProto3_NestedEnum.valueOf, enumValues: TestAllTypesProto3_NestedEnum.values)
-    ..e<$4.NullValue>(120, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'oneofNullValue', $pb.PbFieldType.OE, defaultOrMaker: $4.NullValue.NULL_VALUE, valueOf: $4.NullValue.valueOf, enumValues: $4.NullValue.values)
-    ..aOM<$0.BoolValue>(201, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'optionalBoolWrapper', subBuilder: $0.BoolValue.create)
-    ..aOM<$0.Int32Value>(202, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'optionalInt32Wrapper', subBuilder: $0.Int32Value.create)
-    ..aOM<$0.Int64Value>(203, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'optionalInt64Wrapper', subBuilder: $0.Int64Value.create)
-    ..aOM<$0.UInt32Value>(204, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'optionalUint32Wrapper', subBuilder: $0.UInt32Value.create)
-    ..aOM<$0.UInt64Value>(205, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'optionalUint64Wrapper', subBuilder: $0.UInt64Value.create)
-    ..aOM<$0.FloatValue>(206, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'optionalFloatWrapper', subBuilder: $0.FloatValue.create)
-    ..aOM<$0.DoubleValue>(207, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'optionalDoubleWrapper', subBuilder: $0.DoubleValue.create)
-    ..aOM<$0.StringValue>(208, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'optionalStringWrapper', subBuilder: $0.StringValue.create)
-    ..aOM<$0.BytesValue>(209, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'optionalBytesWrapper', subBuilder: $0.BytesValue.create)
-    ..pc<$0.BoolValue>(211, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'repeatedBoolWrapper', $pb.PbFieldType.PM, subBuilder: $0.BoolValue.create)
-    ..pc<$0.Int32Value>(212, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'repeatedInt32Wrapper', $pb.PbFieldType.PM, subBuilder: $0.Int32Value.create)
-    ..pc<$0.Int64Value>(213, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'repeatedInt64Wrapper', $pb.PbFieldType.PM, subBuilder: $0.Int64Value.create)
-    ..pc<$0.UInt32Value>(214, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'repeatedUint32Wrapper', $pb.PbFieldType.PM, subBuilder: $0.UInt32Value.create)
-    ..pc<$0.UInt64Value>(215, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'repeatedUint64Wrapper', $pb.PbFieldType.PM, subBuilder: $0.UInt64Value.create)
-    ..pc<$0.FloatValue>(216, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'repeatedFloatWrapper', $pb.PbFieldType.PM, subBuilder: $0.FloatValue.create)
-    ..pc<$0.DoubleValue>(217, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'repeatedDoubleWrapper', $pb.PbFieldType.PM, subBuilder: $0.DoubleValue.create)
-    ..pc<$0.StringValue>(218, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'repeatedStringWrapper', $pb.PbFieldType.PM, subBuilder: $0.StringValue.create)
-    ..pc<$0.BytesValue>(219, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'repeatedBytesWrapper', $pb.PbFieldType.PM, subBuilder: $0.BytesValue.create)
-    ..aOM<$1.Duration>(301, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'optionalDuration', subBuilder: $1.Duration.create)
-    ..aOM<$2.Timestamp>(302, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'optionalTimestamp', subBuilder: $2.Timestamp.create)
-    ..aOM<$3.FieldMask>(303, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'optionalFieldMask', subBuilder: $3.FieldMask.create)
-    ..aOM<$4.Struct>(304, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'optionalStruct', subBuilder: $4.Struct.create)
-    ..aOM<$5.Any>(305, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'optionalAny', subBuilder: $5.Any.create)
-    ..aOM<$4.Value>(306, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'optionalValue', subBuilder: $4.Value.create)
-    ..e<$4.NullValue>(307, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'optionalNullValue', $pb.PbFieldType.OE, defaultOrMaker: $4.NullValue.NULL_VALUE, valueOf: $4.NullValue.valueOf, enumValues: $4.NullValue.values)
-    ..pc<$1.Duration>(311, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'repeatedDuration', $pb.PbFieldType.PM, subBuilder: $1.Duration.create)
-    ..pc<$2.Timestamp>(312, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'repeatedTimestamp', $pb.PbFieldType.PM, subBuilder: $2.Timestamp.create)
-    ..pc<$3.FieldMask>(313, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'repeatedFieldmask', $pb.PbFieldType.PM, subBuilder: $3.FieldMask.create)
-    ..pc<$5.Any>(315, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'repeatedAny', $pb.PbFieldType.PM, subBuilder: $5.Any.create)
-    ..pc<$4.Value>(316, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'repeatedValue', $pb.PbFieldType.PM, subBuilder: $4.Value.create)
-    ..pc<$4.ListValue>(317, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'repeatedListValue', $pb.PbFieldType.PM, subBuilder: $4.ListValue.create)
-    ..pc<$4.Struct>(324, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'repeatedStruct', $pb.PbFieldType.PM, subBuilder: $4.Struct.create)
-    ..a<$core.int>(401, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'fieldname1', $pb.PbFieldType.O3)
-    ..a<$core.int>(402, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'fieldName2', $pb.PbFieldType.O3)
-    ..a<$core.int>(403, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'FieldName3', $pb.PbFieldType.O3)
-    ..a<$core.int>(404, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'fieldName4', $pb.PbFieldType.O3, protoName: 'field__name4_')
-    ..a<$core.int>(405, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'field0name5', $pb.PbFieldType.O3)
-    ..a<$core.int>(406, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'field0Name6', $pb.PbFieldType.O3, protoName: 'field_0_name6')
-    ..a<$core.int>(407, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'fieldName7', $pb.PbFieldType.O3, protoName: 'fieldName7')
-    ..a<$core.int>(408, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'FieldName8', $pb.PbFieldType.O3, protoName: 'FieldName8')
-    ..a<$core.int>(409, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'fieldName9', $pb.PbFieldType.O3, protoName: 'field_Name9')
-    ..a<$core.int>(410, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'FieldName10', $pb.PbFieldType.O3, protoName: 'Field_Name10')
-    ..a<$core.int>(411, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'FIELDNAME11', $pb.PbFieldType.O3, protoName: 'FIELD_NAME11')
-    ..a<$core.int>(412, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'FIELDName12', $pb.PbFieldType.O3, protoName: 'FIELD_name12')
-    ..a<$core.int>(413, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'FieldName13', $pb.PbFieldType.O3, protoName: '__field_name13')
-    ..a<$core.int>(414, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'FieldName14', $pb.PbFieldType.O3, protoName: '__Field_name14')
-    ..a<$core.int>(415, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'fieldName15', $pb.PbFieldType.O3, protoName: 'field__name15')
-    ..a<$core.int>(416, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'fieldName16', $pb.PbFieldType.O3, protoName: 'field__Name16')
-    ..a<$core.int>(417, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'fieldName17', $pb.PbFieldType.O3, protoName: 'field_name17__')
-    ..a<$core.int>(418, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'FieldName18', $pb.PbFieldType.O3, protoName: 'Field_name18__')
-    ..hasRequiredFields = false;
-
-  TestAllTypesProto3._() : super();
   factory TestAllTypesProto3({
     $core.int? optionalInt32,
     $fixnum.Int64? optionalInt64,
@@ -427,39 +236,39 @@ class TestAllTypesProto3 extends $pb.GeneratedMessage {
     $core.double? oneofFloat,
     $core.double? oneofDouble,
     TestAllTypesProto3_NestedEnum? oneofEnum,
-    $4.NullValue? oneofNullValue,
-    $0.BoolValue? optionalBoolWrapper,
-    $0.Int32Value? optionalInt32Wrapper,
-    $0.Int64Value? optionalInt64Wrapper,
-    $0.UInt32Value? optionalUint32Wrapper,
-    $0.UInt64Value? optionalUint64Wrapper,
-    $0.FloatValue? optionalFloatWrapper,
-    $0.DoubleValue? optionalDoubleWrapper,
-    $0.StringValue? optionalStringWrapper,
-    $0.BytesValue? optionalBytesWrapper,
-    $core.Iterable<$0.BoolValue>? repeatedBoolWrapper,
-    $core.Iterable<$0.Int32Value>? repeatedInt32Wrapper,
-    $core.Iterable<$0.Int64Value>? repeatedInt64Wrapper,
-    $core.Iterable<$0.UInt32Value>? repeatedUint32Wrapper,
-    $core.Iterable<$0.UInt64Value>? repeatedUint64Wrapper,
-    $core.Iterable<$0.FloatValue>? repeatedFloatWrapper,
-    $core.Iterable<$0.DoubleValue>? repeatedDoubleWrapper,
-    $core.Iterable<$0.StringValue>? repeatedStringWrapper,
-    $core.Iterable<$0.BytesValue>? repeatedBytesWrapper,
-    $1.Duration? optionalDuration,
-    $2.Timestamp? optionalTimestamp,
-    $3.FieldMask? optionalFieldMask,
-    $4.Struct? optionalStruct,
-    $5.Any? optionalAny,
-    $4.Value? optionalValue,
-    $4.NullValue? optionalNullValue,
-    $core.Iterable<$1.Duration>? repeatedDuration,
-    $core.Iterable<$2.Timestamp>? repeatedTimestamp,
-    $core.Iterable<$3.FieldMask>? repeatedFieldmask,
-    $core.Iterable<$5.Any>? repeatedAny,
-    $core.Iterable<$4.Value>? repeatedValue,
-    $core.Iterable<$4.ListValue>? repeatedListValue,
-    $core.Iterable<$4.Struct>? repeatedStruct,
+    $48.NullValue? oneofNullValue,
+    $73.BoolValue? optionalBoolWrapper,
+    $73.Int32Value? optionalInt32Wrapper,
+    $73.Int64Value? optionalInt64Wrapper,
+    $73.UInt32Value? optionalUint32Wrapper,
+    $73.UInt64Value? optionalUint64Wrapper,
+    $73.FloatValue? optionalFloatWrapper,
+    $73.DoubleValue? optionalDoubleWrapper,
+    $73.StringValue? optionalStringWrapper,
+    $73.BytesValue? optionalBytesWrapper,
+    $core.Iterable<$73.BoolValue>? repeatedBoolWrapper,
+    $core.Iterable<$73.Int32Value>? repeatedInt32Wrapper,
+    $core.Iterable<$73.Int64Value>? repeatedInt64Wrapper,
+    $core.Iterable<$73.UInt32Value>? repeatedUint32Wrapper,
+    $core.Iterable<$73.UInt64Value>? repeatedUint64Wrapper,
+    $core.Iterable<$73.FloatValue>? repeatedFloatWrapper,
+    $core.Iterable<$73.DoubleValue>? repeatedDoubleWrapper,
+    $core.Iterable<$73.StringValue>? repeatedStringWrapper,
+    $core.Iterable<$73.BytesValue>? repeatedBytesWrapper,
+    $51.Duration? optionalDuration,
+    $50.Timestamp? optionalTimestamp,
+    $58.FieldMask? optionalFieldMask,
+    $48.Struct? optionalStruct,
+    $49.Any? optionalAny,
+    $48.Value? optionalValue,
+    $48.NullValue? optionalNullValue,
+    $core.Iterable<$51.Duration>? repeatedDuration,
+    $core.Iterable<$50.Timestamp>? repeatedTimestamp,
+    $core.Iterable<$58.FieldMask>? repeatedFieldmask,
+    $core.Iterable<$49.Any>? repeatedAny,
+    $core.Iterable<$48.Value>? repeatedValue,
+    $core.Iterable<$48.ListValue>? repeatedListValue,
+    $core.Iterable<$48.Struct>? repeatedStruct,
     $core.int? fieldname1,
     $core.int? fieldName2,
     $core.int? fieldName3,
@@ -479,468 +288,923 @@ class TestAllTypesProto3 extends $pb.GeneratedMessage {
     $core.int? fieldName17,
     $core.int? fieldName18,
   }) {
-    final _result = create();
+    final $result = create();
     if (optionalInt32 != null) {
-      _result.optionalInt32 = optionalInt32;
+      $result.optionalInt32 = optionalInt32;
     }
     if (optionalInt64 != null) {
-      _result.optionalInt64 = optionalInt64;
+      $result.optionalInt64 = optionalInt64;
     }
     if (optionalUint32 != null) {
-      _result.optionalUint32 = optionalUint32;
+      $result.optionalUint32 = optionalUint32;
     }
     if (optionalUint64 != null) {
-      _result.optionalUint64 = optionalUint64;
+      $result.optionalUint64 = optionalUint64;
     }
     if (optionalSint32 != null) {
-      _result.optionalSint32 = optionalSint32;
+      $result.optionalSint32 = optionalSint32;
     }
     if (optionalSint64 != null) {
-      _result.optionalSint64 = optionalSint64;
+      $result.optionalSint64 = optionalSint64;
     }
     if (optionalFixed32 != null) {
-      _result.optionalFixed32 = optionalFixed32;
+      $result.optionalFixed32 = optionalFixed32;
     }
     if (optionalFixed64 != null) {
-      _result.optionalFixed64 = optionalFixed64;
+      $result.optionalFixed64 = optionalFixed64;
     }
     if (optionalSfixed32 != null) {
-      _result.optionalSfixed32 = optionalSfixed32;
+      $result.optionalSfixed32 = optionalSfixed32;
     }
     if (optionalSfixed64 != null) {
-      _result.optionalSfixed64 = optionalSfixed64;
+      $result.optionalSfixed64 = optionalSfixed64;
     }
     if (optionalFloat != null) {
-      _result.optionalFloat = optionalFloat;
+      $result.optionalFloat = optionalFloat;
     }
     if (optionalDouble != null) {
-      _result.optionalDouble = optionalDouble;
+      $result.optionalDouble = optionalDouble;
     }
     if (optionalBool != null) {
-      _result.optionalBool = optionalBool;
+      $result.optionalBool = optionalBool;
     }
     if (optionalString != null) {
-      _result.optionalString = optionalString;
+      $result.optionalString = optionalString;
     }
     if (optionalBytes != null) {
-      _result.optionalBytes = optionalBytes;
+      $result.optionalBytes = optionalBytes;
     }
     if (optionalNestedMessage != null) {
-      _result.optionalNestedMessage = optionalNestedMessage;
+      $result.optionalNestedMessage = optionalNestedMessage;
     }
     if (optionalForeignMessage != null) {
-      _result.optionalForeignMessage = optionalForeignMessage;
+      $result.optionalForeignMessage = optionalForeignMessage;
     }
     if (optionalNestedEnum != null) {
-      _result.optionalNestedEnum = optionalNestedEnum;
+      $result.optionalNestedEnum = optionalNestedEnum;
     }
     if (optionalForeignEnum != null) {
-      _result.optionalForeignEnum = optionalForeignEnum;
+      $result.optionalForeignEnum = optionalForeignEnum;
     }
     if (optionalAliasedEnum != null) {
-      _result.optionalAliasedEnum = optionalAliasedEnum;
+      $result.optionalAliasedEnum = optionalAliasedEnum;
     }
     if (optionalStringPiece != null) {
-      _result.optionalStringPiece = optionalStringPiece;
+      $result.optionalStringPiece = optionalStringPiece;
     }
     if (optionalCord != null) {
-      _result.optionalCord = optionalCord;
+      $result.optionalCord = optionalCord;
     }
     if (recursiveMessage != null) {
-      _result.recursiveMessage = recursiveMessage;
+      $result.recursiveMessage = recursiveMessage;
     }
     if (repeatedInt32 != null) {
-      _result.repeatedInt32.addAll(repeatedInt32);
+      $result.repeatedInt32.addAll(repeatedInt32);
     }
     if (repeatedInt64 != null) {
-      _result.repeatedInt64.addAll(repeatedInt64);
+      $result.repeatedInt64.addAll(repeatedInt64);
     }
     if (repeatedUint32 != null) {
-      _result.repeatedUint32.addAll(repeatedUint32);
+      $result.repeatedUint32.addAll(repeatedUint32);
     }
     if (repeatedUint64 != null) {
-      _result.repeatedUint64.addAll(repeatedUint64);
+      $result.repeatedUint64.addAll(repeatedUint64);
     }
     if (repeatedSint32 != null) {
-      _result.repeatedSint32.addAll(repeatedSint32);
+      $result.repeatedSint32.addAll(repeatedSint32);
     }
     if (repeatedSint64 != null) {
-      _result.repeatedSint64.addAll(repeatedSint64);
+      $result.repeatedSint64.addAll(repeatedSint64);
     }
     if (repeatedFixed32 != null) {
-      _result.repeatedFixed32.addAll(repeatedFixed32);
+      $result.repeatedFixed32.addAll(repeatedFixed32);
     }
     if (repeatedFixed64 != null) {
-      _result.repeatedFixed64.addAll(repeatedFixed64);
+      $result.repeatedFixed64.addAll(repeatedFixed64);
     }
     if (repeatedSfixed32 != null) {
-      _result.repeatedSfixed32.addAll(repeatedSfixed32);
+      $result.repeatedSfixed32.addAll(repeatedSfixed32);
     }
     if (repeatedSfixed64 != null) {
-      _result.repeatedSfixed64.addAll(repeatedSfixed64);
+      $result.repeatedSfixed64.addAll(repeatedSfixed64);
     }
     if (repeatedFloat != null) {
-      _result.repeatedFloat.addAll(repeatedFloat);
+      $result.repeatedFloat.addAll(repeatedFloat);
     }
     if (repeatedDouble != null) {
-      _result.repeatedDouble.addAll(repeatedDouble);
+      $result.repeatedDouble.addAll(repeatedDouble);
     }
     if (repeatedBool != null) {
-      _result.repeatedBool.addAll(repeatedBool);
+      $result.repeatedBool.addAll(repeatedBool);
     }
     if (repeatedString != null) {
-      _result.repeatedString.addAll(repeatedString);
+      $result.repeatedString.addAll(repeatedString);
     }
     if (repeatedBytes != null) {
-      _result.repeatedBytes.addAll(repeatedBytes);
+      $result.repeatedBytes.addAll(repeatedBytes);
     }
     if (repeatedNestedMessage != null) {
-      _result.repeatedNestedMessage.addAll(repeatedNestedMessage);
+      $result.repeatedNestedMessage.addAll(repeatedNestedMessage);
     }
     if (repeatedForeignMessage != null) {
-      _result.repeatedForeignMessage.addAll(repeatedForeignMessage);
+      $result.repeatedForeignMessage.addAll(repeatedForeignMessage);
     }
     if (repeatedNestedEnum != null) {
-      _result.repeatedNestedEnum.addAll(repeatedNestedEnum);
+      $result.repeatedNestedEnum.addAll(repeatedNestedEnum);
     }
     if (repeatedForeignEnum != null) {
-      _result.repeatedForeignEnum.addAll(repeatedForeignEnum);
+      $result.repeatedForeignEnum.addAll(repeatedForeignEnum);
     }
     if (repeatedStringPiece != null) {
-      _result.repeatedStringPiece.addAll(repeatedStringPiece);
+      $result.repeatedStringPiece.addAll(repeatedStringPiece);
     }
     if (repeatedCord != null) {
-      _result.repeatedCord.addAll(repeatedCord);
+      $result.repeatedCord.addAll(repeatedCord);
     }
     if (mapInt32Int32 != null) {
-      _result.mapInt32Int32.addAll(mapInt32Int32);
+      $result.mapInt32Int32.addAll(mapInt32Int32);
     }
     if (mapInt64Int64 != null) {
-      _result.mapInt64Int64.addAll(mapInt64Int64);
+      $result.mapInt64Int64.addAll(mapInt64Int64);
     }
     if (mapUint32Uint32 != null) {
-      _result.mapUint32Uint32.addAll(mapUint32Uint32);
+      $result.mapUint32Uint32.addAll(mapUint32Uint32);
     }
     if (mapUint64Uint64 != null) {
-      _result.mapUint64Uint64.addAll(mapUint64Uint64);
+      $result.mapUint64Uint64.addAll(mapUint64Uint64);
     }
     if (mapSint32Sint32 != null) {
-      _result.mapSint32Sint32.addAll(mapSint32Sint32);
+      $result.mapSint32Sint32.addAll(mapSint32Sint32);
     }
     if (mapSint64Sint64 != null) {
-      _result.mapSint64Sint64.addAll(mapSint64Sint64);
+      $result.mapSint64Sint64.addAll(mapSint64Sint64);
     }
     if (mapFixed32Fixed32 != null) {
-      _result.mapFixed32Fixed32.addAll(mapFixed32Fixed32);
+      $result.mapFixed32Fixed32.addAll(mapFixed32Fixed32);
     }
     if (mapFixed64Fixed64 != null) {
-      _result.mapFixed64Fixed64.addAll(mapFixed64Fixed64);
+      $result.mapFixed64Fixed64.addAll(mapFixed64Fixed64);
     }
     if (mapSfixed32Sfixed32 != null) {
-      _result.mapSfixed32Sfixed32.addAll(mapSfixed32Sfixed32);
+      $result.mapSfixed32Sfixed32.addAll(mapSfixed32Sfixed32);
     }
     if (mapSfixed64Sfixed64 != null) {
-      _result.mapSfixed64Sfixed64.addAll(mapSfixed64Sfixed64);
+      $result.mapSfixed64Sfixed64.addAll(mapSfixed64Sfixed64);
     }
     if (mapInt32Float != null) {
-      _result.mapInt32Float.addAll(mapInt32Float);
+      $result.mapInt32Float.addAll(mapInt32Float);
     }
     if (mapInt32Double != null) {
-      _result.mapInt32Double.addAll(mapInt32Double);
+      $result.mapInt32Double.addAll(mapInt32Double);
     }
     if (mapBoolBool != null) {
-      _result.mapBoolBool.addAll(mapBoolBool);
+      $result.mapBoolBool.addAll(mapBoolBool);
     }
     if (mapStringString != null) {
-      _result.mapStringString.addAll(mapStringString);
+      $result.mapStringString.addAll(mapStringString);
     }
     if (mapStringBytes != null) {
-      _result.mapStringBytes.addAll(mapStringBytes);
+      $result.mapStringBytes.addAll(mapStringBytes);
     }
     if (mapStringNestedMessage != null) {
-      _result.mapStringNestedMessage.addAll(mapStringNestedMessage);
+      $result.mapStringNestedMessage.addAll(mapStringNestedMessage);
     }
     if (mapStringForeignMessage != null) {
-      _result.mapStringForeignMessage.addAll(mapStringForeignMessage);
+      $result.mapStringForeignMessage.addAll(mapStringForeignMessage);
     }
     if (mapStringNestedEnum != null) {
-      _result.mapStringNestedEnum.addAll(mapStringNestedEnum);
+      $result.mapStringNestedEnum.addAll(mapStringNestedEnum);
     }
     if (mapStringForeignEnum != null) {
-      _result.mapStringForeignEnum.addAll(mapStringForeignEnum);
+      $result.mapStringForeignEnum.addAll(mapStringForeignEnum);
     }
     if (packedInt32 != null) {
-      _result.packedInt32.addAll(packedInt32);
+      $result.packedInt32.addAll(packedInt32);
     }
     if (packedInt64 != null) {
-      _result.packedInt64.addAll(packedInt64);
+      $result.packedInt64.addAll(packedInt64);
     }
     if (packedUint32 != null) {
-      _result.packedUint32.addAll(packedUint32);
+      $result.packedUint32.addAll(packedUint32);
     }
     if (packedUint64 != null) {
-      _result.packedUint64.addAll(packedUint64);
+      $result.packedUint64.addAll(packedUint64);
     }
     if (packedSint32 != null) {
-      _result.packedSint32.addAll(packedSint32);
+      $result.packedSint32.addAll(packedSint32);
     }
     if (packedSint64 != null) {
-      _result.packedSint64.addAll(packedSint64);
+      $result.packedSint64.addAll(packedSint64);
     }
     if (packedFixed32 != null) {
-      _result.packedFixed32.addAll(packedFixed32);
+      $result.packedFixed32.addAll(packedFixed32);
     }
     if (packedFixed64 != null) {
-      _result.packedFixed64.addAll(packedFixed64);
+      $result.packedFixed64.addAll(packedFixed64);
     }
     if (packedSfixed32 != null) {
-      _result.packedSfixed32.addAll(packedSfixed32);
+      $result.packedSfixed32.addAll(packedSfixed32);
     }
     if (packedSfixed64 != null) {
-      _result.packedSfixed64.addAll(packedSfixed64);
+      $result.packedSfixed64.addAll(packedSfixed64);
     }
     if (packedFloat != null) {
-      _result.packedFloat.addAll(packedFloat);
+      $result.packedFloat.addAll(packedFloat);
     }
     if (packedDouble != null) {
-      _result.packedDouble.addAll(packedDouble);
+      $result.packedDouble.addAll(packedDouble);
     }
     if (packedBool != null) {
-      _result.packedBool.addAll(packedBool);
+      $result.packedBool.addAll(packedBool);
     }
     if (packedNestedEnum != null) {
-      _result.packedNestedEnum.addAll(packedNestedEnum);
+      $result.packedNestedEnum.addAll(packedNestedEnum);
     }
     if (unpackedInt32 != null) {
-      _result.unpackedInt32.addAll(unpackedInt32);
+      $result.unpackedInt32.addAll(unpackedInt32);
     }
     if (unpackedInt64 != null) {
-      _result.unpackedInt64.addAll(unpackedInt64);
+      $result.unpackedInt64.addAll(unpackedInt64);
     }
     if (unpackedUint32 != null) {
-      _result.unpackedUint32.addAll(unpackedUint32);
+      $result.unpackedUint32.addAll(unpackedUint32);
     }
     if (unpackedUint64 != null) {
-      _result.unpackedUint64.addAll(unpackedUint64);
+      $result.unpackedUint64.addAll(unpackedUint64);
     }
     if (unpackedSint32 != null) {
-      _result.unpackedSint32.addAll(unpackedSint32);
+      $result.unpackedSint32.addAll(unpackedSint32);
     }
     if (unpackedSint64 != null) {
-      _result.unpackedSint64.addAll(unpackedSint64);
+      $result.unpackedSint64.addAll(unpackedSint64);
     }
     if (unpackedFixed32 != null) {
-      _result.unpackedFixed32.addAll(unpackedFixed32);
+      $result.unpackedFixed32.addAll(unpackedFixed32);
     }
     if (unpackedFixed64 != null) {
-      _result.unpackedFixed64.addAll(unpackedFixed64);
+      $result.unpackedFixed64.addAll(unpackedFixed64);
     }
     if (unpackedSfixed32 != null) {
-      _result.unpackedSfixed32.addAll(unpackedSfixed32);
+      $result.unpackedSfixed32.addAll(unpackedSfixed32);
     }
     if (unpackedSfixed64 != null) {
-      _result.unpackedSfixed64.addAll(unpackedSfixed64);
+      $result.unpackedSfixed64.addAll(unpackedSfixed64);
     }
     if (unpackedFloat != null) {
-      _result.unpackedFloat.addAll(unpackedFloat);
+      $result.unpackedFloat.addAll(unpackedFloat);
     }
     if (unpackedDouble != null) {
-      _result.unpackedDouble.addAll(unpackedDouble);
+      $result.unpackedDouble.addAll(unpackedDouble);
     }
     if (unpackedBool != null) {
-      _result.unpackedBool.addAll(unpackedBool);
+      $result.unpackedBool.addAll(unpackedBool);
     }
     if (unpackedNestedEnum != null) {
-      _result.unpackedNestedEnum.addAll(unpackedNestedEnum);
+      $result.unpackedNestedEnum.addAll(unpackedNestedEnum);
     }
     if (oneofUint32 != null) {
-      _result.oneofUint32 = oneofUint32;
+      $result.oneofUint32 = oneofUint32;
     }
     if (oneofNestedMessage != null) {
-      _result.oneofNestedMessage = oneofNestedMessage;
+      $result.oneofNestedMessage = oneofNestedMessage;
     }
     if (oneofString != null) {
-      _result.oneofString = oneofString;
+      $result.oneofString = oneofString;
     }
     if (oneofBytes != null) {
-      _result.oneofBytes = oneofBytes;
+      $result.oneofBytes = oneofBytes;
     }
     if (oneofBool != null) {
-      _result.oneofBool = oneofBool;
+      $result.oneofBool = oneofBool;
     }
     if (oneofUint64 != null) {
-      _result.oneofUint64 = oneofUint64;
+      $result.oneofUint64 = oneofUint64;
     }
     if (oneofFloat != null) {
-      _result.oneofFloat = oneofFloat;
+      $result.oneofFloat = oneofFloat;
     }
     if (oneofDouble != null) {
-      _result.oneofDouble = oneofDouble;
+      $result.oneofDouble = oneofDouble;
     }
     if (oneofEnum != null) {
-      _result.oneofEnum = oneofEnum;
+      $result.oneofEnum = oneofEnum;
     }
     if (oneofNullValue != null) {
-      _result.oneofNullValue = oneofNullValue;
+      $result.oneofNullValue = oneofNullValue;
     }
     if (optionalBoolWrapper != null) {
-      _result.optionalBoolWrapper = optionalBoolWrapper;
+      $result.optionalBoolWrapper = optionalBoolWrapper;
     }
     if (optionalInt32Wrapper != null) {
-      _result.optionalInt32Wrapper = optionalInt32Wrapper;
+      $result.optionalInt32Wrapper = optionalInt32Wrapper;
     }
     if (optionalInt64Wrapper != null) {
-      _result.optionalInt64Wrapper = optionalInt64Wrapper;
+      $result.optionalInt64Wrapper = optionalInt64Wrapper;
     }
     if (optionalUint32Wrapper != null) {
-      _result.optionalUint32Wrapper = optionalUint32Wrapper;
+      $result.optionalUint32Wrapper = optionalUint32Wrapper;
     }
     if (optionalUint64Wrapper != null) {
-      _result.optionalUint64Wrapper = optionalUint64Wrapper;
+      $result.optionalUint64Wrapper = optionalUint64Wrapper;
     }
     if (optionalFloatWrapper != null) {
-      _result.optionalFloatWrapper = optionalFloatWrapper;
+      $result.optionalFloatWrapper = optionalFloatWrapper;
     }
     if (optionalDoubleWrapper != null) {
-      _result.optionalDoubleWrapper = optionalDoubleWrapper;
+      $result.optionalDoubleWrapper = optionalDoubleWrapper;
     }
     if (optionalStringWrapper != null) {
-      _result.optionalStringWrapper = optionalStringWrapper;
+      $result.optionalStringWrapper = optionalStringWrapper;
     }
     if (optionalBytesWrapper != null) {
-      _result.optionalBytesWrapper = optionalBytesWrapper;
+      $result.optionalBytesWrapper = optionalBytesWrapper;
     }
     if (repeatedBoolWrapper != null) {
-      _result.repeatedBoolWrapper.addAll(repeatedBoolWrapper);
+      $result.repeatedBoolWrapper.addAll(repeatedBoolWrapper);
     }
     if (repeatedInt32Wrapper != null) {
-      _result.repeatedInt32Wrapper.addAll(repeatedInt32Wrapper);
+      $result.repeatedInt32Wrapper.addAll(repeatedInt32Wrapper);
     }
     if (repeatedInt64Wrapper != null) {
-      _result.repeatedInt64Wrapper.addAll(repeatedInt64Wrapper);
+      $result.repeatedInt64Wrapper.addAll(repeatedInt64Wrapper);
     }
     if (repeatedUint32Wrapper != null) {
-      _result.repeatedUint32Wrapper.addAll(repeatedUint32Wrapper);
+      $result.repeatedUint32Wrapper.addAll(repeatedUint32Wrapper);
     }
     if (repeatedUint64Wrapper != null) {
-      _result.repeatedUint64Wrapper.addAll(repeatedUint64Wrapper);
+      $result.repeatedUint64Wrapper.addAll(repeatedUint64Wrapper);
     }
     if (repeatedFloatWrapper != null) {
-      _result.repeatedFloatWrapper.addAll(repeatedFloatWrapper);
+      $result.repeatedFloatWrapper.addAll(repeatedFloatWrapper);
     }
     if (repeatedDoubleWrapper != null) {
-      _result.repeatedDoubleWrapper.addAll(repeatedDoubleWrapper);
+      $result.repeatedDoubleWrapper.addAll(repeatedDoubleWrapper);
     }
     if (repeatedStringWrapper != null) {
-      _result.repeatedStringWrapper.addAll(repeatedStringWrapper);
+      $result.repeatedStringWrapper.addAll(repeatedStringWrapper);
     }
     if (repeatedBytesWrapper != null) {
-      _result.repeatedBytesWrapper.addAll(repeatedBytesWrapper);
+      $result.repeatedBytesWrapper.addAll(repeatedBytesWrapper);
     }
     if (optionalDuration != null) {
-      _result.optionalDuration = optionalDuration;
+      $result.optionalDuration = optionalDuration;
     }
     if (optionalTimestamp != null) {
-      _result.optionalTimestamp = optionalTimestamp;
+      $result.optionalTimestamp = optionalTimestamp;
     }
     if (optionalFieldMask != null) {
-      _result.optionalFieldMask = optionalFieldMask;
+      $result.optionalFieldMask = optionalFieldMask;
     }
     if (optionalStruct != null) {
-      _result.optionalStruct = optionalStruct;
+      $result.optionalStruct = optionalStruct;
     }
     if (optionalAny != null) {
-      _result.optionalAny = optionalAny;
+      $result.optionalAny = optionalAny;
     }
     if (optionalValue != null) {
-      _result.optionalValue = optionalValue;
+      $result.optionalValue = optionalValue;
     }
     if (optionalNullValue != null) {
-      _result.optionalNullValue = optionalNullValue;
+      $result.optionalNullValue = optionalNullValue;
     }
     if (repeatedDuration != null) {
-      _result.repeatedDuration.addAll(repeatedDuration);
+      $result.repeatedDuration.addAll(repeatedDuration);
     }
     if (repeatedTimestamp != null) {
-      _result.repeatedTimestamp.addAll(repeatedTimestamp);
+      $result.repeatedTimestamp.addAll(repeatedTimestamp);
     }
     if (repeatedFieldmask != null) {
-      _result.repeatedFieldmask.addAll(repeatedFieldmask);
+      $result.repeatedFieldmask.addAll(repeatedFieldmask);
     }
     if (repeatedAny != null) {
-      _result.repeatedAny.addAll(repeatedAny);
+      $result.repeatedAny.addAll(repeatedAny);
     }
     if (repeatedValue != null) {
-      _result.repeatedValue.addAll(repeatedValue);
+      $result.repeatedValue.addAll(repeatedValue);
     }
     if (repeatedListValue != null) {
-      _result.repeatedListValue.addAll(repeatedListValue);
+      $result.repeatedListValue.addAll(repeatedListValue);
     }
     if (repeatedStruct != null) {
-      _result.repeatedStruct.addAll(repeatedStruct);
+      $result.repeatedStruct.addAll(repeatedStruct);
     }
     if (fieldname1 != null) {
-      _result.fieldname1 = fieldname1;
+      $result.fieldname1 = fieldname1;
     }
     if (fieldName2 != null) {
-      _result.fieldName2 = fieldName2;
+      $result.fieldName2 = fieldName2;
     }
     if (fieldName3 != null) {
-      _result.fieldName3 = fieldName3;
+      $result.fieldName3 = fieldName3;
     }
     if (fieldName4 != null) {
-      _result.fieldName4 = fieldName4;
+      $result.fieldName4 = fieldName4;
     }
     if (field0name5 != null) {
-      _result.field0name5 = field0name5;
+      $result.field0name5 = field0name5;
     }
     if (field0Name6 != null) {
-      _result.field0Name6 = field0Name6;
+      $result.field0Name6 = field0Name6;
     }
     if (fieldName7 != null) {
-      _result.fieldName7 = fieldName7;
+      $result.fieldName7 = fieldName7;
     }
     if (fieldName8 != null) {
-      _result.fieldName8 = fieldName8;
+      $result.fieldName8 = fieldName8;
     }
     if (fieldName9 != null) {
-      _result.fieldName9 = fieldName9;
+      $result.fieldName9 = fieldName9;
     }
     if (fieldName10 != null) {
-      _result.fieldName10 = fieldName10;
+      $result.fieldName10 = fieldName10;
     }
     if (fIELDNAME11 != null) {
-      _result.fIELDNAME11 = fIELDNAME11;
+      $result.fIELDNAME11 = fIELDNAME11;
     }
     if (fIELDName12 != null) {
-      _result.fIELDName12 = fIELDName12;
+      $result.fIELDName12 = fIELDName12;
     }
     if (fieldName13 != null) {
-      _result.fieldName13 = fieldName13;
+      $result.fieldName13 = fieldName13;
     }
     if (fieldName14 != null) {
-      _result.fieldName14 = fieldName14;
+      $result.fieldName14 = fieldName14;
     }
     if (fieldName15 != null) {
-      _result.fieldName15 = fieldName15;
+      $result.fieldName15 = fieldName15;
     }
     if (fieldName16 != null) {
-      _result.fieldName16 = fieldName16;
+      $result.fieldName16 = fieldName16;
     }
     if (fieldName17 != null) {
-      _result.fieldName17 = fieldName17;
+      $result.fieldName17 = fieldName17;
     }
     if (fieldName18 != null) {
-      _result.fieldName18 = fieldName18;
+      $result.fieldName18 = fieldName18;
     }
-    return _result;
+    return $result;
   }
+  TestAllTypesProto3._() : super();
   factory TestAllTypesProto3.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory TestAllTypesProto3.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static const $core.Map<$core.int, TestAllTypesProto3_OneofField>
+      _TestAllTypesProto3_OneofFieldByTag = {
+    111: TestAllTypesProto3_OneofField.oneofUint32,
+    112: TestAllTypesProto3_OneofField.oneofNestedMessage,
+    113: TestAllTypesProto3_OneofField.oneofString,
+    114: TestAllTypesProto3_OneofField.oneofBytes,
+    115: TestAllTypesProto3_OneofField.oneofBool,
+    116: TestAllTypesProto3_OneofField.oneofUint64,
+    117: TestAllTypesProto3_OneofField.oneofFloat,
+    118: TestAllTypesProto3_OneofField.oneofDouble,
+    119: TestAllTypesProto3_OneofField.oneofEnum,
+    120: TestAllTypesProto3_OneofField.oneofNullValue,
+    0: TestAllTypesProto3_OneofField.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'TestAllTypesProto3',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'protobuf_test_messages.proto3'),
+      createEmptyInstance: create)
+    ..oo(0, [111, 112, 113, 114, 115, 116, 117, 118, 119, 120])
+    ..a<$core.int>(
+        1, _omitFieldNames ? '' : 'optionalInt32', $pb.PbFieldType.O3)
+    ..aInt64(2, _omitFieldNames ? '' : 'optionalInt64')
+    ..a<$core.int>(
+        3, _omitFieldNames ? '' : 'optionalUint32', $pb.PbFieldType.OU3)
+    ..a<$fixnum.Int64>(
+        4, _omitFieldNames ? '' : 'optionalUint64', $pb.PbFieldType.OU6,
+        defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$core.int>(
+        5, _omitFieldNames ? '' : 'optionalSint32', $pb.PbFieldType.OS3)
+    ..a<$fixnum.Int64>(
+        6, _omitFieldNames ? '' : 'optionalSint64', $pb.PbFieldType.OS6,
+        defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$core.int>(
+        7, _omitFieldNames ? '' : 'optionalFixed32', $pb.PbFieldType.OF3)
+    ..a<$fixnum.Int64>(
+        8, _omitFieldNames ? '' : 'optionalFixed64', $pb.PbFieldType.OF6,
+        defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$core.int>(
+        9, _omitFieldNames ? '' : 'optionalSfixed32', $pb.PbFieldType.OSF3)
+    ..a<$fixnum.Int64>(
+        10, _omitFieldNames ? '' : 'optionalSfixed64', $pb.PbFieldType.OSF6,
+        defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$core.double>(
+        11, _omitFieldNames ? '' : 'optionalFloat', $pb.PbFieldType.OF)
+    ..a<$core.double>(
+        12, _omitFieldNames ? '' : 'optionalDouble', $pb.PbFieldType.OD)
+    ..aOB(13, _omitFieldNames ? '' : 'optionalBool')
+    ..aOS(14, _omitFieldNames ? '' : 'optionalString')
+    ..a<$core.List<$core.int>>(
+        15, _omitFieldNames ? '' : 'optionalBytes', $pb.PbFieldType.OY)
+    ..aOM<TestAllTypesProto3_NestedMessage>(
+        18, _omitFieldNames ? '' : 'optionalNestedMessage',
+        subBuilder: TestAllTypesProto3_NestedMessage.create)
+    ..aOM<ForeignMessage>(19, _omitFieldNames ? '' : 'optionalForeignMessage',
+        subBuilder: ForeignMessage.create)
+    ..e<TestAllTypesProto3_NestedEnum>(
+        21, _omitFieldNames ? '' : 'optionalNestedEnum', $pb.PbFieldType.OE,
+        defaultOrMaker: TestAllTypesProto3_NestedEnum.FOO,
+        valueOf: TestAllTypesProto3_NestedEnum.valueOf,
+        enumValues: TestAllTypesProto3_NestedEnum.values)
+    ..e<ForeignEnum>(
+        22, _omitFieldNames ? '' : 'optionalForeignEnum', $pb.PbFieldType.OE,
+        defaultOrMaker: ForeignEnum.FOREIGN_FOO,
+        valueOf: ForeignEnum.valueOf,
+        enumValues: ForeignEnum.values)
+    ..e<TestAllTypesProto3_AliasedEnum>(
+        23, _omitFieldNames ? '' : 'optionalAliasedEnum', $pb.PbFieldType.OE,
+        defaultOrMaker: TestAllTypesProto3_AliasedEnum.ALIAS_FOO,
+        valueOf: TestAllTypesProto3_AliasedEnum.valueOf,
+        enumValues: TestAllTypesProto3_AliasedEnum.values)
+    ..aOS(24, _omitFieldNames ? '' : 'optionalStringPiece')
+    ..aOS(25, _omitFieldNames ? '' : 'optionalCord')
+    ..aOM<TestAllTypesProto3>(27, _omitFieldNames ? '' : 'recursiveMessage',
+        subBuilder: TestAllTypesProto3.create)
+    ..p<$core.int>(
+        31, _omitFieldNames ? '' : 'repeatedInt32', $pb.PbFieldType.K3)
+    ..p<$fixnum.Int64>(
+        32, _omitFieldNames ? '' : 'repeatedInt64', $pb.PbFieldType.K6)
+    ..p<$core.int>(
+        33, _omitFieldNames ? '' : 'repeatedUint32', $pb.PbFieldType.KU3)
+    ..p<$fixnum.Int64>(
+        34, _omitFieldNames ? '' : 'repeatedUint64', $pb.PbFieldType.KU6)
+    ..p<$core.int>(
+        35, _omitFieldNames ? '' : 'repeatedSint32', $pb.PbFieldType.KS3)
+    ..p<$fixnum.Int64>(
+        36, _omitFieldNames ? '' : 'repeatedSint64', $pb.PbFieldType.KS6)
+    ..p<$core.int>(
+        37, _omitFieldNames ? '' : 'repeatedFixed32', $pb.PbFieldType.KF3)
+    ..p<$fixnum.Int64>(
+        38, _omitFieldNames ? '' : 'repeatedFixed64', $pb.PbFieldType.KF6)
+    ..p<$core.int>(
+        39, _omitFieldNames ? '' : 'repeatedSfixed32', $pb.PbFieldType.KSF3)
+    ..p<$fixnum.Int64>(
+        40, _omitFieldNames ? '' : 'repeatedSfixed64', $pb.PbFieldType.KSF6)
+    ..p<$core.double>(
+        41, _omitFieldNames ? '' : 'repeatedFloat', $pb.PbFieldType.KF)
+    ..p<$core.double>(
+        42, _omitFieldNames ? '' : 'repeatedDouble', $pb.PbFieldType.KD)
+    ..p<$core.bool>(
+        43, _omitFieldNames ? '' : 'repeatedBool', $pb.PbFieldType.KB)
+    ..pPS(44, _omitFieldNames ? '' : 'repeatedString')
+    ..p<$core.List<$core.int>>(
+        45, _omitFieldNames ? '' : 'repeatedBytes', $pb.PbFieldType.PY)
+    ..pc<TestAllTypesProto3_NestedMessage>(
+        48, _omitFieldNames ? '' : 'repeatedNestedMessage', $pb.PbFieldType.PM,
+        subBuilder: TestAllTypesProto3_NestedMessage.create)
+    ..pc<ForeignMessage>(
+        49, _omitFieldNames ? '' : 'repeatedForeignMessage', $pb.PbFieldType.PM,
+        subBuilder: ForeignMessage.create)
+    ..pc<TestAllTypesProto3_NestedEnum>(
+        51, _omitFieldNames ? '' : 'repeatedNestedEnum', $pb.PbFieldType.KE,
+        valueOf: TestAllTypesProto3_NestedEnum.valueOf,
+        enumValues: TestAllTypesProto3_NestedEnum.values,
+        defaultEnumValue: TestAllTypesProto3_NestedEnum.FOO)
+    ..pc<ForeignEnum>(
+        52, _omitFieldNames ? '' : 'repeatedForeignEnum', $pb.PbFieldType.KE,
+        valueOf: ForeignEnum.valueOf,
+        enumValues: ForeignEnum.values,
+        defaultEnumValue: ForeignEnum.FOREIGN_FOO)
+    ..pPS(54, _omitFieldNames ? '' : 'repeatedStringPiece')
+    ..pPS(55, _omitFieldNames ? '' : 'repeatedCord')
+    ..m<$core.int, $core.int>(56, _omitFieldNames ? '' : 'mapInt32Int32',
+        entryClassName: 'TestAllTypesProto3.MapInt32Int32Entry',
+        keyFieldType: $pb.PbFieldType.O3,
+        valueFieldType: $pb.PbFieldType.O3,
+        packageName: const $pb.PackageName('protobuf_test_messages.proto3'))
+    ..m<$fixnum.Int64, $fixnum.Int64>(
+        57, _omitFieldNames ? '' : 'mapInt64Int64',
+        entryClassName: 'TestAllTypesProto3.MapInt64Int64Entry',
+        keyFieldType: $pb.PbFieldType.O6,
+        valueFieldType: $pb.PbFieldType.O6,
+        packageName: const $pb.PackageName('protobuf_test_messages.proto3'))
+    ..m<$core.int, $core.int>(58, _omitFieldNames ? '' : 'mapUint32Uint32',
+        entryClassName: 'TestAllTypesProto3.MapUint32Uint32Entry',
+        keyFieldType: $pb.PbFieldType.OU3,
+        valueFieldType: $pb.PbFieldType.OU3,
+        packageName: const $pb.PackageName('protobuf_test_messages.proto3'))
+    ..m<$fixnum.Int64, $fixnum.Int64>(
+        59, _omitFieldNames ? '' : 'mapUint64Uint64',
+        entryClassName: 'TestAllTypesProto3.MapUint64Uint64Entry',
+        keyFieldType: $pb.PbFieldType.OU6,
+        valueFieldType: $pb.PbFieldType.OU6,
+        packageName: const $pb.PackageName('protobuf_test_messages.proto3'))
+    ..m<$core.int, $core.int>(60, _omitFieldNames ? '' : 'mapSint32Sint32',
+        entryClassName: 'TestAllTypesProto3.MapSint32Sint32Entry',
+        keyFieldType: $pb.PbFieldType.OS3,
+        valueFieldType: $pb.PbFieldType.OS3,
+        packageName: const $pb.PackageName('protobuf_test_messages.proto3'))
+    ..m<$fixnum.Int64, $fixnum.Int64>(
+        61, _omitFieldNames ? '' : 'mapSint64Sint64',
+        entryClassName: 'TestAllTypesProto3.MapSint64Sint64Entry',
+        keyFieldType: $pb.PbFieldType.OS6,
+        valueFieldType: $pb.PbFieldType.OS6,
+        packageName: const $pb.PackageName('protobuf_test_messages.proto3'))
+    ..m<$core.int, $core.int>(62, _omitFieldNames ? '' : 'mapFixed32Fixed32',
+        entryClassName: 'TestAllTypesProto3.MapFixed32Fixed32Entry',
+        keyFieldType: $pb.PbFieldType.OF3,
+        valueFieldType: $pb.PbFieldType.OF3,
+        packageName: const $pb.PackageName('protobuf_test_messages.proto3'))
+    ..m<$fixnum.Int64, $fixnum.Int64>(
+        63, _omitFieldNames ? '' : 'mapFixed64Fixed64',
+        entryClassName: 'TestAllTypesProto3.MapFixed64Fixed64Entry',
+        keyFieldType: $pb.PbFieldType.OF6,
+        valueFieldType: $pb.PbFieldType.OF6,
+        packageName: const $pb.PackageName('protobuf_test_messages.proto3'))
+    ..m<$core.int, $core.int>(64, _omitFieldNames ? '' : 'mapSfixed32Sfixed32',
+        entryClassName: 'TestAllTypesProto3.MapSfixed32Sfixed32Entry',
+        keyFieldType: $pb.PbFieldType.OSF3,
+        valueFieldType: $pb.PbFieldType.OSF3,
+        packageName: const $pb.PackageName('protobuf_test_messages.proto3'))
+    ..m<$fixnum.Int64, $fixnum.Int64>(
+        65, _omitFieldNames ? '' : 'mapSfixed64Sfixed64',
+        entryClassName: 'TestAllTypesProto3.MapSfixed64Sfixed64Entry',
+        keyFieldType: $pb.PbFieldType.OSF6,
+        valueFieldType: $pb.PbFieldType.OSF6,
+        packageName: const $pb.PackageName('protobuf_test_messages.proto3'))
+    ..m<$core.int, $core.double>(66, _omitFieldNames ? '' : 'mapInt32Float',
+        entryClassName: 'TestAllTypesProto3.MapInt32FloatEntry',
+        keyFieldType: $pb.PbFieldType.O3,
+        valueFieldType: $pb.PbFieldType.OF,
+        packageName: const $pb.PackageName('protobuf_test_messages.proto3'))
+    ..m<$core.int, $core.double>(67, _omitFieldNames ? '' : 'mapInt32Double',
+        entryClassName: 'TestAllTypesProto3.MapInt32DoubleEntry',
+        keyFieldType: $pb.PbFieldType.O3,
+        valueFieldType: $pb.PbFieldType.OD,
+        packageName: const $pb.PackageName('protobuf_test_messages.proto3'))
+    ..m<$core.bool, $core.bool>(68, _omitFieldNames ? '' : 'mapBoolBool',
+        entryClassName: 'TestAllTypesProto3.MapBoolBoolEntry',
+        keyFieldType: $pb.PbFieldType.OB,
+        valueFieldType: $pb.PbFieldType.OB,
+        packageName: const $pb.PackageName('protobuf_test_messages.proto3'))
+    ..m<$core.String, $core.String>(
+        69, _omitFieldNames ? '' : 'mapStringString',
+        entryClassName: 'TestAllTypesProto3.MapStringStringEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OS,
+        packageName: const $pb.PackageName('protobuf_test_messages.proto3'))
+    ..m<$core.String, $core.List<$core.int>>(
+        70, _omitFieldNames ? '' : 'mapStringBytes',
+        entryClassName: 'TestAllTypesProto3.MapStringBytesEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OY,
+        packageName: const $pb.PackageName('protobuf_test_messages.proto3'))
+    ..m<$core.String, TestAllTypesProto3_NestedMessage>(
+        71, _omitFieldNames ? '' : 'mapStringNestedMessage',
+        entryClassName: 'TestAllTypesProto3.MapStringNestedMessageEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OM,
+        valueCreator: TestAllTypesProto3_NestedMessage.create,
+        valueDefaultOrMaker: TestAllTypesProto3_NestedMessage.getDefault,
+        packageName: const $pb.PackageName('protobuf_test_messages.proto3'))
+    ..m<$core.String, ForeignMessage>(
+        72, _omitFieldNames ? '' : 'mapStringForeignMessage',
+        entryClassName: 'TestAllTypesProto3.MapStringForeignMessageEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OM,
+        valueCreator: ForeignMessage.create,
+        valueDefaultOrMaker: ForeignMessage.getDefault,
+        packageName: const $pb.PackageName('protobuf_test_messages.proto3'))
+    ..m<$core.String, TestAllTypesProto3_NestedEnum>(
+        73, _omitFieldNames ? '' : 'mapStringNestedEnum',
+        entryClassName: 'TestAllTypesProto3.MapStringNestedEnumEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OE,
+        valueOf: TestAllTypesProto3_NestedEnum.valueOf,
+        enumValues: TestAllTypesProto3_NestedEnum.values,
+        valueDefaultOrMaker: TestAllTypesProto3_NestedEnum.FOO,
+        defaultEnumValue: TestAllTypesProto3_NestedEnum.FOO,
+        packageName: const $pb.PackageName('protobuf_test_messages.proto3'))
+    ..m<$core.String, ForeignEnum>(
+        74, _omitFieldNames ? '' : 'mapStringForeignEnum',
+        entryClassName: 'TestAllTypesProto3.MapStringForeignEnumEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OE,
+        valueOf: ForeignEnum.valueOf,
+        enumValues: ForeignEnum.values,
+        valueDefaultOrMaker: ForeignEnum.FOREIGN_FOO,
+        defaultEnumValue: ForeignEnum.FOREIGN_FOO,
+        packageName: const $pb.PackageName('protobuf_test_messages.proto3'))
+    ..p<$core.int>(75, _omitFieldNames ? '' : 'packedInt32', $pb.PbFieldType.K3)
+    ..p<$fixnum.Int64>(
+        76, _omitFieldNames ? '' : 'packedInt64', $pb.PbFieldType.K6)
+    ..p<$core.int>(
+        77, _omitFieldNames ? '' : 'packedUint32', $pb.PbFieldType.KU3)
+    ..p<$fixnum.Int64>(
+        78, _omitFieldNames ? '' : 'packedUint64', $pb.PbFieldType.KU6)
+    ..p<$core.int>(
+        79, _omitFieldNames ? '' : 'packedSint32', $pb.PbFieldType.KS3)
+    ..p<$fixnum.Int64>(
+        80, _omitFieldNames ? '' : 'packedSint64', $pb.PbFieldType.KS6)
+    ..p<$core.int>(
+        81, _omitFieldNames ? '' : 'packedFixed32', $pb.PbFieldType.KF3)
+    ..p<$fixnum.Int64>(
+        82, _omitFieldNames ? '' : 'packedFixed64', $pb.PbFieldType.KF6)
+    ..p<$core.int>(
+        83, _omitFieldNames ? '' : 'packedSfixed32', $pb.PbFieldType.KSF3)
+    ..p<$fixnum.Int64>(
+        84, _omitFieldNames ? '' : 'packedSfixed64', $pb.PbFieldType.KSF6)
+    ..p<$core.double>(
+        85, _omitFieldNames ? '' : 'packedFloat', $pb.PbFieldType.KF)
+    ..p<$core.double>(
+        86, _omitFieldNames ? '' : 'packedDouble', $pb.PbFieldType.KD)
+    ..p<$core.bool>(87, _omitFieldNames ? '' : 'packedBool', $pb.PbFieldType.KB)
+    ..pc<TestAllTypesProto3_NestedEnum>(
+        88, _omitFieldNames ? '' : 'packedNestedEnum', $pb.PbFieldType.KE,
+        valueOf: TestAllTypesProto3_NestedEnum.valueOf,
+        enumValues: TestAllTypesProto3_NestedEnum.values,
+        defaultEnumValue: TestAllTypesProto3_NestedEnum.FOO)
+    ..p<$core.int>(
+        89, _omitFieldNames ? '' : 'unpackedInt32', $pb.PbFieldType.P3)
+    ..p<$fixnum.Int64>(
+        90, _omitFieldNames ? '' : 'unpackedInt64', $pb.PbFieldType.P6)
+    ..p<$core.int>(
+        91, _omitFieldNames ? '' : 'unpackedUint32', $pb.PbFieldType.PU3)
+    ..p<$fixnum.Int64>(
+        92, _omitFieldNames ? '' : 'unpackedUint64', $pb.PbFieldType.PU6)
+    ..p<$core.int>(
+        93, _omitFieldNames ? '' : 'unpackedSint32', $pb.PbFieldType.PS3)
+    ..p<$fixnum.Int64>(
+        94, _omitFieldNames ? '' : 'unpackedSint64', $pb.PbFieldType.PS6)
+    ..p<$core.int>(
+        95, _omitFieldNames ? '' : 'unpackedFixed32', $pb.PbFieldType.PF3)
+    ..p<$fixnum.Int64>(
+        96, _omitFieldNames ? '' : 'unpackedFixed64', $pb.PbFieldType.PF6)
+    ..p<$core.int>(
+        97, _omitFieldNames ? '' : 'unpackedSfixed32', $pb.PbFieldType.PSF3)
+    ..p<$fixnum.Int64>(
+        98, _omitFieldNames ? '' : 'unpackedSfixed64', $pb.PbFieldType.PSF6)
+    ..p<$core.double>(
+        99, _omitFieldNames ? '' : 'unpackedFloat', $pb.PbFieldType.PF)
+    ..p<$core.double>(
+        100, _omitFieldNames ? '' : 'unpackedDouble', $pb.PbFieldType.PD)
+    ..p<$core.bool>(
+        101, _omitFieldNames ? '' : 'unpackedBool', $pb.PbFieldType.PB)
+    ..pc<TestAllTypesProto3_NestedEnum>(
+        102, _omitFieldNames ? '' : 'unpackedNestedEnum', $pb.PbFieldType.PE,
+        valueOf: TestAllTypesProto3_NestedEnum.valueOf,
+        enumValues: TestAllTypesProto3_NestedEnum.values,
+        defaultEnumValue: TestAllTypesProto3_NestedEnum.FOO)
+    ..a<$core.int>(
+        111, _omitFieldNames ? '' : 'oneofUint32', $pb.PbFieldType.OU3)
+    ..aOM<TestAllTypesProto3_NestedMessage>(
+        112, _omitFieldNames ? '' : 'oneofNestedMessage',
+        subBuilder: TestAllTypesProto3_NestedMessage.create)
+    ..aOS(113, _omitFieldNames ? '' : 'oneofString')
+    ..a<$core.List<$core.int>>(
+        114, _omitFieldNames ? '' : 'oneofBytes', $pb.PbFieldType.OY)
+    ..aOB(115, _omitFieldNames ? '' : 'oneofBool')
+    ..a<$fixnum.Int64>(
+        116, _omitFieldNames ? '' : 'oneofUint64', $pb.PbFieldType.OU6,
+        defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$core.double>(
+        117, _omitFieldNames ? '' : 'oneofFloat', $pb.PbFieldType.OF)
+    ..a<$core.double>(
+        118, _omitFieldNames ? '' : 'oneofDouble', $pb.PbFieldType.OD)
+    ..e<TestAllTypesProto3_NestedEnum>(
+        119, _omitFieldNames ? '' : 'oneofEnum', $pb.PbFieldType.OE,
+        defaultOrMaker: TestAllTypesProto3_NestedEnum.FOO,
+        valueOf: TestAllTypesProto3_NestedEnum.valueOf,
+        enumValues: TestAllTypesProto3_NestedEnum.values)
+    ..e<$48.NullValue>(
+        120, _omitFieldNames ? '' : 'oneofNullValue', $pb.PbFieldType.OE,
+        defaultOrMaker: $48.NullValue.NULL_VALUE,
+        valueOf: $48.NullValue.valueOf,
+        enumValues: $48.NullValue.values)
+    ..aOM<$73.BoolValue>(201, _omitFieldNames ? '' : 'optionalBoolWrapper',
+        subBuilder: $73.BoolValue.create)
+    ..aOM<$73.Int32Value>(202, _omitFieldNames ? '' : 'optionalInt32Wrapper',
+        subBuilder: $73.Int32Value.create)
+    ..aOM<$73.Int64Value>(203, _omitFieldNames ? '' : 'optionalInt64Wrapper',
+        subBuilder: $73.Int64Value.create)
+    ..aOM<$73.UInt32Value>(204, _omitFieldNames ? '' : 'optionalUint32Wrapper',
+        subBuilder: $73.UInt32Value.create)
+    ..aOM<$73.UInt64Value>(205, _omitFieldNames ? '' : 'optionalUint64Wrapper',
+        subBuilder: $73.UInt64Value.create)
+    ..aOM<$73.FloatValue>(206, _omitFieldNames ? '' : 'optionalFloatWrapper',
+        subBuilder: $73.FloatValue.create)
+    ..aOM<$73.DoubleValue>(207, _omitFieldNames ? '' : 'optionalDoubleWrapper',
+        subBuilder: $73.DoubleValue.create)
+    ..aOM<$73.StringValue>(208, _omitFieldNames ? '' : 'optionalStringWrapper',
+        subBuilder: $73.StringValue.create)
+    ..aOM<$73.BytesValue>(209, _omitFieldNames ? '' : 'optionalBytesWrapper',
+        subBuilder: $73.BytesValue.create)
+    ..pc<$73.BoolValue>(
+        211, _omitFieldNames ? '' : 'repeatedBoolWrapper', $pb.PbFieldType.PM,
+        subBuilder: $73.BoolValue.create)
+    ..pc<$73.Int32Value>(
+        212, _omitFieldNames ? '' : 'repeatedInt32Wrapper', $pb.PbFieldType.PM,
+        subBuilder: $73.Int32Value.create)
+    ..pc<$73.Int64Value>(
+        213, _omitFieldNames ? '' : 'repeatedInt64Wrapper', $pb.PbFieldType.PM,
+        subBuilder: $73.Int64Value.create)
+    ..pc<$73.UInt32Value>(
+        214, _omitFieldNames ? '' : 'repeatedUint32Wrapper', $pb.PbFieldType.PM,
+        subBuilder: $73.UInt32Value.create)
+    ..pc<$73.UInt64Value>(
+        215, _omitFieldNames ? '' : 'repeatedUint64Wrapper', $pb.PbFieldType.PM,
+        subBuilder: $73.UInt64Value.create)
+    ..pc<$73.FloatValue>(
+        216, _omitFieldNames ? '' : 'repeatedFloatWrapper', $pb.PbFieldType.PM,
+        subBuilder: $73.FloatValue.create)
+    ..pc<$73.DoubleValue>(
+        217, _omitFieldNames ? '' : 'repeatedDoubleWrapper', $pb.PbFieldType.PM,
+        subBuilder: $73.DoubleValue.create)
+    ..pc<$73.StringValue>(
+        218, _omitFieldNames ? '' : 'repeatedStringWrapper', $pb.PbFieldType.PM,
+        subBuilder: $73.StringValue.create)
+    ..pc<$73.BytesValue>(
+        219, _omitFieldNames ? '' : 'repeatedBytesWrapper', $pb.PbFieldType.PM,
+        subBuilder: $73.BytesValue.create)
+    ..aOM<$51.Duration>(301, _omitFieldNames ? '' : 'optionalDuration',
+        subBuilder: $51.Duration.create)
+    ..aOM<$50.Timestamp>(302, _omitFieldNames ? '' : 'optionalTimestamp',
+        subBuilder: $50.Timestamp.create)
+    ..aOM<$58.FieldMask>(303, _omitFieldNames ? '' : 'optionalFieldMask',
+        subBuilder: $58.FieldMask.create)
+    ..aOM<$48.Struct>(304, _omitFieldNames ? '' : 'optionalStruct',
+        subBuilder: $48.Struct.create)
+    ..aOM<$49.Any>(305, _omitFieldNames ? '' : 'optionalAny',
+        subBuilder: $49.Any.create)
+    ..aOM<$48.Value>(306, _omitFieldNames ? '' : 'optionalValue',
+        subBuilder: $48.Value.create)
+    ..e<$48.NullValue>(
+        307, _omitFieldNames ? '' : 'optionalNullValue', $pb.PbFieldType.OE,
+        defaultOrMaker: $48.NullValue.NULL_VALUE,
+        valueOf: $48.NullValue.valueOf,
+        enumValues: $48.NullValue.values)
+    ..pc<$51.Duration>(
+        311, _omitFieldNames ? '' : 'repeatedDuration', $pb.PbFieldType.PM,
+        subBuilder: $51.Duration.create)
+    ..pc<$50.Timestamp>(
+        312, _omitFieldNames ? '' : 'repeatedTimestamp', $pb.PbFieldType.PM,
+        subBuilder: $50.Timestamp.create)
+    ..pc<$58.FieldMask>(
+        313, _omitFieldNames ? '' : 'repeatedFieldmask', $pb.PbFieldType.PM,
+        subBuilder: $58.FieldMask.create)
+    ..pc<$49.Any>(315, _omitFieldNames ? '' : 'repeatedAny', $pb.PbFieldType.PM,
+        subBuilder: $49.Any.create)
+    ..pc<$48.Value>(
+        316, _omitFieldNames ? '' : 'repeatedValue', $pb.PbFieldType.PM,
+        subBuilder: $48.Value.create)
+    ..pc<$48.ListValue>(
+        317, _omitFieldNames ? '' : 'repeatedListValue', $pb.PbFieldType.PM,
+        subBuilder: $48.ListValue.create)
+    ..pc<$48.Struct>(
+        324, _omitFieldNames ? '' : 'repeatedStruct', $pb.PbFieldType.PM,
+        subBuilder: $48.Struct.create)
+    ..a<$core.int>(401, _omitFieldNames ? '' : 'fieldname1', $pb.PbFieldType.O3)
+    ..a<$core.int>(402, _omitFieldNames ? '' : 'fieldName2', $pb.PbFieldType.O3)
+    ..a<$core.int>(403, _omitFieldNames ? '' : 'FieldName3', $pb.PbFieldType.O3)
+    ..a<$core.int>(404, _omitFieldNames ? '' : 'fieldName4', $pb.PbFieldType.O3,
+        protoName: 'field__name4_')
+    ..a<$core.int>(
+        405, _omitFieldNames ? '' : 'field0name5', $pb.PbFieldType.O3)
+    ..a<$core.int>(
+        406, _omitFieldNames ? '' : 'field0Name6', $pb.PbFieldType.O3,
+        protoName: 'field_0_name6')
+    ..a<$core.int>(407, _omitFieldNames ? '' : 'fieldName7', $pb.PbFieldType.O3,
+        protoName: 'fieldName7')
+    ..a<$core.int>(408, _omitFieldNames ? '' : 'FieldName8', $pb.PbFieldType.O3,
+        protoName: 'FieldName8')
+    ..a<$core.int>(409, _omitFieldNames ? '' : 'fieldName9', $pb.PbFieldType.O3,
+        protoName: 'field_Name9')
+    ..a<$core.int>(
+        410, _omitFieldNames ? '' : 'FieldName10', $pb.PbFieldType.O3,
+        protoName: 'Field_Name10')
+    ..a<$core.int>(
+        411, _omitFieldNames ? '' : 'FIELDNAME11', $pb.PbFieldType.O3,
+        protoName: 'FIELD_NAME11')
+    ..a<$core.int>(
+        412, _omitFieldNames ? '' : 'FIELDName12', $pb.PbFieldType.O3,
+        protoName: 'FIELD_name12')
+    ..a<$core.int>(
+        413, _omitFieldNames ? '' : 'FieldName13', $pb.PbFieldType.O3,
+        protoName: '__field_name13')
+    ..a<$core.int>(
+        414, _omitFieldNames ? '' : 'FieldName14', $pb.PbFieldType.O3,
+        protoName: '__Field_name14')
+    ..a<$core.int>(
+        415, _omitFieldNames ? '' : 'fieldName15', $pb.PbFieldType.O3,
+        protoName: 'field__name15')
+    ..a<$core.int>(
+        416, _omitFieldNames ? '' : 'fieldName16', $pb.PbFieldType.O3,
+        protoName: 'field__Name16')
+    ..a<$core.int>(
+        417, _omitFieldNames ? '' : 'fieldName17', $pb.PbFieldType.O3,
+        protoName: 'field_name17__')
+    ..a<$core.int>(
+        418, _omitFieldNames ? '' : 'FieldName18', $pb.PbFieldType.O3,
+        protoName: 'Field_name18__')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -950,8 +1214,10 @@ class TestAllTypesProto3 extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   TestAllTypesProto3 copyWith(void Function(TestAllTypesProto3) updates) =>
       super.copyWith((message) => updates(message as TestAllTypesProto3))
-          as TestAllTypesProto3; // ignore: deprecated_member_use
+          as TestAllTypesProto3;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static TestAllTypesProto3 create() => TestAllTypesProto3._();
   TestAllTypesProto3 createEmptyInstance() => create();
@@ -966,6 +1232,7 @@ class TestAllTypesProto3 extends $pb.GeneratedMessage {
       _TestAllTypesProto3_OneofFieldByTag[$_whichOneof(0)]!;
   void clearOneofField() => clearField($_whichOneof(0));
 
+  /// Singular
   @$pb.TagNumber(1)
   $core.int get optionalInt32 => $_getIZ(0);
   @$pb.TagNumber(1)
@@ -1249,6 +1516,7 @@ class TestAllTypesProto3 extends $pb.GeneratedMessage {
   @$pb.TagNumber(27)
   TestAllTypesProto3 ensureRecursiveMessage() => $_ensure(22);
 
+  /// Repeated
   @$pb.TagNumber(31)
   $core.List<$core.int> get repeatedInt32 => $_getList(23);
 
@@ -1314,6 +1582,7 @@ class TestAllTypesProto3 extends $pb.GeneratedMessage {
   @$pb.TagNumber(55)
   $core.List<$core.String> get repeatedCord => $_getList(43);
 
+  /// Map
   @$pb.TagNumber(56)
   $core.Map<$core.int, $core.int> get mapInt32Int32 => $_getMap(44);
 
@@ -1376,6 +1645,7 @@ class TestAllTypesProto3 extends $pb.GeneratedMessage {
   @$pb.TagNumber(74)
   $core.Map<$core.String, ForeignEnum> get mapStringForeignEnum => $_getMap(62);
 
+  /// Packed
   @$pb.TagNumber(75)
   $core.List<$core.int> get packedInt32 => $_getList(63);
 
@@ -1419,6 +1689,7 @@ class TestAllTypesProto3 extends $pb.GeneratedMessage {
   $core.List<TestAllTypesProto3_NestedEnum> get packedNestedEnum =>
       $_getList(76);
 
+  /// Unpacked
   @$pb.TagNumber(89)
   $core.List<$core.int> get unpackedInt32 => $_getList(77);
 
@@ -1573,9 +1844,9 @@ class TestAllTypesProto3 extends $pb.GeneratedMessage {
   void clearOneofEnum() => clearField(119);
 
   @$pb.TagNumber(120)
-  $4.NullValue get oneofNullValue => $_getN(100);
+  $48.NullValue get oneofNullValue => $_getN(100);
   @$pb.TagNumber(120)
-  set oneofNullValue($4.NullValue v) {
+  set oneofNullValue($48.NullValue v) {
     setField(120, v);
   }
 
@@ -1584,10 +1855,11 @@ class TestAllTypesProto3 extends $pb.GeneratedMessage {
   @$pb.TagNumber(120)
   void clearOneofNullValue() => clearField(120);
 
+  /// Well-known types
   @$pb.TagNumber(201)
-  $0.BoolValue get optionalBoolWrapper => $_getN(101);
+  $73.BoolValue get optionalBoolWrapper => $_getN(101);
   @$pb.TagNumber(201)
-  set optionalBoolWrapper($0.BoolValue v) {
+  set optionalBoolWrapper($73.BoolValue v) {
     setField(201, v);
   }
 
@@ -1596,12 +1868,12 @@ class TestAllTypesProto3 extends $pb.GeneratedMessage {
   @$pb.TagNumber(201)
   void clearOptionalBoolWrapper() => clearField(201);
   @$pb.TagNumber(201)
-  $0.BoolValue ensureOptionalBoolWrapper() => $_ensure(101);
+  $73.BoolValue ensureOptionalBoolWrapper() => $_ensure(101);
 
   @$pb.TagNumber(202)
-  $0.Int32Value get optionalInt32Wrapper => $_getN(102);
+  $73.Int32Value get optionalInt32Wrapper => $_getN(102);
   @$pb.TagNumber(202)
-  set optionalInt32Wrapper($0.Int32Value v) {
+  set optionalInt32Wrapper($73.Int32Value v) {
     setField(202, v);
   }
 
@@ -1610,12 +1882,12 @@ class TestAllTypesProto3 extends $pb.GeneratedMessage {
   @$pb.TagNumber(202)
   void clearOptionalInt32Wrapper() => clearField(202);
   @$pb.TagNumber(202)
-  $0.Int32Value ensureOptionalInt32Wrapper() => $_ensure(102);
+  $73.Int32Value ensureOptionalInt32Wrapper() => $_ensure(102);
 
   @$pb.TagNumber(203)
-  $0.Int64Value get optionalInt64Wrapper => $_getN(103);
+  $73.Int64Value get optionalInt64Wrapper => $_getN(103);
   @$pb.TagNumber(203)
-  set optionalInt64Wrapper($0.Int64Value v) {
+  set optionalInt64Wrapper($73.Int64Value v) {
     setField(203, v);
   }
 
@@ -1624,12 +1896,12 @@ class TestAllTypesProto3 extends $pb.GeneratedMessage {
   @$pb.TagNumber(203)
   void clearOptionalInt64Wrapper() => clearField(203);
   @$pb.TagNumber(203)
-  $0.Int64Value ensureOptionalInt64Wrapper() => $_ensure(103);
+  $73.Int64Value ensureOptionalInt64Wrapper() => $_ensure(103);
 
   @$pb.TagNumber(204)
-  $0.UInt32Value get optionalUint32Wrapper => $_getN(104);
+  $73.UInt32Value get optionalUint32Wrapper => $_getN(104);
   @$pb.TagNumber(204)
-  set optionalUint32Wrapper($0.UInt32Value v) {
+  set optionalUint32Wrapper($73.UInt32Value v) {
     setField(204, v);
   }
 
@@ -1638,12 +1910,12 @@ class TestAllTypesProto3 extends $pb.GeneratedMessage {
   @$pb.TagNumber(204)
   void clearOptionalUint32Wrapper() => clearField(204);
   @$pb.TagNumber(204)
-  $0.UInt32Value ensureOptionalUint32Wrapper() => $_ensure(104);
+  $73.UInt32Value ensureOptionalUint32Wrapper() => $_ensure(104);
 
   @$pb.TagNumber(205)
-  $0.UInt64Value get optionalUint64Wrapper => $_getN(105);
+  $73.UInt64Value get optionalUint64Wrapper => $_getN(105);
   @$pb.TagNumber(205)
-  set optionalUint64Wrapper($0.UInt64Value v) {
+  set optionalUint64Wrapper($73.UInt64Value v) {
     setField(205, v);
   }
 
@@ -1652,12 +1924,12 @@ class TestAllTypesProto3 extends $pb.GeneratedMessage {
   @$pb.TagNumber(205)
   void clearOptionalUint64Wrapper() => clearField(205);
   @$pb.TagNumber(205)
-  $0.UInt64Value ensureOptionalUint64Wrapper() => $_ensure(105);
+  $73.UInt64Value ensureOptionalUint64Wrapper() => $_ensure(105);
 
   @$pb.TagNumber(206)
-  $0.FloatValue get optionalFloatWrapper => $_getN(106);
+  $73.FloatValue get optionalFloatWrapper => $_getN(106);
   @$pb.TagNumber(206)
-  set optionalFloatWrapper($0.FloatValue v) {
+  set optionalFloatWrapper($73.FloatValue v) {
     setField(206, v);
   }
 
@@ -1666,12 +1938,12 @@ class TestAllTypesProto3 extends $pb.GeneratedMessage {
   @$pb.TagNumber(206)
   void clearOptionalFloatWrapper() => clearField(206);
   @$pb.TagNumber(206)
-  $0.FloatValue ensureOptionalFloatWrapper() => $_ensure(106);
+  $73.FloatValue ensureOptionalFloatWrapper() => $_ensure(106);
 
   @$pb.TagNumber(207)
-  $0.DoubleValue get optionalDoubleWrapper => $_getN(107);
+  $73.DoubleValue get optionalDoubleWrapper => $_getN(107);
   @$pb.TagNumber(207)
-  set optionalDoubleWrapper($0.DoubleValue v) {
+  set optionalDoubleWrapper($73.DoubleValue v) {
     setField(207, v);
   }
 
@@ -1680,12 +1952,12 @@ class TestAllTypesProto3 extends $pb.GeneratedMessage {
   @$pb.TagNumber(207)
   void clearOptionalDoubleWrapper() => clearField(207);
   @$pb.TagNumber(207)
-  $0.DoubleValue ensureOptionalDoubleWrapper() => $_ensure(107);
+  $73.DoubleValue ensureOptionalDoubleWrapper() => $_ensure(107);
 
   @$pb.TagNumber(208)
-  $0.StringValue get optionalStringWrapper => $_getN(108);
+  $73.StringValue get optionalStringWrapper => $_getN(108);
   @$pb.TagNumber(208)
-  set optionalStringWrapper($0.StringValue v) {
+  set optionalStringWrapper($73.StringValue v) {
     setField(208, v);
   }
 
@@ -1694,12 +1966,12 @@ class TestAllTypesProto3 extends $pb.GeneratedMessage {
   @$pb.TagNumber(208)
   void clearOptionalStringWrapper() => clearField(208);
   @$pb.TagNumber(208)
-  $0.StringValue ensureOptionalStringWrapper() => $_ensure(108);
+  $73.StringValue ensureOptionalStringWrapper() => $_ensure(108);
 
   @$pb.TagNumber(209)
-  $0.BytesValue get optionalBytesWrapper => $_getN(109);
+  $73.BytesValue get optionalBytesWrapper => $_getN(109);
   @$pb.TagNumber(209)
-  set optionalBytesWrapper($0.BytesValue v) {
+  set optionalBytesWrapper($73.BytesValue v) {
     setField(209, v);
   }
 
@@ -1708,39 +1980,39 @@ class TestAllTypesProto3 extends $pb.GeneratedMessage {
   @$pb.TagNumber(209)
   void clearOptionalBytesWrapper() => clearField(209);
   @$pb.TagNumber(209)
-  $0.BytesValue ensureOptionalBytesWrapper() => $_ensure(109);
+  $73.BytesValue ensureOptionalBytesWrapper() => $_ensure(109);
 
   @$pb.TagNumber(211)
-  $core.List<$0.BoolValue> get repeatedBoolWrapper => $_getList(110);
+  $core.List<$73.BoolValue> get repeatedBoolWrapper => $_getList(110);
 
   @$pb.TagNumber(212)
-  $core.List<$0.Int32Value> get repeatedInt32Wrapper => $_getList(111);
+  $core.List<$73.Int32Value> get repeatedInt32Wrapper => $_getList(111);
 
   @$pb.TagNumber(213)
-  $core.List<$0.Int64Value> get repeatedInt64Wrapper => $_getList(112);
+  $core.List<$73.Int64Value> get repeatedInt64Wrapper => $_getList(112);
 
   @$pb.TagNumber(214)
-  $core.List<$0.UInt32Value> get repeatedUint32Wrapper => $_getList(113);
+  $core.List<$73.UInt32Value> get repeatedUint32Wrapper => $_getList(113);
 
   @$pb.TagNumber(215)
-  $core.List<$0.UInt64Value> get repeatedUint64Wrapper => $_getList(114);
+  $core.List<$73.UInt64Value> get repeatedUint64Wrapper => $_getList(114);
 
   @$pb.TagNumber(216)
-  $core.List<$0.FloatValue> get repeatedFloatWrapper => $_getList(115);
+  $core.List<$73.FloatValue> get repeatedFloatWrapper => $_getList(115);
 
   @$pb.TagNumber(217)
-  $core.List<$0.DoubleValue> get repeatedDoubleWrapper => $_getList(116);
+  $core.List<$73.DoubleValue> get repeatedDoubleWrapper => $_getList(116);
 
   @$pb.TagNumber(218)
-  $core.List<$0.StringValue> get repeatedStringWrapper => $_getList(117);
+  $core.List<$73.StringValue> get repeatedStringWrapper => $_getList(117);
 
   @$pb.TagNumber(219)
-  $core.List<$0.BytesValue> get repeatedBytesWrapper => $_getList(118);
+  $core.List<$73.BytesValue> get repeatedBytesWrapper => $_getList(118);
 
   @$pb.TagNumber(301)
-  $1.Duration get optionalDuration => $_getN(119);
+  $51.Duration get optionalDuration => $_getN(119);
   @$pb.TagNumber(301)
-  set optionalDuration($1.Duration v) {
+  set optionalDuration($51.Duration v) {
     setField(301, v);
   }
 
@@ -1749,12 +2021,12 @@ class TestAllTypesProto3 extends $pb.GeneratedMessage {
   @$pb.TagNumber(301)
   void clearOptionalDuration() => clearField(301);
   @$pb.TagNumber(301)
-  $1.Duration ensureOptionalDuration() => $_ensure(119);
+  $51.Duration ensureOptionalDuration() => $_ensure(119);
 
   @$pb.TagNumber(302)
-  $2.Timestamp get optionalTimestamp => $_getN(120);
+  $50.Timestamp get optionalTimestamp => $_getN(120);
   @$pb.TagNumber(302)
-  set optionalTimestamp($2.Timestamp v) {
+  set optionalTimestamp($50.Timestamp v) {
     setField(302, v);
   }
 
@@ -1763,12 +2035,12 @@ class TestAllTypesProto3 extends $pb.GeneratedMessage {
   @$pb.TagNumber(302)
   void clearOptionalTimestamp() => clearField(302);
   @$pb.TagNumber(302)
-  $2.Timestamp ensureOptionalTimestamp() => $_ensure(120);
+  $50.Timestamp ensureOptionalTimestamp() => $_ensure(120);
 
   @$pb.TagNumber(303)
-  $3.FieldMask get optionalFieldMask => $_getN(121);
+  $58.FieldMask get optionalFieldMask => $_getN(121);
   @$pb.TagNumber(303)
-  set optionalFieldMask($3.FieldMask v) {
+  set optionalFieldMask($58.FieldMask v) {
     setField(303, v);
   }
 
@@ -1777,12 +2049,12 @@ class TestAllTypesProto3 extends $pb.GeneratedMessage {
   @$pb.TagNumber(303)
   void clearOptionalFieldMask() => clearField(303);
   @$pb.TagNumber(303)
-  $3.FieldMask ensureOptionalFieldMask() => $_ensure(121);
+  $58.FieldMask ensureOptionalFieldMask() => $_ensure(121);
 
   @$pb.TagNumber(304)
-  $4.Struct get optionalStruct => $_getN(122);
+  $48.Struct get optionalStruct => $_getN(122);
   @$pb.TagNumber(304)
-  set optionalStruct($4.Struct v) {
+  set optionalStruct($48.Struct v) {
     setField(304, v);
   }
 
@@ -1791,12 +2063,12 @@ class TestAllTypesProto3 extends $pb.GeneratedMessage {
   @$pb.TagNumber(304)
   void clearOptionalStruct() => clearField(304);
   @$pb.TagNumber(304)
-  $4.Struct ensureOptionalStruct() => $_ensure(122);
+  $48.Struct ensureOptionalStruct() => $_ensure(122);
 
   @$pb.TagNumber(305)
-  $5.Any get optionalAny => $_getN(123);
+  $49.Any get optionalAny => $_getN(123);
   @$pb.TagNumber(305)
-  set optionalAny($5.Any v) {
+  set optionalAny($49.Any v) {
     setField(305, v);
   }
 
@@ -1805,12 +2077,12 @@ class TestAllTypesProto3 extends $pb.GeneratedMessage {
   @$pb.TagNumber(305)
   void clearOptionalAny() => clearField(305);
   @$pb.TagNumber(305)
-  $5.Any ensureOptionalAny() => $_ensure(123);
+  $49.Any ensureOptionalAny() => $_ensure(123);
 
   @$pb.TagNumber(306)
-  $4.Value get optionalValue => $_getN(124);
+  $48.Value get optionalValue => $_getN(124);
   @$pb.TagNumber(306)
-  set optionalValue($4.Value v) {
+  set optionalValue($48.Value v) {
     setField(306, v);
   }
 
@@ -1819,12 +2091,12 @@ class TestAllTypesProto3 extends $pb.GeneratedMessage {
   @$pb.TagNumber(306)
   void clearOptionalValue() => clearField(306);
   @$pb.TagNumber(306)
-  $4.Value ensureOptionalValue() => $_ensure(124);
+  $48.Value ensureOptionalValue() => $_ensure(124);
 
   @$pb.TagNumber(307)
-  $4.NullValue get optionalNullValue => $_getN(125);
+  $48.NullValue get optionalNullValue => $_getN(125);
   @$pb.TagNumber(307)
-  set optionalNullValue($4.NullValue v) {
+  set optionalNullValue($48.NullValue v) {
     setField(307, v);
   }
 
@@ -1834,26 +2106,28 @@ class TestAllTypesProto3 extends $pb.GeneratedMessage {
   void clearOptionalNullValue() => clearField(307);
 
   @$pb.TagNumber(311)
-  $core.List<$1.Duration> get repeatedDuration => $_getList(126);
+  $core.List<$51.Duration> get repeatedDuration => $_getList(126);
 
   @$pb.TagNumber(312)
-  $core.List<$2.Timestamp> get repeatedTimestamp => $_getList(127);
+  $core.List<$50.Timestamp> get repeatedTimestamp => $_getList(127);
 
   @$pb.TagNumber(313)
-  $core.List<$3.FieldMask> get repeatedFieldmask => $_getList(128);
+  $core.List<$58.FieldMask> get repeatedFieldmask => $_getList(128);
 
   @$pb.TagNumber(315)
-  $core.List<$5.Any> get repeatedAny => $_getList(129);
+  $core.List<$49.Any> get repeatedAny => $_getList(129);
 
   @$pb.TagNumber(316)
-  $core.List<$4.Value> get repeatedValue => $_getList(130);
+  $core.List<$48.Value> get repeatedValue => $_getList(130);
 
   @$pb.TagNumber(317)
-  $core.List<$4.ListValue> get repeatedListValue => $_getList(131);
+  $core.List<$48.ListValue> get repeatedListValue => $_getList(131);
 
   @$pb.TagNumber(324)
-  $core.List<$4.Struct> get repeatedStruct => $_getList(132);
+  $core.List<$48.Struct> get repeatedStruct => $_getList(132);
 
+  /// Test field-name-to-JSON-name convention.
+  /// (protobuf says names can be any valid C/C++ identifier.)
   @$pb.TagNumber(401)
   $core.int get fieldname1 => $_getIZ(133);
   @$pb.TagNumber(401)
@@ -2072,39 +2346,31 @@ class TestAllTypesProto3 extends $pb.GeneratedMessage {
 }
 
 class ForeignMessage extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ForeignMessage',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'protobuf_test_messages.proto3'),
-      createEmptyInstance: create)
-    ..a<$core.int>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'c',
-        $pb.PbFieldType.O3)
-    ..hasRequiredFields = false;
-
-  ForeignMessage._() : super();
   factory ForeignMessage({
     $core.int? c,
   }) {
-    final _result = create();
+    final $result = create();
     if (c != null) {
-      _result.c = c;
+      $result.c = c;
     }
-    return _result;
+    return $result;
   }
+  ForeignMessage._() : super();
   factory ForeignMessage.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ForeignMessage.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ForeignMessage',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'protobuf_test_messages.proto3'),
+      createEmptyInstance: create)
+    ..a<$core.int>(1, _omitFieldNames ? '' : 'c', $pb.PbFieldType.O3)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2114,8 +2380,10 @@ class ForeignMessage extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ForeignMessage copyWith(void Function(ForeignMessage) updates) =>
       super.copyWith((message) => updates(message as ForeignMessage))
-          as ForeignMessage; // ignore: deprecated_member_use
+          as ForeignMessage;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ForeignMessage create() => ForeignMessage._();
   ForeignMessage createEmptyInstance() => create();
@@ -2138,3 +2406,90 @@ class ForeignMessage extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearC() => clearField(1);
 }
+
+class NullHypothesisProto3 extends $pb.GeneratedMessage {
+  factory NullHypothesisProto3() => create();
+  NullHypothesisProto3._() : super();
+  factory NullHypothesisProto3.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory NullHypothesisProto3.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'NullHypothesisProto3',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'protobuf_test_messages.proto3'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  NullHypothesisProto3 clone() =>
+      NullHypothesisProto3()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  NullHypothesisProto3 copyWith(void Function(NullHypothesisProto3) updates) =>
+      super.copyWith((message) => updates(message as NullHypothesisProto3))
+          as NullHypothesisProto3;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static NullHypothesisProto3 create() => NullHypothesisProto3._();
+  NullHypothesisProto3 createEmptyInstance() => create();
+  static $pb.PbList<NullHypothesisProto3> createRepeated() =>
+      $pb.PbList<NullHypothesisProto3>();
+  @$core.pragma('dart2js:noInline')
+  static NullHypothesisProto3 getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<NullHypothesisProto3>(create);
+  static NullHypothesisProto3? _defaultInstance;
+}
+
+class EnumOnlyProto3 extends $pb.GeneratedMessage {
+  factory EnumOnlyProto3() => create();
+  EnumOnlyProto3._() : super();
+  factory EnumOnlyProto3.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory EnumOnlyProto3.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'EnumOnlyProto3',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'protobuf_test_messages.proto3'),
+      createEmptyInstance: create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  EnumOnlyProto3 clone() => EnumOnlyProto3()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  EnumOnlyProto3 copyWith(void Function(EnumOnlyProto3) updates) =>
+      super.copyWith((message) => updates(message as EnumOnlyProto3))
+          as EnumOnlyProto3;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static EnumOnlyProto3 create() => EnumOnlyProto3._();
+  EnumOnlyProto3 createEmptyInstance() => create();
+  static $pb.PbList<EnumOnlyProto3> createRepeated() =>
+      $pb.PbList<EnumOnlyProto3>();
+  @$core.pragma('dart2js:noInline')
+  static EnumOnlyProto3 getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<EnumOnlyProto3>(create);
+  static EnumOnlyProto3? _defaultInstance;
+}
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

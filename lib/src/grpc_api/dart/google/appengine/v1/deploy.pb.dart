@@ -1,68 +1,70 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/appengine/v1/deploy.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../protobuf/duration.pb.dart' as $0;
+import '../../protobuf/duration.pb.dart' as $51;
 
+/// Code and application artifacts used to deploy a version to App Engine.
 class Deployment extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Deployment',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.appengine.v1'),
-      createEmptyInstance: create)
-    ..m<$core.String, FileInfo>(
-        1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'files',
-        entryClassName: 'Deployment.FilesEntry',
-        keyFieldType: $pb.PbFieldType.OS,
-        valueFieldType: $pb.PbFieldType.OM,
-        valueCreator: FileInfo.create,
-        packageName: const $pb.PackageName('google.appengine.v1'))
-    ..aOM<ContainerInfo>(
-        2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'container',
-        subBuilder: ContainerInfo.create)
-    ..aOM<ZipInfo>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'zip',
-        subBuilder: ZipInfo.create)
-    ..aOM<CloudBuildOptions>(
-        6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'cloudBuildOptions',
-        subBuilder: CloudBuildOptions.create)
-    ..hasRequiredFields = false;
-
-  Deployment._() : super();
   factory Deployment({
     $core.Map<$core.String, FileInfo>? files,
     ContainerInfo? container,
     ZipInfo? zip,
     CloudBuildOptions? cloudBuildOptions,
   }) {
-    final _result = create();
+    final $result = create();
     if (files != null) {
-      _result.files.addAll(files);
+      $result.files.addAll(files);
     }
     if (container != null) {
-      _result.container = container;
+      $result.container = container;
     }
     if (zip != null) {
-      _result.zip = zip;
+      $result.zip = zip;
     }
     if (cloudBuildOptions != null) {
-      _result.cloudBuildOptions = cloudBuildOptions;
+      $result.cloudBuildOptions = cloudBuildOptions;
     }
-    return _result;
+    return $result;
   }
+  Deployment._() : super();
   factory Deployment.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Deployment.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Deployment',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.appengine.v1'),
+      createEmptyInstance: create)
+    ..m<$core.String, FileInfo>(1, _omitFieldNames ? '' : 'files',
+        entryClassName: 'Deployment.FilesEntry',
+        keyFieldType: $pb.PbFieldType.OS,
+        valueFieldType: $pb.PbFieldType.OM,
+        valueCreator: FileInfo.create,
+        valueDefaultOrMaker: FileInfo.getDefault,
+        packageName: const $pb.PackageName('google.appengine.v1'))
+    ..aOM<ContainerInfo>(2, _omitFieldNames ? '' : 'container',
+        subBuilder: ContainerInfo.create)
+    ..aOM<ZipInfo>(3, _omitFieldNames ? '' : 'zip', subBuilder: ZipInfo.create)
+    ..aOM<CloudBuildOptions>(6, _omitFieldNames ? '' : 'cloudBuildOptions',
+        subBuilder: CloudBuildOptions.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -71,9 +73,10 @@ class Deployment extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Deployment copyWith(void Function(Deployment) updates) =>
-      super.copyWith((message) => updates(message as Deployment))
-          as Deployment; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Deployment)) as Deployment;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Deployment create() => Deployment._();
   Deployment createEmptyInstance() => create();
@@ -83,9 +86,14 @@ class Deployment extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<Deployment>(create);
   static Deployment? _defaultInstance;
 
+  /// Manifest of the files stored in Google Cloud Storage that are included
+  /// as part of this version. All files must be readable using the
+  /// credentials supplied with this call.
   @$pb.TagNumber(1)
   $core.Map<$core.String, FileInfo> get files => $_getMap(0);
 
+  /// The Docker image for the container that runs the version.
+  /// Only applicable for instances running in the App Engine flexible environment.
   @$pb.TagNumber(2)
   ContainerInfo get container => $_getN(1);
   @$pb.TagNumber(2)
@@ -100,6 +108,7 @@ class Deployment extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   ContainerInfo ensureContainer() => $_ensure(1);
 
+  /// The zip file for this deployment, if this is a zip deployment.
   @$pb.TagNumber(3)
   ZipInfo get zip => $_getN(2);
   @$pb.TagNumber(3)
@@ -114,6 +123,11 @@ class Deployment extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   ZipInfo ensureZip() => $_ensure(2);
 
+  ///  Options for any Google Cloud Build builds created as a part of this
+  ///  deployment.
+  ///
+  ///  These options will only be used if a new build is created, such as when
+  ///  deploying to the App Engine flexible environment using files or zip.
   @$pb.TagNumber(6)
   CloudBuildOptions get cloudBuildOptions => $_getN(3);
   @$pb.TagNumber(6)
@@ -129,57 +143,44 @@ class Deployment extends $pb.GeneratedMessage {
   CloudBuildOptions ensureCloudBuildOptions() => $_ensure(3);
 }
 
+/// Single source file that is part of the version to be deployed. Each source
+/// file that is deployed must be specified separately.
 class FileInfo extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'FileInfo',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.appengine.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'sourceUrl')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'sha1Sum')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'mimeType')
-    ..hasRequiredFields = false;
-
-  FileInfo._() : super();
   factory FileInfo({
     $core.String? sourceUrl,
     $core.String? sha1Sum,
     $core.String? mimeType,
   }) {
-    final _result = create();
+    final $result = create();
     if (sourceUrl != null) {
-      _result.sourceUrl = sourceUrl;
+      $result.sourceUrl = sourceUrl;
     }
     if (sha1Sum != null) {
-      _result.sha1Sum = sha1Sum;
+      $result.sha1Sum = sha1Sum;
     }
     if (mimeType != null) {
-      _result.mimeType = mimeType;
+      $result.mimeType = mimeType;
     }
-    return _result;
+    return $result;
   }
+  FileInfo._() : super();
   factory FileInfo.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory FileInfo.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'FileInfo',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.appengine.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'sourceUrl')
+    ..aOS(2, _omitFieldNames ? '' : 'sha1Sum')
+    ..aOS(3, _omitFieldNames ? '' : 'mimeType')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -188,9 +189,10 @@ class FileInfo extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   FileInfo copyWith(void Function(FileInfo) updates) =>
-      super.copyWith((message) => updates(message as FileInfo))
-          as FileInfo; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as FileInfo)) as FileInfo;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static FileInfo create() => FileInfo._();
   FileInfo createEmptyInstance() => create();
@@ -200,6 +202,9 @@ class FileInfo extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<FileInfo>(create);
   static FileInfo? _defaultInstance;
 
+  /// URL source to use to fetch this file. Must be a URL to a resource in
+  /// Google Cloud Storage in the form
+  /// 'http(s)://storage.googleapis.com/\<bucket\>/\<object\>'.
   @$pb.TagNumber(1)
   $core.String get sourceUrl => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -212,6 +217,7 @@ class FileInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearSourceUrl() => clearField(1);
 
+  /// The SHA1 hash of the file, in hex.
   @$pb.TagNumber(2)
   $core.String get sha1Sum => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -224,6 +230,9 @@ class FileInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearSha1Sum() => clearField(2);
 
+  ///  The MIME type of the file.
+  ///
+  ///  Defaults to the value from Google Cloud Storage.
   @$pb.TagNumber(3)
   $core.String get mimeType => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -237,39 +246,35 @@ class FileInfo extends $pb.GeneratedMessage {
   void clearMimeType() => clearField(3);
 }
 
+/// Docker image that is used to create a container and start a VM instance for
+/// the version that you deploy. Only applicable for instances running in the App
+/// Engine flexible environment.
 class ContainerInfo extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ContainerInfo',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.appengine.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'image')
-    ..hasRequiredFields = false;
-
-  ContainerInfo._() : super();
   factory ContainerInfo({
     $core.String? image,
   }) {
-    final _result = create();
+    final $result = create();
     if (image != null) {
-      _result.image = image;
+      $result.image = image;
     }
-    return _result;
+    return $result;
   }
+  ContainerInfo._() : super();
   factory ContainerInfo.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ContainerInfo.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ContainerInfo',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.appengine.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'image')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -279,8 +284,10 @@ class ContainerInfo extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ContainerInfo copyWith(void Function(ContainerInfo) updates) =>
       super.copyWith((message) => updates(message as ContainerInfo))
-          as ContainerInfo; // ignore: deprecated_member_use
+          as ContainerInfo;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ContainerInfo create() => ContainerInfo._();
   ContainerInfo createEmptyInstance() => create();
@@ -291,6 +298,9 @@ class ContainerInfo extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ContainerInfo>(create);
   static ContainerInfo? _defaultInstance;
 
+  /// URI to the hosted container image in Google Container Registry. The URI
+  /// must be fully qualified and include a tag or digest.
+  /// Examples: "gcr.io/my-project/image:tag" or "gcr.io/my-project/image@digest"
   @$pb.TagNumber(1)
   $core.String get image => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -304,49 +314,41 @@ class ContainerInfo extends $pb.GeneratedMessage {
   void clearImage() => clearField(1);
 }
 
+/// Options for the build operations performed as a part of the version
+/// deployment. Only applicable for App Engine flexible environment when creating
+/// a version using source code directly.
 class CloudBuildOptions extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CloudBuildOptions',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.appengine.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'appYamlPath')
-    ..aOM<$0.Duration>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'cloudBuildTimeout',
-        subBuilder: $0.Duration.create)
-    ..hasRequiredFields = false;
-
-  CloudBuildOptions._() : super();
   factory CloudBuildOptions({
     $core.String? appYamlPath,
-    $0.Duration? cloudBuildTimeout,
+    $51.Duration? cloudBuildTimeout,
   }) {
-    final _result = create();
+    final $result = create();
     if (appYamlPath != null) {
-      _result.appYamlPath = appYamlPath;
+      $result.appYamlPath = appYamlPath;
     }
     if (cloudBuildTimeout != null) {
-      _result.cloudBuildTimeout = cloudBuildTimeout;
+      $result.cloudBuildTimeout = cloudBuildTimeout;
     }
-    return _result;
+    return $result;
   }
+  CloudBuildOptions._() : super();
   factory CloudBuildOptions.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CloudBuildOptions.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CloudBuildOptions',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.appengine.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'appYamlPath')
+    ..aOM<$51.Duration>(2, _omitFieldNames ? '' : 'cloudBuildTimeout',
+        subBuilder: $51.Duration.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -356,8 +358,10 @@ class CloudBuildOptions extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   CloudBuildOptions copyWith(void Function(CloudBuildOptions) updates) =>
       super.copyWith((message) => updates(message as CloudBuildOptions))
-          as CloudBuildOptions; // ignore: deprecated_member_use
+          as CloudBuildOptions;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CloudBuildOptions create() => CloudBuildOptions._();
   CloudBuildOptions createEmptyInstance() => create();
@@ -368,6 +372,13 @@ class CloudBuildOptions extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<CloudBuildOptions>(create);
   static CloudBuildOptions? _defaultInstance;
 
+  ///  Path to the yaml file used in deployment, used to determine runtime
+  ///  configuration details.
+  ///
+  ///  Required for flexible environment builds.
+  ///
+  ///  See https://cloud.google.com/appengine/docs/standard/python/config/appref
+  ///  for more details.
   @$pb.TagNumber(1)
   $core.String get appYamlPath => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -380,10 +391,12 @@ class CloudBuildOptions extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearAppYamlPath() => clearField(1);
 
+  /// The Cloud Build timeout used as part of any dependent builds performed by
+  /// version creation. Defaults to 10 minutes.
   @$pb.TagNumber(2)
-  $0.Duration get cloudBuildTimeout => $_getN(1);
+  $51.Duration get cloudBuildTimeout => $_getN(1);
   @$pb.TagNumber(2)
-  set cloudBuildTimeout($0.Duration v) {
+  set cloudBuildTimeout($51.Duration v) {
     setField(2, v);
   }
 
@@ -392,52 +405,41 @@ class CloudBuildOptions extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearCloudBuildTimeout() => clearField(2);
   @$pb.TagNumber(2)
-  $0.Duration ensureCloudBuildTimeout() => $_ensure(1);
+  $51.Duration ensureCloudBuildTimeout() => $_ensure(1);
 }
 
+/// The zip file information for a zip deployment.
 class ZipInfo extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ZipInfo',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.appengine.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'sourceUrl')
-    ..a<$core.int>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'filesCount',
-        $pb.PbFieldType.O3)
-    ..hasRequiredFields = false;
-
-  ZipInfo._() : super();
   factory ZipInfo({
     $core.String? sourceUrl,
     $core.int? filesCount,
   }) {
-    final _result = create();
+    final $result = create();
     if (sourceUrl != null) {
-      _result.sourceUrl = sourceUrl;
+      $result.sourceUrl = sourceUrl;
     }
     if (filesCount != null) {
-      _result.filesCount = filesCount;
+      $result.filesCount = filesCount;
     }
-    return _result;
+    return $result;
   }
+  ZipInfo._() : super();
   factory ZipInfo.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ZipInfo.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ZipInfo',
+      package:
+          const $pb.PackageName(_omitMessageNames ? '' : 'google.appengine.v1'),
+      createEmptyInstance: create)
+    ..aOS(3, _omitFieldNames ? '' : 'sourceUrl')
+    ..a<$core.int>(4, _omitFieldNames ? '' : 'filesCount', $pb.PbFieldType.O3)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -446,9 +448,10 @@ class ZipInfo extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   ZipInfo copyWith(void Function(ZipInfo) updates) =>
-      super.copyWith((message) => updates(message as ZipInfo))
-          as ZipInfo; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as ZipInfo)) as ZipInfo;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ZipInfo create() => ZipInfo._();
   ZipInfo createEmptyInstance() => create();
@@ -458,6 +461,9 @@ class ZipInfo extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<ZipInfo>(create);
   static ZipInfo? _defaultInstance;
 
+  /// URL of the zip file to deploy from. Must be a URL to a resource in
+  /// Google Cloud Storage in the form
+  /// 'http(s)://storage.googleapis.com/\<bucket\>/\<object\>'.
   @$pb.TagNumber(3)
   $core.String get sourceUrl => $_getSZ(0);
   @$pb.TagNumber(3)
@@ -470,6 +476,9 @@ class ZipInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearSourceUrl() => clearField(3);
 
+  /// An estimate of the number of files in a zip for a zip deployment.
+  /// If set, must be greater than or equal to the actual number of files.
+  /// Used for optimizing performance; if not provided, deployment may be slow.
   @$pb.TagNumber(4)
   $core.int get filesCount => $_getIZ(1);
   @$pb.TagNumber(4)
@@ -482,3 +491,7 @@ class ZipInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearFilesCount() => clearField(4);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

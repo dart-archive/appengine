@@ -1,12 +1,16 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/api/context.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
-import 'dart:core' as $core;
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:convert' as $convert;
+import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
 @$core.Deprecated('Use contextDescriptor instead')
@@ -26,7 +30,9 @@ const Context$json = {
 
 /// Descriptor for `Context`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List contextDescriptor = $convert.base64Decode(
-    'CgdDb250ZXh0Ei0KBXJ1bGVzGAEgAygLMhcuZ29vZ2xlLmFwaS5Db250ZXh0UnVsZVIFcnVsZXM=');
+    'CgdDb250ZXh0Ei0KBXJ1bGVzGAEgAygLMhcuZ29vZ2xlLmFwaS5Db250ZXh0UnVsZVIFcnVsZX'
+    'M=');
+
 @$core.Deprecated('Use contextRuleDescriptor instead')
 const ContextRule$json = {
   '1': 'ContextRule',
@@ -53,4 +59,8 @@ const ContextRule$json = {
 
 /// Descriptor for `ContextRule`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List contextRuleDescriptor = $convert.base64Decode(
-    'CgtDb250ZXh0UnVsZRIaCghzZWxlY3RvchgBIAEoCVIIc2VsZWN0b3ISHAoJcmVxdWVzdGVkGAIgAygJUglyZXF1ZXN0ZWQSGgoIcHJvdmlkZWQYAyADKAlSCHByb3ZpZGVkEjwKGmFsbG93ZWRfcmVxdWVzdF9leHRlbnNpb25zGAQgAygJUhhhbGxvd2VkUmVxdWVzdEV4dGVuc2lvbnMSPgobYWxsb3dlZF9yZXNwb25zZV9leHRlbnNpb25zGAUgAygJUhlhbGxvd2VkUmVzcG9uc2VFeHRlbnNpb25z');
+    'CgtDb250ZXh0UnVsZRIaCghzZWxlY3RvchgBIAEoCVIIc2VsZWN0b3ISHAoJcmVxdWVzdGVkGA'
+    'IgAygJUglyZXF1ZXN0ZWQSGgoIcHJvdmlkZWQYAyADKAlSCHByb3ZpZGVkEjwKGmFsbG93ZWRf'
+    'cmVxdWVzdF9leHRlbnNpb25zGAQgAygJUhhhbGxvd2VkUmVxdWVzdEV4dGVuc2lvbnMSPgobYW'
+    'xsb3dlZF9yZXNwb25zZV9leHRlbnNpb25zGAUgAygJUhlhbGxvd2VkUmVzcG9uc2VFeHRlbnNp'
+    'b25z');

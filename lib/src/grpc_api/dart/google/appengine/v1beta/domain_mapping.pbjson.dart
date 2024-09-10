@@ -1,12 +1,16 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/appengine/v1beta/domain_mapping.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
-import 'dart:core' as $core;
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:convert' as $convert;
+import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
 @$core.Deprecated('Use domainMappingDescriptor instead')
@@ -36,7 +40,11 @@ const DomainMapping$json = {
 
 /// Descriptor for `DomainMapping`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List domainMappingDescriptor = $convert.base64Decode(
-    'Cg1Eb21haW5NYXBwaW5nEhIKBG5hbWUYASABKAlSBG5hbWUSDgoCaWQYAiABKAlSAmlkEkcKDHNzbF9zZXR0aW5ncxgDIAEoCzIkLmdvb2dsZS5hcHBlbmdpbmUudjFiZXRhLlNzbFNldHRpbmdzUgtzc2xTZXR0aW5ncxJSChByZXNvdXJjZV9yZWNvcmRzGAQgAygLMicuZ29vZ2xlLmFwcGVuZ2luZS52MWJldGEuUmVzb3VyY2VSZWNvcmRSD3Jlc291cmNlUmVjb3Jkcw==');
+    'Cg1Eb21haW5NYXBwaW5nEhIKBG5hbWUYASABKAlSBG5hbWUSDgoCaWQYAiABKAlSAmlkEkcKDH'
+    'NzbF9zZXR0aW5ncxgDIAEoCzIkLmdvb2dsZS5hcHBlbmdpbmUudjFiZXRhLlNzbFNldHRpbmdz'
+    'Ugtzc2xTZXR0aW5ncxJSChByZXNvdXJjZV9yZWNvcmRzGAQgAygLMicuZ29vZ2xlLmFwcGVuZ2'
+    'luZS52MWJldGEuUmVzb3VyY2VSZWNvcmRSD3Jlc291cmNlUmVjb3Jkcw==');
+
 @$core.Deprecated('Use sslSettingsDescriptor instead')
 const SslSettings$json = {
   '1': 'SslSettings',
@@ -72,7 +80,12 @@ const SslSettings_SslManagementType$json = {
 
 /// Descriptor for `SslSettings`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List sslSettingsDescriptor = $convert.base64Decode(
-    'CgtTc2xTZXR0aW5ncxIlCg5jZXJ0aWZpY2F0ZV9pZBgBIAEoCVINY2VydGlmaWNhdGVJZBJmChNzc2xfbWFuYWdlbWVudF90eXBlGAMgASgOMjYuZ29vZ2xlLmFwcGVuZ2luZS52MWJldGEuU3NsU2V0dGluZ3MuU3NsTWFuYWdlbWVudFR5cGVSEXNzbE1hbmFnZW1lbnRUeXBlEkMKHnBlbmRpbmdfbWFuYWdlZF9jZXJ0aWZpY2F0ZV9pZBgEIAEoCVIbcGVuZGluZ01hbmFnZWRDZXJ0aWZpY2F0ZUlkIi4KEVNzbE1hbmFnZW1lbnRUeXBlEg0KCUFVVE9NQVRJQxAAEgoKBk1BTlVBTBAB');
+    'CgtTc2xTZXR0aW5ncxIlCg5jZXJ0aWZpY2F0ZV9pZBgBIAEoCVINY2VydGlmaWNhdGVJZBJmCh'
+    'Nzc2xfbWFuYWdlbWVudF90eXBlGAMgASgOMjYuZ29vZ2xlLmFwcGVuZ2luZS52MWJldGEuU3Ns'
+    'U2V0dGluZ3MuU3NsTWFuYWdlbWVudFR5cGVSEXNzbE1hbmFnZW1lbnRUeXBlEkMKHnBlbmRpbm'
+    'dfbWFuYWdlZF9jZXJ0aWZpY2F0ZV9pZBgEIAEoCVIbcGVuZGluZ01hbmFnZWRDZXJ0aWZpY2F0'
+    'ZUlkIi4KEVNzbE1hbmFnZW1lbnRUeXBlEg0KCUFVVE9NQVRJQxAAEgoKBk1BTlVBTBAB');
+
 @$core.Deprecated('Use resourceRecordDescriptor instead')
 const ResourceRecord$json = {
   '1': 'ResourceRecord',
@@ -103,4 +116,7 @@ const ResourceRecord_RecordType$json = {
 
 /// Descriptor for `ResourceRecord`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List resourceRecordDescriptor = $convert.base64Decode(
-    'Cg5SZXNvdXJjZVJlY29yZBISCgRuYW1lGAEgASgJUgRuYW1lEhYKBnJyZGF0YRgCIAEoCVIGcnJkYXRhEkYKBHR5cGUYAyABKA4yMi5nb29nbGUuYXBwZW5naW5lLnYxYmV0YS5SZXNvdXJjZVJlY29yZC5SZWNvcmRUeXBlUgR0eXBlIigKClJlY29yZFR5cGUSBQoBQRAAEggKBEFBQUEQARIJCgVDTkFNRRAC');
+    'Cg5SZXNvdXJjZVJlY29yZBISCgRuYW1lGAEgASgJUgRuYW1lEhYKBnJyZGF0YRgCIAEoCVIGcn'
+    'JkYXRhEkYKBHR5cGUYAyABKA4yMi5nb29nbGUuYXBwZW5naW5lLnYxYmV0YS5SZXNvdXJjZVJl'
+    'Y29yZC5SZWNvcmRUeXBlUgR0eXBlIigKClJlY29yZFR5cGUSBQoBQRAAEggKBEFBQUEQARIJCg'
+    'VDTkFNRRAC');

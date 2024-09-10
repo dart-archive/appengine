@@ -1,30 +1,26 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/datastore/v1beta3/datastore.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
-// ignore_for_file: UNDEFINED_SHOWN_NAME
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:core' as $core;
+
 import 'package:protobuf/protobuf.dart' as $pb;
 
+/// The modes available for commits.
 class CommitRequest_Mode extends $pb.ProtobufEnum {
-  static const CommitRequest_Mode MODE_UNSPECIFIED = CommitRequest_Mode._(
-      0,
-      $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'MODE_UNSPECIFIED');
-  static const CommitRequest_Mode TRANSACTIONAL = CommitRequest_Mode._(
-      1,
-      $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'TRANSACTIONAL');
-  static const CommitRequest_Mode NON_TRANSACTIONAL = CommitRequest_Mode._(
-      2,
-      $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'NON_TRANSACTIONAL');
+  static const CommitRequest_Mode MODE_UNSPECIFIED =
+      CommitRequest_Mode._(0, _omitEnumNames ? '' : 'MODE_UNSPECIFIED');
+  static const CommitRequest_Mode TRANSACTIONAL =
+      CommitRequest_Mode._(1, _omitEnumNames ? '' : 'TRANSACTIONAL');
+  static const CommitRequest_Mode NON_TRANSACTIONAL =
+      CommitRequest_Mode._(2, _omitEnumNames ? '' : 'NON_TRANSACTIONAL');
 
   static const $core.List<CommitRequest_Mode> values = <CommitRequest_Mode>[
     MODE_UNSPECIFIED,
@@ -39,25 +35,15 @@ class CommitRequest_Mode extends $pb.ProtobufEnum {
   const CommitRequest_Mode._($core.int v, $core.String n) : super(v, n);
 }
 
+/// The possible values for read consistencies.
 class ReadOptions_ReadConsistency extends $pb.ProtobufEnum {
   static const ReadOptions_ReadConsistency READ_CONSISTENCY_UNSPECIFIED =
       ReadOptions_ReadConsistency._(
-          0,
-          $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'READ_CONSISTENCY_UNSPECIFIED');
+          0, _omitEnumNames ? '' : 'READ_CONSISTENCY_UNSPECIFIED');
   static const ReadOptions_ReadConsistency STRONG =
-      ReadOptions_ReadConsistency._(
-          1,
-          $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'STRONG');
+      ReadOptions_ReadConsistency._(1, _omitEnumNames ? '' : 'STRONG');
   static const ReadOptions_ReadConsistency EVENTUAL =
-      ReadOptions_ReadConsistency._(
-          2,
-          $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'EVENTUAL');
+      ReadOptions_ReadConsistency._(2, _omitEnumNames ? '' : 'EVENTUAL');
 
   static const $core.List<ReadOptions_ReadConsistency> values =
       <ReadOptions_ReadConsistency>[
@@ -74,3 +60,5 @@ class ReadOptions_ReadConsistency extends $pb.ProtobufEnum {
   const ReadOptions_ReadConsistency._($core.int v, $core.String n)
       : super(v, n);
 }
+
+const _omitEnumNames = $core.bool.fromEnvironment('protobuf.omit_enum_names');

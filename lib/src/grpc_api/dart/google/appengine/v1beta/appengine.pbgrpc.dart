@@ -1,27 +1,34 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/appengine/v1beta/appengine.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:async' as $async;
-
 import 'dart:core' as $core;
 
 import 'package:grpc/service_api.dart' as $grpc;
+import 'package:protobuf/protobuf.dart' as $pb;
+
+import '../../longrunning/operations.pb.dart' as $0;
+import '../../protobuf/empty.pb.dart' as $1;
 import 'appengine.pb.dart' as $2;
 import 'application.pb.dart' as $3;
-import '../../longrunning/operations.pb.dart' as $0;
-import 'service.pb.dart' as $4;
-import 'version.pb.dart' as $5;
-import 'instance.pb.dart' as $6;
-import 'firewall.pb.dart' as $7;
-import '../../protobuf/empty.pb.dart' as $1;
 import 'certificate.pb.dart' as $8;
 import 'domain_mapping.pb.dart' as $9;
+import 'firewall.pb.dart' as $7;
+import 'instance.pb.dart' as $6;
+import 'service.pb.dart' as $4;
+import 'version.pb.dart' as $5;
+
 export 'appengine.pb.dart';
 
+@$pb.GrpcServiceName('google.appengine.v1beta.Applications')
 class ApplicationsClient extends $grpc.Client {
   static final _$getApplication =
       $grpc.ClientMethod<$2.GetApplicationRequest, $3.Application>(
@@ -74,6 +81,7 @@ class ApplicationsClient extends $grpc.Client {
   }
 }
 
+@$pb.GrpcServiceName('google.appengine.v1beta.Applications')
 abstract class ApplicationsServiceBase extends $grpc.Service {
   $core.String get $name => 'google.appengine.v1beta.Applications';
 
@@ -142,6 +150,7 @@ abstract class ApplicationsServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $2.RepairApplicationRequest request);
 }
 
+@$pb.GrpcServiceName('google.appengine.v1beta.Services')
 class ServicesClient extends $grpc.Client {
   static final _$listServices =
       $grpc.ClientMethod<$2.ListServicesRequest, $2.ListServicesResponse>(
@@ -194,6 +203,7 @@ class ServicesClient extends $grpc.Client {
   }
 }
 
+@$pb.GrpcServiceName('google.appengine.v1beta.Services')
 abstract class ServicesServiceBase extends $grpc.Service {
   $core.String get $name => 'google.appengine.v1beta.Services';
 
@@ -263,6 +273,7 @@ abstract class ServicesServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $2.DeleteServiceRequest request);
 }
 
+@$pb.GrpcServiceName('google.appengine.v1beta.Versions')
 class VersionsClient extends $grpc.Client {
   static final _$listVersions =
       $grpc.ClientMethod<$2.ListVersionsRequest, $2.ListVersionsResponse>(
@@ -326,6 +337,7 @@ class VersionsClient extends $grpc.Client {
   }
 }
 
+@$pb.GrpcServiceName('google.appengine.v1beta.Versions')
 abstract class VersionsServiceBase extends $grpc.Service {
   $core.String get $name => 'google.appengine.v1beta.Versions';
 
@@ -410,6 +422,7 @@ abstract class VersionsServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $2.DeleteVersionRequest request);
 }
 
+@$pb.GrpcServiceName('google.appengine.v1beta.Instances')
 class InstancesClient extends $grpc.Client {
   static final _$listInstances =
       $grpc.ClientMethod<$2.ListInstancesRequest, $2.ListInstancesResponse>(
@@ -462,6 +475,7 @@ class InstancesClient extends $grpc.Client {
   }
 }
 
+@$pb.GrpcServiceName('google.appengine.v1beta.Instances')
 abstract class InstancesServiceBase extends $grpc.Service {
   $core.String get $name => 'google.appengine.v1beta.Instances';
 
@@ -532,6 +546,7 @@ abstract class InstancesServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $2.DebugInstanceRequest request);
 }
 
+@$pb.GrpcServiceName('google.appengine.v1beta.Firewall')
 class FirewallClient extends $grpc.Client {
   static final _$listIngressRules = $grpc.ClientMethod<
           $2.ListIngressRulesRequest, $2.ListIngressRulesResponse>(
@@ -610,6 +625,7 @@ class FirewallClient extends $grpc.Client {
   }
 }
 
+@$pb.GrpcServiceName('google.appengine.v1beta.Firewall')
 abstract class FirewallServiceBase extends $grpc.Service {
   $core.String get $name => 'google.appengine.v1beta.Firewall';
 
@@ -714,6 +730,7 @@ abstract class FirewallServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $2.DeleteIngressRuleRequest request);
 }
 
+@$pb.GrpcServiceName('google.appengine.v1beta.AuthorizedDomains')
 class AuthorizedDomainsClient extends $grpc.Client {
   static final _$listAuthorizedDomains = $grpc.ClientMethod<
           $2.ListAuthorizedDomainsRequest, $2.ListAuthorizedDomainsResponse>(
@@ -734,6 +751,7 @@ class AuthorizedDomainsClient extends $grpc.Client {
   }
 }
 
+@$pb.GrpcServiceName('google.appengine.v1beta.AuthorizedDomains')
 abstract class AuthorizedDomainsServiceBase extends $grpc.Service {
   $core.String get $name => 'google.appengine.v1beta.AuthorizedDomains';
 
@@ -759,6 +777,7 @@ abstract class AuthorizedDomainsServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $2.ListAuthorizedDomainsRequest request);
 }
 
+@$pb.GrpcServiceName('google.appengine.v1beta.AuthorizedCertificates')
 class AuthorizedCertificatesClient extends $grpc.Client {
   static final _$listAuthorizedCertificates = $grpc.ClientMethod<
           $2.ListAuthorizedCertificatesRequest,
@@ -832,6 +851,7 @@ class AuthorizedCertificatesClient extends $grpc.Client {
   }
 }
 
+@$pb.GrpcServiceName('google.appengine.v1beta.AuthorizedCertificates')
 abstract class AuthorizedCertificatesServiceBase extends $grpc.Service {
   $core.String get $name => 'google.appengine.v1beta.AuthorizedCertificates';
 
@@ -927,6 +947,7 @@ abstract class AuthorizedCertificatesServiceBase extends $grpc.Service {
       $grpc.ServiceCall call, $2.DeleteAuthorizedCertificateRequest request);
 }
 
+@$pb.GrpcServiceName('google.appengine.v1beta.DomainMappings')
 class DomainMappingsClient extends $grpc.Client {
   static final _$listDomainMappings = $grpc.ClientMethod<
           $2.ListDomainMappingsRequest, $2.ListDomainMappingsResponse>(
@@ -991,6 +1012,7 @@ class DomainMappingsClient extends $grpc.Client {
   }
 }
 
+@$pb.GrpcServiceName('google.appengine.v1beta.DomainMappings')
 abstract class DomainMappingsServiceBase extends $grpc.Service {
   $core.String get $name => 'google.appengine.v1beta.DomainMappings';
 

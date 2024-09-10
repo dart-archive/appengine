@@ -1,30 +1,26 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/appengine/v1beta/app_yaml.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
 
-// ignore_for_file: UNDEFINED_SHOWN_NAME
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:core' as $core;
+
 import 'package:protobuf/protobuf.dart' as $pb;
 
+/// Actions to take when the user is not logged in.
 class AuthFailAction extends $pb.ProtobufEnum {
-  static const AuthFailAction AUTH_FAIL_ACTION_UNSPECIFIED = AuthFailAction._(
-      0,
-      $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'AUTH_FAIL_ACTION_UNSPECIFIED');
-  static const AuthFailAction AUTH_FAIL_ACTION_REDIRECT = AuthFailAction._(
-      1,
-      $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'AUTH_FAIL_ACTION_REDIRECT');
+  static const AuthFailAction AUTH_FAIL_ACTION_UNSPECIFIED =
+      AuthFailAction._(0, _omitEnumNames ? '' : 'AUTH_FAIL_ACTION_UNSPECIFIED');
+  static const AuthFailAction AUTH_FAIL_ACTION_REDIRECT =
+      AuthFailAction._(1, _omitEnumNames ? '' : 'AUTH_FAIL_ACTION_REDIRECT');
   static const AuthFailAction AUTH_FAIL_ACTION_UNAUTHORIZED = AuthFailAction._(
-      2,
-      $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'AUTH_FAIL_ACTION_UNAUTHORIZED');
+      2, _omitEnumNames ? '' : 'AUTH_FAIL_ACTION_UNAUTHORIZED');
 
   static const $core.List<AuthFailAction> values = <AuthFailAction>[
     AUTH_FAIL_ACTION_UNSPECIFIED,
@@ -39,27 +35,16 @@ class AuthFailAction extends $pb.ProtobufEnum {
   const AuthFailAction._($core.int v, $core.String n) : super(v, n);
 }
 
+/// Methods to restrict access to a URL based on login status.
 class LoginRequirement extends $pb.ProtobufEnum {
-  static const LoginRequirement LOGIN_UNSPECIFIED = LoginRequirement._(
-      0,
-      $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'LOGIN_UNSPECIFIED');
-  static const LoginRequirement LOGIN_OPTIONAL = LoginRequirement._(
-      1,
-      $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'LOGIN_OPTIONAL');
-  static const LoginRequirement LOGIN_ADMIN = LoginRequirement._(
-      2,
-      $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'LOGIN_ADMIN');
-  static const LoginRequirement LOGIN_REQUIRED = LoginRequirement._(
-      3,
-      $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'LOGIN_REQUIRED');
+  static const LoginRequirement LOGIN_UNSPECIFIED =
+      LoginRequirement._(0, _omitEnumNames ? '' : 'LOGIN_UNSPECIFIED');
+  static const LoginRequirement LOGIN_OPTIONAL =
+      LoginRequirement._(1, _omitEnumNames ? '' : 'LOGIN_OPTIONAL');
+  static const LoginRequirement LOGIN_ADMIN =
+      LoginRequirement._(2, _omitEnumNames ? '' : 'LOGIN_ADMIN');
+  static const LoginRequirement LOGIN_REQUIRED =
+      LoginRequirement._(3, _omitEnumNames ? '' : 'LOGIN_REQUIRED');
 
   static const $core.List<LoginRequirement> values = <LoginRequirement>[
     LOGIN_UNSPECIFIED,
@@ -75,27 +60,16 @@ class LoginRequirement extends $pb.ProtobufEnum {
   const LoginRequirement._($core.int v, $core.String n) : super(v, n);
 }
 
+/// Methods to enforce security (HTTPS) on a URL.
 class SecurityLevel extends $pb.ProtobufEnum {
-  static const SecurityLevel SECURE_UNSPECIFIED = SecurityLevel._(
-      0,
-      $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'SECURE_UNSPECIFIED');
-  static const SecurityLevel SECURE_NEVER = SecurityLevel._(
-      1,
-      $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'SECURE_NEVER');
-  static const SecurityLevel SECURE_OPTIONAL = SecurityLevel._(
-      2,
-      $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'SECURE_OPTIONAL');
-  static const SecurityLevel SECURE_ALWAYS = SecurityLevel._(
-      3,
-      $core.bool.fromEnvironment('protobuf.omit_enum_names')
-          ? ''
-          : 'SECURE_ALWAYS');
+  static const SecurityLevel SECURE_UNSPECIFIED =
+      SecurityLevel._(0, _omitEnumNames ? '' : 'SECURE_UNSPECIFIED');
+  static const SecurityLevel SECURE_NEVER =
+      SecurityLevel._(1, _omitEnumNames ? '' : 'SECURE_NEVER');
+  static const SecurityLevel SECURE_OPTIONAL =
+      SecurityLevel._(2, _omitEnumNames ? '' : 'SECURE_OPTIONAL');
+  static const SecurityLevel SECURE_ALWAYS =
+      SecurityLevel._(3, _omitEnumNames ? '' : 'SECURE_ALWAYS');
 
   static const SecurityLevel SECURE_DEFAULT = SECURE_UNSPECIFIED;
 
@@ -113,31 +87,19 @@ class SecurityLevel extends $pb.ProtobufEnum {
   const SecurityLevel._($core.int v, $core.String n) : super(v, n);
 }
 
+/// Error codes.
 class ErrorHandler_ErrorCode extends $pb.ProtobufEnum {
   static const ErrorHandler_ErrorCode ERROR_CODE_UNSPECIFIED =
       ErrorHandler_ErrorCode._(
-          0,
-          $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'ERROR_CODE_UNSPECIFIED');
+          0, _omitEnumNames ? '' : 'ERROR_CODE_UNSPECIFIED');
   static const ErrorHandler_ErrorCode ERROR_CODE_OVER_QUOTA =
       ErrorHandler_ErrorCode._(
-          1,
-          $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'ERROR_CODE_OVER_QUOTA');
+          1, _omitEnumNames ? '' : 'ERROR_CODE_OVER_QUOTA');
   static const ErrorHandler_ErrorCode ERROR_CODE_DOS_API_DENIAL =
       ErrorHandler_ErrorCode._(
-          2,
-          $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'ERROR_CODE_DOS_API_DENIAL');
+          2, _omitEnumNames ? '' : 'ERROR_CODE_DOS_API_DENIAL');
   static const ErrorHandler_ErrorCode ERROR_CODE_TIMEOUT =
-      ErrorHandler_ErrorCode._(
-          3,
-          $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'ERROR_CODE_TIMEOUT');
+      ErrorHandler_ErrorCode._(3, _omitEnumNames ? '' : 'ERROR_CODE_TIMEOUT');
 
   static const ErrorHandler_ErrorCode ERROR_CODE_DEFAULT =
       ERROR_CODE_UNSPECIFIED;
@@ -157,38 +119,24 @@ class ErrorHandler_ErrorCode extends $pb.ProtobufEnum {
   const ErrorHandler_ErrorCode._($core.int v, $core.String n) : super(v, n);
 }
 
+/// Redirect codes.
 class UrlMap_RedirectHttpResponseCode extends $pb.ProtobufEnum {
   static const UrlMap_RedirectHttpResponseCode
       REDIRECT_HTTP_RESPONSE_CODE_UNSPECIFIED =
       UrlMap_RedirectHttpResponseCode._(
-          0,
-          $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'REDIRECT_HTTP_RESPONSE_CODE_UNSPECIFIED');
+          0, _omitEnumNames ? '' : 'REDIRECT_HTTP_RESPONSE_CODE_UNSPECIFIED');
   static const UrlMap_RedirectHttpResponseCode REDIRECT_HTTP_RESPONSE_CODE_301 =
       UrlMap_RedirectHttpResponseCode._(
-          1,
-          $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'REDIRECT_HTTP_RESPONSE_CODE_301');
+          1, _omitEnumNames ? '' : 'REDIRECT_HTTP_RESPONSE_CODE_301');
   static const UrlMap_RedirectHttpResponseCode REDIRECT_HTTP_RESPONSE_CODE_302 =
       UrlMap_RedirectHttpResponseCode._(
-          2,
-          $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'REDIRECT_HTTP_RESPONSE_CODE_302');
+          2, _omitEnumNames ? '' : 'REDIRECT_HTTP_RESPONSE_CODE_302');
   static const UrlMap_RedirectHttpResponseCode REDIRECT_HTTP_RESPONSE_CODE_303 =
       UrlMap_RedirectHttpResponseCode._(
-          3,
-          $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'REDIRECT_HTTP_RESPONSE_CODE_303');
+          3, _omitEnumNames ? '' : 'REDIRECT_HTTP_RESPONSE_CODE_303');
   static const UrlMap_RedirectHttpResponseCode REDIRECT_HTTP_RESPONSE_CODE_307 =
       UrlMap_RedirectHttpResponseCode._(
-          4,
-          $core.bool.fromEnvironment('protobuf.omit_enum_names')
-              ? ''
-              : 'REDIRECT_HTTP_RESPONSE_CODE_307');
+          4, _omitEnumNames ? '' : 'REDIRECT_HTTP_RESPONSE_CODE_307');
 
   static const $core.List<UrlMap_RedirectHttpResponseCode> values =
       <UrlMap_RedirectHttpResponseCode>[
@@ -207,3 +155,5 @@ class UrlMap_RedirectHttpResponseCode extends $pb.ProtobufEnum {
   const UrlMap_RedirectHttpResponseCode._($core.int v, $core.String n)
       : super(v, n);
 }
+
+const _omitEnumNames = $core.bool.fromEnvironment('protobuf.omit_enum_names');

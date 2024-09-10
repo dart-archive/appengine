@@ -1,12 +1,16 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/appengine/v1/certificate.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
-import 'dart:core' as $core;
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:convert' as $convert;
+import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
 @$core.Deprecated('Use managementStatusDescriptor instead')
@@ -25,7 +29,11 @@ const ManagementStatus$json = {
 
 /// Descriptor for `ManagementStatus`. Decode as a `google.protobuf.EnumDescriptorProto`.
 final $typed_data.Uint8List managementStatusDescriptor = $convert.base64Decode(
-    'ChBNYW5hZ2VtZW50U3RhdHVzEiEKHU1BTkFHRU1FTlRfU1RBVFVTX1VOU1BFQ0lGSUVEEAASBgoCT0sQARILCgdQRU5ESU5HEAISHwobRkFJTEVEX1JFVFJZSU5HX05PVF9WSVNJQkxFEAQSFAoQRkFJTEVEX1BFUk1BTkVOVBAGEiEKHUZBSUxFRF9SRVRSWUlOR19DQUFfRk9SQklEREVOEAcSIAocRkFJTEVEX1JFVFJZSU5HX0NBQV9DSEVDS0lORxAI');
+    'ChBNYW5hZ2VtZW50U3RhdHVzEiEKHU1BTkFHRU1FTlRfU1RBVFVTX1VOU1BFQ0lGSUVEEAASBg'
+    'oCT0sQARILCgdQRU5ESU5HEAISHwobRkFJTEVEX1JFVFJZSU5HX05PVF9WSVNJQkxFEAQSFAoQ'
+    'RkFJTEVEX1BFUk1BTkVOVBAGEiEKHUZBSUxFRF9SRVRSWUlOR19DQUFfRk9SQklEREVOEAcSIA'
+    'ocRkFJTEVEX1JFVFJZSU5HX0NBQV9DSEVDS0lORxAI');
+
 @$core.Deprecated('Use authorizedCertificateDescriptor instead')
 const AuthorizedCertificate$json = {
   '1': 'AuthorizedCertificate',
@@ -77,7 +85,16 @@ const AuthorizedCertificate$json = {
 
 /// Descriptor for `AuthorizedCertificate`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List authorizedCertificateDescriptor = $convert.base64Decode(
-    'ChVBdXRob3JpemVkQ2VydGlmaWNhdGUSEgoEbmFtZRgBIAEoCVIEbmFtZRIOCgJpZBgCIAEoCVICaWQSIQoMZGlzcGxheV9uYW1lGAMgASgJUgtkaXNwbGF5TmFtZRIhCgxkb21haW5fbmFtZXMYBCADKAlSC2RvbWFpbk5hbWVzEjsKC2V4cGlyZV90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYnVmLlRpbWVzdGFtcFIKZXhwaXJlVGltZRJZChRjZXJ0aWZpY2F0ZV9yYXdfZGF0YRgGIAEoCzInLmdvb2dsZS5hcHBlbmdpbmUudjEuQ2VydGlmaWNhdGVSYXdEYXRhUhJjZXJ0aWZpY2F0ZVJhd0RhdGESWAoTbWFuYWdlZF9jZXJ0aWZpY2F0ZRgHIAEoCzInLmdvb2dsZS5hcHBlbmdpbmUudjEuTWFuYWdlZENlcnRpZmljYXRlUhJtYW5hZ2VkQ2VydGlmaWNhdGUSNgoXdmlzaWJsZV9kb21haW5fbWFwcGluZ3MYCCADKAlSFXZpc2libGVEb21haW5NYXBwaW5ncxIyChVkb21haW5fbWFwcGluZ3NfY291bnQYCSABKAVSE2RvbWFpbk1hcHBpbmdzQ291bnQ=');
+    'ChVBdXRob3JpemVkQ2VydGlmaWNhdGUSEgoEbmFtZRgBIAEoCVIEbmFtZRIOCgJpZBgCIAEoCV'
+    'ICaWQSIQoMZGlzcGxheV9uYW1lGAMgASgJUgtkaXNwbGF5TmFtZRIhCgxkb21haW5fbmFtZXMY'
+    'BCADKAlSC2RvbWFpbk5hbWVzEjsKC2V4cGlyZV90aW1lGAUgASgLMhouZ29vZ2xlLnByb3RvYn'
+    'VmLlRpbWVzdGFtcFIKZXhwaXJlVGltZRJZChRjZXJ0aWZpY2F0ZV9yYXdfZGF0YRgGIAEoCzIn'
+    'Lmdvb2dsZS5hcHBlbmdpbmUudjEuQ2VydGlmaWNhdGVSYXdEYXRhUhJjZXJ0aWZpY2F0ZVJhd0'
+    'RhdGESWAoTbWFuYWdlZF9jZXJ0aWZpY2F0ZRgHIAEoCzInLmdvb2dsZS5hcHBlbmdpbmUudjEu'
+    'TWFuYWdlZENlcnRpZmljYXRlUhJtYW5hZ2VkQ2VydGlmaWNhdGUSNgoXdmlzaWJsZV9kb21haW'
+    '5fbWFwcGluZ3MYCCADKAlSFXZpc2libGVEb21haW5NYXBwaW5ncxIyChVkb21haW5fbWFwcGlu'
+    'Z3NfY291bnQYCSABKAVSE2RvbWFpbk1hcHBpbmdzQ291bnQ=');
+
 @$core.Deprecated('Use certificateRawDataDescriptor instead')
 const CertificateRawData$json = {
   '1': 'CertificateRawData',
@@ -95,7 +112,9 @@ const CertificateRawData$json = {
 
 /// Descriptor for `CertificateRawData`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List certificateRawDataDescriptor = $convert.base64Decode(
-    'ChJDZXJ0aWZpY2F0ZVJhd0RhdGESLQoScHVibGljX2NlcnRpZmljYXRlGAEgASgJUhFwdWJsaWNDZXJ0aWZpY2F0ZRIfCgtwcml2YXRlX2tleRgCIAEoCVIKcHJpdmF0ZUtleQ==');
+    'ChJDZXJ0aWZpY2F0ZVJhd0RhdGESLQoScHVibGljX2NlcnRpZmljYXRlGAEgASgJUhFwdWJsaW'
+    'NDZXJ0aWZpY2F0ZRIfCgtwcml2YXRlX2tleRgCIAEoCVIKcHJpdmF0ZUtleQ==');
+
 @$core.Deprecated('Use managedCertificateDescriptor instead')
 const ManagedCertificate$json = {
   '1': 'ManagedCertificate',
@@ -121,4 +140,6 @@ const ManagedCertificate$json = {
 
 /// Descriptor for `ManagedCertificate`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List managedCertificateDescriptor = $convert.base64Decode(
-    'ChJNYW5hZ2VkQ2VydGlmaWNhdGUSRgoRbGFzdF9yZW5ld2FsX3RpbWUYASABKAsyGi5nb29nbGUucHJvdG9idWYuVGltZXN0YW1wUg9sYXN0UmVuZXdhbFRpbWUSPQoGc3RhdHVzGAIgASgOMiUuZ29vZ2xlLmFwcGVuZ2luZS52MS5NYW5hZ2VtZW50U3RhdHVzUgZzdGF0dXM=');
+    'ChJNYW5hZ2VkQ2VydGlmaWNhdGUSRgoRbGFzdF9yZW5ld2FsX3RpbWUYASABKAsyGi5nb29nbG'
+    'UucHJvdG9idWYuVGltZXN0YW1wUg9sYXN0UmVuZXdhbFRpbWUSPQoGc3RhdHVzGAIgASgOMiUu'
+    'Z29vZ2xlLmFwcGVuZ2luZS52MS5NYW5hZ2VtZW50U3RhdHVzUgZzdGF0dXM=');

@@ -1,9 +1,13 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/datastore/admin/v1/index.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
@@ -13,52 +17,42 @@ import 'index.pbenum.dart';
 
 export 'index.pbenum.dart';
 
+/// A property of an index.
 class Index_IndexedProperty extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Index.IndexedProperty',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.datastore.admin.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..e<Index_Direction>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'direction',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: Index_Direction.DIRECTION_UNSPECIFIED,
-        valueOf: Index_Direction.valueOf,
-        enumValues: Index_Direction.values)
-    ..hasRequiredFields = false;
-
-  Index_IndexedProperty._() : super();
   factory Index_IndexedProperty({
     $core.String? name,
     Index_Direction? direction,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (direction != null) {
-      _result.direction = direction;
+      $result.direction = direction;
     }
-    return _result;
+    return $result;
   }
+  Index_IndexedProperty._() : super();
   factory Index_IndexedProperty.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Index_IndexedProperty.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Index.IndexedProperty',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.datastore.admin.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..e<Index_Direction>(
+        2, _omitFieldNames ? '' : 'direction', $pb.PbFieldType.OE,
+        defaultOrMaker: Index_Direction.DIRECTION_UNSPECIFIED,
+        valueOf: Index_Direction.valueOf,
+        enumValues: Index_Direction.values)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -70,8 +64,10 @@ class Index_IndexedProperty extends $pb.GeneratedMessage {
   Index_IndexedProperty copyWith(
           void Function(Index_IndexedProperty) updates) =>
       super.copyWith((message) => updates(message as Index_IndexedProperty))
-          as Index_IndexedProperty; // ignore: deprecated_member_use
+          as Index_IndexedProperty;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Index_IndexedProperty create() => Index_IndexedProperty._();
   Index_IndexedProperty createEmptyInstance() => create();
@@ -82,6 +78,7 @@ class Index_IndexedProperty extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<Index_IndexedProperty>(create);
   static Index_IndexedProperty? _defaultInstance;
 
+  /// Required. The property name to index.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -94,6 +91,8 @@ class Index_IndexedProperty extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// Required. The indexed property's direction.  Must not be
+  /// DIRECTION_UNSPECIFIED.
   @$pb.TagNumber(2)
   Index_Direction get direction => $_getN(1);
   @$pb.TagNumber(2)
@@ -107,42 +106,8 @@ class Index_IndexedProperty extends $pb.GeneratedMessage {
   void clearDirection() => clearField(2);
 }
 
+/// Datastore composite index definition.
 class Index extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Index',
-      package: const $pb.PackageName($core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'google.datastore.admin.v1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'projectId')
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'indexId')
-    ..aOS(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'kind')
-    ..e<Index_AncestorMode>(
-        5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'ancestor', $pb.PbFieldType.OE,
-        defaultOrMaker: Index_AncestorMode.ANCESTOR_MODE_UNSPECIFIED,
-        valueOf: Index_AncestorMode.valueOf,
-        enumValues: Index_AncestorMode.values)
-    ..pc<Index_IndexedProperty>(
-        6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'properties', $pb.PbFieldType.PM,
-        subBuilder: Index_IndexedProperty.create)
-    ..e<Index_State>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'state', $pb.PbFieldType.OE,
-        defaultOrMaker: Index_State.STATE_UNSPECIFIED,
-        valueOf: Index_State.valueOf,
-        enumValues: Index_State.values)
-    ..hasRequiredFields = false;
-
-  Index._() : super();
   factory Index({
     $core.String? projectId,
     $core.String? indexId,
@@ -151,33 +116,57 @@ class Index extends $pb.GeneratedMessage {
     $core.Iterable<Index_IndexedProperty>? properties,
     Index_State? state,
   }) {
-    final _result = create();
+    final $result = create();
     if (projectId != null) {
-      _result.projectId = projectId;
+      $result.projectId = projectId;
     }
     if (indexId != null) {
-      _result.indexId = indexId;
+      $result.indexId = indexId;
     }
     if (kind != null) {
-      _result.kind = kind;
+      $result.kind = kind;
     }
     if (ancestor != null) {
-      _result.ancestor = ancestor;
+      $result.ancestor = ancestor;
     }
     if (properties != null) {
-      _result.properties.addAll(properties);
+      $result.properties.addAll(properties);
     }
     if (state != null) {
-      _result.state = state;
+      $result.state = state;
     }
-    return _result;
+    return $result;
   }
+  Index._() : super();
   factory Index.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Index.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Index',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.datastore.admin.v1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'projectId')
+    ..aOS(3, _omitFieldNames ? '' : 'indexId')
+    ..aOS(4, _omitFieldNames ? '' : 'kind')
+    ..e<Index_AncestorMode>(
+        5, _omitFieldNames ? '' : 'ancestor', $pb.PbFieldType.OE,
+        defaultOrMaker: Index_AncestorMode.ANCESTOR_MODE_UNSPECIFIED,
+        valueOf: Index_AncestorMode.valueOf,
+        enumValues: Index_AncestorMode.values)
+    ..pc<Index_IndexedProperty>(
+        6, _omitFieldNames ? '' : 'properties', $pb.PbFieldType.PM,
+        subBuilder: Index_IndexedProperty.create)
+    ..e<Index_State>(7, _omitFieldNames ? '' : 'state', $pb.PbFieldType.OE,
+        defaultOrMaker: Index_State.STATE_UNSPECIFIED,
+        valueOf: Index_State.valueOf,
+        enumValues: Index_State.values)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -186,9 +175,10 @@ class Index extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Index copyWith(void Function(Index) updates) =>
-      super.copyWith((message) => updates(message as Index))
-          as Index; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Index)) as Index;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Index create() => Index._();
   Index createEmptyInstance() => create();
@@ -198,6 +188,7 @@ class Index extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Index>(create);
   static Index? _defaultInstance;
 
+  /// Output only. Project ID.
   @$pb.TagNumber(1)
   $core.String get projectId => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -210,6 +201,7 @@ class Index extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearProjectId() => clearField(1);
 
+  /// Output only. The resource ID of the index.
   @$pb.TagNumber(3)
   $core.String get indexId => $_getSZ(1);
   @$pb.TagNumber(3)
@@ -222,6 +214,7 @@ class Index extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearIndexId() => clearField(3);
 
+  /// Required. The entity kind to which this index applies.
   @$pb.TagNumber(4)
   $core.String get kind => $_getSZ(2);
   @$pb.TagNumber(4)
@@ -234,6 +227,8 @@ class Index extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearKind() => clearField(4);
 
+  /// Required. The index's ancestor mode.  Must not be
+  /// ANCESTOR_MODE_UNSPECIFIED.
   @$pb.TagNumber(5)
   Index_AncestorMode get ancestor => $_getN(3);
   @$pb.TagNumber(5)
@@ -246,9 +241,15 @@ class Index extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearAncestor() => clearField(5);
 
+  ///  Required. An ordered sequence of property names and their index attributes.
+  ///
+  ///  Requires:
+  ///
+  ///  * A maximum of 100 properties.
   @$pb.TagNumber(6)
   $core.List<Index_IndexedProperty> get properties => $_getList(4);
 
+  /// Output only. The state of the index.
   @$pb.TagNumber(7)
   Index_State get state => $_getN(5);
   @$pb.TagNumber(7)
@@ -261,3 +262,7 @@ class Index extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearState() => clearField(7);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

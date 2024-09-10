@@ -1,12 +1,16 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/api/monitored_resource.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
-import 'dart:core' as $core;
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:convert' as $convert;
+import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
 @$core.Deprecated('Use monitoredResourceDescriptorDescriptor instead')
@@ -37,9 +41,13 @@ const MonitoredResourceDescriptor$json = {
 };
 
 /// Descriptor for `MonitoredResourceDescriptor`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List monitoredResourceDescriptorDescriptor =
-    $convert.base64Decode(
-        'ChtNb25pdG9yZWRSZXNvdXJjZURlc2NyaXB0b3ISEgoEbmFtZRgFIAEoCVIEbmFtZRISCgR0eXBlGAEgASgJUgR0eXBlEiEKDGRpc3BsYXlfbmFtZRgCIAEoCVILZGlzcGxheU5hbWUSIAoLZGVzY3JpcHRpb24YAyABKAlSC2Rlc2NyaXB0aW9uEjMKBmxhYmVscxgEIAMoCzIbLmdvb2dsZS5hcGkuTGFiZWxEZXNjcmlwdG9yUgZsYWJlbHMSOgoMbGF1bmNoX3N0YWdlGAcgASgOMhcuZ29vZ2xlLmFwaS5MYXVuY2hTdGFnZVILbGF1bmNoU3RhZ2U=');
+final $typed_data.Uint8List monitoredResourceDescriptorDescriptor = $convert.base64Decode(
+    'ChtNb25pdG9yZWRSZXNvdXJjZURlc2NyaXB0b3ISEgoEbmFtZRgFIAEoCVIEbmFtZRISCgR0eX'
+    'BlGAEgASgJUgR0eXBlEiEKDGRpc3BsYXlfbmFtZRgCIAEoCVILZGlzcGxheU5hbWUSIAoLZGVz'
+    'Y3JpcHRpb24YAyABKAlSC2Rlc2NyaXB0aW9uEjMKBmxhYmVscxgEIAMoCzIbLmdvb2dsZS5hcG'
+    'kuTGFiZWxEZXNjcmlwdG9yUgZsYWJlbHMSOgoMbGF1bmNoX3N0YWdlGAcgASgOMhcuZ29vZ2xl'
+    'LmFwaS5MYXVuY2hTdGFnZVILbGF1bmNoU3RhZ2U=');
+
 @$core.Deprecated('Use monitoredResourceDescriptor instead')
 const MonitoredResource$json = {
   '1': 'MonitoredResource',
@@ -69,7 +77,10 @@ const MonitoredResource_LabelsEntry$json = {
 
 /// Descriptor for `MonitoredResource`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List monitoredResourceDescriptor = $convert.base64Decode(
-    'ChFNb25pdG9yZWRSZXNvdXJjZRISCgR0eXBlGAEgASgJUgR0eXBlEkEKBmxhYmVscxgCIAMoCzIpLmdvb2dsZS5hcGkuTW9uaXRvcmVkUmVzb3VyY2UuTGFiZWxzRW50cnlSBmxhYmVscxo5CgtMYWJlbHNFbnRyeRIQCgNrZXkYASABKAlSA2tleRIUCgV2YWx1ZRgCIAEoCVIFdmFsdWU6AjgB');
+    'ChFNb25pdG9yZWRSZXNvdXJjZRISCgR0eXBlGAEgASgJUgR0eXBlEkEKBmxhYmVscxgCIAMoCz'
+    'IpLmdvb2dsZS5hcGkuTW9uaXRvcmVkUmVzb3VyY2UuTGFiZWxzRW50cnlSBmxhYmVscxo5CgtM'
+    'YWJlbHNFbnRyeRIQCgNrZXkYASABKAlSA2tleRIUCgV2YWx1ZRgCIAEoCVIFdmFsdWU6AjgB');
+
 @$core.Deprecated('Use monitoredResourceMetadataDescriptor instead')
 const MonitoredResourceMetadata$json = {
   '1': 'MonitoredResourceMetadata',
@@ -105,6 +116,9 @@ const MonitoredResourceMetadata_UserLabelsEntry$json = {
 };
 
 /// Descriptor for `MonitoredResourceMetadata`. Decode as a `google.protobuf.DescriptorProto`.
-final $typed_data.Uint8List monitoredResourceMetadataDescriptor =
-    $convert.base64Decode(
-        'ChlNb25pdG9yZWRSZXNvdXJjZU1ldGFkYXRhEjwKDXN5c3RlbV9sYWJlbHMYASABKAsyFy5nb29nbGUucHJvdG9idWYuU3RydWN0UgxzeXN0ZW1MYWJlbHMSVgoLdXNlcl9sYWJlbHMYAiADKAsyNS5nb29nbGUuYXBpLk1vbml0b3JlZFJlc291cmNlTWV0YWRhdGEuVXNlckxhYmVsc0VudHJ5Ugp1c2VyTGFiZWxzGj0KD1VzZXJMYWJlbHNFbnRyeRIQCgNrZXkYASABKAlSA2tleRIUCgV2YWx1ZRgCIAEoCVIFdmFsdWU6AjgB');
+final $typed_data.Uint8List monitoredResourceMetadataDescriptor = $convert.base64Decode(
+    'ChlNb25pdG9yZWRSZXNvdXJjZU1ldGFkYXRhEjwKDXN5c3RlbV9sYWJlbHMYASABKAsyFy5nb2'
+    '9nbGUucHJvdG9idWYuU3RydWN0UgxzeXN0ZW1MYWJlbHMSVgoLdXNlcl9sYWJlbHMYAiADKAsy'
+    'NS5nb29nbGUuYXBpLk1vbml0b3JlZFJlc291cmNlTWV0YWRhdGEuVXNlckxhYmVsc0VudHJ5Ug'
+    'p1c2VyTGFiZWxzGj0KD1VzZXJMYWJlbHNFbnRyeRIQCgNrZXkYASABKAlSA2tleRIUCgV2YWx1'
+    'ZRgCIAEoCVIFdmFsdWU6AjgB');

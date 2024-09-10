@@ -1,61 +1,59 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/api/expr/v1alpha1/syntax.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../../../protobuf/duration.pb.dart' as $0;
-import '../../../protobuf/timestamp.pb.dart' as $1;
+import '../../../protobuf/duration.pb.dart' as $51;
+import '../../../protobuf/struct.pbenum.dart' as $48;
+import '../../../protobuf/timestamp.pb.dart' as $50;
+import 'syntax.pbenum.dart';
 
-import '../../../protobuf/struct.pbenum.dart' as $2;
+export 'syntax.pbenum.dart';
 
+/// An expression together with source information as returned by the parser.
 class ParsedExpr extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ParsedExpr',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.expr.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOM<Expr>(
-        2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'expr',
-        subBuilder: Expr.create)
-    ..aOM<SourceInfo>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'sourceInfo',
-        subBuilder: SourceInfo.create)
-    ..hasRequiredFields = false;
-
-  ParsedExpr._() : super();
   factory ParsedExpr({
     Expr? expr,
     SourceInfo? sourceInfo,
   }) {
-    final _result = create();
+    final $result = create();
     if (expr != null) {
-      _result.expr = expr;
+      $result.expr = expr;
     }
     if (sourceInfo != null) {
-      _result.sourceInfo = sourceInfo;
+      $result.sourceInfo = sourceInfo;
     }
-    return _result;
+    return $result;
   }
+  ParsedExpr._() : super();
   factory ParsedExpr.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ParsedExpr.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ParsedExpr',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.expr.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOM<Expr>(2, _omitFieldNames ? '' : 'expr', subBuilder: Expr.create)
+    ..aOM<SourceInfo>(3, _omitFieldNames ? '' : 'sourceInfo',
+        subBuilder: SourceInfo.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -64,9 +62,10 @@ class ParsedExpr extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   ParsedExpr copyWith(void Function(ParsedExpr) updates) =>
-      super.copyWith((message) => updates(message as ParsedExpr))
-          as ParsedExpr; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as ParsedExpr)) as ParsedExpr;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ParsedExpr create() => ParsedExpr._();
   ParsedExpr createEmptyInstance() => create();
@@ -76,6 +75,7 @@ class ParsedExpr extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ParsedExpr>(create);
   static ParsedExpr? _defaultInstance;
 
+  /// The parsed expression.
   @$pb.TagNumber(2)
   Expr get expr => $_getN(0);
   @$pb.TagNumber(2)
@@ -90,6 +90,7 @@ class ParsedExpr extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   Expr ensureExpr() => $_ensure(0);
 
+  /// The source info derived from input that generated the parsed `expr`.
   @$pb.TagNumber(3)
   SourceInfo get sourceInfo => $_getN(1);
   @$pb.TagNumber(3)
@@ -105,39 +106,33 @@ class ParsedExpr extends $pb.GeneratedMessage {
   SourceInfo ensureSourceInfo() => $_ensure(1);
 }
 
+/// An identifier expression. e.g. `request`.
 class Expr_Ident extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Expr.Ident',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.expr.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  Expr_Ident._() : super();
   factory Expr_Ident({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  Expr_Ident._() : super();
   factory Expr_Ident.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Expr_Ident.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Expr.Ident',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.expr.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -146,9 +141,10 @@ class Expr_Ident extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Expr_Ident copyWith(void Function(Expr_Ident) updates) =>
-      super.copyWith((message) => updates(message as Expr_Ident))
-          as Expr_Ident; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Expr_Ident)) as Expr_Ident;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Expr_Ident create() => Expr_Ident._();
   Expr_Ident createEmptyInstance() => create();
@@ -158,6 +154,11 @@ class Expr_Ident extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<Expr_Ident>(create);
   static Expr_Ident? _defaultInstance;
 
+  ///  Required. Holds a single, unqualified identifier, possibly preceded by a
+  ///  '.'.
+  ///
+  ///  Qualified names are represented by the
+  ///  [Expr.Select][google.api.expr.v1alpha1.Expr.Select] expression.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -171,54 +172,43 @@ class Expr_Ident extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// A field selection expression. e.g. `request.auth`.
 class Expr_Select extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Expr.Select',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.expr.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOM<Expr>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'operand',
-        subBuilder: Expr.create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'field')
-    ..aOB(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'testOnly')
-    ..hasRequiredFields = false;
-
-  Expr_Select._() : super();
   factory Expr_Select({
     Expr? operand,
     $core.String? field_2,
     $core.bool? testOnly,
   }) {
-    final _result = create();
+    final $result = create();
     if (operand != null) {
-      _result.operand = operand;
+      $result.operand = operand;
     }
     if (field_2 != null) {
-      _result.field_2 = field_2;
+      $result.field_2 = field_2;
     }
     if (testOnly != null) {
-      _result.testOnly = testOnly;
+      $result.testOnly = testOnly;
     }
-    return _result;
+    return $result;
   }
+  Expr_Select._() : super();
   factory Expr_Select.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Expr_Select.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Expr.Select',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.expr.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOM<Expr>(1, _omitFieldNames ? '' : 'operand', subBuilder: Expr.create)
+    ..aOS(2, _omitFieldNames ? '' : 'field')
+    ..aOB(3, _omitFieldNames ? '' : 'testOnly')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -228,8 +218,10 @@ class Expr_Select extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   Expr_Select copyWith(void Function(Expr_Select) updates) =>
       super.copyWith((message) => updates(message as Expr_Select))
-          as Expr_Select; // ignore: deprecated_member_use
+          as Expr_Select;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Expr_Select create() => Expr_Select._();
   Expr_Select createEmptyInstance() => create();
@@ -239,6 +231,10 @@ class Expr_Select extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<Expr_Select>(create);
   static Expr_Select? _defaultInstance;
 
+  ///  Required. The target of the selection expression.
+  ///
+  ///  For example, in the select expression `request.auth`, the `request`
+  ///  portion of the expression is the `operand`.
   @$pb.TagNumber(1)
   Expr get operand => $_getN(0);
   @$pb.TagNumber(1)
@@ -253,6 +249,10 @@ class Expr_Select extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   Expr ensureOperand() => $_ensure(0);
 
+  ///  Required. The name of the field to select.
+  ///
+  ///  For example, in the select expression `request.auth`, the `auth` portion
+  ///  of the expression would be the `field`.
   @$pb.TagNumber(2)
   $core.String get field_2 => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -265,6 +265,9 @@ class Expr_Select extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearField_2() => clearField(2);
 
+  ///  Whether the select is to be interpreted as a field presence test.
+  ///
+  ///  This results from the macro `has(request.auth)`.
   @$pb.TagNumber(3)
   $core.bool get testOnly => $_getBF(2);
   @$pb.TagNumber(3)
@@ -278,53 +281,46 @@ class Expr_Select extends $pb.GeneratedMessage {
   void clearTestOnly() => clearField(3);
 }
 
+///  A call expression, including calls to predefined functions and operators.
+///
+///  For example, `value == 10`, `size(map_value)`.
 class Expr_Call extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Expr.Call',
-      package: const $pb.PackageName($core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'google.api.expr.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOM<Expr>(1, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'target',
-        subBuilder: Expr.create)
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'function')
-    ..pc<Expr>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'args',
-        $pb.PbFieldType.PM,
-        subBuilder: Expr.create)
-    ..hasRequiredFields = false;
-
-  Expr_Call._() : super();
   factory Expr_Call({
     Expr? target,
     $core.String? function,
     $core.Iterable<Expr>? args,
   }) {
-    final _result = create();
+    final $result = create();
     if (target != null) {
-      _result.target = target;
+      $result.target = target;
     }
     if (function != null) {
-      _result.function = function;
+      $result.function = function;
     }
     if (args != null) {
-      _result.args.addAll(args);
+      $result.args.addAll(args);
     }
-    return _result;
+    return $result;
   }
+  Expr_Call._() : super();
   factory Expr_Call.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Expr_Call.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Expr.Call',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.expr.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOM<Expr>(1, _omitFieldNames ? '' : 'target', subBuilder: Expr.create)
+    ..aOS(2, _omitFieldNames ? '' : 'function')
+    ..pc<Expr>(3, _omitFieldNames ? '' : 'args', $pb.PbFieldType.PM,
+        subBuilder: Expr.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -333,9 +329,10 @@ class Expr_Call extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Expr_Call copyWith(void Function(Expr_Call) updates) =>
-      super.copyWith((message) => updates(message as Expr_Call))
-          as Expr_Call; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Expr_Call)) as Expr_Call;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Expr_Call create() => Expr_Call._();
   Expr_Call createEmptyInstance() => create();
@@ -345,6 +342,8 @@ class Expr_Call extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<Expr_Call>(create);
   static Expr_Call? _defaultInstance;
 
+  /// The target of an method call-style expression. For example, `x` in
+  /// `x.f()`.
   @$pb.TagNumber(1)
   Expr get target => $_getN(0);
   @$pb.TagNumber(1)
@@ -359,6 +358,7 @@ class Expr_Call extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   Expr ensureTarget() => $_ensure(0);
 
+  /// Required. The name of the function or method being called.
   @$pb.TagNumber(2)
   $core.String get function => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -371,45 +371,48 @@ class Expr_Call extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearFunction() => clearField(2);
 
+  /// The arguments.
   @$pb.TagNumber(3)
   $core.List<Expr> get args => $_getList(2);
 }
 
+///  A list creation expression.
+///
+///  Lists may either be homogenous, e.g. `[1, 2, 3]`, or heterogeneous, e.g.
+///  `dyn([1, 'hello', 2.0])`
 class Expr_CreateList extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Expr.CreateList',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.expr.v1alpha1'),
-      createEmptyInstance: create)
-    ..pc<Expr>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'elements',
-        $pb.PbFieldType.PM,
-        subBuilder: Expr.create)
-    ..hasRequiredFields = false;
-
-  Expr_CreateList._() : super();
   factory Expr_CreateList({
     $core.Iterable<Expr>? elements,
+    $core.Iterable<$core.int>? optionalIndices,
   }) {
-    final _result = create();
+    final $result = create();
     if (elements != null) {
-      _result.elements.addAll(elements);
+      $result.elements.addAll(elements);
     }
-    return _result;
+    if (optionalIndices != null) {
+      $result.optionalIndices.addAll(optionalIndices);
+    }
+    return $result;
   }
+  Expr_CreateList._() : super();
   factory Expr_CreateList.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Expr_CreateList.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Expr.CreateList',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.expr.v1alpha1'),
+      createEmptyInstance: create)
+    ..pc<Expr>(1, _omitFieldNames ? '' : 'elements', $pb.PbFieldType.PM,
+        subBuilder: Expr.create)
+    ..p<$core.int>(
+        2, _omitFieldNames ? '' : 'optionalIndices', $pb.PbFieldType.K3)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -419,8 +422,10 @@ class Expr_CreateList extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   Expr_CreateList copyWith(void Function(Expr_CreateList) updates) =>
       super.copyWith((message) => updates(message as Expr_CreateList))
-          as Expr_CreateList; // ignore: deprecated_member_use
+          as Expr_CreateList;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Expr_CreateList create() => Expr_CreateList._();
   Expr_CreateList createEmptyInstance() => create();
@@ -431,13 +436,57 @@ class Expr_CreateList extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<Expr_CreateList>(create);
   static Expr_CreateList? _defaultInstance;
 
+  /// The elements part of the list.
   @$pb.TagNumber(1)
   $core.List<Expr> get elements => $_getList(0);
+
+  ///  The indices within the elements list which are marked as optional
+  ///  elements.
+  ///
+  ///  When an optional-typed value is present, the value it contains
+  ///  is included in the list. If the optional-typed value is absent, the list
+  ///  element is omitted from the CreateList result.
+  @$pb.TagNumber(2)
+  $core.List<$core.int> get optionalIndices => $_getList(1);
 }
 
 enum Expr_CreateStruct_Entry_KeyKind { fieldKey, mapKey, notSet }
 
+/// Represents an entry.
 class Expr_CreateStruct_Entry extends $pb.GeneratedMessage {
+  factory Expr_CreateStruct_Entry({
+    $fixnum.Int64? id,
+    $core.String? fieldKey,
+    Expr? mapKey,
+    Expr? value,
+    $core.bool? optionalEntry,
+  }) {
+    final $result = create();
+    if (id != null) {
+      $result.id = id;
+    }
+    if (fieldKey != null) {
+      $result.fieldKey = fieldKey;
+    }
+    if (mapKey != null) {
+      $result.mapKey = mapKey;
+    }
+    if (value != null) {
+      $result.value = value;
+    }
+    if (optionalEntry != null) {
+      $result.optionalEntry = optionalEntry;
+    }
+    return $result;
+  }
+  Expr_CreateStruct_Entry._() : super();
+  factory Expr_CreateStruct_Entry.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Expr_CreateStruct_Entry.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+
   static const $core.Map<$core.int, Expr_CreateStruct_Entry_KeyKind>
       _Expr_CreateStruct_Entry_KeyKindByTag = {
     2: Expr_CreateStruct_Entry_KeyKind.fieldKey,
@@ -445,61 +494,18 @@ class Expr_CreateStruct_Entry extends $pb.GeneratedMessage {
     0: Expr_CreateStruct_Entry_KeyKind.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Expr.CreateStruct.Entry',
+      _omitMessageNames ? '' : 'Expr.CreateStruct.Entry',
       package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.expr.v1alpha1'),
+          _omitMessageNames ? '' : 'google.api.expr.v1alpha1'),
       createEmptyInstance: create)
     ..oo(0, [2, 3])
-    ..aInt64(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'id')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'fieldKey')
-    ..aOM<Expr>(
-        3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'mapKey',
-        subBuilder: Expr.create)
-    ..aOM<Expr>(
-        4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'value',
-        subBuilder: Expr.create)
+    ..aInt64(1, _omitFieldNames ? '' : 'id')
+    ..aOS(2, _omitFieldNames ? '' : 'fieldKey')
+    ..aOM<Expr>(3, _omitFieldNames ? '' : 'mapKey', subBuilder: Expr.create)
+    ..aOM<Expr>(4, _omitFieldNames ? '' : 'value', subBuilder: Expr.create)
+    ..aOB(5, _omitFieldNames ? '' : 'optionalEntry')
     ..hasRequiredFields = false;
 
-  Expr_CreateStruct_Entry._() : super();
-  factory Expr_CreateStruct_Entry({
-    $fixnum.Int64? id,
-    $core.String? fieldKey,
-    Expr? mapKey,
-    Expr? value,
-  }) {
-    final _result = create();
-    if (id != null) {
-      _result.id = id;
-    }
-    if (fieldKey != null) {
-      _result.fieldKey = fieldKey;
-    }
-    if (mapKey != null) {
-      _result.mapKey = mapKey;
-    }
-    if (value != null) {
-      _result.value = value;
-    }
-    return _result;
-  }
-  factory Expr_CreateStruct_Entry.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Expr_CreateStruct_Entry.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -511,8 +517,10 @@ class Expr_CreateStruct_Entry extends $pb.GeneratedMessage {
   Expr_CreateStruct_Entry copyWith(
           void Function(Expr_CreateStruct_Entry) updates) =>
       super.copyWith((message) => updates(message as Expr_CreateStruct_Entry))
-          as Expr_CreateStruct_Entry; // ignore: deprecated_member_use
+          as Expr_CreateStruct_Entry;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Expr_CreateStruct_Entry create() => Expr_CreateStruct_Entry._();
   Expr_CreateStruct_Entry createEmptyInstance() => create();
@@ -527,6 +535,9 @@ class Expr_CreateStruct_Entry extends $pb.GeneratedMessage {
       _Expr_CreateStruct_Entry_KeyKindByTag[$_whichOneof(0)]!;
   void clearKeyKind() => clearField($_whichOneof(0));
 
+  /// Required. An id assigned to this node by the parser which is unique
+  /// in a given expression tree. This is used to associate type
+  /// information and other attributes to the node.
   @$pb.TagNumber(1)
   $fixnum.Int64 get id => $_getI64(0);
   @$pb.TagNumber(1)
@@ -539,6 +550,7 @@ class Expr_CreateStruct_Entry extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearId() => clearField(1);
 
+  /// The field key for a message creator statement.
   @$pb.TagNumber(2)
   $core.String get fieldKey => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -551,6 +563,7 @@ class Expr_CreateStruct_Entry extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearFieldKey() => clearField(2);
 
+  /// The key expression for a map creation statement.
   @$pb.TagNumber(3)
   Expr get mapKey => $_getN(2);
   @$pb.TagNumber(3)
@@ -565,6 +578,11 @@ class Expr_CreateStruct_Entry extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   Expr ensureMapKey() => $_ensure(2);
 
+  ///  Required. The value assigned to the key.
+  ///
+  ///  If the optional_entry field is true, the expression must resolve to an
+  ///  optional-typed value. If the optional value is present, the key will be
+  ///  set; however, if the optional value is absent, the key will be unset.
   @$pb.TagNumber(4)
   Expr get value => $_getN(3);
   @$pb.TagNumber(4)
@@ -578,52 +596,59 @@ class Expr_CreateStruct_Entry extends $pb.GeneratedMessage {
   void clearValue() => clearField(4);
   @$pb.TagNumber(4)
   Expr ensureValue() => $_ensure(3);
+
+  /// Whether the key-value pair is optional.
+  @$pb.TagNumber(5)
+  $core.bool get optionalEntry => $_getBF(4);
+  @$pb.TagNumber(5)
+  set optionalEntry($core.bool v) {
+    $_setBool(4, v);
+  }
+
+  @$pb.TagNumber(5)
+  $core.bool hasOptionalEntry() => $_has(4);
+  @$pb.TagNumber(5)
+  void clearOptionalEntry() => clearField(5);
 }
 
+///  A map or message creation expression.
+///
+///  Maps are constructed as `{'key_name': 'value'}`. Message construction is
+///  similar, but prefixed with a type name and composed of field ids:
+///  `types.MyType{field_id: 'value'}`.
 class Expr_CreateStruct extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Expr.CreateStruct',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.expr.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'messageName')
-    ..pc<Expr_CreateStruct_Entry>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'entries',
-        $pb.PbFieldType.PM,
-        subBuilder: Expr_CreateStruct_Entry.create)
-    ..hasRequiredFields = false;
-
-  Expr_CreateStruct._() : super();
   factory Expr_CreateStruct({
     $core.String? messageName,
     $core.Iterable<Expr_CreateStruct_Entry>? entries,
   }) {
-    final _result = create();
+    final $result = create();
     if (messageName != null) {
-      _result.messageName = messageName;
+      $result.messageName = messageName;
     }
     if (entries != null) {
-      _result.entries.addAll(entries);
+      $result.entries.addAll(entries);
     }
-    return _result;
+    return $result;
   }
+  Expr_CreateStruct._() : super();
   factory Expr_CreateStruct.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Expr_CreateStruct.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Expr.CreateStruct',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.expr.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'messageName')
+    ..pc<Expr_CreateStruct_Entry>(
+        2, _omitFieldNames ? '' : 'entries', $pb.PbFieldType.PM,
+        subBuilder: Expr_CreateStruct_Entry.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -633,8 +658,10 @@ class Expr_CreateStruct extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   Expr_CreateStruct copyWith(void Function(Expr_CreateStruct) updates) =>
       super.copyWith((message) => updates(message as Expr_CreateStruct))
-          as Expr_CreateStruct; // ignore: deprecated_member_use
+          as Expr_CreateStruct;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Expr_CreateStruct create() => Expr_CreateStruct._();
   Expr_CreateStruct createEmptyInstance() => create();
@@ -645,6 +672,8 @@ class Expr_CreateStruct extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<Expr_CreateStruct>(create);
   static Expr_CreateStruct? _defaultInstance;
 
+  /// The type name of the message to be created, empty when creating map
+  /// literals.
   @$pb.TagNumber(1)
   $core.String get messageName => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -657,39 +686,68 @@ class Expr_CreateStruct extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearMessageName() => clearField(1);
 
+  /// The entries in the creation expression.
   @$pb.TagNumber(2)
   $core.List<Expr_CreateStruct_Entry> get entries => $_getList(1);
 }
 
+///  A comprehension expression applied to a list or map.
+///
+///  Comprehensions are not part of the core syntax, but enabled with macros.
+///  A macro matches a specific call signature within a parsed AST and replaces
+///  the call with an alternate AST block. Macro expansion happens at parse
+///  time.
+///
+///  The following macros are supported within CEL:
+///
+///  Aggregate type macros may be applied to all elements in a list or all keys
+///  in a map:
+///
+///  *  `all`, `exists`, `exists_one` -  test a predicate expression against
+///     the inputs and return `true` if the predicate is satisfied for all,
+///     any, or only one value `list.all(x, x < 10)`.
+///  *  `filter` - test a predicate expression against the inputs and return
+///     the subset of elements which satisfy the predicate:
+///     `payments.filter(p, p > 1000)`.
+///  *  `map` - apply an expression to all elements in the input and return the
+///     output aggregate type: `[1, 2, 3].map(i, i * i)`.
+///
+///  The `has(m.x)` macro tests whether the property `x` is present in struct
+///  `m`. The semantics of this macro depend on the type of `m`. For proto2
+///  messages `has(m.x)` is defined as 'defined, but not set`. For proto3, the
+///  macro tests whether the property is set to its default. For map and struct
+///  types, the macro tests whether the property `x` is defined on `m`.
+///
+///  Comprehensions for the standard environment macros evaluation can be best
+///  visualized as the following pseudocode:
+///
+///  ```
+///  let `accu_var` = `accu_init`
+///  for (let `iter_var` in `iter_range`) {
+///    if (!`loop_condition`) {
+///      break
+///    }
+///    `accu_var` = `loop_step`
+///  }
+///  return `result`
+///  ```
+///
+///  Comprehensions for the optional V2 macros which support map-to-map
+///  translation differ slightly from the standard environment macros in that
+///  they expose both the key or index in addition to the value for each list
+///  or map entry:
+///
+///  ```
+///  let `accu_var` = `accu_init`
+///  for (let `iter_var`, `iter_var2` in `iter_range`) {
+///    if (!`loop_condition`) {
+///      break
+///    }
+///    `accu_var` = `loop_step`
+///  }
+///  return `result`
+///  ```
 class Expr_Comprehension extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Expr.Comprehension',
-      package: const $pb.PackageName($core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'google.api.expr.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'iterVar')
-    ..aOM<Expr>(2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'iterRange',
-        subBuilder: Expr.create)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'accuVar')
-    ..aOM<Expr>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'accuInit',
-        subBuilder: Expr.create)
-    ..aOM<Expr>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'loopCondition', subBuilder: Expr.create)
-    ..aOM<Expr>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'loopStep', subBuilder: Expr.create)
-    ..aOM<Expr>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'result', subBuilder: Expr.create)
-    ..hasRequiredFields = false;
-
-  Expr_Comprehension._() : super();
   factory Expr_Comprehension({
     $core.String? iterVar,
     Expr? iterRange,
@@ -698,37 +756,59 @@ class Expr_Comprehension extends $pb.GeneratedMessage {
     Expr? loopCondition,
     Expr? loopStep,
     Expr? result,
+    $core.String? iterVar2,
   }) {
-    final _result = create();
+    final $result = create();
     if (iterVar != null) {
-      _result.iterVar = iterVar;
+      $result.iterVar = iterVar;
     }
     if (iterRange != null) {
-      _result.iterRange = iterRange;
+      $result.iterRange = iterRange;
     }
     if (accuVar != null) {
-      _result.accuVar = accuVar;
+      $result.accuVar = accuVar;
     }
     if (accuInit != null) {
-      _result.accuInit = accuInit;
+      $result.accuInit = accuInit;
     }
     if (loopCondition != null) {
-      _result.loopCondition = loopCondition;
+      $result.loopCondition = loopCondition;
     }
     if (loopStep != null) {
-      _result.loopStep = loopStep;
+      $result.loopStep = loopStep;
     }
     if (result != null) {
-      _result.result = result;
+      $result.result = result;
     }
-    return _result;
+    if (iterVar2 != null) {
+      $result.iterVar2 = iterVar2;
+    }
+    return $result;
   }
+  Expr_Comprehension._() : super();
   factory Expr_Comprehension.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Expr_Comprehension.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Expr.Comprehension',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.expr.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'iterVar')
+    ..aOM<Expr>(2, _omitFieldNames ? '' : 'iterRange', subBuilder: Expr.create)
+    ..aOS(3, _omitFieldNames ? '' : 'accuVar')
+    ..aOM<Expr>(4, _omitFieldNames ? '' : 'accuInit', subBuilder: Expr.create)
+    ..aOM<Expr>(5, _omitFieldNames ? '' : 'loopCondition',
+        subBuilder: Expr.create)
+    ..aOM<Expr>(6, _omitFieldNames ? '' : 'loopStep', subBuilder: Expr.create)
+    ..aOM<Expr>(7, _omitFieldNames ? '' : 'result', subBuilder: Expr.create)
+    ..aOS(8, _omitFieldNames ? '' : 'iterVar2')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -738,8 +818,10 @@ class Expr_Comprehension extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   Expr_Comprehension copyWith(void Function(Expr_Comprehension) updates) =>
       super.copyWith((message) => updates(message as Expr_Comprehension))
-          as Expr_Comprehension; // ignore: deprecated_member_use
+          as Expr_Comprehension;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Expr_Comprehension create() => Expr_Comprehension._();
   Expr_Comprehension createEmptyInstance() => create();
@@ -750,6 +832,9 @@ class Expr_Comprehension extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<Expr_Comprehension>(create);
   static Expr_Comprehension? _defaultInstance;
 
+  /// The name of the first iteration variable.
+  /// When the iter_range is a list, this variable is the list element.
+  /// When the iter_range is a map, this variable is the map entry key.
   @$pb.TagNumber(1)
   $core.String get iterVar => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -762,6 +847,7 @@ class Expr_Comprehension extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearIterVar() => clearField(1);
 
+  /// The range over which the comprehension iterates.
   @$pb.TagNumber(2)
   Expr get iterRange => $_getN(1);
   @$pb.TagNumber(2)
@@ -776,6 +862,7 @@ class Expr_Comprehension extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   Expr ensureIterRange() => $_ensure(1);
 
+  /// The name of the variable used for accumulation of the result.
   @$pb.TagNumber(3)
   $core.String get accuVar => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -788,6 +875,7 @@ class Expr_Comprehension extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearAccuVar() => clearField(3);
 
+  /// The initial value of the accumulator.
   @$pb.TagNumber(4)
   Expr get accuInit => $_getN(3);
   @$pb.TagNumber(4)
@@ -802,6 +890,10 @@ class Expr_Comprehension extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   Expr ensureAccuInit() => $_ensure(3);
 
+  ///  An expression which can contain iter_var, iter_var2, and accu_var.
+  ///
+  ///  Returns false when the result has been computed and may be used as
+  ///  a hint to short-circuit the remainder of the comprehension.
   @$pb.TagNumber(5)
   Expr get loopCondition => $_getN(4);
   @$pb.TagNumber(5)
@@ -816,6 +908,9 @@ class Expr_Comprehension extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   Expr ensureLoopCondition() => $_ensure(4);
 
+  ///  An expression which can contain iter_var, iter_var2, and accu_var.
+  ///
+  ///  Computes the next value of accu_var.
   @$pb.TagNumber(6)
   Expr get loopStep => $_getN(5);
   @$pb.TagNumber(6)
@@ -830,6 +925,9 @@ class Expr_Comprehension extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   Expr ensureLoopStep() => $_ensure(5);
 
+  ///  An expression which can contain accu_var.
+  ///
+  ///  Computes the result.
   @$pb.TagNumber(7)
   Expr get result => $_getN(6);
   @$pb.TagNumber(7)
@@ -843,6 +941,22 @@ class Expr_Comprehension extends $pb.GeneratedMessage {
   void clearResult() => clearField(7);
   @$pb.TagNumber(7)
   Expr ensureResult() => $_ensure(6);
+
+  /// The name of the second iteration variable, empty if not set.
+  /// When the iter_range is a list, this variable is the integer index.
+  /// When the iter_range is a map, this variable is the map entry value.
+  /// This field is only set for comprehension v2 macros.
+  @$pb.TagNumber(8)
+  $core.String get iterVar2 => $_getSZ(7);
+  @$pb.TagNumber(8)
+  set iterVar2($core.String v) {
+    $_setString(7, v);
+  }
+
+  @$pb.TagNumber(8)
+  $core.bool hasIterVar2() => $_has(7);
+  @$pb.TagNumber(8)
+  void clearIterVar2() => clearField(8);
 }
 
 enum Expr_ExprKind {
@@ -856,46 +970,24 @@ enum Expr_ExprKind {
   notSet
 }
 
+///  An abstract representation of a common expression.
+///
+///  Expressions are abstractly represented as a collection of identifiers,
+///  select statements, function calls, literals, and comprehensions. All
+///  operators with the exception of the '.' operator are modelled as function
+///  calls. This makes it easy to represent new operators into the existing AST.
+///
+///  All references within expressions must resolve to a
+///  [Decl][google.api.expr.v1alpha1.Decl] provided at type-check for an
+///  expression to be valid. A reference may either be a bare identifier `name` or
+///  a qualified identifier `google.api.name`. References may either refer to a
+///  value or a function declaration.
+///
+///  For example, the expression `google.api.name.startsWith('expr')` references
+///  the declaration `google.api.name` within a
+///  [Expr.Select][google.api.expr.v1alpha1.Expr.Select] expression, and the
+///  function declaration `startsWith`.
 class Expr extends $pb.GeneratedMessage {
-  static const $core.Map<$core.int, Expr_ExprKind> _Expr_ExprKindByTag = {
-    3: Expr_ExprKind.constExpr,
-    4: Expr_ExprKind.identExpr,
-    5: Expr_ExprKind.selectExpr,
-    6: Expr_ExprKind.callExpr,
-    7: Expr_ExprKind.listExpr,
-    8: Expr_ExprKind.structExpr,
-    9: Expr_ExprKind.comprehensionExpr,
-    0: Expr_ExprKind.notSet
-  };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'Expr',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.expr.v1alpha1'),
-      createEmptyInstance: create)
-    ..oo(0, [3, 4, 5, 6, 7, 8, 9])
-    ..aInt64(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'id')
-    ..aOM<Constant>(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'constExpr',
-        subBuilder: Constant.create)
-    ..aOM<Expr_Ident>(
-        4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'identExpr',
-        subBuilder: Expr_Ident.create)
-    ..aOM<Expr_Select>(
-        5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'selectExpr',
-        subBuilder: Expr_Select.create)
-    ..aOM<Expr_Call>(
-        6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'callExpr',
-        subBuilder: Expr_Call.create)
-    ..aOM<Expr_CreateList>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'listExpr', subBuilder: Expr_CreateList.create)
-    ..aOM<Expr_CreateStruct>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'structExpr', subBuilder: Expr_CreateStruct.create)
-    ..aOM<Expr_Comprehension>(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'comprehensionExpr', subBuilder: Expr_Comprehension.create)
-    ..hasRequiredFields = false;
-
-  Expr._() : super();
   factory Expr({
     $fixnum.Int64? id,
     Constant? constExpr,
@@ -906,39 +998,74 @@ class Expr extends $pb.GeneratedMessage {
     Expr_CreateStruct? structExpr,
     Expr_Comprehension? comprehensionExpr,
   }) {
-    final _result = create();
+    final $result = create();
     if (id != null) {
-      _result.id = id;
+      $result.id = id;
     }
     if (constExpr != null) {
-      _result.constExpr = constExpr;
+      $result.constExpr = constExpr;
     }
     if (identExpr != null) {
-      _result.identExpr = identExpr;
+      $result.identExpr = identExpr;
     }
     if (selectExpr != null) {
-      _result.selectExpr = selectExpr;
+      $result.selectExpr = selectExpr;
     }
     if (callExpr != null) {
-      _result.callExpr = callExpr;
+      $result.callExpr = callExpr;
     }
     if (listExpr != null) {
-      _result.listExpr = listExpr;
+      $result.listExpr = listExpr;
     }
     if (structExpr != null) {
-      _result.structExpr = structExpr;
+      $result.structExpr = structExpr;
     }
     if (comprehensionExpr != null) {
-      _result.comprehensionExpr = comprehensionExpr;
+      $result.comprehensionExpr = comprehensionExpr;
     }
-    return _result;
+    return $result;
   }
+  Expr._() : super();
   factory Expr.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Expr.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static const $core.Map<$core.int, Expr_ExprKind> _Expr_ExprKindByTag = {
+    3: Expr_ExprKind.constExpr,
+    4: Expr_ExprKind.identExpr,
+    5: Expr_ExprKind.selectExpr,
+    6: Expr_ExprKind.callExpr,
+    7: Expr_ExprKind.listExpr,
+    8: Expr_ExprKind.structExpr,
+    9: Expr_ExprKind.comprehensionExpr,
+    0: Expr_ExprKind.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Expr',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.expr.v1alpha1'),
+      createEmptyInstance: create)
+    ..oo(0, [3, 4, 5, 6, 7, 8, 9])
+    ..aInt64(2, _omitFieldNames ? '' : 'id')
+    ..aOM<Constant>(3, _omitFieldNames ? '' : 'constExpr',
+        subBuilder: Constant.create)
+    ..aOM<Expr_Ident>(4, _omitFieldNames ? '' : 'identExpr',
+        subBuilder: Expr_Ident.create)
+    ..aOM<Expr_Select>(5, _omitFieldNames ? '' : 'selectExpr',
+        subBuilder: Expr_Select.create)
+    ..aOM<Expr_Call>(6, _omitFieldNames ? '' : 'callExpr',
+        subBuilder: Expr_Call.create)
+    ..aOM<Expr_CreateList>(7, _omitFieldNames ? '' : 'listExpr',
+        subBuilder: Expr_CreateList.create)
+    ..aOM<Expr_CreateStruct>(8, _omitFieldNames ? '' : 'structExpr',
+        subBuilder: Expr_CreateStruct.create)
+    ..aOM<Expr_Comprehension>(9, _omitFieldNames ? '' : 'comprehensionExpr',
+        subBuilder: Expr_Comprehension.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -947,9 +1074,10 @@ class Expr extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Expr copyWith(void Function(Expr) updates) =>
-      super.copyWith((message) => updates(message as Expr))
-          as Expr; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Expr)) as Expr;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Expr create() => Expr._();
   Expr createEmptyInstance() => create();
@@ -962,6 +1090,9 @@ class Expr extends $pb.GeneratedMessage {
   Expr_ExprKind whichExprKind() => _Expr_ExprKindByTag[$_whichOneof(0)]!;
   void clearExprKind() => clearField($_whichOneof(0));
 
+  /// Required. An id assigned to this node by the parser which is unique in a
+  /// given expression tree. This is used to associate type information and other
+  /// attributes to a node in the parse tree.
   @$pb.TagNumber(2)
   $fixnum.Int64 get id => $_getI64(0);
   @$pb.TagNumber(2)
@@ -974,6 +1105,7 @@ class Expr extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearId() => clearField(2);
 
+  /// A literal expression.
   @$pb.TagNumber(3)
   Constant get constExpr => $_getN(1);
   @$pb.TagNumber(3)
@@ -988,6 +1120,7 @@ class Expr extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   Constant ensureConstExpr() => $_ensure(1);
 
+  /// An identifier expression.
   @$pb.TagNumber(4)
   Expr_Ident get identExpr => $_getN(2);
   @$pb.TagNumber(4)
@@ -1002,6 +1135,7 @@ class Expr extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   Expr_Ident ensureIdentExpr() => $_ensure(2);
 
+  /// A field selection expression, e.g. `request.auth`.
   @$pb.TagNumber(5)
   Expr_Select get selectExpr => $_getN(3);
   @$pb.TagNumber(5)
@@ -1016,6 +1150,7 @@ class Expr extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   Expr_Select ensureSelectExpr() => $_ensure(3);
 
+  /// A call expression, including calls to predefined functions and operators.
   @$pb.TagNumber(6)
   Expr_Call get callExpr => $_getN(4);
   @$pb.TagNumber(6)
@@ -1030,6 +1165,7 @@ class Expr extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   Expr_Call ensureCallExpr() => $_ensure(4);
 
+  /// A list creation expression.
   @$pb.TagNumber(7)
   Expr_CreateList get listExpr => $_getN(5);
   @$pb.TagNumber(7)
@@ -1044,6 +1180,7 @@ class Expr extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   Expr_CreateList ensureListExpr() => $_ensure(5);
 
+  /// A map or message creation expression.
   @$pb.TagNumber(8)
   Expr_CreateStruct get structExpr => $_getN(6);
   @$pb.TagNumber(8)
@@ -1058,6 +1195,7 @@ class Expr extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   Expr_CreateStruct ensureStructExpr() => $_ensure(6);
 
+  /// A comprehension expression.
   @$pb.TagNumber(9)
   Expr_Comprehension get comprehensionExpr => $_getN(7);
   @$pb.TagNumber(9)
@@ -1086,7 +1224,73 @@ enum Constant_ConstantKind {
   notSet
 }
 
+///  Represents a primitive literal.
+///
+///  Named 'Constant' here for backwards compatibility.
+///
+///  This is similar as the primitives supported in the well-known type
+///  `google.protobuf.Value`, but richer so it can represent CEL's full range of
+///  primitives.
+///
+///  Lists and structs are not included as constants as these aggregate types may
+///  contain [Expr][google.api.expr.v1alpha1.Expr] elements which require
+///  evaluation and are thus not constant.
+///
+///  Examples of literals include: `"hello"`, `b'bytes'`, `1u`, `4.2`, `-2`,
+///  `true`, `null`.
 class Constant extends $pb.GeneratedMessage {
+  factory Constant({
+    $48.NullValue? nullValue,
+    $core.bool? boolValue,
+    $fixnum.Int64? int64Value,
+    $fixnum.Int64? uint64Value,
+    $core.double? doubleValue,
+    $core.String? stringValue,
+    $core.List<$core.int>? bytesValue,
+    @$core.Deprecated('This field is deprecated.') $51.Duration? durationValue,
+    @$core.Deprecated('This field is deprecated.')
+    $50.Timestamp? timestampValue,
+  }) {
+    final $result = create();
+    if (nullValue != null) {
+      $result.nullValue = nullValue;
+    }
+    if (boolValue != null) {
+      $result.boolValue = boolValue;
+    }
+    if (int64Value != null) {
+      $result.int64Value = int64Value;
+    }
+    if (uint64Value != null) {
+      $result.uint64Value = uint64Value;
+    }
+    if (doubleValue != null) {
+      $result.doubleValue = doubleValue;
+    }
+    if (stringValue != null) {
+      $result.stringValue = stringValue;
+    }
+    if (bytesValue != null) {
+      $result.bytesValue = bytesValue;
+    }
+    if (durationValue != null) {
+      // ignore: deprecated_member_use_from_same_package
+      $result.durationValue = durationValue;
+    }
+    if (timestampValue != null) {
+      // ignore: deprecated_member_use_from_same_package
+      $result.timestampValue = timestampValue;
+    }
+    return $result;
+  }
+  Constant._() : super();
+  factory Constant.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory Constant.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+
   static const $core.Map<$core.int, Constant_ConstantKind>
       _Constant_ConstantKindByTag = {
     1: Constant_ConstantKind.nullValue,
@@ -1101,85 +1305,32 @@ class Constant extends $pb.GeneratedMessage {
     0: Constant_ConstantKind.notSet
   };
   static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Constant',
+      _omitMessageNames ? '' : 'Constant',
       package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.expr.v1alpha1'),
+          _omitMessageNames ? '' : 'google.api.expr.v1alpha1'),
       createEmptyInstance: create)
     ..oo(0, [1, 2, 3, 4, 5, 6, 7, 8, 9])
-    ..e<$2.NullValue>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'nullValue',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: $2.NullValue.NULL_VALUE,
-        valueOf: $2.NullValue.valueOf,
-        enumValues: $2.NullValue.values)
-    ..aOB(2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'boolValue')
-    ..aInt64(3, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'int64Value')
-    ..a<$fixnum.Int64>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'uint64Value', $pb.PbFieldType.OU6, defaultOrMaker: $fixnum.Int64.ZERO)
-    ..a<$core.double>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'doubleValue', $pb.PbFieldType.OD)
-    ..aOS(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'stringValue')
-    ..a<$core.List<$core.int>>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'bytesValue', $pb.PbFieldType.OY)
-    ..aOM<$0.Duration>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'durationValue', subBuilder: $0.Duration.create)
-    ..aOM<$1.Timestamp>(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'timestampValue', subBuilder: $1.Timestamp.create)
+    ..e<$48.NullValue>(
+        1, _omitFieldNames ? '' : 'nullValue', $pb.PbFieldType.OE,
+        defaultOrMaker: $48.NullValue.NULL_VALUE,
+        valueOf: $48.NullValue.valueOf,
+        enumValues: $48.NullValue.values)
+    ..aOB(2, _omitFieldNames ? '' : 'boolValue')
+    ..aInt64(3, _omitFieldNames ? '' : 'int64Value')
+    ..a<$fixnum.Int64>(
+        4, _omitFieldNames ? '' : 'uint64Value', $pb.PbFieldType.OU6,
+        defaultOrMaker: $fixnum.Int64.ZERO)
+    ..a<$core.double>(
+        5, _omitFieldNames ? '' : 'doubleValue', $pb.PbFieldType.OD)
+    ..aOS(6, _omitFieldNames ? '' : 'stringValue')
+    ..a<$core.List<$core.int>>(
+        7, _omitFieldNames ? '' : 'bytesValue', $pb.PbFieldType.OY)
+    ..aOM<$51.Duration>(8, _omitFieldNames ? '' : 'durationValue',
+        subBuilder: $51.Duration.create)
+    ..aOM<$50.Timestamp>(9, _omitFieldNames ? '' : 'timestampValue',
+        subBuilder: $50.Timestamp.create)
     ..hasRequiredFields = false;
 
-  Constant._() : super();
-  factory Constant({
-    $2.NullValue? nullValue,
-    $core.bool? boolValue,
-    $fixnum.Int64? int64Value,
-    $fixnum.Int64? uint64Value,
-    $core.double? doubleValue,
-    $core.String? stringValue,
-    $core.List<$core.int>? bytesValue,
-    @$core.Deprecated('This field is deprecated.') $0.Duration? durationValue,
-    @$core.Deprecated('This field is deprecated.') $1.Timestamp? timestampValue,
-  }) {
-    final _result = create();
-    if (nullValue != null) {
-      _result.nullValue = nullValue;
-    }
-    if (boolValue != null) {
-      _result.boolValue = boolValue;
-    }
-    if (int64Value != null) {
-      _result.int64Value = int64Value;
-    }
-    if (uint64Value != null) {
-      _result.uint64Value = uint64Value;
-    }
-    if (doubleValue != null) {
-      _result.doubleValue = doubleValue;
-    }
-    if (stringValue != null) {
-      _result.stringValue = stringValue;
-    }
-    if (bytesValue != null) {
-      _result.bytesValue = bytesValue;
-    }
-    if (durationValue != null) {
-      // ignore: deprecated_member_use_from_same_package
-      _result.durationValue = durationValue;
-    }
-    if (timestampValue != null) {
-      // ignore: deprecated_member_use_from_same_package
-      _result.timestampValue = timestampValue;
-    }
-    return _result;
-  }
-  factory Constant.fromBuffer($core.List<$core.int> i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromBuffer(i, r);
-  factory Constant.fromJson($core.String i,
-          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
-      create()..mergeFromJson(i, r);
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1188,9 +1339,10 @@ class Constant extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   Constant copyWith(void Function(Constant) updates) =>
-      super.copyWith((message) => updates(message as Constant))
-          as Constant; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as Constant)) as Constant;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Constant create() => Constant._();
   Constant createEmptyInstance() => create();
@@ -1204,10 +1356,11 @@ class Constant extends $pb.GeneratedMessage {
       _Constant_ConstantKindByTag[$_whichOneof(0)]!;
   void clearConstantKind() => clearField($_whichOneof(0));
 
+  /// null value.
   @$pb.TagNumber(1)
-  $2.NullValue get nullValue => $_getN(0);
+  $48.NullValue get nullValue => $_getN(0);
   @$pb.TagNumber(1)
-  set nullValue($2.NullValue v) {
+  set nullValue($48.NullValue v) {
     setField(1, v);
   }
 
@@ -1216,6 +1369,7 @@ class Constant extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearNullValue() => clearField(1);
 
+  /// boolean value.
   @$pb.TagNumber(2)
   $core.bool get boolValue => $_getBF(1);
   @$pb.TagNumber(2)
@@ -1228,6 +1382,7 @@ class Constant extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearBoolValue() => clearField(2);
 
+  /// int64 value.
   @$pb.TagNumber(3)
   $fixnum.Int64 get int64Value => $_getI64(2);
   @$pb.TagNumber(3)
@@ -1240,6 +1395,7 @@ class Constant extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearInt64Value() => clearField(3);
 
+  /// uint64 value.
   @$pb.TagNumber(4)
   $fixnum.Int64 get uint64Value => $_getI64(3);
   @$pb.TagNumber(4)
@@ -1252,6 +1408,7 @@ class Constant extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearUint64Value() => clearField(4);
 
+  /// double value.
   @$pb.TagNumber(5)
   $core.double get doubleValue => $_getN(4);
   @$pb.TagNumber(5)
@@ -1264,6 +1421,7 @@ class Constant extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearDoubleValue() => clearField(5);
 
+  /// string value.
   @$pb.TagNumber(6)
   $core.String get stringValue => $_getSZ(5);
   @$pb.TagNumber(6)
@@ -1276,6 +1434,7 @@ class Constant extends $pb.GeneratedMessage {
   @$pb.TagNumber(6)
   void clearStringValue() => clearField(6);
 
+  /// bytes value.
   @$pb.TagNumber(7)
   $core.List<$core.int> get bytesValue => $_getN(6);
   @$pb.TagNumber(7)
@@ -1288,12 +1447,15 @@ class Constant extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   void clearBytesValue() => clearField(7);
 
+  ///  protobuf.Duration value.
+  ///
+  ///  Deprecated: duration is no longer considered a builtin cel type.
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(8)
-  $0.Duration get durationValue => $_getN(7);
+  $51.Duration get durationValue => $_getN(7);
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(8)
-  set durationValue($0.Duration v) {
+  set durationValue($51.Duration v) {
     setField(8, v);
   }
 
@@ -1305,14 +1467,17 @@ class Constant extends $pb.GeneratedMessage {
   void clearDurationValue() => clearField(8);
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(8)
-  $0.Duration ensureDurationValue() => $_ensure(7);
+  $51.Duration ensureDurationValue() => $_ensure(7);
 
+  ///  protobuf.Timestamp value.
+  ///
+  ///  Deprecated: timestamp is no longer considered a builtin cel type.
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(9)
-  $1.Timestamp get timestampValue => $_getN(8);
+  $50.Timestamp get timestampValue => $_getN(8);
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(9)
-  set timestampValue($1.Timestamp v) {
+  set timestampValue($50.Timestamp v) {
     setField(9, v);
   }
 
@@ -1324,79 +1489,265 @@ class Constant extends $pb.GeneratedMessage {
   void clearTimestampValue() => clearField(9);
   @$core.Deprecated('This field is deprecated.')
   @$pb.TagNumber(9)
-  $1.Timestamp ensureTimestampValue() => $_ensure(8);
+  $50.Timestamp ensureTimestampValue() => $_ensure(8);
 }
 
-class SourceInfo extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i =
-      $pb.BuilderInfo(const $core.bool.fromEnvironment('protobuf.omit_message_names') ? '' : 'SourceInfo',
-          package: const $pb.PackageName(
-              $core.bool.fromEnvironment('protobuf.omit_message_names')
-                  ? ''
-                  : 'google.api.expr.v1alpha1'),
-          createEmptyInstance: create)
-        ..aOS(
-            1,
-            const $core.bool.fromEnvironment('protobuf.omit_field_names')
-                ? ''
-                : 'syntaxVersion')
-        ..aOS(
-            2,
-            const $core.bool.fromEnvironment('protobuf.omit_field_names')
-                ? ''
-                : 'location')
-        ..p<$core.int>(
-            3,
-            const $core.bool.fromEnvironment('protobuf.omit_field_names')
-                ? ''
-                : 'lineOffsets',
-            $pb.PbFieldType.P3)
-        ..m<$fixnum.Int64, $core.int>(
-            4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'positions',
-            entryClassName: 'SourceInfo.PositionsEntry',
-            keyFieldType: $pb.PbFieldType.O6,
-            valueFieldType: $pb.PbFieldType.O3,
-            packageName: const $pb.PackageName('google.api.expr.v1alpha1'))
-        ..m<$fixnum.Int64, Expr>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'macroCalls',
-            entryClassName: 'SourceInfo.MacroCallsEntry',
-            keyFieldType: $pb.PbFieldType.O6,
-            valueFieldType: $pb.PbFieldType.OM,
-            valueCreator: Expr.create,
-            packageName: const $pb.PackageName('google.api.expr.v1alpha1'))
-        ..hasRequiredFields = false;
+/// Version
+class SourceInfo_Extension_Version extends $pb.GeneratedMessage {
+  factory SourceInfo_Extension_Version({
+    $fixnum.Int64? major,
+    $fixnum.Int64? minor,
+  }) {
+    final $result = create();
+    if (major != null) {
+      $result.major = major;
+    }
+    if (minor != null) {
+      $result.minor = minor;
+    }
+    return $result;
+  }
+  SourceInfo_Extension_Version._() : super();
+  factory SourceInfo_Extension_Version.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SourceInfo_Extension_Version.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
 
-  SourceInfo._() : super();
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SourceInfo.Extension.Version',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.expr.v1alpha1'),
+      createEmptyInstance: create)
+    ..aInt64(1, _omitFieldNames ? '' : 'major')
+    ..aInt64(2, _omitFieldNames ? '' : 'minor')
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  SourceInfo_Extension_Version clone() =>
+      SourceInfo_Extension_Version()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  SourceInfo_Extension_Version copyWith(
+          void Function(SourceInfo_Extension_Version) updates) =>
+      super.copyWith(
+              (message) => updates(message as SourceInfo_Extension_Version))
+          as SourceInfo_Extension_Version;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static SourceInfo_Extension_Version create() =>
+      SourceInfo_Extension_Version._();
+  SourceInfo_Extension_Version createEmptyInstance() => create();
+  static $pb.PbList<SourceInfo_Extension_Version> createRepeated() =>
+      $pb.PbList<SourceInfo_Extension_Version>();
+  @$core.pragma('dart2js:noInline')
+  static SourceInfo_Extension_Version getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SourceInfo_Extension_Version>(create);
+  static SourceInfo_Extension_Version? _defaultInstance;
+
+  /// Major version changes indicate different required support level from
+  /// the required components.
+  @$pb.TagNumber(1)
+  $fixnum.Int64 get major => $_getI64(0);
+  @$pb.TagNumber(1)
+  set major($fixnum.Int64 v) {
+    $_setInt64(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasMajor() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearMajor() => clearField(1);
+
+  /// Minor version changes must not change the observed behavior from
+  /// existing implementations, but may be provided informationally.
+  @$pb.TagNumber(2)
+  $fixnum.Int64 get minor => $_getI64(1);
+  @$pb.TagNumber(2)
+  set minor($fixnum.Int64 v) {
+    $_setInt64(1, v);
+  }
+
+  @$pb.TagNumber(2)
+  $core.bool hasMinor() => $_has(1);
+  @$pb.TagNumber(2)
+  void clearMinor() => clearField(2);
+}
+
+/// An extension that was requested for the source expression.
+class SourceInfo_Extension extends $pb.GeneratedMessage {
+  factory SourceInfo_Extension({
+    $core.String? id,
+    $core.Iterable<SourceInfo_Extension_Component>? affectedComponents,
+    SourceInfo_Extension_Version? version,
+  }) {
+    final $result = create();
+    if (id != null) {
+      $result.id = id;
+    }
+    if (affectedComponents != null) {
+      $result.affectedComponents.addAll(affectedComponents);
+    }
+    if (version != null) {
+      $result.version = version;
+    }
+    return $result;
+  }
+  SourceInfo_Extension._() : super();
+  factory SourceInfo_Extension.fromBuffer($core.List<$core.int> i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromBuffer(i, r);
+  factory SourceInfo_Extension.fromJson($core.String i,
+          [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
+      create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SourceInfo.Extension',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.expr.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'id')
+    ..pc<SourceInfo_Extension_Component>(
+        2, _omitFieldNames ? '' : 'affectedComponents', $pb.PbFieldType.KE,
+        valueOf: SourceInfo_Extension_Component.valueOf,
+        enumValues: SourceInfo_Extension_Component.values,
+        defaultEnumValue: SourceInfo_Extension_Component.COMPONENT_UNSPECIFIED)
+    ..aOM<SourceInfo_Extension_Version>(3, _omitFieldNames ? '' : 'version',
+        subBuilder: SourceInfo_Extension_Version.create)
+    ..hasRequiredFields = false;
+
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
+      'Will be removed in next major version')
+  SourceInfo_Extension clone() =>
+      SourceInfo_Extension()..mergeFromMessage(this);
+  @$core.Deprecated('Using this can add significant overhead to your binary. '
+      'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
+      'Will be removed in next major version')
+  SourceInfo_Extension copyWith(void Function(SourceInfo_Extension) updates) =>
+      super.copyWith((message) => updates(message as SourceInfo_Extension))
+          as SourceInfo_Extension;
+
+  $pb.BuilderInfo get info_ => _i;
+
+  @$core.pragma('dart2js:noInline')
+  static SourceInfo_Extension create() => SourceInfo_Extension._();
+  SourceInfo_Extension createEmptyInstance() => create();
+  static $pb.PbList<SourceInfo_Extension> createRepeated() =>
+      $pb.PbList<SourceInfo_Extension>();
+  @$core.pragma('dart2js:noInline')
+  static SourceInfo_Extension getDefault() => _defaultInstance ??=
+      $pb.GeneratedMessage.$_defaultFor<SourceInfo_Extension>(create);
+  static SourceInfo_Extension? _defaultInstance;
+
+  /// Identifier for the extension. Example: constant_folding
+  @$pb.TagNumber(1)
+  $core.String get id => $_getSZ(0);
+  @$pb.TagNumber(1)
+  set id($core.String v) {
+    $_setString(0, v);
+  }
+
+  @$pb.TagNumber(1)
+  $core.bool hasId() => $_has(0);
+  @$pb.TagNumber(1)
+  void clearId() => clearField(1);
+
+  ///  If set, the listed components must understand the extension for the
+  ///  expression to evaluate correctly.
+  ///
+  ///  This field has set semantics, repeated values should be deduplicated.
+  @$pb.TagNumber(2)
+  $core.List<SourceInfo_Extension_Component> get affectedComponents =>
+      $_getList(1);
+
+  /// Version info. May be skipped if it isn't meaningful for the extension.
+  /// (for example constant_folding might always be v0.0).
+  @$pb.TagNumber(3)
+  SourceInfo_Extension_Version get version => $_getN(2);
+  @$pb.TagNumber(3)
+  set version(SourceInfo_Extension_Version v) {
+    setField(3, v);
+  }
+
+  @$pb.TagNumber(3)
+  $core.bool hasVersion() => $_has(2);
+  @$pb.TagNumber(3)
+  void clearVersion() => clearField(3);
+  @$pb.TagNumber(3)
+  SourceInfo_Extension_Version ensureVersion() => $_ensure(2);
+}
+
+/// Source information collected at parse time.
+class SourceInfo extends $pb.GeneratedMessage {
   factory SourceInfo({
     $core.String? syntaxVersion,
     $core.String? location,
     $core.Iterable<$core.int>? lineOffsets,
     $core.Map<$fixnum.Int64, $core.int>? positions,
     $core.Map<$fixnum.Int64, Expr>? macroCalls,
+    $core.Iterable<SourceInfo_Extension>? extensions,
   }) {
-    final _result = create();
+    final $result = create();
     if (syntaxVersion != null) {
-      _result.syntaxVersion = syntaxVersion;
+      $result.syntaxVersion = syntaxVersion;
     }
     if (location != null) {
-      _result.location = location;
+      $result.location = location;
     }
     if (lineOffsets != null) {
-      _result.lineOffsets.addAll(lineOffsets);
+      $result.lineOffsets.addAll(lineOffsets);
     }
     if (positions != null) {
-      _result.positions.addAll(positions);
+      $result.positions.addAll(positions);
     }
     if (macroCalls != null) {
-      _result.macroCalls.addAll(macroCalls);
+      $result.macroCalls.addAll(macroCalls);
     }
-    return _result;
+    if (extensions != null) {
+      $result.extensions.addAll(extensions);
+    }
+    return $result;
   }
+  SourceInfo._() : super();
   factory SourceInfo.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory SourceInfo.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SourceInfo',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.expr.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'syntaxVersion')
+    ..aOS(2, _omitFieldNames ? '' : 'location')
+    ..p<$core.int>(3, _omitFieldNames ? '' : 'lineOffsets', $pb.PbFieldType.K3)
+    ..m<$fixnum.Int64, $core.int>(4, _omitFieldNames ? '' : 'positions',
+        entryClassName: 'SourceInfo.PositionsEntry',
+        keyFieldType: $pb.PbFieldType.O6,
+        valueFieldType: $pb.PbFieldType.O3,
+        packageName: const $pb.PackageName('google.api.expr.v1alpha1'))
+    ..m<$fixnum.Int64, Expr>(5, _omitFieldNames ? '' : 'macroCalls',
+        entryClassName: 'SourceInfo.MacroCallsEntry',
+        keyFieldType: $pb.PbFieldType.O6,
+        valueFieldType: $pb.PbFieldType.OM,
+        valueCreator: Expr.create,
+        valueDefaultOrMaker: Expr.getDefault,
+        packageName: const $pb.PackageName('google.api.expr.v1alpha1'))
+    ..pc<SourceInfo_Extension>(
+        6, _omitFieldNames ? '' : 'extensions', $pb.PbFieldType.PM,
+        subBuilder: SourceInfo_Extension.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1405,9 +1756,10 @@ class SourceInfo extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   SourceInfo copyWith(void Function(SourceInfo) updates) =>
-      super.copyWith((message) => updates(message as SourceInfo))
-          as SourceInfo; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as SourceInfo)) as SourceInfo;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SourceInfo create() => SourceInfo._();
   SourceInfo createEmptyInstance() => create();
@@ -1417,6 +1769,7 @@ class SourceInfo extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<SourceInfo>(create);
   static SourceInfo? _defaultInstance;
 
+  /// The syntax version of the source, e.g. `cel1`.
   @$pb.TagNumber(1)
   $core.String get syntaxVersion => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1429,6 +1782,11 @@ class SourceInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearSyntaxVersion() => clearField(1);
 
+  ///  The location name. All position information attached to an expression is
+  ///  relative to this location.
+  ///
+  ///  The location could be a file, UI element, or similar. For example,
+  ///  `acme/app/AnvilPolicy.cel`.
   @$pb.TagNumber(2)
   $core.String get location => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -1441,74 +1799,84 @@ class SourceInfo extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearLocation() => clearField(2);
 
+  ///  Monotonically increasing list of code point offsets where newlines
+  ///  `\n` appear.
+  ///
+  ///  The line number of a given position is the index `i` where for a given
+  ///  `id` the `line_offsets[i] < id_positions[id] < line_offsets[i+1]`. The
+  ///  column may be derivd from `id_positions[id] - line_offsets[i]`.
   @$pb.TagNumber(3)
   $core.List<$core.int> get lineOffsets => $_getList(2);
 
+  /// A map from the parse node id (e.g. `Expr.id`) to the code point offset
+  /// within the source.
   @$pb.TagNumber(4)
   $core.Map<$fixnum.Int64, $core.int> get positions => $_getMap(3);
 
+  ///  A map from the parse node id where a macro replacement was made to the
+  ///  call `Expr` that resulted in a macro expansion.
+  ///
+  ///  For example, `has(value.field)` is a function call that is replaced by a
+  ///  `test_only` field selection in the AST. Likewise, the call
+  ///  `list.exists(e, e > 10)` translates to a comprehension expression. The key
+  ///  in the map corresponds to the expression id of the expanded macro, and the
+  ///  value is the call `Expr` that was replaced.
   @$pb.TagNumber(5)
   $core.Map<$fixnum.Int64, Expr> get macroCalls => $_getMap(4);
+
+  ///  A list of tags for extensions that were used while parsing or type checking
+  ///  the source expression. For example, optimizations that require special
+  ///  runtime support may be specified.
+  ///
+  ///  These are used to check feature support between components in separate
+  ///  implementations. This can be used to either skip redundant work or
+  ///  report an error if the extension is unsupported.
+  @$pb.TagNumber(6)
+  $core.List<SourceInfo_Extension> get extensions => $_getList(5);
 }
 
+/// A specific position in source.
 class SourcePosition extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'SourcePosition',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.expr.v1alpha1'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'location')
-    ..a<$core.int>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'offset',
-        $pb.PbFieldType.O3)
-    ..a<$core.int>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'line',
-        $pb.PbFieldType.O3)
-    ..a<$core.int>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'column', $pb.PbFieldType.O3)
-    ..hasRequiredFields = false;
-
-  SourcePosition._() : super();
   factory SourcePosition({
     $core.String? location,
     $core.int? offset,
     $core.int? line,
     $core.int? column,
   }) {
-    final _result = create();
+    final $result = create();
     if (location != null) {
-      _result.location = location;
+      $result.location = location;
     }
     if (offset != null) {
-      _result.offset = offset;
+      $result.offset = offset;
     }
     if (line != null) {
-      _result.line = line;
+      $result.line = line;
     }
     if (column != null) {
-      _result.column = column;
+      $result.column = column;
     }
-    return _result;
+    return $result;
   }
+  SourcePosition._() : super();
   factory SourcePosition.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory SourcePosition.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'SourcePosition',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.expr.v1alpha1'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'location')
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'offset', $pb.PbFieldType.O3)
+    ..a<$core.int>(3, _omitFieldNames ? '' : 'line', $pb.PbFieldType.O3)
+    ..a<$core.int>(4, _omitFieldNames ? '' : 'column', $pb.PbFieldType.O3)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1518,8 +1886,10 @@ class SourcePosition extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   SourcePosition copyWith(void Function(SourcePosition) updates) =>
       super.copyWith((message) => updates(message as SourcePosition))
-          as SourcePosition; // ignore: deprecated_member_use
+          as SourcePosition;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static SourcePosition create() => SourcePosition._();
   SourcePosition createEmptyInstance() => create();
@@ -1530,6 +1900,7 @@ class SourcePosition extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<SourcePosition>(create);
   static SourcePosition? _defaultInstance;
 
+  /// The soucre location name (e.g. file name).
   @$pb.TagNumber(1)
   $core.String get location => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1542,6 +1913,7 @@ class SourcePosition extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearLocation() => clearField(1);
 
+  /// The UTF-8 code unit offset.
   @$pb.TagNumber(2)
   $core.int get offset => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -1554,6 +1926,8 @@ class SourcePosition extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearOffset() => clearField(2);
 
+  /// The 1-based index of the starting line in the source text
+  /// where the issue occurs, or 0 if unknown.
   @$pb.TagNumber(3)
   $core.int get line => $_getIZ(2);
   @$pb.TagNumber(3)
@@ -1566,6 +1940,8 @@ class SourcePosition extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearLine() => clearField(3);
 
+  /// The 0-based index of the starting position within the line of source text
+  /// where the issue occurs.  Only meaningful if line is nonzero.
   @$pb.TagNumber(4)
   $core.int get column => $_getIZ(3);
   @$pb.TagNumber(4)
@@ -1578,3 +1954,7 @@ class SourcePosition extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearColumn() => clearField(4);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

@@ -1,67 +1,59 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/api/servicecontrol/v1/distribution.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:fixnum/fixnum.dart' as $fixnum;
 import 'package:protobuf/protobuf.dart' as $pb;
 
-class Distribution_LinearBuckets extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Distribution.LinearBuckets',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.servicecontrol.v1'),
-      createEmptyInstance: create)
-    ..a<$core.int>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'numFiniteBuckets',
-        $pb.PbFieldType.O3)
-    ..a<$core.double>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'width',
-        $pb.PbFieldType.OD)
-    ..a<$core.double>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'offset',
-        $pb.PbFieldType.OD)
-    ..hasRequiredFields = false;
+import '../../distribution.pb.dart' as $70;
 
-  Distribution_LinearBuckets._() : super();
+/// Describing buckets with constant width.
+class Distribution_LinearBuckets extends $pb.GeneratedMessage {
   factory Distribution_LinearBuckets({
     $core.int? numFiniteBuckets,
     $core.double? width,
     $core.double? offset,
   }) {
-    final _result = create();
+    final $result = create();
     if (numFiniteBuckets != null) {
-      _result.numFiniteBuckets = numFiniteBuckets;
+      $result.numFiniteBuckets = numFiniteBuckets;
     }
     if (width != null) {
-      _result.width = width;
+      $result.width = width;
     }
     if (offset != null) {
-      _result.offset = offset;
+      $result.offset = offset;
     }
-    return _result;
+    return $result;
   }
+  Distribution_LinearBuckets._() : super();
   factory Distribution_LinearBuckets.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Distribution_LinearBuckets.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Distribution.LinearBuckets',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.servicecontrol.v1'),
+      createEmptyInstance: create)
+    ..a<$core.int>(
+        1, _omitFieldNames ? '' : 'numFiniteBuckets', $pb.PbFieldType.O3)
+    ..a<$core.double>(2, _omitFieldNames ? '' : 'width', $pb.PbFieldType.OD)
+    ..a<$core.double>(3, _omitFieldNames ? '' : 'offset', $pb.PbFieldType.OD)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -74,8 +66,10 @@ class Distribution_LinearBuckets extends $pb.GeneratedMessage {
           void Function(Distribution_LinearBuckets) updates) =>
       super.copyWith(
               (message) => updates(message as Distribution_LinearBuckets))
-          as Distribution_LinearBuckets; // ignore: deprecated_member_use
+          as Distribution_LinearBuckets;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Distribution_LinearBuckets create() => Distribution_LinearBuckets._();
   Distribution_LinearBuckets createEmptyInstance() => create();
@@ -86,6 +80,9 @@ class Distribution_LinearBuckets extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<Distribution_LinearBuckets>(create);
   static Distribution_LinearBuckets? _defaultInstance;
 
+  /// The number of finite buckets. With the underflow and overflow buckets,
+  /// the total number of buckets is `num_finite_buckets` + 2.
+  /// See comments on `bucket_options` for details.
   @$pb.TagNumber(1)
   $core.int get numFiniteBuckets => $_getIZ(0);
   @$pb.TagNumber(1)
@@ -98,6 +95,10 @@ class Distribution_LinearBuckets extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearNumFiniteBuckets() => clearField(1);
 
+  /// The i'th linear bucket covers the interval
+  ///   [offset + (i-1) * width, offset + i * width)
+  /// where i ranges from 1 to num_finite_buckets, inclusive.
+  /// Must be strictly positive.
   @$pb.TagNumber(2)
   $core.double get width => $_getN(1);
   @$pb.TagNumber(2)
@@ -110,6 +111,9 @@ class Distribution_LinearBuckets extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearWidth() => clearField(2);
 
+  /// The i'th linear bucket covers the interval
+  ///   [offset + (i-1) * width, offset + i * width)
+  /// where i ranges from 1 to num_finite_buckets, inclusive.
   @$pb.TagNumber(3)
   $core.double get offset => $_getN(2);
   @$pb.TagNumber(3)
@@ -123,58 +127,45 @@ class Distribution_LinearBuckets extends $pb.GeneratedMessage {
   void clearOffset() => clearField(3);
 }
 
+/// Describing buckets with exponentially growing width.
 class Distribution_ExponentialBuckets extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Distribution.ExponentialBuckets',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.servicecontrol.v1'),
-      createEmptyInstance: create)
-    ..a<$core.int>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'numFiniteBuckets',
-        $pb.PbFieldType.O3)
-    ..a<$core.double>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'growthFactor',
-        $pb.PbFieldType.OD)
-    ..a<$core.double>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'scale',
-        $pb.PbFieldType.OD)
-    ..hasRequiredFields = false;
-
-  Distribution_ExponentialBuckets._() : super();
   factory Distribution_ExponentialBuckets({
     $core.int? numFiniteBuckets,
     $core.double? growthFactor,
     $core.double? scale,
   }) {
-    final _result = create();
+    final $result = create();
     if (numFiniteBuckets != null) {
-      _result.numFiniteBuckets = numFiniteBuckets;
+      $result.numFiniteBuckets = numFiniteBuckets;
     }
     if (growthFactor != null) {
-      _result.growthFactor = growthFactor;
+      $result.growthFactor = growthFactor;
     }
     if (scale != null) {
-      _result.scale = scale;
+      $result.scale = scale;
     }
-    return _result;
+    return $result;
   }
+  Distribution_ExponentialBuckets._() : super();
   factory Distribution_ExponentialBuckets.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Distribution_ExponentialBuckets.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Distribution.ExponentialBuckets',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.servicecontrol.v1'),
+      createEmptyInstance: create)
+    ..a<$core.int>(
+        1, _omitFieldNames ? '' : 'numFiniteBuckets', $pb.PbFieldType.O3)
+    ..a<$core.double>(
+        2, _omitFieldNames ? '' : 'growthFactor', $pb.PbFieldType.OD)
+    ..a<$core.double>(3, _omitFieldNames ? '' : 'scale', $pb.PbFieldType.OD)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -187,8 +178,10 @@ class Distribution_ExponentialBuckets extends $pb.GeneratedMessage {
           void Function(Distribution_ExponentialBuckets) updates) =>
       super.copyWith(
               (message) => updates(message as Distribution_ExponentialBuckets))
-          as Distribution_ExponentialBuckets; // ignore: deprecated_member_use
+          as Distribution_ExponentialBuckets;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Distribution_ExponentialBuckets create() =>
       Distribution_ExponentialBuckets._();
@@ -201,6 +194,9 @@ class Distribution_ExponentialBuckets extends $pb.GeneratedMessage {
           create);
   static Distribution_ExponentialBuckets? _defaultInstance;
 
+  /// The number of finite buckets. With the underflow and overflow buckets,
+  /// the total number of buckets is `num_finite_buckets` + 2.
+  /// See comments on `bucket_options` for details.
   @$pb.TagNumber(1)
   $core.int get numFiniteBuckets => $_getIZ(0);
   @$pb.TagNumber(1)
@@ -213,6 +209,10 @@ class Distribution_ExponentialBuckets extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearNumFiniteBuckets() => clearField(1);
 
+  /// The i'th exponential bucket covers the interval
+  ///   [scale * growth_factor^(i-1), scale * growth_factor^i)
+  /// where i ranges from 1 to num_finite_buckets inclusive.
+  /// Must be larger than 1.0.
   @$pb.TagNumber(2)
   $core.double get growthFactor => $_getN(1);
   @$pb.TagNumber(2)
@@ -225,6 +225,10 @@ class Distribution_ExponentialBuckets extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearGrowthFactor() => clearField(2);
 
+  /// The i'th exponential bucket covers the interval
+  ///   [scale * growth_factor^(i-1), scale * growth_factor^i)
+  /// where i ranges from 1 to num_finite_buckets inclusive.
+  /// Must be > 0.
   @$pb.TagNumber(3)
   $core.double get scale => $_getN(2);
   @$pb.TagNumber(3)
@@ -238,40 +242,33 @@ class Distribution_ExponentialBuckets extends $pb.GeneratedMessage {
   void clearScale() => clearField(3);
 }
 
+/// Describing buckets with arbitrary user-provided width.
 class Distribution_ExplicitBuckets extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Distribution.ExplicitBuckets',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.servicecontrol.v1'),
-      createEmptyInstance: create)
-    ..p<$core.double>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'bounds',
-        $pb.PbFieldType.PD)
-    ..hasRequiredFields = false;
-
-  Distribution_ExplicitBuckets._() : super();
   factory Distribution_ExplicitBuckets({
     $core.Iterable<$core.double>? bounds,
   }) {
-    final _result = create();
+    final $result = create();
     if (bounds != null) {
-      _result.bounds.addAll(bounds);
+      $result.bounds.addAll(bounds);
     }
-    return _result;
+    return $result;
   }
+  Distribution_ExplicitBuckets._() : super();
   factory Distribution_ExplicitBuckets.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Distribution_ExplicitBuckets.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Distribution.ExplicitBuckets',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.servicecontrol.v1'),
+      createEmptyInstance: create)
+    ..p<$core.double>(1, _omitFieldNames ? '' : 'bounds', $pb.PbFieldType.KD)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -284,8 +281,10 @@ class Distribution_ExplicitBuckets extends $pb.GeneratedMessage {
           void Function(Distribution_ExplicitBuckets) updates) =>
       super.copyWith(
               (message) => updates(message as Distribution_ExplicitBuckets))
-          as Distribution_ExplicitBuckets; // ignore: deprecated_member_use
+          as Distribution_ExplicitBuckets;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Distribution_ExplicitBuckets create() =>
       Distribution_ExplicitBuckets._();
@@ -297,6 +296,21 @@ class Distribution_ExplicitBuckets extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<Distribution_ExplicitBuckets>(create);
   static Distribution_ExplicitBuckets? _defaultInstance;
 
+  ///  'bound' is a list of strictly increasing boundaries between
+  ///  buckets. Note that a list of length N-1 defines N buckets because
+  ///  of fenceposting. See comments on `bucket_options` for details.
+  ///
+  ///  The i'th finite bucket covers the interval
+  ///    [bound[i-1], bound[i])
+  ///  where i ranges from 1 to bound_size() - 1. Note that there are no
+  ///  finite buckets at all if 'bound' only contains a single element; in
+  ///  that special case the single bound defines the boundary between the
+  ///  underflow and overflow buckets.
+  ///
+  ///  bucket number                   lower bound    upper bound
+  ///   i == 0 (underflow)              -inf           bound[i]
+  ///   0 < i < bound_size()            bound[i-1]     bound[i]
+  ///   i == bound_size() (overflow)    bound[i-1]     +inf
   @$pb.TagNumber(1)
   $core.List<$core.double> get bounds => $_getList(0);
 }
@@ -308,50 +322,15 @@ enum Distribution_BucketOption {
   notSet
 }
 
+///  Distribution represents a frequency distribution of double-valued sample
+///  points. It contains the size of the population of sample points plus
+///  additional optional information:
+///
+///  * the arithmetic mean of the samples
+///  * the minimum and maximum of the samples
+///  * the sum-squared-deviation of the samples, used to compute variance
+///  * a histogram of the values of the sample points
 class Distribution extends $pb.GeneratedMessage {
-  static const $core.Map<$core.int, Distribution_BucketOption>
-      _Distribution_BucketOptionByTag = {
-    7: Distribution_BucketOption.linearBuckets,
-    8: Distribution_BucketOption.exponentialBuckets,
-    9: Distribution_BucketOption.explicitBuckets,
-    0: Distribution_BucketOption.notSet
-  };
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'Distribution',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.api.servicecontrol.v1'),
-      createEmptyInstance: create)
-    ..oo(0, [7, 8, 9])
-    ..aInt64(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'count')
-    ..a<$core.double>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'mean',
-        $pb.PbFieldType.OD)
-    ..a<$core.double>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'minimum',
-        $pb.PbFieldType.OD)
-    ..a<$core.double>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'maximum', $pb.PbFieldType.OD)
-    ..a<$core.double>(5, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'sumOfSquaredDeviation', $pb.PbFieldType.OD)
-    ..p<$fixnum.Int64>(6, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'bucketCounts', $pb.PbFieldType.P6)
-    ..aOM<Distribution_LinearBuckets>(7, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'linearBuckets', subBuilder: Distribution_LinearBuckets.create)
-    ..aOM<Distribution_ExponentialBuckets>(8, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'exponentialBuckets', subBuilder: Distribution_ExponentialBuckets.create)
-    ..aOM<Distribution_ExplicitBuckets>(9, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'explicitBuckets', subBuilder: Distribution_ExplicitBuckets.create)
-    ..hasRequiredFields = false;
-
-  Distribution._() : super();
   factory Distribution({
     $fixnum.Int64? count,
     $core.double? mean,
@@ -362,43 +341,83 @@ class Distribution extends $pb.GeneratedMessage {
     Distribution_LinearBuckets? linearBuckets,
     Distribution_ExponentialBuckets? exponentialBuckets,
     Distribution_ExplicitBuckets? explicitBuckets,
+    $core.Iterable<$70.Distribution_Exemplar>? exemplars,
   }) {
-    final _result = create();
+    final $result = create();
     if (count != null) {
-      _result.count = count;
+      $result.count = count;
     }
     if (mean != null) {
-      _result.mean = mean;
+      $result.mean = mean;
     }
     if (minimum != null) {
-      _result.minimum = minimum;
+      $result.minimum = minimum;
     }
     if (maximum != null) {
-      _result.maximum = maximum;
+      $result.maximum = maximum;
     }
     if (sumOfSquaredDeviation != null) {
-      _result.sumOfSquaredDeviation = sumOfSquaredDeviation;
+      $result.sumOfSquaredDeviation = sumOfSquaredDeviation;
     }
     if (bucketCounts != null) {
-      _result.bucketCounts.addAll(bucketCounts);
+      $result.bucketCounts.addAll(bucketCounts);
     }
     if (linearBuckets != null) {
-      _result.linearBuckets = linearBuckets;
+      $result.linearBuckets = linearBuckets;
     }
     if (exponentialBuckets != null) {
-      _result.exponentialBuckets = exponentialBuckets;
+      $result.exponentialBuckets = exponentialBuckets;
     }
     if (explicitBuckets != null) {
-      _result.explicitBuckets = explicitBuckets;
+      $result.explicitBuckets = explicitBuckets;
     }
-    return _result;
+    if (exemplars != null) {
+      $result.exemplars.addAll(exemplars);
+    }
+    return $result;
   }
+  Distribution._() : super();
   factory Distribution.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory Distribution.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static const $core.Map<$core.int, Distribution_BucketOption>
+      _Distribution_BucketOptionByTag = {
+    7: Distribution_BucketOption.linearBuckets,
+    8: Distribution_BucketOption.exponentialBuckets,
+    9: Distribution_BucketOption.explicitBuckets,
+    0: Distribution_BucketOption.notSet
+  };
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'Distribution',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.api.servicecontrol.v1'),
+      createEmptyInstance: create)
+    ..oo(0, [7, 8, 9])
+    ..aInt64(1, _omitFieldNames ? '' : 'count')
+    ..a<$core.double>(2, _omitFieldNames ? '' : 'mean', $pb.PbFieldType.OD)
+    ..a<$core.double>(3, _omitFieldNames ? '' : 'minimum', $pb.PbFieldType.OD)
+    ..a<$core.double>(4, _omitFieldNames ? '' : 'maximum', $pb.PbFieldType.OD)
+    ..a<$core.double>(
+        5, _omitFieldNames ? '' : 'sumOfSquaredDeviation', $pb.PbFieldType.OD)
+    ..p<$fixnum.Int64>(
+        6, _omitFieldNames ? '' : 'bucketCounts', $pb.PbFieldType.K6)
+    ..aOM<Distribution_LinearBuckets>(7, _omitFieldNames ? '' : 'linearBuckets',
+        subBuilder: Distribution_LinearBuckets.create)
+    ..aOM<Distribution_ExponentialBuckets>(
+        8, _omitFieldNames ? '' : 'exponentialBuckets',
+        subBuilder: Distribution_ExponentialBuckets.create)
+    ..aOM<Distribution_ExplicitBuckets>(
+        9, _omitFieldNames ? '' : 'explicitBuckets',
+        subBuilder: Distribution_ExplicitBuckets.create)
+    ..pc<$70.Distribution_Exemplar>(
+        10, _omitFieldNames ? '' : 'exemplars', $pb.PbFieldType.PM,
+        subBuilder: $70.Distribution_Exemplar.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -408,8 +427,10 @@ class Distribution extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   Distribution copyWith(void Function(Distribution) updates) =>
       super.copyWith((message) => updates(message as Distribution))
-          as Distribution; // ignore: deprecated_member_use
+          as Distribution;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static Distribution create() => Distribution._();
   Distribution createEmptyInstance() => create();
@@ -424,6 +445,7 @@ class Distribution extends $pb.GeneratedMessage {
       _Distribution_BucketOptionByTag[$_whichOneof(0)]!;
   void clearBucketOption() => clearField($_whichOneof(0));
 
+  /// The total number of samples in the distribution. Must be >= 0.
   @$pb.TagNumber(1)
   $fixnum.Int64 get count => $_getI64(0);
   @$pb.TagNumber(1)
@@ -436,6 +458,8 @@ class Distribution extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearCount() => clearField(1);
 
+  /// The arithmetic mean of the samples in the distribution. If `count` is
+  /// zero then this field must be zero.
   @$pb.TagNumber(2)
   $core.double get mean => $_getN(1);
   @$pb.TagNumber(2)
@@ -448,6 +472,7 @@ class Distribution extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearMean() => clearField(2);
 
+  /// The minimum of the population of values. Ignored if `count` is zero.
   @$pb.TagNumber(3)
   $core.double get minimum => $_getN(2);
   @$pb.TagNumber(3)
@@ -460,6 +485,7 @@ class Distribution extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearMinimum() => clearField(3);
 
+  /// The maximum of the population of values. Ignored if `count` is zero.
   @$pb.TagNumber(4)
   $core.double get maximum => $_getN(3);
   @$pb.TagNumber(4)
@@ -472,6 +498,10 @@ class Distribution extends $pb.GeneratedMessage {
   @$pb.TagNumber(4)
   void clearMaximum() => clearField(4);
 
+  /// The sum of squared deviations from the mean:
+  ///   Sum[i=1..count]((x_i - mean)^2)
+  /// where each x_i is a sample values. If `count` is zero then this field
+  /// must be zero, otherwise validation of the request fails.
   @$pb.TagNumber(5)
   $core.double get sumOfSquaredDeviation => $_getN(4);
   @$pb.TagNumber(5)
@@ -484,9 +514,21 @@ class Distribution extends $pb.GeneratedMessage {
   @$pb.TagNumber(5)
   void clearSumOfSquaredDeviation() => clearField(5);
 
+  ///  The number of samples in each histogram bucket. `bucket_counts` are
+  ///  optional. If present, they must sum to the `count` value.
+  ///
+  ///  The buckets are defined below in `bucket_option`. There are N buckets.
+  ///  `bucket_counts[0]` is the number of samples in the underflow bucket.
+  ///  `bucket_counts[1]` to `bucket_counts[N-1]` are the numbers of samples
+  ///  in each of the finite buckets. And `bucket_counts[N] is the number
+  ///  of samples in the overflow bucket. See the comments of `bucket_option`
+  ///  below for more details.
+  ///
+  ///  Any suffix of trailing zeros may be omitted.
   @$pb.TagNumber(6)
   $core.List<$fixnum.Int64> get bucketCounts => $_getList(5);
 
+  /// Buckets with constant width.
   @$pb.TagNumber(7)
   Distribution_LinearBuckets get linearBuckets => $_getN(6);
   @$pb.TagNumber(7)
@@ -501,6 +543,7 @@ class Distribution extends $pb.GeneratedMessage {
   @$pb.TagNumber(7)
   Distribution_LinearBuckets ensureLinearBuckets() => $_ensure(6);
 
+  /// Buckets with exponentially growing width.
   @$pb.TagNumber(8)
   Distribution_ExponentialBuckets get exponentialBuckets => $_getN(7);
   @$pb.TagNumber(8)
@@ -515,6 +558,7 @@ class Distribution extends $pb.GeneratedMessage {
   @$pb.TagNumber(8)
   Distribution_ExponentialBuckets ensureExponentialBuckets() => $_ensure(7);
 
+  /// Buckets with arbitrary user-provided width.
   @$pb.TagNumber(9)
   Distribution_ExplicitBuckets get explicitBuckets => $_getN(8);
   @$pb.TagNumber(9)
@@ -528,4 +572,12 @@ class Distribution extends $pb.GeneratedMessage {
   void clearExplicitBuckets() => clearField(9);
   @$pb.TagNumber(9)
   Distribution_ExplicitBuckets ensureExplicitBuckets() => $_ensure(8);
+
+  /// Example points. Must be in increasing order of `value` field.
+  @$pb.TagNumber(10)
+  $core.List<$70.Distribution_Exemplar> get exemplars => $_getList(9);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

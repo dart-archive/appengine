@@ -1,4 +1,4 @@
-// Copyright 2018 Google LLC
+// Copyright 2024 Google LLC
 //
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -57,11 +57,7 @@ extend google.protobuf.MessageOptions {
 //       // For Kubernetes resources, the format is {api group}/{kind}.
 //       option (google.api.resource) = {
 //         type: "pubsub.googleapis.com/Topic"
-//         name_descriptor: {
-//           pattern: "projects/{project}/topics/{topic}"
-//           parent_type: "cloudresourcemanager.googleapis.com/Project"
-//           parent_name_extractor: "projects/{project}"
-//         }
+//         pattern: "projects/{project}/topics/{topic}"
 //       };
 //     }
 //
@@ -69,10 +65,7 @@ extend google.protobuf.MessageOptions {
 //
 //     resources:
 //     - type: "pubsub.googleapis.com/Topic"
-//       name_descriptor:
-//         - pattern: "projects/{project}/topics/{topic}"
-//           parent_type: "cloudresourcemanager.googleapis.com/Project"
-//           parent_name_extractor: "projects/{project}"
+//       pattern: "projects/{project}/topics/{topic}"
 //
 // Sometimes, resources have multiple patterns, typically because they can
 // live under multiple parents.
@@ -82,26 +75,10 @@ extend google.protobuf.MessageOptions {
 //     message LogEntry {
 //       option (google.api.resource) = {
 //         type: "logging.googleapis.com/LogEntry"
-//         name_descriptor: {
-//           pattern: "projects/{project}/logs/{log}"
-//           parent_type: "cloudresourcemanager.googleapis.com/Project"
-//           parent_name_extractor: "projects/{project}"
-//         }
-//         name_descriptor: {
-//           pattern: "folders/{folder}/logs/{log}"
-//           parent_type: "cloudresourcemanager.googleapis.com/Folder"
-//           parent_name_extractor: "folders/{folder}"
-//         }
-//         name_descriptor: {
-//           pattern: "organizations/{organization}/logs/{log}"
-//           parent_type: "cloudresourcemanager.googleapis.com/Organization"
-//           parent_name_extractor: "organizations/{organization}"
-//         }
-//         name_descriptor: {
-//           pattern: "billingAccounts/{billing_account}/logs/{log}"
-//           parent_type: "billing.googleapis.com/BillingAccount"
-//           parent_name_extractor: "billingAccounts/{billing_account}"
-//         }
+//         pattern: "projects/{project}/logs/{log}"
+//         pattern: "folders/{folder}/logs/{log}"
+//         pattern: "organizations/{organization}/logs/{log}"
+//         pattern: "billingAccounts/{billing_account}/logs/{log}"
 //       };
 //     }
 //
@@ -109,48 +86,10 @@ extend google.protobuf.MessageOptions {
 //
 //     resources:
 //     - type: 'logging.googleapis.com/LogEntry'
-//       name_descriptor:
-//         - pattern: "projects/{project}/logs/{log}"
-//           parent_type: "cloudresourcemanager.googleapis.com/Project"
-//           parent_name_extractor: "projects/{project}"
-//         - pattern: "folders/{folder}/logs/{log}"
-//           parent_type: "cloudresourcemanager.googleapis.com/Folder"
-//           parent_name_extractor: "folders/{folder}"
-//         - pattern: "organizations/{organization}/logs/{log}"
-//           parent_type: "cloudresourcemanager.googleapis.com/Organization"
-//           parent_name_extractor: "organizations/{organization}"
-//         - pattern: "billingAccounts/{billing_account}/logs/{log}"
-//           parent_type: "billing.googleapis.com/BillingAccount"
-//           parent_name_extractor: "billingAccounts/{billing_account}"
-//
-// For flexible resources, the resource name doesn't contain parent names, but
-// the resource itself has parents for policy evaluation.
-//
-// Example:
-//
-//     message Shelf {
-//       option (google.api.resource) = {
-//         type: "library.googleapis.com/Shelf"
-//         name_descriptor: {
-//           pattern: "shelves/{shelf}"
-//           parent_type: "cloudresourcemanager.googleapis.com/Project"
-//         }
-//         name_descriptor: {
-//           pattern: "shelves/{shelf}"
-//           parent_type: "cloudresourcemanager.googleapis.com/Folder"
-//         }
-//       };
-//     }
-//
-// The ResourceDescriptor Yaml config will look like:
-//
-//     resources:
-//     - type: 'library.googleapis.com/Shelf'
-//       name_descriptor:
-//         - pattern: "shelves/{shelf}"
-//           parent_type: "cloudresourcemanager.googleapis.com/Project"
-//         - pattern: "shelves/{shelf}"
-//           parent_type: "cloudresourcemanager.googleapis.com/Folder"
+//       pattern: "projects/{project}/logs/{log}"
+//       pattern: "folders/{folder}/logs/{log}"
+//       pattern: "organizations/{organization}/logs/{log}"
+//       pattern: "billingAccounts/{billing_account}/logs/{log}"
 message ResourceDescriptor {
   // A description of the historical or future-looking state of the
   // resource pattern.
@@ -240,8 +179,13 @@ message ResourceDescriptor {
 
   // The plural name used in the resource name and permission names, such as
   // 'projects' for the resource name of 'projects/{project}' and the permission
-  // name of 'cloudresourcemanager.googleapis.com/projects.get'. It is the same
-  // concept of the `plural` field in k8s CRD spec
+  // name of 'cloudresourcemanager.googleapis.com/projects.get'. One exception
+  // to this is for Nested Collections that have stuttering names, as defined
+  // in [AIP-122](https://google.aip.dev/122#nested-collections), where the
+  // collection ID in the resource name pattern does not necessarily directly
+  // match the `plural` value.
+  //
+  // It is the same concept of the `plural` field in k8s CRD spec
   // https://kubernetes.io/docs/tasks/access-kubernetes-api/custom-resources/custom-resource-definitions/
   //
   // Note: The plural form is required even for singleton resources. See

@@ -1,50 +1,50 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/iam/v1/logging/audit_data.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
-import '../policy.pb.dart' as $0;
+import '../policy.pb.dart' as $43;
 
+/// Audit log information specific to Cloud IAM. This message is serialized
+/// as an `Any` type in the `ServiceData` message of an
+/// `AuditLog` message.
 class AuditData extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'AuditData',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.iam.v1.logging'),
-      createEmptyInstance: create)
-    ..aOM<$0.PolicyDelta>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'policyDelta',
-        subBuilder: $0.PolicyDelta.create)
-    ..hasRequiredFields = false;
-
-  AuditData._() : super();
   factory AuditData({
-    $0.PolicyDelta? policyDelta,
+    $43.PolicyDelta? policyDelta,
   }) {
-    final _result = create();
+    final $result = create();
     if (policyDelta != null) {
-      _result.policyDelta = policyDelta;
+      $result.policyDelta = policyDelta;
     }
-    return _result;
+    return $result;
   }
+  AuditData._() : super();
   factory AuditData.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory AuditData.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'AuditData',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.iam.v1.logging'),
+      createEmptyInstance: create)
+    ..aOM<$43.PolicyDelta>(2, _omitFieldNames ? '' : 'policyDelta',
+        subBuilder: $43.PolicyDelta.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -53,9 +53,10 @@ class AuditData extends $pb.GeneratedMessage {
       'Use [GeneratedMessageGenericExtensions.rebuild] instead. '
       'Will be removed in next major version')
   AuditData copyWith(void Function(AuditData) updates) =>
-      super.copyWith((message) => updates(message as AuditData))
-          as AuditData; // ignore: deprecated_member_use
+      super.copyWith((message) => updates(message as AuditData)) as AuditData;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static AuditData create() => AuditData._();
   AuditData createEmptyInstance() => create();
@@ -65,10 +66,11 @@ class AuditData extends $pb.GeneratedMessage {
       _defaultInstance ??= $pb.GeneratedMessage.$_defaultFor<AuditData>(create);
   static AuditData? _defaultInstance;
 
+  /// Policy delta between the original policy and the newly set policy.
   @$pb.TagNumber(2)
-  $0.PolicyDelta get policyDelta => $_getN(0);
+  $43.PolicyDelta get policyDelta => $_getN(0);
   @$pb.TagNumber(2)
-  set policyDelta($0.PolicyDelta v) {
+  set policyDelta($43.PolicyDelta v) {
     setField(2, v);
   }
 
@@ -77,5 +79,9 @@ class AuditData extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearPolicyDelta() => clearField(2);
   @$pb.TagNumber(2)
-  $0.PolicyDelta ensurePolicyDelta() => $_ensure(0);
+  $43.PolicyDelta ensurePolicyDelta() => $_ensure(0);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

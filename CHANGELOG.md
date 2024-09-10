@@ -1,3 +1,6 @@
+## 0.13.8
+ * Require `package:protobuf` ^3.1.0.
+
 ## 0.13.7
  * Widen dependency constraint on `package:http`.
 

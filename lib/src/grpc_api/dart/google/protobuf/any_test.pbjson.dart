@@ -1,12 +1,16 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/protobuf/any_test.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
-import 'dart:core' as $core;
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:convert' as $convert;
+import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
 @$core.Deprecated('Use testAnyDescriptor instead')
@@ -36,4 +40,7 @@ const TestAny$json = {
 
 /// Descriptor for `TestAny`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List testAnyDescriptor = $convert.base64Decode(
-    'CgdUZXN0QW55Eh8KC2ludDMyX3ZhbHVlGAEgASgFUgppbnQzMlZhbHVlEjEKCWFueV92YWx1ZRgCIAEoCzIULmdvb2dsZS5wcm90b2J1Zi5BbnlSCGFueVZhbHVlEkIKEnJlcGVhdGVkX2FueV92YWx1ZRgDIAMoCzIULmdvb2dsZS5wcm90b2J1Zi5BbnlSEHJlcGVhdGVkQW55VmFsdWUSEgoEdGV4dBgEIAEoCVIEdGV4dA==');
+    'CgdUZXN0QW55Eh8KC2ludDMyX3ZhbHVlGAEgASgFUgppbnQzMlZhbHVlEjEKCWFueV92YWx1ZR'
+    'gCIAEoCzIULmdvb2dsZS5wcm90b2J1Zi5BbnlSCGFueVZhbHVlEkIKEnJlcGVhdGVkX2FueV92'
+    'YWx1ZRgDIAMoCzIULmdvb2dsZS5wcm90b2J1Zi5BbnlSEHJlcGVhdGVkQW55VmFsdWUSEgoEdG'
+    'V4dBgEIAEoCVIEdGV4dA==');

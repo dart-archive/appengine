@@ -1,110 +1,118 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/iam/v1/iam_policy.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:async' as $async;
-
 import 'dart:core' as $core;
 
 import 'package:grpc/service_api.dart' as $grpc;
-import 'iam_policy.pb.dart' as $0;
-import 'policy.pb.dart' as $1;
+import 'package:protobuf/protobuf.dart' as $pb;
+
+import 'iam_policy.pb.dart' as $42;
+import 'policy.pb.dart' as $43;
+
 export 'iam_policy.pb.dart';
 
+@$pb.GrpcServiceName('google.iam.v1.IAMPolicy')
 class IAMPolicyClient extends $grpc.Client {
   static final _$setIamPolicy =
-      $grpc.ClientMethod<$0.SetIamPolicyRequest, $1.Policy>(
+      $grpc.ClientMethod<$42.SetIamPolicyRequest, $43.Policy>(
           '/google.iam.v1.IAMPolicy/SetIamPolicy',
-          ($0.SetIamPolicyRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => $1.Policy.fromBuffer(value));
+          ($42.SetIamPolicyRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $43.Policy.fromBuffer(value));
   static final _$getIamPolicy =
-      $grpc.ClientMethod<$0.GetIamPolicyRequest, $1.Policy>(
+      $grpc.ClientMethod<$42.GetIamPolicyRequest, $43.Policy>(
           '/google.iam.v1.IAMPolicy/GetIamPolicy',
-          ($0.GetIamPolicyRequest value) => value.writeToBuffer(),
-          ($core.List<$core.int> value) => $1.Policy.fromBuffer(value));
+          ($42.GetIamPolicyRequest value) => value.writeToBuffer(),
+          ($core.List<$core.int> value) => $43.Policy.fromBuffer(value));
   static final _$testIamPermissions = $grpc.ClientMethod<
-          $0.TestIamPermissionsRequest, $0.TestIamPermissionsResponse>(
+          $42.TestIamPermissionsRequest, $42.TestIamPermissionsResponse>(
       '/google.iam.v1.IAMPolicy/TestIamPermissions',
-      ($0.TestIamPermissionsRequest value) => value.writeToBuffer(),
+      ($42.TestIamPermissionsRequest value) => value.writeToBuffer(),
       ($core.List<$core.int> value) =>
-          $0.TestIamPermissionsResponse.fromBuffer(value));
+          $42.TestIamPermissionsResponse.fromBuffer(value));
 
   IAMPolicyClient($grpc.ClientChannel channel,
       {$grpc.CallOptions? options,
       $core.Iterable<$grpc.ClientInterceptor>? interceptors})
       : super(channel, options: options, interceptors: interceptors);
 
-  $grpc.ResponseFuture<$1.Policy> setIamPolicy($0.SetIamPolicyRequest request,
+  $grpc.ResponseFuture<$43.Policy> setIamPolicy($42.SetIamPolicyRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$setIamPolicy, request, options: options);
   }
 
-  $grpc.ResponseFuture<$1.Policy> getIamPolicy($0.GetIamPolicyRequest request,
+  $grpc.ResponseFuture<$43.Policy> getIamPolicy($42.GetIamPolicyRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$getIamPolicy, request, options: options);
   }
 
-  $grpc.ResponseFuture<$0.TestIamPermissionsResponse> testIamPermissions(
-      $0.TestIamPermissionsRequest request,
+  $grpc.ResponseFuture<$42.TestIamPermissionsResponse> testIamPermissions(
+      $42.TestIamPermissionsRequest request,
       {$grpc.CallOptions? options}) {
     return $createUnaryCall(_$testIamPermissions, request, options: options);
   }
 }
 
+@$pb.GrpcServiceName('google.iam.v1.IAMPolicy')
 abstract class IAMPolicyServiceBase extends $grpc.Service {
   $core.String get $name => 'google.iam.v1.IAMPolicy';
 
   IAMPolicyServiceBase() {
-    $addMethod($grpc.ServiceMethod<$0.SetIamPolicyRequest, $1.Policy>(
+    $addMethod($grpc.ServiceMethod<$42.SetIamPolicyRequest, $43.Policy>(
         'SetIamPolicy',
         setIamPolicy_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            $0.SetIamPolicyRequest.fromBuffer(value),
-        ($1.Policy value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.GetIamPolicyRequest, $1.Policy>(
+            $42.SetIamPolicyRequest.fromBuffer(value),
+        ($43.Policy value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$42.GetIamPolicyRequest, $43.Policy>(
         'GetIamPolicy',
         getIamPolicy_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            $0.GetIamPolicyRequest.fromBuffer(value),
-        ($1.Policy value) => value.writeToBuffer()));
-    $addMethod($grpc.ServiceMethod<$0.TestIamPermissionsRequest,
-            $0.TestIamPermissionsResponse>(
+            $42.GetIamPolicyRequest.fromBuffer(value),
+        ($43.Policy value) => value.writeToBuffer()));
+    $addMethod($grpc.ServiceMethod<$42.TestIamPermissionsRequest,
+            $42.TestIamPermissionsResponse>(
         'TestIamPermissions',
         testIamPermissions_Pre,
         false,
         false,
         ($core.List<$core.int> value) =>
-            $0.TestIamPermissionsRequest.fromBuffer(value),
-        ($0.TestIamPermissionsResponse value) => value.writeToBuffer()));
+            $42.TestIamPermissionsRequest.fromBuffer(value),
+        ($42.TestIamPermissionsResponse value) => value.writeToBuffer()));
   }
 
-  $async.Future<$1.Policy> setIamPolicy_Pre($grpc.ServiceCall call,
-      $async.Future<$0.SetIamPolicyRequest> request) async {
+  $async.Future<$43.Policy> setIamPolicy_Pre($grpc.ServiceCall call,
+      $async.Future<$42.SetIamPolicyRequest> request) async {
     return setIamPolicy(call, await request);
   }
 
-  $async.Future<$1.Policy> getIamPolicy_Pre($grpc.ServiceCall call,
-      $async.Future<$0.GetIamPolicyRequest> request) async {
+  $async.Future<$43.Policy> getIamPolicy_Pre($grpc.ServiceCall call,
+      $async.Future<$42.GetIamPolicyRequest> request) async {
     return getIamPolicy(call, await request);
   }
 
-  $async.Future<$0.TestIamPermissionsResponse> testIamPermissions_Pre(
+  $async.Future<$42.TestIamPermissionsResponse> testIamPermissions_Pre(
       $grpc.ServiceCall call,
-      $async.Future<$0.TestIamPermissionsRequest> request) async {
+      $async.Future<$42.TestIamPermissionsRequest> request) async {
     return testIamPermissions(call, await request);
   }
 
-  $async.Future<$1.Policy> setIamPolicy(
-      $grpc.ServiceCall call, $0.SetIamPolicyRequest request);
-  $async.Future<$1.Policy> getIamPolicy(
-      $grpc.ServiceCall call, $0.GetIamPolicyRequest request);
-  $async.Future<$0.TestIamPermissionsResponse> testIamPermissions(
-      $grpc.ServiceCall call, $0.TestIamPermissionsRequest request);
+  $async.Future<$43.Policy> setIamPolicy(
+      $grpc.ServiceCall call, $42.SetIamPolicyRequest request);
+  $async.Future<$43.Policy> getIamPolicy(
+      $grpc.ServiceCall call, $42.GetIamPolicyRequest request);
+  $async.Future<$42.TestIamPermissionsResponse> testIamPermissions(
+      $grpc.ServiceCall call, $42.TestIamPermissionsRequest request);
 }

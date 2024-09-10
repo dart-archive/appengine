@@ -1,12 +1,16 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/api/http.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
-import 'dart:core' as $core;
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:convert' as $convert;
+import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
 @$core.Deprecated('Use httpDescriptor instead')
@@ -33,7 +37,10 @@ const Http$json = {
 
 /// Descriptor for `Http`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List httpDescriptor = $convert.base64Decode(
-    'CgRIdHRwEioKBXJ1bGVzGAEgAygLMhQuZ29vZ2xlLmFwaS5IdHRwUnVsZVIFcnVsZXMSRQofZnVsbHlfZGVjb2RlX3Jlc2VydmVkX2V4cGFuc2lvbhgCIAEoCFIcZnVsbHlEZWNvZGVSZXNlcnZlZEV4cGFuc2lvbg==');
+    'CgRIdHRwEioKBXJ1bGVzGAEgAygLMhQuZ29vZ2xlLmFwaS5IdHRwUnVsZVIFcnVsZXMSRQofZn'
+    'VsbHlfZGVjb2RlX3Jlc2VydmVkX2V4cGFuc2lvbhgCIAEoCFIcZnVsbHlEZWNvZGVSZXNlcnZl'
+    'ZEV4cGFuc2lvbg==');
+
 @$core.Deprecated('Use httpRuleDescriptor instead')
 const HttpRule$json = {
   '1': 'HttpRule',
@@ -71,7 +78,14 @@ const HttpRule$json = {
 
 /// Descriptor for `HttpRule`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List httpRuleDescriptor = $convert.base64Decode(
-    'CghIdHRwUnVsZRIaCghzZWxlY3RvchgBIAEoCVIIc2VsZWN0b3ISEgoDZ2V0GAIgASgJSABSA2dldBISCgNwdXQYAyABKAlIAFIDcHV0EhQKBHBvc3QYBCABKAlIAFIEcG9zdBIYCgZkZWxldGUYBSABKAlIAFIGZGVsZXRlEhYKBXBhdGNoGAYgASgJSABSBXBhdGNoEjcKBmN1c3RvbRgIIAEoCzIdLmdvb2dsZS5hcGkuQ3VzdG9tSHR0cFBhdHRlcm5IAFIGY3VzdG9tEhIKBGJvZHkYByABKAlSBGJvZHkSIwoNcmVzcG9uc2VfYm9keRgMIAEoCVIMcmVzcG9uc2VCb2R5EkUKE2FkZGl0aW9uYWxfYmluZGluZ3MYCyADKAsyFC5nb29nbGUuYXBpLkh0dHBSdWxlUhJhZGRpdGlvbmFsQmluZGluZ3NCCQoHcGF0dGVybg==');
+    'CghIdHRwUnVsZRIaCghzZWxlY3RvchgBIAEoCVIIc2VsZWN0b3ISEgoDZ2V0GAIgASgJSABSA2'
+    'dldBISCgNwdXQYAyABKAlIAFIDcHV0EhQKBHBvc3QYBCABKAlIAFIEcG9zdBIYCgZkZWxldGUY'
+    'BSABKAlIAFIGZGVsZXRlEhYKBXBhdGNoGAYgASgJSABSBXBhdGNoEjcKBmN1c3RvbRgIIAEoCz'
+    'IdLmdvb2dsZS5hcGkuQ3VzdG9tSHR0cFBhdHRlcm5IAFIGY3VzdG9tEhIKBGJvZHkYByABKAlS'
+    'BGJvZHkSIwoNcmVzcG9uc2VfYm9keRgMIAEoCVIMcmVzcG9uc2VCb2R5EkUKE2FkZGl0aW9uYW'
+    'xfYmluZGluZ3MYCyADKAsyFC5nb29nbGUuYXBpLkh0dHBSdWxlUhJhZGRpdGlvbmFsQmluZGlu'
+    'Z3NCCQoHcGF0dGVybg==');
+
 @$core.Deprecated('Use customHttpPatternDescriptor instead')
 const CustomHttpPattern$json = {
   '1': 'CustomHttpPattern',
@@ -83,4 +97,5 @@ const CustomHttpPattern$json = {
 
 /// Descriptor for `CustomHttpPattern`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List customHttpPatternDescriptor = $convert.base64Decode(
-    'ChFDdXN0b21IdHRwUGF0dGVybhISCgRraW5kGAEgASgJUgRraW5kEhIKBHBhdGgYAiABKAlSBHBhdGg=');
+    'ChFDdXN0b21IdHRwUGF0dGVybhISCgRraW5kGAEgASgJUgRraW5kEhIKBHBhdGgYAiABKAlSBH'
+    'BhdGg=');

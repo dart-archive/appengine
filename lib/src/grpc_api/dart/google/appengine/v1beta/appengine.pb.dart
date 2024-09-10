@@ -1,61 +1,58 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/appengine/v1beta/appengine.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
+import '../../protobuf/field_mask.pb.dart' as $58;
+import 'appengine.pbenum.dart';
 import 'application.pb.dart' as $3;
-import '../../protobuf/field_mask.pb.dart' as $10;
+import 'certificate.pb.dart' as $8;
+import 'domain.pb.dart' as $59;
+import 'domain_mapping.pb.dart' as $9;
+import 'firewall.pb.dart' as $7;
+import 'instance.pb.dart' as $6;
 import 'service.pb.dart' as $4;
 import 'version.pb.dart' as $5;
-import 'instance.pb.dart' as $6;
-import 'firewall.pb.dart' as $7;
-import 'domain.pb.dart' as $11;
-import 'certificate.pb.dart' as $8;
-import 'domain_mapping.pb.dart' as $9;
-
-import 'appengine.pbenum.dart';
 
 export 'appengine.pbenum.dart';
 
+/// Request message for `Applications.GetApplication`.
 class GetApplicationRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetApplicationRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.appengine.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  GetApplicationRequest._() : super();
   factory GetApplicationRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  GetApplicationRequest._() : super();
   factory GetApplicationRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetApplicationRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetApplicationRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.appengine.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -67,8 +64,10 @@ class GetApplicationRequest extends $pb.GeneratedMessage {
   GetApplicationRequest copyWith(
           void Function(GetApplicationRequest) updates) =>
       super.copyWith((message) => updates(message as GetApplicationRequest))
-          as GetApplicationRequest; // ignore: deprecated_member_use
+          as GetApplicationRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetApplicationRequest create() => GetApplicationRequest._();
   GetApplicationRequest createEmptyInstance() => create();
@@ -79,6 +78,7 @@ class GetApplicationRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetApplicationRequest>(create);
   static GetApplicationRequest? _defaultInstance;
 
+  /// Name of the Application resource to get. Example: `apps/myapp`.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -92,40 +92,34 @@ class GetApplicationRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// Request message for `Applications.CreateApplication`.
 class CreateApplicationRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CreateApplicationRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.appengine.v1beta'),
-      createEmptyInstance: create)
-    ..aOM<$3.Application>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'application',
-        subBuilder: $3.Application.create)
-    ..hasRequiredFields = false;
-
-  CreateApplicationRequest._() : super();
   factory CreateApplicationRequest({
     $3.Application? application,
   }) {
-    final _result = create();
+    final $result = create();
     if (application != null) {
-      _result.application = application;
+      $result.application = application;
     }
-    return _result;
+    return $result;
   }
+  CreateApplicationRequest._() : super();
   factory CreateApplicationRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CreateApplicationRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CreateApplicationRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.appengine.v1beta'),
+      createEmptyInstance: create)
+    ..aOM<$3.Application>(2, _omitFieldNames ? '' : 'application',
+        subBuilder: $3.Application.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -137,8 +131,10 @@ class CreateApplicationRequest extends $pb.GeneratedMessage {
   CreateApplicationRequest copyWith(
           void Function(CreateApplicationRequest) updates) =>
       super.copyWith((message) => updates(message as CreateApplicationRequest))
-          as CreateApplicationRequest; // ignore: deprecated_member_use
+          as CreateApplicationRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CreateApplicationRequest create() => CreateApplicationRequest._();
   CreateApplicationRequest createEmptyInstance() => create();
@@ -149,6 +145,7 @@ class CreateApplicationRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<CreateApplicationRequest>(create);
   static CreateApplicationRequest? _defaultInstance;
 
+  /// Application configuration.
   @$pb.TagNumber(2)
   $3.Application get application => $_getN(0);
   @$pb.TagNumber(2)
@@ -164,53 +161,45 @@ class CreateApplicationRequest extends $pb.GeneratedMessage {
   $3.Application ensureApplication() => $_ensure(0);
 }
 
+/// Request message for `Applications.UpdateApplication`.
 class UpdateApplicationRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'UpdateApplicationRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.appengine.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOM<$3.Application>(
-        2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'application',
-        subBuilder: $3.Application.create)
-    ..aOM<$10.FieldMask>(3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'updateMask',
-        subBuilder: $10.FieldMask.create)
-    ..hasRequiredFields = false;
-
-  UpdateApplicationRequest._() : super();
   factory UpdateApplicationRequest({
     $core.String? name,
     $3.Application? application,
-    $10.FieldMask? updateMask,
+    $58.FieldMask? updateMask,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (application != null) {
-      _result.application = application;
+      $result.application = application;
     }
     if (updateMask != null) {
-      _result.updateMask = updateMask;
+      $result.updateMask = updateMask;
     }
-    return _result;
+    return $result;
   }
+  UpdateApplicationRequest._() : super();
   factory UpdateApplicationRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory UpdateApplicationRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UpdateApplicationRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.appengine.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOM<$3.Application>(2, _omitFieldNames ? '' : 'application',
+        subBuilder: $3.Application.create)
+    ..aOM<$58.FieldMask>(3, _omitFieldNames ? '' : 'updateMask',
+        subBuilder: $58.FieldMask.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -222,8 +211,10 @@ class UpdateApplicationRequest extends $pb.GeneratedMessage {
   UpdateApplicationRequest copyWith(
           void Function(UpdateApplicationRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateApplicationRequest))
-          as UpdateApplicationRequest; // ignore: deprecated_member_use
+          as UpdateApplicationRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static UpdateApplicationRequest create() => UpdateApplicationRequest._();
   UpdateApplicationRequest createEmptyInstance() => create();
@@ -234,6 +225,7 @@ class UpdateApplicationRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<UpdateApplicationRequest>(create);
   static UpdateApplicationRequest? _defaultInstance;
 
+  /// Name of the Application resource to update. Example: `apps/myapp`.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -246,6 +238,7 @@ class UpdateApplicationRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// An Application containing the updated resource.
   @$pb.TagNumber(2)
   $3.Application get application => $_getN(1);
   @$pb.TagNumber(2)
@@ -260,10 +253,11 @@ class UpdateApplicationRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $3.Application ensureApplication() => $_ensure(1);
 
+  /// Standard field mask for the set of fields to be updated.
   @$pb.TagNumber(3)
-  $10.FieldMask get updateMask => $_getN(2);
+  $58.FieldMask get updateMask => $_getN(2);
   @$pb.TagNumber(3)
-  set updateMask($10.FieldMask v) {
+  set updateMask($58.FieldMask v) {
     setField(3, v);
   }
 
@@ -272,42 +266,36 @@ class UpdateApplicationRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearUpdateMask() => clearField(3);
   @$pb.TagNumber(3)
-  $10.FieldMask ensureUpdateMask() => $_ensure(2);
+  $58.FieldMask ensureUpdateMask() => $_ensure(2);
 }
 
+/// Request message for 'Applications.RepairApplication'.
 class RepairApplicationRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'RepairApplicationRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.appengine.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  RepairApplicationRequest._() : super();
   factory RepairApplicationRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  RepairApplicationRequest._() : super();
   factory RepairApplicationRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory RepairApplicationRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'RepairApplicationRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.appengine.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -319,8 +307,10 @@ class RepairApplicationRequest extends $pb.GeneratedMessage {
   RepairApplicationRequest copyWith(
           void Function(RepairApplicationRequest) updates) =>
       super.copyWith((message) => updates(message as RepairApplicationRequest))
-          as RepairApplicationRequest; // ignore: deprecated_member_use
+          as RepairApplicationRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static RepairApplicationRequest create() => RepairApplicationRequest._();
   RepairApplicationRequest createEmptyInstance() => create();
@@ -331,6 +321,7 @@ class RepairApplicationRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<RepairApplicationRequest>(create);
   static RepairApplicationRequest? _defaultInstance;
 
+  /// Name of the application to repair. Example: `apps/myapp`
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -344,58 +335,43 @@ class RepairApplicationRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// Request message for `Services.ListServices`.
 class ListServicesRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListServicesRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.appengine.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..a<$core.int>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageSize',
-        $pb.PbFieldType.O3)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageToken')
-    ..hasRequiredFields = false;
-
-  ListServicesRequest._() : super();
   factory ListServicesRequest({
     $core.String? parent,
     $core.int? pageSize,
     $core.String? pageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (pageSize != null) {
-      _result.pageSize = pageSize;
+      $result.pageSize = pageSize;
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
-    return _result;
+    return $result;
   }
+  ListServicesRequest._() : super();
   factory ListServicesRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListServicesRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListServicesRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.appengine.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aOS(3, _omitFieldNames ? '' : 'pageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -405,8 +381,10 @@ class ListServicesRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ListServicesRequest copyWith(void Function(ListServicesRequest) updates) =>
       super.copyWith((message) => updates(message as ListServicesRequest))
-          as ListServicesRequest; // ignore: deprecated_member_use
+          as ListServicesRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListServicesRequest create() => ListServicesRequest._();
   ListServicesRequest createEmptyInstance() => create();
@@ -417,6 +395,7 @@ class ListServicesRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListServicesRequest>(create);
   static ListServicesRequest? _defaultInstance;
 
+  /// Name of the parent Application resource. Example: `apps/myapp`.
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -429,6 +408,7 @@ class ListServicesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// Maximum results to return per page.
   @$pb.TagNumber(2)
   $core.int get pageSize => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -441,6 +421,7 @@ class ListServicesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
+  /// Continuation token for fetching the next page of results.
   @$pb.TagNumber(3)
   $core.String get pageToken => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -454,47 +435,39 @@ class ListServicesRequest extends $pb.GeneratedMessage {
   void clearPageToken() => clearField(3);
 }
 
+/// Response message for `Services.ListServices`.
 class ListServicesResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListServicesResponse',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.appengine.v1beta'),
-      createEmptyInstance: create)
-    ..pc<$4.Service>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'services',
-        $pb.PbFieldType.PM,
-        subBuilder: $4.Service.create)
-    ..aOS(2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'nextPageToken')
-    ..hasRequiredFields = false;
-
-  ListServicesResponse._() : super();
   factory ListServicesResponse({
     $core.Iterable<$4.Service>? services,
     $core.String? nextPageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (services != null) {
-      _result.services.addAll(services);
+      $result.services.addAll(services);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
-    return _result;
+    return $result;
   }
+  ListServicesResponse._() : super();
   factory ListServicesResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListServicesResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListServicesResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.appengine.v1beta'),
+      createEmptyInstance: create)
+    ..pc<$4.Service>(1, _omitFieldNames ? '' : 'services', $pb.PbFieldType.PM,
+        subBuilder: $4.Service.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -505,8 +478,10 @@ class ListServicesResponse extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ListServicesResponse copyWith(void Function(ListServicesResponse) updates) =>
       super.copyWith((message) => updates(message as ListServicesResponse))
-          as ListServicesResponse; // ignore: deprecated_member_use
+          as ListServicesResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListServicesResponse create() => ListServicesResponse._();
   ListServicesResponse createEmptyInstance() => create();
@@ -517,9 +492,11 @@ class ListServicesResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListServicesResponse>(create);
   static ListServicesResponse? _defaultInstance;
 
+  /// The services belonging to the requested application.
   @$pb.TagNumber(1)
   $core.List<$4.Service> get services => $_getList(0);
 
+  /// Continuation token for fetching the next page of results.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -533,39 +510,33 @@ class ListServicesResponse extends $pb.GeneratedMessage {
   void clearNextPageToken() => clearField(2);
 }
 
+/// Request message for `Services.GetService`.
 class GetServiceRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetServiceRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.appengine.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  GetServiceRequest._() : super();
   factory GetServiceRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  GetServiceRequest._() : super();
   factory GetServiceRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetServiceRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetServiceRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.appengine.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -575,8 +546,10 @@ class GetServiceRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   GetServiceRequest copyWith(void Function(GetServiceRequest) updates) =>
       super.copyWith((message) => updates(message as GetServiceRequest))
-          as GetServiceRequest; // ignore: deprecated_member_use
+          as GetServiceRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetServiceRequest create() => GetServiceRequest._();
   GetServiceRequest createEmptyInstance() => create();
@@ -587,6 +560,7 @@ class GetServiceRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetServiceRequest>(create);
   static GetServiceRequest? _defaultInstance;
 
+  /// Name of the resource requested. Example: `apps/myapp/services/default`.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -600,58 +574,50 @@ class GetServiceRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// Request message for `Services.UpdateService`.
 class UpdateServiceRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'UpdateServiceRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.appengine.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOM<$4.Service>(
-        2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'service',
-        subBuilder: $4.Service.create)
-    ..aOM<$10.FieldMask>(3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'updateMask',
-        subBuilder: $10.FieldMask.create)
-    ..aOB(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'migrateTraffic')
-    ..hasRequiredFields = false;
-
-  UpdateServiceRequest._() : super();
   factory UpdateServiceRequest({
     $core.String? name,
     $4.Service? service,
-    $10.FieldMask? updateMask,
+    $58.FieldMask? updateMask,
     $core.bool? migrateTraffic,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (service != null) {
-      _result.service = service;
+      $result.service = service;
     }
     if (updateMask != null) {
-      _result.updateMask = updateMask;
+      $result.updateMask = updateMask;
     }
     if (migrateTraffic != null) {
-      _result.migrateTraffic = migrateTraffic;
+      $result.migrateTraffic = migrateTraffic;
     }
-    return _result;
+    return $result;
   }
+  UpdateServiceRequest._() : super();
   factory UpdateServiceRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory UpdateServiceRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UpdateServiceRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.appengine.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOM<$4.Service>(2, _omitFieldNames ? '' : 'service',
+        subBuilder: $4.Service.create)
+    ..aOM<$58.FieldMask>(3, _omitFieldNames ? '' : 'updateMask',
+        subBuilder: $58.FieldMask.create)
+    ..aOB(4, _omitFieldNames ? '' : 'migrateTraffic')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -662,8 +628,10 @@ class UpdateServiceRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   UpdateServiceRequest copyWith(void Function(UpdateServiceRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateServiceRequest))
-          as UpdateServiceRequest; // ignore: deprecated_member_use
+          as UpdateServiceRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static UpdateServiceRequest create() => UpdateServiceRequest._();
   UpdateServiceRequest createEmptyInstance() => create();
@@ -674,6 +642,7 @@ class UpdateServiceRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<UpdateServiceRequest>(create);
   static UpdateServiceRequest? _defaultInstance;
 
+  /// Name of the resource to update. Example: `apps/myapp/services/default`.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -686,6 +655,8 @@ class UpdateServiceRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// A Service resource containing the updated service. Only fields set in the
+  /// field mask will be updated.
   @$pb.TagNumber(2)
   $4.Service get service => $_getN(1);
   @$pb.TagNumber(2)
@@ -700,10 +671,11 @@ class UpdateServiceRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $4.Service ensureService() => $_ensure(1);
 
+  /// Standard field mask for the set of fields to be updated.
   @$pb.TagNumber(3)
-  $10.FieldMask get updateMask => $_getN(2);
+  $58.FieldMask get updateMask => $_getN(2);
   @$pb.TagNumber(3)
-  set updateMask($10.FieldMask v) {
+  set updateMask($58.FieldMask v) {
     setField(3, v);
   }
 
@@ -712,8 +684,20 @@ class UpdateServiceRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearUpdateMask() => clearField(3);
   @$pb.TagNumber(3)
-  $10.FieldMask ensureUpdateMask() => $_ensure(2);
+  $58.FieldMask ensureUpdateMask() => $_ensure(2);
 
+  /// Set to `true` to gradually shift traffic to one or more versions that you
+  /// specify. By default, traffic is shifted immediately.
+  /// For gradual traffic migration, the target versions
+  /// must be located within instances that are configured for both
+  /// [warmup requests](https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1beta/apps.services.versions#InboundServiceType)
+  /// and
+  /// [automatic scaling](https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1beta/apps.services.versions#AutomaticScaling).
+  /// You must specify the
+  /// [`shardBy`](https://cloud.google.com/appengine/docs/admin-api/reference/rest/v1beta/apps.services#ShardBy)
+  /// field in the Service resource. Gradual traffic migration is not
+  /// supported in the App Engine flexible environment. For examples, see
+  /// [Migrating and Splitting Traffic](https://cloud.google.com/appengine/docs/admin-api/migrating-splitting-traffic).
   @$pb.TagNumber(4)
   $core.bool get migrateTraffic => $_getBF(3);
   @$pb.TagNumber(4)
@@ -727,39 +711,33 @@ class UpdateServiceRequest extends $pb.GeneratedMessage {
   void clearMigrateTraffic() => clearField(4);
 }
 
+/// Request message for `Services.DeleteService`.
 class DeleteServiceRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DeleteServiceRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.appengine.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  DeleteServiceRequest._() : super();
   factory DeleteServiceRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  DeleteServiceRequest._() : super();
   factory DeleteServiceRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DeleteServiceRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DeleteServiceRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.appengine.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -770,8 +748,10 @@ class DeleteServiceRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   DeleteServiceRequest copyWith(void Function(DeleteServiceRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteServiceRequest))
-          as DeleteServiceRequest; // ignore: deprecated_member_use
+          as DeleteServiceRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DeleteServiceRequest create() => DeleteServiceRequest._();
   DeleteServiceRequest createEmptyInstance() => create();
@@ -782,6 +762,7 @@ class DeleteServiceRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DeleteServiceRequest>(create);
   static DeleteServiceRequest? _defaultInstance;
 
+  /// Name of the resource requested. Example: `apps/myapp/services/default`.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -795,63 +776,51 @@ class DeleteServiceRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// Request message for `Versions.ListVersions`.
 class ListVersionsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListVersionsRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.appengine.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..e<VersionView>(
-        2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'view', $pb.PbFieldType.OE,
-        defaultOrMaker: VersionView.BASIC,
-        valueOf: VersionView.valueOf,
-        enumValues: VersionView.values)
-    ..a<$core.int>(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageSize',
-        $pb.PbFieldType.O3)
-    ..aOS(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'pageToken')
-    ..hasRequiredFields = false;
-
-  ListVersionsRequest._() : super();
   factory ListVersionsRequest({
     $core.String? parent,
     VersionView? view,
     $core.int? pageSize,
     $core.String? pageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (view != null) {
-      _result.view = view;
+      $result.view = view;
     }
     if (pageSize != null) {
-      _result.pageSize = pageSize;
+      $result.pageSize = pageSize;
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
-    return _result;
+    return $result;
   }
+  ListVersionsRequest._() : super();
   factory ListVersionsRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListVersionsRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListVersionsRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.appengine.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..e<VersionView>(2, _omitFieldNames ? '' : 'view', $pb.PbFieldType.OE,
+        defaultOrMaker: VersionView.BASIC,
+        valueOf: VersionView.valueOf,
+        enumValues: VersionView.values)
+    ..a<$core.int>(3, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aOS(4, _omitFieldNames ? '' : 'pageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -861,8 +830,10 @@ class ListVersionsRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ListVersionsRequest copyWith(void Function(ListVersionsRequest) updates) =>
       super.copyWith((message) => updates(message as ListVersionsRequest))
-          as ListVersionsRequest; // ignore: deprecated_member_use
+          as ListVersionsRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListVersionsRequest create() => ListVersionsRequest._();
   ListVersionsRequest createEmptyInstance() => create();
@@ -873,6 +844,8 @@ class ListVersionsRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListVersionsRequest>(create);
   static ListVersionsRequest? _defaultInstance;
 
+  /// Name of the parent Service resource. Example:
+  /// `apps/myapp/services/default`.
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -885,6 +858,7 @@ class ListVersionsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// Controls the set of fields returned in the `List` response.
   @$pb.TagNumber(2)
   VersionView get view => $_getN(1);
   @$pb.TagNumber(2)
@@ -897,6 +871,7 @@ class ListVersionsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearView() => clearField(2);
 
+  /// Maximum results to return per page.
   @$pb.TagNumber(3)
   $core.int get pageSize => $_getIZ(2);
   @$pb.TagNumber(3)
@@ -909,6 +884,7 @@ class ListVersionsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearPageSize() => clearField(3);
 
+  /// Continuation token for fetching the next page of results.
   @$pb.TagNumber(4)
   $core.String get pageToken => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -922,47 +898,39 @@ class ListVersionsRequest extends $pb.GeneratedMessage {
   void clearPageToken() => clearField(4);
 }
 
+/// Response message for `Versions.ListVersions`.
 class ListVersionsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListVersionsResponse',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.appengine.v1beta'),
-      createEmptyInstance: create)
-    ..pc<$5.Version>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'versions',
-        $pb.PbFieldType.PM,
-        subBuilder: $5.Version.create)
-    ..aOS(2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'nextPageToken')
-    ..hasRequiredFields = false;
-
-  ListVersionsResponse._() : super();
   factory ListVersionsResponse({
     $core.Iterable<$5.Version>? versions,
     $core.String? nextPageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (versions != null) {
-      _result.versions.addAll(versions);
+      $result.versions.addAll(versions);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
-    return _result;
+    return $result;
   }
+  ListVersionsResponse._() : super();
   factory ListVersionsResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListVersionsResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListVersionsResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.appengine.v1beta'),
+      createEmptyInstance: create)
+    ..pc<$5.Version>(1, _omitFieldNames ? '' : 'versions', $pb.PbFieldType.PM,
+        subBuilder: $5.Version.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -973,8 +941,10 @@ class ListVersionsResponse extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ListVersionsResponse copyWith(void Function(ListVersionsResponse) updates) =>
       super.copyWith((message) => updates(message as ListVersionsResponse))
-          as ListVersionsResponse; // ignore: deprecated_member_use
+          as ListVersionsResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListVersionsResponse create() => ListVersionsResponse._();
   ListVersionsResponse createEmptyInstance() => create();
@@ -985,9 +955,11 @@ class ListVersionsResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListVersionsResponse>(create);
   static ListVersionsResponse? _defaultInstance;
 
+  /// The versions belonging to the requested service.
   @$pb.TagNumber(1)
   $core.List<$5.Version> get versions => $_getList(0);
 
+  /// Continuation token for fetching the next page of results.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -1001,52 +973,41 @@ class ListVersionsResponse extends $pb.GeneratedMessage {
   void clearNextPageToken() => clearField(2);
 }
 
+/// Request message for `Versions.GetVersion`.
 class GetVersionRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetVersionRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.appengine.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..e<VersionView>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'view',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: VersionView.BASIC,
-        valueOf: VersionView.valueOf,
-        enumValues: VersionView.values)
-    ..hasRequiredFields = false;
-
-  GetVersionRequest._() : super();
   factory GetVersionRequest({
     $core.String? name,
     VersionView? view,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (view != null) {
-      _result.view = view;
+      $result.view = view;
     }
-    return _result;
+    return $result;
   }
+  GetVersionRequest._() : super();
   factory GetVersionRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetVersionRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetVersionRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.appengine.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..e<VersionView>(2, _omitFieldNames ? '' : 'view', $pb.PbFieldType.OE,
+        defaultOrMaker: VersionView.BASIC,
+        valueOf: VersionView.valueOf,
+        enumValues: VersionView.values)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1056,8 +1017,10 @@ class GetVersionRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   GetVersionRequest copyWith(void Function(GetVersionRequest) updates) =>
       super.copyWith((message) => updates(message as GetVersionRequest))
-          as GetVersionRequest; // ignore: deprecated_member_use
+          as GetVersionRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetVersionRequest create() => GetVersionRequest._();
   GetVersionRequest createEmptyInstance() => create();
@@ -1068,6 +1031,8 @@ class GetVersionRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetVersionRequest>(create);
   static GetVersionRequest? _defaultInstance;
 
+  /// Name of the resource requested. Example:
+  /// `apps/myapp/services/default/versions/v1`.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1080,6 +1045,7 @@ class GetVersionRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// Controls the set of fields returned in the `Get` response.
   @$pb.TagNumber(2)
   VersionView get view => $_getN(1);
   @$pb.TagNumber(2)
@@ -1093,49 +1059,39 @@ class GetVersionRequest extends $pb.GeneratedMessage {
   void clearView() => clearField(2);
 }
 
+/// Request message for `Versions.CreateVersion`.
 class CreateVersionRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CreateVersionRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.appengine.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..aOM<$5.Version>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'version',
-        subBuilder: $5.Version.create)
-    ..hasRequiredFields = false;
-
-  CreateVersionRequest._() : super();
   factory CreateVersionRequest({
     $core.String? parent,
     $5.Version? version,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (version != null) {
-      _result.version = version;
+      $result.version = version;
     }
-    return _result;
+    return $result;
   }
+  CreateVersionRequest._() : super();
   factory CreateVersionRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CreateVersionRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CreateVersionRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.appengine.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..aOM<$5.Version>(2, _omitFieldNames ? '' : 'version',
+        subBuilder: $5.Version.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1146,8 +1102,10 @@ class CreateVersionRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   CreateVersionRequest copyWith(void Function(CreateVersionRequest) updates) =>
       super.copyWith((message) => updates(message as CreateVersionRequest))
-          as CreateVersionRequest; // ignore: deprecated_member_use
+          as CreateVersionRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CreateVersionRequest create() => CreateVersionRequest._();
   CreateVersionRequest createEmptyInstance() => create();
@@ -1158,6 +1116,8 @@ class CreateVersionRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<CreateVersionRequest>(create);
   static CreateVersionRequest? _defaultInstance;
 
+  /// Name of the parent resource to create this version under. Example:
+  /// `apps/myapp/services/default`.
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1170,6 +1130,7 @@ class CreateVersionRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// Application deployment configuration.
   @$pb.TagNumber(2)
   $5.Version get version => $_getN(1);
   @$pb.TagNumber(2)
@@ -1185,53 +1146,45 @@ class CreateVersionRequest extends $pb.GeneratedMessage {
   $5.Version ensureVersion() => $_ensure(1);
 }
 
+/// Request message for `Versions.UpdateVersion`.
 class UpdateVersionRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'UpdateVersionRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.appengine.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOM<$5.Version>(
-        2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'version',
-        subBuilder: $5.Version.create)
-    ..aOM<$10.FieldMask>(3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'updateMask',
-        subBuilder: $10.FieldMask.create)
-    ..hasRequiredFields = false;
-
-  UpdateVersionRequest._() : super();
   factory UpdateVersionRequest({
     $core.String? name,
     $5.Version? version,
-    $10.FieldMask? updateMask,
+    $58.FieldMask? updateMask,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (version != null) {
-      _result.version = version;
+      $result.version = version;
     }
     if (updateMask != null) {
-      _result.updateMask = updateMask;
+      $result.updateMask = updateMask;
     }
-    return _result;
+    return $result;
   }
+  UpdateVersionRequest._() : super();
   factory UpdateVersionRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory UpdateVersionRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UpdateVersionRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.appengine.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOM<$5.Version>(2, _omitFieldNames ? '' : 'version',
+        subBuilder: $5.Version.create)
+    ..aOM<$58.FieldMask>(3, _omitFieldNames ? '' : 'updateMask',
+        subBuilder: $58.FieldMask.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1242,8 +1195,10 @@ class UpdateVersionRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   UpdateVersionRequest copyWith(void Function(UpdateVersionRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateVersionRequest))
-          as UpdateVersionRequest; // ignore: deprecated_member_use
+          as UpdateVersionRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static UpdateVersionRequest create() => UpdateVersionRequest._();
   UpdateVersionRequest createEmptyInstance() => create();
@@ -1254,6 +1209,8 @@ class UpdateVersionRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<UpdateVersionRequest>(create);
   static UpdateVersionRequest? _defaultInstance;
 
+  /// Name of the resource to update. Example:
+  /// `apps/myapp/services/default/versions/1`.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1266,6 +1223,8 @@ class UpdateVersionRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// A Version containing the updated resource. Only fields set in the field
+  /// mask will be updated.
   @$pb.TagNumber(2)
   $5.Version get version => $_getN(1);
   @$pb.TagNumber(2)
@@ -1280,10 +1239,11 @@ class UpdateVersionRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $5.Version ensureVersion() => $_ensure(1);
 
+  /// Standard field mask for the set of fields to be updated.
   @$pb.TagNumber(3)
-  $10.FieldMask get updateMask => $_getN(2);
+  $58.FieldMask get updateMask => $_getN(2);
   @$pb.TagNumber(3)
-  set updateMask($10.FieldMask v) {
+  set updateMask($58.FieldMask v) {
     setField(3, v);
   }
 
@@ -1292,42 +1252,36 @@ class UpdateVersionRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearUpdateMask() => clearField(3);
   @$pb.TagNumber(3)
-  $10.FieldMask ensureUpdateMask() => $_ensure(2);
+  $58.FieldMask ensureUpdateMask() => $_ensure(2);
 }
 
+/// Request message for `Versions.DeleteVersion`.
 class DeleteVersionRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DeleteVersionRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.appengine.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  DeleteVersionRequest._() : super();
   factory DeleteVersionRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  DeleteVersionRequest._() : super();
   factory DeleteVersionRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DeleteVersionRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DeleteVersionRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.appengine.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1338,8 +1292,10 @@ class DeleteVersionRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   DeleteVersionRequest copyWith(void Function(DeleteVersionRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteVersionRequest))
-          as DeleteVersionRequest; // ignore: deprecated_member_use
+          as DeleteVersionRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DeleteVersionRequest create() => DeleteVersionRequest._();
   DeleteVersionRequest createEmptyInstance() => create();
@@ -1350,6 +1306,8 @@ class DeleteVersionRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DeleteVersionRequest>(create);
   static DeleteVersionRequest? _defaultInstance;
 
+  /// Name of the resource requested. Example:
+  /// `apps/myapp/services/default/versions/v1`.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1363,58 +1321,43 @@ class DeleteVersionRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// Request message for `Instances.ListInstances`.
 class ListInstancesRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListInstancesRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.appengine.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..a<$core.int>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageSize',
-        $pb.PbFieldType.O3)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageToken')
-    ..hasRequiredFields = false;
-
-  ListInstancesRequest._() : super();
   factory ListInstancesRequest({
     $core.String? parent,
     $core.int? pageSize,
     $core.String? pageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (pageSize != null) {
-      _result.pageSize = pageSize;
+      $result.pageSize = pageSize;
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
-    return _result;
+    return $result;
   }
+  ListInstancesRequest._() : super();
   factory ListInstancesRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListInstancesRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListInstancesRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.appengine.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aOS(3, _omitFieldNames ? '' : 'pageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1425,8 +1368,10 @@ class ListInstancesRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   ListInstancesRequest copyWith(void Function(ListInstancesRequest) updates) =>
       super.copyWith((message) => updates(message as ListInstancesRequest))
-          as ListInstancesRequest; // ignore: deprecated_member_use
+          as ListInstancesRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListInstancesRequest create() => ListInstancesRequest._();
   ListInstancesRequest createEmptyInstance() => create();
@@ -1437,6 +1382,8 @@ class ListInstancesRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListInstancesRequest>(create);
   static ListInstancesRequest? _defaultInstance;
 
+  /// Name of the parent Version resource. Example:
+  /// `apps/myapp/services/default/versions/v1`.
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1449,6 +1396,7 @@ class ListInstancesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// Maximum results to return per page.
   @$pb.TagNumber(2)
   $core.int get pageSize => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -1461,6 +1409,7 @@ class ListInstancesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
+  /// Continuation token for fetching the next page of results.
   @$pb.TagNumber(3)
   $core.String get pageToken => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -1474,47 +1423,39 @@ class ListInstancesRequest extends $pb.GeneratedMessage {
   void clearPageToken() => clearField(3);
 }
 
+/// Response message for `Instances.ListInstances`.
 class ListInstancesResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListInstancesResponse',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.appengine.v1beta'),
-      createEmptyInstance: create)
-    ..pc<$6.Instance>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'instances',
-        $pb.PbFieldType.PM,
-        subBuilder: $6.Instance.create)
-    ..aOS(2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'nextPageToken')
-    ..hasRequiredFields = false;
-
-  ListInstancesResponse._() : super();
   factory ListInstancesResponse({
     $core.Iterable<$6.Instance>? instances,
     $core.String? nextPageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (instances != null) {
-      _result.instances.addAll(instances);
+      $result.instances.addAll(instances);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
-    return _result;
+    return $result;
   }
+  ListInstancesResponse._() : super();
   factory ListInstancesResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListInstancesResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListInstancesResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.appengine.v1beta'),
+      createEmptyInstance: create)
+    ..pc<$6.Instance>(1, _omitFieldNames ? '' : 'instances', $pb.PbFieldType.PM,
+        subBuilder: $6.Instance.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1526,8 +1467,10 @@ class ListInstancesResponse extends $pb.GeneratedMessage {
   ListInstancesResponse copyWith(
           void Function(ListInstancesResponse) updates) =>
       super.copyWith((message) => updates(message as ListInstancesResponse))
-          as ListInstancesResponse; // ignore: deprecated_member_use
+          as ListInstancesResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListInstancesResponse create() => ListInstancesResponse._();
   ListInstancesResponse createEmptyInstance() => create();
@@ -1538,9 +1481,11 @@ class ListInstancesResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListInstancesResponse>(create);
   static ListInstancesResponse? _defaultInstance;
 
+  /// The instances belonging to the requested version.
   @$pb.TagNumber(1)
   $core.List<$6.Instance> get instances => $_getList(0);
 
+  /// Continuation token for fetching the next page of results.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -1554,39 +1499,33 @@ class ListInstancesResponse extends $pb.GeneratedMessage {
   void clearNextPageToken() => clearField(2);
 }
 
+/// Request message for `Instances.GetInstance`.
 class GetInstanceRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetInstanceRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.appengine.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  GetInstanceRequest._() : super();
   factory GetInstanceRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  GetInstanceRequest._() : super();
   factory GetInstanceRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetInstanceRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetInstanceRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.appengine.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1596,8 +1535,10 @@ class GetInstanceRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   GetInstanceRequest copyWith(void Function(GetInstanceRequest) updates) =>
       super.copyWith((message) => updates(message as GetInstanceRequest))
-          as GetInstanceRequest; // ignore: deprecated_member_use
+          as GetInstanceRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetInstanceRequest create() => GetInstanceRequest._();
   GetInstanceRequest createEmptyInstance() => create();
@@ -1608,6 +1549,8 @@ class GetInstanceRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetInstanceRequest>(create);
   static GetInstanceRequest? _defaultInstance;
 
+  /// Name of the resource requested. Example:
+  /// `apps/myapp/services/default/versions/v1/instances/instance-1`.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1621,39 +1564,33 @@ class GetInstanceRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// Request message for `Instances.DeleteInstance`.
 class DeleteInstanceRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DeleteInstanceRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.appengine.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  DeleteInstanceRequest._() : super();
   factory DeleteInstanceRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  DeleteInstanceRequest._() : super();
   factory DeleteInstanceRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DeleteInstanceRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DeleteInstanceRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.appengine.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1665,8 +1602,10 @@ class DeleteInstanceRequest extends $pb.GeneratedMessage {
   DeleteInstanceRequest copyWith(
           void Function(DeleteInstanceRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteInstanceRequest))
-          as DeleteInstanceRequest; // ignore: deprecated_member_use
+          as DeleteInstanceRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DeleteInstanceRequest create() => DeleteInstanceRequest._();
   DeleteInstanceRequest createEmptyInstance() => create();
@@ -1677,6 +1616,8 @@ class DeleteInstanceRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DeleteInstanceRequest>(create);
   static DeleteInstanceRequest? _defaultInstance;
 
+  /// Name of the resource requested. Example:
+  /// `apps/myapp/services/default/versions/v1/instances/instance-1`.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1690,48 +1631,38 @@ class DeleteInstanceRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// Request message for `Instances.DebugInstance`.
 class DebugInstanceRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DebugInstanceRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.appengine.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'sshKey')
-    ..hasRequiredFields = false;
-
-  DebugInstanceRequest._() : super();
   factory DebugInstanceRequest({
     $core.String? name,
     $core.String? sshKey,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (sshKey != null) {
-      _result.sshKey = sshKey;
+      $result.sshKey = sshKey;
     }
-    return _result;
+    return $result;
   }
+  DebugInstanceRequest._() : super();
   factory DebugInstanceRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DebugInstanceRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DebugInstanceRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.appengine.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOS(2, _omitFieldNames ? '' : 'sshKey')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1742,8 +1673,10 @@ class DebugInstanceRequest extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   DebugInstanceRequest copyWith(void Function(DebugInstanceRequest) updates) =>
       super.copyWith((message) => updates(message as DebugInstanceRequest))
-          as DebugInstanceRequest; // ignore: deprecated_member_use
+          as DebugInstanceRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DebugInstanceRequest create() => DebugInstanceRequest._();
   DebugInstanceRequest createEmptyInstance() => create();
@@ -1754,6 +1687,8 @@ class DebugInstanceRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DebugInstanceRequest>(create);
   static DebugInstanceRequest? _defaultInstance;
 
+  /// Name of the resource requested. Example:
+  /// `apps/myapp/services/default/versions/v1/instances/instance-1`.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1766,6 +1701,13 @@ class DebugInstanceRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  ///  Public SSH key to add to the instance. Examples:
+  ///
+  ///  * `[USERNAME]:ssh-rsa [KEY_VALUE] [USERNAME]`
+  ///  * `[USERNAME]:ssh-rsa [KEY_VALUE] google-ssh {"userName":"[USERNAME]","expireOn":"[EXPIRE_TIME]"}`
+  ///
+  ///  For more information, see
+  ///  [Adding and Removing SSH Keys](https://cloud.google.com/compute/docs/instances/adding-removing-ssh-keys).
   @$pb.TagNumber(2)
   $core.String get sshKey => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -1779,64 +1721,48 @@ class DebugInstanceRequest extends $pb.GeneratedMessage {
   void clearSshKey() => clearField(2);
 }
 
+/// Request message for `Firewall.ListIngressRules`.
 class ListIngressRulesRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListIngressRulesRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.appengine.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..a<$core.int>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageSize',
-        $pb.PbFieldType.O3)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageToken')
-    ..aOS(
-        4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'matchingAddress')
-    ..hasRequiredFields = false;
-
-  ListIngressRulesRequest._() : super();
   factory ListIngressRulesRequest({
     $core.String? parent,
     $core.int? pageSize,
     $core.String? pageToken,
     $core.String? matchingAddress,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (pageSize != null) {
-      _result.pageSize = pageSize;
+      $result.pageSize = pageSize;
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
     if (matchingAddress != null) {
-      _result.matchingAddress = matchingAddress;
+      $result.matchingAddress = matchingAddress;
     }
-    return _result;
+    return $result;
   }
+  ListIngressRulesRequest._() : super();
   factory ListIngressRulesRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListIngressRulesRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListIngressRulesRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.appengine.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aOS(3, _omitFieldNames ? '' : 'pageToken')
+    ..aOS(4, _omitFieldNames ? '' : 'matchingAddress')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1848,8 +1774,10 @@ class ListIngressRulesRequest extends $pb.GeneratedMessage {
   ListIngressRulesRequest copyWith(
           void Function(ListIngressRulesRequest) updates) =>
       super.copyWith((message) => updates(message as ListIngressRulesRequest))
-          as ListIngressRulesRequest; // ignore: deprecated_member_use
+          as ListIngressRulesRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListIngressRulesRequest create() => ListIngressRulesRequest._();
   ListIngressRulesRequest createEmptyInstance() => create();
@@ -1860,6 +1788,8 @@ class ListIngressRulesRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListIngressRulesRequest>(create);
   static ListIngressRulesRequest? _defaultInstance;
 
+  /// Name of the Firewall collection to retrieve.
+  /// Example: `apps/myapp/firewall/ingressRules`.
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -1872,6 +1802,7 @@ class ListIngressRulesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// Maximum results to return per page.
   @$pb.TagNumber(2)
   $core.int get pageSize => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -1884,6 +1815,7 @@ class ListIngressRulesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
+  /// Continuation token for fetching the next page of results.
   @$pb.TagNumber(3)
   $core.String get pageToken => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -1896,6 +1828,9 @@ class ListIngressRulesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
 
+  /// A valid IP Address. If set, only rules matching this address will be
+  /// returned. The first returned rule will be the rule that fires on requests
+  /// from this IP.
   @$pb.TagNumber(4)
   $core.String get matchingAddress => $_getSZ(3);
   @$pb.TagNumber(4)
@@ -1909,47 +1844,40 @@ class ListIngressRulesRequest extends $pb.GeneratedMessage {
   void clearMatchingAddress() => clearField(4);
 }
 
+/// Response message for `Firewall.ListIngressRules`.
 class ListIngressRulesResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListIngressRulesResponse',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.appengine.v1beta'),
-      createEmptyInstance: create)
-    ..pc<$7.FirewallRule>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'ingressRules',
-        $pb.PbFieldType.PM,
-        subBuilder: $7.FirewallRule.create)
-    ..aOS(2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'nextPageToken')
-    ..hasRequiredFields = false;
-
-  ListIngressRulesResponse._() : super();
   factory ListIngressRulesResponse({
     $core.Iterable<$7.FirewallRule>? ingressRules,
     $core.String? nextPageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (ingressRules != null) {
-      _result.ingressRules.addAll(ingressRules);
+      $result.ingressRules.addAll(ingressRules);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
-    return _result;
+    return $result;
   }
+  ListIngressRulesResponse._() : super();
   factory ListIngressRulesResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListIngressRulesResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListIngressRulesResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.appengine.v1beta'),
+      createEmptyInstance: create)
+    ..pc<$7.FirewallRule>(
+        1, _omitFieldNames ? '' : 'ingressRules', $pb.PbFieldType.PM,
+        subBuilder: $7.FirewallRule.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -1961,8 +1889,10 @@ class ListIngressRulesResponse extends $pb.GeneratedMessage {
   ListIngressRulesResponse copyWith(
           void Function(ListIngressRulesResponse) updates) =>
       super.copyWith((message) => updates(message as ListIngressRulesResponse))
-          as ListIngressRulesResponse; // ignore: deprecated_member_use
+          as ListIngressRulesResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListIngressRulesResponse create() => ListIngressRulesResponse._();
   ListIngressRulesResponse createEmptyInstance() => create();
@@ -1973,9 +1903,11 @@ class ListIngressRulesResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListIngressRulesResponse>(create);
   static ListIngressRulesResponse? _defaultInstance;
 
+  /// The ingress FirewallRules for this application.
   @$pb.TagNumber(1)
   $core.List<$7.FirewallRule> get ingressRules => $_getList(0);
 
+  /// Continuation token for fetching the next page of results.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -1989,50 +1921,40 @@ class ListIngressRulesResponse extends $pb.GeneratedMessage {
   void clearNextPageToken() => clearField(2);
 }
 
+/// Request message for `Firewall.BatchUpdateIngressRules`.
 class BatchUpdateIngressRulesRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'BatchUpdateIngressRulesRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.appengine.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..pc<$7.FirewallRule>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'ingressRules',
-        $pb.PbFieldType.PM,
-        subBuilder: $7.FirewallRule.create)
-    ..hasRequiredFields = false;
-
-  BatchUpdateIngressRulesRequest._() : super();
   factory BatchUpdateIngressRulesRequest({
     $core.String? name,
     $core.Iterable<$7.FirewallRule>? ingressRules,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (ingressRules != null) {
-      _result.ingressRules.addAll(ingressRules);
+      $result.ingressRules.addAll(ingressRules);
     }
-    return _result;
+    return $result;
   }
+  BatchUpdateIngressRulesRequest._() : super();
   factory BatchUpdateIngressRulesRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory BatchUpdateIngressRulesRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BatchUpdateIngressRulesRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.appengine.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..pc<$7.FirewallRule>(
+        2, _omitFieldNames ? '' : 'ingressRules', $pb.PbFieldType.PM,
+        subBuilder: $7.FirewallRule.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2045,8 +1967,10 @@ class BatchUpdateIngressRulesRequest extends $pb.GeneratedMessage {
           void Function(BatchUpdateIngressRulesRequest) updates) =>
       super.copyWith(
               (message) => updates(message as BatchUpdateIngressRulesRequest))
-          as BatchUpdateIngressRulesRequest; // ignore: deprecated_member_use
+          as BatchUpdateIngressRulesRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static BatchUpdateIngressRulesRequest create() =>
       BatchUpdateIngressRulesRequest._();
@@ -2058,6 +1982,8 @@ class BatchUpdateIngressRulesRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<BatchUpdateIngressRulesRequest>(create);
   static BatchUpdateIngressRulesRequest? _defaultInstance;
 
+  /// Name of the Firewall collection to set.
+  /// Example: `apps/myapp/firewall/ingressRules`.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2070,45 +1996,40 @@ class BatchUpdateIngressRulesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// A list of FirewallRules to replace the existing set.
   @$pb.TagNumber(2)
   $core.List<$7.FirewallRule> get ingressRules => $_getList(1);
 }
 
+/// Response message for `Firewall.UpdateAllIngressRules`.
 class BatchUpdateIngressRulesResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'BatchUpdateIngressRulesResponse',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.appengine.v1beta'),
-      createEmptyInstance: create)
-    ..pc<$7.FirewallRule>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'ingressRules',
-        $pb.PbFieldType.PM,
-        subBuilder: $7.FirewallRule.create)
-    ..hasRequiredFields = false;
-
-  BatchUpdateIngressRulesResponse._() : super();
   factory BatchUpdateIngressRulesResponse({
     $core.Iterable<$7.FirewallRule>? ingressRules,
   }) {
-    final _result = create();
+    final $result = create();
     if (ingressRules != null) {
-      _result.ingressRules.addAll(ingressRules);
+      $result.ingressRules.addAll(ingressRules);
     }
-    return _result;
+    return $result;
   }
+  BatchUpdateIngressRulesResponse._() : super();
   factory BatchUpdateIngressRulesResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory BatchUpdateIngressRulesResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'BatchUpdateIngressRulesResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.appengine.v1beta'),
+      createEmptyInstance: create)
+    ..pc<$7.FirewallRule>(
+        1, _omitFieldNames ? '' : 'ingressRules', $pb.PbFieldType.PM,
+        subBuilder: $7.FirewallRule.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2121,8 +2042,10 @@ class BatchUpdateIngressRulesResponse extends $pb.GeneratedMessage {
           void Function(BatchUpdateIngressRulesResponse) updates) =>
       super.copyWith(
               (message) => updates(message as BatchUpdateIngressRulesResponse))
-          as BatchUpdateIngressRulesResponse; // ignore: deprecated_member_use
+          as BatchUpdateIngressRulesResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static BatchUpdateIngressRulesResponse create() =>
       BatchUpdateIngressRulesResponse._();
@@ -2135,53 +2058,44 @@ class BatchUpdateIngressRulesResponse extends $pb.GeneratedMessage {
           create);
   static BatchUpdateIngressRulesResponse? _defaultInstance;
 
+  /// The full list of ingress FirewallRules for this application.
   @$pb.TagNumber(1)
   $core.List<$7.FirewallRule> get ingressRules => $_getList(0);
 }
 
+/// Request message for `Firewall.CreateIngressRule`.
 class CreateIngressRuleRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CreateIngressRuleRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.appengine.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..aOM<$7.FirewallRule>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'rule',
-        subBuilder: $7.FirewallRule.create)
-    ..hasRequiredFields = false;
-
-  CreateIngressRuleRequest._() : super();
   factory CreateIngressRuleRequest({
     $core.String? parent,
     $7.FirewallRule? rule,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (rule != null) {
-      _result.rule = rule;
+      $result.rule = rule;
     }
-    return _result;
+    return $result;
   }
+  CreateIngressRuleRequest._() : super();
   factory CreateIngressRuleRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CreateIngressRuleRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CreateIngressRuleRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.appengine.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..aOM<$7.FirewallRule>(2, _omitFieldNames ? '' : 'rule',
+        subBuilder: $7.FirewallRule.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2193,8 +2107,10 @@ class CreateIngressRuleRequest extends $pb.GeneratedMessage {
   CreateIngressRuleRequest copyWith(
           void Function(CreateIngressRuleRequest) updates) =>
       super.copyWith((message) => updates(message as CreateIngressRuleRequest))
-          as CreateIngressRuleRequest; // ignore: deprecated_member_use
+          as CreateIngressRuleRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CreateIngressRuleRequest create() => CreateIngressRuleRequest._();
   CreateIngressRuleRequest createEmptyInstance() => create();
@@ -2205,6 +2121,8 @@ class CreateIngressRuleRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<CreateIngressRuleRequest>(create);
   static CreateIngressRuleRequest? _defaultInstance;
 
+  /// Name of the parent Firewall collection in which to create a new rule.
+  /// Example: `apps/myapp/firewall/ingressRules`.
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2217,6 +2135,16 @@ class CreateIngressRuleRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  ///  A FirewallRule containing the new resource.
+  ///
+  ///  The user may optionally provide a position at which the new rule will be
+  ///  placed. The positions define a sequential list starting at 1. If a rule
+  ///  already exists at the given position, rules greater than the provided
+  ///  position will be moved forward by one.
+  ///
+  ///  If no position is provided, the server will place the rule as the second to
+  ///  last rule in the sequence before the required default allow-all or deny-all
+  ///  rule.
   @$pb.TagNumber(2)
   $7.FirewallRule get rule => $_getN(1);
   @$pb.TagNumber(2)
@@ -2232,39 +2160,33 @@ class CreateIngressRuleRequest extends $pb.GeneratedMessage {
   $7.FirewallRule ensureRule() => $_ensure(1);
 }
 
+/// Request message for `Firewall.GetIngressRule`.
 class GetIngressRuleRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetIngressRuleRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.appengine.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  GetIngressRuleRequest._() : super();
   factory GetIngressRuleRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  GetIngressRuleRequest._() : super();
   factory GetIngressRuleRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetIngressRuleRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetIngressRuleRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.appengine.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2276,8 +2198,10 @@ class GetIngressRuleRequest extends $pb.GeneratedMessage {
   GetIngressRuleRequest copyWith(
           void Function(GetIngressRuleRequest) updates) =>
       super.copyWith((message) => updates(message as GetIngressRuleRequest))
-          as GetIngressRuleRequest; // ignore: deprecated_member_use
+          as GetIngressRuleRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetIngressRuleRequest create() => GetIngressRuleRequest._();
   GetIngressRuleRequest createEmptyInstance() => create();
@@ -2288,6 +2212,8 @@ class GetIngressRuleRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetIngressRuleRequest>(create);
   static GetIngressRuleRequest? _defaultInstance;
 
+  /// Name of the Firewall resource to retrieve.
+  /// Example: `apps/myapp/firewall/ingressRules/100`.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2301,53 +2227,45 @@ class GetIngressRuleRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// Request message for `Firewall.UpdateIngressRule`.
 class UpdateIngressRuleRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'UpdateIngressRuleRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.appengine.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOM<$7.FirewallRule>(
-        2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'rule',
-        subBuilder: $7.FirewallRule.create)
-    ..aOM<$10.FieldMask>(3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'updateMask',
-        subBuilder: $10.FieldMask.create)
-    ..hasRequiredFields = false;
-
-  UpdateIngressRuleRequest._() : super();
   factory UpdateIngressRuleRequest({
     $core.String? name,
     $7.FirewallRule? rule,
-    $10.FieldMask? updateMask,
+    $58.FieldMask? updateMask,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (rule != null) {
-      _result.rule = rule;
+      $result.rule = rule;
     }
     if (updateMask != null) {
-      _result.updateMask = updateMask;
+      $result.updateMask = updateMask;
     }
-    return _result;
+    return $result;
   }
+  UpdateIngressRuleRequest._() : super();
   factory UpdateIngressRuleRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory UpdateIngressRuleRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UpdateIngressRuleRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.appengine.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOM<$7.FirewallRule>(2, _omitFieldNames ? '' : 'rule',
+        subBuilder: $7.FirewallRule.create)
+    ..aOM<$58.FieldMask>(3, _omitFieldNames ? '' : 'updateMask',
+        subBuilder: $58.FieldMask.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2359,8 +2277,10 @@ class UpdateIngressRuleRequest extends $pb.GeneratedMessage {
   UpdateIngressRuleRequest copyWith(
           void Function(UpdateIngressRuleRequest) updates) =>
       super.copyWith((message) => updates(message as UpdateIngressRuleRequest))
-          as UpdateIngressRuleRequest; // ignore: deprecated_member_use
+          as UpdateIngressRuleRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static UpdateIngressRuleRequest create() => UpdateIngressRuleRequest._();
   UpdateIngressRuleRequest createEmptyInstance() => create();
@@ -2371,6 +2291,8 @@ class UpdateIngressRuleRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<UpdateIngressRuleRequest>(create);
   static UpdateIngressRuleRequest? _defaultInstance;
 
+  /// Name of the Firewall resource to update.
+  /// Example: `apps/myapp/firewall/ingressRules/100`.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2383,6 +2305,7 @@ class UpdateIngressRuleRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// A FirewallRule containing the updated resource
   @$pb.TagNumber(2)
   $7.FirewallRule get rule => $_getN(1);
   @$pb.TagNumber(2)
@@ -2397,10 +2320,11 @@ class UpdateIngressRuleRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $7.FirewallRule ensureRule() => $_ensure(1);
 
+  /// Standard field mask for the set of fields to be updated.
   @$pb.TagNumber(3)
-  $10.FieldMask get updateMask => $_getN(2);
+  $58.FieldMask get updateMask => $_getN(2);
   @$pb.TagNumber(3)
-  set updateMask($10.FieldMask v) {
+  set updateMask($58.FieldMask v) {
     setField(3, v);
   }
 
@@ -2409,42 +2333,36 @@ class UpdateIngressRuleRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearUpdateMask() => clearField(3);
   @$pb.TagNumber(3)
-  $10.FieldMask ensureUpdateMask() => $_ensure(2);
+  $58.FieldMask ensureUpdateMask() => $_ensure(2);
 }
 
+/// Request message for `Firewall.DeleteIngressRule`.
 class DeleteIngressRuleRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DeleteIngressRuleRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.appengine.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  DeleteIngressRuleRequest._() : super();
   factory DeleteIngressRuleRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  DeleteIngressRuleRequest._() : super();
   factory DeleteIngressRuleRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DeleteIngressRuleRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DeleteIngressRuleRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.appengine.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2456,8 +2374,10 @@ class DeleteIngressRuleRequest extends $pb.GeneratedMessage {
   DeleteIngressRuleRequest copyWith(
           void Function(DeleteIngressRuleRequest) updates) =>
       super.copyWith((message) => updates(message as DeleteIngressRuleRequest))
-          as DeleteIngressRuleRequest; // ignore: deprecated_member_use
+          as DeleteIngressRuleRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DeleteIngressRuleRequest create() => DeleteIngressRuleRequest._();
   DeleteIngressRuleRequest createEmptyInstance() => create();
@@ -2468,6 +2388,8 @@ class DeleteIngressRuleRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DeleteIngressRuleRequest>(create);
   static DeleteIngressRuleRequest? _defaultInstance;
 
+  /// Name of the Firewall resource to delete.
+  /// Example: `apps/myapp/firewall/ingressRules/100`.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2481,58 +2403,43 @@ class DeleteIngressRuleRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// Request message for `AuthorizedDomains.ListAuthorizedDomains`.
 class ListAuthorizedDomainsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListAuthorizedDomainsRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.appengine.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..a<$core.int>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageSize',
-        $pb.PbFieldType.O3)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageToken')
-    ..hasRequiredFields = false;
-
-  ListAuthorizedDomainsRequest._() : super();
   factory ListAuthorizedDomainsRequest({
     $core.String? parent,
     $core.int? pageSize,
     $core.String? pageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (pageSize != null) {
-      _result.pageSize = pageSize;
+      $result.pageSize = pageSize;
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
-    return _result;
+    return $result;
   }
+  ListAuthorizedDomainsRequest._() : super();
   factory ListAuthorizedDomainsRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListAuthorizedDomainsRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListAuthorizedDomainsRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.appengine.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aOS(3, _omitFieldNames ? '' : 'pageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2545,8 +2452,10 @@ class ListAuthorizedDomainsRequest extends $pb.GeneratedMessage {
           void Function(ListAuthorizedDomainsRequest) updates) =>
       super.copyWith(
               (message) => updates(message as ListAuthorizedDomainsRequest))
-          as ListAuthorizedDomainsRequest; // ignore: deprecated_member_use
+          as ListAuthorizedDomainsRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListAuthorizedDomainsRequest create() =>
       ListAuthorizedDomainsRequest._();
@@ -2558,6 +2467,7 @@ class ListAuthorizedDomainsRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListAuthorizedDomainsRequest>(create);
   static ListAuthorizedDomainsRequest? _defaultInstance;
 
+  /// Name of the parent Application resource. Example: `apps/myapp`.
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2570,6 +2480,7 @@ class ListAuthorizedDomainsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// Maximum results to return per page.
   @$pb.TagNumber(2)
   $core.int get pageSize => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -2582,6 +2493,7 @@ class ListAuthorizedDomainsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
+  /// Continuation token for fetching the next page of results.
   @$pb.TagNumber(3)
   $core.String get pageToken => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -2595,47 +2507,40 @@ class ListAuthorizedDomainsRequest extends $pb.GeneratedMessage {
   void clearPageToken() => clearField(3);
 }
 
+/// Response message for `AuthorizedDomains.ListAuthorizedDomains`.
 class ListAuthorizedDomainsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListAuthorizedDomainsResponse',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.appengine.v1beta'),
-      createEmptyInstance: create)
-    ..pc<$11.AuthorizedDomain>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'domains',
-        $pb.PbFieldType.PM,
-        subBuilder: $11.AuthorizedDomain.create)
-    ..aOS(2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'nextPageToken')
-    ..hasRequiredFields = false;
-
-  ListAuthorizedDomainsResponse._() : super();
   factory ListAuthorizedDomainsResponse({
-    $core.Iterable<$11.AuthorizedDomain>? domains,
+    $core.Iterable<$59.AuthorizedDomain>? domains,
     $core.String? nextPageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (domains != null) {
-      _result.domains.addAll(domains);
+      $result.domains.addAll(domains);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
-    return _result;
+    return $result;
   }
+  ListAuthorizedDomainsResponse._() : super();
   factory ListAuthorizedDomainsResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListAuthorizedDomainsResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListAuthorizedDomainsResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.appengine.v1beta'),
+      createEmptyInstance: create)
+    ..pc<$59.AuthorizedDomain>(
+        1, _omitFieldNames ? '' : 'domains', $pb.PbFieldType.PM,
+        subBuilder: $59.AuthorizedDomain.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2648,8 +2553,10 @@ class ListAuthorizedDomainsResponse extends $pb.GeneratedMessage {
           void Function(ListAuthorizedDomainsResponse) updates) =>
       super.copyWith(
               (message) => updates(message as ListAuthorizedDomainsResponse))
-          as ListAuthorizedDomainsResponse; // ignore: deprecated_member_use
+          as ListAuthorizedDomainsResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListAuthorizedDomainsResponse create() =>
       ListAuthorizedDomainsResponse._();
@@ -2661,9 +2568,11 @@ class ListAuthorizedDomainsResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListAuthorizedDomainsResponse>(create);
   static ListAuthorizedDomainsResponse? _defaultInstance;
 
+  /// The authorized domains belonging to the user.
   @$pb.TagNumber(1)
-  $core.List<$11.AuthorizedDomain> get domains => $_getList(0);
+  $core.List<$59.AuthorizedDomain> get domains => $_getList(0);
 
+  /// Continuation token for fetching the next page of results.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -2677,65 +2586,52 @@ class ListAuthorizedDomainsResponse extends $pb.GeneratedMessage {
   void clearNextPageToken() => clearField(2);
 }
 
+/// Request message for `AuthorizedCertificates.ListAuthorizedCertificates`.
 class ListAuthorizedCertificatesRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListAuthorizedCertificatesRequest',
-      package: const $pb.PackageName($core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'google.appengine.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..a<$core.int>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageSize',
-        $pb.PbFieldType.O3)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageToken')
-    ..e<AuthorizedCertificateView>(4, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'view', $pb.PbFieldType.OE,
-        defaultOrMaker: AuthorizedCertificateView.BASIC_CERTIFICATE,
-        valueOf: AuthorizedCertificateView.valueOf,
-        enumValues: AuthorizedCertificateView.values)
-    ..hasRequiredFields = false;
-
-  ListAuthorizedCertificatesRequest._() : super();
   factory ListAuthorizedCertificatesRequest({
     $core.String? parent,
     $core.int? pageSize,
     $core.String? pageToken,
     AuthorizedCertificateView? view,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (pageSize != null) {
-      _result.pageSize = pageSize;
+      $result.pageSize = pageSize;
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
     if (view != null) {
-      _result.view = view;
+      $result.view = view;
     }
-    return _result;
+    return $result;
   }
+  ListAuthorizedCertificatesRequest._() : super();
   factory ListAuthorizedCertificatesRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListAuthorizedCertificatesRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListAuthorizedCertificatesRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.appengine.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aOS(3, _omitFieldNames ? '' : 'pageToken')
+    ..e<AuthorizedCertificateView>(
+        4, _omitFieldNames ? '' : 'view', $pb.PbFieldType.OE,
+        defaultOrMaker: AuthorizedCertificateView.BASIC_CERTIFICATE,
+        valueOf: AuthorizedCertificateView.valueOf,
+        enumValues: AuthorizedCertificateView.values)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2748,8 +2644,10 @@ class ListAuthorizedCertificatesRequest extends $pb.GeneratedMessage {
           void Function(ListAuthorizedCertificatesRequest) updates) =>
       super.copyWith((message) =>
               updates(message as ListAuthorizedCertificatesRequest))
-          as ListAuthorizedCertificatesRequest; // ignore: deprecated_member_use
+          as ListAuthorizedCertificatesRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListAuthorizedCertificatesRequest create() =>
       ListAuthorizedCertificatesRequest._();
@@ -2762,6 +2660,7 @@ class ListAuthorizedCertificatesRequest extends $pb.GeneratedMessage {
           create);
   static ListAuthorizedCertificatesRequest? _defaultInstance;
 
+  /// Name of the parent `Application` resource. Example: `apps/myapp`.
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2774,6 +2673,7 @@ class ListAuthorizedCertificatesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// Maximum results to return per page.
   @$pb.TagNumber(2)
   $core.int get pageSize => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -2786,6 +2686,7 @@ class ListAuthorizedCertificatesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
+  /// Continuation token for fetching the next page of results.
   @$pb.TagNumber(3)
   $core.String get pageToken => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -2798,6 +2699,7 @@ class ListAuthorizedCertificatesRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearPageToken() => clearField(3);
 
+  /// Controls the set of fields returned in the `LIST` response.
   @$pb.TagNumber(4)
   AuthorizedCertificateView get view => $_getN(3);
   @$pb.TagNumber(4)
@@ -2811,47 +2713,40 @@ class ListAuthorizedCertificatesRequest extends $pb.GeneratedMessage {
   void clearView() => clearField(4);
 }
 
+/// Response message for `AuthorizedCertificates.ListAuthorizedCertificates`.
 class ListAuthorizedCertificatesResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListAuthorizedCertificatesResponse',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.appengine.v1beta'),
-      createEmptyInstance: create)
-    ..pc<$8.AuthorizedCertificate>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'certificates',
-        $pb.PbFieldType.PM,
-        subBuilder: $8.AuthorizedCertificate.create)
-    ..aOS(2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'nextPageToken')
-    ..hasRequiredFields = false;
-
-  ListAuthorizedCertificatesResponse._() : super();
   factory ListAuthorizedCertificatesResponse({
     $core.Iterable<$8.AuthorizedCertificate>? certificates,
     $core.String? nextPageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (certificates != null) {
-      _result.certificates.addAll(certificates);
+      $result.certificates.addAll(certificates);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
-    return _result;
+    return $result;
   }
+  ListAuthorizedCertificatesResponse._() : super();
   factory ListAuthorizedCertificatesResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListAuthorizedCertificatesResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListAuthorizedCertificatesResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.appengine.v1beta'),
+      createEmptyInstance: create)
+    ..pc<$8.AuthorizedCertificate>(
+        1, _omitFieldNames ? '' : 'certificates', $pb.PbFieldType.PM,
+        subBuilder: $8.AuthorizedCertificate.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2864,8 +2759,10 @@ class ListAuthorizedCertificatesResponse extends $pb.GeneratedMessage {
           void Function(ListAuthorizedCertificatesResponse) updates) =>
       super.copyWith((message) =>
               updates(message as ListAuthorizedCertificatesResponse))
-          as ListAuthorizedCertificatesResponse; // ignore: deprecated_member_use
+          as ListAuthorizedCertificatesResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListAuthorizedCertificatesResponse create() =>
       ListAuthorizedCertificatesResponse._();
@@ -2878,9 +2775,11 @@ class ListAuthorizedCertificatesResponse extends $pb.GeneratedMessage {
           create);
   static ListAuthorizedCertificatesResponse? _defaultInstance;
 
+  /// The SSL certificates the user is authorized to administer.
   @$pb.TagNumber(1)
   $core.List<$8.AuthorizedCertificate> get certificates => $_getList(0);
 
+  /// Continuation token for fetching the next page of results.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -2894,52 +2793,42 @@ class ListAuthorizedCertificatesResponse extends $pb.GeneratedMessage {
   void clearNextPageToken() => clearField(2);
 }
 
+/// Request message for `AuthorizedCertificates.GetAuthorizedCertificate`.
 class GetAuthorizedCertificateRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetAuthorizedCertificateRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.appengine.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..e<AuthorizedCertificateView>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'view',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: AuthorizedCertificateView.BASIC_CERTIFICATE,
-        valueOf: AuthorizedCertificateView.valueOf,
-        enumValues: AuthorizedCertificateView.values)
-    ..hasRequiredFields = false;
-
-  GetAuthorizedCertificateRequest._() : super();
   factory GetAuthorizedCertificateRequest({
     $core.String? name,
     AuthorizedCertificateView? view,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (view != null) {
-      _result.view = view;
+      $result.view = view;
     }
-    return _result;
+    return $result;
   }
+  GetAuthorizedCertificateRequest._() : super();
   factory GetAuthorizedCertificateRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetAuthorizedCertificateRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetAuthorizedCertificateRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.appengine.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..e<AuthorizedCertificateView>(
+        2, _omitFieldNames ? '' : 'view', $pb.PbFieldType.OE,
+        defaultOrMaker: AuthorizedCertificateView.BASIC_CERTIFICATE,
+        valueOf: AuthorizedCertificateView.valueOf,
+        enumValues: AuthorizedCertificateView.values)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -2952,8 +2841,10 @@ class GetAuthorizedCertificateRequest extends $pb.GeneratedMessage {
           void Function(GetAuthorizedCertificateRequest) updates) =>
       super.copyWith(
               (message) => updates(message as GetAuthorizedCertificateRequest))
-          as GetAuthorizedCertificateRequest; // ignore: deprecated_member_use
+          as GetAuthorizedCertificateRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetAuthorizedCertificateRequest create() =>
       GetAuthorizedCertificateRequest._();
@@ -2966,6 +2857,8 @@ class GetAuthorizedCertificateRequest extends $pb.GeneratedMessage {
           create);
   static GetAuthorizedCertificateRequest? _defaultInstance;
 
+  /// Name of the resource requested. Example:
+  /// `apps/myapp/authorizedCertificates/12345`.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -2978,6 +2871,7 @@ class GetAuthorizedCertificateRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// Controls the set of fields returned in the `GET` response.
   @$pb.TagNumber(2)
   AuthorizedCertificateView get view => $_getN(1);
   @$pb.TagNumber(2)
@@ -2991,49 +2885,39 @@ class GetAuthorizedCertificateRequest extends $pb.GeneratedMessage {
   void clearView() => clearField(2);
 }
 
+/// Request message for `AuthorizedCertificates.CreateAuthorizedCertificate`.
 class CreateAuthorizedCertificateRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CreateAuthorizedCertificateRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.appengine.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..aOM<$8.AuthorizedCertificate>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'certificate',
-        subBuilder: $8.AuthorizedCertificate.create)
-    ..hasRequiredFields = false;
-
-  CreateAuthorizedCertificateRequest._() : super();
   factory CreateAuthorizedCertificateRequest({
     $core.String? parent,
     $8.AuthorizedCertificate? certificate,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (certificate != null) {
-      _result.certificate = certificate;
+      $result.certificate = certificate;
     }
-    return _result;
+    return $result;
   }
+  CreateAuthorizedCertificateRequest._() : super();
   factory CreateAuthorizedCertificateRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CreateAuthorizedCertificateRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CreateAuthorizedCertificateRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.appengine.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..aOM<$8.AuthorizedCertificate>(2, _omitFieldNames ? '' : 'certificate',
+        subBuilder: $8.AuthorizedCertificate.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3046,8 +2930,10 @@ class CreateAuthorizedCertificateRequest extends $pb.GeneratedMessage {
           void Function(CreateAuthorizedCertificateRequest) updates) =>
       super.copyWith((message) =>
               updates(message as CreateAuthorizedCertificateRequest))
-          as CreateAuthorizedCertificateRequest; // ignore: deprecated_member_use
+          as CreateAuthorizedCertificateRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CreateAuthorizedCertificateRequest create() =>
       CreateAuthorizedCertificateRequest._();
@@ -3060,6 +2946,7 @@ class CreateAuthorizedCertificateRequest extends $pb.GeneratedMessage {
           create);
   static CreateAuthorizedCertificateRequest? _defaultInstance;
 
+  /// Name of the parent `Application` resource. Example: `apps/myapp`.
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -3072,6 +2959,7 @@ class CreateAuthorizedCertificateRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// SSL certificate data.
   @$pb.TagNumber(2)
   $8.AuthorizedCertificate get certificate => $_getN(1);
   @$pb.TagNumber(2)
@@ -3087,53 +2975,45 @@ class CreateAuthorizedCertificateRequest extends $pb.GeneratedMessage {
   $8.AuthorizedCertificate ensureCertificate() => $_ensure(1);
 }
 
+/// Request message for `AuthorizedCertificates.UpdateAuthorizedCertificate`.
 class UpdateAuthorizedCertificateRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'UpdateAuthorizedCertificateRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.appengine.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOM<$8.AuthorizedCertificate>(
-        2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'certificate',
-        subBuilder: $8.AuthorizedCertificate.create)
-    ..aOM<$10.FieldMask>(3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'updateMask',
-        subBuilder: $10.FieldMask.create)
-    ..hasRequiredFields = false;
-
-  UpdateAuthorizedCertificateRequest._() : super();
   factory UpdateAuthorizedCertificateRequest({
     $core.String? name,
     $8.AuthorizedCertificate? certificate,
-    $10.FieldMask? updateMask,
+    $58.FieldMask? updateMask,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (certificate != null) {
-      _result.certificate = certificate;
+      $result.certificate = certificate;
     }
     if (updateMask != null) {
-      _result.updateMask = updateMask;
+      $result.updateMask = updateMask;
     }
-    return _result;
+    return $result;
   }
+  UpdateAuthorizedCertificateRequest._() : super();
   factory UpdateAuthorizedCertificateRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory UpdateAuthorizedCertificateRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UpdateAuthorizedCertificateRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.appengine.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOM<$8.AuthorizedCertificate>(2, _omitFieldNames ? '' : 'certificate',
+        subBuilder: $8.AuthorizedCertificate.create)
+    ..aOM<$58.FieldMask>(3, _omitFieldNames ? '' : 'updateMask',
+        subBuilder: $58.FieldMask.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3146,8 +3026,10 @@ class UpdateAuthorizedCertificateRequest extends $pb.GeneratedMessage {
           void Function(UpdateAuthorizedCertificateRequest) updates) =>
       super.copyWith((message) =>
               updates(message as UpdateAuthorizedCertificateRequest))
-          as UpdateAuthorizedCertificateRequest; // ignore: deprecated_member_use
+          as UpdateAuthorizedCertificateRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static UpdateAuthorizedCertificateRequest create() =>
       UpdateAuthorizedCertificateRequest._();
@@ -3160,6 +3042,8 @@ class UpdateAuthorizedCertificateRequest extends $pb.GeneratedMessage {
           create);
   static UpdateAuthorizedCertificateRequest? _defaultInstance;
 
+  /// Name of the resource to update. Example:
+  /// `apps/myapp/authorizedCertificates/12345`.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -3172,6 +3056,8 @@ class UpdateAuthorizedCertificateRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// An `AuthorizedCertificate` containing the updated resource. Only fields set
+  /// in the field mask will be updated.
   @$pb.TagNumber(2)
   $8.AuthorizedCertificate get certificate => $_getN(1);
   @$pb.TagNumber(2)
@@ -3186,10 +3072,12 @@ class UpdateAuthorizedCertificateRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $8.AuthorizedCertificate ensureCertificate() => $_ensure(1);
 
+  /// Standard field mask for the set of fields to be updated. Updates are only
+  /// supported on the `certificate_raw_data` and `display_name` fields.
   @$pb.TagNumber(3)
-  $10.FieldMask get updateMask => $_getN(2);
+  $58.FieldMask get updateMask => $_getN(2);
   @$pb.TagNumber(3)
-  set updateMask($10.FieldMask v) {
+  set updateMask($58.FieldMask v) {
     setField(3, v);
   }
 
@@ -3198,42 +3086,36 @@ class UpdateAuthorizedCertificateRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearUpdateMask() => clearField(3);
   @$pb.TagNumber(3)
-  $10.FieldMask ensureUpdateMask() => $_ensure(2);
+  $58.FieldMask ensureUpdateMask() => $_ensure(2);
 }
 
+/// Request message for `AuthorizedCertificates.DeleteAuthorizedCertificate`.
 class DeleteAuthorizedCertificateRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DeleteAuthorizedCertificateRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.appengine.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  DeleteAuthorizedCertificateRequest._() : super();
   factory DeleteAuthorizedCertificateRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  DeleteAuthorizedCertificateRequest._() : super();
   factory DeleteAuthorizedCertificateRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DeleteAuthorizedCertificateRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DeleteAuthorizedCertificateRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.appengine.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3246,8 +3128,10 @@ class DeleteAuthorizedCertificateRequest extends $pb.GeneratedMessage {
           void Function(DeleteAuthorizedCertificateRequest) updates) =>
       super.copyWith((message) =>
               updates(message as DeleteAuthorizedCertificateRequest))
-          as DeleteAuthorizedCertificateRequest; // ignore: deprecated_member_use
+          as DeleteAuthorizedCertificateRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DeleteAuthorizedCertificateRequest create() =>
       DeleteAuthorizedCertificateRequest._();
@@ -3260,6 +3144,8 @@ class DeleteAuthorizedCertificateRequest extends $pb.GeneratedMessage {
           create);
   static DeleteAuthorizedCertificateRequest? _defaultInstance;
 
+  /// Name of the resource to delete. Example:
+  /// `apps/myapp/authorizedCertificates/12345`.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -3273,58 +3159,43 @@ class DeleteAuthorizedCertificateRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// Request message for `DomainMappings.ListDomainMappings`.
 class ListDomainMappingsRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListDomainMappingsRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.appengine.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..a<$core.int>(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageSize',
-        $pb.PbFieldType.O3)
-    ..aOS(
-        3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'pageToken')
-    ..hasRequiredFields = false;
-
-  ListDomainMappingsRequest._() : super();
   factory ListDomainMappingsRequest({
     $core.String? parent,
     $core.int? pageSize,
     $core.String? pageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (pageSize != null) {
-      _result.pageSize = pageSize;
+      $result.pageSize = pageSize;
     }
     if (pageToken != null) {
-      _result.pageToken = pageToken;
+      $result.pageToken = pageToken;
     }
-    return _result;
+    return $result;
   }
+  ListDomainMappingsRequest._() : super();
   factory ListDomainMappingsRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListDomainMappingsRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListDomainMappingsRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.appengine.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..a<$core.int>(2, _omitFieldNames ? '' : 'pageSize', $pb.PbFieldType.O3)
+    ..aOS(3, _omitFieldNames ? '' : 'pageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3336,8 +3207,10 @@ class ListDomainMappingsRequest extends $pb.GeneratedMessage {
   ListDomainMappingsRequest copyWith(
           void Function(ListDomainMappingsRequest) updates) =>
       super.copyWith((message) => updates(message as ListDomainMappingsRequest))
-          as ListDomainMappingsRequest; // ignore: deprecated_member_use
+          as ListDomainMappingsRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListDomainMappingsRequest create() => ListDomainMappingsRequest._();
   ListDomainMappingsRequest createEmptyInstance() => create();
@@ -3348,6 +3221,7 @@ class ListDomainMappingsRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListDomainMappingsRequest>(create);
   static ListDomainMappingsRequest? _defaultInstance;
 
+  /// Name of the parent Application resource. Example: `apps/myapp`.
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -3360,6 +3234,7 @@ class ListDomainMappingsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// Maximum results to return per page.
   @$pb.TagNumber(2)
   $core.int get pageSize => $_getIZ(1);
   @$pb.TagNumber(2)
@@ -3372,6 +3247,7 @@ class ListDomainMappingsRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearPageSize() => clearField(2);
 
+  /// Continuation token for fetching the next page of results.
   @$pb.TagNumber(3)
   $core.String get pageToken => $_getSZ(2);
   @$pb.TagNumber(3)
@@ -3385,47 +3261,40 @@ class ListDomainMappingsRequest extends $pb.GeneratedMessage {
   void clearPageToken() => clearField(3);
 }
 
+/// Response message for `DomainMappings.ListDomainMappings`.
 class ListDomainMappingsResponse extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'ListDomainMappingsResponse',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.appengine.v1beta'),
-      createEmptyInstance: create)
-    ..pc<$9.DomainMapping>(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'domainMappings',
-        $pb.PbFieldType.PM,
-        subBuilder: $9.DomainMapping.create)
-    ..aOS(2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'nextPageToken')
-    ..hasRequiredFields = false;
-
-  ListDomainMappingsResponse._() : super();
   factory ListDomainMappingsResponse({
     $core.Iterable<$9.DomainMapping>? domainMappings,
     $core.String? nextPageToken,
   }) {
-    final _result = create();
+    final $result = create();
     if (domainMappings != null) {
-      _result.domainMappings.addAll(domainMappings);
+      $result.domainMappings.addAll(domainMappings);
     }
     if (nextPageToken != null) {
-      _result.nextPageToken = nextPageToken;
+      $result.nextPageToken = nextPageToken;
     }
-    return _result;
+    return $result;
   }
+  ListDomainMappingsResponse._() : super();
   factory ListDomainMappingsResponse.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory ListDomainMappingsResponse.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'ListDomainMappingsResponse',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.appengine.v1beta'),
+      createEmptyInstance: create)
+    ..pc<$9.DomainMapping>(
+        1, _omitFieldNames ? '' : 'domainMappings', $pb.PbFieldType.PM,
+        subBuilder: $9.DomainMapping.create)
+    ..aOS(2, _omitFieldNames ? '' : 'nextPageToken')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3438,8 +3307,10 @@ class ListDomainMappingsResponse extends $pb.GeneratedMessage {
           void Function(ListDomainMappingsResponse) updates) =>
       super.copyWith(
               (message) => updates(message as ListDomainMappingsResponse))
-          as ListDomainMappingsResponse; // ignore: deprecated_member_use
+          as ListDomainMappingsResponse;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static ListDomainMappingsResponse create() => ListDomainMappingsResponse._();
   ListDomainMappingsResponse createEmptyInstance() => create();
@@ -3450,9 +3321,11 @@ class ListDomainMappingsResponse extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<ListDomainMappingsResponse>(create);
   static ListDomainMappingsResponse? _defaultInstance;
 
+  /// The domain mappings for the application.
   @$pb.TagNumber(1)
   $core.List<$9.DomainMapping> get domainMappings => $_getList(0);
 
+  /// Continuation token for fetching the next page of results.
   @$pb.TagNumber(2)
   $core.String get nextPageToken => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -3466,39 +3339,33 @@ class ListDomainMappingsResponse extends $pb.GeneratedMessage {
   void clearNextPageToken() => clearField(2);
 }
 
+/// Request message for `DomainMappings.GetDomainMapping`.
 class GetDomainMappingRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'GetDomainMappingRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.appengine.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  GetDomainMappingRequest._() : super();
   factory GetDomainMappingRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  GetDomainMappingRequest._() : super();
   factory GetDomainMappingRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory GetDomainMappingRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'GetDomainMappingRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.appengine.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3510,8 +3377,10 @@ class GetDomainMappingRequest extends $pb.GeneratedMessage {
   GetDomainMappingRequest copyWith(
           void Function(GetDomainMappingRequest) updates) =>
       super.copyWith((message) => updates(message as GetDomainMappingRequest))
-          as GetDomainMappingRequest; // ignore: deprecated_member_use
+          as GetDomainMappingRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static GetDomainMappingRequest create() => GetDomainMappingRequest._();
   GetDomainMappingRequest createEmptyInstance() => create();
@@ -3522,6 +3391,8 @@ class GetDomainMappingRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<GetDomainMappingRequest>(create);
   static GetDomainMappingRequest? _defaultInstance;
 
+  /// Name of the resource requested. Example:
+  /// `apps/myapp/domainMappings/example.com`.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -3535,57 +3406,49 @@ class GetDomainMappingRequest extends $pb.GeneratedMessage {
   void clearName() => clearField(1);
 }
 
+/// Request message for `DomainMappings.CreateDomainMapping`.
 class CreateDomainMappingRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'CreateDomainMappingRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.appengine.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'parent')
-    ..aOM<$9.DomainMapping>(
-        2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'domainMapping',
-        subBuilder: $9.DomainMapping.create)
-    ..e<DomainOverrideStrategy>(
-        4,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'overrideStrategy',
-        $pb.PbFieldType.OE,
-        defaultOrMaker: DomainOverrideStrategy.UNSPECIFIED_DOMAIN_OVERRIDE_STRATEGY,
-        valueOf: DomainOverrideStrategy.valueOf,
-        enumValues: DomainOverrideStrategy.values)
-    ..hasRequiredFields = false;
-
-  CreateDomainMappingRequest._() : super();
   factory CreateDomainMappingRequest({
     $core.String? parent,
     $9.DomainMapping? domainMapping,
     DomainOverrideStrategy? overrideStrategy,
   }) {
-    final _result = create();
+    final $result = create();
     if (parent != null) {
-      _result.parent = parent;
+      $result.parent = parent;
     }
     if (domainMapping != null) {
-      _result.domainMapping = domainMapping;
+      $result.domainMapping = domainMapping;
     }
     if (overrideStrategy != null) {
-      _result.overrideStrategy = overrideStrategy;
+      $result.overrideStrategy = overrideStrategy;
     }
-    return _result;
+    return $result;
   }
+  CreateDomainMappingRequest._() : super();
   factory CreateDomainMappingRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory CreateDomainMappingRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'CreateDomainMappingRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.appengine.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'parent')
+    ..aOM<$9.DomainMapping>(2, _omitFieldNames ? '' : 'domainMapping',
+        subBuilder: $9.DomainMapping.create)
+    ..e<DomainOverrideStrategy>(
+        4, _omitFieldNames ? '' : 'overrideStrategy', $pb.PbFieldType.OE,
+        defaultOrMaker:
+            DomainOverrideStrategy.UNSPECIFIED_DOMAIN_OVERRIDE_STRATEGY,
+        valueOf: DomainOverrideStrategy.valueOf,
+        enumValues: DomainOverrideStrategy.values)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3598,8 +3461,10 @@ class CreateDomainMappingRequest extends $pb.GeneratedMessage {
           void Function(CreateDomainMappingRequest) updates) =>
       super.copyWith(
               (message) => updates(message as CreateDomainMappingRequest))
-          as CreateDomainMappingRequest; // ignore: deprecated_member_use
+          as CreateDomainMappingRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static CreateDomainMappingRequest create() => CreateDomainMappingRequest._();
   CreateDomainMappingRequest createEmptyInstance() => create();
@@ -3610,6 +3475,7 @@ class CreateDomainMappingRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<CreateDomainMappingRequest>(create);
   static CreateDomainMappingRequest? _defaultInstance;
 
+  /// Name of the parent Application resource. Example: `apps/myapp`.
   @$pb.TagNumber(1)
   $core.String get parent => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -3622,6 +3488,7 @@ class CreateDomainMappingRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearParent() => clearField(1);
 
+  /// Domain mapping configuration.
   @$pb.TagNumber(2)
   $9.DomainMapping get domainMapping => $_getN(1);
   @$pb.TagNumber(2)
@@ -3636,6 +3503,8 @@ class CreateDomainMappingRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $9.DomainMapping ensureDomainMapping() => $_ensure(1);
 
+  /// Whether the domain creation should override any existing mappings for this
+  /// domain. By default, overrides are rejected.
   @$pb.TagNumber(4)
   DomainOverrideStrategy get overrideStrategy => $_getN(2);
   @$pb.TagNumber(4)
@@ -3649,53 +3518,45 @@ class CreateDomainMappingRequest extends $pb.GeneratedMessage {
   void clearOverrideStrategy() => clearField(4);
 }
 
+/// Request message for `DomainMappings.UpdateDomainMapping`.
 class UpdateDomainMappingRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'UpdateDomainMappingRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.appengine.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..aOM<$9.DomainMapping>(
-        2, const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'domainMapping',
-        subBuilder: $9.DomainMapping.create)
-    ..aOM<$10.FieldMask>(3,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names') ? '' : 'updateMask',
-        subBuilder: $10.FieldMask.create)
-    ..hasRequiredFields = false;
-
-  UpdateDomainMappingRequest._() : super();
   factory UpdateDomainMappingRequest({
     $core.String? name,
     $9.DomainMapping? domainMapping,
-    $10.FieldMask? updateMask,
+    $58.FieldMask? updateMask,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
     if (domainMapping != null) {
-      _result.domainMapping = domainMapping;
+      $result.domainMapping = domainMapping;
     }
     if (updateMask != null) {
-      _result.updateMask = updateMask;
+      $result.updateMask = updateMask;
     }
-    return _result;
+    return $result;
   }
+  UpdateDomainMappingRequest._() : super();
   factory UpdateDomainMappingRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory UpdateDomainMappingRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'UpdateDomainMappingRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.appengine.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..aOM<$9.DomainMapping>(2, _omitFieldNames ? '' : 'domainMapping',
+        subBuilder: $9.DomainMapping.create)
+    ..aOM<$58.FieldMask>(3, _omitFieldNames ? '' : 'updateMask',
+        subBuilder: $58.FieldMask.create)
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3708,8 +3569,10 @@ class UpdateDomainMappingRequest extends $pb.GeneratedMessage {
           void Function(UpdateDomainMappingRequest) updates) =>
       super.copyWith(
               (message) => updates(message as UpdateDomainMappingRequest))
-          as UpdateDomainMappingRequest; // ignore: deprecated_member_use
+          as UpdateDomainMappingRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static UpdateDomainMappingRequest create() => UpdateDomainMappingRequest._();
   UpdateDomainMappingRequest createEmptyInstance() => create();
@@ -3720,6 +3583,8 @@ class UpdateDomainMappingRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<UpdateDomainMappingRequest>(create);
   static UpdateDomainMappingRequest? _defaultInstance;
 
+  /// Name of the resource to update. Example:
+  /// `apps/myapp/domainMappings/example.com`.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -3732,6 +3597,8 @@ class UpdateDomainMappingRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 
+  /// A domain mapping containing the updated resource. Only fields set
+  /// in the field mask will be updated.
   @$pb.TagNumber(2)
   $9.DomainMapping get domainMapping => $_getN(1);
   @$pb.TagNumber(2)
@@ -3746,10 +3613,11 @@ class UpdateDomainMappingRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   $9.DomainMapping ensureDomainMapping() => $_ensure(1);
 
+  /// Standard field mask for the set of fields to be updated.
   @$pb.TagNumber(3)
-  $10.FieldMask get updateMask => $_getN(2);
+  $58.FieldMask get updateMask => $_getN(2);
   @$pb.TagNumber(3)
-  set updateMask($10.FieldMask v) {
+  set updateMask($58.FieldMask v) {
     setField(3, v);
   }
 
@@ -3758,42 +3626,36 @@ class UpdateDomainMappingRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(3)
   void clearUpdateMask() => clearField(3);
   @$pb.TagNumber(3)
-  $10.FieldMask ensureUpdateMask() => $_ensure(2);
+  $58.FieldMask ensureUpdateMask() => $_ensure(2);
 }
 
+/// Request message for `DomainMappings.DeleteDomainMapping`.
 class DeleteDomainMappingRequest extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'DeleteDomainMappingRequest',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.appengine.v1beta'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'name')
-    ..hasRequiredFields = false;
-
-  DeleteDomainMappingRequest._() : super();
   factory DeleteDomainMappingRequest({
     $core.String? name,
   }) {
-    final _result = create();
+    final $result = create();
     if (name != null) {
-      _result.name = name;
+      $result.name = name;
     }
-    return _result;
+    return $result;
   }
+  DeleteDomainMappingRequest._() : super();
   factory DeleteDomainMappingRequest.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory DeleteDomainMappingRequest.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'DeleteDomainMappingRequest',
+      package: const $pb.PackageName(
+          _omitMessageNames ? '' : 'google.appengine.v1beta'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'name')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -3806,8 +3668,10 @@ class DeleteDomainMappingRequest extends $pb.GeneratedMessage {
           void Function(DeleteDomainMappingRequest) updates) =>
       super.copyWith(
               (message) => updates(message as DeleteDomainMappingRequest))
-          as DeleteDomainMappingRequest; // ignore: deprecated_member_use
+          as DeleteDomainMappingRequest;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static DeleteDomainMappingRequest create() => DeleteDomainMappingRequest._();
   DeleteDomainMappingRequest createEmptyInstance() => create();
@@ -3818,6 +3682,8 @@ class DeleteDomainMappingRequest extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<DeleteDomainMappingRequest>(create);
   static DeleteDomainMappingRequest? _defaultInstance;
 
+  /// Name of the resource to delete. Example:
+  /// `apps/myapp/domainMappings/example.com`.
   @$pb.TagNumber(1)
   $core.String get name => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -3830,3 +3696,7 @@ class DeleteDomainMappingRequest extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearName() => clearField(1);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');

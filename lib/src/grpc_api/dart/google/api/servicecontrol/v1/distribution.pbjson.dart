@@ -1,12 +1,16 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/api/servicecontrol/v1/distribution.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
-import 'dart:core' as $core;
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:convert' as $convert;
+import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
 @$core.Deprecated('Use distributionDescriptor instead')
@@ -51,6 +55,14 @@ const Distribution$json = {
       '6': '.google.api.servicecontrol.v1.Distribution.ExplicitBuckets',
       '9': 0,
       '10': 'explicitBuckets'
+    },
+    {
+      '1': 'exemplars',
+      '3': 10,
+      '4': 3,
+      '5': 11,
+      '6': '.google.api.Distribution.Exemplar',
+      '10': 'exemplars'
     },
   ],
   '3': [
@@ -105,4 +117,19 @@ const Distribution_ExplicitBuckets$json = {
 
 /// Descriptor for `Distribution`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List distributionDescriptor = $convert.base64Decode(
-    'CgxEaXN0cmlidXRpb24SFAoFY291bnQYASABKANSBWNvdW50EhIKBG1lYW4YAiABKAFSBG1lYW4SGAoHbWluaW11bRgDIAEoAVIHbWluaW11bRIYCgdtYXhpbXVtGAQgASgBUgdtYXhpbXVtEjcKGHN1bV9vZl9zcXVhcmVkX2RldmlhdGlvbhgFIAEoAVIVc3VtT2ZTcXVhcmVkRGV2aWF0aW9uEiMKDWJ1Y2tldF9jb3VudHMYBiADKANSDGJ1Y2tldENvdW50cxJhCg5saW5lYXJfYnVja2V0cxgHIAEoCzI4Lmdvb2dsZS5hcGkuc2VydmljZWNvbnRyb2wudjEuRGlzdHJpYnV0aW9uLkxpbmVhckJ1Y2tldHNIAFINbGluZWFyQnVja2V0cxJwChNleHBvbmVudGlhbF9idWNrZXRzGAggASgLMj0uZ29vZ2xlLmFwaS5zZXJ2aWNlY29udHJvbC52MS5EaXN0cmlidXRpb24uRXhwb25lbnRpYWxCdWNrZXRzSABSEmV4cG9uZW50aWFsQnVja2V0cxJnChBleHBsaWNpdF9idWNrZXRzGAkgASgLMjouZ29vZ2xlLmFwaS5zZXJ2aWNlY29udHJvbC52MS5EaXN0cmlidXRpb24uRXhwbGljaXRCdWNrZXRzSABSD2V4cGxpY2l0QnVja2V0cxprCg1MaW5lYXJCdWNrZXRzEiwKEm51bV9maW5pdGVfYnVja2V0cxgBIAEoBVIQbnVtRmluaXRlQnVja2V0cxIUCgV3aWR0aBgCIAEoAVIFd2lkdGgSFgoGb2Zmc2V0GAMgASgBUgZvZmZzZXQafQoSRXhwb25lbnRpYWxCdWNrZXRzEiwKEm51bV9maW5pdGVfYnVja2V0cxgBIAEoBVIQbnVtRmluaXRlQnVja2V0cxIjCg1ncm93dGhfZmFjdG9yGAIgASgBUgxncm93dGhGYWN0b3ISFAoFc2NhbGUYAyABKAFSBXNjYWxlGikKD0V4cGxpY2l0QnVja2V0cxIWCgZib3VuZHMYASADKAFSBmJvdW5kc0IPCg1idWNrZXRfb3B0aW9u');
+    'CgxEaXN0cmlidXRpb24SFAoFY291bnQYASABKANSBWNvdW50EhIKBG1lYW4YAiABKAFSBG1lYW'
+    '4SGAoHbWluaW11bRgDIAEoAVIHbWluaW11bRIYCgdtYXhpbXVtGAQgASgBUgdtYXhpbXVtEjcK'
+    'GHN1bV9vZl9zcXVhcmVkX2RldmlhdGlvbhgFIAEoAVIVc3VtT2ZTcXVhcmVkRGV2aWF0aW9uEi'
+    'MKDWJ1Y2tldF9jb3VudHMYBiADKANSDGJ1Y2tldENvdW50cxJhCg5saW5lYXJfYnVja2V0cxgH'
+    'IAEoCzI4Lmdvb2dsZS5hcGkuc2VydmljZWNvbnRyb2wudjEuRGlzdHJpYnV0aW9uLkxpbmVhck'
+    'J1Y2tldHNIAFINbGluZWFyQnVja2V0cxJwChNleHBvbmVudGlhbF9idWNrZXRzGAggASgLMj0u'
+    'Z29vZ2xlLmFwaS5zZXJ2aWNlY29udHJvbC52MS5EaXN0cmlidXRpb24uRXhwb25lbnRpYWxCdW'
+    'NrZXRzSABSEmV4cG9uZW50aWFsQnVja2V0cxJnChBleHBsaWNpdF9idWNrZXRzGAkgASgLMjou'
+    'Z29vZ2xlLmFwaS5zZXJ2aWNlY29udHJvbC52MS5EaXN0cmlidXRpb24uRXhwbGljaXRCdWNrZX'
+    'RzSABSD2V4cGxpY2l0QnVja2V0cxI/CglleGVtcGxhcnMYCiADKAsyIS5nb29nbGUuYXBpLkRp'
+    'c3RyaWJ1dGlvbi5FeGVtcGxhclIJZXhlbXBsYXJzGmsKDUxpbmVhckJ1Y2tldHMSLAoSbnVtX2'
+    'Zpbml0ZV9idWNrZXRzGAEgASgFUhBudW1GaW5pdGVCdWNrZXRzEhQKBXdpZHRoGAIgASgBUgV3'
+    'aWR0aBIWCgZvZmZzZXQYAyABKAFSBm9mZnNldBp9ChJFeHBvbmVudGlhbEJ1Y2tldHMSLAoSbn'
+    'VtX2Zpbml0ZV9idWNrZXRzGAEgASgFUhBudW1GaW5pdGVCdWNrZXRzEiMKDWdyb3d0aF9mYWN0'
+    'b3IYAiABKAFSDGdyb3d0aEZhY3RvchIUCgVzY2FsZRgDIAEoAVIFc2NhbGUaKQoPRXhwbGljaX'
+    'RCdWNrZXRzEhYKBmJvdW5kcxgBIAMoAVIGYm91bmRzQg8KDWJ1Y2tldF9vcHRpb24=');

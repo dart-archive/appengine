@@ -270,10 +270,10 @@ runTests(Datastore datastore, String namespace) {
           skip: 'With Firestore in Datastore mode, transactions are no longer '
               'limited to 25 entity groups');
 
-      test('negative_insert_20000_entities', () {
+      test('insert_20000_entities', () async {
         // Maybe it should not be a [DataStoreError] here?
-        expect(datastore.commit(inserts: named20000),
-            throwsA(isDatastoreApplicationError));
+        final result = await datastore.commit(inserts: named20000);
+        expect(result.autoIdInsertKeys.length, 0);
       });
 
       // TODO: test invalid inserts (like entities without key, ...)

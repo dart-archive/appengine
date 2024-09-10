@@ -1,12 +1,16 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/appengine/v1beta/service.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
-import 'dart:core' as $core;
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:convert' as $convert;
+import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
 @$core.Deprecated('Use serviceDescriptor instead')
@@ -36,7 +40,11 @@ const Service$json = {
 
 /// Descriptor for `Service`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List serviceDescriptor = $convert.base64Decode(
-    'CgdTZXJ2aWNlEhIKBG5hbWUYASABKAlSBG5hbWUSDgoCaWQYAiABKAlSAmlkEjsKBXNwbGl0GAMgASgLMiUuZ29vZ2xlLmFwcGVuZ2luZS52MWJldGEuVHJhZmZpY1NwbGl0UgVzcGxpdBJTChBuZXR3b3JrX3NldHRpbmdzGAYgASgLMiguZ29vZ2xlLmFwcGVuZ2luZS52MWJldGEuTmV0d29ya1NldHRpbmdzUg9uZXR3b3JrU2V0dGluZ3M=');
+    'CgdTZXJ2aWNlEhIKBG5hbWUYASABKAlSBG5hbWUSDgoCaWQYAiABKAlSAmlkEjsKBXNwbGl0GA'
+    'MgASgLMiUuZ29vZ2xlLmFwcGVuZ2luZS52MWJldGEuVHJhZmZpY1NwbGl0UgVzcGxpdBJTChBu'
+    'ZXR3b3JrX3NldHRpbmdzGAYgASgLMiguZ29vZ2xlLmFwcGVuZ2luZS52MWJldGEuTmV0d29ya1'
+    'NldHRpbmdzUg9uZXR3b3JrU2V0dGluZ3M=');
+
 @$core.Deprecated('Use trafficSplitDescriptor instead')
 const TrafficSplit$json = {
   '1': 'TrafficSplit',
@@ -85,4 +93,9 @@ const TrafficSplit_ShardBy$json = {
 
 /// Descriptor for `TrafficSplit`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List trafficSplitDescriptor = $convert.base64Decode(
-    'CgxUcmFmZmljU3BsaXQSSAoIc2hhcmRfYnkYASABKA4yLS5nb29nbGUuYXBwZW5naW5lLnYxYmV0YS5UcmFmZmljU3BsaXQuU2hhcmRCeVIHc2hhcmRCeRJYCgthbGxvY2F0aW9ucxgCIAMoCzI2Lmdvb2dsZS5hcHBlbmdpbmUudjFiZXRhLlRyYWZmaWNTcGxpdC5BbGxvY2F0aW9uc0VudHJ5UgthbGxvY2F0aW9ucxo+ChBBbGxvY2F0aW9uc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EhQKBXZhbHVlGAIgASgBUgV2YWx1ZToCOAEiOgoHU2hhcmRCeRIPCgtVTlNQRUNJRklFRBAAEgoKBkNPT0tJRRABEgYKAklQEAISCgoGUkFORE9NEAM=');
+    'CgxUcmFmZmljU3BsaXQSSAoIc2hhcmRfYnkYASABKA4yLS5nb29nbGUuYXBwZW5naW5lLnYxYm'
+    'V0YS5UcmFmZmljU3BsaXQuU2hhcmRCeVIHc2hhcmRCeRJYCgthbGxvY2F0aW9ucxgCIAMoCzI2'
+    'Lmdvb2dsZS5hcHBlbmdpbmUudjFiZXRhLlRyYWZmaWNTcGxpdC5BbGxvY2F0aW9uc0VudHJ5Ug'
+    'thbGxvY2F0aW9ucxo+ChBBbGxvY2F0aW9uc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EhQKBXZh'
+    'bHVlGAIgASgBUgV2YWx1ZToCOAEiOgoHU2hhcmRCeRIPCgtVTlNQRUNJRklFRBAAEgoKBkNPT0'
+    'tJRRABEgYKAklQEAISCgoGUkFORE9NEAM=');

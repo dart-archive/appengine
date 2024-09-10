@@ -1,12 +1,16 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/api/servicecontrol/v1/quota_controller.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
-import 'dart:core' as $core;
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:convert' as $convert;
+import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
 @$core.Deprecated('Use allocateQuotaRequestDescriptor instead')
@@ -28,7 +32,11 @@ const AllocateQuotaRequest$json = {
 
 /// Descriptor for `AllocateQuotaRequest`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List allocateQuotaRequestDescriptor = $convert.base64Decode(
-    'ChRBbGxvY2F0ZVF1b3RhUmVxdWVzdBIhCgxzZXJ2aWNlX25hbWUYASABKAlSC3NlcnZpY2VOYW1lElsKEmFsbG9jYXRlX29wZXJhdGlvbhgCIAEoCzIsLmdvb2dsZS5hcGkuc2VydmljZWNvbnRyb2wudjEuUXVvdGFPcGVyYXRpb25SEWFsbG9jYXRlT3BlcmF0aW9uEioKEXNlcnZpY2VfY29uZmlnX2lkGAQgASgJUg9zZXJ2aWNlQ29uZmlnSWQ=');
+    'ChRBbGxvY2F0ZVF1b3RhUmVxdWVzdBIhCgxzZXJ2aWNlX25hbWUYASABKAlSC3NlcnZpY2VOYW'
+    '1lElsKEmFsbG9jYXRlX29wZXJhdGlvbhgCIAEoCzIsLmdvb2dsZS5hcGkuc2VydmljZWNvbnRy'
+    'b2wudjEuUXVvdGFPcGVyYXRpb25SEWFsbG9jYXRlT3BlcmF0aW9uEioKEXNlcnZpY2VfY29uZm'
+    'lnX2lkGAQgASgJUg9zZXJ2aWNlQ29uZmlnSWQ=');
+
 @$core.Deprecated('Use quotaOperationDescriptor instead')
 const QuotaOperation$json = {
   '1': 'QuotaOperation',
@@ -90,7 +98,17 @@ const QuotaOperation_QuotaMode$json = {
 
 /// Descriptor for `QuotaOperation`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List quotaOperationDescriptor = $convert.base64Decode(
-    'Cg5RdW90YU9wZXJhdGlvbhIhCgxvcGVyYXRpb25faWQYASABKAlSC29wZXJhdGlvbklkEh8KC21ldGhvZF9uYW1lGAIgASgJUgptZXRob2ROYW1lEh8KC2NvbnN1bWVyX2lkGAMgASgJUgpjb25zdW1lcklkElAKBmxhYmVscxgEIAMoCzI4Lmdvb2dsZS5hcGkuc2VydmljZWNvbnRyb2wudjEuUXVvdGFPcGVyYXRpb24uTGFiZWxzRW50cnlSBmxhYmVscxJRCg1xdW90YV9tZXRyaWNzGAUgAygLMiwuZ29vZ2xlLmFwaS5zZXJ2aWNlY29udHJvbC52MS5NZXRyaWNWYWx1ZVNldFIMcXVvdGFNZXRyaWNzElUKCnF1b3RhX21vZGUYBiABKA4yNi5nb29nbGUuYXBpLnNlcnZpY2Vjb250cm9sLnYxLlF1b3RhT3BlcmF0aW9uLlF1b3RhTW9kZVIJcXVvdGFNb2RlGjkKC0xhYmVsc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EhQKBXZhbHVlGAIgASgJUgV2YWx1ZToCOAEiagoJUXVvdGFNb2RlEg8KC1VOU1BFQ0lGSUVEEAASCgoGTk9STUFMEAESDwoLQkVTVF9FRkZPUlQQAhIOCgpDSEVDS19PTkxZEAMSDgoKUVVFUllfT05MWRAEEg8KC0FESlVTVF9PTkxZEAU=');
+    'Cg5RdW90YU9wZXJhdGlvbhIhCgxvcGVyYXRpb25faWQYASABKAlSC29wZXJhdGlvbklkEh8KC2'
+    '1ldGhvZF9uYW1lGAIgASgJUgptZXRob2ROYW1lEh8KC2NvbnN1bWVyX2lkGAMgASgJUgpjb25z'
+    'dW1lcklkElAKBmxhYmVscxgEIAMoCzI4Lmdvb2dsZS5hcGkuc2VydmljZWNvbnRyb2wudjEuUX'
+    'VvdGFPcGVyYXRpb24uTGFiZWxzRW50cnlSBmxhYmVscxJRCg1xdW90YV9tZXRyaWNzGAUgAygL'
+    'MiwuZ29vZ2xlLmFwaS5zZXJ2aWNlY29udHJvbC52MS5NZXRyaWNWYWx1ZVNldFIMcXVvdGFNZX'
+    'RyaWNzElUKCnF1b3RhX21vZGUYBiABKA4yNi5nb29nbGUuYXBpLnNlcnZpY2Vjb250cm9sLnYx'
+    'LlF1b3RhT3BlcmF0aW9uLlF1b3RhTW9kZVIJcXVvdGFNb2RlGjkKC0xhYmVsc0VudHJ5EhAKA2'
+    'tleRgBIAEoCVIDa2V5EhQKBXZhbHVlGAIgASgJUgV2YWx1ZToCOAEiagoJUXVvdGFNb2RlEg8K'
+    'C1VOU1BFQ0lGSUVEEAASCgoGTk9STUFMEAESDwoLQkVTVF9FRkZPUlQQAhIOCgpDSEVDS19PTk'
+    'xZEAMSDgoKUVVFUllfT05MWRAEEg8KC0FESlVTVF9PTkxZEAU=');
+
 @$core.Deprecated('Use allocateQuotaResponseDescriptor instead')
 const AllocateQuotaResponse$json = {
   '1': 'AllocateQuotaResponse',
@@ -118,7 +136,12 @@ const AllocateQuotaResponse$json = {
 
 /// Descriptor for `AllocateQuotaResponse`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List allocateQuotaResponseDescriptor = $convert.base64Decode(
-    'ChVBbGxvY2F0ZVF1b3RhUmVzcG9uc2USIQoMb3BlcmF0aW9uX2lkGAEgASgJUgtvcGVyYXRpb25JZBJRCg9hbGxvY2F0ZV9lcnJvcnMYAiADKAsyKC5nb29nbGUuYXBpLnNlcnZpY2Vjb250cm9sLnYxLlF1b3RhRXJyb3JSDmFsbG9jYXRlRXJyb3JzElEKDXF1b3RhX21ldHJpY3MYAyADKAsyLC5nb29nbGUuYXBpLnNlcnZpY2Vjb250cm9sLnYxLk1ldHJpY1ZhbHVlU2V0UgxxdW90YU1ldHJpY3MSKgoRc2VydmljZV9jb25maWdfaWQYBCABKAlSD3NlcnZpY2VDb25maWdJZA==');
+    'ChVBbGxvY2F0ZVF1b3RhUmVzcG9uc2USIQoMb3BlcmF0aW9uX2lkGAEgASgJUgtvcGVyYXRpb2'
+    '5JZBJRCg9hbGxvY2F0ZV9lcnJvcnMYAiADKAsyKC5nb29nbGUuYXBpLnNlcnZpY2Vjb250cm9s'
+    'LnYxLlF1b3RhRXJyb3JSDmFsbG9jYXRlRXJyb3JzElEKDXF1b3RhX21ldHJpY3MYAyADKAsyLC'
+    '5nb29nbGUuYXBpLnNlcnZpY2Vjb250cm9sLnYxLk1ldHJpY1ZhbHVlU2V0UgxxdW90YU1ldHJp'
+    'Y3MSKgoRc2VydmljZV9jb25maWdfaWQYBCABKAlSD3NlcnZpY2VDb25maWdJZA==');
+
 @$core.Deprecated('Use quotaErrorDescriptor instead')
 const QuotaError$json = {
   '1': 'QuotaError',
@@ -133,6 +156,14 @@ const QuotaError$json = {
     },
     {'1': 'subject', '3': 2, '4': 1, '5': 9, '10': 'subject'},
     {'1': 'description', '3': 3, '4': 1, '5': 9, '10': 'description'},
+    {
+      '1': 'status',
+      '3': 4,
+      '4': 1,
+      '5': 11,
+      '6': '.google.rpc.Status',
+      '10': 'status'
+    },
   ],
   '4': [QuotaError_Code$json],
 };
@@ -152,4 +183,9 @@ const QuotaError_Code$json = {
 
 /// Descriptor for `QuotaError`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List quotaErrorDescriptor = $convert.base64Decode(
-    'CgpRdW90YUVycm9yEkEKBGNvZGUYASABKA4yLS5nb29nbGUuYXBpLnNlcnZpY2Vjb250cm9sLnYxLlF1b3RhRXJyb3IuQ29kZVIEY29kZRIYCgdzdWJqZWN0GAIgASgJUgdzdWJqZWN0EiAKC2Rlc2NyaXB0aW9uGAMgASgJUgtkZXNjcmlwdGlvbiKGAQoEQ29kZRIPCgtVTlNQRUNJRklFRBAAEhYKElJFU09VUkNFX0VYSEFVU1RFRBAIEhYKEkJJTExJTkdfTk9UX0FDVElWRRBrEhMKD1BST0pFQ1RfREVMRVRFRBBsEhMKD0FQSV9LRVlfSU5WQUxJRBBpEhMKD0FQSV9LRVlfRVhQSVJFRBBw');
+    'CgpRdW90YUVycm9yEkEKBGNvZGUYASABKA4yLS5nb29nbGUuYXBpLnNlcnZpY2Vjb250cm9sLn'
+    'YxLlF1b3RhRXJyb3IuQ29kZVIEY29kZRIYCgdzdWJqZWN0GAIgASgJUgdzdWJqZWN0EiAKC2Rl'
+    'c2NyaXB0aW9uGAMgASgJUgtkZXNjcmlwdGlvbhIqCgZzdGF0dXMYBCABKAsyEi5nb29nbGUucn'
+    'BjLlN0YXR1c1IGc3RhdHVzIoYBCgRDb2RlEg8KC1VOU1BFQ0lGSUVEEAASFgoSUkVTT1VSQ0Vf'
+    'RVhIQVVTVEVEEAgSFgoSQklMTElOR19OT1RfQUNUSVZFEGsSEwoPUFJPSkVDVF9ERUxFVEVEEG'
+    'wSEwoPQVBJX0tFWV9JTlZBTElEEGkSEwoPQVBJX0tFWV9FWFBJUkVEEHA=');

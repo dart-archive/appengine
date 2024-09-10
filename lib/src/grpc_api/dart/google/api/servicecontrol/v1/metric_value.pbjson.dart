@@ -1,12 +1,16 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/api/servicecontrol/v1/metric_value.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields,deprecated_member_use_from_same_package
 
-import 'dart:core' as $core;
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
+
 import 'dart:convert' as $convert;
+import 'dart:core' as $core;
 import 'dart:typed_data' as $typed_data;
 
 @$core.Deprecated('Use metricValueDescriptor instead')
@@ -69,7 +73,17 @@ const MetricValue_LabelsEntry$json = {
 
 /// Descriptor for `MetricValue`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List metricValueDescriptor = $convert.base64Decode(
-    'CgtNZXRyaWNWYWx1ZRJNCgZsYWJlbHMYASADKAsyNS5nb29nbGUuYXBpLnNlcnZpY2Vjb250cm9sLnYxLk1ldHJpY1ZhbHVlLkxhYmVsc0VudHJ5UgZsYWJlbHMSOQoKc3RhcnRfdGltZRgCIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSCXN0YXJ0VGltZRI1CghlbmRfdGltZRgDIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSB2VuZFRpbWUSHwoKYm9vbF92YWx1ZRgEIAEoCEgAUglib29sVmFsdWUSIQoLaW50NjRfdmFsdWUYBSABKANIAFIKaW50NjRWYWx1ZRIjCgxkb3VibGVfdmFsdWUYBiABKAFIAFILZG91YmxlVmFsdWUSIwoMc3RyaW5nX3ZhbHVlGAcgASgJSABSC3N0cmluZ1ZhbHVlElsKEmRpc3RyaWJ1dGlvbl92YWx1ZRgIIAEoCzIqLmdvb2dsZS5hcGkuc2VydmljZWNvbnRyb2wudjEuRGlzdHJpYnV0aW9uSABSEWRpc3RyaWJ1dGlvblZhbHVlGjkKC0xhYmVsc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EhQKBXZhbHVlGAIgASgJUgV2YWx1ZToCOAFCBwoFdmFsdWU=');
+    'CgtNZXRyaWNWYWx1ZRJNCgZsYWJlbHMYASADKAsyNS5nb29nbGUuYXBpLnNlcnZpY2Vjb250cm'
+    '9sLnYxLk1ldHJpY1ZhbHVlLkxhYmVsc0VudHJ5UgZsYWJlbHMSOQoKc3RhcnRfdGltZRgCIAEo'
+    'CzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSCXN0YXJ0VGltZRI1CghlbmRfdGltZRgDIA'
+    'EoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXBSB2VuZFRpbWUSHwoKYm9vbF92YWx1ZRgE'
+    'IAEoCEgAUglib29sVmFsdWUSIQoLaW50NjRfdmFsdWUYBSABKANIAFIKaW50NjRWYWx1ZRIjCg'
+    'xkb3VibGVfdmFsdWUYBiABKAFIAFILZG91YmxlVmFsdWUSIwoMc3RyaW5nX3ZhbHVlGAcgASgJ'
+    'SABSC3N0cmluZ1ZhbHVlElsKEmRpc3RyaWJ1dGlvbl92YWx1ZRgIIAEoCzIqLmdvb2dsZS5hcG'
+    'kuc2VydmljZWNvbnRyb2wudjEuRGlzdHJpYnV0aW9uSABSEWRpc3RyaWJ1dGlvblZhbHVlGjkK'
+    'C0xhYmVsc0VudHJ5EhAKA2tleRgBIAEoCVIDa2V5EhQKBXZhbHVlGAIgASgJUgV2YWx1ZToCOA'
+    'FCBwoFdmFsdWU=');
+
 @$core.Deprecated('Use metricValueSetDescriptor instead')
 const MetricValueSet$json = {
   '1': 'MetricValueSet',
@@ -88,4 +102,6 @@ const MetricValueSet$json = {
 
 /// Descriptor for `MetricValueSet`. Decode as a `google.protobuf.DescriptorProto`.
 final $typed_data.Uint8List metricValueSetDescriptor = $convert.base64Decode(
-    'Cg5NZXRyaWNWYWx1ZVNldBIfCgttZXRyaWNfbmFtZRgBIAEoCVIKbWV0cmljTmFtZRJOCg1tZXRyaWNfdmFsdWVzGAIgAygLMikuZ29vZ2xlLmFwaS5zZXJ2aWNlY29udHJvbC52MS5NZXRyaWNWYWx1ZVIMbWV0cmljVmFsdWVz');
+    'Cg5NZXRyaWNWYWx1ZVNldBIfCgttZXRyaWNfbmFtZRgBIAEoCVIKbWV0cmljTmFtZRJOCg1tZX'
+    'RyaWNfdmFsdWVzGAIgAygLMikuZ29vZ2xlLmFwaS5zZXJ2aWNlY29udHJvbC52MS5NZXRyaWNW'
+    'YWx1ZVIMbWV0cmljVmFsdWVz');

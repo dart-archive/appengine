@@ -1,56 +1,49 @@
-///
+//
 //  Generated code. Do not modify.
 //  source: google/type/localized_text.proto
 //
 // @dart = 2.12
-// ignore_for_file: annotate_overrides,camel_case_types,unnecessary_const,non_constant_identifier_names,library_prefixes,unused_import,unused_shown_name,return_of_invalid_type,unnecessary_this,prefer_final_fields
+
+// ignore_for_file: annotate_overrides, camel_case_types, comment_references
+// ignore_for_file: constant_identifier_names, library_prefixes
+// ignore_for_file: non_constant_identifier_names, prefer_final_fields
+// ignore_for_file: unnecessary_import, unnecessary_this, unused_import
 
 import 'dart:core' as $core;
 
 import 'package:protobuf/protobuf.dart' as $pb;
 
+/// Localized variant of a text in a particular language.
 class LocalizedText extends $pb.GeneratedMessage {
-  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
-      const $core.bool.fromEnvironment('protobuf.omit_message_names')
-          ? ''
-          : 'LocalizedText',
-      package: const $pb.PackageName(
-          $core.bool.fromEnvironment('protobuf.omit_message_names')
-              ? ''
-              : 'google.type'),
-      createEmptyInstance: create)
-    ..aOS(
-        1,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'text')
-    ..aOS(
-        2,
-        const $core.bool.fromEnvironment('protobuf.omit_field_names')
-            ? ''
-            : 'languageCode')
-    ..hasRequiredFields = false;
-
-  LocalizedText._() : super();
   factory LocalizedText({
     $core.String? text,
     $core.String? languageCode,
   }) {
-    final _result = create();
+    final $result = create();
     if (text != null) {
-      _result.text = text;
+      $result.text = text;
     }
     if (languageCode != null) {
-      _result.languageCode = languageCode;
+      $result.languageCode = languageCode;
     }
-    return _result;
+    return $result;
   }
+  LocalizedText._() : super();
   factory LocalizedText.fromBuffer($core.List<$core.int> i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromBuffer(i, r);
   factory LocalizedText.fromJson($core.String i,
           [$pb.ExtensionRegistry r = $pb.ExtensionRegistry.EMPTY]) =>
       create()..mergeFromJson(i, r);
+
+  static final $pb.BuilderInfo _i = $pb.BuilderInfo(
+      _omitMessageNames ? '' : 'LocalizedText',
+      package: const $pb.PackageName(_omitMessageNames ? '' : 'google.type'),
+      createEmptyInstance: create)
+    ..aOS(1, _omitFieldNames ? '' : 'text')
+    ..aOS(2, _omitFieldNames ? '' : 'languageCode')
+    ..hasRequiredFields = false;
+
   @$core.Deprecated('Using this can add significant overhead to your binary. '
       'Use [GeneratedMessageGenericExtensions.deepCopy] instead. '
       'Will be removed in next major version')
@@ -60,8 +53,10 @@ class LocalizedText extends $pb.GeneratedMessage {
       'Will be removed in next major version')
   LocalizedText copyWith(void Function(LocalizedText) updates) =>
       super.copyWith((message) => updates(message as LocalizedText))
-          as LocalizedText; // ignore: deprecated_member_use
+          as LocalizedText;
+
   $pb.BuilderInfo get info_ => _i;
+
   @$core.pragma('dart2js:noInline')
   static LocalizedText create() => LocalizedText._();
   LocalizedText createEmptyInstance() => create();
@@ -72,6 +67,7 @@ class LocalizedText extends $pb.GeneratedMessage {
       $pb.GeneratedMessage.$_defaultFor<LocalizedText>(create);
   static LocalizedText? _defaultInstance;
 
+  /// Localized string in the language corresponding to `language_code' below.
   @$pb.TagNumber(1)
   $core.String get text => $_getSZ(0);
   @$pb.TagNumber(1)
@@ -84,6 +80,10 @@ class LocalizedText extends $pb.GeneratedMessage {
   @$pb.TagNumber(1)
   void clearText() => clearField(1);
 
+  ///  The text's BCP-47 language code, such as "en-US" or "sr-Latn".
+  ///
+  ///  For more information, see
+  ///  http://www.unicode.org/reports/tr35/#Unicode_locale_identifier.
   @$pb.TagNumber(2)
   $core.String get languageCode => $_getSZ(1);
   @$pb.TagNumber(2)
@@ -96,3 +96,7 @@ class LocalizedText extends $pb.GeneratedMessage {
   @$pb.TagNumber(2)
   void clearLanguageCode() => clearField(2);
 }
+
+const _omitFieldNames = $core.bool.fromEnvironment('protobuf.omit_field_names');
+const _omitMessageNames =
+    $core.bool.fromEnvironment('protobuf.omit_message_names');
