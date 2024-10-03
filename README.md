@@ -1,6 +1,5 @@
-[![Build](https://github.com/dart-lang/appengine/actions/workflows/build.yaml/badge.svg)](https://github.com/dart-lang/appengine/actions/workflows/build.yaml)
-[![pub package](https://img.shields.io/pub/v/appengine.svg)](https://pub.dev/packages/appengine)
-[![package publisher](https://img.shields.io/pub/publisher/appengine.svg)](https://pub.dev/packages/appengine/publisher)
+> [!NOTE]  
+> The source-of-truth for this package has moved to https://github.com/dart-lang/labs/tree/main/pkgs/appengine.
 
 ## Dart support for Google AppEngine
 
